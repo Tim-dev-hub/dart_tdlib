@@ -211,7 +211,7 @@ main() async {
 
   // TODO: Clean up whatever the hell this is, or at least document it
   (api['types'] as Map).forEach((k, v) {
-    print("\"" + pascalToCamelCase(k) + "\" : " + camelToPascalCase(k) + ",");
+    print()
     if ((v as Map).length == 1 &&
         (v as Map).containsKey(pascalToCamelCase(k))) {
       classes.add(ApiClass(
