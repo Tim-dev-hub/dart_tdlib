@@ -25,13 +25,14 @@ class TelegramClient with AsyncClient {
   /// A convenience getter that streams [AuthorizationState]s. It does this by
   /// filtering for [updates] that are [UpdateAuthorizationState]s and yields
   /// the new authorization state.
-  Stream<AuthorizationState> get authorizationState => updates
+  Stream<AuthorizationState> get authorizationState =>
+    updates
       .where((u) => u is UpdateAuthorizationState)
       .map((a) => (a as UpdateAuthorizationState).authorizationState);
 
-  late TdlibParameters tdlibParams;
+  TdlibParameters tdlibParams;
 
-  TelegramClient(String dlDir) : _client = JsonClient.create(dlDir);
+  TelegramClient([String dlDir]): _client = JsonClient.create(dlDir);
 
   /// Generates a [Stream] of incoming [TdObject]s that the client receives.
   /// Objects of the appropriate type are added to their respective
@@ -57,22 +58,16 @@ class TelegramClient with AsyncClient {
 
   @Deprecated('Use [defineTdlibParams] instead')
   void setTdLibParams({
-    required int apiId,
-    required String apiHash,
+    @required int apiId,
+    @required String apiHash,
     bool useMessageDatabase = true,
     String databaseDirectory = 'tdb',
     String systemLanguageCode = 'en-US',
-    required String deviceModel,
-    required String systemVersion,
+    @required String deviceModel,
+    @required String systemVersion,
     String applicationVersion = '0.0.1',
     bool enableStorageOptimizer = true,
     bool useSecretChats = true,
-    bool useTestDc = false,
-    String filesDirectory = "/tgFiles/",
-    bool ignoreFileNames = true,
-    bool useChatInfoDatabase = true,
-    bool useFileDatabase = true,
-
   }) {
     tdlibParams = TdlibParameters(
       apiId: apiId,
@@ -85,32 +80,27 @@ class TelegramClient with AsyncClient {
       applicationVersion: applicationVersion,
       enableStorageOptimizer: enableStorageOptimizer,
       useSecretChats: useSecretChats,
-      useTestDc: useTestDc,
-      filesDirectory: filesDirectory,
-      ignoreFileNames: ignoreFileNames,
-      useChatInfoDatabase: useChatInfoDatabase,
-      useFileDatabase: useFileDatabase,
     );
   }
 
   /// Defines this client's [tdlibParams] by taking keyword-arguments (some of
   /// which have defaults) that represent the fields of [TdlibParameters].
   void defineTdlibParams({
-    required int apiId,
-    required String apiHash,
+    @required int apiId,
+    @required String apiHash,
     bool useMessageDatabase = true,
     String databaseDirectory = 'tdb',
     String systemLanguageCode = 'en-US', // TODO: l10n
-    required String deviceModel,
-    required String systemVersion,
+    @required String deviceModel,
+    @required String systemVersion,
     String applicationVersion = '0.0.1',
     bool enableStorageOptimizer = true,
     bool useSecretChats = true,
-    bool useChatInfoDatabase = true,
-    bool useFileDatabase = true,
-    String filesDirectory = "/tgFiles/",
-    bool ignoreFileNames = false,
-    bool useTestDc = false,
+    bool useChatInfoDatabase,
+    bool useFileDatabase,
+    String filesDirectory,
+    bool ignoreFileNames,
+    bool useTestDc,
   }) {
     tdlibParams = TdlibParameters(
       apiId: apiId,
@@ -140,28 +130,26 @@ class TelegramClient with AsyncClient {
 /// sending data from/to the Telegram API and the procedures that delegate that
 /// data, just for code organization purposes.
 class AsyncClient {
-  late JsonClient _client;
+  final JsonClient _client;
 
-  //what?
-  //factory AsyncClient._() => null;
+  factory AsyncClient._() => null;
 
   /// Receives a request from TD and parses it as a [TdObject]
   Future<TdObject> receive([double timeout = 2.0]) async =>
-      tryConvertToTdObject(_client.receive(timeout)) as TdObject;
+    tryConvertToTdObject(_client.receive(timeout)) as TdObject;
 
   /// Sends an asynchronous request to TD
   Future<void> send(TdFunction request) async =>
-      _client.send(request.serialize());
+    _client.send(request.serialize());
 
   /// Executes a synchronous request
   Map<String, dynamic> executeSync(TdFunction request) =>
-      _client.execute(request.serialize());
+    _client.execute(request.serialize());
 
   /// Executes a synchronous request asynchronously o_O
   Future<Map<String, dynamic>> execute(TdFunction request) async =>
-      _client.execute(request.serialize());
+    _client.execute(request.serialize());
 
   /// Closes the client, destroying the encapsulated [JsonClient]
   Future<void> destroy() async => _client.destroy();
 }
-
