@@ -6,8 +6,8 @@ class Error extends TdObject {
   @override
   String get tdType => 'error';
 
-  int code;
-  String message;
+   late int code;
+   late String message;
 
   @override
   Map<String, dynamic> get params => {
@@ -16,8 +16,8 @@ class Error extends TdObject {
   };
 
   Error({
-    this.code,
-    this.message,
+  required this.code,
+  required this.message,
   });
 
   Error.fromJson(Map<String, dynamic> json) {
@@ -44,21 +44,21 @@ class TdlibParameters extends TdObject {
   @override
   String get tdType => 'tdlibParameters';
 
-  bool useTestDc;
-  String databaseDirectory;
-  String filesDirectory;
-  bool useFileDatabase;
-  bool useChatInfoDatabase;
-  bool useMessageDatabase;
-  bool useSecretChats;
-  int apiId;
-  String apiHash;
-  String systemLanguageCode;
-  String deviceModel;
-  String systemVersion;
-  String applicationVersion;
-  bool enableStorageOptimizer;
-  bool ignoreFileNames;
+   late bool useTestDc;
+   late String databaseDirectory;
+   late String filesDirectory;
+   late bool useFileDatabase;
+   late bool useChatInfoDatabase;
+   late bool useMessageDatabase;
+   late bool useSecretChats;
+   late int apiId;
+   late String apiHash;
+   late String systemLanguageCode;
+   late String deviceModel;
+   late String systemVersion;
+   late String applicationVersion;
+   late bool enableStorageOptimizer;
+   late bool ignoreFileNames;
 
   @override
   Map<String, dynamic> get params => {
@@ -80,21 +80,21 @@ class TdlibParameters extends TdObject {
   };
 
   TdlibParameters({
-    this.useTestDc,
-    this.databaseDirectory,
-    this.filesDirectory,
-    this.useFileDatabase,
-    this.useChatInfoDatabase,
-    this.useMessageDatabase,
-    this.useSecretChats,
-    this.apiId,
-    this.apiHash,
-    this.systemLanguageCode,
-    this.deviceModel,
-    this.systemVersion,
-    this.applicationVersion,
-    this.enableStorageOptimizer,
-    this.ignoreFileNames,
+  required this.useTestDc,
+  required this.databaseDirectory,
+  required this.filesDirectory,
+  required this.useFileDatabase,
+  required this.useChatInfoDatabase,
+  required this.useMessageDatabase,
+  required this.useSecretChats,
+  required this.apiId,
+  required this.apiHash,
+  required this.systemLanguageCode,
+  required this.deviceModel,
+  required this.systemVersion,
+  required this.applicationVersion,
+  required this.enableStorageOptimizer,
+  required this.ignoreFileNames,
   });
 
   TdlibParameters.fromJson(Map<String, dynamic> json) {
@@ -123,7 +123,7 @@ class AuthenticationCodeTypeTelegramMessage extends AuthenticationCodeType {
   @override
   String get tdType => 'authenticationCodeTypeTelegramMessage';
 
-  int length;
+   late int length;
 
   @override
   Map<String, dynamic> get params => {
@@ -131,7 +131,7 @@ class AuthenticationCodeTypeTelegramMessage extends AuthenticationCodeType {
   };
 
   AuthenticationCodeTypeTelegramMessage({
-    this.length,
+  required this.length,
   });
 
   AuthenticationCodeTypeTelegramMessage.fromJson(Map<String, dynamic> json) {
@@ -144,7 +144,7 @@ class AuthenticationCodeTypeSms extends AuthenticationCodeType {
   @override
   String get tdType => 'authenticationCodeTypeSms';
 
-  int length;
+   late int length;
 
   @override
   Map<String, dynamic> get params => {
@@ -152,7 +152,7 @@ class AuthenticationCodeTypeSms extends AuthenticationCodeType {
   };
 
   AuthenticationCodeTypeSms({
-    this.length,
+  required this.length,
   });
 
   AuthenticationCodeTypeSms.fromJson(Map<String, dynamic> json) {
@@ -165,7 +165,7 @@ class AuthenticationCodeTypeCall extends AuthenticationCodeType {
   @override
   String get tdType => 'authenticationCodeTypeCall';
 
-  int length;
+   late int length;
 
   @override
   Map<String, dynamic> get params => {
@@ -173,7 +173,7 @@ class AuthenticationCodeTypeCall extends AuthenticationCodeType {
   };
 
   AuthenticationCodeTypeCall({
-    this.length,
+  required this.length,
   });
 
   AuthenticationCodeTypeCall.fromJson(Map<String, dynamic> json) {
@@ -186,7 +186,7 @@ class AuthenticationCodeTypeFlashCall extends AuthenticationCodeType {
   @override
   String get tdType => 'authenticationCodeTypeFlashCall';
 
-  String pattern;
+   late String pattern;
 
   @override
   Map<String, dynamic> get params => {
@@ -194,7 +194,7 @@ class AuthenticationCodeTypeFlashCall extends AuthenticationCodeType {
   };
 
   AuthenticationCodeTypeFlashCall({
-    this.pattern,
+  required this.pattern,
   });
 
   AuthenticationCodeTypeFlashCall.fromJson(Map<String, dynamic> json) {
@@ -207,10 +207,10 @@ class AuthenticationCodeInfo extends TdObject {
   @override
   String get tdType => 'authenticationCodeInfo';
 
-  String phoneNumber;
-  AuthenticationCodeType type;
-  AuthenticationCodeType nextType;
-  int timeout;
+   late String phoneNumber;
+   late AuthenticationCodeType type;
+   late AuthenticationCodeType nextType;
+   late int timeout;
 
   @override
   Map<String, dynamic> get params => {
@@ -221,10 +221,10 @@ class AuthenticationCodeInfo extends TdObject {
   };
 
   AuthenticationCodeInfo({
-    this.phoneNumber,
-    this.type,
-    this.nextType,
-    this.timeout,
+  required this.phoneNumber,
+  required this.type,
+  required this.nextType,
+  required this.timeout,
   });
 
   AuthenticationCodeInfo.fromJson(Map<String, dynamic> json) {
@@ -240,8 +240,8 @@ class EmailAddressAuthenticationCodeInfo extends TdObject {
   @override
   String get tdType => 'emailAddressAuthenticationCodeInfo';
 
-  String emailAddressPattern;
-  int length;
+   late String emailAddressPattern;
+   late int length;
 
   @override
   Map<String, dynamic> get params => {
@@ -250,8 +250,8 @@ class EmailAddressAuthenticationCodeInfo extends TdObject {
   };
 
   EmailAddressAuthenticationCodeInfo({
-    this.emailAddressPattern,
-    this.length,
+  required this.emailAddressPattern,
+  required this.length,
   });
 
   EmailAddressAuthenticationCodeInfo.fromJson(Map<String, dynamic> json) {
@@ -265,9 +265,9 @@ class TextEntity extends TdObject {
   @override
   String get tdType => 'textEntity';
 
-  int offset;
-  int length;
-  TextEntityType type;
+   late int offset;
+   late int length;
+   late TextEntityType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -277,9 +277,9 @@ class TextEntity extends TdObject {
   };
 
   TextEntity({
-    this.offset,
-    this.length,
-    this.type,
+  required this.offset,
+  required this.length,
+  required this.type,
   });
 
   TextEntity.fromJson(Map<String, dynamic> json) {
@@ -294,7 +294,7 @@ class TextEntities extends TdObject {
   @override
   String get tdType => 'textEntities';
 
-  List<TextEntity> entities;
+   late List<TextEntity> entities;
 
   @override
   Map<String, dynamic> get params => {
@@ -302,7 +302,7 @@ class TextEntities extends TdObject {
   };
 
   TextEntities({
-    this.entities,
+  required this.entities,
   });
 
   TextEntities.fromJson(Map<String, dynamic> json) {
@@ -315,8 +315,8 @@ class FormattedText extends TdObject {
   @override
   String get tdType => 'formattedText';
 
-  String text;
-  List<TextEntity> entities;
+   late String text;
+   late List<TextEntity> entities;
 
   @override
   Map<String, dynamic> get params => {
@@ -325,8 +325,8 @@ class FormattedText extends TdObject {
   };
 
   FormattedText({
-    this.text,
-    this.entities,
+  required this.text,
+  required this.entities,
   });
 
   FormattedText.fromJson(Map<String, dynamic> json) {
@@ -340,9 +340,9 @@ class TermsOfService extends TdObject {
   @override
   String get tdType => 'termsOfService';
 
-  FormattedText text;
-  int minUserAge;
-  bool showPopup;
+   late FormattedText text;
+   late int minUserAge;
+   late bool showPopup;
 
   @override
   Map<String, dynamic> get params => {
@@ -352,9 +352,9 @@ class TermsOfService extends TdObject {
   };
 
   TermsOfService({
-    this.text,
-    this.minUserAge,
-    this.showPopup,
+  required this.text,
+  required this.minUserAge,
+  required this.showPopup,
   });
 
   TermsOfService.fromJson(Map<String, dynamic> json) {
@@ -384,7 +384,7 @@ class AuthorizationStateWaitEncryptionKey extends AuthorizationState {
   @override
   String get tdType => 'authorizationStateWaitEncryptionKey';
 
-  bool isEncrypted;
+   late bool isEncrypted;
 
   @override
   Map<String, dynamic> get params => {
@@ -392,7 +392,7 @@ class AuthorizationStateWaitEncryptionKey extends AuthorizationState {
   };
 
   AuthorizationStateWaitEncryptionKey({
-    this.isEncrypted,
+  required this.isEncrypted,
   });
 
   AuthorizationStateWaitEncryptionKey.fromJson(Map<String, dynamic> json) {
@@ -418,7 +418,7 @@ class AuthorizationStateWaitCode extends AuthorizationState {
   @override
   String get tdType => 'authorizationStateWaitCode';
 
-  AuthenticationCodeInfo codeInfo;
+   late AuthenticationCodeInfo codeInfo;
 
   @override
   Map<String, dynamic> get params => {
@@ -426,7 +426,7 @@ class AuthorizationStateWaitCode extends AuthorizationState {
   };
 
   AuthorizationStateWaitCode({
-    this.codeInfo,
+  required this.codeInfo,
   });
 
   AuthorizationStateWaitCode.fromJson(Map<String, dynamic> json) {
@@ -439,7 +439,7 @@ class AuthorizationStateWaitOtherDeviceConfirmation extends AuthorizationState {
   @override
   String get tdType => 'authorizationStateWaitOtherDeviceConfirmation';
 
-  String link;
+   late String link;
 
   @override
   Map<String, dynamic> get params => {
@@ -447,7 +447,7 @@ class AuthorizationStateWaitOtherDeviceConfirmation extends AuthorizationState {
   };
 
   AuthorizationStateWaitOtherDeviceConfirmation({
-    this.link,
+  required this.link,
   });
 
   AuthorizationStateWaitOtherDeviceConfirmation.fromJson(Map<String, dynamic> json) {
@@ -460,7 +460,7 @@ class AuthorizationStateWaitRegistration extends AuthorizationState {
   @override
   String get tdType => 'authorizationStateWaitRegistration';
 
-  TermsOfService termsOfService;
+   late TermsOfService termsOfService;
 
   @override
   Map<String, dynamic> get params => {
@@ -468,7 +468,7 @@ class AuthorizationStateWaitRegistration extends AuthorizationState {
   };
 
   AuthorizationStateWaitRegistration({
-    this.termsOfService,
+  required this.termsOfService,
   });
 
   AuthorizationStateWaitRegistration.fromJson(Map<String, dynamic> json) {
@@ -481,9 +481,9 @@ class AuthorizationStateWaitPassword extends AuthorizationState {
   @override
   String get tdType => 'authorizationStateWaitPassword';
 
-  String passwordHint;
-  bool hasRecoveryEmailAddress;
-  String recoveryEmailAddressPattern;
+   late String passwordHint;
+   late bool hasRecoveryEmailAddress;
+   late String recoveryEmailAddressPattern;
 
   @override
   Map<String, dynamic> get params => {
@@ -493,9 +493,9 @@ class AuthorizationStateWaitPassword extends AuthorizationState {
   };
 
   AuthorizationStateWaitPassword({
-    this.passwordHint,
-    this.hasRecoveryEmailAddress,
-    this.recoveryEmailAddressPattern,
+  required this.passwordHint,
+  required this.hasRecoveryEmailAddress,
+  required this.recoveryEmailAddressPattern,
   });
 
   AuthorizationStateWaitPassword.fromJson(Map<String, dynamic> json) {
@@ -562,12 +562,12 @@ class PasswordState extends TdObject {
   @override
   String get tdType => 'passwordState';
 
-  bool hasPassword;
-  String passwordHint;
-  bool hasRecoveryEmailAddress;
-  bool hasPassportData;
-  EmailAddressAuthenticationCodeInfo recoveryEmailAddressCodeInfo;
-  int pendingResetDate;
+   late bool hasPassword;
+   late String passwordHint;
+   late bool hasRecoveryEmailAddress;
+   late bool hasPassportData;
+   late EmailAddressAuthenticationCodeInfo recoveryEmailAddressCodeInfo;
+   late int pendingResetDate;
 
   @override
   Map<String, dynamic> get params => {
@@ -580,12 +580,12 @@ class PasswordState extends TdObject {
   };
 
   PasswordState({
-    this.hasPassword,
-    this.passwordHint,
-    this.hasRecoveryEmailAddress,
-    this.hasPassportData,
-    this.recoveryEmailAddressCodeInfo,
-    this.pendingResetDate,
+  required this.hasPassword,
+  required this.passwordHint,
+  required this.hasRecoveryEmailAddress,
+  required this.hasPassportData,
+  required this.recoveryEmailAddressCodeInfo,
+  required this.pendingResetDate,
   });
 
   PasswordState.fromJson(Map<String, dynamic> json) {
@@ -603,7 +603,7 @@ class RecoveryEmailAddress extends TdObject {
   @override
   String get tdType => 'recoveryEmailAddress';
 
-  String recoveryEmailAddress;
+   late String recoveryEmailAddress;
 
   @override
   Map<String, dynamic> get params => {
@@ -611,7 +611,7 @@ class RecoveryEmailAddress extends TdObject {
   };
 
   RecoveryEmailAddress({
-    this.recoveryEmailAddress,
+  required this.recoveryEmailAddress,
   });
 
   RecoveryEmailAddress.fromJson(Map<String, dynamic> json) {
@@ -624,8 +624,8 @@ class TemporaryPasswordState extends TdObject {
   @override
   String get tdType => 'temporaryPasswordState';
 
-  bool hasPassword;
-  int validFor;
+   late bool hasPassword;
+   late int validFor;
 
   @override
   Map<String, dynamic> get params => {
@@ -634,8 +634,8 @@ class TemporaryPasswordState extends TdObject {
   };
 
   TemporaryPasswordState({
-    this.hasPassword,
-    this.validFor,
+  required this.hasPassword,
+  required this.validFor,
   });
 
   TemporaryPasswordState.fromJson(Map<String, dynamic> json) {
@@ -649,14 +649,14 @@ class LocalFile extends TdObject {
   @override
   String get tdType => 'localFile';
 
-  String path;
-  bool canBeDownloaded;
-  bool canBeDeleted;
-  bool isDownloadingActive;
-  bool isDownloadingCompleted;
-  int downloadOffset;
-  int downloadedPrefixSize;
-  int downloadedSize;
+   late String path;
+   late bool canBeDownloaded;
+   late bool canBeDeleted;
+   late bool isDownloadingActive;
+   late bool isDownloadingCompleted;
+   late int downloadOffset;
+   late int downloadedPrefixSize;
+   late int downloadedSize;
 
   @override
   Map<String, dynamic> get params => {
@@ -671,14 +671,14 @@ class LocalFile extends TdObject {
   };
 
   LocalFile({
-    this.path,
-    this.canBeDownloaded,
-    this.canBeDeleted,
-    this.isDownloadingActive,
-    this.isDownloadingCompleted,
-    this.downloadOffset,
-    this.downloadedPrefixSize,
-    this.downloadedSize,
+  required this.path,
+  required this.canBeDownloaded,
+  required this.canBeDeleted,
+  required this.isDownloadingActive,
+  required this.isDownloadingCompleted,
+  required this.downloadOffset,
+  required this.downloadedPrefixSize,
+  required this.downloadedSize,
   });
 
   LocalFile.fromJson(Map<String, dynamic> json) {
@@ -698,11 +698,11 @@ class RemoteFile extends TdObject {
   @override
   String get tdType => 'remoteFile';
 
-  String id;
-  String uniqueId;
-  bool isUploadingActive;
-  bool isUploadingCompleted;
-  int uploadedSize;
+   late String id;
+   late String uniqueId;
+   late bool isUploadingActive;
+   late bool isUploadingCompleted;
+   late int uploadedSize;
 
   @override
   Map<String, dynamic> get params => {
@@ -714,11 +714,11 @@ class RemoteFile extends TdObject {
   };
 
   RemoteFile({
-    this.id,
-    this.uniqueId,
-    this.isUploadingActive,
-    this.isUploadingCompleted,
-    this.uploadedSize,
+  required this.id,
+  required this.uniqueId,
+  required this.isUploadingActive,
+  required this.isUploadingCompleted,
+  required this.uploadedSize,
   });
 
   RemoteFile.fromJson(Map<String, dynamic> json) {
@@ -735,11 +735,11 @@ class File extends TdObject {
   @override
   String get tdType => 'file';
 
-  int id;
-  int size;
-  int expectedSize;
-  LocalFile local;
-  RemoteFile remote;
+   late int id;
+   late int size;
+   late int expectedSize;
+   late LocalFile local;
+   late RemoteFile remote;
 
   @override
   Map<String, dynamic> get params => {
@@ -751,11 +751,11 @@ class File extends TdObject {
   };
 
   File({
-    this.id,
-    this.size,
-    this.expectedSize,
-    this.local,
-    this.remote,
+  required this.id,
+  required this.size,
+  required this.expectedSize,
+  required this.local,
+  required this.remote,
   });
 
   File.fromJson(Map<String, dynamic> json) {
@@ -774,7 +774,7 @@ class InputFileId extends InputFile {
   @override
   String get tdType => 'inputFileId';
 
-  int id;
+   late int id;
 
   @override
   Map<String, dynamic> get params => {
@@ -782,7 +782,7 @@ class InputFileId extends InputFile {
   };
 
   InputFileId({
-    this.id,
+  required this.id,
   });
 
   InputFileId.fromJson(Map<String, dynamic> json) {
@@ -795,7 +795,7 @@ class InputFileRemote extends InputFile {
   @override
   String get tdType => 'inputFileRemote';
 
-  String id;
+   late String id;
 
   @override
   Map<String, dynamic> get params => {
@@ -803,7 +803,7 @@ class InputFileRemote extends InputFile {
   };
 
   InputFileRemote({
-    this.id,
+  required this.id,
   });
 
   InputFileRemote.fromJson(Map<String, dynamic> json) {
@@ -816,7 +816,7 @@ class InputFileLocal extends InputFile {
   @override
   String get tdType => 'inputFileLocal';
 
-  String path;
+   late String path;
 
   @override
   Map<String, dynamic> get params => {
@@ -824,7 +824,7 @@ class InputFileLocal extends InputFile {
   };
 
   InputFileLocal({
-    this.path,
+  required this.path,
   });
 
   InputFileLocal.fromJson(Map<String, dynamic> json) {
@@ -837,9 +837,9 @@ class InputFileGenerated extends InputFile {
   @override
   String get tdType => 'inputFileGenerated';
 
-  String originalPath;
-  String conversion;
-  int expectedSize;
+   late String originalPath;
+   late String conversion;
+   late int expectedSize;
 
   @override
   Map<String, dynamic> get params => {
@@ -849,9 +849,9 @@ class InputFileGenerated extends InputFile {
   };
 
   InputFileGenerated({
-    this.originalPath,
-    this.conversion,
-    this.expectedSize,
+  required this.originalPath,
+  required this.conversion,
+  required this.expectedSize,
   });
 
   InputFileGenerated.fromJson(Map<String, dynamic> json) {
@@ -866,11 +866,11 @@ class PhotoSize extends TdObject {
   @override
   String get tdType => 'photoSize';
 
-  String type;
-  File photo;
-  int width;
-  int height;
-  List<int> progressiveSizes;
+   late String type;
+   late File photo;
+   late int width;
+   late int height;
+   late List<int> progressiveSizes;
 
   @override
   Map<String, dynamic> get params => {
@@ -882,11 +882,11 @@ class PhotoSize extends TdObject {
   };
 
   PhotoSize({
-    this.type,
-    this.photo,
-    this.width,
-    this.height,
-    this.progressiveSizes,
+  required this.type,
+  required this.photo,
+  required this.width,
+  required this.height,
+  required this.progressiveSizes,
   });
 
   PhotoSize.fromJson(Map<String, dynamic> json) {
@@ -903,9 +903,9 @@ class Minithumbnail extends TdObject {
   @override
   String get tdType => 'minithumbnail';
 
-  int width;
-  int height;
-  String data;
+   late int width;
+   late int height;
+   late String data;
 
   @override
   Map<String, dynamic> get params => {
@@ -915,9 +915,9 @@ class Minithumbnail extends TdObject {
   };
 
   Minithumbnail({
-    this.width,
-    this.height,
-    this.data,
+  required this.width,
+  required this.height,
+  required this.data,
   });
 
   Minithumbnail.fromJson(Map<String, dynamic> json) {
@@ -1012,10 +1012,10 @@ class Thumbnail extends TdObject {
   @override
   String get tdType => 'thumbnail';
 
-  ThumbnailFormat format;
-  int width;
-  int height;
-  File file;
+   late ThumbnailFormat format;
+   late int width;
+   late int height;
+   late File file;
 
   @override
   Map<String, dynamic> get params => {
@@ -1026,10 +1026,10 @@ class Thumbnail extends TdObject {
   };
 
   Thumbnail({
-    this.format,
-    this.width,
-    this.height,
-    this.file,
+  required this.format,
+  required this.width,
+  required this.height,
+  required this.file,
   });
 
   Thumbnail.fromJson(Map<String, dynamic> json) {
@@ -1099,10 +1099,10 @@ class MaskPosition extends TdObject {
   @override
   String get tdType => 'maskPosition';
 
-  MaskPoint point;
-  double xShift;
-  double yShift;
-  double scale;
+   late MaskPoint point;
+   late double xShift;
+   late double yShift;
+   late double scale;
 
   @override
   Map<String, dynamic> get params => {
@@ -1113,10 +1113,10 @@ class MaskPosition extends TdObject {
   };
 
   MaskPosition({
-    this.point,
-    this.xShift,
-    this.yShift,
-    this.scale,
+  required this.point,
+  required this.xShift,
+  required this.yShift,
+  required this.scale,
   });
 
   MaskPosition.fromJson(Map<String, dynamic> json) {
@@ -1132,7 +1132,7 @@ class ClosedVectorPath extends TdObject {
   @override
   String get tdType => 'closedVectorPath';
 
-  List<VectorPathCommand> commands;
+   late List<VectorPathCommand> commands;
 
   @override
   Map<String, dynamic> get params => {
@@ -1140,7 +1140,7 @@ class ClosedVectorPath extends TdObject {
   };
 
   ClosedVectorPath({
-    this.commands,
+  required this.commands,
   });
 
   ClosedVectorPath.fromJson(Map<String, dynamic> json) {
@@ -1153,11 +1153,11 @@ class PollOption extends TdObject {
   @override
   String get tdType => 'pollOption';
 
-  String text;
-  int voterCount;
-  int votePercentage;
-  bool isChosen;
-  bool isBeingChosen;
+   late String text;
+   late int voterCount;
+   late int votePercentage;
+   late bool isChosen;
+   late bool isBeingChosen;
 
   @override
   Map<String, dynamic> get params => {
@@ -1169,11 +1169,11 @@ class PollOption extends TdObject {
   };
 
   PollOption({
-    this.text,
-    this.voterCount,
-    this.votePercentage,
-    this.isChosen,
-    this.isBeingChosen,
+  required this.text,
+  required this.voterCount,
+  required this.votePercentage,
+  required this.isChosen,
+  required this.isBeingChosen,
   });
 
   PollOption.fromJson(Map<String, dynamic> json) {
@@ -1192,7 +1192,7 @@ class PollTypeRegular extends PollType {
   @override
   String get tdType => 'pollTypeRegular';
 
-  bool allowMultipleAnswers;
+   late bool allowMultipleAnswers;
 
   @override
   Map<String, dynamic> get params => {
@@ -1200,7 +1200,7 @@ class PollTypeRegular extends PollType {
   };
 
   PollTypeRegular({
-    this.allowMultipleAnswers,
+  required this.allowMultipleAnswers,
   });
 
   PollTypeRegular.fromJson(Map<String, dynamic> json) {
@@ -1213,8 +1213,8 @@ class PollTypeQuiz extends PollType {
   @override
   String get tdType => 'pollTypeQuiz';
 
-  int correctOptionId;
-  FormattedText explanation;
+   late int correctOptionId;
+   late FormattedText explanation;
 
   @override
   Map<String, dynamic> get params => {
@@ -1223,8 +1223,8 @@ class PollTypeQuiz extends PollType {
   };
 
   PollTypeQuiz({
-    this.correctOptionId,
-    this.explanation,
+  required this.correctOptionId,
+  required this.explanation,
   });
 
   PollTypeQuiz.fromJson(Map<String, dynamic> json) {
@@ -1238,15 +1238,15 @@ class Animation extends TdObject {
   @override
   String get tdType => 'animation';
 
-  int duration;
-  int width;
-  int height;
-  String fileName;
-  String mimeType;
-  bool hasStickers;
-  Minithumbnail minithumbnail;
-  Thumbnail thumbnail;
-  File animation;
+   late int duration;
+   late int width;
+   late int height;
+   late String fileName;
+   late String mimeType;
+   late bool hasStickers;
+   late Minithumbnail minithumbnail;
+   late Thumbnail thumbnail;
+   late File animation;
 
   @override
   Map<String, dynamic> get params => {
@@ -1262,15 +1262,15 @@ class Animation extends TdObject {
   };
 
   Animation({
-    this.duration,
-    this.width,
-    this.height,
-    this.fileName,
-    this.mimeType,
-    this.hasStickers,
-    this.minithumbnail,
-    this.thumbnail,
-    this.animation,
+  required this.duration,
+  required this.width,
+  required this.height,
+  required this.fileName,
+  required this.mimeType,
+  required this.hasStickers,
+  required this.minithumbnail,
+  required this.thumbnail,
+  required this.animation,
   });
 
   Animation.fromJson(Map<String, dynamic> json) {
@@ -1291,14 +1291,14 @@ class Audio extends TdObject {
   @override
   String get tdType => 'audio';
 
-  int duration;
-  String title;
-  String performer;
-  String fileName;
-  String mimeType;
-  Minithumbnail albumCoverMinithumbnail;
-  Thumbnail albumCoverThumbnail;
-  File audio;
+   late int duration;
+   late String title;
+   late String performer;
+   late String fileName;
+   late String mimeType;
+   late Minithumbnail albumCoverMinithumbnail;
+   late Thumbnail albumCoverThumbnail;
+   late File audio;
 
   @override
   Map<String, dynamic> get params => {
@@ -1313,14 +1313,14 @@ class Audio extends TdObject {
   };
 
   Audio({
-    this.duration,
-    this.title,
-    this.performer,
-    this.fileName,
-    this.mimeType,
-    this.albumCoverMinithumbnail,
-    this.albumCoverThumbnail,
-    this.audio,
+  required this.duration,
+  required this.title,
+  required this.performer,
+  required this.fileName,
+  required this.mimeType,
+  required this.albumCoverMinithumbnail,
+  required this.albumCoverThumbnail,
+  required this.audio,
   });
 
   Audio.fromJson(Map<String, dynamic> json) {
@@ -1340,11 +1340,11 @@ class Document extends TdObject {
   @override
   String get tdType => 'document';
 
-  String fileName;
-  String mimeType;
-  Minithumbnail minithumbnail;
-  Thumbnail thumbnail;
-  File document;
+   late String fileName;
+   late String mimeType;
+   late Minithumbnail minithumbnail;
+   late Thumbnail thumbnail;
+   late File document;
 
   @override
   Map<String, dynamic> get params => {
@@ -1356,11 +1356,11 @@ class Document extends TdObject {
   };
 
   Document({
-    this.fileName,
-    this.mimeType,
-    this.minithumbnail,
-    this.thumbnail,
-    this.document,
+  required this.fileName,
+  required this.mimeType,
+  required this.minithumbnail,
+  required this.thumbnail,
+  required this.document,
   });
 
   Document.fromJson(Map<String, dynamic> json) {
@@ -1377,9 +1377,9 @@ class Photo extends TdObject {
   @override
   String get tdType => 'photo';
 
-  bool hasStickers;
-  Minithumbnail minithumbnail;
-  List<PhotoSize> sizes;
+   late bool hasStickers;
+   late Minithumbnail minithumbnail;
+   late List<PhotoSize> sizes;
 
   @override
   Map<String, dynamic> get params => {
@@ -1389,9 +1389,9 @@ class Photo extends TdObject {
   };
 
   Photo({
-    this.hasStickers,
-    this.minithumbnail,
-    this.sizes,
+  required this.hasStickers,
+  required this.minithumbnail,
+  required this.sizes,
   });
 
   Photo.fromJson(Map<String, dynamic> json) {
@@ -1406,16 +1406,16 @@ class Sticker extends TdObject {
   @override
   String get tdType => 'sticker';
 
-  int setId;
-  int width;
-  int height;
-  String emoji;
-  bool isAnimated;
-  bool isMask;
-  MaskPosition maskPosition;
-  List<ClosedVectorPath> outline;
-  Thumbnail thumbnail;
-  File sticker;
+   late int setId;
+   late int width;
+   late int height;
+   late String emoji;
+   late bool isAnimated;
+   late bool isMask;
+   late MaskPosition maskPosition;
+   late List<ClosedVectorPath> outline;
+   late Thumbnail thumbnail;
+   late File sticker;
 
   @override
   Map<String, dynamic> get params => {
@@ -1432,16 +1432,16 @@ class Sticker extends TdObject {
   };
 
   Sticker({
-    this.setId,
-    this.width,
-    this.height,
-    this.emoji,
-    this.isAnimated,
-    this.isMask,
-    this.maskPosition,
-    this.outline,
-    this.thumbnail,
-    this.sticker,
+  required this.setId,
+  required this.width,
+  required this.height,
+  required this.emoji,
+  required this.isAnimated,
+  required this.isMask,
+  required this.maskPosition,
+  required this.outline,
+  required this.thumbnail,
+  required this.sticker,
   });
 
   Sticker.fromJson(Map<String, dynamic> json) {
@@ -1463,16 +1463,16 @@ class Video extends TdObject {
   @override
   String get tdType => 'video';
 
-  int duration;
-  int width;
-  int height;
-  String fileName;
-  String mimeType;
-  bool hasStickers;
-  bool supportsStreaming;
-  Minithumbnail minithumbnail;
-  Thumbnail thumbnail;
-  File video;
+   late int duration;
+   late int width;
+   late int height;
+   late String fileName;
+   late String mimeType;
+   late bool hasStickers;
+   late bool supportsStreaming;
+   late Minithumbnail minithumbnail;
+   late Thumbnail thumbnail;
+   late File video;
 
   @override
   Map<String, dynamic> get params => {
@@ -1489,16 +1489,16 @@ class Video extends TdObject {
   };
 
   Video({
-    this.duration,
-    this.width,
-    this.height,
-    this.fileName,
-    this.mimeType,
-    this.hasStickers,
-    this.supportsStreaming,
-    this.minithumbnail,
-    this.thumbnail,
-    this.video,
+  required this.duration,
+  required this.width,
+  required this.height,
+  required this.fileName,
+  required this.mimeType,
+  required this.hasStickers,
+  required this.supportsStreaming,
+  required this.minithumbnail,
+  required this.thumbnail,
+  required this.video,
   });
 
   Video.fromJson(Map<String, dynamic> json) {
@@ -1520,11 +1520,11 @@ class VideoNote extends TdObject {
   @override
   String get tdType => 'videoNote';
 
-  int duration;
-  int length;
-  Minithumbnail minithumbnail;
-  Thumbnail thumbnail;
-  File video;
+   late int duration;
+   late int length;
+   late Minithumbnail minithumbnail;
+   late Thumbnail thumbnail;
+   late File video;
 
   @override
   Map<String, dynamic> get params => {
@@ -1536,11 +1536,11 @@ class VideoNote extends TdObject {
   };
 
   VideoNote({
-    this.duration,
-    this.length,
-    this.minithumbnail,
-    this.thumbnail,
-    this.video,
+  required this.duration,
+  required this.length,
+  required this.minithumbnail,
+  required this.thumbnail,
+  required this.video,
   });
 
   VideoNote.fromJson(Map<String, dynamic> json) {
@@ -1557,10 +1557,10 @@ class VoiceNote extends TdObject {
   @override
   String get tdType => 'voiceNote';
 
-  int duration;
-  String waveform;
-  String mimeType;
-  File voice;
+   late int duration;
+   late String waveform;
+   late String mimeType;
+   late File voice;
 
   @override
   Map<String, dynamic> get params => {
@@ -1571,10 +1571,10 @@ class VoiceNote extends TdObject {
   };
 
   VoiceNote({
-    this.duration,
-    this.waveform,
-    this.mimeType,
-    this.voice,
+  required this.duration,
+  required this.waveform,
+  required this.mimeType,
+  required this.voice,
   });
 
   VoiceNote.fromJson(Map<String, dynamic> json) {
@@ -1590,11 +1590,11 @@ class Contact extends TdObject {
   @override
   String get tdType => 'contact';
 
-  String phoneNumber;
-  String firstName;
-  String lastName;
-  String vcard;
-  int userId;
+   late String phoneNumber;
+   late String firstName;
+   late String lastName;
+   late String vcard;
+   late int userId;
 
   @override
   Map<String, dynamic> get params => {
@@ -1606,11 +1606,11 @@ class Contact extends TdObject {
   };
 
   Contact({
-    this.phoneNumber,
-    this.firstName,
-    this.lastName,
-    this.vcard,
-    this.userId,
+  required this.phoneNumber,
+  required this.firstName,
+  required this.lastName,
+  required this.vcard,
+  required this.userId,
   });
 
   Contact.fromJson(Map<String, dynamic> json) {
@@ -1627,9 +1627,9 @@ class Location extends TdObject {
   @override
   String get tdType => 'location';
 
-  double latitude;
-  double longitude;
-  double horizontalAccuracy;
+   late double latitude;
+   late double longitude;
+   late double horizontalAccuracy;
 
   @override
   Map<String, dynamic> get params => {
@@ -1639,9 +1639,9 @@ class Location extends TdObject {
   };
 
   Location({
-    this.latitude,
-    this.longitude,
-    this.horizontalAccuracy,
+  required this.latitude,
+  required this.longitude,
+  required this.horizontalAccuracy,
   });
 
   Location.fromJson(Map<String, dynamic> json) {
@@ -1656,12 +1656,12 @@ class Venue extends TdObject {
   @override
   String get tdType => 'venue';
 
-  Location location;
-  String title;
-  String address;
-  String provider;
-  String id;
-  String type;
+   late Location location;
+   late String title;
+   late String address;
+   late String provider;
+   late String id;
+   late String type;
 
   @override
   Map<String, dynamic> get params => {
@@ -1674,12 +1674,12 @@ class Venue extends TdObject {
   };
 
   Venue({
-    this.location,
-    this.title,
-    this.address,
-    this.provider,
-    this.id,
-    this.type,
+  required this.location,
+  required this.title,
+  required this.address,
+  required this.provider,
+  required this.id,
+  required this.type,
   });
 
   Venue.fromJson(Map<String, dynamic> json) {
@@ -1697,13 +1697,13 @@ class Game extends TdObject {
   @override
   String get tdType => 'game';
 
-  int id;
-  String shortName;
-  String title;
-  FormattedText text;
-  String description;
-  Photo photo;
-  Animation animation;
+   late int id;
+   late String shortName;
+   late String title;
+   late FormattedText text;
+   late String description;
+   late Photo photo;
+   late Animation animation;
 
   @override
   Map<String, dynamic> get params => {
@@ -1717,13 +1717,13 @@ class Game extends TdObject {
   };
 
   Game({
-    this.id,
-    this.shortName,
-    this.title,
-    this.text,
-    this.description,
-    this.photo,
-    this.animation,
+  required this.id,
+  required this.shortName,
+  required this.title,
+  required this.text,
+  required this.description,
+  required this.photo,
+  required this.animation,
   });
 
   Game.fromJson(Map<String, dynamic> json) {
@@ -1742,16 +1742,16 @@ class Poll extends TdObject {
   @override
   String get tdType => 'poll';
 
-  int id;
-  String question;
-  List<PollOption> options;
-  int totalVoterCount;
-  List<int> recentVoterUserIds;
-  bool isAnonymous;
-  PollType type;
-  int openPeriod;
-  int closeDate;
-  bool isClosed;
+   late int id;
+   late String question;
+   late List<PollOption> options;
+   late int totalVoterCount;
+   late List<int> recentVoterUserIds;
+   late bool isAnonymous;
+   late PollType type;
+   late int openPeriod;
+   late int closeDate;
+   late bool isClosed;
 
   @override
   Map<String, dynamic> get params => {
@@ -1768,16 +1768,16 @@ class Poll extends TdObject {
   };
 
   Poll({
-    this.id,
-    this.question,
-    this.options,
-    this.totalVoterCount,
-    this.recentVoterUserIds,
-    this.isAnonymous,
-    this.type,
-    this.openPeriod,
-    this.closeDate,
-    this.isClosed,
+  required this.id,
+  required this.question,
+  required this.options,
+  required this.totalVoterCount,
+  required this.recentVoterUserIds,
+  required this.isAnonymous,
+  required this.type,
+  required this.openPeriod,
+  required this.closeDate,
+  required this.isClosed,
   });
 
   Poll.fromJson(Map<String, dynamic> json) {
@@ -1799,11 +1799,11 @@ class ProfilePhoto extends TdObject {
   @override
   String get tdType => 'profilePhoto';
 
-  int id;
-  File small;
-  File big;
-  Minithumbnail minithumbnail;
-  bool hasAnimation;
+   late int id;
+   late File small;
+   late File big;
+   late Minithumbnail minithumbnail;
+   late bool hasAnimation;
 
   @override
   Map<String, dynamic> get params => {
@@ -1815,11 +1815,11 @@ class ProfilePhoto extends TdObject {
   };
 
   ProfilePhoto({
-    this.id,
-    this.small,
-    this.big,
-    this.minithumbnail,
-    this.hasAnimation,
+  required this.id,
+  required this.small,
+  required this.big,
+  required this.minithumbnail,
+  required this.hasAnimation,
   });
 
   ProfilePhoto.fromJson(Map<String, dynamic> json) {
@@ -1836,10 +1836,10 @@ class ChatPhotoInfo extends TdObject {
   @override
   String get tdType => 'chatPhotoInfo';
 
-  File small;
-  File big;
-  Minithumbnail minithumbnail;
-  bool hasAnimation;
+   late File small;
+   late File big;
+   late Minithumbnail minithumbnail;
+   late bool hasAnimation;
 
   @override
   Map<String, dynamic> get params => {
@@ -1850,10 +1850,10 @@ class ChatPhotoInfo extends TdObject {
   };
 
   ChatPhotoInfo({
-    this.small,
-    this.big,
-    this.minithumbnail,
-    this.hasAnimation,
+  required this.small,
+  required this.big,
+  required this.minithumbnail,
+  required this.hasAnimation,
   });
 
   ChatPhotoInfo.fromJson(Map<String, dynamic> json) {
@@ -1897,11 +1897,11 @@ class UserTypeBot extends UserType {
   @override
   String get tdType => 'userTypeBot';
 
-  bool canJoinGroups;
-  bool canReadAllGroupMessages;
-  bool isInline;
-  String inlineQueryPlaceholder;
-  bool needLocation;
+   late bool canJoinGroups;
+   late bool canReadAllGroupMessages;
+   late bool isInline;
+   late String inlineQueryPlaceholder;
+   late bool needLocation;
 
   @override
   Map<String, dynamic> get params => {
@@ -1913,11 +1913,11 @@ class UserTypeBot extends UserType {
   };
 
   UserTypeBot({
-    this.canJoinGroups,
-    this.canReadAllGroupMessages,
-    this.isInline,
-    this.inlineQueryPlaceholder,
-    this.needLocation,
+  required this.canJoinGroups,
+  required this.canReadAllGroupMessages,
+  required this.isInline,
+  required this.inlineQueryPlaceholder,
+  required this.needLocation,
   });
 
   UserTypeBot.fromJson(Map<String, dynamic> json) {
@@ -1947,8 +1947,8 @@ class BotCommand extends TdObject {
   @override
   String get tdType => 'botCommand';
 
-  String command;
-  String description;
+   late String command;
+   late String description;
 
   @override
   Map<String, dynamic> get params => {
@@ -1957,8 +1957,8 @@ class BotCommand extends TdObject {
   };
 
   BotCommand({
-    this.command,
-    this.description,
+  required this.command,
+  required this.description,
   });
 
   BotCommand.fromJson(Map<String, dynamic> json) {
@@ -1972,8 +1972,8 @@ class BotCommands extends TdObject {
   @override
   String get tdType => 'botCommands';
 
-  int botUserId;
-  List<BotCommand> commands;
+   late int botUserId;
+   late List<BotCommand> commands;
 
   @override
   Map<String, dynamic> get params => {
@@ -1982,8 +1982,8 @@ class BotCommands extends TdObject {
   };
 
   BotCommands({
-    this.botUserId,
-    this.commands,
+  required this.botUserId,
+  required this.commands,
   });
 
   BotCommands.fromJson(Map<String, dynamic> json) {
@@ -1997,8 +1997,8 @@ class ChatLocation extends TdObject {
   @override
   String get tdType => 'chatLocation';
 
-  Location location;
-  String address;
+   late Location location;
+   late String address;
 
   @override
   Map<String, dynamic> get params => {
@@ -2007,8 +2007,8 @@ class ChatLocation extends TdObject {
   };
 
   ChatLocation({
-    this.location,
-    this.address,
+  required this.location,
+  required this.address,
   });
 
   ChatLocation.fromJson(Map<String, dynamic> json) {
@@ -2022,9 +2022,9 @@ class AnimatedChatPhoto extends TdObject {
   @override
   String get tdType => 'animatedChatPhoto';
 
-  int length;
-  File file;
-  double mainFrameTimestamp;
+   late int length;
+   late File file;
+   late double mainFrameTimestamp;
 
   @override
   Map<String, dynamic> get params => {
@@ -2034,9 +2034,9 @@ class AnimatedChatPhoto extends TdObject {
   };
 
   AnimatedChatPhoto({
-    this.length,
-    this.file,
-    this.mainFrameTimestamp,
+  required this.length,
+  required this.file,
+  required this.mainFrameTimestamp,
   });
 
   AnimatedChatPhoto.fromJson(Map<String, dynamic> json) {
@@ -2051,11 +2051,11 @@ class ChatPhoto extends TdObject {
   @override
   String get tdType => 'chatPhoto';
 
-  int id;
-  int addedDate;
-  Minithumbnail minithumbnail;
-  List<PhotoSize> sizes;
-  AnimatedChatPhoto animation;
+   late int id;
+   late int addedDate;
+   late Minithumbnail minithumbnail;
+   late List<PhotoSize> sizes;
+   late AnimatedChatPhoto animation;
 
   @override
   Map<String, dynamic> get params => {
@@ -2067,11 +2067,11 @@ class ChatPhoto extends TdObject {
   };
 
   ChatPhoto({
-    this.id,
-    this.addedDate,
-    this.minithumbnail,
-    this.sizes,
-    this.animation,
+  required this.id,
+  required this.addedDate,
+  required this.minithumbnail,
+  required this.sizes,
+  required this.animation,
   });
 
   ChatPhoto.fromJson(Map<String, dynamic> json) {
@@ -2088,8 +2088,8 @@ class ChatPhotos extends TdObject {
   @override
   String get tdType => 'chatPhotos';
 
-  int totalCount;
-  List<ChatPhoto> photos;
+   late int totalCount;
+   late List<ChatPhoto> photos;
 
   @override
   Map<String, dynamic> get params => {
@@ -2098,8 +2098,8 @@ class ChatPhotos extends TdObject {
   };
 
   ChatPhotos({
-    this.totalCount,
-    this.photos,
+  required this.totalCount,
+  required this.photos,
   });
 
   ChatPhotos.fromJson(Map<String, dynamic> json) {
@@ -2115,7 +2115,7 @@ class InputChatPhotoPrevious extends InputChatPhoto {
   @override
   String get tdType => 'inputChatPhotoPrevious';
 
-  int chatPhotoId;
+   late int chatPhotoId;
 
   @override
   Map<String, dynamic> get params => {
@@ -2123,7 +2123,7 @@ class InputChatPhotoPrevious extends InputChatPhoto {
   };
 
   InputChatPhotoPrevious({
-    this.chatPhotoId,
+  required this.chatPhotoId,
   });
 
   InputChatPhotoPrevious.fromJson(Map<String, dynamic> json) {
@@ -2136,7 +2136,7 @@ class InputChatPhotoStatic extends InputChatPhoto {
   @override
   String get tdType => 'inputChatPhotoStatic';
 
-  InputFile photo;
+   late InputFile photo;
 
   @override
   Map<String, dynamic> get params => {
@@ -2144,7 +2144,7 @@ class InputChatPhotoStatic extends InputChatPhoto {
   };
 
   InputChatPhotoStatic({
-    this.photo,
+  required this.photo,
   });
 
   InputChatPhotoStatic.fromJson(Map<String, dynamic> json) {
@@ -2157,8 +2157,8 @@ class InputChatPhotoAnimation extends InputChatPhoto {
   @override
   String get tdType => 'inputChatPhotoAnimation';
 
-  InputFile animation;
-  double mainFrameTimestamp;
+   late InputFile animation;
+   late double mainFrameTimestamp;
 
   @override
   Map<String, dynamic> get params => {
@@ -2167,8 +2167,8 @@ class InputChatPhotoAnimation extends InputChatPhoto {
   };
 
   InputChatPhotoAnimation({
-    this.animation,
-    this.mainFrameTimestamp,
+  required this.animation,
+  required this.mainFrameTimestamp,
   });
 
   InputChatPhotoAnimation.fromJson(Map<String, dynamic> json) {
@@ -2182,23 +2182,23 @@ class User extends TdObject {
   @override
   String get tdType => 'user';
 
-  int id;
-  String firstName;
-  String lastName;
-  String username;
-  String phoneNumber;
-  UserStatus status;
-  ProfilePhoto profilePhoto;
-  bool isContact;
-  bool isMutualContact;
-  bool isVerified;
-  bool isSupport;
-  String restrictionReason;
-  bool isScam;
-  bool isFake;
-  bool haveAccess;
-  UserType type;
-  String languageCode;
+   late int id;
+   late String firstName;
+   late String lastName;
+   late String username;
+   late String phoneNumber;
+   late UserStatus status;
+   late ProfilePhoto profilePhoto;
+   late bool isContact;
+   late bool isMutualContact;
+   late bool isVerified;
+   late bool isSupport;
+   late String restrictionReason;
+   late bool isScam;
+   late bool isFake;
+   late bool haveAccess;
+   late UserType type;
+   late String languageCode;
 
   @override
   Map<String, dynamic> get params => {
@@ -2222,23 +2222,23 @@ class User extends TdObject {
   };
 
   User({
-    this.id,
-    this.firstName,
-    this.lastName,
-    this.username,
-    this.phoneNumber,
-    this.status,
-    this.profilePhoto,
-    this.isContact,
-    this.isMutualContact,
-    this.isVerified,
-    this.isSupport,
-    this.restrictionReason,
-    this.isScam,
-    this.isFake,
-    this.haveAccess,
-    this.type,
-    this.languageCode,
+  required this.id,
+  required this.firstName,
+  required this.lastName,
+  required this.username,
+  required this.phoneNumber,
+  required this.status,
+  required this.profilePhoto,
+  required this.isContact,
+  required this.isMutualContact,
+  required this.isVerified,
+  required this.isSupport,
+  required this.restrictionReason,
+  required this.isScam,
+  required this.isFake,
+  required this.haveAccess,
+  required this.type,
+  required this.languageCode,
   });
 
   User.fromJson(Map<String, dynamic> json) {
@@ -2267,17 +2267,17 @@ class UserFullInfo extends TdObject {
   @override
   String get tdType => 'userFullInfo';
 
-  ChatPhoto photo;
-  bool isBlocked;
-  bool canBeCalled;
-  bool supportsVideoCalls;
-  bool hasPrivateCalls;
-  bool needPhoneNumberPrivacyException;
-  String bio;
-  String shareText;
-  String description;
-  int groupInCommonCount;
-  List<BotCommand> commands;
+   late ChatPhoto photo;
+   late bool isBlocked;
+   late bool canBeCalled;
+   late bool supportsVideoCalls;
+   late bool hasPrivateCalls;
+   late bool needPhoneNumberPrivacyException;
+   late String bio;
+   late String shareText;
+   late String description;
+   late int groupInCommonCount;
+   late List<BotCommand> commands;
 
   @override
   Map<String, dynamic> get params => {
@@ -2295,17 +2295,17 @@ class UserFullInfo extends TdObject {
   };
 
   UserFullInfo({
-    this.photo,
-    this.isBlocked,
-    this.canBeCalled,
-    this.supportsVideoCalls,
-    this.hasPrivateCalls,
-    this.needPhoneNumberPrivacyException,
-    this.bio,
-    this.shareText,
-    this.description,
-    this.groupInCommonCount,
-    this.commands,
+  required this.photo,
+  required this.isBlocked,
+  required this.canBeCalled,
+  required this.supportsVideoCalls,
+  required this.hasPrivateCalls,
+  required this.needPhoneNumberPrivacyException,
+  required this.bio,
+  required this.shareText,
+  required this.description,
+  required this.groupInCommonCount,
+  required this.commands,
   });
 
   UserFullInfo.fromJson(Map<String, dynamic> json) {
@@ -2328,8 +2328,8 @@ class Users extends TdObject {
   @override
   String get tdType => 'users';
 
-  int totalCount;
-  List<int> userIds;
+   late int totalCount;
+   late List<int> userIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -2338,8 +2338,8 @@ class Users extends TdObject {
   };
 
   Users({
-    this.totalCount,
-    this.userIds,
+  required this.totalCount,
+  required this.userIds,
   });
 
   Users.fromJson(Map<String, dynamic> json) {
@@ -2353,9 +2353,9 @@ class ChatAdministrator extends TdObject {
   @override
   String get tdType => 'chatAdministrator';
 
-  int userId;
-  String customTitle;
-  bool isOwner;
+   late int userId;
+   late String customTitle;
+   late bool isOwner;
 
   @override
   Map<String, dynamic> get params => {
@@ -2365,9 +2365,9 @@ class ChatAdministrator extends TdObject {
   };
 
   ChatAdministrator({
-    this.userId,
-    this.customTitle,
-    this.isOwner,
+  required this.userId,
+  required this.customTitle,
+  required this.isOwner,
   });
 
   ChatAdministrator.fromJson(Map<String, dynamic> json) {
@@ -2382,7 +2382,7 @@ class ChatAdministrators extends TdObject {
   @override
   String get tdType => 'chatAdministrators';
 
-  List<ChatAdministrator> administrators;
+   late List<ChatAdministrator> administrators;
 
   @override
   Map<String, dynamic> get params => {
@@ -2390,7 +2390,7 @@ class ChatAdministrators extends TdObject {
   };
 
   ChatAdministrators({
-    this.administrators,
+  required this.administrators,
   });
 
   ChatAdministrators.fromJson(Map<String, dynamic> json) {
@@ -2403,14 +2403,14 @@ class ChatPermissions extends TdObject {
   @override
   String get tdType => 'chatPermissions';
 
-  bool canSendMessages;
-  bool canSendMediaMessages;
-  bool canSendPolls;
-  bool canSendOtherMessages;
-  bool canAddWebPagePreviews;
-  bool canChangeInfo;
-  bool canInviteUsers;
-  bool canPinMessages;
+   late bool canSendMessages;
+   late bool canSendMediaMessages;
+   late bool canSendPolls;
+   late bool canSendOtherMessages;
+   late bool canAddWebPagePreviews;
+   late bool canChangeInfo;
+   late bool canInviteUsers;
+   late bool canPinMessages;
 
   @override
   Map<String, dynamic> get params => {
@@ -2425,14 +2425,14 @@ class ChatPermissions extends TdObject {
   };
 
   ChatPermissions({
-    this.canSendMessages,
-    this.canSendMediaMessages,
-    this.canSendPolls,
-    this.canSendOtherMessages,
-    this.canAddWebPagePreviews,
-    this.canChangeInfo,
-    this.canInviteUsers,
-    this.canPinMessages,
+  required this.canSendMessages,
+  required this.canSendMediaMessages,
+  required this.canSendPolls,
+  required this.canSendOtherMessages,
+  required this.canAddWebPagePreviews,
+  required this.canChangeInfo,
+  required this.canInviteUsers,
+  required this.canPinMessages,
   });
 
   ChatPermissions.fromJson(Map<String, dynamic> json) {
@@ -2454,9 +2454,9 @@ class ChatMemberStatusCreator extends ChatMemberStatus {
   @override
   String get tdType => 'chatMemberStatusCreator';
 
-  String customTitle;
-  bool isAnonymous;
-  bool isMember;
+   late String customTitle;
+   late bool isAnonymous;
+   late bool isMember;
 
   @override
   Map<String, dynamic> get params => {
@@ -2466,9 +2466,9 @@ class ChatMemberStatusCreator extends ChatMemberStatus {
   };
 
   ChatMemberStatusCreator({
-    this.customTitle,
-    this.isAnonymous,
-    this.isMember,
+  required this.customTitle,
+  required this.isAnonymous,
+  required this.isMember,
   });
 
   ChatMemberStatusCreator.fromJson(Map<String, dynamic> json) {
@@ -2483,19 +2483,19 @@ class ChatMemberStatusAdministrator extends ChatMemberStatus {
   @override
   String get tdType => 'chatMemberStatusAdministrator';
 
-  String customTitle;
-  bool canBeEdited;
-  bool canManageChat;
-  bool canChangeInfo;
-  bool canPostMessages;
-  bool canEditMessages;
-  bool canDeleteMessages;
-  bool canInviteUsers;
-  bool canRestrictMembers;
-  bool canPinMessages;
-  bool canPromoteMembers;
-  bool canManageVoiceChats;
-  bool isAnonymous;
+   late String customTitle;
+   late bool canBeEdited;
+   late bool canManageChat;
+   late bool canChangeInfo;
+   late bool canPostMessages;
+   late bool canEditMessages;
+   late bool canDeleteMessages;
+   late bool canInviteUsers;
+   late bool canRestrictMembers;
+   late bool canPinMessages;
+   late bool canPromoteMembers;
+   late bool canManageVoiceChats;
+   late bool isAnonymous;
 
   @override
   Map<String, dynamic> get params => {
@@ -2515,19 +2515,19 @@ class ChatMemberStatusAdministrator extends ChatMemberStatus {
   };
 
   ChatMemberStatusAdministrator({
-    this.customTitle,
-    this.canBeEdited,
-    this.canManageChat,
-    this.canChangeInfo,
-    this.canPostMessages,
-    this.canEditMessages,
-    this.canDeleteMessages,
-    this.canInviteUsers,
-    this.canRestrictMembers,
-    this.canPinMessages,
-    this.canPromoteMembers,
-    this.canManageVoiceChats,
-    this.isAnonymous,
+  required this.customTitle,
+  required this.canBeEdited,
+  required this.canManageChat,
+  required this.canChangeInfo,
+  required this.canPostMessages,
+  required this.canEditMessages,
+  required this.canDeleteMessages,
+  required this.canInviteUsers,
+  required this.canRestrictMembers,
+  required this.canPinMessages,
+  required this.canPromoteMembers,
+  required this.canManageVoiceChats,
+  required this.isAnonymous,
   });
 
   ChatMemberStatusAdministrator.fromJson(Map<String, dynamic> json) {
@@ -2565,9 +2565,9 @@ class ChatMemberStatusRestricted extends ChatMemberStatus {
   @override
   String get tdType => 'chatMemberStatusRestricted';
 
-  bool isMember;
-  int restrictedUntilDate;
-  ChatPermissions permissions;
+   late bool isMember;
+   late int restrictedUntilDate;
+   late ChatPermissions permissions;
 
   @override
   Map<String, dynamic> get params => {
@@ -2577,9 +2577,9 @@ class ChatMemberStatusRestricted extends ChatMemberStatus {
   };
 
   ChatMemberStatusRestricted({
-    this.isMember,
-    this.restrictedUntilDate,
-    this.permissions,
+  required this.isMember,
+  required this.restrictedUntilDate,
+  required this.permissions,
   });
 
   ChatMemberStatusRestricted.fromJson(Map<String, dynamic> json) {
@@ -2607,7 +2607,7 @@ class ChatMemberStatusBanned extends ChatMemberStatus {
   @override
   String get tdType => 'chatMemberStatusBanned';
 
-  int bannedUntilDate;
+   late int bannedUntilDate;
 
   @override
   Map<String, dynamic> get params => {
@@ -2615,7 +2615,7 @@ class ChatMemberStatusBanned extends ChatMemberStatus {
   };
 
   ChatMemberStatusBanned({
-    this.bannedUntilDate,
+  required this.bannedUntilDate,
   });
 
   ChatMemberStatusBanned.fromJson(Map<String, dynamic> json) {
@@ -2628,10 +2628,10 @@ class ChatMember extends TdObject {
   @override
   String get tdType => 'chatMember';
 
-  MessageSender memberId;
-  int inviterUserId;
-  int joinedChatDate;
-  ChatMemberStatus status;
+   late MessageSender memberId;
+   late int inviterUserId;
+   late int joinedChatDate;
+   late ChatMemberStatus status;
 
   @override
   Map<String, dynamic> get params => {
@@ -2642,10 +2642,10 @@ class ChatMember extends TdObject {
   };
 
   ChatMember({
-    this.memberId,
-    this.inviterUserId,
-    this.joinedChatDate,
-    this.status,
+  required this.memberId,
+  required this.inviterUserId,
+  required this.joinedChatDate,
+  required this.status,
   });
 
   ChatMember.fromJson(Map<String, dynamic> json) {
@@ -2661,8 +2661,8 @@ class ChatMembers extends TdObject {
   @override
   String get tdType => 'chatMembers';
 
-  int totalCount;
-  List<ChatMember> members;
+   late int totalCount;
+   late List<ChatMember> members;
 
   @override
   Map<String, dynamic> get params => {
@@ -2671,8 +2671,8 @@ class ChatMembers extends TdObject {
   };
 
   ChatMembers({
-    this.totalCount,
-    this.members,
+  required this.totalCount,
+  required this.members,
   });
 
   ChatMembers.fromJson(Map<String, dynamic> json) {
@@ -2727,7 +2727,7 @@ class ChatMembersFilterMention extends ChatMembersFilter {
   @override
   String get tdType => 'chatMembersFilterMention';
 
-  int messageThreadId;
+   late int messageThreadId;
 
   @override
   Map<String, dynamic> get params => {
@@ -2735,7 +2735,7 @@ class ChatMembersFilterMention extends ChatMembersFilter {
   };
 
   ChatMembersFilterMention({
-    this.messageThreadId,
+  required this.messageThreadId,
   });
 
   ChatMembersFilterMention.fromJson(Map<String, dynamic> json) {
@@ -2802,7 +2802,7 @@ class SupergroupMembersFilterContacts extends SupergroupMembersFilter {
   @override
   String get tdType => 'supergroupMembersFilterContacts';
 
-  String query;
+   late String query;
 
   @override
   Map<String, dynamic> get params => {
@@ -2810,7 +2810,7 @@ class SupergroupMembersFilterContacts extends SupergroupMembersFilter {
   };
 
   SupergroupMembersFilterContacts({
-    this.query,
+  required this.query,
   });
 
   SupergroupMembersFilterContacts.fromJson(Map<String, dynamic> json) {
@@ -2836,7 +2836,7 @@ class SupergroupMembersFilterSearch extends SupergroupMembersFilter {
   @override
   String get tdType => 'supergroupMembersFilterSearch';
 
-  String query;
+   late String query;
 
   @override
   Map<String, dynamic> get params => {
@@ -2844,7 +2844,7 @@ class SupergroupMembersFilterSearch extends SupergroupMembersFilter {
   };
 
   SupergroupMembersFilterSearch({
-    this.query,
+  required this.query,
   });
 
   SupergroupMembersFilterSearch.fromJson(Map<String, dynamic> json) {
@@ -2857,7 +2857,7 @@ class SupergroupMembersFilterRestricted extends SupergroupMembersFilter {
   @override
   String get tdType => 'supergroupMembersFilterRestricted';
 
-  String query;
+   late String query;
 
   @override
   Map<String, dynamic> get params => {
@@ -2865,7 +2865,7 @@ class SupergroupMembersFilterRestricted extends SupergroupMembersFilter {
   };
 
   SupergroupMembersFilterRestricted({
-    this.query,
+  required this.query,
   });
 
   SupergroupMembersFilterRestricted.fromJson(Map<String, dynamic> json) {
@@ -2878,7 +2878,7 @@ class SupergroupMembersFilterBanned extends SupergroupMembersFilter {
   @override
   String get tdType => 'supergroupMembersFilterBanned';
 
-  String query;
+   late String query;
 
   @override
   Map<String, dynamic> get params => {
@@ -2886,7 +2886,7 @@ class SupergroupMembersFilterBanned extends SupergroupMembersFilter {
   };
 
   SupergroupMembersFilterBanned({
-    this.query,
+  required this.query,
   });
 
   SupergroupMembersFilterBanned.fromJson(Map<String, dynamic> json) {
@@ -2899,8 +2899,8 @@ class SupergroupMembersFilterMention extends SupergroupMembersFilter {
   @override
   String get tdType => 'supergroupMembersFilterMention';
 
-  String query;
-  int messageThreadId;
+   late String query;
+   late int messageThreadId;
 
   @override
   Map<String, dynamic> get params => {
@@ -2909,8 +2909,8 @@ class SupergroupMembersFilterMention extends SupergroupMembersFilter {
   };
 
   SupergroupMembersFilterMention({
-    this.query,
-    this.messageThreadId,
+  required this.query,
+  required this.messageThreadId,
   });
 
   SupergroupMembersFilterMention.fromJson(Map<String, dynamic> json) {
@@ -2937,15 +2937,15 @@ class ChatInviteLink extends TdObject {
   @override
   String get tdType => 'chatInviteLink';
 
-  String inviteLink;
-  int creatorUserId;
-  int date;
-  int editDate;
-  int expireDate;
-  int memberLimit;
-  int memberCount;
-  bool isPrimary;
-  bool isRevoked;
+   late String inviteLink;
+   late int creatorUserId;
+   late int date;
+   late int editDate;
+   late int expireDate;
+   late int memberLimit;
+   late int memberCount;
+   late bool isPrimary;
+   late bool isRevoked;
 
   @override
   Map<String, dynamic> get params => {
@@ -2961,15 +2961,15 @@ class ChatInviteLink extends TdObject {
   };
 
   ChatInviteLink({
-    this.inviteLink,
-    this.creatorUserId,
-    this.date,
-    this.editDate,
-    this.expireDate,
-    this.memberLimit,
-    this.memberCount,
-    this.isPrimary,
-    this.isRevoked,
+  required this.inviteLink,
+  required this.creatorUserId,
+  required this.date,
+  required this.editDate,
+  required this.expireDate,
+  required this.memberLimit,
+  required this.memberCount,
+  required this.isPrimary,
+  required this.isRevoked,
   });
 
   ChatInviteLink.fromJson(Map<String, dynamic> json) {
@@ -2990,8 +2990,8 @@ class ChatInviteLinks extends TdObject {
   @override
   String get tdType => 'chatInviteLinks';
 
-  int totalCount;
-  List<ChatInviteLink> inviteLinks;
+   late int totalCount;
+   late List<ChatInviteLink> inviteLinks;
 
   @override
   Map<String, dynamic> get params => {
@@ -3000,8 +3000,8 @@ class ChatInviteLinks extends TdObject {
   };
 
   ChatInviteLinks({
-    this.totalCount,
-    this.inviteLinks,
+  required this.totalCount,
+  required this.inviteLinks,
   });
 
   ChatInviteLinks.fromJson(Map<String, dynamic> json) {
@@ -3015,9 +3015,9 @@ class ChatInviteLinkCount extends TdObject {
   @override
   String get tdType => 'chatInviteLinkCount';
 
-  int userId;
-  int inviteLinkCount;
-  int revokedInviteLinkCount;
+   late int userId;
+   late int inviteLinkCount;
+   late int revokedInviteLinkCount;
 
   @override
   Map<String, dynamic> get params => {
@@ -3027,9 +3027,9 @@ class ChatInviteLinkCount extends TdObject {
   };
 
   ChatInviteLinkCount({
-    this.userId,
-    this.inviteLinkCount,
-    this.revokedInviteLinkCount,
+  required this.userId,
+  required this.inviteLinkCount,
+  required this.revokedInviteLinkCount,
   });
 
   ChatInviteLinkCount.fromJson(Map<String, dynamic> json) {
@@ -3044,7 +3044,7 @@ class ChatInviteLinkCounts extends TdObject {
   @override
   String get tdType => 'chatInviteLinkCounts';
 
-  List<ChatInviteLinkCount> inviteLinkCounts;
+   late List<ChatInviteLinkCount> inviteLinkCounts;
 
   @override
   Map<String, dynamic> get params => {
@@ -3052,7 +3052,7 @@ class ChatInviteLinkCounts extends TdObject {
   };
 
   ChatInviteLinkCounts({
-    this.inviteLinkCounts,
+  required this.inviteLinkCounts,
   });
 
   ChatInviteLinkCounts.fromJson(Map<String, dynamic> json) {
@@ -3065,8 +3065,8 @@ class ChatInviteLinkMember extends TdObject {
   @override
   String get tdType => 'chatInviteLinkMember';
 
-  int userId;
-  int joinedChatDate;
+   late int userId;
+   late int joinedChatDate;
 
   @override
   Map<String, dynamic> get params => {
@@ -3075,8 +3075,8 @@ class ChatInviteLinkMember extends TdObject {
   };
 
   ChatInviteLinkMember({
-    this.userId,
-    this.joinedChatDate,
+  required this.userId,
+  required this.joinedChatDate,
   });
 
   ChatInviteLinkMember.fromJson(Map<String, dynamic> json) {
@@ -3090,8 +3090,8 @@ class ChatInviteLinkMembers extends TdObject {
   @override
   String get tdType => 'chatInviteLinkMembers';
 
-  int totalCount;
-  List<ChatInviteLinkMember> members;
+   late int totalCount;
+   late List<ChatInviteLinkMember> members;
 
   @override
   Map<String, dynamic> get params => {
@@ -3100,8 +3100,8 @@ class ChatInviteLinkMembers extends TdObject {
   };
 
   ChatInviteLinkMembers({
-    this.totalCount,
-    this.members,
+  required this.totalCount,
+  required this.members,
   });
 
   ChatInviteLinkMembers.fromJson(Map<String, dynamic> json) {
@@ -3115,14 +3115,14 @@ class ChatInviteLinkInfo extends TdObject {
   @override
   String get tdType => 'chatInviteLinkInfo';
 
-  int chatId;
-  int accessibleFor;
-  ChatType type;
-  String title;
-  ChatPhotoInfo photo;
-  int memberCount;
-  List<int> memberUserIds;
-  bool isPublic;
+   late int chatId;
+   late int accessibleFor;
+   late ChatType type;
+   late String title;
+   late ChatPhotoInfo photo;
+   late int memberCount;
+   late List<int> memberUserIds;
+   late bool isPublic;
 
   @override
   Map<String, dynamic> get params => {
@@ -3137,14 +3137,14 @@ class ChatInviteLinkInfo extends TdObject {
   };
 
   ChatInviteLinkInfo({
-    this.chatId,
-    this.accessibleFor,
-    this.type,
-    this.title,
-    this.photo,
-    this.memberCount,
-    this.memberUserIds,
-    this.isPublic,
+  required this.chatId,
+  required this.accessibleFor,
+  required this.type,
+  required this.title,
+  required this.photo,
+  required this.memberCount,
+  required this.memberUserIds,
+  required this.isPublic,
   });
 
   ChatInviteLinkInfo.fromJson(Map<String, dynamic> json) {
@@ -3164,11 +3164,11 @@ class BasicGroup extends TdObject {
   @override
   String get tdType => 'basicGroup';
 
-  int id;
-  int memberCount;
-  ChatMemberStatus status;
-  bool isActive;
-  int upgradedToSupergroupId;
+   late int id;
+   late int memberCount;
+   late ChatMemberStatus status;
+   late bool isActive;
+   late int upgradedToSupergroupId;
 
   @override
   Map<String, dynamic> get params => {
@@ -3180,11 +3180,11 @@ class BasicGroup extends TdObject {
   };
 
   BasicGroup({
-    this.id,
-    this.memberCount,
-    this.status,
-    this.isActive,
-    this.upgradedToSupergroupId,
+  required this.id,
+  required this.memberCount,
+  required this.status,
+  required this.isActive,
+  required this.upgradedToSupergroupId,
   });
 
   BasicGroup.fromJson(Map<String, dynamic> json) {
@@ -3201,12 +3201,12 @@ class BasicGroupFullInfo extends TdObject {
   @override
   String get tdType => 'basicGroupFullInfo';
 
-  ChatPhoto photo;
-  String description;
-  int creatorUserId;
-  List<ChatMember> members;
-  ChatInviteLink inviteLink;
-  List<BotCommands> botCommands;
+   late ChatPhoto photo;
+   late String description;
+   late int creatorUserId;
+   late List<ChatMember> members;
+   late ChatInviteLink inviteLink;
+   late List<BotCommands> botCommands;
 
   @override
   Map<String, dynamic> get params => {
@@ -3219,12 +3219,12 @@ class BasicGroupFullInfo extends TdObject {
   };
 
   BasicGroupFullInfo({
-    this.photo,
-    this.description,
-    this.creatorUserId,
-    this.members,
-    this.inviteLink,
-    this.botCommands,
+  required this.photo,
+  required this.description,
+  required this.creatorUserId,
+  required this.members,
+  required this.inviteLink,
+  required this.botCommands,
   });
 
   BasicGroupFullInfo.fromJson(Map<String, dynamic> json) {
@@ -3242,21 +3242,21 @@ class Supergroup extends TdObject {
   @override
   String get tdType => 'supergroup';
 
-  int id;
-  String username;
-  int date;
-  ChatMemberStatus status;
-  int memberCount;
-  bool hasLinkedChat;
-  bool hasLocation;
-  bool signMessages;
-  bool isSlowModeEnabled;
-  bool isChannel;
-  bool isBroadcastGroup;
-  bool isVerified;
-  String restrictionReason;
-  bool isScam;
-  bool isFake;
+   late int id;
+   late String username;
+   late int date;
+   late ChatMemberStatus status;
+   late int memberCount;
+   late bool hasLinkedChat;
+   late bool hasLocation;
+   late bool signMessages;
+   late bool isSlowModeEnabled;
+   late bool isChannel;
+   late bool isBroadcastGroup;
+   late bool isVerified;
+   late String restrictionReason;
+   late bool isScam;
+   late bool isFake;
 
   @override
   Map<String, dynamic> get params => {
@@ -3278,21 +3278,21 @@ class Supergroup extends TdObject {
   };
 
   Supergroup({
-    this.id,
-    this.username,
-    this.date,
-    this.status,
-    this.memberCount,
-    this.hasLinkedChat,
-    this.hasLocation,
-    this.signMessages,
-    this.isSlowModeEnabled,
-    this.isChannel,
-    this.isBroadcastGroup,
-    this.isVerified,
-    this.restrictionReason,
-    this.isScam,
-    this.isFake,
+  required this.id,
+  required this.username,
+  required this.date,
+  required this.status,
+  required this.memberCount,
+  required this.hasLinkedChat,
+  required this.hasLocation,
+  required this.signMessages,
+  required this.isSlowModeEnabled,
+  required this.isChannel,
+  required this.isBroadcastGroup,
+  required this.isVerified,
+  required this.restrictionReason,
+  required this.isScam,
+  required this.isFake,
   });
 
   Supergroup.fromJson(Map<String, dynamic> json) {
@@ -3319,27 +3319,27 @@ class SupergroupFullInfo extends TdObject {
   @override
   String get tdType => 'supergroupFullInfo';
 
-  ChatPhoto photo;
-  String description;
-  int memberCount;
-  int administratorCount;
-  int restrictedCount;
-  int bannedCount;
-  int linkedChatId;
-  int slowModeDelay;
-  double slowModeDelayExpiresIn;
-  bool canGetMembers;
-  bool canSetUsername;
-  bool canSetStickerSet;
-  bool canSetLocation;
-  bool canGetStatistics;
-  bool isAllHistoryAvailable;
-  int stickerSetId;
-  ChatLocation location;
-  ChatInviteLink inviteLink;
-  List<BotCommands> botCommands;
-  int upgradedFromBasicGroupId;
-  int upgradedFromMaxMessageId;
+   late ChatPhoto photo;
+   late String description;
+   late int memberCount;
+   late int administratorCount;
+   late int restrictedCount;
+   late int bannedCount;
+   late int linkedChatId;
+   late int slowModeDelay;
+   late double slowModeDelayExpiresIn;
+   late bool canGetMembers;
+   late bool canSetUsername;
+   late bool canSetStickerSet;
+   late bool canSetLocation;
+   late bool canGetStatistics;
+   late bool isAllHistoryAvailable;
+   late int stickerSetId;
+   late ChatLocation location;
+   late ChatInviteLink inviteLink;
+   late List<BotCommands> botCommands;
+   late int upgradedFromBasicGroupId;
+   late int upgradedFromMaxMessageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -3367,27 +3367,27 @@ class SupergroupFullInfo extends TdObject {
   };
 
   SupergroupFullInfo({
-    this.photo,
-    this.description,
-    this.memberCount,
-    this.administratorCount,
-    this.restrictedCount,
-    this.bannedCount,
-    this.linkedChatId,
-    this.slowModeDelay,
-    this.slowModeDelayExpiresIn,
-    this.canGetMembers,
-    this.canSetUsername,
-    this.canSetStickerSet,
-    this.canSetLocation,
-    this.canGetStatistics,
-    this.isAllHistoryAvailable,
-    this.stickerSetId,
-    this.location,
-    this.inviteLink,
-    this.botCommands,
-    this.upgradedFromBasicGroupId,
-    this.upgradedFromMaxMessageId,
+  required this.photo,
+  required this.description,
+  required this.memberCount,
+  required this.administratorCount,
+  required this.restrictedCount,
+  required this.bannedCount,
+  required this.linkedChatId,
+  required this.slowModeDelay,
+  required this.slowModeDelayExpiresIn,
+  required this.canGetMembers,
+  required this.canSetUsername,
+  required this.canSetStickerSet,
+  required this.canSetLocation,
+  required this.canGetStatistics,
+  required this.isAllHistoryAvailable,
+  required this.stickerSetId,
+  required this.location,
+  required this.inviteLink,
+  required this.botCommands,
+  required this.upgradedFromBasicGroupId,
+  required this.upgradedFromMaxMessageId,
   });
 
   SupergroupFullInfo.fromJson(Map<String, dynamic> json) {
@@ -3461,12 +3461,12 @@ class SecretChat extends TdObject {
   @override
   String get tdType => 'secretChat';
 
-  int id;
-  int userId;
-  SecretChatState state;
-  bool isOutbound;
-  String keyHash;
-  int layer;
+   late int id;
+   late int userId;
+   late SecretChatState state;
+   late bool isOutbound;
+   late String keyHash;
+   late int layer;
 
   @override
   Map<String, dynamic> get params => {
@@ -3479,12 +3479,12 @@ class SecretChat extends TdObject {
   };
 
   SecretChat({
-    this.id,
-    this.userId,
-    this.state,
-    this.isOutbound,
-    this.keyHash,
-    this.layer,
+  required this.id,
+  required this.userId,
+  required this.state,
+  required this.isOutbound,
+  required this.keyHash,
+  required this.layer,
   });
 
   SecretChat.fromJson(Map<String, dynamic> json) {
@@ -3504,7 +3504,7 @@ class MessageSenderUser extends MessageSender {
   @override
   String get tdType => 'messageSenderUser';
 
-  int userId;
+   late int userId;
 
   @override
   Map<String, dynamic> get params => {
@@ -3512,7 +3512,7 @@ class MessageSenderUser extends MessageSender {
   };
 
   MessageSenderUser({
-    this.userId,
+  required this.userId,
   });
 
   MessageSenderUser.fromJson(Map<String, dynamic> json) {
@@ -3525,7 +3525,7 @@ class MessageSenderChat extends MessageSender {
   @override
   String get tdType => 'messageSenderChat';
 
-  int chatId;
+   late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -3533,7 +3533,7 @@ class MessageSenderChat extends MessageSender {
   };
 
   MessageSenderChat({
-    this.chatId,
+  required this.chatId,
   });
 
   MessageSenderChat.fromJson(Map<String, dynamic> json) {
@@ -3546,8 +3546,8 @@ class MessageSenders extends TdObject {
   @override
   String get tdType => 'messageSenders';
 
-  int totalCount;
-  List<MessageSender> senders;
+   late int totalCount;
+   late List<MessageSender> senders;
 
   @override
   Map<String, dynamic> get params => {
@@ -3556,8 +3556,8 @@ class MessageSenders extends TdObject {
   };
 
   MessageSenders({
-    this.totalCount,
-    this.senders,
+  required this.totalCount,
+  required this.senders,
   });
 
   MessageSenders.fromJson(Map<String, dynamic> json) {
@@ -3573,7 +3573,7 @@ class MessageForwardOriginUser extends MessageForwardOrigin {
   @override
   String get tdType => 'messageForwardOriginUser';
 
-  int senderUserId;
+   late int senderUserId;
 
   @override
   Map<String, dynamic> get params => {
@@ -3581,7 +3581,7 @@ class MessageForwardOriginUser extends MessageForwardOrigin {
   };
 
   MessageForwardOriginUser({
-    this.senderUserId,
+  required this.senderUserId,
   });
 
   MessageForwardOriginUser.fromJson(Map<String, dynamic> json) {
@@ -3594,8 +3594,8 @@ class MessageForwardOriginChat extends MessageForwardOrigin {
   @override
   String get tdType => 'messageForwardOriginChat';
 
-  int senderChatId;
-  String authorSignature;
+   late int senderChatId;
+   late String authorSignature;
 
   @override
   Map<String, dynamic> get params => {
@@ -3604,8 +3604,8 @@ class MessageForwardOriginChat extends MessageForwardOrigin {
   };
 
   MessageForwardOriginChat({
-    this.senderChatId,
-    this.authorSignature,
+  required this.senderChatId,
+  required this.authorSignature,
   });
 
   MessageForwardOriginChat.fromJson(Map<String, dynamic> json) {
@@ -3619,7 +3619,7 @@ class MessageForwardOriginHiddenUser extends MessageForwardOrigin {
   @override
   String get tdType => 'messageForwardOriginHiddenUser';
 
-  String senderName;
+   late String senderName;
 
   @override
   Map<String, dynamic> get params => {
@@ -3627,7 +3627,7 @@ class MessageForwardOriginHiddenUser extends MessageForwardOrigin {
   };
 
   MessageForwardOriginHiddenUser({
-    this.senderName,
+  required this.senderName,
   });
 
   MessageForwardOriginHiddenUser.fromJson(Map<String, dynamic> json) {
@@ -3640,9 +3640,9 @@ class MessageForwardOriginChannel extends MessageForwardOrigin {
   @override
   String get tdType => 'messageForwardOriginChannel';
 
-  int chatId;
-  int messageId;
-  String authorSignature;
+   late int chatId;
+   late int messageId;
+   late String authorSignature;
 
   @override
   Map<String, dynamic> get params => {
@@ -3652,9 +3652,9 @@ class MessageForwardOriginChannel extends MessageForwardOrigin {
   };
 
   MessageForwardOriginChannel({
-    this.chatId,
-    this.messageId,
-    this.authorSignature,
+  required this.chatId,
+  required this.messageId,
+  required this.authorSignature,
   });
 
   MessageForwardOriginChannel.fromJson(Map<String, dynamic> json) {
@@ -3669,7 +3669,7 @@ class MessageForwardOriginMessageImport extends MessageForwardOrigin {
   @override
   String get tdType => 'messageForwardOriginMessageImport';
 
-  String senderName;
+   late String senderName;
 
   @override
   Map<String, dynamic> get params => {
@@ -3677,7 +3677,7 @@ class MessageForwardOriginMessageImport extends MessageForwardOrigin {
   };
 
   MessageForwardOriginMessageImport({
-    this.senderName,
+  required this.senderName,
   });
 
   MessageForwardOriginMessageImport.fromJson(Map<String, dynamic> json) {
@@ -3690,11 +3690,11 @@ class MessageForwardInfo extends TdObject {
   @override
   String get tdType => 'messageForwardInfo';
 
-  MessageForwardOrigin origin;
-  int date;
-  String publicServiceAnnouncementType;
-  int fromChatId;
-  int fromMessageId;
+   late MessageForwardOrigin origin;
+   late int date;
+   late String publicServiceAnnouncementType;
+   late int fromChatId;
+   late int fromMessageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -3706,11 +3706,11 @@ class MessageForwardInfo extends TdObject {
   };
 
   MessageForwardInfo({
-    this.origin,
-    this.date,
-    this.publicServiceAnnouncementType,
-    this.fromChatId,
-    this.fromMessageId,
+  required this.origin,
+  required this.date,
+  required this.publicServiceAnnouncementType,
+  required this.fromChatId,
+  required this.fromMessageId,
   });
 
   MessageForwardInfo.fromJson(Map<String, dynamic> json) {
@@ -3727,11 +3727,11 @@ class MessageReplyInfo extends TdObject {
   @override
   String get tdType => 'messageReplyInfo';
 
-  int replyCount;
-  List<MessageSender> recentRepliers;
-  int lastReadInboxMessageId;
-  int lastReadOutboxMessageId;
-  int lastMessageId;
+   late int replyCount;
+   late List<MessageSender> recentRepliers;
+   late int lastReadInboxMessageId;
+   late int lastReadOutboxMessageId;
+   late int lastMessageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -3743,11 +3743,11 @@ class MessageReplyInfo extends TdObject {
   };
 
   MessageReplyInfo({
-    this.replyCount,
-    this.recentRepliers,
-    this.lastReadInboxMessageId,
-    this.lastReadOutboxMessageId,
-    this.lastMessageId,
+  required this.replyCount,
+  required this.recentRepliers,
+  required this.lastReadInboxMessageId,
+  required this.lastReadOutboxMessageId,
+  required this.lastMessageId,
   });
 
   MessageReplyInfo.fromJson(Map<String, dynamic> json) {
@@ -3764,9 +3764,9 @@ class MessageInteractionInfo extends TdObject {
   @override
   String get tdType => 'messageInteractionInfo';
 
-  int viewCount;
-  int forwardCount;
-  MessageReplyInfo replyInfo;
+   late int viewCount;
+   late int forwardCount;
+   late MessageReplyInfo replyInfo;
 
   @override
   Map<String, dynamic> get params => {
@@ -3776,9 +3776,9 @@ class MessageInteractionInfo extends TdObject {
   };
 
   MessageInteractionInfo({
-    this.viewCount,
-    this.forwardCount,
-    this.replyInfo,
+  required this.viewCount,
+  required this.forwardCount,
+  required this.replyInfo,
   });
 
   MessageInteractionInfo.fromJson(Map<String, dynamic> json) {
@@ -3808,10 +3808,10 @@ class MessageSendingStateFailed extends MessageSendingState {
   @override
   String get tdType => 'messageSendingStateFailed';
 
-  int errorCode;
-  String errorMessage;
-  bool canRetry;
-  double retryAfter;
+   late int errorCode;
+   late String errorMessage;
+   late bool canRetry;
+   late double retryAfter;
 
   @override
   Map<String, dynamic> get params => {
@@ -3822,10 +3822,10 @@ class MessageSendingStateFailed extends MessageSendingState {
   };
 
   MessageSendingStateFailed({
-    this.errorCode,
-    this.errorMessage,
-    this.canRetry,
-    this.retryAfter,
+  required this.errorCode,
+  required this.errorMessage,
+  required this.canRetry,
+  required this.retryAfter,
   });
 
   MessageSendingStateFailed.fromJson(Map<String, dynamic> json) {
@@ -3841,39 +3841,39 @@ class Message extends TdObject {
   @override
   String get tdType => 'message';
 
-  int id;
-  MessageSender sender;
-  int chatId;
-  MessageSendingState sendingState;
-  MessageSchedulingState schedulingState;
-  bool isOutgoing;
-  bool isPinned;
-  bool canBeEdited;
-  bool canBeForwarded;
-  bool canBeDeletedOnlyForSelf;
-  bool canBeDeletedForAllUsers;
-  bool canGetStatistics;
-  bool canGetMessageThread;
-  bool canGetViewers;
-  bool canGetMediaTimestampLinks;
-  bool hasTimestampedMedia;
-  bool isChannelPost;
-  bool containsUnreadMention;
-  int date;
-  int editDate;
-  MessageForwardInfo forwardInfo;
-  MessageInteractionInfo interactionInfo;
-  int replyInChatId;
-  int replyToMessageId;
-  int messageThreadId;
-  int ttl;
-  double ttlExpiresIn;
-  int viaBotUserId;
-  String authorSignature;
-  int mediaAlbumId;
-  String restrictionReason;
-  MessageContent content;
-  ReplyMarkup replyMarkup;
+   late int id;
+   late MessageSender sender;
+   late int chatId;
+   late MessageSendingState sendingState;
+   late MessageSchedulingState schedulingState;
+   late bool isOutgoing;
+   late bool isPinned;
+   late bool canBeEdited;
+   late bool canBeForwarded;
+   late bool canBeDeletedOnlyForSelf;
+   late bool canBeDeletedForAllUsers;
+   late bool canGetStatistics;
+   late bool canGetMessageThread;
+   late bool canGetViewers;
+   late bool canGetMediaTimestampLinks;
+   late bool hasTimestampedMedia;
+   late bool isChannelPost;
+   late bool containsUnreadMention;
+   late int date;
+   late int editDate;
+   late MessageForwardInfo forwardInfo;
+   late MessageInteractionInfo interactionInfo;
+   late int replyInChatId;
+   late int replyToMessageId;
+   late int messageThreadId;
+   late int ttl;
+   late double ttlExpiresIn;
+   late int viaBotUserId;
+   late String authorSignature;
+   late int mediaAlbumId;
+   late String restrictionReason;
+   late MessageContent content;
+   late ReplyMarkup replyMarkup;
 
   @override
   Map<String, dynamic> get params => {
@@ -3913,39 +3913,39 @@ class Message extends TdObject {
   };
 
   Message({
-    this.id,
-    this.sender,
-    this.chatId,
-    this.sendingState,
-    this.schedulingState,
-    this.isOutgoing,
-    this.isPinned,
-    this.canBeEdited,
-    this.canBeForwarded,
-    this.canBeDeletedOnlyForSelf,
-    this.canBeDeletedForAllUsers,
-    this.canGetStatistics,
-    this.canGetMessageThread,
-    this.canGetViewers,
-    this.canGetMediaTimestampLinks,
-    this.hasTimestampedMedia,
-    this.isChannelPost,
-    this.containsUnreadMention,
-    this.date,
-    this.editDate,
-    this.forwardInfo,
-    this.interactionInfo,
-    this.replyInChatId,
-    this.replyToMessageId,
-    this.messageThreadId,
-    this.ttl,
-    this.ttlExpiresIn,
-    this.viaBotUserId,
-    this.authorSignature,
-    this.mediaAlbumId,
-    this.restrictionReason,
-    this.content,
-    this.replyMarkup,
+  required this.id,
+  required this.sender,
+  required this.chatId,
+  required this.sendingState,
+  required this.schedulingState,
+  required this.isOutgoing,
+  required this.isPinned,
+  required this.canBeEdited,
+  required this.canBeForwarded,
+  required this.canBeDeletedOnlyForSelf,
+  required this.canBeDeletedForAllUsers,
+  required this.canGetStatistics,
+  required this.canGetMessageThread,
+  required this.canGetViewers,
+  required this.canGetMediaTimestampLinks,
+  required this.hasTimestampedMedia,
+  required this.isChannelPost,
+  required this.containsUnreadMention,
+  required this.date,
+  required this.editDate,
+  required this.forwardInfo,
+  required this.interactionInfo,
+  required this.replyInChatId,
+  required this.replyToMessageId,
+  required this.messageThreadId,
+  required this.ttl,
+  required this.ttlExpiresIn,
+  required this.viaBotUserId,
+  required this.authorSignature,
+  required this.mediaAlbumId,
+  required this.restrictionReason,
+  required this.content,
+  required this.replyMarkup,
   });
 
   Message.fromJson(Map<String, dynamic> json) {
@@ -3990,8 +3990,8 @@ class Messages extends TdObject {
   @override
   String get tdType => 'messages';
 
-  int totalCount;
-  List<Message> messages;
+   late int totalCount;
+   late List<Message> messages;
 
   @override
   Map<String, dynamic> get params => {
@@ -4000,8 +4000,8 @@ class Messages extends TdObject {
   };
 
   Messages({
-    this.totalCount,
-    this.messages,
+  required this.totalCount,
+  required this.messages,
   });
 
   Messages.fromJson(Map<String, dynamic> json) {
@@ -4015,9 +4015,9 @@ class FoundMessages extends TdObject {
   @override
   String get tdType => 'foundMessages';
 
-  int totalCount;
-  List<Message> messages;
-  String nextOffset;
+   late int totalCount;
+   late List<Message> messages;
+   late String nextOffset;
 
   @override
   Map<String, dynamic> get params => {
@@ -4027,9 +4027,9 @@ class FoundMessages extends TdObject {
   };
 
   FoundMessages({
-    this.totalCount,
-    this.messages,
-    this.nextOffset,
+  required this.totalCount,
+  required this.messages,
+  required this.nextOffset,
   });
 
   FoundMessages.fromJson(Map<String, dynamic> json) {
@@ -4044,10 +4044,10 @@ class SponsoredMessage extends TdObject {
   @override
   String get tdType => 'sponsoredMessage';
 
-  int id;
-  int sponsorChatId;
-  InternalLinkType link;
-  MessageContent content;
+   late int id;
+   late int sponsorChatId;
+   late InternalLinkType link;
+   late MessageContent content;
 
   @override
   Map<String, dynamic> get params => {
@@ -4058,10 +4058,10 @@ class SponsoredMessage extends TdObject {
   };
 
   SponsoredMessage({
-    this.id,
-    this.sponsorChatId,
-    this.link,
-    this.content,
+  required this.id,
+  required this.sponsorChatId,
+  required this.link,
+  required this.content,
   });
 
   SponsoredMessage.fromJson(Map<String, dynamic> json) {
@@ -4077,7 +4077,7 @@ class SponsoredMessages extends TdObject {
   @override
   String get tdType => 'sponsoredMessages';
 
-  List<SponsoredMessage> messages;
+   late List<SponsoredMessage> messages;
 
   @override
   Map<String, dynamic> get params => {
@@ -4085,7 +4085,7 @@ class SponsoredMessages extends TdObject {
   };
 
   SponsoredMessages({
-    this.messages,
+  required this.messages,
   });
 
   SponsoredMessages.fromJson(Map<String, dynamic> json) {
@@ -4139,16 +4139,16 @@ class ChatNotificationSettings extends TdObject {
   @override
   String get tdType => 'chatNotificationSettings';
 
-  bool useDefaultMuteFor;
-  int muteFor;
-  bool useDefaultSound;
-  String sound;
-  bool useDefaultShowPreview;
-  bool showPreview;
-  bool useDefaultDisablePinnedMessageNotifications;
-  bool disablePinnedMessageNotifications;
-  bool useDefaultDisableMentionNotifications;
-  bool disableMentionNotifications;
+   late bool useDefaultMuteFor;
+   late int muteFor;
+   late bool useDefaultSound;
+   late String sound;
+   late bool useDefaultShowPreview;
+   late bool showPreview;
+   late bool useDefaultDisablePinnedMessageNotifications;
+   late bool disablePinnedMessageNotifications;
+   late bool useDefaultDisableMentionNotifications;
+   late bool disableMentionNotifications;
 
   @override
   Map<String, dynamic> get params => {
@@ -4165,16 +4165,16 @@ class ChatNotificationSettings extends TdObject {
   };
 
   ChatNotificationSettings({
-    this.useDefaultMuteFor,
-    this.muteFor,
-    this.useDefaultSound,
-    this.sound,
-    this.useDefaultShowPreview,
-    this.showPreview,
-    this.useDefaultDisablePinnedMessageNotifications,
-    this.disablePinnedMessageNotifications,
-    this.useDefaultDisableMentionNotifications,
-    this.disableMentionNotifications,
+  required this.useDefaultMuteFor,
+  required this.muteFor,
+  required this.useDefaultSound,
+  required this.sound,
+  required this.useDefaultShowPreview,
+  required this.showPreview,
+  required this.useDefaultDisablePinnedMessageNotifications,
+  required this.disablePinnedMessageNotifications,
+  required this.useDefaultDisableMentionNotifications,
+  required this.disableMentionNotifications,
   });
 
   ChatNotificationSettings.fromJson(Map<String, dynamic> json) {
@@ -4196,11 +4196,11 @@ class ScopeNotificationSettings extends TdObject {
   @override
   String get tdType => 'scopeNotificationSettings';
 
-  int muteFor;
-  String sound;
-  bool showPreview;
-  bool disablePinnedMessageNotifications;
-  bool disableMentionNotifications;
+   late int muteFor;
+   late String sound;
+   late bool showPreview;
+   late bool disablePinnedMessageNotifications;
+   late bool disableMentionNotifications;
 
   @override
   Map<String, dynamic> get params => {
@@ -4212,11 +4212,11 @@ class ScopeNotificationSettings extends TdObject {
   };
 
   ScopeNotificationSettings({
-    this.muteFor,
-    this.sound,
-    this.showPreview,
-    this.disablePinnedMessageNotifications,
-    this.disableMentionNotifications,
+  required this.muteFor,
+  required this.sound,
+  required this.showPreview,
+  required this.disablePinnedMessageNotifications,
+  required this.disableMentionNotifications,
   });
 
   ScopeNotificationSettings.fromJson(Map<String, dynamic> json) {
@@ -4233,9 +4233,9 @@ class DraftMessage extends TdObject {
   @override
   String get tdType => 'draftMessage';
 
-  int replyToMessageId;
-  int date;
-  InputMessageContent inputMessageText;
+   late int replyToMessageId;
+   late int date;
+   late InputMessageContent inputMessageText;
 
   @override
   Map<String, dynamic> get params => {
@@ -4245,9 +4245,9 @@ class DraftMessage extends TdObject {
   };
 
   DraftMessage({
-    this.replyToMessageId,
-    this.date,
-    this.inputMessageText,
+  required this.replyToMessageId,
+  required this.date,
+  required this.inputMessageText,
   });
 
   DraftMessage.fromJson(Map<String, dynamic> json) {
@@ -4264,7 +4264,7 @@ class ChatTypePrivate extends ChatType {
   @override
   String get tdType => 'chatTypePrivate';
 
-  int userId;
+   late int userId;
 
   @override
   Map<String, dynamic> get params => {
@@ -4272,7 +4272,7 @@ class ChatTypePrivate extends ChatType {
   };
 
   ChatTypePrivate({
-    this.userId,
+  required this.userId,
   });
 
   ChatTypePrivate.fromJson(Map<String, dynamic> json) {
@@ -4285,7 +4285,7 @@ class ChatTypeBasicGroup extends ChatType {
   @override
   String get tdType => 'chatTypeBasicGroup';
 
-  int basicGroupId;
+   late int basicGroupId;
 
   @override
   Map<String, dynamic> get params => {
@@ -4293,7 +4293,7 @@ class ChatTypeBasicGroup extends ChatType {
   };
 
   ChatTypeBasicGroup({
-    this.basicGroupId,
+  required this.basicGroupId,
   });
 
   ChatTypeBasicGroup.fromJson(Map<String, dynamic> json) {
@@ -4306,8 +4306,8 @@ class ChatTypeSupergroup extends ChatType {
   @override
   String get tdType => 'chatTypeSupergroup';
 
-  int supergroupId;
-  bool isChannel;
+   late int supergroupId;
+   late bool isChannel;
 
   @override
   Map<String, dynamic> get params => {
@@ -4316,8 +4316,8 @@ class ChatTypeSupergroup extends ChatType {
   };
 
   ChatTypeSupergroup({
-    this.supergroupId,
-    this.isChannel,
+  required this.supergroupId,
+  required this.isChannel,
   });
 
   ChatTypeSupergroup.fromJson(Map<String, dynamic> json) {
@@ -4331,8 +4331,8 @@ class ChatTypeSecret extends ChatType {
   @override
   String get tdType => 'chatTypeSecret';
 
-  int secretChatId;
-  int userId;
+   late int secretChatId;
+   late int userId;
 
   @override
   Map<String, dynamic> get params => {
@@ -4341,8 +4341,8 @@ class ChatTypeSecret extends ChatType {
   };
 
   ChatTypeSecret({
-    this.secretChatId,
-    this.userId,
+  required this.secretChatId,
+  required this.userId,
   });
 
   ChatTypeSecret.fromJson(Map<String, dynamic> json) {
@@ -4356,19 +4356,19 @@ class ChatFilter extends TdObject {
   @override
   String get tdType => 'chatFilter';
 
-  String title;
-  String iconName;
-  List<int> pinnedChatIds;
-  List<int> includedChatIds;
-  List<int> excludedChatIds;
-  bool excludeMuted;
-  bool excludeRead;
-  bool excludeArchived;
-  bool includeContacts;
-  bool includeNonContacts;
-  bool includeBots;
-  bool includeGroups;
-  bool includeChannels;
+   late String title;
+   late String iconName;
+   late List<int> pinnedChatIds;
+   late List<int> includedChatIds;
+   late List<int> excludedChatIds;
+   late bool excludeMuted;
+   late bool excludeRead;
+   late bool excludeArchived;
+   late bool includeContacts;
+   late bool includeNonContacts;
+   late bool includeBots;
+   late bool includeGroups;
+   late bool includeChannels;
 
   @override
   Map<String, dynamic> get params => {
@@ -4388,19 +4388,19 @@ class ChatFilter extends TdObject {
   };
 
   ChatFilter({
-    this.title,
-    this.iconName,
-    this.pinnedChatIds,
-    this.includedChatIds,
-    this.excludedChatIds,
-    this.excludeMuted,
-    this.excludeRead,
-    this.excludeArchived,
-    this.includeContacts,
-    this.includeNonContacts,
-    this.includeBots,
-    this.includeGroups,
-    this.includeChannels,
+  required this.title,
+  required this.iconName,
+  required this.pinnedChatIds,
+  required this.includedChatIds,
+  required this.excludedChatIds,
+  required this.excludeMuted,
+  required this.excludeRead,
+  required this.excludeArchived,
+  required this.includeContacts,
+  required this.includeNonContacts,
+  required this.includeBots,
+  required this.includeGroups,
+  required this.includeChannels,
   });
 
   ChatFilter.fromJson(Map<String, dynamic> json) {
@@ -4425,9 +4425,9 @@ class ChatFilterInfo extends TdObject {
   @override
   String get tdType => 'chatFilterInfo';
 
-  int id;
-  String title;
-  String iconName;
+   late int id;
+   late String title;
+   late String iconName;
 
   @override
   Map<String, dynamic> get params => {
@@ -4437,9 +4437,9 @@ class ChatFilterInfo extends TdObject {
   };
 
   ChatFilterInfo({
-    this.id,
-    this.title,
-    this.iconName,
+  required this.id,
+  required this.title,
+  required this.iconName,
   });
 
   ChatFilterInfo.fromJson(Map<String, dynamic> json) {
@@ -4454,8 +4454,8 @@ class RecommendedChatFilter extends TdObject {
   @override
   String get tdType => 'recommendedChatFilter';
 
-  ChatFilter filter;
-  String description;
+   late ChatFilter filter;
+   late String description;
 
   @override
   Map<String, dynamic> get params => {
@@ -4464,8 +4464,8 @@ class RecommendedChatFilter extends TdObject {
   };
 
   RecommendedChatFilter({
-    this.filter,
-    this.description,
+  required this.filter,
+  required this.description,
   });
 
   RecommendedChatFilter.fromJson(Map<String, dynamic> json) {
@@ -4479,7 +4479,7 @@ class RecommendedChatFilters extends TdObject {
   @override
   String get tdType => 'recommendedChatFilters';
 
-  List<RecommendedChatFilter> chatFilters;
+   late List<RecommendedChatFilter> chatFilters;
 
   @override
   Map<String, dynamic> get params => {
@@ -4487,7 +4487,7 @@ class RecommendedChatFilters extends TdObject {
   };
 
   RecommendedChatFilters({
-    this.chatFilters,
+  required this.chatFilters,
   });
 
   RecommendedChatFilters.fromJson(Map<String, dynamic> json) {
@@ -4528,7 +4528,7 @@ class ChatListFilter extends ChatList {
   @override
   String get tdType => 'chatListFilter';
 
-  int chatFilterId;
+   late int chatFilterId;
 
   @override
   Map<String, dynamic> get params => {
@@ -4536,7 +4536,7 @@ class ChatListFilter extends ChatList {
   };
 
   ChatListFilter({
-    this.chatFilterId,
+  required this.chatFilterId,
   });
 
   ChatListFilter.fromJson(Map<String, dynamic> json) {
@@ -4549,7 +4549,7 @@ class ChatLists extends TdObject {
   @override
   String get tdType => 'chatLists';
 
-  List<ChatList> chatLists;
+   late List<ChatList> chatLists;
 
   @override
   Map<String, dynamic> get params => {
@@ -4557,7 +4557,7 @@ class ChatLists extends TdObject {
   };
 
   ChatLists({
-    this.chatLists,
+  required this.chatLists,
   });
 
   ChatLists.fromJson(Map<String, dynamic> json) {
@@ -4585,8 +4585,8 @@ class ChatSourcePublicServiceAnnouncement extends ChatSource {
   @override
   String get tdType => 'chatSourcePublicServiceAnnouncement';
 
-  String type;
-  String text;
+   late String type;
+   late String text;
 
   @override
   Map<String, dynamic> get params => {
@@ -4595,8 +4595,8 @@ class ChatSourcePublicServiceAnnouncement extends ChatSource {
   };
 
   ChatSourcePublicServiceAnnouncement({
-    this.type,
-    this.text,
+  required this.type,
+  required this.text,
   });
 
   ChatSourcePublicServiceAnnouncement.fromJson(Map<String, dynamic> json) {
@@ -4610,10 +4610,10 @@ class ChatPosition extends TdObject {
   @override
   String get tdType => 'chatPosition';
 
-  ChatList list;
-  int order;
-  bool isPinned;
-  ChatSource source;
+   late ChatList list;
+   late int order;
+   late bool isPinned;
+   late ChatSource source;
 
   @override
   Map<String, dynamic> get params => {
@@ -4624,10 +4624,10 @@ class ChatPosition extends TdObject {
   };
 
   ChatPosition({
-    this.list,
-    this.order,
-    this.isPinned,
-    this.source,
+  required this.list,
+  required this.order,
+  required this.isPinned,
+  required this.source,
   });
 
   ChatPosition.fromJson(Map<String, dynamic> json) {
@@ -4643,9 +4643,9 @@ class VoiceChat extends TdObject {
   @override
   String get tdType => 'voiceChat';
 
-  int groupCallId;
-  bool hasParticipants;
-  MessageSender defaultParticipantId;
+   late int groupCallId;
+   late bool hasParticipants;
+   late MessageSender defaultParticipantId;
 
   @override
   Map<String, dynamic> get params => {
@@ -4655,9 +4655,9 @@ class VoiceChat extends TdObject {
   };
 
   VoiceChat({
-    this.groupCallId,
-    this.hasParticipants,
-    this.defaultParticipantId,
+  required this.groupCallId,
+  required this.hasParticipants,
+  required this.defaultParticipantId,
   });
 
   VoiceChat.fromJson(Map<String, dynamic> json) {
@@ -4672,32 +4672,32 @@ class Chat extends TdObject {
   @override
   String get tdType => 'chat';
 
-  int id;
-  ChatType type;
-  String title;
-  ChatPhotoInfo photo;
-  ChatPermissions permissions;
-  Message lastMessage;
-  List<ChatPosition> positions;
-  bool isMarkedAsUnread;
-  bool isBlocked;
-  bool hasScheduledMessages;
-  bool canBeDeletedOnlyForSelf;
-  bool canBeDeletedForAllUsers;
-  bool canBeReported;
-  bool defaultDisableNotification;
-  int unreadCount;
-  int lastReadInboxMessageId;
-  int lastReadOutboxMessageId;
-  int unreadMentionCount;
-  ChatNotificationSettings notificationSettings;
-  int messageTtlSetting;
-  String themeName;
-  ChatActionBar actionBar;
-  VoiceChat voiceChat;
-  int replyMarkupMessageId;
-  DraftMessage draftMessage;
-  String clientData;
+   late int id;
+   late ChatType type;
+   late String title;
+   late ChatPhotoInfo photo;
+   late ChatPermissions permissions;
+   late Message lastMessage;
+   late List<ChatPosition> positions;
+   late bool isMarkedAsUnread;
+   late bool isBlocked;
+   late bool hasScheduledMessages;
+   late bool canBeDeletedOnlyForSelf;
+   late bool canBeDeletedForAllUsers;
+   late bool canBeReported;
+   late bool defaultDisableNotification;
+   late int unreadCount;
+   late int lastReadInboxMessageId;
+   late int lastReadOutboxMessageId;
+   late int unreadMentionCount;
+   late ChatNotificationSettings notificationSettings;
+   late int messageTtlSetting;
+   late String themeName;
+   late ChatActionBar actionBar;
+   late VoiceChat voiceChat;
+   late int replyMarkupMessageId;
+   late DraftMessage draftMessage;
+   late String clientData;
 
   @override
   Map<String, dynamic> get params => {
@@ -4730,32 +4730,32 @@ class Chat extends TdObject {
   };
 
   Chat({
-    this.id,
-    this.type,
-    this.title,
-    this.photo,
-    this.permissions,
-    this.lastMessage,
-    this.positions,
-    this.isMarkedAsUnread,
-    this.isBlocked,
-    this.hasScheduledMessages,
-    this.canBeDeletedOnlyForSelf,
-    this.canBeDeletedForAllUsers,
-    this.canBeReported,
-    this.defaultDisableNotification,
-    this.unreadCount,
-    this.lastReadInboxMessageId,
-    this.lastReadOutboxMessageId,
-    this.unreadMentionCount,
-    this.notificationSettings,
-    this.messageTtlSetting,
-    this.themeName,
-    this.actionBar,
-    this.voiceChat,
-    this.replyMarkupMessageId,
-    this.draftMessage,
-    this.clientData,
+  required this.id,
+  required this.type,
+  required this.title,
+  required this.photo,
+  required this.permissions,
+  required this.lastMessage,
+  required this.positions,
+  required this.isMarkedAsUnread,
+  required this.isBlocked,
+  required this.hasScheduledMessages,
+  required this.canBeDeletedOnlyForSelf,
+  required this.canBeDeletedForAllUsers,
+  required this.canBeReported,
+  required this.defaultDisableNotification,
+  required this.unreadCount,
+  required this.lastReadInboxMessageId,
+  required this.lastReadOutboxMessageId,
+  required this.unreadMentionCount,
+  required this.notificationSettings,
+  required this.messageTtlSetting,
+  required this.themeName,
+  required this.actionBar,
+  required this.voiceChat,
+  required this.replyMarkupMessageId,
+  required this.draftMessage,
+  required this.clientData,
   });
 
   Chat.fromJson(Map<String, dynamic> json) {
@@ -4793,8 +4793,8 @@ class Chats extends TdObject {
   @override
   String get tdType => 'chats';
 
-  int totalCount;
-  List<int> chatIds;
+   late int totalCount;
+   late List<int> chatIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -4803,8 +4803,8 @@ class Chats extends TdObject {
   };
 
   Chats({
-    this.totalCount,
-    this.chatIds,
+  required this.totalCount,
+  required this.chatIds,
   });
 
   Chats.fromJson(Map<String, dynamic> json) {
@@ -4818,8 +4818,8 @@ class ChatNearby extends TdObject {
   @override
   String get tdType => 'chatNearby';
 
-  int chatId;
-  int distance;
+   late int chatId;
+   late int distance;
 
   @override
   Map<String, dynamic> get params => {
@@ -4828,8 +4828,8 @@ class ChatNearby extends TdObject {
   };
 
   ChatNearby({
-    this.chatId,
-    this.distance,
+  required this.chatId,
+  required this.distance,
   });
 
   ChatNearby.fromJson(Map<String, dynamic> json) {
@@ -4843,8 +4843,8 @@ class ChatsNearby extends TdObject {
   @override
   String get tdType => 'chatsNearby';
 
-  List<ChatNearby> usersNearby;
-  List<ChatNearby> supergroupsNearby;
+   late List<ChatNearby> usersNearby;
+   late List<ChatNearby> supergroupsNearby;
 
   @override
   Map<String, dynamic> get params => {
@@ -4853,8 +4853,8 @@ class ChatsNearby extends TdObject {
   };
 
   ChatsNearby({
-    this.usersNearby,
-    this.supergroupsNearby,
+  required this.usersNearby,
+  required this.supergroupsNearby,
   });
 
   ChatsNearby.fromJson(Map<String, dynamic> json) {
@@ -4898,7 +4898,7 @@ class ChatActionBarReportSpam extends ChatActionBar {
   @override
   String get tdType => 'chatActionBarReportSpam';
 
-  bool canUnarchive;
+   late bool canUnarchive;
 
   @override
   Map<String, dynamic> get params => {
@@ -4906,7 +4906,7 @@ class ChatActionBarReportSpam extends ChatActionBar {
   };
 
   ChatActionBarReportSpam({
-    this.canUnarchive,
+  required this.canUnarchive,
   });
 
   ChatActionBarReportSpam.fromJson(Map<String, dynamic> json) {
@@ -4945,8 +4945,8 @@ class ChatActionBarReportAddBlock extends ChatActionBar {
   @override
   String get tdType => 'chatActionBarReportAddBlock';
 
-  bool canUnarchive;
-  int distance;
+   late bool canUnarchive;
+   late int distance;
 
   @override
   Map<String, dynamic> get params => {
@@ -4955,8 +4955,8 @@ class ChatActionBarReportAddBlock extends ChatActionBar {
   };
 
   ChatActionBarReportAddBlock({
-    this.canUnarchive,
-    this.distance,
+  required this.canUnarchive,
+  required this.distance,
   });
 
   ChatActionBarReportAddBlock.fromJson(Map<String, dynamic> json) {
@@ -5037,8 +5037,8 @@ class KeyboardButtonTypeRequestPoll extends KeyboardButtonType {
   @override
   String get tdType => 'keyboardButtonTypeRequestPoll';
 
-  bool forceRegular;
-  bool forceQuiz;
+   late bool forceRegular;
+   late bool forceQuiz;
 
   @override
   Map<String, dynamic> get params => {
@@ -5047,8 +5047,8 @@ class KeyboardButtonTypeRequestPoll extends KeyboardButtonType {
   };
 
   KeyboardButtonTypeRequestPoll({
-    this.forceRegular,
-    this.forceQuiz,
+  required this.forceRegular,
+  required this.forceQuiz,
   });
 
   KeyboardButtonTypeRequestPoll.fromJson(Map<String, dynamic> json) {
@@ -5062,8 +5062,8 @@ class KeyboardButton extends TdObject {
   @override
   String get tdType => 'keyboardButton';
 
-  String text;
-  KeyboardButtonType type;
+   late String text;
+   late KeyboardButtonType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -5072,8 +5072,8 @@ class KeyboardButton extends TdObject {
   };
 
   KeyboardButton({
-    this.text,
-    this.type,
+  required this.text,
+  required this.type,
   });
 
   KeyboardButton.fromJson(Map<String, dynamic> json) {
@@ -5089,7 +5089,7 @@ class InlineKeyboardButtonTypeUrl extends InlineKeyboardButtonType {
   @override
   String get tdType => 'inlineKeyboardButtonTypeUrl';
 
-  String url;
+   late String url;
 
   @override
   Map<String, dynamic> get params => {
@@ -5097,7 +5097,7 @@ class InlineKeyboardButtonTypeUrl extends InlineKeyboardButtonType {
   };
 
   InlineKeyboardButtonTypeUrl({
-    this.url,
+  required this.url,
   });
 
   InlineKeyboardButtonTypeUrl.fromJson(Map<String, dynamic> json) {
@@ -5110,9 +5110,9 @@ class InlineKeyboardButtonTypeLoginUrl extends InlineKeyboardButtonType {
   @override
   String get tdType => 'inlineKeyboardButtonTypeLoginUrl';
 
-  String url;
-  int id;
-  String forwardText;
+   late String url;
+   late int id;
+   late String forwardText;
 
   @override
   Map<String, dynamic> get params => {
@@ -5122,9 +5122,9 @@ class InlineKeyboardButtonTypeLoginUrl extends InlineKeyboardButtonType {
   };
 
   InlineKeyboardButtonTypeLoginUrl({
-    this.url,
-    this.id,
-    this.forwardText,
+  required this.url,
+  required this.id,
+  required this.forwardText,
   });
 
   InlineKeyboardButtonTypeLoginUrl.fromJson(Map<String, dynamic> json) {
@@ -5139,7 +5139,7 @@ class InlineKeyboardButtonTypeCallback extends InlineKeyboardButtonType {
   @override
   String get tdType => 'inlineKeyboardButtonTypeCallback';
 
-  String data;
+   late String data;
 
   @override
   Map<String, dynamic> get params => {
@@ -5147,7 +5147,7 @@ class InlineKeyboardButtonTypeCallback extends InlineKeyboardButtonType {
   };
 
   InlineKeyboardButtonTypeCallback({
-    this.data,
+  required this.data,
   });
 
   InlineKeyboardButtonTypeCallback.fromJson(Map<String, dynamic> json) {
@@ -5160,7 +5160,7 @@ class InlineKeyboardButtonTypeCallbackWithPassword extends InlineKeyboardButtonT
   @override
   String get tdType => 'inlineKeyboardButtonTypeCallbackWithPassword';
 
-  String data;
+   late String data;
 
   @override
   Map<String, dynamic> get params => {
@@ -5168,7 +5168,7 @@ class InlineKeyboardButtonTypeCallbackWithPassword extends InlineKeyboardButtonT
   };
 
   InlineKeyboardButtonTypeCallbackWithPassword({
-    this.data,
+  required this.data,
   });
 
   InlineKeyboardButtonTypeCallbackWithPassword.fromJson(Map<String, dynamic> json) {
@@ -5194,8 +5194,8 @@ class InlineKeyboardButtonTypeSwitchInline extends InlineKeyboardButtonType {
   @override
   String get tdType => 'inlineKeyboardButtonTypeSwitchInline';
 
-  String query;
-  bool inCurrentChat;
+   late String query;
+   late bool inCurrentChat;
 
   @override
   Map<String, dynamic> get params => {
@@ -5204,8 +5204,8 @@ class InlineKeyboardButtonTypeSwitchInline extends InlineKeyboardButtonType {
   };
 
   InlineKeyboardButtonTypeSwitchInline({
-    this.query,
-    this.inCurrentChat,
+  required this.query,
+  required this.inCurrentChat,
   });
 
   InlineKeyboardButtonTypeSwitchInline.fromJson(Map<String, dynamic> json) {
@@ -5232,8 +5232,8 @@ class InlineKeyboardButton extends TdObject {
   @override
   String get tdType => 'inlineKeyboardButton';
 
-  String text;
-  InlineKeyboardButtonType type;
+   late String text;
+   late InlineKeyboardButtonType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -5242,8 +5242,8 @@ class InlineKeyboardButton extends TdObject {
   };
 
   InlineKeyboardButton({
-    this.text,
-    this.type,
+  required this.text,
+  required this.type,
   });
 
   InlineKeyboardButton.fromJson(Map<String, dynamic> json) {
@@ -5259,7 +5259,7 @@ class ReplyMarkupRemoveKeyboard extends ReplyMarkup {
   @override
   String get tdType => 'replyMarkupRemoveKeyboard';
 
-  bool isPersonal;
+   late bool isPersonal;
 
   @override
   Map<String, dynamic> get params => {
@@ -5267,7 +5267,7 @@ class ReplyMarkupRemoveKeyboard extends ReplyMarkup {
   };
 
   ReplyMarkupRemoveKeyboard({
-    this.isPersonal,
+  required this.isPersonal,
   });
 
   ReplyMarkupRemoveKeyboard.fromJson(Map<String, dynamic> json) {
@@ -5280,8 +5280,8 @@ class ReplyMarkupForceReply extends ReplyMarkup {
   @override
   String get tdType => 'replyMarkupForceReply';
 
-  bool isPersonal;
-  String inputFieldPlaceholder;
+   late bool isPersonal;
+   late String inputFieldPlaceholder;
 
   @override
   Map<String, dynamic> get params => {
@@ -5290,8 +5290,8 @@ class ReplyMarkupForceReply extends ReplyMarkup {
   };
 
   ReplyMarkupForceReply({
-    this.isPersonal,
-    this.inputFieldPlaceholder,
+  required this.isPersonal,
+  required this.inputFieldPlaceholder,
   });
 
   ReplyMarkupForceReply.fromJson(Map<String, dynamic> json) {
@@ -5305,11 +5305,11 @@ class ReplyMarkupShowKeyboard extends ReplyMarkup {
   @override
   String get tdType => 'replyMarkupShowKeyboard';
 
-  List<List<KeyboardButton>> rows;
-  bool resizeKeyboard;
-  bool oneTime;
-  bool isPersonal;
-  String inputFieldPlaceholder;
+   late List<List<KeyboardButton>> rows;
+   late bool resizeKeyboard;
+   late bool oneTime;
+   late bool isPersonal;
+   late String inputFieldPlaceholder;
 
   @override
   Map<String, dynamic> get params => {
@@ -5321,11 +5321,11 @@ class ReplyMarkupShowKeyboard extends ReplyMarkup {
   };
 
   ReplyMarkupShowKeyboard({
-    this.rows,
-    this.resizeKeyboard,
-    this.oneTime,
-    this.isPersonal,
-    this.inputFieldPlaceholder,
+  required this.rows,
+  required this.resizeKeyboard,
+  required this.oneTime,
+  required this.isPersonal,
+  required this.inputFieldPlaceholder,
   });
 
   ReplyMarkupShowKeyboard.fromJson(Map<String, dynamic> json) {
@@ -5342,7 +5342,7 @@ class ReplyMarkupInlineKeyboard extends ReplyMarkup {
   @override
   String get tdType => 'replyMarkupInlineKeyboard';
 
-  List<List<InlineKeyboardButton>> rows;
+   late List<List<InlineKeyboardButton>> rows;
 
   @override
   Map<String, dynamic> get params => {
@@ -5350,7 +5350,7 @@ class ReplyMarkupInlineKeyboard extends ReplyMarkup {
   };
 
   ReplyMarkupInlineKeyboard({
-    this.rows,
+  required this.rows,
   });
 
   ReplyMarkupInlineKeyboard.fromJson(Map<String, dynamic> json) {
@@ -5365,8 +5365,8 @@ class LoginUrlInfoOpen extends LoginUrlInfo {
   @override
   String get tdType => 'loginUrlInfoOpen';
 
-  String url;
-  bool skipConfirm;
+   late String url;
+   late bool skipConfirm;
 
   @override
   Map<String, dynamic> get params => {
@@ -5375,8 +5375,8 @@ class LoginUrlInfoOpen extends LoginUrlInfo {
   };
 
   LoginUrlInfoOpen({
-    this.url,
-    this.skipConfirm,
+  required this.url,
+  required this.skipConfirm,
   });
 
   LoginUrlInfoOpen.fromJson(Map<String, dynamic> json) {
@@ -5390,10 +5390,10 @@ class LoginUrlInfoRequestConfirmation extends LoginUrlInfo {
   @override
   String get tdType => 'loginUrlInfoRequestConfirmation';
 
-  String url;
-  String domain;
-  int botUserId;
-  bool requestWriteAccess;
+   late String url;
+   late String domain;
+   late int botUserId;
+   late bool requestWriteAccess;
 
   @override
   Map<String, dynamic> get params => {
@@ -5404,10 +5404,10 @@ class LoginUrlInfoRequestConfirmation extends LoginUrlInfo {
   };
 
   LoginUrlInfoRequestConfirmation({
-    this.url,
-    this.domain,
-    this.botUserId,
-    this.requestWriteAccess,
+  required this.url,
+  required this.domain,
+  required this.botUserId,
+  required this.requestWriteAccess,
   });
 
   LoginUrlInfoRequestConfirmation.fromJson(Map<String, dynamic> json) {
@@ -5423,12 +5423,12 @@ class MessageThreadInfo extends TdObject {
   @override
   String get tdType => 'messageThreadInfo';
 
-  int chatId;
-  int messageThreadId;
-  MessageReplyInfo replyInfo;
-  int unreadMessageCount;
-  List<Message> messages;
-  DraftMessage draftMessage;
+   late int chatId;
+   late int messageThreadId;
+   late MessageReplyInfo replyInfo;
+   late int unreadMessageCount;
+   late List<Message> messages;
+   late DraftMessage draftMessage;
 
   @override
   Map<String, dynamic> get params => {
@@ -5441,12 +5441,12 @@ class MessageThreadInfo extends TdObject {
   };
 
   MessageThreadInfo({
-    this.chatId,
-    this.messageThreadId,
-    this.replyInfo,
-    this.unreadMessageCount,
-    this.messages,
-    this.draftMessage,
+  required this.chatId,
+  required this.messageThreadId,
+  required this.replyInfo,
+  required this.unreadMessageCount,
+  required this.messages,
+  required this.draftMessage,
   });
 
   MessageThreadInfo.fromJson(Map<String, dynamic> json) {
@@ -5466,7 +5466,7 @@ class RichTextPlain extends RichText {
   @override
   String get tdType => 'richTextPlain';
 
-  String text;
+   late String text;
 
   @override
   Map<String, dynamic> get params => {
@@ -5474,7 +5474,7 @@ class RichTextPlain extends RichText {
   };
 
   RichTextPlain({
-    this.text,
+  required this.text,
   });
 
   RichTextPlain.fromJson(Map<String, dynamic> json) {
@@ -5487,7 +5487,7 @@ class RichTextBold extends RichText {
   @override
   String get tdType => 'richTextBold';
 
-  RichText text;
+   late RichText text;
 
   @override
   Map<String, dynamic> get params => {
@@ -5495,7 +5495,7 @@ class RichTextBold extends RichText {
   };
 
   RichTextBold({
-    this.text,
+  required this.text,
   });
 
   RichTextBold.fromJson(Map<String, dynamic> json) {
@@ -5508,7 +5508,7 @@ class RichTextItalic extends RichText {
   @override
   String get tdType => 'richTextItalic';
 
-  RichText text;
+   late RichText text;
 
   @override
   Map<String, dynamic> get params => {
@@ -5516,7 +5516,7 @@ class RichTextItalic extends RichText {
   };
 
   RichTextItalic({
-    this.text,
+  required this.text,
   });
 
   RichTextItalic.fromJson(Map<String, dynamic> json) {
@@ -5529,7 +5529,7 @@ class RichTextUnderline extends RichText {
   @override
   String get tdType => 'richTextUnderline';
 
-  RichText text;
+   late RichText text;
 
   @override
   Map<String, dynamic> get params => {
@@ -5537,7 +5537,7 @@ class RichTextUnderline extends RichText {
   };
 
   RichTextUnderline({
-    this.text,
+  required this.text,
   });
 
   RichTextUnderline.fromJson(Map<String, dynamic> json) {
@@ -5550,7 +5550,7 @@ class RichTextStrikethrough extends RichText {
   @override
   String get tdType => 'richTextStrikethrough';
 
-  RichText text;
+   late RichText text;
 
   @override
   Map<String, dynamic> get params => {
@@ -5558,7 +5558,7 @@ class RichTextStrikethrough extends RichText {
   };
 
   RichTextStrikethrough({
-    this.text,
+  required this.text,
   });
 
   RichTextStrikethrough.fromJson(Map<String, dynamic> json) {
@@ -5571,7 +5571,7 @@ class RichTextFixed extends RichText {
   @override
   String get tdType => 'richTextFixed';
 
-  RichText text;
+   late RichText text;
 
   @override
   Map<String, dynamic> get params => {
@@ -5579,7 +5579,7 @@ class RichTextFixed extends RichText {
   };
 
   RichTextFixed({
-    this.text,
+  required this.text,
   });
 
   RichTextFixed.fromJson(Map<String, dynamic> json) {
@@ -5592,9 +5592,9 @@ class RichTextUrl extends RichText {
   @override
   String get tdType => 'richTextUrl';
 
-  RichText text;
-  String url;
-  bool isCached;
+   late RichText text;
+   late String url;
+   late bool isCached;
 
   @override
   Map<String, dynamic> get params => {
@@ -5604,9 +5604,9 @@ class RichTextUrl extends RichText {
   };
 
   RichTextUrl({
-    this.text,
-    this.url,
-    this.isCached,
+  required this.text,
+  required this.url,
+  required this.isCached,
   });
 
   RichTextUrl.fromJson(Map<String, dynamic> json) {
@@ -5621,8 +5621,8 @@ class RichTextEmailAddress extends RichText {
   @override
   String get tdType => 'richTextEmailAddress';
 
-  RichText text;
-  String emailAddress;
+   late RichText text;
+   late String emailAddress;
 
   @override
   Map<String, dynamic> get params => {
@@ -5631,8 +5631,8 @@ class RichTextEmailAddress extends RichText {
   };
 
   RichTextEmailAddress({
-    this.text,
-    this.emailAddress,
+  required this.text,
+  required this.emailAddress,
   });
 
   RichTextEmailAddress.fromJson(Map<String, dynamic> json) {
@@ -5646,7 +5646,7 @@ class RichTextSubscript extends RichText {
   @override
   String get tdType => 'richTextSubscript';
 
-  RichText text;
+   late RichText text;
 
   @override
   Map<String, dynamic> get params => {
@@ -5654,7 +5654,7 @@ class RichTextSubscript extends RichText {
   };
 
   RichTextSubscript({
-    this.text,
+  required this.text,
   });
 
   RichTextSubscript.fromJson(Map<String, dynamic> json) {
@@ -5667,7 +5667,7 @@ class RichTextSuperscript extends RichText {
   @override
   String get tdType => 'richTextSuperscript';
 
-  RichText text;
+   late RichText text;
 
   @override
   Map<String, dynamic> get params => {
@@ -5675,7 +5675,7 @@ class RichTextSuperscript extends RichText {
   };
 
   RichTextSuperscript({
-    this.text,
+  required this.text,
   });
 
   RichTextSuperscript.fromJson(Map<String, dynamic> json) {
@@ -5688,7 +5688,7 @@ class RichTextMarked extends RichText {
   @override
   String get tdType => 'richTextMarked';
 
-  RichText text;
+   late RichText text;
 
   @override
   Map<String, dynamic> get params => {
@@ -5696,7 +5696,7 @@ class RichTextMarked extends RichText {
   };
 
   RichTextMarked({
-    this.text,
+  required this.text,
   });
 
   RichTextMarked.fromJson(Map<String, dynamic> json) {
@@ -5709,8 +5709,8 @@ class RichTextPhoneNumber extends RichText {
   @override
   String get tdType => 'richTextPhoneNumber';
 
-  RichText text;
-  String phoneNumber;
+   late RichText text;
+   late String phoneNumber;
 
   @override
   Map<String, dynamic> get params => {
@@ -5719,8 +5719,8 @@ class RichTextPhoneNumber extends RichText {
   };
 
   RichTextPhoneNumber({
-    this.text,
-    this.phoneNumber,
+  required this.text,
+  required this.phoneNumber,
   });
 
   RichTextPhoneNumber.fromJson(Map<String, dynamic> json) {
@@ -5734,9 +5734,9 @@ class RichTextIcon extends RichText {
   @override
   String get tdType => 'richTextIcon';
 
-  Document document;
-  int width;
-  int height;
+   late Document document;
+   late int width;
+   late int height;
 
   @override
   Map<String, dynamic> get params => {
@@ -5746,9 +5746,9 @@ class RichTextIcon extends RichText {
   };
 
   RichTextIcon({
-    this.document,
-    this.width,
-    this.height,
+  required this.document,
+  required this.width,
+  required this.height,
   });
 
   RichTextIcon.fromJson(Map<String, dynamic> json) {
@@ -5763,9 +5763,9 @@ class RichTextReference extends RichText {
   @override
   String get tdType => 'richTextReference';
 
-  RichText text;
-  String anchorName;
-  String url;
+   late RichText text;
+   late String anchorName;
+   late String url;
 
   @override
   Map<String, dynamic> get params => {
@@ -5775,9 +5775,9 @@ class RichTextReference extends RichText {
   };
 
   RichTextReference({
-    this.text,
-    this.anchorName,
-    this.url,
+  required this.text,
+  required this.anchorName,
+  required this.url,
   });
 
   RichTextReference.fromJson(Map<String, dynamic> json) {
@@ -5792,7 +5792,7 @@ class RichTextAnchor extends RichText {
   @override
   String get tdType => 'richTextAnchor';
 
-  String name;
+   late String name;
 
   @override
   Map<String, dynamic> get params => {
@@ -5800,7 +5800,7 @@ class RichTextAnchor extends RichText {
   };
 
   RichTextAnchor({
-    this.name,
+  required this.name,
   });
 
   RichTextAnchor.fromJson(Map<String, dynamic> json) {
@@ -5813,9 +5813,9 @@ class RichTextAnchorLink extends RichText {
   @override
   String get tdType => 'richTextAnchorLink';
 
-  RichText text;
-  String anchorName;
-  String url;
+   late RichText text;
+   late String anchorName;
+   late String url;
 
   @override
   Map<String, dynamic> get params => {
@@ -5825,9 +5825,9 @@ class RichTextAnchorLink extends RichText {
   };
 
   RichTextAnchorLink({
-    this.text,
-    this.anchorName,
-    this.url,
+  required this.text,
+  required this.anchorName,
+  required this.url,
   });
 
   RichTextAnchorLink.fromJson(Map<String, dynamic> json) {
@@ -5842,7 +5842,7 @@ class RichTexts extends RichText {
   @override
   String get tdType => 'richTexts';
 
-  List<RichText> texts;
+   late List<RichText> texts;
 
   @override
   Map<String, dynamic> get params => {
@@ -5850,7 +5850,7 @@ class RichTexts extends RichText {
   };
 
   RichTexts({
-    this.texts,
+  required this.texts,
   });
 
   RichTexts.fromJson(Map<String, dynamic> json) {
@@ -5863,8 +5863,8 @@ class PageBlockCaption extends TdObject {
   @override
   String get tdType => 'pageBlockCaption';
 
-  RichText text;
-  RichText credit;
+   late RichText text;
+   late RichText credit;
 
   @override
   Map<String, dynamic> get params => {
@@ -5873,8 +5873,8 @@ class PageBlockCaption extends TdObject {
   };
 
   PageBlockCaption({
-    this.text,
-    this.credit,
+  required this.text,
+  required this.credit,
   });
 
   PageBlockCaption.fromJson(Map<String, dynamic> json) {
@@ -5888,8 +5888,8 @@ class PageBlockListItem extends TdObject {
   @override
   String get tdType => 'pageBlockListItem';
 
-  String label;
-  List<PageBlock> pageBlocks;
+   late String label;
+   late List<PageBlock> pageBlocks;
 
   @override
   Map<String, dynamic> get params => {
@@ -5898,8 +5898,8 @@ class PageBlockListItem extends TdObject {
   };
 
   PageBlockListItem({
-    this.label,
-    this.pageBlocks,
+  required this.label,
+  required this.pageBlocks,
   });
 
   PageBlockListItem.fromJson(Map<String, dynamic> json) {
@@ -5995,12 +5995,12 @@ class PageBlockTableCell extends TdObject {
   @override
   String get tdType => 'pageBlockTableCell';
 
-  RichText text;
-  bool isHeader;
-  int colspan;
-  int rowspan;
-  PageBlockHorizontalAlignment align;
-  PageBlockVerticalAlignment valign;
+   late RichText text;
+   late bool isHeader;
+   late int colspan;
+   late int rowspan;
+   late PageBlockHorizontalAlignment align;
+   late PageBlockVerticalAlignment valign;
 
   @override
   Map<String, dynamic> get params => {
@@ -6013,12 +6013,12 @@ class PageBlockTableCell extends TdObject {
   };
 
   PageBlockTableCell({
-    this.text,
-    this.isHeader,
-    this.colspan,
-    this.rowspan,
-    this.align,
-    this.valign,
+  required this.text,
+  required this.isHeader,
+  required this.colspan,
+  required this.rowspan,
+  required this.align,
+  required this.valign,
   });
 
   PageBlockTableCell.fromJson(Map<String, dynamic> json) {
@@ -6036,12 +6036,12 @@ class PageBlockRelatedArticle extends TdObject {
   @override
   String get tdType => 'pageBlockRelatedArticle';
 
-  String url;
-  String title;
-  String description;
-  Photo photo;
-  String author;
-  int publishDate;
+   late String url;
+   late String title;
+   late String description;
+   late Photo photo;
+   late String author;
+   late int publishDate;
 
   @override
   Map<String, dynamic> get params => {
@@ -6054,12 +6054,12 @@ class PageBlockRelatedArticle extends TdObject {
   };
 
   PageBlockRelatedArticle({
-    this.url,
-    this.title,
-    this.description,
-    this.photo,
-    this.author,
-    this.publishDate,
+  required this.url,
+  required this.title,
+  required this.description,
+  required this.photo,
+  required this.author,
+  required this.publishDate,
   });
 
   PageBlockRelatedArticle.fromJson(Map<String, dynamic> json) {
@@ -6079,7 +6079,7 @@ class PageBlockTitle extends PageBlock {
   @override
   String get tdType => 'pageBlockTitle';
 
-  RichText title;
+   late RichText title;
 
   @override
   Map<String, dynamic> get params => {
@@ -6087,7 +6087,7 @@ class PageBlockTitle extends PageBlock {
   };
 
   PageBlockTitle({
-    this.title,
+  required this.title,
   });
 
   PageBlockTitle.fromJson(Map<String, dynamic> json) {
@@ -6100,7 +6100,7 @@ class PageBlockSubtitle extends PageBlock {
   @override
   String get tdType => 'pageBlockSubtitle';
 
-  RichText subtitle;
+   late RichText subtitle;
 
   @override
   Map<String, dynamic> get params => {
@@ -6108,7 +6108,7 @@ class PageBlockSubtitle extends PageBlock {
   };
 
   PageBlockSubtitle({
-    this.subtitle,
+  required this.subtitle,
   });
 
   PageBlockSubtitle.fromJson(Map<String, dynamic> json) {
@@ -6121,8 +6121,8 @@ class PageBlockAuthorDate extends PageBlock {
   @override
   String get tdType => 'pageBlockAuthorDate';
 
-  RichText author;
-  int publishDate;
+   late RichText author;
+   late int publishDate;
 
   @override
   Map<String, dynamic> get params => {
@@ -6131,8 +6131,8 @@ class PageBlockAuthorDate extends PageBlock {
   };
 
   PageBlockAuthorDate({
-    this.author,
-    this.publishDate,
+  required this.author,
+  required this.publishDate,
   });
 
   PageBlockAuthorDate.fromJson(Map<String, dynamic> json) {
@@ -6146,7 +6146,7 @@ class PageBlockHeader extends PageBlock {
   @override
   String get tdType => 'pageBlockHeader';
 
-  RichText header;
+   late RichText header;
 
   @override
   Map<String, dynamic> get params => {
@@ -6154,7 +6154,7 @@ class PageBlockHeader extends PageBlock {
   };
 
   PageBlockHeader({
-    this.header,
+  required this.header,
   });
 
   PageBlockHeader.fromJson(Map<String, dynamic> json) {
@@ -6167,7 +6167,7 @@ class PageBlockSubheader extends PageBlock {
   @override
   String get tdType => 'pageBlockSubheader';
 
-  RichText subheader;
+   late RichText subheader;
 
   @override
   Map<String, dynamic> get params => {
@@ -6175,7 +6175,7 @@ class PageBlockSubheader extends PageBlock {
   };
 
   PageBlockSubheader({
-    this.subheader,
+  required this.subheader,
   });
 
   PageBlockSubheader.fromJson(Map<String, dynamic> json) {
@@ -6188,7 +6188,7 @@ class PageBlockKicker extends PageBlock {
   @override
   String get tdType => 'pageBlockKicker';
 
-  RichText kicker;
+   late RichText kicker;
 
   @override
   Map<String, dynamic> get params => {
@@ -6196,7 +6196,7 @@ class PageBlockKicker extends PageBlock {
   };
 
   PageBlockKicker({
-    this.kicker,
+  required this.kicker,
   });
 
   PageBlockKicker.fromJson(Map<String, dynamic> json) {
@@ -6209,7 +6209,7 @@ class PageBlockParagraph extends PageBlock {
   @override
   String get tdType => 'pageBlockParagraph';
 
-  RichText text;
+   late RichText text;
 
   @override
   Map<String, dynamic> get params => {
@@ -6217,7 +6217,7 @@ class PageBlockParagraph extends PageBlock {
   };
 
   PageBlockParagraph({
-    this.text,
+  required this.text,
   });
 
   PageBlockParagraph.fromJson(Map<String, dynamic> json) {
@@ -6230,8 +6230,8 @@ class PageBlockPreformatted extends PageBlock {
   @override
   String get tdType => 'pageBlockPreformatted';
 
-  RichText text;
-  String language;
+   late RichText text;
+   late String language;
 
   @override
   Map<String, dynamic> get params => {
@@ -6240,8 +6240,8 @@ class PageBlockPreformatted extends PageBlock {
   };
 
   PageBlockPreformatted({
-    this.text,
-    this.language,
+  required this.text,
+  required this.language,
   });
 
   PageBlockPreformatted.fromJson(Map<String, dynamic> json) {
@@ -6255,7 +6255,7 @@ class PageBlockFooter extends PageBlock {
   @override
   String get tdType => 'pageBlockFooter';
 
-  RichText footer;
+   late RichText footer;
 
   @override
   Map<String, dynamic> get params => {
@@ -6263,7 +6263,7 @@ class PageBlockFooter extends PageBlock {
   };
 
   PageBlockFooter({
-    this.footer,
+  required this.footer,
   });
 
   PageBlockFooter.fromJson(Map<String, dynamic> json) {
@@ -6289,7 +6289,7 @@ class PageBlockAnchor extends PageBlock {
   @override
   String get tdType => 'pageBlockAnchor';
 
-  String name;
+   late String name;
 
   @override
   Map<String, dynamic> get params => {
@@ -6297,7 +6297,7 @@ class PageBlockAnchor extends PageBlock {
   };
 
   PageBlockAnchor({
-    this.name,
+  required this.name,
   });
 
   PageBlockAnchor.fromJson(Map<String, dynamic> json) {
@@ -6310,7 +6310,7 @@ class PageBlockList extends PageBlock {
   @override
   String get tdType => 'pageBlockList';
 
-  List<PageBlockListItem> items;
+   late List<PageBlockListItem> items;
 
   @override
   Map<String, dynamic> get params => {
@@ -6318,7 +6318,7 @@ class PageBlockList extends PageBlock {
   };
 
   PageBlockList({
-    this.items,
+  required this.items,
   });
 
   PageBlockList.fromJson(Map<String, dynamic> json) {
@@ -6331,8 +6331,8 @@ class PageBlockBlockQuote extends PageBlock {
   @override
   String get tdType => 'pageBlockBlockQuote';
 
-  RichText text;
-  RichText credit;
+   late RichText text;
+   late RichText credit;
 
   @override
   Map<String, dynamic> get params => {
@@ -6341,8 +6341,8 @@ class PageBlockBlockQuote extends PageBlock {
   };
 
   PageBlockBlockQuote({
-    this.text,
-    this.credit,
+  required this.text,
+  required this.credit,
   });
 
   PageBlockBlockQuote.fromJson(Map<String, dynamic> json) {
@@ -6356,8 +6356,8 @@ class PageBlockPullQuote extends PageBlock {
   @override
   String get tdType => 'pageBlockPullQuote';
 
-  RichText text;
-  RichText credit;
+   late RichText text;
+   late RichText credit;
 
   @override
   Map<String, dynamic> get params => {
@@ -6366,8 +6366,8 @@ class PageBlockPullQuote extends PageBlock {
   };
 
   PageBlockPullQuote({
-    this.text,
-    this.credit,
+  required this.text,
+  required this.credit,
   });
 
   PageBlockPullQuote.fromJson(Map<String, dynamic> json) {
@@ -6381,9 +6381,9 @@ class PageBlockAnimation extends PageBlock {
   @override
   String get tdType => 'pageBlockAnimation';
 
-  Animation animation;
-  PageBlockCaption caption;
-  bool needAutoplay;
+   late Animation animation;
+   late PageBlockCaption caption;
+   late bool needAutoplay;
 
   @override
   Map<String, dynamic> get params => {
@@ -6393,9 +6393,9 @@ class PageBlockAnimation extends PageBlock {
   };
 
   PageBlockAnimation({
-    this.animation,
-    this.caption,
-    this.needAutoplay,
+  required this.animation,
+  required this.caption,
+  required this.needAutoplay,
   });
 
   PageBlockAnimation.fromJson(Map<String, dynamic> json) {
@@ -6410,8 +6410,8 @@ class PageBlockAudio extends PageBlock {
   @override
   String get tdType => 'pageBlockAudio';
 
-  Audio audio;
-  PageBlockCaption caption;
+   late Audio audio;
+   late PageBlockCaption caption;
 
   @override
   Map<String, dynamic> get params => {
@@ -6420,8 +6420,8 @@ class PageBlockAudio extends PageBlock {
   };
 
   PageBlockAudio({
-    this.audio,
-    this.caption,
+  required this.audio,
+  required this.caption,
   });
 
   PageBlockAudio.fromJson(Map<String, dynamic> json) {
@@ -6435,9 +6435,9 @@ class PageBlockPhoto extends PageBlock {
   @override
   String get tdType => 'pageBlockPhoto';
 
-  Photo photo;
-  PageBlockCaption caption;
-  String url;
+   late Photo photo;
+   late PageBlockCaption caption;
+   late String url;
 
   @override
   Map<String, dynamic> get params => {
@@ -6447,9 +6447,9 @@ class PageBlockPhoto extends PageBlock {
   };
 
   PageBlockPhoto({
-    this.photo,
-    this.caption,
-    this.url,
+  required this.photo,
+  required this.caption,
+  required this.url,
   });
 
   PageBlockPhoto.fromJson(Map<String, dynamic> json) {
@@ -6464,10 +6464,10 @@ class PageBlockVideo extends PageBlock {
   @override
   String get tdType => 'pageBlockVideo';
 
-  Video video;
-  PageBlockCaption caption;
-  bool needAutoplay;
-  bool isLooped;
+   late Video video;
+   late PageBlockCaption caption;
+   late bool needAutoplay;
+   late bool isLooped;
 
   @override
   Map<String, dynamic> get params => {
@@ -6478,10 +6478,10 @@ class PageBlockVideo extends PageBlock {
   };
 
   PageBlockVideo({
-    this.video,
-    this.caption,
-    this.needAutoplay,
-    this.isLooped,
+  required this.video,
+  required this.caption,
+  required this.needAutoplay,
+  required this.isLooped,
   });
 
   PageBlockVideo.fromJson(Map<String, dynamic> json) {
@@ -6497,8 +6497,8 @@ class PageBlockVoiceNote extends PageBlock {
   @override
   String get tdType => 'pageBlockVoiceNote';
 
-  VoiceNote voiceNote;
-  PageBlockCaption caption;
+   late VoiceNote voiceNote;
+   late PageBlockCaption caption;
 
   @override
   Map<String, dynamic> get params => {
@@ -6507,8 +6507,8 @@ class PageBlockVoiceNote extends PageBlock {
   };
 
   PageBlockVoiceNote({
-    this.voiceNote,
-    this.caption,
+  required this.voiceNote,
+  required this.caption,
   });
 
   PageBlockVoiceNote.fromJson(Map<String, dynamic> json) {
@@ -6522,7 +6522,7 @@ class PageBlockCover extends PageBlock {
   @override
   String get tdType => 'pageBlockCover';
 
-  PageBlock cover;
+   late PageBlock cover;
 
   @override
   Map<String, dynamic> get params => {
@@ -6530,7 +6530,7 @@ class PageBlockCover extends PageBlock {
   };
 
   PageBlockCover({
-    this.cover,
+  required this.cover,
   });
 
   PageBlockCover.fromJson(Map<String, dynamic> json) {
@@ -6543,14 +6543,14 @@ class PageBlockEmbedded extends PageBlock {
   @override
   String get tdType => 'pageBlockEmbedded';
 
-  String url;
-  String html;
-  Photo posterPhoto;
-  int width;
-  int height;
-  PageBlockCaption caption;
-  bool isFullWidth;
-  bool allowScrolling;
+   late String url;
+   late String html;
+   late Photo posterPhoto;
+   late int width;
+   late int height;
+   late PageBlockCaption caption;
+   late bool isFullWidth;
+   late bool allowScrolling;
 
   @override
   Map<String, dynamic> get params => {
@@ -6565,14 +6565,14 @@ class PageBlockEmbedded extends PageBlock {
   };
 
   PageBlockEmbedded({
-    this.url,
-    this.html,
-    this.posterPhoto,
-    this.width,
-    this.height,
-    this.caption,
-    this.isFullWidth,
-    this.allowScrolling,
+  required this.url,
+  required this.html,
+  required this.posterPhoto,
+  required this.width,
+  required this.height,
+  required this.caption,
+  required this.isFullWidth,
+  required this.allowScrolling,
   });
 
   PageBlockEmbedded.fromJson(Map<String, dynamic> json) {
@@ -6592,12 +6592,12 @@ class PageBlockEmbeddedPost extends PageBlock {
   @override
   String get tdType => 'pageBlockEmbeddedPost';
 
-  String url;
-  String author;
-  Photo authorPhoto;
-  int date;
-  List<PageBlock> pageBlocks;
-  PageBlockCaption caption;
+   late String url;
+   late String author;
+   late Photo authorPhoto;
+   late int date;
+   late List<PageBlock> pageBlocks;
+   late PageBlockCaption caption;
 
   @override
   Map<String, dynamic> get params => {
@@ -6610,12 +6610,12 @@ class PageBlockEmbeddedPost extends PageBlock {
   };
 
   PageBlockEmbeddedPost({
-    this.url,
-    this.author,
-    this.authorPhoto,
-    this.date,
-    this.pageBlocks,
-    this.caption,
+  required this.url,
+  required this.author,
+  required this.authorPhoto,
+  required this.date,
+  required this.pageBlocks,
+  required this.caption,
   });
 
   PageBlockEmbeddedPost.fromJson(Map<String, dynamic> json) {
@@ -6633,8 +6633,8 @@ class PageBlockCollage extends PageBlock {
   @override
   String get tdType => 'pageBlockCollage';
 
-  List<PageBlock> pageBlocks;
-  PageBlockCaption caption;
+   late List<PageBlock> pageBlocks;
+   late PageBlockCaption caption;
 
   @override
   Map<String, dynamic> get params => {
@@ -6643,8 +6643,8 @@ class PageBlockCollage extends PageBlock {
   };
 
   PageBlockCollage({
-    this.pageBlocks,
-    this.caption,
+  required this.pageBlocks,
+  required this.caption,
   });
 
   PageBlockCollage.fromJson(Map<String, dynamic> json) {
@@ -6658,8 +6658,8 @@ class PageBlockSlideshow extends PageBlock {
   @override
   String get tdType => 'pageBlockSlideshow';
 
-  List<PageBlock> pageBlocks;
-  PageBlockCaption caption;
+   late List<PageBlock> pageBlocks;
+   late PageBlockCaption caption;
 
   @override
   Map<String, dynamic> get params => {
@@ -6668,8 +6668,8 @@ class PageBlockSlideshow extends PageBlock {
   };
 
   PageBlockSlideshow({
-    this.pageBlocks,
-    this.caption,
+  required this.pageBlocks,
+  required this.caption,
   });
 
   PageBlockSlideshow.fromJson(Map<String, dynamic> json) {
@@ -6683,9 +6683,9 @@ class PageBlockChatLink extends PageBlock {
   @override
   String get tdType => 'pageBlockChatLink';
 
-  String title;
-  ChatPhotoInfo photo;
-  String username;
+   late String title;
+   late ChatPhotoInfo photo;
+   late String username;
 
   @override
   Map<String, dynamic> get params => {
@@ -6695,9 +6695,9 @@ class PageBlockChatLink extends PageBlock {
   };
 
   PageBlockChatLink({
-    this.title,
-    this.photo,
-    this.username,
+  required this.title,
+  required this.photo,
+  required this.username,
   });
 
   PageBlockChatLink.fromJson(Map<String, dynamic> json) {
@@ -6712,10 +6712,10 @@ class PageBlockTable extends PageBlock {
   @override
   String get tdType => 'pageBlockTable';
 
-  RichText caption;
-  List<List<PageBlockTableCell>> cells;
-  bool isBordered;
-  bool isStriped;
+   late RichText caption;
+   late List<List<PageBlockTableCell>> cells;
+   late bool isBordered;
+   late bool isStriped;
 
   @override
   Map<String, dynamic> get params => {
@@ -6726,10 +6726,10 @@ class PageBlockTable extends PageBlock {
   };
 
   PageBlockTable({
-    this.caption,
-    this.cells,
-    this.isBordered,
-    this.isStriped,
+  required this.caption,
+  required this.cells,
+  required this.isBordered,
+  required this.isStriped,
   });
 
   PageBlockTable.fromJson(Map<String, dynamic> json) {
@@ -6745,9 +6745,9 @@ class PageBlockDetails extends PageBlock {
   @override
   String get tdType => 'pageBlockDetails';
 
-  RichText header;
-  List<PageBlock> pageBlocks;
-  bool isOpen;
+   late RichText header;
+   late List<PageBlock> pageBlocks;
+   late bool isOpen;
 
   @override
   Map<String, dynamic> get params => {
@@ -6757,9 +6757,9 @@ class PageBlockDetails extends PageBlock {
   };
 
   PageBlockDetails({
-    this.header,
-    this.pageBlocks,
-    this.isOpen,
+  required this.header,
+  required this.pageBlocks,
+  required this.isOpen,
   });
 
   PageBlockDetails.fromJson(Map<String, dynamic> json) {
@@ -6774,8 +6774,8 @@ class PageBlockRelatedArticles extends PageBlock {
   @override
   String get tdType => 'pageBlockRelatedArticles';
 
-  RichText header;
-  List<PageBlockRelatedArticle> articles;
+   late RichText header;
+   late List<PageBlockRelatedArticle> articles;
 
   @override
   Map<String, dynamic> get params => {
@@ -6784,8 +6784,8 @@ class PageBlockRelatedArticles extends PageBlock {
   };
 
   PageBlockRelatedArticles({
-    this.header,
-    this.articles,
+  required this.header,
+  required this.articles,
   });
 
   PageBlockRelatedArticles.fromJson(Map<String, dynamic> json) {
@@ -6799,11 +6799,11 @@ class PageBlockMap extends PageBlock {
   @override
   String get tdType => 'pageBlockMap';
 
-  Location location;
-  int zoom;
-  int width;
-  int height;
-  PageBlockCaption caption;
+   late Location location;
+   late int zoom;
+   late int width;
+   late int height;
+   late PageBlockCaption caption;
 
   @override
   Map<String, dynamic> get params => {
@@ -6815,11 +6815,11 @@ class PageBlockMap extends PageBlock {
   };
 
   PageBlockMap({
-    this.location,
-    this.zoom,
-    this.width,
-    this.height,
-    this.caption,
+  required this.location,
+  required this.zoom,
+  required this.width,
+  required this.height,
+  required this.caption,
   });
 
   PageBlockMap.fromJson(Map<String, dynamic> json) {
@@ -6836,12 +6836,12 @@ class WebPageInstantView extends TdObject {
   @override
   String get tdType => 'webPageInstantView';
 
-  List<PageBlock> pageBlocks;
-  int viewCount;
-  int version;
-  bool isRtl;
-  bool isFull;
-  InternalLinkType feedbackLink;
+   late List<PageBlock> pageBlocks;
+   late int viewCount;
+   late int version;
+   late bool isRtl;
+   late bool isFull;
+   late InternalLinkType feedbackLink;
 
   @override
   Map<String, dynamic> get params => {
@@ -6854,12 +6854,12 @@ class WebPageInstantView extends TdObject {
   };
 
   WebPageInstantView({
-    this.pageBlocks,
-    this.viewCount,
-    this.version,
-    this.isRtl,
-    this.isFull,
-    this.feedbackLink,
+  required this.pageBlocks,
+  required this.viewCount,
+  required this.version,
+  required this.isRtl,
+  required this.isFull,
+  required this.feedbackLink,
   });
 
   WebPageInstantView.fromJson(Map<String, dynamic> json) {
@@ -6877,27 +6877,27 @@ class WebPage extends TdObject {
   @override
   String get tdType => 'webPage';
 
-  String url;
-  String displayUrl;
-  String type;
-  String siteName;
-  String title;
-  FormattedText description;
-  Photo photo;
-  String embedUrl;
-  String embedType;
-  int embedWidth;
-  int embedHeight;
-  int duration;
-  String author;
-  Animation animation;
-  Audio audio;
-  Document document;
-  Sticker sticker;
-  Video video;
-  VideoNote videoNote;
-  VoiceNote voiceNote;
-  int instantViewVersion;
+   late String url;
+   late String displayUrl;
+   late String type;
+   late String siteName;
+   late String title;
+   late FormattedText description;
+   late Photo photo;
+   late String embedUrl;
+   late String embedType;
+   late int embedWidth;
+   late int embedHeight;
+   late int duration;
+   late String author;
+   late Animation animation;
+   late Audio audio;
+   late Document document;
+   late Sticker sticker;
+   late Video video;
+   late VideoNote videoNote;
+   late VoiceNote voiceNote;
+   late int instantViewVersion;
 
   @override
   Map<String, dynamic> get params => {
@@ -6925,27 +6925,27 @@ class WebPage extends TdObject {
   };
 
   WebPage({
-    this.url,
-    this.displayUrl,
-    this.type,
-    this.siteName,
-    this.title,
-    this.description,
-    this.photo,
-    this.embedUrl,
-    this.embedType,
-    this.embedWidth,
-    this.embedHeight,
-    this.duration,
-    this.author,
-    this.animation,
-    this.audio,
-    this.document,
-    this.sticker,
-    this.video,
-    this.videoNote,
-    this.voiceNote,
-    this.instantViewVersion,
+  required this.url,
+  required this.displayUrl,
+  required this.type,
+  required this.siteName,
+  required this.title,
+  required this.description,
+  required this.photo,
+  required this.embedUrl,
+  required this.embedType,
+  required this.embedWidth,
+  required this.embedHeight,
+  required this.duration,
+  required this.author,
+  required this.animation,
+  required this.audio,
+  required this.document,
+  required this.sticker,
+  required this.video,
+  required this.videoNote,
+  required this.voiceNote,
+  required this.instantViewVersion,
   });
 
   WebPage.fromJson(Map<String, dynamic> json) {
@@ -6978,11 +6978,11 @@ class CountryInfo extends TdObject {
   @override
   String get tdType => 'countryInfo';
 
-  String countryCode;
-  String name;
-  String englishName;
-  bool isHidden;
-  List<String> callingCodes;
+   late String countryCode;
+   late String name;
+   late String englishName;
+   late bool isHidden;
+   late List<String> callingCodes;
 
   @override
   Map<String, dynamic> get params => {
@@ -6994,11 +6994,11 @@ class CountryInfo extends TdObject {
   };
 
   CountryInfo({
-    this.countryCode,
-    this.name,
-    this.englishName,
-    this.isHidden,
-    this.callingCodes,
+  required this.countryCode,
+  required this.name,
+  required this.englishName,
+  required this.isHidden,
+  required this.callingCodes,
   });
 
   CountryInfo.fromJson(Map<String, dynamic> json) {
@@ -7015,7 +7015,7 @@ class Countries extends TdObject {
   @override
   String get tdType => 'countries';
 
-  List<CountryInfo> countries;
+   late List<CountryInfo> countries;
 
   @override
   Map<String, dynamic> get params => {
@@ -7023,7 +7023,7 @@ class Countries extends TdObject {
   };
 
   Countries({
-    this.countries,
+  required this.countries,
   });
 
   Countries.fromJson(Map<String, dynamic> json) {
@@ -7036,9 +7036,9 @@ class PhoneNumberInfo extends TdObject {
   @override
   String get tdType => 'phoneNumberInfo';
 
-  CountryInfo country;
-  String countryCallingCode;
-  String formattedPhoneNumber;
+   late CountryInfo country;
+   late String countryCallingCode;
+   late String formattedPhoneNumber;
 
   @override
   Map<String, dynamic> get params => {
@@ -7048,9 +7048,9 @@ class PhoneNumberInfo extends TdObject {
   };
 
   PhoneNumberInfo({
-    this.country,
-    this.countryCallingCode,
-    this.formattedPhoneNumber,
+  required this.country,
+  required this.countryCallingCode,
+  required this.formattedPhoneNumber,
   });
 
   PhoneNumberInfo.fromJson(Map<String, dynamic> json) {
@@ -7065,8 +7065,8 @@ class BankCardActionOpenUrl extends TdObject {
   @override
   String get tdType => 'bankCardActionOpenUrl';
 
-  String text;
-  String url;
+   late String text;
+   late String url;
 
   @override
   Map<String, dynamic> get params => {
@@ -7075,8 +7075,8 @@ class BankCardActionOpenUrl extends TdObject {
   };
 
   BankCardActionOpenUrl({
-    this.text,
-    this.url,
+  required this.text,
+  required this.url,
   });
 
   BankCardActionOpenUrl.fromJson(Map<String, dynamic> json) {
@@ -7090,8 +7090,8 @@ class BankCardInfo extends TdObject {
   @override
   String get tdType => 'bankCardInfo';
 
-  String title;
-  List<BankCardActionOpenUrl> actions;
+   late String title;
+   late List<BankCardActionOpenUrl> actions;
 
   @override
   Map<String, dynamic> get params => {
@@ -7100,8 +7100,8 @@ class BankCardInfo extends TdObject {
   };
 
   BankCardInfo({
-    this.title,
-    this.actions,
+  required this.title,
+  required this.actions,
   });
 
   BankCardInfo.fromJson(Map<String, dynamic> json) {
@@ -7115,12 +7115,12 @@ class Address extends TdObject {
   @override
   String get tdType => 'address';
 
-  String countryCode;
-  String state;
-  String city;
-  String streetLine1;
-  String streetLine2;
-  String postalCode;
+   late String countryCode;
+   late String state;
+   late String city;
+   late String streetLine1;
+   late String streetLine2;
+   late String postalCode;
 
   @override
   Map<String, dynamic> get params => {
@@ -7133,12 +7133,12 @@ class Address extends TdObject {
   };
 
   Address({
-    this.countryCode,
-    this.state,
-    this.city,
-    this.streetLine1,
-    this.streetLine2,
-    this.postalCode,
+  required this.countryCode,
+  required this.state,
+  required this.city,
+  required this.streetLine1,
+  required this.streetLine2,
+  required this.postalCode,
   });
 
   Address.fromJson(Map<String, dynamic> json) {
@@ -7156,8 +7156,8 @@ class LabeledPricePart extends TdObject {
   @override
   String get tdType => 'labeledPricePart';
 
-  String label;
-  int amount;
+   late String label;
+   late int amount;
 
   @override
   Map<String, dynamic> get params => {
@@ -7166,8 +7166,8 @@ class LabeledPricePart extends TdObject {
   };
 
   LabeledPricePart({
-    this.label,
-    this.amount,
+  required this.label,
+  required this.amount,
   });
 
   LabeledPricePart.fromJson(Map<String, dynamic> json) {
@@ -7181,18 +7181,18 @@ class Invoice extends TdObject {
   @override
   String get tdType => 'invoice';
 
-  String currency;
-  List<LabeledPricePart> priceParts;
-  int maxTipAmount;
-  List<int> suggestedTipAmounts;
-  bool isTest;
-  bool needName;
-  bool needPhoneNumber;
-  bool needEmailAddress;
-  bool needShippingAddress;
-  bool sendPhoneNumberToProvider;
-  bool sendEmailAddressToProvider;
-  bool isFlexible;
+   late String currency;
+   late List<LabeledPricePart> priceParts;
+   late int maxTipAmount;
+   late List<int> suggestedTipAmounts;
+   late bool isTest;
+   late bool needName;
+   late bool needPhoneNumber;
+   late bool needEmailAddress;
+   late bool needShippingAddress;
+   late bool sendPhoneNumberToProvider;
+   late bool sendEmailAddressToProvider;
+   late bool isFlexible;
 
   @override
   Map<String, dynamic> get params => {
@@ -7211,18 +7211,18 @@ class Invoice extends TdObject {
   };
 
   Invoice({
-    this.currency,
-    this.priceParts,
-    this.maxTipAmount,
-    this.suggestedTipAmounts,
-    this.isTest,
-    this.needName,
-    this.needPhoneNumber,
-    this.needEmailAddress,
-    this.needShippingAddress,
-    this.sendPhoneNumberToProvider,
-    this.sendEmailAddressToProvider,
-    this.isFlexible,
+  required this.currency,
+  required this.priceParts,
+  required this.maxTipAmount,
+  required this.suggestedTipAmounts,
+  required this.isTest,
+  required this.needName,
+  required this.needPhoneNumber,
+  required this.needEmailAddress,
+  required this.needShippingAddress,
+  required this.sendPhoneNumberToProvider,
+  required this.sendEmailAddressToProvider,
+  required this.isFlexible,
   });
 
   Invoice.fromJson(Map<String, dynamic> json) {
@@ -7246,10 +7246,10 @@ class OrderInfo extends TdObject {
   @override
   String get tdType => 'orderInfo';
 
-  String name;
-  String phoneNumber;
-  String emailAddress;
-  Address shippingAddress;
+   late String name;
+   late String phoneNumber;
+   late String emailAddress;
+   late Address shippingAddress;
 
   @override
   Map<String, dynamic> get params => {
@@ -7260,10 +7260,10 @@ class OrderInfo extends TdObject {
   };
 
   OrderInfo({
-    this.name,
-    this.phoneNumber,
-    this.emailAddress,
-    this.shippingAddress,
+  required this.name,
+  required this.phoneNumber,
+  required this.emailAddress,
+  required this.shippingAddress,
   });
 
   OrderInfo.fromJson(Map<String, dynamic> json) {
@@ -7279,9 +7279,9 @@ class ShippingOption extends TdObject {
   @override
   String get tdType => 'shippingOption';
 
-  String id;
-  String title;
-  List<LabeledPricePart> priceParts;
+   late String id;
+   late String title;
+   late List<LabeledPricePart> priceParts;
 
   @override
   Map<String, dynamic> get params => {
@@ -7291,9 +7291,9 @@ class ShippingOption extends TdObject {
   };
 
   ShippingOption({
-    this.id,
-    this.title,
-    this.priceParts,
+  required this.id,
+  required this.title,
+  required this.priceParts,
   });
 
   ShippingOption.fromJson(Map<String, dynamic> json) {
@@ -7308,8 +7308,8 @@ class SavedCredentials extends TdObject {
   @override
   String get tdType => 'savedCredentials';
 
-  String id;
-  String title;
+   late String id;
+   late String title;
 
   @override
   Map<String, dynamic> get params => {
@@ -7318,8 +7318,8 @@ class SavedCredentials extends TdObject {
   };
 
   SavedCredentials({
-    this.id,
-    this.title,
+  required this.id,
+  required this.title,
   });
 
   SavedCredentials.fromJson(Map<String, dynamic> json) {
@@ -7335,7 +7335,7 @@ class InputCredentialsSaved extends InputCredentials {
   @override
   String get tdType => 'inputCredentialsSaved';
 
-  String savedCredentialsId;
+   late String savedCredentialsId;
 
   @override
   Map<String, dynamic> get params => {
@@ -7343,7 +7343,7 @@ class InputCredentialsSaved extends InputCredentials {
   };
 
   InputCredentialsSaved({
-    this.savedCredentialsId,
+  required this.savedCredentialsId,
   });
 
   InputCredentialsSaved.fromJson(Map<String, dynamic> json) {
@@ -7356,8 +7356,8 @@ class InputCredentialsNew extends InputCredentials {
   @override
   String get tdType => 'inputCredentialsNew';
 
-  String data;
-  bool allowSave;
+   late String data;
+   late bool allowSave;
 
   @override
   Map<String, dynamic> get params => {
@@ -7366,8 +7366,8 @@ class InputCredentialsNew extends InputCredentials {
   };
 
   InputCredentialsNew({
-    this.data,
-    this.allowSave,
+  required this.data,
+  required this.allowSave,
   });
 
   InputCredentialsNew.fromJson(Map<String, dynamic> json) {
@@ -7381,7 +7381,7 @@ class InputCredentialsApplePay extends InputCredentials {
   @override
   String get tdType => 'inputCredentialsApplePay';
 
-  String data;
+   late String data;
 
   @override
   Map<String, dynamic> get params => {
@@ -7389,7 +7389,7 @@ class InputCredentialsApplePay extends InputCredentials {
   };
 
   InputCredentialsApplePay({
-    this.data,
+  required this.data,
   });
 
   InputCredentialsApplePay.fromJson(Map<String, dynamic> json) {
@@ -7402,7 +7402,7 @@ class InputCredentialsGooglePay extends InputCredentials {
   @override
   String get tdType => 'inputCredentialsGooglePay';
 
-  String data;
+   late String data;
 
   @override
   Map<String, dynamic> get params => {
@@ -7410,7 +7410,7 @@ class InputCredentialsGooglePay extends InputCredentials {
   };
 
   InputCredentialsGooglePay({
-    this.data,
+  required this.data,
   });
 
   InputCredentialsGooglePay.fromJson(Map<String, dynamic> json) {
@@ -7423,10 +7423,10 @@ class PaymentsProviderStripe extends TdObject {
   @override
   String get tdType => 'paymentsProviderStripe';
 
-  String publishableKey;
-  bool needCountry;
-  bool needPostalCode;
-  bool needCardholderName;
+   late String publishableKey;
+   late bool needCountry;
+   late bool needPostalCode;
+   late bool needCardholderName;
 
   @override
   Map<String, dynamic> get params => {
@@ -7437,10 +7437,10 @@ class PaymentsProviderStripe extends TdObject {
   };
 
   PaymentsProviderStripe({
-    this.publishableKey,
-    this.needCountry,
-    this.needPostalCode,
-    this.needCardholderName,
+  required this.publishableKey,
+  required this.needCountry,
+  required this.needPostalCode,
+  required this.needCardholderName,
   });
 
   PaymentsProviderStripe.fromJson(Map<String, dynamic> json) {
@@ -7456,12 +7456,12 @@ class PaymentFormTheme extends TdObject {
   @override
   String get tdType => 'paymentFormTheme';
 
-  int backgroundColor;
-  int textColor;
-  int hintColor;
-  int linkColor;
-  int buttonColor;
-  int buttonTextColor;
+   late int backgroundColor;
+   late int textColor;
+   late int hintColor;
+   late int linkColor;
+   late int buttonColor;
+   late int buttonTextColor;
 
   @override
   Map<String, dynamic> get params => {
@@ -7474,12 +7474,12 @@ class PaymentFormTheme extends TdObject {
   };
 
   PaymentFormTheme({
-    this.backgroundColor,
-    this.textColor,
-    this.hintColor,
-    this.linkColor,
-    this.buttonColor,
-    this.buttonTextColor,
+  required this.backgroundColor,
+  required this.textColor,
+  required this.hintColor,
+  required this.linkColor,
+  required this.buttonColor,
+  required this.buttonTextColor,
   });
 
   PaymentFormTheme.fromJson(Map<String, dynamic> json) {
@@ -7497,16 +7497,16 @@ class PaymentForm extends TdObject {
   @override
   String get tdType => 'paymentForm';
 
-  int id;
-  Invoice invoice;
-  String url;
-  int sellerBotUserId;
-  int paymentsProviderUserId;
-  PaymentsProviderStripe paymentsProvider;
-  OrderInfo savedOrderInfo;
-  SavedCredentials savedCredentials;
-  bool canSaveCredentials;
-  bool needPassword;
+   late int id;
+   late Invoice invoice;
+   late String url;
+   late int sellerBotUserId;
+   late int paymentsProviderUserId;
+   late PaymentsProviderStripe paymentsProvider;
+   late OrderInfo savedOrderInfo;
+   late SavedCredentials savedCredentials;
+   late bool canSaveCredentials;
+   late bool needPassword;
 
   @override
   Map<String, dynamic> get params => {
@@ -7523,16 +7523,16 @@ class PaymentForm extends TdObject {
   };
 
   PaymentForm({
-    this.id,
-    this.invoice,
-    this.url,
-    this.sellerBotUserId,
-    this.paymentsProviderUserId,
-    this.paymentsProvider,
-    this.savedOrderInfo,
-    this.savedCredentials,
-    this.canSaveCredentials,
-    this.needPassword,
+  required this.id,
+  required this.invoice,
+  required this.url,
+  required this.sellerBotUserId,
+  required this.paymentsProviderUserId,
+  required this.paymentsProvider,
+  required this.savedOrderInfo,
+  required this.savedCredentials,
+  required this.canSaveCredentials,
+  required this.needPassword,
   });
 
   PaymentForm.fromJson(Map<String, dynamic> json) {
@@ -7554,8 +7554,8 @@ class ValidatedOrderInfo extends TdObject {
   @override
   String get tdType => 'validatedOrderInfo';
 
-  String orderInfoId;
-  List<ShippingOption> shippingOptions;
+   late String orderInfoId;
+   late List<ShippingOption> shippingOptions;
 
   @override
   Map<String, dynamic> get params => {
@@ -7564,8 +7564,8 @@ class ValidatedOrderInfo extends TdObject {
   };
 
   ValidatedOrderInfo({
-    this.orderInfoId,
-    this.shippingOptions,
+  required this.orderInfoId,
+  required this.shippingOptions,
   });
 
   ValidatedOrderInfo.fromJson(Map<String, dynamic> json) {
@@ -7579,8 +7579,8 @@ class PaymentResult extends TdObject {
   @override
   String get tdType => 'paymentResult';
 
-  bool success;
-  String verificationUrl;
+   late bool success;
+   late String verificationUrl;
 
   @override
   Map<String, dynamic> get params => {
@@ -7589,8 +7589,8 @@ class PaymentResult extends TdObject {
   };
 
   PaymentResult({
-    this.success,
-    this.verificationUrl,
+  required this.success,
+  required this.verificationUrl,
   });
 
   PaymentResult.fromJson(Map<String, dynamic> json) {
@@ -7604,17 +7604,17 @@ class PaymentReceipt extends TdObject {
   @override
   String get tdType => 'paymentReceipt';
 
-  String title;
-  String description;
-  Photo photo;
-  int date;
-  int sellerBotUserId;
-  int paymentsProviderUserId;
-  Invoice invoice;
-  OrderInfo orderInfo;
-  ShippingOption shippingOption;
-  String credentialsTitle;
-  int tipAmount;
+   late String title;
+   late String description;
+   late Photo photo;
+   late int date;
+   late int sellerBotUserId;
+   late int paymentsProviderUserId;
+   late Invoice invoice;
+   late OrderInfo orderInfo;
+   late ShippingOption shippingOption;
+   late String credentialsTitle;
+   late int tipAmount;
 
   @override
   Map<String, dynamic> get params => {
@@ -7632,17 +7632,17 @@ class PaymentReceipt extends TdObject {
   };
 
   PaymentReceipt({
-    this.title,
-    this.description,
-    this.photo,
-    this.date,
-    this.sellerBotUserId,
-    this.paymentsProviderUserId,
-    this.invoice,
-    this.orderInfo,
-    this.shippingOption,
-    this.credentialsTitle,
-    this.tipAmount,
+  required this.title,
+  required this.description,
+  required this.photo,
+  required this.date,
+  required this.sellerBotUserId,
+  required this.paymentsProviderUserId,
+  required this.invoice,
+  required this.orderInfo,
+  required this.shippingOption,
+  required this.credentialsTitle,
+  required this.tipAmount,
   });
 
   PaymentReceipt.fromJson(Map<String, dynamic> json) {
@@ -7665,8 +7665,8 @@ class DatedFile extends TdObject {
   @override
   String get tdType => 'datedFile';
 
-  File file;
-  int date;
+   late File file;
+   late int date;
 
   @override
   Map<String, dynamic> get params => {
@@ -7675,8 +7675,8 @@ class DatedFile extends TdObject {
   };
 
   DatedFile({
-    this.file,
-    this.date,
+  required this.file,
+  required this.date,
   });
 
   DatedFile.fromJson(Map<String, dynamic> json) {
@@ -7861,9 +7861,9 @@ class Date extends TdObject {
   @override
   String get tdType => 'date';
 
-  int day;
-  int month;
-  int year;
+   late int day;
+   late int month;
+   late int year;
 
   @override
   Map<String, dynamic> get params => {
@@ -7873,9 +7873,9 @@ class Date extends TdObject {
   };
 
   Date({
-    this.day,
-    this.month,
-    this.year,
+  required this.day,
+  required this.month,
+  required this.year,
   });
 
   Date.fromJson(Map<String, dynamic> json) {
@@ -7890,16 +7890,16 @@ class PersonalDetails extends TdObject {
   @override
   String get tdType => 'personalDetails';
 
-  String firstName;
-  String middleName;
-  String lastName;
-  String nativeFirstName;
-  String nativeMiddleName;
-  String nativeLastName;
-  Date birthdate;
-  String gender;
-  String countryCode;
-  String residenceCountryCode;
+   late String firstName;
+   late String middleName;
+   late String lastName;
+   late String nativeFirstName;
+   late String nativeMiddleName;
+   late String nativeLastName;
+   late Date birthdate;
+   late String gender;
+   late String countryCode;
+   late String residenceCountryCode;
 
   @override
   Map<String, dynamic> get params => {
@@ -7916,16 +7916,16 @@ class PersonalDetails extends TdObject {
   };
 
   PersonalDetails({
-    this.firstName,
-    this.middleName,
-    this.lastName,
-    this.nativeFirstName,
-    this.nativeMiddleName,
-    this.nativeLastName,
-    this.birthdate,
-    this.gender,
-    this.countryCode,
-    this.residenceCountryCode,
+  required this.firstName,
+  required this.middleName,
+  required this.lastName,
+  required this.nativeFirstName,
+  required this.nativeMiddleName,
+  required this.nativeLastName,
+  required this.birthdate,
+  required this.gender,
+  required this.countryCode,
+  required this.residenceCountryCode,
   });
 
   PersonalDetails.fromJson(Map<String, dynamic> json) {
@@ -7947,12 +7947,12 @@ class IdentityDocument extends TdObject {
   @override
   String get tdType => 'identityDocument';
 
-  String number;
-  Date expiryDate;
-  DatedFile frontSide;
-  DatedFile reverseSide;
-  DatedFile selfie;
-  List<DatedFile> translation;
+   late String number;
+   late Date expiryDate;
+   late DatedFile frontSide;
+   late DatedFile reverseSide;
+   late DatedFile selfie;
+   late List<DatedFile> translation;
 
   @override
   Map<String, dynamic> get params => {
@@ -7965,12 +7965,12 @@ class IdentityDocument extends TdObject {
   };
 
   IdentityDocument({
-    this.number,
-    this.expiryDate,
-    this.frontSide,
-    this.reverseSide,
-    this.selfie,
-    this.translation,
+  required this.number,
+  required this.expiryDate,
+  required this.frontSide,
+  required this.reverseSide,
+  required this.selfie,
+  required this.translation,
   });
 
   IdentityDocument.fromJson(Map<String, dynamic> json) {
@@ -7988,12 +7988,12 @@ class InputIdentityDocument extends TdObject {
   @override
   String get tdType => 'inputIdentityDocument';
 
-  String number;
-  Date expiryDate;
-  InputFile frontSide;
-  InputFile reverseSide;
-  InputFile selfie;
-  List<InputFile> translation;
+   late String number;
+   late Date expiryDate;
+   late InputFile frontSide;
+   late InputFile reverseSide;
+   late InputFile selfie;
+   late List<InputFile> translation;
 
   @override
   Map<String, dynamic> get params => {
@@ -8006,12 +8006,12 @@ class InputIdentityDocument extends TdObject {
   };
 
   InputIdentityDocument({
-    this.number,
-    this.expiryDate,
-    this.frontSide,
-    this.reverseSide,
-    this.selfie,
-    this.translation,
+  required this.number,
+  required this.expiryDate,
+  required this.frontSide,
+  required this.reverseSide,
+  required this.selfie,
+  required this.translation,
   });
 
   InputIdentityDocument.fromJson(Map<String, dynamic> json) {
@@ -8029,8 +8029,8 @@ class PersonalDocument extends TdObject {
   @override
   String get tdType => 'personalDocument';
 
-  List<DatedFile> files;
-  List<DatedFile> translation;
+   late List<DatedFile> files;
+   late List<DatedFile> translation;
 
   @override
   Map<String, dynamic> get params => {
@@ -8039,8 +8039,8 @@ class PersonalDocument extends TdObject {
   };
 
   PersonalDocument({
-    this.files,
-    this.translation,
+  required this.files,
+  required this.translation,
   });
 
   PersonalDocument.fromJson(Map<String, dynamic> json) {
@@ -8054,8 +8054,8 @@ class InputPersonalDocument extends TdObject {
   @override
   String get tdType => 'inputPersonalDocument';
 
-  List<InputFile> files;
-  List<InputFile> translation;
+   late List<InputFile> files;
+   late List<InputFile> translation;
 
   @override
   Map<String, dynamic> get params => {
@@ -8064,8 +8064,8 @@ class InputPersonalDocument extends TdObject {
   };
 
   InputPersonalDocument({
-    this.files,
-    this.translation,
+  required this.files,
+  required this.translation,
   });
 
   InputPersonalDocument.fromJson(Map<String, dynamic> json) {
@@ -8081,7 +8081,7 @@ class PassportElementPersonalDetails extends PassportElement {
   @override
   String get tdType => 'passportElementPersonalDetails';
 
-  PersonalDetails personalDetails;
+   late PersonalDetails personalDetails;
 
   @override
   Map<String, dynamic> get params => {
@@ -8089,7 +8089,7 @@ class PassportElementPersonalDetails extends PassportElement {
   };
 
   PassportElementPersonalDetails({
-    this.personalDetails,
+  required this.personalDetails,
   });
 
   PassportElementPersonalDetails.fromJson(Map<String, dynamic> json) {
@@ -8102,7 +8102,7 @@ class PassportElementPassport extends PassportElement {
   @override
   String get tdType => 'passportElementPassport';
 
-  IdentityDocument passport;
+   late IdentityDocument passport;
 
   @override
   Map<String, dynamic> get params => {
@@ -8110,7 +8110,7 @@ class PassportElementPassport extends PassportElement {
   };
 
   PassportElementPassport({
-    this.passport,
+  required this.passport,
   });
 
   PassportElementPassport.fromJson(Map<String, dynamic> json) {
@@ -8123,7 +8123,7 @@ class PassportElementDriverLicense extends PassportElement {
   @override
   String get tdType => 'passportElementDriverLicense';
 
-  IdentityDocument driverLicense;
+   late IdentityDocument driverLicense;
 
   @override
   Map<String, dynamic> get params => {
@@ -8131,7 +8131,7 @@ class PassportElementDriverLicense extends PassportElement {
   };
 
   PassportElementDriverLicense({
-    this.driverLicense,
+  required this.driverLicense,
   });
 
   PassportElementDriverLicense.fromJson(Map<String, dynamic> json) {
@@ -8144,7 +8144,7 @@ class PassportElementIdentityCard extends PassportElement {
   @override
   String get tdType => 'passportElementIdentityCard';
 
-  IdentityDocument identityCard;
+   late IdentityDocument identityCard;
 
   @override
   Map<String, dynamic> get params => {
@@ -8152,7 +8152,7 @@ class PassportElementIdentityCard extends PassportElement {
   };
 
   PassportElementIdentityCard({
-    this.identityCard,
+  required this.identityCard,
   });
 
   PassportElementIdentityCard.fromJson(Map<String, dynamic> json) {
@@ -8165,7 +8165,7 @@ class PassportElementInternalPassport extends PassportElement {
   @override
   String get tdType => 'passportElementInternalPassport';
 
-  IdentityDocument internalPassport;
+   late IdentityDocument internalPassport;
 
   @override
   Map<String, dynamic> get params => {
@@ -8173,7 +8173,7 @@ class PassportElementInternalPassport extends PassportElement {
   };
 
   PassportElementInternalPassport({
-    this.internalPassport,
+  required this.internalPassport,
   });
 
   PassportElementInternalPassport.fromJson(Map<String, dynamic> json) {
@@ -8186,7 +8186,7 @@ class PassportElementAddress extends PassportElement {
   @override
   String get tdType => 'passportElementAddress';
 
-  Address address;
+   late Address address;
 
   @override
   Map<String, dynamic> get params => {
@@ -8194,7 +8194,7 @@ class PassportElementAddress extends PassportElement {
   };
 
   PassportElementAddress({
-    this.address,
+  required this.address,
   });
 
   PassportElementAddress.fromJson(Map<String, dynamic> json) {
@@ -8207,7 +8207,7 @@ class PassportElementUtilityBill extends PassportElement {
   @override
   String get tdType => 'passportElementUtilityBill';
 
-  PersonalDocument utilityBill;
+   late PersonalDocument utilityBill;
 
   @override
   Map<String, dynamic> get params => {
@@ -8215,7 +8215,7 @@ class PassportElementUtilityBill extends PassportElement {
   };
 
   PassportElementUtilityBill({
-    this.utilityBill,
+  required this.utilityBill,
   });
 
   PassportElementUtilityBill.fromJson(Map<String, dynamic> json) {
@@ -8228,7 +8228,7 @@ class PassportElementBankStatement extends PassportElement {
   @override
   String get tdType => 'passportElementBankStatement';
 
-  PersonalDocument bankStatement;
+   late PersonalDocument bankStatement;
 
   @override
   Map<String, dynamic> get params => {
@@ -8236,7 +8236,7 @@ class PassportElementBankStatement extends PassportElement {
   };
 
   PassportElementBankStatement({
-    this.bankStatement,
+  required this.bankStatement,
   });
 
   PassportElementBankStatement.fromJson(Map<String, dynamic> json) {
@@ -8249,7 +8249,7 @@ class PassportElementRentalAgreement extends PassportElement {
   @override
   String get tdType => 'passportElementRentalAgreement';
 
-  PersonalDocument rentalAgreement;
+   late PersonalDocument rentalAgreement;
 
   @override
   Map<String, dynamic> get params => {
@@ -8257,7 +8257,7 @@ class PassportElementRentalAgreement extends PassportElement {
   };
 
   PassportElementRentalAgreement({
-    this.rentalAgreement,
+  required this.rentalAgreement,
   });
 
   PassportElementRentalAgreement.fromJson(Map<String, dynamic> json) {
@@ -8270,7 +8270,7 @@ class PassportElementPassportRegistration extends PassportElement {
   @override
   String get tdType => 'passportElementPassportRegistration';
 
-  PersonalDocument passportRegistration;
+   late PersonalDocument passportRegistration;
 
   @override
   Map<String, dynamic> get params => {
@@ -8278,7 +8278,7 @@ class PassportElementPassportRegistration extends PassportElement {
   };
 
   PassportElementPassportRegistration({
-    this.passportRegistration,
+  required this.passportRegistration,
   });
 
   PassportElementPassportRegistration.fromJson(Map<String, dynamic> json) {
@@ -8291,7 +8291,7 @@ class PassportElementTemporaryRegistration extends PassportElement {
   @override
   String get tdType => 'passportElementTemporaryRegistration';
 
-  PersonalDocument temporaryRegistration;
+   late PersonalDocument temporaryRegistration;
 
   @override
   Map<String, dynamic> get params => {
@@ -8299,7 +8299,7 @@ class PassportElementTemporaryRegistration extends PassportElement {
   };
 
   PassportElementTemporaryRegistration({
-    this.temporaryRegistration,
+  required this.temporaryRegistration,
   });
 
   PassportElementTemporaryRegistration.fromJson(Map<String, dynamic> json) {
@@ -8312,7 +8312,7 @@ class PassportElementPhoneNumber extends PassportElement {
   @override
   String get tdType => 'passportElementPhoneNumber';
 
-  String phoneNumber;
+   late String phoneNumber;
 
   @override
   Map<String, dynamic> get params => {
@@ -8320,7 +8320,7 @@ class PassportElementPhoneNumber extends PassportElement {
   };
 
   PassportElementPhoneNumber({
-    this.phoneNumber,
+  required this.phoneNumber,
   });
 
   PassportElementPhoneNumber.fromJson(Map<String, dynamic> json) {
@@ -8333,7 +8333,7 @@ class PassportElementEmailAddress extends PassportElement {
   @override
   String get tdType => 'passportElementEmailAddress';
 
-  String emailAddress;
+   late String emailAddress;
 
   @override
   Map<String, dynamic> get params => {
@@ -8341,7 +8341,7 @@ class PassportElementEmailAddress extends PassportElement {
   };
 
   PassportElementEmailAddress({
-    this.emailAddress,
+  required this.emailAddress,
   });
 
   PassportElementEmailAddress.fromJson(Map<String, dynamic> json) {
@@ -8356,7 +8356,7 @@ class InputPassportElementPersonalDetails extends InputPassportElement {
   @override
   String get tdType => 'inputPassportElementPersonalDetails';
 
-  PersonalDetails personalDetails;
+   late PersonalDetails personalDetails;
 
   @override
   Map<String, dynamic> get params => {
@@ -8364,7 +8364,7 @@ class InputPassportElementPersonalDetails extends InputPassportElement {
   };
 
   InputPassportElementPersonalDetails({
-    this.personalDetails,
+  required this.personalDetails,
   });
 
   InputPassportElementPersonalDetails.fromJson(Map<String, dynamic> json) {
@@ -8377,7 +8377,7 @@ class InputPassportElementPassport extends InputPassportElement {
   @override
   String get tdType => 'inputPassportElementPassport';
 
-  InputIdentityDocument passport;
+   late InputIdentityDocument passport;
 
   @override
   Map<String, dynamic> get params => {
@@ -8385,7 +8385,7 @@ class InputPassportElementPassport extends InputPassportElement {
   };
 
   InputPassportElementPassport({
-    this.passport,
+  required this.passport,
   });
 
   InputPassportElementPassport.fromJson(Map<String, dynamic> json) {
@@ -8398,7 +8398,7 @@ class InputPassportElementDriverLicense extends InputPassportElement {
   @override
   String get tdType => 'inputPassportElementDriverLicense';
 
-  InputIdentityDocument driverLicense;
+   late InputIdentityDocument driverLicense;
 
   @override
   Map<String, dynamic> get params => {
@@ -8406,7 +8406,7 @@ class InputPassportElementDriverLicense extends InputPassportElement {
   };
 
   InputPassportElementDriverLicense({
-    this.driverLicense,
+  required this.driverLicense,
   });
 
   InputPassportElementDriverLicense.fromJson(Map<String, dynamic> json) {
@@ -8419,7 +8419,7 @@ class InputPassportElementIdentityCard extends InputPassportElement {
   @override
   String get tdType => 'inputPassportElementIdentityCard';
 
-  InputIdentityDocument identityCard;
+   late InputIdentityDocument identityCard;
 
   @override
   Map<String, dynamic> get params => {
@@ -8427,7 +8427,7 @@ class InputPassportElementIdentityCard extends InputPassportElement {
   };
 
   InputPassportElementIdentityCard({
-    this.identityCard,
+  required this.identityCard,
   });
 
   InputPassportElementIdentityCard.fromJson(Map<String, dynamic> json) {
@@ -8440,7 +8440,7 @@ class InputPassportElementInternalPassport extends InputPassportElement {
   @override
   String get tdType => 'inputPassportElementInternalPassport';
 
-  InputIdentityDocument internalPassport;
+   late InputIdentityDocument internalPassport;
 
   @override
   Map<String, dynamic> get params => {
@@ -8448,7 +8448,7 @@ class InputPassportElementInternalPassport extends InputPassportElement {
   };
 
   InputPassportElementInternalPassport({
-    this.internalPassport,
+  required this.internalPassport,
   });
 
   InputPassportElementInternalPassport.fromJson(Map<String, dynamic> json) {
@@ -8461,7 +8461,7 @@ class InputPassportElementAddress extends InputPassportElement {
   @override
   String get tdType => 'inputPassportElementAddress';
 
-  Address address;
+   late Address address;
 
   @override
   Map<String, dynamic> get params => {
@@ -8469,7 +8469,7 @@ class InputPassportElementAddress extends InputPassportElement {
   };
 
   InputPassportElementAddress({
-    this.address,
+  required this.address,
   });
 
   InputPassportElementAddress.fromJson(Map<String, dynamic> json) {
@@ -8482,7 +8482,7 @@ class InputPassportElementUtilityBill extends InputPassportElement {
   @override
   String get tdType => 'inputPassportElementUtilityBill';
 
-  InputPersonalDocument utilityBill;
+   late InputPersonalDocument utilityBill;
 
   @override
   Map<String, dynamic> get params => {
@@ -8490,7 +8490,7 @@ class InputPassportElementUtilityBill extends InputPassportElement {
   };
 
   InputPassportElementUtilityBill({
-    this.utilityBill,
+  required this.utilityBill,
   });
 
   InputPassportElementUtilityBill.fromJson(Map<String, dynamic> json) {
@@ -8503,7 +8503,7 @@ class InputPassportElementBankStatement extends InputPassportElement {
   @override
   String get tdType => 'inputPassportElementBankStatement';
 
-  InputPersonalDocument bankStatement;
+   late InputPersonalDocument bankStatement;
 
   @override
   Map<String, dynamic> get params => {
@@ -8511,7 +8511,7 @@ class InputPassportElementBankStatement extends InputPassportElement {
   };
 
   InputPassportElementBankStatement({
-    this.bankStatement,
+  required this.bankStatement,
   });
 
   InputPassportElementBankStatement.fromJson(Map<String, dynamic> json) {
@@ -8524,7 +8524,7 @@ class InputPassportElementRentalAgreement extends InputPassportElement {
   @override
   String get tdType => 'inputPassportElementRentalAgreement';
 
-  InputPersonalDocument rentalAgreement;
+   late InputPersonalDocument rentalAgreement;
 
   @override
   Map<String, dynamic> get params => {
@@ -8532,7 +8532,7 @@ class InputPassportElementRentalAgreement extends InputPassportElement {
   };
 
   InputPassportElementRentalAgreement({
-    this.rentalAgreement,
+  required this.rentalAgreement,
   });
 
   InputPassportElementRentalAgreement.fromJson(Map<String, dynamic> json) {
@@ -8545,7 +8545,7 @@ class InputPassportElementPassportRegistration extends InputPassportElement {
   @override
   String get tdType => 'inputPassportElementPassportRegistration';
 
-  InputPersonalDocument passportRegistration;
+   late InputPersonalDocument passportRegistration;
 
   @override
   Map<String, dynamic> get params => {
@@ -8553,7 +8553,7 @@ class InputPassportElementPassportRegistration extends InputPassportElement {
   };
 
   InputPassportElementPassportRegistration({
-    this.passportRegistration,
+  required this.passportRegistration,
   });
 
   InputPassportElementPassportRegistration.fromJson(Map<String, dynamic> json) {
@@ -8566,7 +8566,7 @@ class InputPassportElementTemporaryRegistration extends InputPassportElement {
   @override
   String get tdType => 'inputPassportElementTemporaryRegistration';
 
-  InputPersonalDocument temporaryRegistration;
+   late InputPersonalDocument temporaryRegistration;
 
   @override
   Map<String, dynamic> get params => {
@@ -8574,7 +8574,7 @@ class InputPassportElementTemporaryRegistration extends InputPassportElement {
   };
 
   InputPassportElementTemporaryRegistration({
-    this.temporaryRegistration,
+  required this.temporaryRegistration,
   });
 
   InputPassportElementTemporaryRegistration.fromJson(Map<String, dynamic> json) {
@@ -8587,7 +8587,7 @@ class InputPassportElementPhoneNumber extends InputPassportElement {
   @override
   String get tdType => 'inputPassportElementPhoneNumber';
 
-  String phoneNumber;
+   late String phoneNumber;
 
   @override
   Map<String, dynamic> get params => {
@@ -8595,7 +8595,7 @@ class InputPassportElementPhoneNumber extends InputPassportElement {
   };
 
   InputPassportElementPhoneNumber({
-    this.phoneNumber,
+  required this.phoneNumber,
   });
 
   InputPassportElementPhoneNumber.fromJson(Map<String, dynamic> json) {
@@ -8608,7 +8608,7 @@ class InputPassportElementEmailAddress extends InputPassportElement {
   @override
   String get tdType => 'inputPassportElementEmailAddress';
 
-  String emailAddress;
+   late String emailAddress;
 
   @override
   Map<String, dynamic> get params => {
@@ -8616,7 +8616,7 @@ class InputPassportElementEmailAddress extends InputPassportElement {
   };
 
   InputPassportElementEmailAddress({
-    this.emailAddress,
+  required this.emailAddress,
   });
 
   InputPassportElementEmailAddress.fromJson(Map<String, dynamic> json) {
@@ -8629,7 +8629,7 @@ class PassportElements extends TdObject {
   @override
   String get tdType => 'passportElements';
 
-  List<PassportElement> elements;
+   late List<PassportElement> elements;
 
   @override
   Map<String, dynamic> get params => {
@@ -8637,7 +8637,7 @@ class PassportElements extends TdObject {
   };
 
   PassportElements({
-    this.elements,
+  required this.elements,
   });
 
   PassportElements.fromJson(Map<String, dynamic> json) {
@@ -8665,7 +8665,7 @@ class PassportElementErrorSourceDataField extends PassportElementErrorSource {
   @override
   String get tdType => 'passportElementErrorSourceDataField';
 
-  String fieldName;
+   late String fieldName;
 
   @override
   Map<String, dynamic> get params => {
@@ -8673,7 +8673,7 @@ class PassportElementErrorSourceDataField extends PassportElementErrorSource {
   };
 
   PassportElementErrorSourceDataField({
-    this.fieldName,
+  required this.fieldName,
   });
 
   PassportElementErrorSourceDataField.fromJson(Map<String, dynamic> json) {
@@ -8725,7 +8725,7 @@ class PassportElementErrorSourceTranslationFile extends PassportElementErrorSour
   @override
   String get tdType => 'passportElementErrorSourceTranslationFile';
 
-  int fileIndex;
+   late int fileIndex;
 
   @override
   Map<String, dynamic> get params => {
@@ -8733,7 +8733,7 @@ class PassportElementErrorSourceTranslationFile extends PassportElementErrorSour
   };
 
   PassportElementErrorSourceTranslationFile({
-    this.fileIndex,
+  required this.fileIndex,
   });
 
   PassportElementErrorSourceTranslationFile.fromJson(Map<String, dynamic> json) {
@@ -8759,7 +8759,7 @@ class PassportElementErrorSourceFile extends PassportElementErrorSource {
   @override
   String get tdType => 'passportElementErrorSourceFile';
 
-  int fileIndex;
+   late int fileIndex;
 
   @override
   Map<String, dynamic> get params => {
@@ -8767,7 +8767,7 @@ class PassportElementErrorSourceFile extends PassportElementErrorSource {
   };
 
   PassportElementErrorSourceFile({
-    this.fileIndex,
+  required this.fileIndex,
   });
 
   PassportElementErrorSourceFile.fromJson(Map<String, dynamic> json) {
@@ -8793,9 +8793,9 @@ class PassportElementError extends TdObject {
   @override
   String get tdType => 'passportElementError';
 
-  PassportElementType type;
-  String message;
-  PassportElementErrorSource source;
+   late PassportElementType type;
+   late String message;
+   late PassportElementErrorSource source;
 
   @override
   Map<String, dynamic> get params => {
@@ -8805,9 +8805,9 @@ class PassportElementError extends TdObject {
   };
 
   PassportElementError({
-    this.type,
-    this.message,
-    this.source,
+  required this.type,
+  required this.message,
+  required this.source,
   });
 
   PassportElementError.fromJson(Map<String, dynamic> json) {
@@ -8822,10 +8822,10 @@ class PassportSuitableElement extends TdObject {
   @override
   String get tdType => 'passportSuitableElement';
 
-  PassportElementType type;
-  bool isSelfieRequired;
-  bool isTranslationRequired;
-  bool isNativeNameRequired;
+   late PassportElementType type;
+   late bool isSelfieRequired;
+   late bool isTranslationRequired;
+   late bool isNativeNameRequired;
 
   @override
   Map<String, dynamic> get params => {
@@ -8836,10 +8836,10 @@ class PassportSuitableElement extends TdObject {
   };
 
   PassportSuitableElement({
-    this.type,
-    this.isSelfieRequired,
-    this.isTranslationRequired,
-    this.isNativeNameRequired,
+  required this.type,
+  required this.isSelfieRequired,
+  required this.isTranslationRequired,
+  required this.isNativeNameRequired,
   });
 
   PassportSuitableElement.fromJson(Map<String, dynamic> json) {
@@ -8855,7 +8855,7 @@ class PassportRequiredElement extends TdObject {
   @override
   String get tdType => 'passportRequiredElement';
 
-  List<PassportSuitableElement> suitableElements;
+   late List<PassportSuitableElement> suitableElements;
 
   @override
   Map<String, dynamic> get params => {
@@ -8863,7 +8863,7 @@ class PassportRequiredElement extends TdObject {
   };
 
   PassportRequiredElement({
-    this.suitableElements,
+  required this.suitableElements,
   });
 
   PassportRequiredElement.fromJson(Map<String, dynamic> json) {
@@ -8876,9 +8876,9 @@ class PassportAuthorizationForm extends TdObject {
   @override
   String get tdType => 'passportAuthorizationForm';
 
-  int id;
-  List<PassportRequiredElement> requiredElements;
-  String privacyPolicyUrl;
+   late int id;
+   late List<PassportRequiredElement> requiredElements;
+   late String privacyPolicyUrl;
 
   @override
   Map<String, dynamic> get params => {
@@ -8888,9 +8888,9 @@ class PassportAuthorizationForm extends TdObject {
   };
 
   PassportAuthorizationForm({
-    this.id,
-    this.requiredElements,
-    this.privacyPolicyUrl,
+  required this.id,
+  required this.requiredElements,
+  required this.privacyPolicyUrl,
   });
 
   PassportAuthorizationForm.fromJson(Map<String, dynamic> json) {
@@ -8905,8 +8905,8 @@ class PassportElementsWithErrors extends TdObject {
   @override
   String get tdType => 'passportElementsWithErrors';
 
-  List<PassportElement> elements;
-  List<PassportElementError> errors;
+   late List<PassportElement> elements;
+   late List<PassportElementError> errors;
 
   @override
   Map<String, dynamic> get params => {
@@ -8915,8 +8915,8 @@ class PassportElementsWithErrors extends TdObject {
   };
 
   PassportElementsWithErrors({
-    this.elements,
-    this.errors,
+  required this.elements,
+  required this.errors,
   });
 
   PassportElementsWithErrors.fromJson(Map<String, dynamic> json) {
@@ -8930,9 +8930,9 @@ class EncryptedCredentials extends TdObject {
   @override
   String get tdType => 'encryptedCredentials';
 
-  String data;
-  String hash;
-  String secret;
+   late String data;
+   late String hash;
+   late String secret;
 
   @override
   Map<String, dynamic> get params => {
@@ -8942,9 +8942,9 @@ class EncryptedCredentials extends TdObject {
   };
 
   EncryptedCredentials({
-    this.data,
-    this.hash,
-    this.secret,
+  required this.data,
+  required this.hash,
+  required this.secret,
   });
 
   EncryptedCredentials.fromJson(Map<String, dynamic> json) {
@@ -8959,15 +8959,15 @@ class EncryptedPassportElement extends TdObject {
   @override
   String get tdType => 'encryptedPassportElement';
 
-  PassportElementType type;
-  String data;
-  DatedFile frontSide;
-  DatedFile reverseSide;
-  DatedFile selfie;
-  List<DatedFile> translation;
-  List<DatedFile> files;
-  String value;
-  String hash;
+   late PassportElementType type;
+   late String data;
+   late DatedFile frontSide;
+   late DatedFile reverseSide;
+   late DatedFile selfie;
+   late List<DatedFile> translation;
+   late List<DatedFile> files;
+   late String value;
+   late String hash;
 
   @override
   Map<String, dynamic> get params => {
@@ -8983,15 +8983,15 @@ class EncryptedPassportElement extends TdObject {
   };
 
   EncryptedPassportElement({
-    this.type,
-    this.data,
-    this.frontSide,
-    this.reverseSide,
-    this.selfie,
-    this.translation,
-    this.files,
-    this.value,
-    this.hash,
+  required this.type,
+  required this.data,
+  required this.frontSide,
+  required this.reverseSide,
+  required this.selfie,
+  required this.translation,
+  required this.files,
+  required this.value,
+  required this.hash,
   });
 
   EncryptedPassportElement.fromJson(Map<String, dynamic> json) {
@@ -9014,7 +9014,7 @@ class InputPassportElementErrorSourceUnspecified extends InputPassportElementErr
   @override
   String get tdType => 'inputPassportElementErrorSourceUnspecified';
 
-  String elementHash;
+   late String elementHash;
 
   @override
   Map<String, dynamic> get params => {
@@ -9022,7 +9022,7 @@ class InputPassportElementErrorSourceUnspecified extends InputPassportElementErr
   };
 
   InputPassportElementErrorSourceUnspecified({
-    this.elementHash,
+  required this.elementHash,
   });
 
   InputPassportElementErrorSourceUnspecified.fromJson(Map<String, dynamic> json) {
@@ -9035,8 +9035,8 @@ class InputPassportElementErrorSourceDataField extends InputPassportElementError
   @override
   String get tdType => 'inputPassportElementErrorSourceDataField';
 
-  String fieldName;
-  String dataHash;
+   late String fieldName;
+   late String dataHash;
 
   @override
   Map<String, dynamic> get params => {
@@ -9045,8 +9045,8 @@ class InputPassportElementErrorSourceDataField extends InputPassportElementError
   };
 
   InputPassportElementErrorSourceDataField({
-    this.fieldName,
-    this.dataHash,
+  required this.fieldName,
+  required this.dataHash,
   });
 
   InputPassportElementErrorSourceDataField.fromJson(Map<String, dynamic> json) {
@@ -9060,7 +9060,7 @@ class InputPassportElementErrorSourceFrontSide extends InputPassportElementError
   @override
   String get tdType => 'inputPassportElementErrorSourceFrontSide';
 
-  String fileHash;
+   late String fileHash;
 
   @override
   Map<String, dynamic> get params => {
@@ -9068,7 +9068,7 @@ class InputPassportElementErrorSourceFrontSide extends InputPassportElementError
   };
 
   InputPassportElementErrorSourceFrontSide({
-    this.fileHash,
+  required this.fileHash,
   });
 
   InputPassportElementErrorSourceFrontSide.fromJson(Map<String, dynamic> json) {
@@ -9081,7 +9081,7 @@ class InputPassportElementErrorSourceReverseSide extends InputPassportElementErr
   @override
   String get tdType => 'inputPassportElementErrorSourceReverseSide';
 
-  String fileHash;
+   late String fileHash;
 
   @override
   Map<String, dynamic> get params => {
@@ -9089,7 +9089,7 @@ class InputPassportElementErrorSourceReverseSide extends InputPassportElementErr
   };
 
   InputPassportElementErrorSourceReverseSide({
-    this.fileHash,
+  required this.fileHash,
   });
 
   InputPassportElementErrorSourceReverseSide.fromJson(Map<String, dynamic> json) {
@@ -9102,7 +9102,7 @@ class InputPassportElementErrorSourceSelfie extends InputPassportElementErrorSou
   @override
   String get tdType => 'inputPassportElementErrorSourceSelfie';
 
-  String fileHash;
+   late String fileHash;
 
   @override
   Map<String, dynamic> get params => {
@@ -9110,7 +9110,7 @@ class InputPassportElementErrorSourceSelfie extends InputPassportElementErrorSou
   };
 
   InputPassportElementErrorSourceSelfie({
-    this.fileHash,
+  required this.fileHash,
   });
 
   InputPassportElementErrorSourceSelfie.fromJson(Map<String, dynamic> json) {
@@ -9123,7 +9123,7 @@ class InputPassportElementErrorSourceTranslationFile extends InputPassportElemen
   @override
   String get tdType => 'inputPassportElementErrorSourceTranslationFile';
 
-  String fileHash;
+   late String fileHash;
 
   @override
   Map<String, dynamic> get params => {
@@ -9131,7 +9131,7 @@ class InputPassportElementErrorSourceTranslationFile extends InputPassportElemen
   };
 
   InputPassportElementErrorSourceTranslationFile({
-    this.fileHash,
+  required this.fileHash,
   });
 
   InputPassportElementErrorSourceTranslationFile.fromJson(Map<String, dynamic> json) {
@@ -9144,7 +9144,7 @@ class InputPassportElementErrorSourceTranslationFiles extends InputPassportEleme
   @override
   String get tdType => 'inputPassportElementErrorSourceTranslationFiles';
 
-  List<String> fileHashes;
+   late List<String> fileHashes;
 
   @override
   Map<String, dynamic> get params => {
@@ -9152,7 +9152,7 @@ class InputPassportElementErrorSourceTranslationFiles extends InputPassportEleme
   };
 
   InputPassportElementErrorSourceTranslationFiles({
-    this.fileHashes,
+  required this.fileHashes,
   });
 
   InputPassportElementErrorSourceTranslationFiles.fromJson(Map<String, dynamic> json) {
@@ -9165,7 +9165,7 @@ class InputPassportElementErrorSourceFile extends InputPassportElementErrorSourc
   @override
   String get tdType => 'inputPassportElementErrorSourceFile';
 
-  String fileHash;
+   late String fileHash;
 
   @override
   Map<String, dynamic> get params => {
@@ -9173,7 +9173,7 @@ class InputPassportElementErrorSourceFile extends InputPassportElementErrorSourc
   };
 
   InputPassportElementErrorSourceFile({
-    this.fileHash,
+  required this.fileHash,
   });
 
   InputPassportElementErrorSourceFile.fromJson(Map<String, dynamic> json) {
@@ -9186,7 +9186,7 @@ class InputPassportElementErrorSourceFiles extends InputPassportElementErrorSour
   @override
   String get tdType => 'inputPassportElementErrorSourceFiles';
 
-  List<String> fileHashes;
+   late List<String> fileHashes;
 
   @override
   Map<String, dynamic> get params => {
@@ -9194,7 +9194,7 @@ class InputPassportElementErrorSourceFiles extends InputPassportElementErrorSour
   };
 
   InputPassportElementErrorSourceFiles({
-    this.fileHashes,
+  required this.fileHashes,
   });
 
   InputPassportElementErrorSourceFiles.fromJson(Map<String, dynamic> json) {
@@ -9207,9 +9207,9 @@ class InputPassportElementError extends TdObject {
   @override
   String get tdType => 'inputPassportElementError';
 
-  PassportElementType type;
-  String message;
-  InputPassportElementErrorSource source;
+   late PassportElementType type;
+   late String message;
+   late InputPassportElementErrorSource source;
 
   @override
   Map<String, dynamic> get params => {
@@ -9219,9 +9219,9 @@ class InputPassportElementError extends TdObject {
   };
 
   InputPassportElementError({
-    this.type,
-    this.message,
-    this.source,
+  required this.type,
+  required this.message,
+  required this.source,
   });
 
   InputPassportElementError.fromJson(Map<String, dynamic> json) {
@@ -9238,8 +9238,8 @@ class MessageText extends MessageContent {
   @override
   String get tdType => 'messageText';
 
-  FormattedText text;
-  WebPage webPage;
+   late FormattedText text;
+   late WebPage webPage;
 
   @override
   Map<String, dynamic> get params => {
@@ -9248,8 +9248,8 @@ class MessageText extends MessageContent {
   };
 
   MessageText({
-    this.text,
-    this.webPage,
+  required this.text,
+  required this.webPage,
   });
 
   MessageText.fromJson(Map<String, dynamic> json) {
@@ -9263,9 +9263,9 @@ class MessageAnimation extends MessageContent {
   @override
   String get tdType => 'messageAnimation';
 
-  Animation animation;
-  FormattedText caption;
-  bool isSecret;
+   late Animation animation;
+   late FormattedText caption;
+   late bool isSecret;
 
   @override
   Map<String, dynamic> get params => {
@@ -9275,9 +9275,9 @@ class MessageAnimation extends MessageContent {
   };
 
   MessageAnimation({
-    this.animation,
-    this.caption,
-    this.isSecret,
+  required this.animation,
+  required this.caption,
+  required this.isSecret,
   });
 
   MessageAnimation.fromJson(Map<String, dynamic> json) {
@@ -9292,8 +9292,8 @@ class MessageAudio extends MessageContent {
   @override
   String get tdType => 'messageAudio';
 
-  Audio audio;
-  FormattedText caption;
+   late Audio audio;
+   late FormattedText caption;
 
   @override
   Map<String, dynamic> get params => {
@@ -9302,8 +9302,8 @@ class MessageAudio extends MessageContent {
   };
 
   MessageAudio({
-    this.audio,
-    this.caption,
+  required this.audio,
+  required this.caption,
   });
 
   MessageAudio.fromJson(Map<String, dynamic> json) {
@@ -9317,8 +9317,8 @@ class MessageDocument extends MessageContent {
   @override
   String get tdType => 'messageDocument';
 
-  Document document;
-  FormattedText caption;
+   late Document document;
+   late FormattedText caption;
 
   @override
   Map<String, dynamic> get params => {
@@ -9327,8 +9327,8 @@ class MessageDocument extends MessageContent {
   };
 
   MessageDocument({
-    this.document,
-    this.caption,
+  required this.document,
+  required this.caption,
   });
 
   MessageDocument.fromJson(Map<String, dynamic> json) {
@@ -9342,9 +9342,9 @@ class MessagePhoto extends MessageContent {
   @override
   String get tdType => 'messagePhoto';
 
-  Photo photo;
-  FormattedText caption;
-  bool isSecret;
+   late Photo photo;
+   late FormattedText caption;
+   late bool isSecret;
 
   @override
   Map<String, dynamic> get params => {
@@ -9354,9 +9354,9 @@ class MessagePhoto extends MessageContent {
   };
 
   MessagePhoto({
-    this.photo,
-    this.caption,
-    this.isSecret,
+  required this.photo,
+  required this.caption,
+  required this.isSecret,
   });
 
   MessagePhoto.fromJson(Map<String, dynamic> json) {
@@ -9384,7 +9384,7 @@ class MessageSticker extends MessageContent {
   @override
   String get tdType => 'messageSticker';
 
-  Sticker sticker;
+   late Sticker sticker;
 
   @override
   Map<String, dynamic> get params => {
@@ -9392,7 +9392,7 @@ class MessageSticker extends MessageContent {
   };
 
   MessageSticker({
-    this.sticker,
+  required this.sticker,
   });
 
   MessageSticker.fromJson(Map<String, dynamic> json) {
@@ -9405,9 +9405,9 @@ class MessageVideo extends MessageContent {
   @override
   String get tdType => 'messageVideo';
 
-  Video video;
-  FormattedText caption;
-  bool isSecret;
+   late Video video;
+   late FormattedText caption;
+   late bool isSecret;
 
   @override
   Map<String, dynamic> get params => {
@@ -9417,9 +9417,9 @@ class MessageVideo extends MessageContent {
   };
 
   MessageVideo({
-    this.video,
-    this.caption,
-    this.isSecret,
+  required this.video,
+  required this.caption,
+  required this.isSecret,
   });
 
   MessageVideo.fromJson(Map<String, dynamic> json) {
@@ -9447,9 +9447,9 @@ class MessageVideoNote extends MessageContent {
   @override
   String get tdType => 'messageVideoNote';
 
-  VideoNote videoNote;
-  bool isViewed;
-  bool isSecret;
+   late VideoNote videoNote;
+   late bool isViewed;
+   late bool isSecret;
 
   @override
   Map<String, dynamic> get params => {
@@ -9459,9 +9459,9 @@ class MessageVideoNote extends MessageContent {
   };
 
   MessageVideoNote({
-    this.videoNote,
-    this.isViewed,
-    this.isSecret,
+  required this.videoNote,
+  required this.isViewed,
+  required this.isSecret,
   });
 
   MessageVideoNote.fromJson(Map<String, dynamic> json) {
@@ -9476,9 +9476,9 @@ class MessageVoiceNote extends MessageContent {
   @override
   String get tdType => 'messageVoiceNote';
 
-  VoiceNote voiceNote;
-  FormattedText caption;
-  bool isListened;
+   late VoiceNote voiceNote;
+   late FormattedText caption;
+   late bool isListened;
 
   @override
   Map<String, dynamic> get params => {
@@ -9488,9 +9488,9 @@ class MessageVoiceNote extends MessageContent {
   };
 
   MessageVoiceNote({
-    this.voiceNote,
-    this.caption,
-    this.isListened,
+  required this.voiceNote,
+  required this.caption,
+  required this.isListened,
   });
 
   MessageVoiceNote.fromJson(Map<String, dynamic> json) {
@@ -9505,11 +9505,11 @@ class MessageLocation extends MessageContent {
   @override
   String get tdType => 'messageLocation';
 
-  Location location;
-  int livePeriod;
-  int expiresIn;
-  int heading;
-  int proximityAlertRadius;
+   late Location location;
+   late int livePeriod;
+   late int expiresIn;
+   late int heading;
+   late int proximityAlertRadius;
 
   @override
   Map<String, dynamic> get params => {
@@ -9521,11 +9521,11 @@ class MessageLocation extends MessageContent {
   };
 
   MessageLocation({
-    this.location,
-    this.livePeriod,
-    this.expiresIn,
-    this.heading,
-    this.proximityAlertRadius,
+  required this.location,
+  required this.livePeriod,
+  required this.expiresIn,
+  required this.heading,
+  required this.proximityAlertRadius,
   });
 
   MessageLocation.fromJson(Map<String, dynamic> json) {
@@ -9542,7 +9542,7 @@ class MessageVenue extends MessageContent {
   @override
   String get tdType => 'messageVenue';
 
-  Venue venue;
+   late Venue venue;
 
   @override
   Map<String, dynamic> get params => {
@@ -9550,7 +9550,7 @@ class MessageVenue extends MessageContent {
   };
 
   MessageVenue({
-    this.venue,
+  required this.venue,
   });
 
   MessageVenue.fromJson(Map<String, dynamic> json) {
@@ -9563,7 +9563,7 @@ class MessageContact extends MessageContent {
   @override
   String get tdType => 'messageContact';
 
-  Contact contact;
+   late Contact contact;
 
   @override
   Map<String, dynamic> get params => {
@@ -9571,7 +9571,7 @@ class MessageContact extends MessageContent {
   };
 
   MessageContact({
-    this.contact,
+  required this.contact,
   });
 
   MessageContact.fromJson(Map<String, dynamic> json) {
@@ -9584,11 +9584,11 @@ class MessageDice extends MessageContent {
   @override
   String get tdType => 'messageDice';
 
-  DiceStickers initialState;
-  DiceStickers finalState;
-  String emoji;
-  int value;
-  int successAnimationFrameNumber;
+   late DiceStickers initialState;
+   late DiceStickers finalState;
+   late String emoji;
+   late int value;
+   late int successAnimationFrameNumber;
 
   @override
   Map<String, dynamic> get params => {
@@ -9600,11 +9600,11 @@ class MessageDice extends MessageContent {
   };
 
   MessageDice({
-    this.initialState,
-    this.finalState,
-    this.emoji,
-    this.value,
-    this.successAnimationFrameNumber,
+  required this.initialState,
+  required this.finalState,
+  required this.emoji,
+  required this.value,
+  required this.successAnimationFrameNumber,
   });
 
   MessageDice.fromJson(Map<String, dynamic> json) {
@@ -9621,7 +9621,7 @@ class MessageGame extends MessageContent {
   @override
   String get tdType => 'messageGame';
 
-  Game game;
+   late Game game;
 
   @override
   Map<String, dynamic> get params => {
@@ -9629,7 +9629,7 @@ class MessageGame extends MessageContent {
   };
 
   MessageGame({
-    this.game,
+  required this.game,
   });
 
   MessageGame.fromJson(Map<String, dynamic> json) {
@@ -9642,7 +9642,7 @@ class MessagePoll extends MessageContent {
   @override
   String get tdType => 'messagePoll';
 
-  Poll poll;
+   late Poll poll;
 
   @override
   Map<String, dynamic> get params => {
@@ -9650,7 +9650,7 @@ class MessagePoll extends MessageContent {
   };
 
   MessagePoll({
-    this.poll,
+  required this.poll,
   });
 
   MessagePoll.fromJson(Map<String, dynamic> json) {
@@ -9663,15 +9663,15 @@ class MessageInvoice extends MessageContent {
   @override
   String get tdType => 'messageInvoice';
 
-  String title;
-  String description;
-  Photo photo;
-  String currency;
-  int totalAmount;
-  String startParameter;
-  bool isTest;
-  bool needShippingAddress;
-  int receiptMessageId;
+   late String title;
+   late String description;
+   late Photo photo;
+   late String currency;
+   late int totalAmount;
+   late String startParameter;
+   late bool isTest;
+   late bool needShippingAddress;
+   late int receiptMessageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -9687,15 +9687,15 @@ class MessageInvoice extends MessageContent {
   };
 
   MessageInvoice({
-    this.title,
-    this.description,
-    this.photo,
-    this.currency,
-    this.totalAmount,
-    this.startParameter,
-    this.isTest,
-    this.needShippingAddress,
-    this.receiptMessageId,
+  required this.title,
+  required this.description,
+  required this.photo,
+  required this.currency,
+  required this.totalAmount,
+  required this.startParameter,
+  required this.isTest,
+  required this.needShippingAddress,
+  required this.receiptMessageId,
   });
 
   MessageInvoice.fromJson(Map<String, dynamic> json) {
@@ -9716,9 +9716,9 @@ class MessageCall extends MessageContent {
   @override
   String get tdType => 'messageCall';
 
-  bool isVideo;
-  CallDiscardReason discardReason;
-  int duration;
+   late bool isVideo;
+   late CallDiscardReason discardReason;
+   late int duration;
 
   @override
   Map<String, dynamic> get params => {
@@ -9728,9 +9728,9 @@ class MessageCall extends MessageContent {
   };
 
   MessageCall({
-    this.isVideo,
-    this.discardReason,
-    this.duration,
+  required this.isVideo,
+  required this.discardReason,
+  required this.duration,
   });
 
   MessageCall.fromJson(Map<String, dynamic> json) {
@@ -9745,8 +9745,8 @@ class MessageVoiceChatScheduled extends MessageContent {
   @override
   String get tdType => 'messageVoiceChatScheduled';
 
-  int groupCallId;
-  int startDate;
+   late int groupCallId;
+   late int startDate;
 
   @override
   Map<String, dynamic> get params => {
@@ -9755,8 +9755,8 @@ class MessageVoiceChatScheduled extends MessageContent {
   };
 
   MessageVoiceChatScheduled({
-    this.groupCallId,
-    this.startDate,
+  required this.groupCallId,
+  required this.startDate,
   });
 
   MessageVoiceChatScheduled.fromJson(Map<String, dynamic> json) {
@@ -9770,7 +9770,7 @@ class MessageVoiceChatStarted extends MessageContent {
   @override
   String get tdType => 'messageVoiceChatStarted';
 
-  int groupCallId;
+   late int groupCallId;
 
   @override
   Map<String, dynamic> get params => {
@@ -9778,7 +9778,7 @@ class MessageVoiceChatStarted extends MessageContent {
   };
 
   MessageVoiceChatStarted({
-    this.groupCallId,
+  required this.groupCallId,
   });
 
   MessageVoiceChatStarted.fromJson(Map<String, dynamic> json) {
@@ -9791,7 +9791,7 @@ class MessageVoiceChatEnded extends MessageContent {
   @override
   String get tdType => 'messageVoiceChatEnded';
 
-  int duration;
+   late int duration;
 
   @override
   Map<String, dynamic> get params => {
@@ -9799,7 +9799,7 @@ class MessageVoiceChatEnded extends MessageContent {
   };
 
   MessageVoiceChatEnded({
-    this.duration,
+  required this.duration,
   });
 
   MessageVoiceChatEnded.fromJson(Map<String, dynamic> json) {
@@ -9812,8 +9812,8 @@ class MessageInviteVoiceChatParticipants extends MessageContent {
   @override
   String get tdType => 'messageInviteVoiceChatParticipants';
 
-  int groupCallId;
-  List<int> userIds;
+   late int groupCallId;
+   late List<int> userIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -9822,8 +9822,8 @@ class MessageInviteVoiceChatParticipants extends MessageContent {
   };
 
   MessageInviteVoiceChatParticipants({
-    this.groupCallId,
-    this.userIds,
+  required this.groupCallId,
+  required this.userIds,
   });
 
   MessageInviteVoiceChatParticipants.fromJson(Map<String, dynamic> json) {
@@ -9837,8 +9837,8 @@ class MessageBasicGroupChatCreate extends MessageContent {
   @override
   String get tdType => 'messageBasicGroupChatCreate';
 
-  String title;
-  List<int> memberUserIds;
+   late String title;
+   late List<int> memberUserIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -9847,8 +9847,8 @@ class MessageBasicGroupChatCreate extends MessageContent {
   };
 
   MessageBasicGroupChatCreate({
-    this.title,
-    this.memberUserIds,
+  required this.title,
+  required this.memberUserIds,
   });
 
   MessageBasicGroupChatCreate.fromJson(Map<String, dynamic> json) {
@@ -9862,7 +9862,7 @@ class MessageSupergroupChatCreate extends MessageContent {
   @override
   String get tdType => 'messageSupergroupChatCreate';
 
-  String title;
+   late String title;
 
   @override
   Map<String, dynamic> get params => {
@@ -9870,7 +9870,7 @@ class MessageSupergroupChatCreate extends MessageContent {
   };
 
   MessageSupergroupChatCreate({
-    this.title,
+  required this.title,
   });
 
   MessageSupergroupChatCreate.fromJson(Map<String, dynamic> json) {
@@ -9883,7 +9883,7 @@ class MessageChatChangeTitle extends MessageContent {
   @override
   String get tdType => 'messageChatChangeTitle';
 
-  String title;
+   late String title;
 
   @override
   Map<String, dynamic> get params => {
@@ -9891,7 +9891,7 @@ class MessageChatChangeTitle extends MessageContent {
   };
 
   MessageChatChangeTitle({
-    this.title,
+  required this.title,
   });
 
   MessageChatChangeTitle.fromJson(Map<String, dynamic> json) {
@@ -9904,7 +9904,7 @@ class MessageChatChangePhoto extends MessageContent {
   @override
   String get tdType => 'messageChatChangePhoto';
 
-  ChatPhoto photo;
+   late ChatPhoto photo;
 
   @override
   Map<String, dynamic> get params => {
@@ -9912,7 +9912,7 @@ class MessageChatChangePhoto extends MessageContent {
   };
 
   MessageChatChangePhoto({
-    this.photo,
+  required this.photo,
   });
 
   MessageChatChangePhoto.fromJson(Map<String, dynamic> json) {
@@ -9938,7 +9938,7 @@ class MessageChatAddMembers extends MessageContent {
   @override
   String get tdType => 'messageChatAddMembers';
 
-  List<int> memberUserIds;
+   late List<int> memberUserIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -9946,7 +9946,7 @@ class MessageChatAddMembers extends MessageContent {
   };
 
   MessageChatAddMembers({
-    this.memberUserIds,
+  required this.memberUserIds,
   });
 
   MessageChatAddMembers.fromJson(Map<String, dynamic> json) {
@@ -9972,7 +9972,7 @@ class MessageChatDeleteMember extends MessageContent {
   @override
   String get tdType => 'messageChatDeleteMember';
 
-  int userId;
+   late int userId;
 
   @override
   Map<String, dynamic> get params => {
@@ -9980,7 +9980,7 @@ class MessageChatDeleteMember extends MessageContent {
   };
 
   MessageChatDeleteMember({
-    this.userId,
+  required this.userId,
   });
 
   MessageChatDeleteMember.fromJson(Map<String, dynamic> json) {
@@ -9993,7 +9993,7 @@ class MessageChatUpgradeTo extends MessageContent {
   @override
   String get tdType => 'messageChatUpgradeTo';
 
-  int supergroupId;
+   late int supergroupId;
 
   @override
   Map<String, dynamic> get params => {
@@ -10001,7 +10001,7 @@ class MessageChatUpgradeTo extends MessageContent {
   };
 
   MessageChatUpgradeTo({
-    this.supergroupId,
+  required this.supergroupId,
   });
 
   MessageChatUpgradeTo.fromJson(Map<String, dynamic> json) {
@@ -10014,8 +10014,8 @@ class MessageChatUpgradeFrom extends MessageContent {
   @override
   String get tdType => 'messageChatUpgradeFrom';
 
-  String title;
-  int basicGroupId;
+   late String title;
+   late int basicGroupId;
 
   @override
   Map<String, dynamic> get params => {
@@ -10024,8 +10024,8 @@ class MessageChatUpgradeFrom extends MessageContent {
   };
 
   MessageChatUpgradeFrom({
-    this.title,
-    this.basicGroupId,
+  required this.title,
+  required this.basicGroupId,
   });
 
   MessageChatUpgradeFrom.fromJson(Map<String, dynamic> json) {
@@ -10039,7 +10039,7 @@ class MessagePinMessage extends MessageContent {
   @override
   String get tdType => 'messagePinMessage';
 
-  int messageId;
+   late int messageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -10047,7 +10047,7 @@ class MessagePinMessage extends MessageContent {
   };
 
   MessagePinMessage({
-    this.messageId,
+  required this.messageId,
   });
 
   MessagePinMessage.fromJson(Map<String, dynamic> json) {
@@ -10073,7 +10073,7 @@ class MessageChatSetTheme extends MessageContent {
   @override
   String get tdType => 'messageChatSetTheme';
 
-  String themeName;
+   late String themeName;
 
   @override
   Map<String, dynamic> get params => {
@@ -10081,7 +10081,7 @@ class MessageChatSetTheme extends MessageContent {
   };
 
   MessageChatSetTheme({
-    this.themeName,
+  required this.themeName,
   });
 
   MessageChatSetTheme.fromJson(Map<String, dynamic> json) {
@@ -10094,7 +10094,7 @@ class MessageChatSetTtl extends MessageContent {
   @override
   String get tdType => 'messageChatSetTtl';
 
-  int ttl;
+   late int ttl;
 
   @override
   Map<String, dynamic> get params => {
@@ -10102,7 +10102,7 @@ class MessageChatSetTtl extends MessageContent {
   };
 
   MessageChatSetTtl({
-    this.ttl,
+  required this.ttl,
   });
 
   MessageChatSetTtl.fromJson(Map<String, dynamic> json) {
@@ -10115,7 +10115,7 @@ class MessageCustomServiceAction extends MessageContent {
   @override
   String get tdType => 'messageCustomServiceAction';
 
-  String text;
+   late String text;
 
   @override
   Map<String, dynamic> get params => {
@@ -10123,7 +10123,7 @@ class MessageCustomServiceAction extends MessageContent {
   };
 
   MessageCustomServiceAction({
-    this.text,
+  required this.text,
   });
 
   MessageCustomServiceAction.fromJson(Map<String, dynamic> json) {
@@ -10136,9 +10136,9 @@ class MessageGameScore extends MessageContent {
   @override
   String get tdType => 'messageGameScore';
 
-  int gameMessageId;
-  int gameId;
-  int score;
+   late int gameMessageId;
+   late int gameId;
+   late int score;
 
   @override
   Map<String, dynamic> get params => {
@@ -10148,9 +10148,9 @@ class MessageGameScore extends MessageContent {
   };
 
   MessageGameScore({
-    this.gameMessageId,
-    this.gameId,
-    this.score,
+  required this.gameMessageId,
+  required this.gameId,
+  required this.score,
   });
 
   MessageGameScore.fromJson(Map<String, dynamic> json) {
@@ -10165,10 +10165,10 @@ class MessagePaymentSuccessful extends MessageContent {
   @override
   String get tdType => 'messagePaymentSuccessful';
 
-  int invoiceChatId;
-  int invoiceMessageId;
-  String currency;
-  int totalAmount;
+   late int invoiceChatId;
+   late int invoiceMessageId;
+   late String currency;
+   late int totalAmount;
 
   @override
   Map<String, dynamic> get params => {
@@ -10179,10 +10179,10 @@ class MessagePaymentSuccessful extends MessageContent {
   };
 
   MessagePaymentSuccessful({
-    this.invoiceChatId,
-    this.invoiceMessageId,
-    this.currency,
-    this.totalAmount,
+  required this.invoiceChatId,
+  required this.invoiceMessageId,
+  required this.currency,
+  required this.totalAmount,
   });
 
   MessagePaymentSuccessful.fromJson(Map<String, dynamic> json) {
@@ -10198,13 +10198,13 @@ class MessagePaymentSuccessfulBot extends MessageContent {
   @override
   String get tdType => 'messagePaymentSuccessfulBot';
 
-  String currency;
-  int totalAmount;
-  String invoicePayload;
-  String shippingOptionId;
-  OrderInfo orderInfo;
-  String telegramPaymentChargeId;
-  String providerPaymentChargeId;
+   late String currency;
+   late int totalAmount;
+   late String invoicePayload;
+   late String shippingOptionId;
+   late OrderInfo orderInfo;
+   late String telegramPaymentChargeId;
+   late String providerPaymentChargeId;
 
   @override
   Map<String, dynamic> get params => {
@@ -10218,13 +10218,13 @@ class MessagePaymentSuccessfulBot extends MessageContent {
   };
 
   MessagePaymentSuccessfulBot({
-    this.currency,
-    this.totalAmount,
-    this.invoicePayload,
-    this.shippingOptionId,
-    this.orderInfo,
-    this.telegramPaymentChargeId,
-    this.providerPaymentChargeId,
+  required this.currency,
+  required this.totalAmount,
+  required this.invoicePayload,
+  required this.shippingOptionId,
+  required this.orderInfo,
+  required this.telegramPaymentChargeId,
+  required this.providerPaymentChargeId,
   });
 
   MessagePaymentSuccessfulBot.fromJson(Map<String, dynamic> json) {
@@ -10256,7 +10256,7 @@ class MessageWebsiteConnected extends MessageContent {
   @override
   String get tdType => 'messageWebsiteConnected';
 
-  String domainName;
+   late String domainName;
 
   @override
   Map<String, dynamic> get params => {
@@ -10264,7 +10264,7 @@ class MessageWebsiteConnected extends MessageContent {
   };
 
   MessageWebsiteConnected({
-    this.domainName,
+  required this.domainName,
   });
 
   MessageWebsiteConnected.fromJson(Map<String, dynamic> json) {
@@ -10277,7 +10277,7 @@ class MessagePassportDataSent extends MessageContent {
   @override
   String get tdType => 'messagePassportDataSent';
 
-  List<PassportElementType> types;
+   late List<PassportElementType> types;
 
   @override
   Map<String, dynamic> get params => {
@@ -10285,7 +10285,7 @@ class MessagePassportDataSent extends MessageContent {
   };
 
   MessagePassportDataSent({
-    this.types,
+  required this.types,
   });
 
   MessagePassportDataSent.fromJson(Map<String, dynamic> json) {
@@ -10298,8 +10298,8 @@ class MessagePassportDataReceived extends MessageContent {
   @override
   String get tdType => 'messagePassportDataReceived';
 
-  List<EncryptedPassportElement> elements;
-  EncryptedCredentials credentials;
+   late List<EncryptedPassportElement> elements;
+   late EncryptedCredentials credentials;
 
   @override
   Map<String, dynamic> get params => {
@@ -10308,8 +10308,8 @@ class MessagePassportDataReceived extends MessageContent {
   };
 
   MessagePassportDataReceived({
-    this.elements,
-    this.credentials,
+  required this.elements,
+  required this.credentials,
   });
 
   MessagePassportDataReceived.fromJson(Map<String, dynamic> json) {
@@ -10323,9 +10323,9 @@ class MessageProximityAlertTriggered extends MessageContent {
   @override
   String get tdType => 'messageProximityAlertTriggered';
 
-  MessageSender traveler;
-  MessageSender watcher;
-  int distance;
+   late MessageSender traveler;
+   late MessageSender watcher;
+   late int distance;
 
   @override
   Map<String, dynamic> get params => {
@@ -10335,9 +10335,9 @@ class MessageProximityAlertTriggered extends MessageContent {
   };
 
   MessageProximityAlertTriggered({
-    this.traveler,
-    this.watcher,
-    this.distance,
+  required this.traveler,
+  required this.watcher,
+  required this.distance,
   });
 
   MessageProximityAlertTriggered.fromJson(Map<String, dynamic> json) {
@@ -10549,7 +10549,7 @@ class TextEntityTypePreCode extends TextEntityType {
   @override
   String get tdType => 'textEntityTypePreCode';
 
-  String language;
+   late String language;
 
   @override
   Map<String, dynamic> get params => {
@@ -10557,7 +10557,7 @@ class TextEntityTypePreCode extends TextEntityType {
   };
 
   TextEntityTypePreCode({
-    this.language,
+  required this.language,
   });
 
   TextEntityTypePreCode.fromJson(Map<String, dynamic> json) {
@@ -10570,7 +10570,7 @@ class TextEntityTypeTextUrl extends TextEntityType {
   @override
   String get tdType => 'textEntityTypeTextUrl';
 
-  String url;
+   late String url;
 
   @override
   Map<String, dynamic> get params => {
@@ -10578,7 +10578,7 @@ class TextEntityTypeTextUrl extends TextEntityType {
   };
 
   TextEntityTypeTextUrl({
-    this.url,
+  required this.url,
   });
 
   TextEntityTypeTextUrl.fromJson(Map<String, dynamic> json) {
@@ -10591,7 +10591,7 @@ class TextEntityTypeMentionName extends TextEntityType {
   @override
   String get tdType => 'textEntityTypeMentionName';
 
-  int userId;
+   late int userId;
 
   @override
   Map<String, dynamic> get params => {
@@ -10599,7 +10599,7 @@ class TextEntityTypeMentionName extends TextEntityType {
   };
 
   TextEntityTypeMentionName({
-    this.userId,
+  required this.userId,
   });
 
   TextEntityTypeMentionName.fromJson(Map<String, dynamic> json) {
@@ -10612,7 +10612,7 @@ class TextEntityTypeMediaTimestamp extends TextEntityType {
   @override
   String get tdType => 'textEntityTypeMediaTimestamp';
 
-  int mediaTimestamp;
+   late int mediaTimestamp;
 
   @override
   Map<String, dynamic> get params => {
@@ -10620,7 +10620,7 @@ class TextEntityTypeMediaTimestamp extends TextEntityType {
   };
 
   TextEntityTypeMediaTimestamp({
-    this.mediaTimestamp,
+  required this.mediaTimestamp,
   });
 
   TextEntityTypeMediaTimestamp.fromJson(Map<String, dynamic> json) {
@@ -10633,9 +10633,9 @@ class InputThumbnail extends TdObject {
   @override
   String get tdType => 'inputThumbnail';
 
-  InputFile thumbnail;
-  int width;
-  int height;
+   late InputFile thumbnail;
+   late int width;
+   late int height;
 
   @override
   Map<String, dynamic> get params => {
@@ -10645,9 +10645,9 @@ class InputThumbnail extends TdObject {
   };
 
   InputThumbnail({
-    this.thumbnail,
-    this.width,
-    this.height,
+  required this.thumbnail,
+  required this.width,
+  required this.height,
   });
 
   InputThumbnail.fromJson(Map<String, dynamic> json) {
@@ -10664,7 +10664,7 @@ class MessageSchedulingStateSendAtDate extends MessageSchedulingState {
   @override
   String get tdType => 'messageSchedulingStateSendAtDate';
 
-  int sendDate;
+   late int sendDate;
 
   @override
   Map<String, dynamic> get params => {
@@ -10672,7 +10672,7 @@ class MessageSchedulingStateSendAtDate extends MessageSchedulingState {
   };
 
   MessageSchedulingStateSendAtDate({
-    this.sendDate,
+  required this.sendDate,
   });
 
   MessageSchedulingStateSendAtDate.fromJson(Map<String, dynamic> json) {
@@ -10698,9 +10698,9 @@ class MessageSendOptions extends TdObject {
   @override
   String get tdType => 'messageSendOptions';
 
-  bool disableNotification;
-  bool fromBackground;
-  MessageSchedulingState schedulingState;
+   late bool disableNotification;
+   late bool fromBackground;
+   late MessageSchedulingState schedulingState;
 
   @override
   Map<String, dynamic> get params => {
@@ -10710,9 +10710,9 @@ class MessageSendOptions extends TdObject {
   };
 
   MessageSendOptions({
-    this.disableNotification,
-    this.fromBackground,
-    this.schedulingState,
+  required this.disableNotification,
+  required this.fromBackground,
+  required this.schedulingState,
   });
 
   MessageSendOptions.fromJson(Map<String, dynamic> json) {
@@ -10727,9 +10727,9 @@ class MessageCopyOptions extends TdObject {
   @override
   String get tdType => 'messageCopyOptions';
 
-  bool sendCopy;
-  bool replaceCaption;
-  FormattedText newCaption;
+   late bool sendCopy;
+   late bool replaceCaption;
+   late FormattedText newCaption;
 
   @override
   Map<String, dynamic> get params => {
@@ -10739,9 +10739,9 @@ class MessageCopyOptions extends TdObject {
   };
 
   MessageCopyOptions({
-    this.sendCopy,
-    this.replaceCaption,
-    this.newCaption,
+  required this.sendCopy,
+  required this.replaceCaption,
+  required this.newCaption,
   });
 
   MessageCopyOptions.fromJson(Map<String, dynamic> json) {
@@ -10758,9 +10758,9 @@ class InputMessageText extends InputMessageContent {
   @override
   String get tdType => 'inputMessageText';
 
-  FormattedText text;
-  bool disableWebPagePreview;
-  bool clearDraft;
+   late FormattedText text;
+   late bool disableWebPagePreview;
+   late bool clearDraft;
 
   @override
   Map<String, dynamic> get params => {
@@ -10770,9 +10770,9 @@ class InputMessageText extends InputMessageContent {
   };
 
   InputMessageText({
-    this.text,
-    this.disableWebPagePreview,
-    this.clearDraft,
+  required this.text,
+  required this.disableWebPagePreview,
+  required this.clearDraft,
   });
 
   InputMessageText.fromJson(Map<String, dynamic> json) {
@@ -10787,13 +10787,13 @@ class InputMessageAnimation extends InputMessageContent {
   @override
   String get tdType => 'inputMessageAnimation';
 
-  InputFile animation;
-  InputThumbnail thumbnail;
-  List<int> addedStickerFileIds;
-  int duration;
-  int width;
-  int height;
-  FormattedText caption;
+   late InputFile animation;
+   late InputThumbnail thumbnail;
+   late List<int> addedStickerFileIds;
+   late int duration;
+   late int width;
+   late int height;
+   late FormattedText caption;
 
   @override
   Map<String, dynamic> get params => {
@@ -10807,13 +10807,13 @@ class InputMessageAnimation extends InputMessageContent {
   };
 
   InputMessageAnimation({
-    this.animation,
-    this.thumbnail,
-    this.addedStickerFileIds,
-    this.duration,
-    this.width,
-    this.height,
-    this.caption,
+  required this.animation,
+  required this.thumbnail,
+  required this.addedStickerFileIds,
+  required this.duration,
+  required this.width,
+  required this.height,
+  required this.caption,
   });
 
   InputMessageAnimation.fromJson(Map<String, dynamic> json) {
@@ -10832,12 +10832,12 @@ class InputMessageAudio extends InputMessageContent {
   @override
   String get tdType => 'inputMessageAudio';
 
-  InputFile audio;
-  InputThumbnail albumCoverThumbnail;
-  int duration;
-  String title;
-  String performer;
-  FormattedText caption;
+   late InputFile audio;
+   late InputThumbnail albumCoverThumbnail;
+   late int duration;
+   late String title;
+   late String performer;
+   late FormattedText caption;
 
   @override
   Map<String, dynamic> get params => {
@@ -10850,12 +10850,12 @@ class InputMessageAudio extends InputMessageContent {
   };
 
   InputMessageAudio({
-    this.audio,
-    this.albumCoverThumbnail,
-    this.duration,
-    this.title,
-    this.performer,
-    this.caption,
+  required this.audio,
+  required this.albumCoverThumbnail,
+  required this.duration,
+  required this.title,
+  required this.performer,
+  required this.caption,
   });
 
   InputMessageAudio.fromJson(Map<String, dynamic> json) {
@@ -10873,10 +10873,10 @@ class InputMessageDocument extends InputMessageContent {
   @override
   String get tdType => 'inputMessageDocument';
 
-  InputFile document;
-  InputThumbnail thumbnail;
-  bool disableContentTypeDetection;
-  FormattedText caption;
+   late InputFile document;
+   late InputThumbnail thumbnail;
+   late bool disableContentTypeDetection;
+   late FormattedText caption;
 
   @override
   Map<String, dynamic> get params => {
@@ -10887,10 +10887,10 @@ class InputMessageDocument extends InputMessageContent {
   };
 
   InputMessageDocument({
-    this.document,
-    this.thumbnail,
-    this.disableContentTypeDetection,
-    this.caption,
+  required this.document,
+  required this.thumbnail,
+  required this.disableContentTypeDetection,
+  required this.caption,
   });
 
   InputMessageDocument.fromJson(Map<String, dynamic> json) {
@@ -10906,13 +10906,13 @@ class InputMessagePhoto extends InputMessageContent {
   @override
   String get tdType => 'inputMessagePhoto';
 
-  InputFile photo;
-  InputThumbnail thumbnail;
-  List<int> addedStickerFileIds;
-  int width;
-  int height;
-  FormattedText caption;
-  int ttl;
+   late InputFile photo;
+   late InputThumbnail thumbnail;
+   late List<int> addedStickerFileIds;
+   late int width;
+   late int height;
+   late FormattedText caption;
+   late int ttl;
 
   @override
   Map<String, dynamic> get params => {
@@ -10926,13 +10926,13 @@ class InputMessagePhoto extends InputMessageContent {
   };
 
   InputMessagePhoto({
-    this.photo,
-    this.thumbnail,
-    this.addedStickerFileIds,
-    this.width,
-    this.height,
-    this.caption,
-    this.ttl,
+  required this.photo,
+  required this.thumbnail,
+  required this.addedStickerFileIds,
+  required this.width,
+  required this.height,
+  required this.caption,
+  required this.ttl,
   });
 
   InputMessagePhoto.fromJson(Map<String, dynamic> json) {
@@ -10951,11 +10951,11 @@ class InputMessageSticker extends InputMessageContent {
   @override
   String get tdType => 'inputMessageSticker';
 
-  InputFile sticker;
-  InputThumbnail thumbnail;
-  int width;
-  int height;
-  String emoji;
+   late InputFile sticker;
+   late InputThumbnail thumbnail;
+   late int width;
+   late int height;
+   late String emoji;
 
   @override
   Map<String, dynamic> get params => {
@@ -10967,11 +10967,11 @@ class InputMessageSticker extends InputMessageContent {
   };
 
   InputMessageSticker({
-    this.sticker,
-    this.thumbnail,
-    this.width,
-    this.height,
-    this.emoji,
+  required this.sticker,
+  required this.thumbnail,
+  required this.width,
+  required this.height,
+  required this.emoji,
   });
 
   InputMessageSticker.fromJson(Map<String, dynamic> json) {
@@ -10988,15 +10988,15 @@ class InputMessageVideo extends InputMessageContent {
   @override
   String get tdType => 'inputMessageVideo';
 
-  InputFile video;
-  InputThumbnail thumbnail;
-  List<int> addedStickerFileIds;
-  int duration;
-  int width;
-  int height;
-  bool supportsStreaming;
-  FormattedText caption;
-  int ttl;
+   late InputFile video;
+   late InputThumbnail thumbnail;
+   late List<int> addedStickerFileIds;
+   late int duration;
+   late int width;
+   late int height;
+   late bool supportsStreaming;
+   late FormattedText caption;
+   late int ttl;
 
   @override
   Map<String, dynamic> get params => {
@@ -11012,15 +11012,15 @@ class InputMessageVideo extends InputMessageContent {
   };
 
   InputMessageVideo({
-    this.video,
-    this.thumbnail,
-    this.addedStickerFileIds,
-    this.duration,
-    this.width,
-    this.height,
-    this.supportsStreaming,
-    this.caption,
-    this.ttl,
+  required this.video,
+  required this.thumbnail,
+  required this.addedStickerFileIds,
+  required this.duration,
+  required this.width,
+  required this.height,
+  required this.supportsStreaming,
+  required this.caption,
+  required this.ttl,
   });
 
   InputMessageVideo.fromJson(Map<String, dynamic> json) {
@@ -11041,10 +11041,10 @@ class InputMessageVideoNote extends InputMessageContent {
   @override
   String get tdType => 'inputMessageVideoNote';
 
-  InputFile videoNote;
-  InputThumbnail thumbnail;
-  int duration;
-  int length;
+   late InputFile videoNote;
+   late InputThumbnail thumbnail;
+   late int duration;
+   late int length;
 
   @override
   Map<String, dynamic> get params => {
@@ -11055,10 +11055,10 @@ class InputMessageVideoNote extends InputMessageContent {
   };
 
   InputMessageVideoNote({
-    this.videoNote,
-    this.thumbnail,
-    this.duration,
-    this.length,
+  required this.videoNote,
+  required this.thumbnail,
+  required this.duration,
+  required this.length,
   });
 
   InputMessageVideoNote.fromJson(Map<String, dynamic> json) {
@@ -11074,10 +11074,10 @@ class InputMessageVoiceNote extends InputMessageContent {
   @override
   String get tdType => 'inputMessageVoiceNote';
 
-  InputFile voiceNote;
-  int duration;
-  String waveform;
-  FormattedText caption;
+   late InputFile voiceNote;
+   late int duration;
+   late String waveform;
+   late FormattedText caption;
 
   @override
   Map<String, dynamic> get params => {
@@ -11088,10 +11088,10 @@ class InputMessageVoiceNote extends InputMessageContent {
   };
 
   InputMessageVoiceNote({
-    this.voiceNote,
-    this.duration,
-    this.waveform,
-    this.caption,
+  required this.voiceNote,
+  required this.duration,
+  required this.waveform,
+  required this.caption,
   });
 
   InputMessageVoiceNote.fromJson(Map<String, dynamic> json) {
@@ -11107,10 +11107,10 @@ class InputMessageLocation extends InputMessageContent {
   @override
   String get tdType => 'inputMessageLocation';
 
-  Location location;
-  int livePeriod;
-  int heading;
-  int proximityAlertRadius;
+   late Location location;
+   late int livePeriod;
+   late int heading;
+   late int proximityAlertRadius;
 
   @override
   Map<String, dynamic> get params => {
@@ -11121,10 +11121,10 @@ class InputMessageLocation extends InputMessageContent {
   };
 
   InputMessageLocation({
-    this.location,
-    this.livePeriod,
-    this.heading,
-    this.proximityAlertRadius,
+  required this.location,
+  required this.livePeriod,
+  required this.heading,
+  required this.proximityAlertRadius,
   });
 
   InputMessageLocation.fromJson(Map<String, dynamic> json) {
@@ -11140,7 +11140,7 @@ class InputMessageVenue extends InputMessageContent {
   @override
   String get tdType => 'inputMessageVenue';
 
-  Venue venue;
+   late Venue venue;
 
   @override
   Map<String, dynamic> get params => {
@@ -11148,7 +11148,7 @@ class InputMessageVenue extends InputMessageContent {
   };
 
   InputMessageVenue({
-    this.venue,
+  required this.venue,
   });
 
   InputMessageVenue.fromJson(Map<String, dynamic> json) {
@@ -11161,7 +11161,7 @@ class InputMessageContact extends InputMessageContent {
   @override
   String get tdType => 'inputMessageContact';
 
-  Contact contact;
+   late Contact contact;
 
   @override
   Map<String, dynamic> get params => {
@@ -11169,7 +11169,7 @@ class InputMessageContact extends InputMessageContent {
   };
 
   InputMessageContact({
-    this.contact,
+  required this.contact,
   });
 
   InputMessageContact.fromJson(Map<String, dynamic> json) {
@@ -11182,8 +11182,8 @@ class InputMessageDice extends InputMessageContent {
   @override
   String get tdType => 'inputMessageDice';
 
-  String emoji;
-  bool clearDraft;
+   late String emoji;
+   late bool clearDraft;
 
   @override
   Map<String, dynamic> get params => {
@@ -11192,8 +11192,8 @@ class InputMessageDice extends InputMessageContent {
   };
 
   InputMessageDice({
-    this.emoji,
-    this.clearDraft,
+  required this.emoji,
+  required this.clearDraft,
   });
 
   InputMessageDice.fromJson(Map<String, dynamic> json) {
@@ -11207,8 +11207,8 @@ class InputMessageGame extends InputMessageContent {
   @override
   String get tdType => 'inputMessageGame';
 
-  int botUserId;
-  String gameShortName;
+   late int botUserId;
+   late String gameShortName;
 
   @override
   Map<String, dynamic> get params => {
@@ -11217,8 +11217,8 @@ class InputMessageGame extends InputMessageContent {
   };
 
   InputMessageGame({
-    this.botUserId,
-    this.gameShortName,
+  required this.botUserId,
+  required this.gameShortName,
   });
 
   InputMessageGame.fromJson(Map<String, dynamic> json) {
@@ -11232,17 +11232,17 @@ class InputMessageInvoice extends InputMessageContent {
   @override
   String get tdType => 'inputMessageInvoice';
 
-  Invoice invoice;
-  String title;
-  String description;
-  String photoUrl;
-  int photoSize;
-  int photoWidth;
-  int photoHeight;
-  String payload;
-  String providerToken;
-  String providerData;
-  String startParameter;
+   late Invoice invoice;
+   late String title;
+   late String description;
+   late String photoUrl;
+   late int photoSize;
+   late int photoWidth;
+   late int photoHeight;
+   late String payload;
+   late String providerToken;
+   late String providerData;
+   late String startParameter;
 
   @override
   Map<String, dynamic> get params => {
@@ -11260,17 +11260,17 @@ class InputMessageInvoice extends InputMessageContent {
   };
 
   InputMessageInvoice({
-    this.invoice,
-    this.title,
-    this.description,
-    this.photoUrl,
-    this.photoSize,
-    this.photoWidth,
-    this.photoHeight,
-    this.payload,
-    this.providerToken,
-    this.providerData,
-    this.startParameter,
+  required this.invoice,
+  required this.title,
+  required this.description,
+  required this.photoUrl,
+  required this.photoSize,
+  required this.photoWidth,
+  required this.photoHeight,
+  required this.payload,
+  required this.providerToken,
+  required this.providerData,
+  required this.startParameter,
   });
 
   InputMessageInvoice.fromJson(Map<String, dynamic> json) {
@@ -11293,13 +11293,13 @@ class InputMessagePoll extends InputMessageContent {
   @override
   String get tdType => 'inputMessagePoll';
 
-  String question;
-  List<String> options;
-  bool isAnonymous;
-  PollType type;
-  int openPeriod;
-  int closeDate;
-  bool isClosed;
+   late String question;
+   late List<String> options;
+   late bool isAnonymous;
+   late PollType type;
+   late int openPeriod;
+   late int closeDate;
+   late bool isClosed;
 
   @override
   Map<String, dynamic> get params => {
@@ -11313,13 +11313,13 @@ class InputMessagePoll extends InputMessageContent {
   };
 
   InputMessagePoll({
-    this.question,
-    this.options,
-    this.isAnonymous,
-    this.type,
-    this.openPeriod,
-    this.closeDate,
-    this.isClosed,
+  required this.question,
+  required this.options,
+  required this.isAnonymous,
+  required this.type,
+  required this.openPeriod,
+  required this.closeDate,
+  required this.isClosed,
   });
 
   InputMessagePoll.fromJson(Map<String, dynamic> json) {
@@ -11338,10 +11338,10 @@ class InputMessageForwarded extends InputMessageContent {
   @override
   String get tdType => 'inputMessageForwarded';
 
-  int fromChatId;
-  int messageId;
-  bool inGameShare;
-  MessageCopyOptions copyOptions;
+   late int fromChatId;
+   late int messageId;
+   late bool inGameShare;
+   late MessageCopyOptions copyOptions;
 
   @override
   Map<String, dynamic> get params => {
@@ -11352,10 +11352,10 @@ class InputMessageForwarded extends InputMessageContent {
   };
 
   InputMessageForwarded({
-    this.fromChatId,
-    this.messageId,
-    this.inGameShare,
-    this.copyOptions,
+  required this.fromChatId,
+  required this.messageId,
+  required this.inGameShare,
+  required this.copyOptions,
   });
 
   InputMessageForwarded.fromJson(Map<String, dynamic> json) {
@@ -11635,7 +11635,7 @@ class ChatActionUploadingVideo extends ChatAction {
   @override
   String get tdType => 'chatActionUploadingVideo';
 
-  int progress;
+   late int progress;
 
   @override
   Map<String, dynamic> get params => {
@@ -11643,7 +11643,7 @@ class ChatActionUploadingVideo extends ChatAction {
   };
 
   ChatActionUploadingVideo({
-    this.progress,
+  required this.progress,
   });
 
   ChatActionUploadingVideo.fromJson(Map<String, dynamic> json) {
@@ -11669,7 +11669,7 @@ class ChatActionUploadingVoiceNote extends ChatAction {
   @override
   String get tdType => 'chatActionUploadingVoiceNote';
 
-  int progress;
+   late int progress;
 
   @override
   Map<String, dynamic> get params => {
@@ -11677,7 +11677,7 @@ class ChatActionUploadingVoiceNote extends ChatAction {
   };
 
   ChatActionUploadingVoiceNote({
-    this.progress,
+  required this.progress,
   });
 
   ChatActionUploadingVoiceNote.fromJson(Map<String, dynamic> json) {
@@ -11690,7 +11690,7 @@ class ChatActionUploadingPhoto extends ChatAction {
   @override
   String get tdType => 'chatActionUploadingPhoto';
 
-  int progress;
+   late int progress;
 
   @override
   Map<String, dynamic> get params => {
@@ -11698,7 +11698,7 @@ class ChatActionUploadingPhoto extends ChatAction {
   };
 
   ChatActionUploadingPhoto({
-    this.progress,
+  required this.progress,
   });
 
   ChatActionUploadingPhoto.fromJson(Map<String, dynamic> json) {
@@ -11711,7 +11711,7 @@ class ChatActionUploadingDocument extends ChatAction {
   @override
   String get tdType => 'chatActionUploadingDocument';
 
-  int progress;
+   late int progress;
 
   @override
   Map<String, dynamic> get params => {
@@ -11719,7 +11719,7 @@ class ChatActionUploadingDocument extends ChatAction {
   };
 
   ChatActionUploadingDocument({
-    this.progress,
+  required this.progress,
   });
 
   ChatActionUploadingDocument.fromJson(Map<String, dynamic> json) {
@@ -11797,7 +11797,7 @@ class ChatActionUploadingVideoNote extends ChatAction {
   @override
   String get tdType => 'chatActionUploadingVideoNote';
 
-  int progress;
+   late int progress;
 
   @override
   Map<String, dynamic> get params => {
@@ -11805,7 +11805,7 @@ class ChatActionUploadingVideoNote extends ChatAction {
   };
 
   ChatActionUploadingVideoNote({
-    this.progress,
+  required this.progress,
   });
 
   ChatActionUploadingVideoNote.fromJson(Map<String, dynamic> json) {
@@ -11818,7 +11818,7 @@ class ChatActionWatchingAnimations extends ChatAction {
   @override
   String get tdType => 'chatActionWatchingAnimations';
 
-  String emoji;
+   late String emoji;
 
   @override
   Map<String, dynamic> get params => {
@@ -11826,7 +11826,7 @@ class ChatActionWatchingAnimations extends ChatAction {
   };
 
   ChatActionWatchingAnimations({
-    this.emoji,
+  required this.emoji,
   });
 
   ChatActionWatchingAnimations.fromJson(Map<String, dynamic> json) {
@@ -11867,7 +11867,7 @@ class UserStatusOnline extends UserStatus {
   @override
   String get tdType => 'userStatusOnline';
 
-  int expires;
+   late int expires;
 
   @override
   Map<String, dynamic> get params => {
@@ -11875,7 +11875,7 @@ class UserStatusOnline extends UserStatus {
   };
 
   UserStatusOnline({
-    this.expires,
+  required this.expires,
   });
 
   UserStatusOnline.fromJson(Map<String, dynamic> json) {
@@ -11888,7 +11888,7 @@ class UserStatusOffline extends UserStatus {
   @override
   String get tdType => 'userStatusOffline';
 
-  int wasOnline;
+   late int wasOnline;
 
   @override
   Map<String, dynamic> get params => {
@@ -11896,7 +11896,7 @@ class UserStatusOffline extends UserStatus {
   };
 
   UserStatusOffline({
-    this.wasOnline,
+  required this.wasOnline,
   });
 
   UserStatusOffline.fromJson(Map<String, dynamic> json) {
@@ -11948,7 +11948,7 @@ class Stickers extends TdObject {
   @override
   String get tdType => 'stickers';
 
-  List<Sticker> stickers;
+   late List<Sticker> stickers;
 
   @override
   Map<String, dynamic> get params => {
@@ -11956,7 +11956,7 @@ class Stickers extends TdObject {
   };
 
   Stickers({
-    this.stickers,
+  required this.stickers,
   });
 
   Stickers.fromJson(Map<String, dynamic> json) {
@@ -11969,7 +11969,7 @@ class Emojis extends TdObject {
   @override
   String get tdType => 'emojis';
 
-  List<String> emojis;
+   late List<String> emojis;
 
   @override
   Map<String, dynamic> get params => {
@@ -11977,7 +11977,7 @@ class Emojis extends TdObject {
   };
 
   Emojis({
-    this.emojis,
+  required this.emojis,
   });
 
   Emojis.fromJson(Map<String, dynamic> json) {
@@ -11990,19 +11990,19 @@ class StickerSet extends TdObject {
   @override
   String get tdType => 'stickerSet';
 
-  int id;
-  String title;
-  String name;
-  Thumbnail thumbnail;
-  List<ClosedVectorPath> thumbnailOutline;
-  bool isInstalled;
-  bool isArchived;
-  bool isOfficial;
-  bool isAnimated;
-  bool isMasks;
-  bool isViewed;
-  List<Sticker> stickers;
-  List<Emojis> emojis;
+   late int id;
+   late String title;
+   late String name;
+   late Thumbnail thumbnail;
+   late List<ClosedVectorPath> thumbnailOutline;
+   late bool isInstalled;
+   late bool isArchived;
+   late bool isOfficial;
+   late bool isAnimated;
+   late bool isMasks;
+   late bool isViewed;
+   late List<Sticker> stickers;
+   late List<Emojis> emojis;
 
   @override
   Map<String, dynamic> get params => {
@@ -12022,19 +12022,19 @@ class StickerSet extends TdObject {
   };
 
   StickerSet({
-    this.id,
-    this.title,
-    this.name,
-    this.thumbnail,
-    this.thumbnailOutline,
-    this.isInstalled,
-    this.isArchived,
-    this.isOfficial,
-    this.isAnimated,
-    this.isMasks,
-    this.isViewed,
-    this.stickers,
-    this.emojis,
+  required this.id,
+  required this.title,
+  required this.name,
+  required this.thumbnail,
+  required this.thumbnailOutline,
+  required this.isInstalled,
+  required this.isArchived,
+  required this.isOfficial,
+  required this.isAnimated,
+  required this.isMasks,
+  required this.isViewed,
+  required this.stickers,
+  required this.emojis,
   });
 
   StickerSet.fromJson(Map<String, dynamic> json) {
@@ -12059,19 +12059,19 @@ class StickerSetInfo extends TdObject {
   @override
   String get tdType => 'stickerSetInfo';
 
-  int id;
-  String title;
-  String name;
-  Thumbnail thumbnail;
-  List<ClosedVectorPath> thumbnailOutline;
-  bool isInstalled;
-  bool isArchived;
-  bool isOfficial;
-  bool isAnimated;
-  bool isMasks;
-  bool isViewed;
-  int size;
-  List<Sticker> covers;
+   late int id;
+   late String title;
+   late String name;
+   late Thumbnail thumbnail;
+   late List<ClosedVectorPath> thumbnailOutline;
+   late bool isInstalled;
+   late bool isArchived;
+   late bool isOfficial;
+   late bool isAnimated;
+   late bool isMasks;
+   late bool isViewed;
+   late int size;
+   late List<Sticker> covers;
 
   @override
   Map<String, dynamic> get params => {
@@ -12091,19 +12091,19 @@ class StickerSetInfo extends TdObject {
   };
 
   StickerSetInfo({
-    this.id,
-    this.title,
-    this.name,
-    this.thumbnail,
-    this.thumbnailOutline,
-    this.isInstalled,
-    this.isArchived,
-    this.isOfficial,
-    this.isAnimated,
-    this.isMasks,
-    this.isViewed,
-    this.size,
-    this.covers,
+  required this.id,
+  required this.title,
+  required this.name,
+  required this.thumbnail,
+  required this.thumbnailOutline,
+  required this.isInstalled,
+  required this.isArchived,
+  required this.isOfficial,
+  required this.isAnimated,
+  required this.isMasks,
+  required this.isViewed,
+  required this.size,
+  required this.covers,
   });
 
   StickerSetInfo.fromJson(Map<String, dynamic> json) {
@@ -12128,8 +12128,8 @@ class StickerSets extends TdObject {
   @override
   String get tdType => 'stickerSets';
 
-  int totalCount;
-  List<StickerSetInfo> sets;
+   late int totalCount;
+   late List<StickerSetInfo> sets;
 
   @override
   Map<String, dynamic> get params => {
@@ -12138,8 +12138,8 @@ class StickerSets extends TdObject {
   };
 
   StickerSets({
-    this.totalCount,
-    this.sets,
+  required this.totalCount,
+  required this.sets,
   });
 
   StickerSets.fromJson(Map<String, dynamic> json) {
@@ -12220,11 +12220,11 @@ class CallProtocol extends TdObject {
   @override
   String get tdType => 'callProtocol';
 
-  bool udpP2p;
-  bool udpReflector;
-  int minLayer;
-  int maxLayer;
-  List<String> libraryVersions;
+   late bool udpP2p;
+   late bool udpReflector;
+   late int minLayer;
+   late int maxLayer;
+   late List<String> libraryVersions;
 
   @override
   Map<String, dynamic> get params => {
@@ -12236,11 +12236,11 @@ class CallProtocol extends TdObject {
   };
 
   CallProtocol({
-    this.udpP2p,
-    this.udpReflector,
-    this.minLayer,
-    this.maxLayer,
-    this.libraryVersions,
+  required this.udpP2p,
+  required this.udpReflector,
+  required this.minLayer,
+  required this.maxLayer,
+  required this.libraryVersions,
   });
 
   CallProtocol.fromJson(Map<String, dynamic> json) {
@@ -12259,7 +12259,7 @@ class CallServerTypeTelegramReflector extends CallServerType {
   @override
   String get tdType => 'callServerTypeTelegramReflector';
 
-  String peerTag;
+   late String peerTag;
 
   @override
   Map<String, dynamic> get params => {
@@ -12267,7 +12267,7 @@ class CallServerTypeTelegramReflector extends CallServerType {
   };
 
   CallServerTypeTelegramReflector({
-    this.peerTag,
+  required this.peerTag,
   });
 
   CallServerTypeTelegramReflector.fromJson(Map<String, dynamic> json) {
@@ -12280,10 +12280,10 @@ class CallServerTypeWebrtc extends CallServerType {
   @override
   String get tdType => 'callServerTypeWebrtc';
 
-  String username;
-  String password;
-  bool supportsTurn;
-  bool supportsStun;
+   late String username;
+   late String password;
+   late bool supportsTurn;
+   late bool supportsStun;
 
   @override
   Map<String, dynamic> get params => {
@@ -12294,10 +12294,10 @@ class CallServerTypeWebrtc extends CallServerType {
   };
 
   CallServerTypeWebrtc({
-    this.username,
-    this.password,
-    this.supportsTurn,
-    this.supportsStun,
+  required this.username,
+  required this.password,
+  required this.supportsTurn,
+  required this.supportsStun,
   });
 
   CallServerTypeWebrtc.fromJson(Map<String, dynamic> json) {
@@ -12313,11 +12313,11 @@ class CallServer extends TdObject {
   @override
   String get tdType => 'callServer';
 
-  int id;
-  String ipAddress;
-  String ipv6Address;
-  int port;
-  CallServerType type;
+   late int id;
+   late String ipAddress;
+   late String ipv6Address;
+   late int port;
+   late CallServerType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -12329,11 +12329,11 @@ class CallServer extends TdObject {
   };
 
   CallServer({
-    this.id,
-    this.ipAddress,
-    this.ipv6Address,
-    this.port,
-    this.type,
+  required this.id,
+  required this.ipAddress,
+  required this.ipv6Address,
+  required this.port,
+  required this.type,
   });
 
   CallServer.fromJson(Map<String, dynamic> json) {
@@ -12350,7 +12350,7 @@ class CallId extends TdObject {
   @override
   String get tdType => 'callId';
 
-  int id;
+   late int id;
 
   @override
   Map<String, dynamic> get params => {
@@ -12358,7 +12358,7 @@ class CallId extends TdObject {
   };
 
   CallId({
-    this.id,
+  required this.id,
   });
 
   CallId.fromJson(Map<String, dynamic> json) {
@@ -12371,7 +12371,7 @@ class GroupCallId extends TdObject {
   @override
   String get tdType => 'groupCallId';
 
-  int id;
+   late int id;
 
   @override
   Map<String, dynamic> get params => {
@@ -12379,7 +12379,7 @@ class GroupCallId extends TdObject {
   };
 
   GroupCallId({
-    this.id,
+  required this.id,
   });
 
   GroupCallId.fromJson(Map<String, dynamic> json) {
@@ -12394,8 +12394,8 @@ class CallStatePending extends CallState {
   @override
   String get tdType => 'callStatePending';
 
-  bool isCreated;
-  bool isReceived;
+   late bool isCreated;
+   late bool isReceived;
 
   @override
   Map<String, dynamic> get params => {
@@ -12404,8 +12404,8 @@ class CallStatePending extends CallState {
   };
 
   CallStatePending({
-    this.isCreated,
-    this.isReceived,
+  required this.isCreated,
+  required this.isReceived,
   });
 
   CallStatePending.fromJson(Map<String, dynamic> json) {
@@ -12432,12 +12432,12 @@ class CallStateReady extends CallState {
   @override
   String get tdType => 'callStateReady';
 
-  CallProtocol protocol;
-  List<CallServer> servers;
-  String config;
-  String encryptionKey;
-  List<String> emojis;
-  bool allowP2p;
+   late CallProtocol protocol;
+   late List<CallServer> servers;
+   late String config;
+   late String encryptionKey;
+   late List<String> emojis;
+   late bool allowP2p;
 
   @override
   Map<String, dynamic> get params => {
@@ -12450,12 +12450,12 @@ class CallStateReady extends CallState {
   };
 
   CallStateReady({
-    this.protocol,
-    this.servers,
-    this.config,
-    this.encryptionKey,
-    this.emojis,
-    this.allowP2p,
+  required this.protocol,
+  required this.servers,
+  required this.config,
+  required this.encryptionKey,
+  required this.emojis,
+  required this.allowP2p,
   });
 
   CallStateReady.fromJson(Map<String, dynamic> json) {
@@ -12486,9 +12486,9 @@ class CallStateDiscarded extends CallState {
   @override
   String get tdType => 'callStateDiscarded';
 
-  CallDiscardReason reason;
-  bool needRating;
-  bool needDebugInformation;
+   late CallDiscardReason reason;
+   late bool needRating;
+   late bool needDebugInformation;
 
   @override
   Map<String, dynamic> get params => {
@@ -12498,9 +12498,9 @@ class CallStateDiscarded extends CallState {
   };
 
   CallStateDiscarded({
-    this.reason,
-    this.needRating,
-    this.needDebugInformation,
+  required this.reason,
+  required this.needRating,
+  required this.needDebugInformation,
   });
 
   CallStateDiscarded.fromJson(Map<String, dynamic> json) {
@@ -12515,7 +12515,7 @@ class CallStateError extends CallState {
   @override
   String get tdType => 'callStateError';
 
-  Error error;
+   late Error error;
 
   @override
   Map<String, dynamic> get params => {
@@ -12523,7 +12523,7 @@ class CallStateError extends CallState {
   };
 
   CallStateError({
-    this.error,
+  required this.error,
   });
 
   CallStateError.fromJson(Map<String, dynamic> json) {
@@ -12577,8 +12577,8 @@ class GroupCallRecentSpeaker extends TdObject {
   @override
   String get tdType => 'groupCallRecentSpeaker';
 
-  MessageSender participantId;
-  bool isSpeaking;
+   late MessageSender participantId;
+   late bool isSpeaking;
 
   @override
   Map<String, dynamic> get params => {
@@ -12587,8 +12587,8 @@ class GroupCallRecentSpeaker extends TdObject {
   };
 
   GroupCallRecentSpeaker({
-    this.participantId,
-    this.isSpeaking,
+  required this.participantId,
+  required this.isSpeaking,
   });
 
   GroupCallRecentSpeaker.fromJson(Map<String, dynamic> json) {
@@ -12602,25 +12602,25 @@ class GroupCall extends TdObject {
   @override
   String get tdType => 'groupCall';
 
-  int id;
-  String title;
-  int scheduledStartDate;
-  bool enabledStartNotification;
-  bool isActive;
-  bool isJoined;
-  bool needRejoin;
-  bool canBeManaged;
-  int participantCount;
-  bool loadedAllParticipants;
-  List<GroupCallRecentSpeaker> recentSpeakers;
-  bool isMyVideoEnabled;
-  bool isMyVideoPaused;
-  bool canEnableVideo;
-  bool muteNewParticipants;
-  bool canToggleMuteNewParticipants;
-  int recordDuration;
-  bool isVideoRecorded;
-  int duration;
+   late int id;
+   late String title;
+   late int scheduledStartDate;
+   late bool enabledStartNotification;
+   late bool isActive;
+   late bool isJoined;
+   late bool needRejoin;
+   late bool canBeManaged;
+   late int participantCount;
+   late bool loadedAllParticipants;
+   late List<GroupCallRecentSpeaker> recentSpeakers;
+   late bool isMyVideoEnabled;
+   late bool isMyVideoPaused;
+   late bool canEnableVideo;
+   late bool muteNewParticipants;
+   late bool canToggleMuteNewParticipants;
+   late int recordDuration;
+   late bool isVideoRecorded;
+   late int duration;
 
   @override
   Map<String, dynamic> get params => {
@@ -12646,25 +12646,25 @@ class GroupCall extends TdObject {
   };
 
   GroupCall({
-    this.id,
-    this.title,
-    this.scheduledStartDate,
-    this.enabledStartNotification,
-    this.isActive,
-    this.isJoined,
-    this.needRejoin,
-    this.canBeManaged,
-    this.participantCount,
-    this.loadedAllParticipants,
-    this.recentSpeakers,
-    this.isMyVideoEnabled,
-    this.isMyVideoPaused,
-    this.canEnableVideo,
-    this.muteNewParticipants,
-    this.canToggleMuteNewParticipants,
-    this.recordDuration,
-    this.isVideoRecorded,
-    this.duration,
+  required this.id,
+  required this.title,
+  required this.scheduledStartDate,
+  required this.enabledStartNotification,
+  required this.isActive,
+  required this.isJoined,
+  required this.needRejoin,
+  required this.canBeManaged,
+  required this.participantCount,
+  required this.loadedAllParticipants,
+  required this.recentSpeakers,
+  required this.isMyVideoEnabled,
+  required this.isMyVideoPaused,
+  required this.canEnableVideo,
+  required this.muteNewParticipants,
+  required this.canToggleMuteNewParticipants,
+  required this.recordDuration,
+  required this.isVideoRecorded,
+  required this.duration,
   });
 
   GroupCall.fromJson(Map<String, dynamic> json) {
@@ -12695,8 +12695,8 @@ class GroupCallVideoSourceGroup extends TdObject {
   @override
   String get tdType => 'groupCallVideoSourceGroup';
 
-  String semantics;
-  List<int> sourceIds;
+   late String semantics;
+   late List<int> sourceIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -12705,8 +12705,8 @@ class GroupCallVideoSourceGroup extends TdObject {
   };
 
   GroupCallVideoSourceGroup({
-    this.semantics,
-    this.sourceIds,
+  required this.semantics,
+  required this.sourceIds,
   });
 
   GroupCallVideoSourceGroup.fromJson(Map<String, dynamic> json) {
@@ -12720,9 +12720,9 @@ class GroupCallParticipantVideoInfo extends TdObject {
   @override
   String get tdType => 'groupCallParticipantVideoInfo';
 
-  List<GroupCallVideoSourceGroup> sourceGroups;
-  String endpointId;
-  bool isPaused;
+   late List<GroupCallVideoSourceGroup> sourceGroups;
+   late String endpointId;
+   late bool isPaused;
 
   @override
   Map<String, dynamic> get params => {
@@ -12732,9 +12732,9 @@ class GroupCallParticipantVideoInfo extends TdObject {
   };
 
   GroupCallParticipantVideoInfo({
-    this.sourceGroups,
-    this.endpointId,
-    this.isPaused,
+  required this.sourceGroups,
+  required this.endpointId,
+  required this.isPaused,
   });
 
   GroupCallParticipantVideoInfo.fromJson(Map<String, dynamic> json) {
@@ -12749,24 +12749,24 @@ class GroupCallParticipant extends TdObject {
   @override
   String get tdType => 'groupCallParticipant';
 
-  MessageSender participantId;
-  int audioSourceId;
-  int screenSharingAudioSourceId;
-  GroupCallParticipantVideoInfo videoInfo;
-  GroupCallParticipantVideoInfo screenSharingVideoInfo;
-  String bio;
-  bool isCurrentUser;
-  bool isSpeaking;
-  bool isHandRaised;
-  bool canBeMutedForAllUsers;
-  bool canBeUnmutedForAllUsers;
-  bool canBeMutedForCurrentUser;
-  bool canBeUnmutedForCurrentUser;
-  bool isMutedForAllUsers;
-  bool isMutedForCurrentUser;
-  bool canUnmuteSelf;
-  int volumeLevel;
-  String order;
+   late MessageSender participantId;
+   late int audioSourceId;
+   late int screenSharingAudioSourceId;
+   late GroupCallParticipantVideoInfo videoInfo;
+   late GroupCallParticipantVideoInfo screenSharingVideoInfo;
+   late String bio;
+   late bool isCurrentUser;
+   late bool isSpeaking;
+   late bool isHandRaised;
+   late bool canBeMutedForAllUsers;
+   late bool canBeUnmutedForAllUsers;
+   late bool canBeMutedForCurrentUser;
+   late bool canBeUnmutedForCurrentUser;
+   late bool isMutedForAllUsers;
+   late bool isMutedForCurrentUser;
+   late bool canUnmuteSelf;
+   late int volumeLevel;
+   late String order;
 
   @override
   Map<String, dynamic> get params => {
@@ -12791,24 +12791,24 @@ class GroupCallParticipant extends TdObject {
   };
 
   GroupCallParticipant({
-    this.participantId,
-    this.audioSourceId,
-    this.screenSharingAudioSourceId,
-    this.videoInfo,
-    this.screenSharingVideoInfo,
-    this.bio,
-    this.isCurrentUser,
-    this.isSpeaking,
-    this.isHandRaised,
-    this.canBeMutedForAllUsers,
-    this.canBeUnmutedForAllUsers,
-    this.canBeMutedForCurrentUser,
-    this.canBeUnmutedForCurrentUser,
-    this.isMutedForAllUsers,
-    this.isMutedForCurrentUser,
-    this.canUnmuteSelf,
-    this.volumeLevel,
-    this.order,
+  required this.participantId,
+  required this.audioSourceId,
+  required this.screenSharingAudioSourceId,
+  required this.videoInfo,
+  required this.screenSharingVideoInfo,
+  required this.bio,
+  required this.isCurrentUser,
+  required this.isSpeaking,
+  required this.isHandRaised,
+  required this.canBeMutedForAllUsers,
+  required this.canBeUnmutedForAllUsers,
+  required this.canBeMutedForCurrentUser,
+  required this.canBeUnmutedForCurrentUser,
+  required this.isMutedForAllUsers,
+  required this.isMutedForCurrentUser,
+  required this.canUnmuteSelf,
+  required this.volumeLevel,
+  required this.order,
   });
 
   GroupCallParticipant.fromJson(Map<String, dynamic> json) {
@@ -12957,11 +12957,11 @@ class Call extends TdObject {
   @override
   String get tdType => 'call';
 
-  int id;
-  int userId;
-  bool isOutgoing;
-  bool isVideo;
-  CallState state;
+   late int id;
+   late int userId;
+   late bool isOutgoing;
+   late bool isVideo;
+   late CallState state;
 
   @override
   Map<String, dynamic> get params => {
@@ -12973,11 +12973,11 @@ class Call extends TdObject {
   };
 
   Call({
-    this.id,
-    this.userId,
-    this.isOutgoing,
-    this.isVideo,
-    this.state,
+  required this.id,
+  required this.userId,
+  required this.isOutgoing,
+  required this.isVideo,
+  required this.state,
   });
 
   Call.fromJson(Map<String, dynamic> json) {
@@ -12994,9 +12994,9 @@ class PhoneNumberAuthenticationSettings extends TdObject {
   @override
   String get tdType => 'phoneNumberAuthenticationSettings';
 
-  bool allowFlashCall;
-  bool isCurrentPhoneNumber;
-  bool allowSmsRetrieverApi;
+   late bool allowFlashCall;
+   late bool isCurrentPhoneNumber;
+   late bool allowSmsRetrieverApi;
 
   @override
   Map<String, dynamic> get params => {
@@ -13006,9 +13006,9 @@ class PhoneNumberAuthenticationSettings extends TdObject {
   };
 
   PhoneNumberAuthenticationSettings({
-    this.allowFlashCall,
-    this.isCurrentPhoneNumber,
-    this.allowSmsRetrieverApi,
+  required this.allowFlashCall,
+  required this.isCurrentPhoneNumber,
+  required this.allowSmsRetrieverApi,
   });
 
   PhoneNumberAuthenticationSettings.fromJson(Map<String, dynamic> json) {
@@ -13023,7 +13023,7 @@ class Animations extends TdObject {
   @override
   String get tdType => 'animations';
 
-  List<Animation> animations;
+   late List<Animation> animations;
 
   @override
   Map<String, dynamic> get params => {
@@ -13031,7 +13031,7 @@ class Animations extends TdObject {
   };
 
   Animations({
-    this.animations,
+  required this.animations,
   });
 
   Animations.fromJson(Map<String, dynamic> json) {
@@ -13046,7 +13046,7 @@ class DiceStickersRegular extends DiceStickers {
   @override
   String get tdType => 'diceStickersRegular';
 
-  Sticker sticker;
+   late Sticker sticker;
 
   @override
   Map<String, dynamic> get params => {
@@ -13054,7 +13054,7 @@ class DiceStickersRegular extends DiceStickers {
   };
 
   DiceStickersRegular({
-    this.sticker,
+  required this.sticker,
   });
 
   DiceStickersRegular.fromJson(Map<String, dynamic> json) {
@@ -13067,11 +13067,11 @@ class DiceStickersSlotMachine extends DiceStickers {
   @override
   String get tdType => 'diceStickersSlotMachine';
 
-  Sticker background;
-  Sticker lever;
-  Sticker leftReel;
-  Sticker centerReel;
-  Sticker rightReel;
+   late Sticker background;
+   late Sticker lever;
+   late Sticker leftReel;
+   late Sticker centerReel;
+   late Sticker rightReel;
 
   @override
   Map<String, dynamic> get params => {
@@ -13083,11 +13083,11 @@ class DiceStickersSlotMachine extends DiceStickers {
   };
 
   DiceStickersSlotMachine({
-    this.background,
-    this.lever,
-    this.leftReel,
-    this.centerReel,
-    this.rightReel,
+  required this.background,
+  required this.lever,
+  required this.leftReel,
+  required this.centerReel,
+  required this.rightReel,
   });
 
   DiceStickersSlotMachine.fromJson(Map<String, dynamic> json) {
@@ -13104,8 +13104,8 @@ class ImportedContacts extends TdObject {
   @override
   String get tdType => 'importedContacts';
 
-  List<int> userIds;
-  List<int> importerCount;
+   late List<int> userIds;
+   late List<int> importerCount;
 
   @override
   Map<String, dynamic> get params => {
@@ -13114,8 +13114,8 @@ class ImportedContacts extends TdObject {
   };
 
   ImportedContacts({
-    this.userIds,
-    this.importerCount,
+  required this.userIds,
+  required this.importerCount,
   });
 
   ImportedContacts.fromJson(Map<String, dynamic> json) {
@@ -13129,7 +13129,7 @@ class HttpUrl extends TdObject {
   @override
   String get tdType => 'httpUrl';
 
-  String url;
+   late String url;
 
   @override
   Map<String, dynamic> get params => {
@@ -13137,7 +13137,7 @@ class HttpUrl extends TdObject {
   };
 
   HttpUrl({
-    this.url,
+  required this.url,
   });
 
   HttpUrl.fromJson(Map<String, dynamic> json) {
@@ -13152,17 +13152,17 @@ class InputInlineQueryResultAnimation extends InputInlineQueryResult {
   @override
   String get tdType => 'inputInlineQueryResultAnimation';
 
-  String id;
-  String title;
-  String thumbnailUrl;
-  String thumbnailMimeType;
-  String videoUrl;
-  String videoMimeType;
-  int videoDuration;
-  int videoWidth;
-  int videoHeight;
-  ReplyMarkup replyMarkup;
-  InputMessageContent inputMessageContent;
+   late String id;
+   late String title;
+   late String thumbnailUrl;
+   late String thumbnailMimeType;
+   late String videoUrl;
+   late String videoMimeType;
+   late int videoDuration;
+   late int videoWidth;
+   late int videoHeight;
+   late ReplyMarkup replyMarkup;
+   late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -13180,17 +13180,17 @@ class InputInlineQueryResultAnimation extends InputInlineQueryResult {
   };
 
   InputInlineQueryResultAnimation({
-    this.id,
-    this.title,
-    this.thumbnailUrl,
-    this.thumbnailMimeType,
-    this.videoUrl,
-    this.videoMimeType,
-    this.videoDuration,
-    this.videoWidth,
-    this.videoHeight,
-    this.replyMarkup,
-    this.inputMessageContent,
+  required this.id,
+  required this.title,
+  required this.thumbnailUrl,
+  required this.thumbnailMimeType,
+  required this.videoUrl,
+  required this.videoMimeType,
+  required this.videoDuration,
+  required this.videoWidth,
+  required this.videoHeight,
+  required this.replyMarkup,
+  required this.inputMessageContent,
   });
 
   InputInlineQueryResultAnimation.fromJson(Map<String, dynamic> json) {
@@ -13213,16 +13213,16 @@ class InputInlineQueryResultArticle extends InputInlineQueryResult {
   @override
   String get tdType => 'inputInlineQueryResultArticle';
 
-  String id;
-  String url;
-  bool hideUrl;
-  String title;
-  String description;
-  String thumbnailUrl;
-  int thumbnailWidth;
-  int thumbnailHeight;
-  ReplyMarkup replyMarkup;
-  InputMessageContent inputMessageContent;
+   late String id;
+   late String url;
+   late bool hideUrl;
+   late String title;
+   late String description;
+   late String thumbnailUrl;
+   late int thumbnailWidth;
+   late int thumbnailHeight;
+   late ReplyMarkup replyMarkup;
+   late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -13239,16 +13239,16 @@ class InputInlineQueryResultArticle extends InputInlineQueryResult {
   };
 
   InputInlineQueryResultArticle({
-    this.id,
-    this.url,
-    this.hideUrl,
-    this.title,
-    this.description,
-    this.thumbnailUrl,
-    this.thumbnailWidth,
-    this.thumbnailHeight,
-    this.replyMarkup,
-    this.inputMessageContent,
+  required this.id,
+  required this.url,
+  required this.hideUrl,
+  required this.title,
+  required this.description,
+  required this.thumbnailUrl,
+  required this.thumbnailWidth,
+  required this.thumbnailHeight,
+  required this.replyMarkup,
+  required this.inputMessageContent,
   });
 
   InputInlineQueryResultArticle.fromJson(Map<String, dynamic> json) {
@@ -13270,13 +13270,13 @@ class InputInlineQueryResultAudio extends InputInlineQueryResult {
   @override
   String get tdType => 'inputInlineQueryResultAudio';
 
-  String id;
-  String title;
-  String performer;
-  String audioUrl;
-  int audioDuration;
-  ReplyMarkup replyMarkup;
-  InputMessageContent inputMessageContent;
+   late String id;
+   late String title;
+   late String performer;
+   late String audioUrl;
+   late int audioDuration;
+   late ReplyMarkup replyMarkup;
+   late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -13290,13 +13290,13 @@ class InputInlineQueryResultAudio extends InputInlineQueryResult {
   };
 
   InputInlineQueryResultAudio({
-    this.id,
-    this.title,
-    this.performer,
-    this.audioUrl,
-    this.audioDuration,
-    this.replyMarkup,
-    this.inputMessageContent,
+  required this.id,
+  required this.title,
+  required this.performer,
+  required this.audioUrl,
+  required this.audioDuration,
+  required this.replyMarkup,
+  required this.inputMessageContent,
   });
 
   InputInlineQueryResultAudio.fromJson(Map<String, dynamic> json) {
@@ -13315,13 +13315,13 @@ class InputInlineQueryResultContact extends InputInlineQueryResult {
   @override
   String get tdType => 'inputInlineQueryResultContact';
 
-  String id;
-  Contact contact;
-  String thumbnailUrl;
-  int thumbnailWidth;
-  int thumbnailHeight;
-  ReplyMarkup replyMarkup;
-  InputMessageContent inputMessageContent;
+   late String id;
+   late Contact contact;
+   late String thumbnailUrl;
+   late int thumbnailWidth;
+   late int thumbnailHeight;
+   late ReplyMarkup replyMarkup;
+   late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -13335,13 +13335,13 @@ class InputInlineQueryResultContact extends InputInlineQueryResult {
   };
 
   InputInlineQueryResultContact({
-    this.id,
-    this.contact,
-    this.thumbnailUrl,
-    this.thumbnailWidth,
-    this.thumbnailHeight,
-    this.replyMarkup,
-    this.inputMessageContent,
+  required this.id,
+  required this.contact,
+  required this.thumbnailUrl,
+  required this.thumbnailWidth,
+  required this.thumbnailHeight,
+  required this.replyMarkup,
+  required this.inputMessageContent,
   });
 
   InputInlineQueryResultContact.fromJson(Map<String, dynamic> json) {
@@ -13360,16 +13360,16 @@ class InputInlineQueryResultDocument extends InputInlineQueryResult {
   @override
   String get tdType => 'inputInlineQueryResultDocument';
 
-  String id;
-  String title;
-  String description;
-  String documentUrl;
-  String mimeType;
-  String thumbnailUrl;
-  int thumbnailWidth;
-  int thumbnailHeight;
-  ReplyMarkup replyMarkup;
-  InputMessageContent inputMessageContent;
+   late String id;
+   late String title;
+   late String description;
+   late String documentUrl;
+   late String mimeType;
+   late String thumbnailUrl;
+   late int thumbnailWidth;
+   late int thumbnailHeight;
+   late ReplyMarkup replyMarkup;
+   late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -13386,16 +13386,16 @@ class InputInlineQueryResultDocument extends InputInlineQueryResult {
   };
 
   InputInlineQueryResultDocument({
-    this.id,
-    this.title,
-    this.description,
-    this.documentUrl,
-    this.mimeType,
-    this.thumbnailUrl,
-    this.thumbnailWidth,
-    this.thumbnailHeight,
-    this.replyMarkup,
-    this.inputMessageContent,
+  required this.id,
+  required this.title,
+  required this.description,
+  required this.documentUrl,
+  required this.mimeType,
+  required this.thumbnailUrl,
+  required this.thumbnailWidth,
+  required this.thumbnailHeight,
+  required this.replyMarkup,
+  required this.inputMessageContent,
   });
 
   InputInlineQueryResultDocument.fromJson(Map<String, dynamic> json) {
@@ -13417,9 +13417,9 @@ class InputInlineQueryResultGame extends InputInlineQueryResult {
   @override
   String get tdType => 'inputInlineQueryResultGame';
 
-  String id;
-  String gameShortName;
-  ReplyMarkup replyMarkup;
+   late String id;
+   late String gameShortName;
+   late ReplyMarkup replyMarkup;
 
   @override
   Map<String, dynamic> get params => {
@@ -13429,9 +13429,9 @@ class InputInlineQueryResultGame extends InputInlineQueryResult {
   };
 
   InputInlineQueryResultGame({
-    this.id,
-    this.gameShortName,
-    this.replyMarkup,
+  required this.id,
+  required this.gameShortName,
+  required this.replyMarkup,
   });
 
   InputInlineQueryResultGame.fromJson(Map<String, dynamic> json) {
@@ -13446,15 +13446,15 @@ class InputInlineQueryResultLocation extends InputInlineQueryResult {
   @override
   String get tdType => 'inputInlineQueryResultLocation';
 
-  String id;
-  Location location;
-  int livePeriod;
-  String title;
-  String thumbnailUrl;
-  int thumbnailWidth;
-  int thumbnailHeight;
-  ReplyMarkup replyMarkup;
-  InputMessageContent inputMessageContent;
+   late String id;
+   late Location location;
+   late int livePeriod;
+   late String title;
+   late String thumbnailUrl;
+   late int thumbnailWidth;
+   late int thumbnailHeight;
+   late ReplyMarkup replyMarkup;
+   late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -13470,15 +13470,15 @@ class InputInlineQueryResultLocation extends InputInlineQueryResult {
   };
 
   InputInlineQueryResultLocation({
-    this.id,
-    this.location,
-    this.livePeriod,
-    this.title,
-    this.thumbnailUrl,
-    this.thumbnailWidth,
-    this.thumbnailHeight,
-    this.replyMarkup,
-    this.inputMessageContent,
+  required this.id,
+  required this.location,
+  required this.livePeriod,
+  required this.title,
+  required this.thumbnailUrl,
+  required this.thumbnailWidth,
+  required this.thumbnailHeight,
+  required this.replyMarkup,
+  required this.inputMessageContent,
   });
 
   InputInlineQueryResultLocation.fromJson(Map<String, dynamic> json) {
@@ -13499,15 +13499,15 @@ class InputInlineQueryResultPhoto extends InputInlineQueryResult {
   @override
   String get tdType => 'inputInlineQueryResultPhoto';
 
-  String id;
-  String title;
-  String description;
-  String thumbnailUrl;
-  String photoUrl;
-  int photoWidth;
-  int photoHeight;
-  ReplyMarkup replyMarkup;
-  InputMessageContent inputMessageContent;
+   late String id;
+   late String title;
+   late String description;
+   late String thumbnailUrl;
+   late String photoUrl;
+   late int photoWidth;
+   late int photoHeight;
+   late ReplyMarkup replyMarkup;
+   late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -13523,15 +13523,15 @@ class InputInlineQueryResultPhoto extends InputInlineQueryResult {
   };
 
   InputInlineQueryResultPhoto({
-    this.id,
-    this.title,
-    this.description,
-    this.thumbnailUrl,
-    this.photoUrl,
-    this.photoWidth,
-    this.photoHeight,
-    this.replyMarkup,
-    this.inputMessageContent,
+  required this.id,
+  required this.title,
+  required this.description,
+  required this.thumbnailUrl,
+  required this.photoUrl,
+  required this.photoWidth,
+  required this.photoHeight,
+  required this.replyMarkup,
+  required this.inputMessageContent,
   });
 
   InputInlineQueryResultPhoto.fromJson(Map<String, dynamic> json) {
@@ -13552,13 +13552,13 @@ class InputInlineQueryResultSticker extends InputInlineQueryResult {
   @override
   String get tdType => 'inputInlineQueryResultSticker';
 
-  String id;
-  String thumbnailUrl;
-  String stickerUrl;
-  int stickerWidth;
-  int stickerHeight;
-  ReplyMarkup replyMarkup;
-  InputMessageContent inputMessageContent;
+   late String id;
+   late String thumbnailUrl;
+   late String stickerUrl;
+   late int stickerWidth;
+   late int stickerHeight;
+   late ReplyMarkup replyMarkup;
+   late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -13572,13 +13572,13 @@ class InputInlineQueryResultSticker extends InputInlineQueryResult {
   };
 
   InputInlineQueryResultSticker({
-    this.id,
-    this.thumbnailUrl,
-    this.stickerUrl,
-    this.stickerWidth,
-    this.stickerHeight,
-    this.replyMarkup,
-    this.inputMessageContent,
+  required this.id,
+  required this.thumbnailUrl,
+  required this.stickerUrl,
+  required this.stickerWidth,
+  required this.stickerHeight,
+  required this.replyMarkup,
+  required this.inputMessageContent,
   });
 
   InputInlineQueryResultSticker.fromJson(Map<String, dynamic> json) {
@@ -13597,13 +13597,13 @@ class InputInlineQueryResultVenue extends InputInlineQueryResult {
   @override
   String get tdType => 'inputInlineQueryResultVenue';
 
-  String id;
-  Venue venue;
-  String thumbnailUrl;
-  int thumbnailWidth;
-  int thumbnailHeight;
-  ReplyMarkup replyMarkup;
-  InputMessageContent inputMessageContent;
+   late String id;
+   late Venue venue;
+   late String thumbnailUrl;
+   late int thumbnailWidth;
+   late int thumbnailHeight;
+   late ReplyMarkup replyMarkup;
+   late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -13617,13 +13617,13 @@ class InputInlineQueryResultVenue extends InputInlineQueryResult {
   };
 
   InputInlineQueryResultVenue({
-    this.id,
-    this.venue,
-    this.thumbnailUrl,
-    this.thumbnailWidth,
-    this.thumbnailHeight,
-    this.replyMarkup,
-    this.inputMessageContent,
+  required this.id,
+  required this.venue,
+  required this.thumbnailUrl,
+  required this.thumbnailWidth,
+  required this.thumbnailHeight,
+  required this.replyMarkup,
+  required this.inputMessageContent,
   });
 
   InputInlineQueryResultVenue.fromJson(Map<String, dynamic> json) {
@@ -13642,17 +13642,17 @@ class InputInlineQueryResultVideo extends InputInlineQueryResult {
   @override
   String get tdType => 'inputInlineQueryResultVideo';
 
-  String id;
-  String title;
-  String description;
-  String thumbnailUrl;
-  String videoUrl;
-  String mimeType;
-  int videoWidth;
-  int videoHeight;
-  int videoDuration;
-  ReplyMarkup replyMarkup;
-  InputMessageContent inputMessageContent;
+   late String id;
+   late String title;
+   late String description;
+   late String thumbnailUrl;
+   late String videoUrl;
+   late String mimeType;
+   late int videoWidth;
+   late int videoHeight;
+   late int videoDuration;
+   late ReplyMarkup replyMarkup;
+   late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -13670,17 +13670,17 @@ class InputInlineQueryResultVideo extends InputInlineQueryResult {
   };
 
   InputInlineQueryResultVideo({
-    this.id,
-    this.title,
-    this.description,
-    this.thumbnailUrl,
-    this.videoUrl,
-    this.mimeType,
-    this.videoWidth,
-    this.videoHeight,
-    this.videoDuration,
-    this.replyMarkup,
-    this.inputMessageContent,
+  required this.id,
+  required this.title,
+  required this.description,
+  required this.thumbnailUrl,
+  required this.videoUrl,
+  required this.mimeType,
+  required this.videoWidth,
+  required this.videoHeight,
+  required this.videoDuration,
+  required this.replyMarkup,
+  required this.inputMessageContent,
   });
 
   InputInlineQueryResultVideo.fromJson(Map<String, dynamic> json) {
@@ -13703,12 +13703,12 @@ class InputInlineQueryResultVoiceNote extends InputInlineQueryResult {
   @override
   String get tdType => 'inputInlineQueryResultVoiceNote';
 
-  String id;
-  String title;
-  String voiceNoteUrl;
-  int voiceNoteDuration;
-  ReplyMarkup replyMarkup;
-  InputMessageContent inputMessageContent;
+   late String id;
+   late String title;
+   late String voiceNoteUrl;
+   late int voiceNoteDuration;
+   late ReplyMarkup replyMarkup;
+   late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -13721,12 +13721,12 @@ class InputInlineQueryResultVoiceNote extends InputInlineQueryResult {
   };
 
   InputInlineQueryResultVoiceNote({
-    this.id,
-    this.title,
-    this.voiceNoteUrl,
-    this.voiceNoteDuration,
-    this.replyMarkup,
-    this.inputMessageContent,
+  required this.id,
+  required this.title,
+  required this.voiceNoteUrl,
+  required this.voiceNoteDuration,
+  required this.replyMarkup,
+  required this.inputMessageContent,
   });
 
   InputInlineQueryResultVoiceNote.fromJson(Map<String, dynamic> json) {
@@ -13746,12 +13746,12 @@ class InlineQueryResultArticle extends InlineQueryResult {
   @override
   String get tdType => 'inlineQueryResultArticle';
 
-  String id;
-  String url;
-  bool hideUrl;
-  String title;
-  String description;
-  Thumbnail thumbnail;
+   late String id;
+   late String url;
+   late bool hideUrl;
+   late String title;
+   late String description;
+   late Thumbnail thumbnail;
 
   @override
   Map<String, dynamic> get params => {
@@ -13764,12 +13764,12 @@ class InlineQueryResultArticle extends InlineQueryResult {
   };
 
   InlineQueryResultArticle({
-    this.id,
-    this.url,
-    this.hideUrl,
-    this.title,
-    this.description,
-    this.thumbnail,
+  required this.id,
+  required this.url,
+  required this.hideUrl,
+  required this.title,
+  required this.description,
+  required this.thumbnail,
   });
 
   InlineQueryResultArticle.fromJson(Map<String, dynamic> json) {
@@ -13787,9 +13787,9 @@ class InlineQueryResultContact extends InlineQueryResult {
   @override
   String get tdType => 'inlineQueryResultContact';
 
-  String id;
-  Contact contact;
-  Thumbnail thumbnail;
+   late String id;
+   late Contact contact;
+   late Thumbnail thumbnail;
 
   @override
   Map<String, dynamic> get params => {
@@ -13799,9 +13799,9 @@ class InlineQueryResultContact extends InlineQueryResult {
   };
 
   InlineQueryResultContact({
-    this.id,
-    this.contact,
-    this.thumbnail,
+  required this.id,
+  required this.contact,
+  required this.thumbnail,
   });
 
   InlineQueryResultContact.fromJson(Map<String, dynamic> json) {
@@ -13816,10 +13816,10 @@ class InlineQueryResultLocation extends InlineQueryResult {
   @override
   String get tdType => 'inlineQueryResultLocation';
 
-  String id;
-  Location location;
-  String title;
-  Thumbnail thumbnail;
+   late String id;
+   late Location location;
+   late String title;
+   late Thumbnail thumbnail;
 
   @override
   Map<String, dynamic> get params => {
@@ -13830,10 +13830,10 @@ class InlineQueryResultLocation extends InlineQueryResult {
   };
 
   InlineQueryResultLocation({
-    this.id,
-    this.location,
-    this.title,
-    this.thumbnail,
+  required this.id,
+  required this.location,
+  required this.title,
+  required this.thumbnail,
   });
 
   InlineQueryResultLocation.fromJson(Map<String, dynamic> json) {
@@ -13849,9 +13849,9 @@ class InlineQueryResultVenue extends InlineQueryResult {
   @override
   String get tdType => 'inlineQueryResultVenue';
 
-  String id;
-  Venue venue;
-  Thumbnail thumbnail;
+   late String id;
+   late Venue venue;
+   late Thumbnail thumbnail;
 
   @override
   Map<String, dynamic> get params => {
@@ -13861,9 +13861,9 @@ class InlineQueryResultVenue extends InlineQueryResult {
   };
 
   InlineQueryResultVenue({
-    this.id,
-    this.venue,
-    this.thumbnail,
+  required this.id,
+  required this.venue,
+  required this.thumbnail,
   });
 
   InlineQueryResultVenue.fromJson(Map<String, dynamic> json) {
@@ -13878,8 +13878,8 @@ class InlineQueryResultGame extends InlineQueryResult {
   @override
   String get tdType => 'inlineQueryResultGame';
 
-  String id;
-  Game game;
+   late String id;
+   late Game game;
 
   @override
   Map<String, dynamic> get params => {
@@ -13888,8 +13888,8 @@ class InlineQueryResultGame extends InlineQueryResult {
   };
 
   InlineQueryResultGame({
-    this.id,
-    this.game,
+  required this.id,
+  required this.game,
   });
 
   InlineQueryResultGame.fromJson(Map<String, dynamic> json) {
@@ -13903,9 +13903,9 @@ class InlineQueryResultAnimation extends InlineQueryResult {
   @override
   String get tdType => 'inlineQueryResultAnimation';
 
-  String id;
-  Animation animation;
-  String title;
+   late String id;
+   late Animation animation;
+   late String title;
 
   @override
   Map<String, dynamic> get params => {
@@ -13915,9 +13915,9 @@ class InlineQueryResultAnimation extends InlineQueryResult {
   };
 
   InlineQueryResultAnimation({
-    this.id,
-    this.animation,
-    this.title,
+  required this.id,
+  required this.animation,
+  required this.title,
   });
 
   InlineQueryResultAnimation.fromJson(Map<String, dynamic> json) {
@@ -13932,8 +13932,8 @@ class InlineQueryResultAudio extends InlineQueryResult {
   @override
   String get tdType => 'inlineQueryResultAudio';
 
-  String id;
-  Audio audio;
+   late String id;
+   late Audio audio;
 
   @override
   Map<String, dynamic> get params => {
@@ -13942,8 +13942,8 @@ class InlineQueryResultAudio extends InlineQueryResult {
   };
 
   InlineQueryResultAudio({
-    this.id,
-    this.audio,
+  required this.id,
+  required this.audio,
   });
 
   InlineQueryResultAudio.fromJson(Map<String, dynamic> json) {
@@ -13957,10 +13957,10 @@ class InlineQueryResultDocument extends InlineQueryResult {
   @override
   String get tdType => 'inlineQueryResultDocument';
 
-  String id;
-  Document document;
-  String title;
-  String description;
+   late String id;
+   late Document document;
+   late String title;
+   late String description;
 
   @override
   Map<String, dynamic> get params => {
@@ -13971,10 +13971,10 @@ class InlineQueryResultDocument extends InlineQueryResult {
   };
 
   InlineQueryResultDocument({
-    this.id,
-    this.document,
-    this.title,
-    this.description,
+  required this.id,
+  required this.document,
+  required this.title,
+  required this.description,
   });
 
   InlineQueryResultDocument.fromJson(Map<String, dynamic> json) {
@@ -13990,10 +13990,10 @@ class InlineQueryResultPhoto extends InlineQueryResult {
   @override
   String get tdType => 'inlineQueryResultPhoto';
 
-  String id;
-  Photo photo;
-  String title;
-  String description;
+   late String id;
+   late Photo photo;
+   late String title;
+   late String description;
 
   @override
   Map<String, dynamic> get params => {
@@ -14004,10 +14004,10 @@ class InlineQueryResultPhoto extends InlineQueryResult {
   };
 
   InlineQueryResultPhoto({
-    this.id,
-    this.photo,
-    this.title,
-    this.description,
+  required this.id,
+  required this.photo,
+  required this.title,
+  required this.description,
   });
 
   InlineQueryResultPhoto.fromJson(Map<String, dynamic> json) {
@@ -14023,8 +14023,8 @@ class InlineQueryResultSticker extends InlineQueryResult {
   @override
   String get tdType => 'inlineQueryResultSticker';
 
-  String id;
-  Sticker sticker;
+   late String id;
+   late Sticker sticker;
 
   @override
   Map<String, dynamic> get params => {
@@ -14033,8 +14033,8 @@ class InlineQueryResultSticker extends InlineQueryResult {
   };
 
   InlineQueryResultSticker({
-    this.id,
-    this.sticker,
+  required this.id,
+  required this.sticker,
   });
 
   InlineQueryResultSticker.fromJson(Map<String, dynamic> json) {
@@ -14048,10 +14048,10 @@ class InlineQueryResultVideo extends InlineQueryResult {
   @override
   String get tdType => 'inlineQueryResultVideo';
 
-  String id;
-  Video video;
-  String title;
-  String description;
+   late String id;
+   late Video video;
+   late String title;
+   late String description;
 
   @override
   Map<String, dynamic> get params => {
@@ -14062,10 +14062,10 @@ class InlineQueryResultVideo extends InlineQueryResult {
   };
 
   InlineQueryResultVideo({
-    this.id,
-    this.video,
-    this.title,
-    this.description,
+  required this.id,
+  required this.video,
+  required this.title,
+  required this.description,
   });
 
   InlineQueryResultVideo.fromJson(Map<String, dynamic> json) {
@@ -14081,9 +14081,9 @@ class InlineQueryResultVoiceNote extends InlineQueryResult {
   @override
   String get tdType => 'inlineQueryResultVoiceNote';
 
-  String id;
-  VoiceNote voiceNote;
-  String title;
+   late String id;
+   late VoiceNote voiceNote;
+   late String title;
 
   @override
   Map<String, dynamic> get params => {
@@ -14093,9 +14093,9 @@ class InlineQueryResultVoiceNote extends InlineQueryResult {
   };
 
   InlineQueryResultVoiceNote({
-    this.id,
-    this.voiceNote,
-    this.title,
+  required this.id,
+  required this.voiceNote,
+  required this.title,
   });
 
   InlineQueryResultVoiceNote.fromJson(Map<String, dynamic> json) {
@@ -14110,11 +14110,11 @@ class InlineQueryResults extends TdObject {
   @override
   String get tdType => 'inlineQueryResults';
 
-  int inlineQueryId;
-  String nextOffset;
-  List<InlineQueryResult> results;
-  String switchPmText;
-  String switchPmParameter;
+   late int inlineQueryId;
+   late String nextOffset;
+   late List<InlineQueryResult> results;
+   late String switchPmText;
+   late String switchPmParameter;
 
   @override
   Map<String, dynamic> get params => {
@@ -14126,11 +14126,11 @@ class InlineQueryResults extends TdObject {
   };
 
   InlineQueryResults({
-    this.inlineQueryId,
-    this.nextOffset,
-    this.results,
-    this.switchPmText,
-    this.switchPmParameter,
+  required this.inlineQueryId,
+  required this.nextOffset,
+  required this.results,
+  required this.switchPmText,
+  required this.switchPmParameter,
   });
 
   InlineQueryResults.fromJson(Map<String, dynamic> json) {
@@ -14149,7 +14149,7 @@ class CallbackQueryPayloadData extends CallbackQueryPayload {
   @override
   String get tdType => 'callbackQueryPayloadData';
 
-  String data;
+   late String data;
 
   @override
   Map<String, dynamic> get params => {
@@ -14157,7 +14157,7 @@ class CallbackQueryPayloadData extends CallbackQueryPayload {
   };
 
   CallbackQueryPayloadData({
-    this.data,
+  required this.data,
   });
 
   CallbackQueryPayloadData.fromJson(Map<String, dynamic> json) {
@@ -14170,8 +14170,8 @@ class CallbackQueryPayloadDataWithPassword extends CallbackQueryPayload {
   @override
   String get tdType => 'callbackQueryPayloadDataWithPassword';
 
-  String password;
-  String data;
+   late String password;
+   late String data;
 
   @override
   Map<String, dynamic> get params => {
@@ -14180,8 +14180,8 @@ class CallbackQueryPayloadDataWithPassword extends CallbackQueryPayload {
   };
 
   CallbackQueryPayloadDataWithPassword({
-    this.password,
-    this.data,
+  required this.password,
+  required this.data,
   });
 
   CallbackQueryPayloadDataWithPassword.fromJson(Map<String, dynamic> json) {
@@ -14195,7 +14195,7 @@ class CallbackQueryPayloadGame extends CallbackQueryPayload {
   @override
   String get tdType => 'callbackQueryPayloadGame';
 
-  String gameShortName;
+   late String gameShortName;
 
   @override
   Map<String, dynamic> get params => {
@@ -14203,7 +14203,7 @@ class CallbackQueryPayloadGame extends CallbackQueryPayload {
   };
 
   CallbackQueryPayloadGame({
-    this.gameShortName,
+  required this.gameShortName,
   });
 
   CallbackQueryPayloadGame.fromJson(Map<String, dynamic> json) {
@@ -14216,9 +14216,9 @@ class CallbackQueryAnswer extends TdObject {
   @override
   String get tdType => 'callbackQueryAnswer';
 
-  String text;
-  bool showAlert;
-  String url;
+   late String text;
+   late bool showAlert;
+   late String url;
 
   @override
   Map<String, dynamic> get params => {
@@ -14228,9 +14228,9 @@ class CallbackQueryAnswer extends TdObject {
   };
 
   CallbackQueryAnswer({
-    this.text,
-    this.showAlert,
-    this.url,
+  required this.text,
+  required this.showAlert,
+  required this.url,
   });
 
   CallbackQueryAnswer.fromJson(Map<String, dynamic> json) {
@@ -14245,7 +14245,7 @@ class CustomRequestResult extends TdObject {
   @override
   String get tdType => 'customRequestResult';
 
-  String result;
+   late String result;
 
   @override
   Map<String, dynamic> get params => {
@@ -14253,7 +14253,7 @@ class CustomRequestResult extends TdObject {
   };
 
   CustomRequestResult({
-    this.result,
+  required this.result,
   });
 
   CustomRequestResult.fromJson(Map<String, dynamic> json) {
@@ -14266,9 +14266,9 @@ class GameHighScore extends TdObject {
   @override
   String get tdType => 'gameHighScore';
 
-  int position;
-  int userId;
-  int score;
+   late int position;
+   late int userId;
+   late int score;
 
   @override
   Map<String, dynamic> get params => {
@@ -14278,9 +14278,9 @@ class GameHighScore extends TdObject {
   };
 
   GameHighScore({
-    this.position,
-    this.userId,
-    this.score,
+  required this.position,
+  required this.userId,
+  required this.score,
   });
 
   GameHighScore.fromJson(Map<String, dynamic> json) {
@@ -14295,7 +14295,7 @@ class GameHighScores extends TdObject {
   @override
   String get tdType => 'gameHighScores';
 
-  List<GameHighScore> scores;
+   late List<GameHighScore> scores;
 
   @override
   Map<String, dynamic> get params => {
@@ -14303,7 +14303,7 @@ class GameHighScores extends TdObject {
   };
 
   GameHighScores({
-    this.scores,
+  required this.scores,
   });
 
   GameHighScores.fromJson(Map<String, dynamic> json) {
@@ -14318,8 +14318,8 @@ class ChatEventMessageEdited extends ChatEventAction {
   @override
   String get tdType => 'chatEventMessageEdited';
 
-  Message oldMessage;
-  Message newMessage;
+   late Message oldMessage;
+   late Message newMessage;
 
   @override
   Map<String, dynamic> get params => {
@@ -14328,8 +14328,8 @@ class ChatEventMessageEdited extends ChatEventAction {
   };
 
   ChatEventMessageEdited({
-    this.oldMessage,
-    this.newMessage,
+  required this.oldMessage,
+  required this.newMessage,
   });
 
   ChatEventMessageEdited.fromJson(Map<String, dynamic> json) {
@@ -14343,7 +14343,7 @@ class ChatEventMessageDeleted extends ChatEventAction {
   @override
   String get tdType => 'chatEventMessageDeleted';
 
-  Message message;
+   late Message message;
 
   @override
   Map<String, dynamic> get params => {
@@ -14351,7 +14351,7 @@ class ChatEventMessageDeleted extends ChatEventAction {
   };
 
   ChatEventMessageDeleted({
-    this.message,
+  required this.message,
   });
 
   ChatEventMessageDeleted.fromJson(Map<String, dynamic> json) {
@@ -14364,7 +14364,7 @@ class ChatEventPollStopped extends ChatEventAction {
   @override
   String get tdType => 'chatEventPollStopped';
 
-  Message message;
+   late Message message;
 
   @override
   Map<String, dynamic> get params => {
@@ -14372,7 +14372,7 @@ class ChatEventPollStopped extends ChatEventAction {
   };
 
   ChatEventPollStopped({
-    this.message,
+  required this.message,
   });
 
   ChatEventPollStopped.fromJson(Map<String, dynamic> json) {
@@ -14385,7 +14385,7 @@ class ChatEventMessagePinned extends ChatEventAction {
   @override
   String get tdType => 'chatEventMessagePinned';
 
-  Message message;
+   late Message message;
 
   @override
   Map<String, dynamic> get params => {
@@ -14393,7 +14393,7 @@ class ChatEventMessagePinned extends ChatEventAction {
   };
 
   ChatEventMessagePinned({
-    this.message,
+  required this.message,
   });
 
   ChatEventMessagePinned.fromJson(Map<String, dynamic> json) {
@@ -14406,7 +14406,7 @@ class ChatEventMessageUnpinned extends ChatEventAction {
   @override
   String get tdType => 'chatEventMessageUnpinned';
 
-  Message message;
+   late Message message;
 
   @override
   Map<String, dynamic> get params => {
@@ -14414,7 +14414,7 @@ class ChatEventMessageUnpinned extends ChatEventAction {
   };
 
   ChatEventMessageUnpinned({
-    this.message,
+  required this.message,
   });
 
   ChatEventMessageUnpinned.fromJson(Map<String, dynamic> json) {
@@ -14440,7 +14440,7 @@ class ChatEventMemberJoinedByInviteLink extends ChatEventAction {
   @override
   String get tdType => 'chatEventMemberJoinedByInviteLink';
 
-  ChatInviteLink inviteLink;
+   late ChatInviteLink inviteLink;
 
   @override
   Map<String, dynamic> get params => {
@@ -14448,7 +14448,7 @@ class ChatEventMemberJoinedByInviteLink extends ChatEventAction {
   };
 
   ChatEventMemberJoinedByInviteLink({
-    this.inviteLink,
+  required this.inviteLink,
   });
 
   ChatEventMemberJoinedByInviteLink.fromJson(Map<String, dynamic> json) {
@@ -14474,8 +14474,8 @@ class ChatEventMemberInvited extends ChatEventAction {
   @override
   String get tdType => 'chatEventMemberInvited';
 
-  int userId;
-  ChatMemberStatus status;
+   late int userId;
+   late ChatMemberStatus status;
 
   @override
   Map<String, dynamic> get params => {
@@ -14484,8 +14484,8 @@ class ChatEventMemberInvited extends ChatEventAction {
   };
 
   ChatEventMemberInvited({
-    this.userId,
-    this.status,
+  required this.userId,
+  required this.status,
   });
 
   ChatEventMemberInvited.fromJson(Map<String, dynamic> json) {
@@ -14499,9 +14499,9 @@ class ChatEventMemberPromoted extends ChatEventAction {
   @override
   String get tdType => 'chatEventMemberPromoted';
 
-  int userId;
-  ChatMemberStatus oldStatus;
-  ChatMemberStatus newStatus;
+   late int userId;
+   late ChatMemberStatus oldStatus;
+   late ChatMemberStatus newStatus;
 
   @override
   Map<String, dynamic> get params => {
@@ -14511,9 +14511,9 @@ class ChatEventMemberPromoted extends ChatEventAction {
   };
 
   ChatEventMemberPromoted({
-    this.userId,
-    this.oldStatus,
-    this.newStatus,
+  required this.userId,
+  required this.oldStatus,
+  required this.newStatus,
   });
 
   ChatEventMemberPromoted.fromJson(Map<String, dynamic> json) {
@@ -14528,9 +14528,9 @@ class ChatEventMemberRestricted extends ChatEventAction {
   @override
   String get tdType => 'chatEventMemberRestricted';
 
-  MessageSender memberId;
-  ChatMemberStatus oldStatus;
-  ChatMemberStatus newStatus;
+   late MessageSender memberId;
+   late ChatMemberStatus oldStatus;
+   late ChatMemberStatus newStatus;
 
   @override
   Map<String, dynamic> get params => {
@@ -14540,9 +14540,9 @@ class ChatEventMemberRestricted extends ChatEventAction {
   };
 
   ChatEventMemberRestricted({
-    this.memberId,
-    this.oldStatus,
-    this.newStatus,
+  required this.memberId,
+  required this.oldStatus,
+  required this.newStatus,
   });
 
   ChatEventMemberRestricted.fromJson(Map<String, dynamic> json) {
@@ -14557,8 +14557,8 @@ class ChatEventTitleChanged extends ChatEventAction {
   @override
   String get tdType => 'chatEventTitleChanged';
 
-  String oldTitle;
-  String newTitle;
+   late String oldTitle;
+   late String newTitle;
 
   @override
   Map<String, dynamic> get params => {
@@ -14567,8 +14567,8 @@ class ChatEventTitleChanged extends ChatEventAction {
   };
 
   ChatEventTitleChanged({
-    this.oldTitle,
-    this.newTitle,
+  required this.oldTitle,
+  required this.newTitle,
   });
 
   ChatEventTitleChanged.fromJson(Map<String, dynamic> json) {
@@ -14582,8 +14582,8 @@ class ChatEventPermissionsChanged extends ChatEventAction {
   @override
   String get tdType => 'chatEventPermissionsChanged';
 
-  ChatPermissions oldPermissions;
-  ChatPermissions newPermissions;
+   late ChatPermissions oldPermissions;
+   late ChatPermissions newPermissions;
 
   @override
   Map<String, dynamic> get params => {
@@ -14592,8 +14592,8 @@ class ChatEventPermissionsChanged extends ChatEventAction {
   };
 
   ChatEventPermissionsChanged({
-    this.oldPermissions,
-    this.newPermissions,
+  required this.oldPermissions,
+  required this.newPermissions,
   });
 
   ChatEventPermissionsChanged.fromJson(Map<String, dynamic> json) {
@@ -14607,8 +14607,8 @@ class ChatEventDescriptionChanged extends ChatEventAction {
   @override
   String get tdType => 'chatEventDescriptionChanged';
 
-  String oldDescription;
-  String newDescription;
+   late String oldDescription;
+   late String newDescription;
 
   @override
   Map<String, dynamic> get params => {
@@ -14617,8 +14617,8 @@ class ChatEventDescriptionChanged extends ChatEventAction {
   };
 
   ChatEventDescriptionChanged({
-    this.oldDescription,
-    this.newDescription,
+  required this.oldDescription,
+  required this.newDescription,
   });
 
   ChatEventDescriptionChanged.fromJson(Map<String, dynamic> json) {
@@ -14632,8 +14632,8 @@ class ChatEventUsernameChanged extends ChatEventAction {
   @override
   String get tdType => 'chatEventUsernameChanged';
 
-  String oldUsername;
-  String newUsername;
+   late String oldUsername;
+   late String newUsername;
 
   @override
   Map<String, dynamic> get params => {
@@ -14642,8 +14642,8 @@ class ChatEventUsernameChanged extends ChatEventAction {
   };
 
   ChatEventUsernameChanged({
-    this.oldUsername,
-    this.newUsername,
+  required this.oldUsername,
+  required this.newUsername,
   });
 
   ChatEventUsernameChanged.fromJson(Map<String, dynamic> json) {
@@ -14657,8 +14657,8 @@ class ChatEventPhotoChanged extends ChatEventAction {
   @override
   String get tdType => 'chatEventPhotoChanged';
 
-  ChatPhoto oldPhoto;
-  ChatPhoto newPhoto;
+   late ChatPhoto oldPhoto;
+   late ChatPhoto newPhoto;
 
   @override
   Map<String, dynamic> get params => {
@@ -14667,8 +14667,8 @@ class ChatEventPhotoChanged extends ChatEventAction {
   };
 
   ChatEventPhotoChanged({
-    this.oldPhoto,
-    this.newPhoto,
+  required this.oldPhoto,
+  required this.newPhoto,
   });
 
   ChatEventPhotoChanged.fromJson(Map<String, dynamic> json) {
@@ -14682,7 +14682,7 @@ class ChatEventInvitesToggled extends ChatEventAction {
   @override
   String get tdType => 'chatEventInvitesToggled';
 
-  bool canInviteUsers;
+   late bool canInviteUsers;
 
   @override
   Map<String, dynamic> get params => {
@@ -14690,7 +14690,7 @@ class ChatEventInvitesToggled extends ChatEventAction {
   };
 
   ChatEventInvitesToggled({
-    this.canInviteUsers,
+  required this.canInviteUsers,
   });
 
   ChatEventInvitesToggled.fromJson(Map<String, dynamic> json) {
@@ -14703,8 +14703,8 @@ class ChatEventLinkedChatChanged extends ChatEventAction {
   @override
   String get tdType => 'chatEventLinkedChatChanged';
 
-  int oldLinkedChatId;
-  int newLinkedChatId;
+   late int oldLinkedChatId;
+   late int newLinkedChatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -14713,8 +14713,8 @@ class ChatEventLinkedChatChanged extends ChatEventAction {
   };
 
   ChatEventLinkedChatChanged({
-    this.oldLinkedChatId,
-    this.newLinkedChatId,
+  required this.oldLinkedChatId,
+  required this.newLinkedChatId,
   });
 
   ChatEventLinkedChatChanged.fromJson(Map<String, dynamic> json) {
@@ -14728,8 +14728,8 @@ class ChatEventSlowModeDelayChanged extends ChatEventAction {
   @override
   String get tdType => 'chatEventSlowModeDelayChanged';
 
-  int oldSlowModeDelay;
-  int newSlowModeDelay;
+   late int oldSlowModeDelay;
+   late int newSlowModeDelay;
 
   @override
   Map<String, dynamic> get params => {
@@ -14738,8 +14738,8 @@ class ChatEventSlowModeDelayChanged extends ChatEventAction {
   };
 
   ChatEventSlowModeDelayChanged({
-    this.oldSlowModeDelay,
-    this.newSlowModeDelay,
+  required this.oldSlowModeDelay,
+  required this.newSlowModeDelay,
   });
 
   ChatEventSlowModeDelayChanged.fromJson(Map<String, dynamic> json) {
@@ -14753,8 +14753,8 @@ class ChatEventMessageTtlSettingChanged extends ChatEventAction {
   @override
   String get tdType => 'chatEventMessageTtlSettingChanged';
 
-  int oldMessageTtlSetting;
-  int newMessageTtlSetting;
+   late int oldMessageTtlSetting;
+   late int newMessageTtlSetting;
 
   @override
   Map<String, dynamic> get params => {
@@ -14763,8 +14763,8 @@ class ChatEventMessageTtlSettingChanged extends ChatEventAction {
   };
 
   ChatEventMessageTtlSettingChanged({
-    this.oldMessageTtlSetting,
-    this.newMessageTtlSetting,
+  required this.oldMessageTtlSetting,
+  required this.newMessageTtlSetting,
   });
 
   ChatEventMessageTtlSettingChanged.fromJson(Map<String, dynamic> json) {
@@ -14778,7 +14778,7 @@ class ChatEventSignMessagesToggled extends ChatEventAction {
   @override
   String get tdType => 'chatEventSignMessagesToggled';
 
-  bool signMessages;
+   late bool signMessages;
 
   @override
   Map<String, dynamic> get params => {
@@ -14786,7 +14786,7 @@ class ChatEventSignMessagesToggled extends ChatEventAction {
   };
 
   ChatEventSignMessagesToggled({
-    this.signMessages,
+  required this.signMessages,
   });
 
   ChatEventSignMessagesToggled.fromJson(Map<String, dynamic> json) {
@@ -14799,8 +14799,8 @@ class ChatEventStickerSetChanged extends ChatEventAction {
   @override
   String get tdType => 'chatEventStickerSetChanged';
 
-  int oldStickerSetId;
-  int newStickerSetId;
+   late int oldStickerSetId;
+   late int newStickerSetId;
 
   @override
   Map<String, dynamic> get params => {
@@ -14809,8 +14809,8 @@ class ChatEventStickerSetChanged extends ChatEventAction {
   };
 
   ChatEventStickerSetChanged({
-    this.oldStickerSetId,
-    this.newStickerSetId,
+  required this.oldStickerSetId,
+  required this.newStickerSetId,
   });
 
   ChatEventStickerSetChanged.fromJson(Map<String, dynamic> json) {
@@ -14824,8 +14824,8 @@ class ChatEventLocationChanged extends ChatEventAction {
   @override
   String get tdType => 'chatEventLocationChanged';
 
-  ChatLocation oldLocation;
-  ChatLocation newLocation;
+   late ChatLocation oldLocation;
+   late ChatLocation newLocation;
 
   @override
   Map<String, dynamic> get params => {
@@ -14834,8 +14834,8 @@ class ChatEventLocationChanged extends ChatEventAction {
   };
 
   ChatEventLocationChanged({
-    this.oldLocation,
-    this.newLocation,
+  required this.oldLocation,
+  required this.newLocation,
   });
 
   ChatEventLocationChanged.fromJson(Map<String, dynamic> json) {
@@ -14849,7 +14849,7 @@ class ChatEventIsAllHistoryAvailableToggled extends ChatEventAction {
   @override
   String get tdType => 'chatEventIsAllHistoryAvailableToggled';
 
-  bool isAllHistoryAvailable;
+   late bool isAllHistoryAvailable;
 
   @override
   Map<String, dynamic> get params => {
@@ -14857,7 +14857,7 @@ class ChatEventIsAllHistoryAvailableToggled extends ChatEventAction {
   };
 
   ChatEventIsAllHistoryAvailableToggled({
-    this.isAllHistoryAvailable,
+  required this.isAllHistoryAvailable,
   });
 
   ChatEventIsAllHistoryAvailableToggled.fromJson(Map<String, dynamic> json) {
@@ -14870,8 +14870,8 @@ class ChatEventInviteLinkEdited extends ChatEventAction {
   @override
   String get tdType => 'chatEventInviteLinkEdited';
 
-  ChatInviteLink oldInviteLink;
-  ChatInviteLink newInviteLink;
+   late ChatInviteLink oldInviteLink;
+   late ChatInviteLink newInviteLink;
 
   @override
   Map<String, dynamic> get params => {
@@ -14880,8 +14880,8 @@ class ChatEventInviteLinkEdited extends ChatEventAction {
   };
 
   ChatEventInviteLinkEdited({
-    this.oldInviteLink,
-    this.newInviteLink,
+  required this.oldInviteLink,
+  required this.newInviteLink,
   });
 
   ChatEventInviteLinkEdited.fromJson(Map<String, dynamic> json) {
@@ -14895,7 +14895,7 @@ class ChatEventInviteLinkRevoked extends ChatEventAction {
   @override
   String get tdType => 'chatEventInviteLinkRevoked';
 
-  ChatInviteLink inviteLink;
+   late ChatInviteLink inviteLink;
 
   @override
   Map<String, dynamic> get params => {
@@ -14903,7 +14903,7 @@ class ChatEventInviteLinkRevoked extends ChatEventAction {
   };
 
   ChatEventInviteLinkRevoked({
-    this.inviteLink,
+  required this.inviteLink,
   });
 
   ChatEventInviteLinkRevoked.fromJson(Map<String, dynamic> json) {
@@ -14916,7 +14916,7 @@ class ChatEventInviteLinkDeleted extends ChatEventAction {
   @override
   String get tdType => 'chatEventInviteLinkDeleted';
 
-  ChatInviteLink inviteLink;
+   late ChatInviteLink inviteLink;
 
   @override
   Map<String, dynamic> get params => {
@@ -14924,7 +14924,7 @@ class ChatEventInviteLinkDeleted extends ChatEventAction {
   };
 
   ChatEventInviteLinkDeleted({
-    this.inviteLink,
+  required this.inviteLink,
   });
 
   ChatEventInviteLinkDeleted.fromJson(Map<String, dynamic> json) {
@@ -14937,7 +14937,7 @@ class ChatEventVoiceChatCreated extends ChatEventAction {
   @override
   String get tdType => 'chatEventVoiceChatCreated';
 
-  int groupCallId;
+   late int groupCallId;
 
   @override
   Map<String, dynamic> get params => {
@@ -14945,7 +14945,7 @@ class ChatEventVoiceChatCreated extends ChatEventAction {
   };
 
   ChatEventVoiceChatCreated({
-    this.groupCallId,
+  required this.groupCallId,
   });
 
   ChatEventVoiceChatCreated.fromJson(Map<String, dynamic> json) {
@@ -14958,7 +14958,7 @@ class ChatEventVoiceChatDiscarded extends ChatEventAction {
   @override
   String get tdType => 'chatEventVoiceChatDiscarded';
 
-  int groupCallId;
+   late int groupCallId;
 
   @override
   Map<String, dynamic> get params => {
@@ -14966,7 +14966,7 @@ class ChatEventVoiceChatDiscarded extends ChatEventAction {
   };
 
   ChatEventVoiceChatDiscarded({
-    this.groupCallId,
+  required this.groupCallId,
   });
 
   ChatEventVoiceChatDiscarded.fromJson(Map<String, dynamic> json) {
@@ -14979,8 +14979,8 @@ class ChatEventVoiceChatParticipantIsMutedToggled extends ChatEventAction {
   @override
   String get tdType => 'chatEventVoiceChatParticipantIsMutedToggled';
 
-  MessageSender participantId;
-  bool isMuted;
+   late MessageSender participantId;
+   late bool isMuted;
 
   @override
   Map<String, dynamic> get params => {
@@ -14989,8 +14989,8 @@ class ChatEventVoiceChatParticipantIsMutedToggled extends ChatEventAction {
   };
 
   ChatEventVoiceChatParticipantIsMutedToggled({
-    this.participantId,
-    this.isMuted,
+  required this.participantId,
+  required this.isMuted,
   });
 
   ChatEventVoiceChatParticipantIsMutedToggled.fromJson(Map<String, dynamic> json) {
@@ -15004,8 +15004,8 @@ class ChatEventVoiceChatParticipantVolumeLevelChanged extends ChatEventAction {
   @override
   String get tdType => 'chatEventVoiceChatParticipantVolumeLevelChanged';
 
-  MessageSender participantId;
-  int volumeLevel;
+   late MessageSender participantId;
+   late int volumeLevel;
 
   @override
   Map<String, dynamic> get params => {
@@ -15014,8 +15014,8 @@ class ChatEventVoiceChatParticipantVolumeLevelChanged extends ChatEventAction {
   };
 
   ChatEventVoiceChatParticipantVolumeLevelChanged({
-    this.participantId,
-    this.volumeLevel,
+  required this.participantId,
+  required this.volumeLevel,
   });
 
   ChatEventVoiceChatParticipantVolumeLevelChanged.fromJson(Map<String, dynamic> json) {
@@ -15029,7 +15029,7 @@ class ChatEventVoiceChatMuteNewParticipantsToggled extends ChatEventAction {
   @override
   String get tdType => 'chatEventVoiceChatMuteNewParticipantsToggled';
 
-  bool muteNewParticipants;
+   late bool muteNewParticipants;
 
   @override
   Map<String, dynamic> get params => {
@@ -15037,7 +15037,7 @@ class ChatEventVoiceChatMuteNewParticipantsToggled extends ChatEventAction {
   };
 
   ChatEventVoiceChatMuteNewParticipantsToggled({
-    this.muteNewParticipants,
+  required this.muteNewParticipants,
   });
 
   ChatEventVoiceChatMuteNewParticipantsToggled.fromJson(Map<String, dynamic> json) {
@@ -15050,10 +15050,10 @@ class ChatEvent extends TdObject {
   @override
   String get tdType => 'chatEvent';
 
-  int id;
-  int date;
-  int userId;
-  ChatEventAction action;
+   late int id;
+   late int date;
+   late int userId;
+   late ChatEventAction action;
 
   @override
   Map<String, dynamic> get params => {
@@ -15064,10 +15064,10 @@ class ChatEvent extends TdObject {
   };
 
   ChatEvent({
-    this.id,
-    this.date,
-    this.userId,
-    this.action,
+  required this.id,
+  required this.date,
+  required this.userId,
+  required this.action,
   });
 
   ChatEvent.fromJson(Map<String, dynamic> json) {
@@ -15083,7 +15083,7 @@ class ChatEvents extends TdObject {
   @override
   String get tdType => 'chatEvents';
 
-  List<ChatEvent> events;
+   late List<ChatEvent> events;
 
   @override
   Map<String, dynamic> get params => {
@@ -15091,7 +15091,7 @@ class ChatEvents extends TdObject {
   };
 
   ChatEvents({
-    this.events,
+  required this.events,
   });
 
   ChatEvents.fromJson(Map<String, dynamic> json) {
@@ -15104,18 +15104,18 @@ class ChatEventLogFilters extends TdObject {
   @override
   String get tdType => 'chatEventLogFilters';
 
-  bool messageEdits;
-  bool messageDeletions;
-  bool messagePins;
-  bool memberJoins;
-  bool memberLeaves;
-  bool memberInvites;
-  bool memberPromotions;
-  bool memberRestrictions;
-  bool infoChanges;
-  bool settingChanges;
-  bool inviteLinkChanges;
-  bool voiceChatChanges;
+   late bool messageEdits;
+   late bool messageDeletions;
+   late bool messagePins;
+   late bool memberJoins;
+   late bool memberLeaves;
+   late bool memberInvites;
+   late bool memberPromotions;
+   late bool memberRestrictions;
+   late bool infoChanges;
+   late bool settingChanges;
+   late bool inviteLinkChanges;
+   late bool voiceChatChanges;
 
   @override
   Map<String, dynamic> get params => {
@@ -15134,18 +15134,18 @@ class ChatEventLogFilters extends TdObject {
   };
 
   ChatEventLogFilters({
-    this.messageEdits,
-    this.messageDeletions,
-    this.messagePins,
-    this.memberJoins,
-    this.memberLeaves,
-    this.memberInvites,
-    this.memberPromotions,
-    this.memberRestrictions,
-    this.infoChanges,
-    this.settingChanges,
-    this.inviteLinkChanges,
-    this.voiceChatChanges,
+  required this.messageEdits,
+  required this.messageDeletions,
+  required this.messagePins,
+  required this.memberJoins,
+  required this.memberLeaves,
+  required this.memberInvites,
+  required this.memberPromotions,
+  required this.memberRestrictions,
+  required this.infoChanges,
+  required this.settingChanges,
+  required this.inviteLinkChanges,
+  required this.voiceChatChanges,
   });
 
   ChatEventLogFilters.fromJson(Map<String, dynamic> json) {
@@ -15171,7 +15171,7 @@ class LanguagePackStringValueOrdinary extends LanguagePackStringValue {
   @override
   String get tdType => 'languagePackStringValueOrdinary';
 
-  String value;
+   late String value;
 
   @override
   Map<String, dynamic> get params => {
@@ -15179,7 +15179,7 @@ class LanguagePackStringValueOrdinary extends LanguagePackStringValue {
   };
 
   LanguagePackStringValueOrdinary({
-    this.value,
+  required this.value,
   });
 
   LanguagePackStringValueOrdinary.fromJson(Map<String, dynamic> json) {
@@ -15192,12 +15192,12 @@ class LanguagePackStringValuePluralized extends LanguagePackStringValue {
   @override
   String get tdType => 'languagePackStringValuePluralized';
 
-  String zeroValue;
-  String oneValue;
-  String twoValue;
-  String fewValue;
-  String manyValue;
-  String otherValue;
+   late String zeroValue;
+   late String oneValue;
+   late String twoValue;
+   late String fewValue;
+   late String manyValue;
+   late String otherValue;
 
   @override
   Map<String, dynamic> get params => {
@@ -15210,12 +15210,12 @@ class LanguagePackStringValuePluralized extends LanguagePackStringValue {
   };
 
   LanguagePackStringValuePluralized({
-    this.zeroValue,
-    this.oneValue,
-    this.twoValue,
-    this.fewValue,
-    this.manyValue,
-    this.otherValue,
+  required this.zeroValue,
+  required this.oneValue,
+  required this.twoValue,
+  required this.fewValue,
+  required this.manyValue,
+  required this.otherValue,
   });
 
   LanguagePackStringValuePluralized.fromJson(Map<String, dynamic> json) {
@@ -15246,8 +15246,8 @@ class LanguagePackString extends TdObject {
   @override
   String get tdType => 'languagePackString';
 
-  String key;
-  LanguagePackStringValue value;
+   late String key;
+   late LanguagePackStringValue value;
 
   @override
   Map<String, dynamic> get params => {
@@ -15256,8 +15256,8 @@ class LanguagePackString extends TdObject {
   };
 
   LanguagePackString({
-    this.key,
-    this.value,
+  required this.key,
+  required this.value,
   });
 
   LanguagePackString.fromJson(Map<String, dynamic> json) {
@@ -15271,7 +15271,7 @@ class LanguagePackStrings extends TdObject {
   @override
   String get tdType => 'languagePackStrings';
 
-  List<LanguagePackString> strings;
+   late List<LanguagePackString> strings;
 
   @override
   Map<String, dynamic> get params => {
@@ -15279,7 +15279,7 @@ class LanguagePackStrings extends TdObject {
   };
 
   LanguagePackStrings({
-    this.strings,
+  required this.strings,
   });
 
   LanguagePackStrings.fromJson(Map<String, dynamic> json) {
@@ -15292,19 +15292,19 @@ class LanguagePackInfo extends TdObject {
   @override
   String get tdType => 'languagePackInfo';
 
-  String id;
-  String baseLanguagePackId;
-  String name;
-  String nativeName;
-  String pluralCode;
-  bool isOfficial;
-  bool isRtl;
-  bool isBeta;
-  bool isInstalled;
-  int totalStringCount;
-  int translatedStringCount;
-  int localStringCount;
-  String translationUrl;
+   late String id;
+   late String baseLanguagePackId;
+   late String name;
+   late String nativeName;
+   late String pluralCode;
+   late bool isOfficial;
+   late bool isRtl;
+   late bool isBeta;
+   late bool isInstalled;
+   late int totalStringCount;
+   late int translatedStringCount;
+   late int localStringCount;
+   late String translationUrl;
 
   @override
   Map<String, dynamic> get params => {
@@ -15324,19 +15324,19 @@ class LanguagePackInfo extends TdObject {
   };
 
   LanguagePackInfo({
-    this.id,
-    this.baseLanguagePackId,
-    this.name,
-    this.nativeName,
-    this.pluralCode,
-    this.isOfficial,
-    this.isRtl,
-    this.isBeta,
-    this.isInstalled,
-    this.totalStringCount,
-    this.translatedStringCount,
-    this.localStringCount,
-    this.translationUrl,
+  required this.id,
+  required this.baseLanguagePackId,
+  required this.name,
+  required this.nativeName,
+  required this.pluralCode,
+  required this.isOfficial,
+  required this.isRtl,
+  required this.isBeta,
+  required this.isInstalled,
+  required this.totalStringCount,
+  required this.translatedStringCount,
+  required this.localStringCount,
+  required this.translationUrl,
   });
 
   LanguagePackInfo.fromJson(Map<String, dynamic> json) {
@@ -15361,7 +15361,7 @@ class LocalizationTargetInfo extends TdObject {
   @override
   String get tdType => 'localizationTargetInfo';
 
-  List<LanguagePackInfo> languagePacks;
+   late List<LanguagePackInfo> languagePacks;
 
   @override
   Map<String, dynamic> get params => {
@@ -15369,7 +15369,7 @@ class LocalizationTargetInfo extends TdObject {
   };
 
   LocalizationTargetInfo({
-    this.languagePacks,
+  required this.languagePacks,
   });
 
   LocalizationTargetInfo.fromJson(Map<String, dynamic> json) {
@@ -15384,8 +15384,8 @@ class DeviceTokenFirebaseCloudMessaging extends DeviceToken {
   @override
   String get tdType => 'deviceTokenFirebaseCloudMessaging';
 
-  String token;
-  bool encrypt;
+   late String token;
+   late bool encrypt;
 
   @override
   Map<String, dynamic> get params => {
@@ -15394,8 +15394,8 @@ class DeviceTokenFirebaseCloudMessaging extends DeviceToken {
   };
 
   DeviceTokenFirebaseCloudMessaging({
-    this.token,
-    this.encrypt,
+  required this.token,
+  required this.encrypt,
   });
 
   DeviceTokenFirebaseCloudMessaging.fromJson(Map<String, dynamic> json) {
@@ -15409,8 +15409,8 @@ class DeviceTokenApplePush extends DeviceToken {
   @override
   String get tdType => 'deviceTokenApplePush';
 
-  String deviceToken;
-  bool isAppSandbox;
+   late String deviceToken;
+   late bool isAppSandbox;
 
   @override
   Map<String, dynamic> get params => {
@@ -15419,8 +15419,8 @@ class DeviceTokenApplePush extends DeviceToken {
   };
 
   DeviceTokenApplePush({
-    this.deviceToken,
-    this.isAppSandbox,
+  required this.deviceToken,
+  required this.isAppSandbox,
   });
 
   DeviceTokenApplePush.fromJson(Map<String, dynamic> json) {
@@ -15434,9 +15434,9 @@ class DeviceTokenApplePushVoIP extends DeviceToken {
   @override
   String get tdType => 'deviceTokenApplePushVoIP';
 
-  String deviceToken;
-  bool isAppSandbox;
-  bool encrypt;
+   late String deviceToken;
+   late bool isAppSandbox;
+   late bool encrypt;
 
   @override
   Map<String, dynamic> get params => {
@@ -15446,9 +15446,9 @@ class DeviceTokenApplePushVoIP extends DeviceToken {
   };
 
   DeviceTokenApplePushVoIP({
-    this.deviceToken,
-    this.isAppSandbox,
-    this.encrypt,
+  required this.deviceToken,
+  required this.isAppSandbox,
+  required this.encrypt,
   });
 
   DeviceTokenApplePushVoIP.fromJson(Map<String, dynamic> json) {
@@ -15463,7 +15463,7 @@ class DeviceTokenWindowsPush extends DeviceToken {
   @override
   String get tdType => 'deviceTokenWindowsPush';
 
-  String accessToken;
+   late String accessToken;
 
   @override
   Map<String, dynamic> get params => {
@@ -15471,7 +15471,7 @@ class DeviceTokenWindowsPush extends DeviceToken {
   };
 
   DeviceTokenWindowsPush({
-    this.accessToken,
+  required this.accessToken,
   });
 
   DeviceTokenWindowsPush.fromJson(Map<String, dynamic> json) {
@@ -15484,7 +15484,7 @@ class DeviceTokenMicrosoftPush extends DeviceToken {
   @override
   String get tdType => 'deviceTokenMicrosoftPush';
 
-  String channelUri;
+   late String channelUri;
 
   @override
   Map<String, dynamic> get params => {
@@ -15492,7 +15492,7 @@ class DeviceTokenMicrosoftPush extends DeviceToken {
   };
 
   DeviceTokenMicrosoftPush({
-    this.channelUri,
+  required this.channelUri,
   });
 
   DeviceTokenMicrosoftPush.fromJson(Map<String, dynamic> json) {
@@ -15505,7 +15505,7 @@ class DeviceTokenMicrosoftPushVoIP extends DeviceToken {
   @override
   String get tdType => 'deviceTokenMicrosoftPushVoIP';
 
-  String channelUri;
+   late String channelUri;
 
   @override
   Map<String, dynamic> get params => {
@@ -15513,7 +15513,7 @@ class DeviceTokenMicrosoftPushVoIP extends DeviceToken {
   };
 
   DeviceTokenMicrosoftPushVoIP({
-    this.channelUri,
+  required this.channelUri,
   });
 
   DeviceTokenMicrosoftPushVoIP.fromJson(Map<String, dynamic> json) {
@@ -15526,9 +15526,9 @@ class DeviceTokenWebPush extends DeviceToken {
   @override
   String get tdType => 'deviceTokenWebPush';
 
-  String endpoint;
-  String p256dhBase64url;
-  String authBase64url;
+   late String endpoint;
+   late String p256dhBase64url;
+   late String authBase64url;
 
   @override
   Map<String, dynamic> get params => {
@@ -15538,9 +15538,9 @@ class DeviceTokenWebPush extends DeviceToken {
   };
 
   DeviceTokenWebPush({
-    this.endpoint,
-    this.p256dhBase64url,
-    this.authBase64url,
+  required this.endpoint,
+  required this.p256dhBase64url,
+  required this.authBase64url,
   });
 
   DeviceTokenWebPush.fromJson(Map<String, dynamic> json) {
@@ -15555,7 +15555,7 @@ class DeviceTokenSimplePush extends DeviceToken {
   @override
   String get tdType => 'deviceTokenSimplePush';
 
-  String endpoint;
+   late String endpoint;
 
   @override
   Map<String, dynamic> get params => {
@@ -15563,7 +15563,7 @@ class DeviceTokenSimplePush extends DeviceToken {
   };
 
   DeviceTokenSimplePush({
-    this.endpoint,
+  required this.endpoint,
   });
 
   DeviceTokenSimplePush.fromJson(Map<String, dynamic> json) {
@@ -15576,7 +15576,7 @@ class DeviceTokenUbuntuPush extends DeviceToken {
   @override
   String get tdType => 'deviceTokenUbuntuPush';
 
-  String token;
+   late String token;
 
   @override
   Map<String, dynamic> get params => {
@@ -15584,7 +15584,7 @@ class DeviceTokenUbuntuPush extends DeviceToken {
   };
 
   DeviceTokenUbuntuPush({
-    this.token,
+  required this.token,
   });
 
   DeviceTokenUbuntuPush.fromJson(Map<String, dynamic> json) {
@@ -15597,7 +15597,7 @@ class DeviceTokenBlackBerryPush extends DeviceToken {
   @override
   String get tdType => 'deviceTokenBlackBerryPush';
 
-  String token;
+   late String token;
 
   @override
   Map<String, dynamic> get params => {
@@ -15605,7 +15605,7 @@ class DeviceTokenBlackBerryPush extends DeviceToken {
   };
 
   DeviceTokenBlackBerryPush({
-    this.token,
+  required this.token,
   });
 
   DeviceTokenBlackBerryPush.fromJson(Map<String, dynamic> json) {
@@ -15618,7 +15618,7 @@ class DeviceTokenTizenPush extends DeviceToken {
   @override
   String get tdType => 'deviceTokenTizenPush';
 
-  String regId;
+   late String regId;
 
   @override
   Map<String, dynamic> get params => {
@@ -15626,7 +15626,7 @@ class DeviceTokenTizenPush extends DeviceToken {
   };
 
   DeviceTokenTizenPush({
-    this.regId,
+  required this.regId,
   });
 
   DeviceTokenTizenPush.fromJson(Map<String, dynamic> json) {
@@ -15639,7 +15639,7 @@ class PushReceiverId extends TdObject {
   @override
   String get tdType => 'pushReceiverId';
 
-  int id;
+   late int id;
 
   @override
   Map<String, dynamic> get params => {
@@ -15647,7 +15647,7 @@ class PushReceiverId extends TdObject {
   };
 
   PushReceiverId({
-    this.id,
+  required this.id,
   });
 
   PushReceiverId.fromJson(Map<String, dynamic> json) {
@@ -15662,7 +15662,7 @@ class BackgroundFillSolid extends BackgroundFill {
   @override
   String get tdType => 'backgroundFillSolid';
 
-  int color;
+   late int color;
 
   @override
   Map<String, dynamic> get params => {
@@ -15670,7 +15670,7 @@ class BackgroundFillSolid extends BackgroundFill {
   };
 
   BackgroundFillSolid({
-    this.color,
+  required this.color,
   });
 
   BackgroundFillSolid.fromJson(Map<String, dynamic> json) {
@@ -15683,9 +15683,9 @@ class BackgroundFillGradient extends BackgroundFill {
   @override
   String get tdType => 'backgroundFillGradient';
 
-  int topColor;
-  int bottomColor;
-  int rotationAngle;
+   late int topColor;
+   late int bottomColor;
+   late int rotationAngle;
 
   @override
   Map<String, dynamic> get params => {
@@ -15695,9 +15695,9 @@ class BackgroundFillGradient extends BackgroundFill {
   };
 
   BackgroundFillGradient({
-    this.topColor,
-    this.bottomColor,
-    this.rotationAngle,
+  required this.topColor,
+  required this.bottomColor,
+  required this.rotationAngle,
   });
 
   BackgroundFillGradient.fromJson(Map<String, dynamic> json) {
@@ -15712,7 +15712,7 @@ class BackgroundFillFreeformGradient extends BackgroundFill {
   @override
   String get tdType => 'backgroundFillFreeformGradient';
 
-  List<int> colors;
+   late List<int> colors;
 
   @override
   Map<String, dynamic> get params => {
@@ -15720,7 +15720,7 @@ class BackgroundFillFreeformGradient extends BackgroundFill {
   };
 
   BackgroundFillFreeformGradient({
-    this.colors,
+  required this.colors,
   });
 
   BackgroundFillFreeformGradient.fromJson(Map<String, dynamic> json) {
@@ -15735,8 +15735,8 @@ class BackgroundTypeWallpaper extends BackgroundType {
   @override
   String get tdType => 'backgroundTypeWallpaper';
 
-  bool isBlurred;
-  bool isMoving;
+   late bool isBlurred;
+   late bool isMoving;
 
   @override
   Map<String, dynamic> get params => {
@@ -15745,8 +15745,8 @@ class BackgroundTypeWallpaper extends BackgroundType {
   };
 
   BackgroundTypeWallpaper({
-    this.isBlurred,
-    this.isMoving,
+  required this.isBlurred,
+  required this.isMoving,
   });
 
   BackgroundTypeWallpaper.fromJson(Map<String, dynamic> json) {
@@ -15760,10 +15760,10 @@ class BackgroundTypePattern extends BackgroundType {
   @override
   String get tdType => 'backgroundTypePattern';
 
-  BackgroundFill fill;
-  int intensity;
-  bool isInverted;
-  bool isMoving;
+   late BackgroundFill fill;
+   late int intensity;
+   late bool isInverted;
+   late bool isMoving;
 
   @override
   Map<String, dynamic> get params => {
@@ -15774,10 +15774,10 @@ class BackgroundTypePattern extends BackgroundType {
   };
 
   BackgroundTypePattern({
-    this.fill,
-    this.intensity,
-    this.isInverted,
-    this.isMoving,
+  required this.fill,
+  required this.intensity,
+  required this.isInverted,
+  required this.isMoving,
   });
 
   BackgroundTypePattern.fromJson(Map<String, dynamic> json) {
@@ -15793,7 +15793,7 @@ class BackgroundTypeFill extends BackgroundType {
   @override
   String get tdType => 'backgroundTypeFill';
 
-  BackgroundFill fill;
+   late BackgroundFill fill;
 
   @override
   Map<String, dynamic> get params => {
@@ -15801,7 +15801,7 @@ class BackgroundTypeFill extends BackgroundType {
   };
 
   BackgroundTypeFill({
-    this.fill,
+  required this.fill,
   });
 
   BackgroundTypeFill.fromJson(Map<String, dynamic> json) {
@@ -15814,12 +15814,12 @@ class Background extends TdObject {
   @override
   String get tdType => 'background';
 
-  int id;
-  bool isDefault;
-  bool isDark;
-  String name;
-  Document document;
-  BackgroundType type;
+   late int id;
+   late bool isDefault;
+   late bool isDark;
+   late String name;
+   late Document document;
+   late BackgroundType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -15832,12 +15832,12 @@ class Background extends TdObject {
   };
 
   Background({
-    this.id,
-    this.isDefault,
-    this.isDark,
-    this.name,
-    this.document,
-    this.type,
+  required this.id,
+  required this.isDefault,
+  required this.isDark,
+  required this.name,
+  required this.document,
+  required this.type,
   });
 
   Background.fromJson(Map<String, dynamic> json) {
@@ -15855,7 +15855,7 @@ class Backgrounds extends TdObject {
   @override
   String get tdType => 'backgrounds';
 
-  List<Background> backgrounds;
+   late List<Background> backgrounds;
 
   @override
   Map<String, dynamic> get params => {
@@ -15863,7 +15863,7 @@ class Backgrounds extends TdObject {
   };
 
   Backgrounds({
-    this.backgrounds,
+  required this.backgrounds,
   });
 
   Backgrounds.fromJson(Map<String, dynamic> json) {
@@ -15878,7 +15878,7 @@ class InputBackgroundLocal extends InputBackground {
   @override
   String get tdType => 'inputBackgroundLocal';
 
-  InputFile background;
+   late InputFile background;
 
   @override
   Map<String, dynamic> get params => {
@@ -15886,7 +15886,7 @@ class InputBackgroundLocal extends InputBackground {
   };
 
   InputBackgroundLocal({
-    this.background,
+  required this.background,
   });
 
   InputBackgroundLocal.fromJson(Map<String, dynamic> json) {
@@ -15899,7 +15899,7 @@ class InputBackgroundRemote extends InputBackground {
   @override
   String get tdType => 'inputBackgroundRemote';
 
-  int backgroundId;
+   late int backgroundId;
 
   @override
   Map<String, dynamic> get params => {
@@ -15907,7 +15907,7 @@ class InputBackgroundRemote extends InputBackground {
   };
 
   InputBackgroundRemote({
-    this.backgroundId,
+  required this.backgroundId,
   });
 
   InputBackgroundRemote.fromJson(Map<String, dynamic> json) {
@@ -15920,11 +15920,11 @@ class ThemeSettings extends TdObject {
   @override
   String get tdType => 'themeSettings';
 
-  int accentColor;
-  Background background;
-  BackgroundFill outgoingMessageFill;
-  bool animateOutgoingMessageFill;
-  int outgoingMessageAccentColor;
+   late int accentColor;
+   late Background background;
+   late BackgroundFill outgoingMessageFill;
+   late bool animateOutgoingMessageFill;
+   late int outgoingMessageAccentColor;
 
   @override
   Map<String, dynamic> get params => {
@@ -15936,11 +15936,11 @@ class ThemeSettings extends TdObject {
   };
 
   ThemeSettings({
-    this.accentColor,
-    this.background,
-    this.outgoingMessageFill,
-    this.animateOutgoingMessageFill,
-    this.outgoingMessageAccentColor,
+  required this.accentColor,
+  required this.background,
+  required this.outgoingMessageFill,
+  required this.animateOutgoingMessageFill,
+  required this.outgoingMessageAccentColor,
   });
 
   ThemeSettings.fromJson(Map<String, dynamic> json) {
@@ -15957,9 +15957,9 @@ class ChatTheme extends TdObject {
   @override
   String get tdType => 'chatTheme';
 
-  String name;
-  ThemeSettings lightSettings;
-  ThemeSettings darkSettings;
+   late String name;
+   late ThemeSettings lightSettings;
+   late ThemeSettings darkSettings;
 
   @override
   Map<String, dynamic> get params => {
@@ -15969,9 +15969,9 @@ class ChatTheme extends TdObject {
   };
 
   ChatTheme({
-    this.name,
-    this.lightSettings,
-    this.darkSettings,
+  required this.name,
+  required this.lightSettings,
+  required this.darkSettings,
   });
 
   ChatTheme.fromJson(Map<String, dynamic> json) {
@@ -15986,7 +15986,7 @@ class Hashtags extends TdObject {
   @override
   String get tdType => 'hashtags';
 
-  List<String> hashtags;
+   late List<String> hashtags;
 
   @override
   Map<String, dynamic> get params => {
@@ -15994,7 +15994,7 @@ class Hashtags extends TdObject {
   };
 
   Hashtags({
-    this.hashtags,
+  required this.hashtags,
   });
 
   Hashtags.fromJson(Map<String, dynamic> json) {
@@ -16035,7 +16035,7 @@ class CanTransferOwnershipResultPasswordTooFresh extends CanTransferOwnershipRes
   @override
   String get tdType => 'canTransferOwnershipResultPasswordTooFresh';
 
-  int retryAfter;
+   late int retryAfter;
 
   @override
   Map<String, dynamic> get params => {
@@ -16043,7 +16043,7 @@ class CanTransferOwnershipResultPasswordTooFresh extends CanTransferOwnershipRes
   };
 
   CanTransferOwnershipResultPasswordTooFresh({
-    this.retryAfter,
+  required this.retryAfter,
   });
 
   CanTransferOwnershipResultPasswordTooFresh.fromJson(Map<String, dynamic> json) {
@@ -16056,7 +16056,7 @@ class CanTransferOwnershipResultSessionTooFresh extends CanTransferOwnershipResu
   @override
   String get tdType => 'canTransferOwnershipResultSessionTooFresh';
 
-  int retryAfter;
+   late int retryAfter;
 
   @override
   Map<String, dynamic> get params => {
@@ -16064,7 +16064,7 @@ class CanTransferOwnershipResultSessionTooFresh extends CanTransferOwnershipResu
   };
 
   CanTransferOwnershipResultSessionTooFresh({
-    this.retryAfter,
+  required this.retryAfter,
   });
 
   CanTransferOwnershipResultSessionTooFresh.fromJson(Map<String, dynamic> json) {
@@ -16200,7 +16200,7 @@ class ResetPasswordResultPending extends ResetPasswordResult {
   @override
   String get tdType => 'resetPasswordResultPending';
 
-  int pendingResetDate;
+   late int pendingResetDate;
 
   @override
   Map<String, dynamic> get params => {
@@ -16208,7 +16208,7 @@ class ResetPasswordResultPending extends ResetPasswordResult {
   };
 
   ResetPasswordResultPending({
-    this.pendingResetDate,
+  required this.pendingResetDate,
   });
 
   ResetPasswordResultPending.fromJson(Map<String, dynamic> json) {
@@ -16221,7 +16221,7 @@ class ResetPasswordResultDeclined extends ResetPasswordResult {
   @override
   String get tdType => 'resetPasswordResultDeclined';
 
-  int retryDate;
+   late int retryDate;
 
   @override
   Map<String, dynamic> get params => {
@@ -16229,7 +16229,7 @@ class ResetPasswordResultDeclined extends ResetPasswordResult {
   };
 
   ResetPasswordResultDeclined({
-    this.retryDate,
+  required this.retryDate,
   });
 
   ResetPasswordResultDeclined.fromJson(Map<String, dynamic> json) {
@@ -16244,7 +16244,7 @@ class MessageFileTypePrivate extends MessageFileType {
   @override
   String get tdType => 'messageFileTypePrivate';
 
-  String name;
+   late String name;
 
   @override
   Map<String, dynamic> get params => {
@@ -16252,7 +16252,7 @@ class MessageFileTypePrivate extends MessageFileType {
   };
 
   MessageFileTypePrivate({
-    this.name,
+  required this.name,
   });
 
   MessageFileTypePrivate.fromJson(Map<String, dynamic> json) {
@@ -16265,7 +16265,7 @@ class MessageFileTypeGroup extends MessageFileType {
   @override
   String get tdType => 'messageFileTypeGroup';
 
-  String title;
+   late String title;
 
   @override
   Map<String, dynamic> get params => {
@@ -16273,7 +16273,7 @@ class MessageFileTypeGroup extends MessageFileType {
   };
 
   MessageFileTypeGroup({
-    this.title,
+  required this.title,
   });
 
   MessageFileTypeGroup.fromJson(Map<String, dynamic> json) {
@@ -16301,7 +16301,7 @@ class PushMessageContentHidden extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentHidden';
 
-  bool isPinned;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16309,7 +16309,7 @@ class PushMessageContentHidden extends PushMessageContent {
   };
 
   PushMessageContentHidden({
-    this.isPinned,
+  required this.isPinned,
   });
 
   PushMessageContentHidden.fromJson(Map<String, dynamic> json) {
@@ -16322,9 +16322,9 @@ class PushMessageContentAnimation extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentAnimation';
 
-  Animation animation;
-  String caption;
-  bool isPinned;
+   late Animation animation;
+   late String caption;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16334,9 +16334,9 @@ class PushMessageContentAnimation extends PushMessageContent {
   };
 
   PushMessageContentAnimation({
-    this.animation,
-    this.caption,
-    this.isPinned,
+  required this.animation,
+  required this.caption,
+  required this.isPinned,
   });
 
   PushMessageContentAnimation.fromJson(Map<String, dynamic> json) {
@@ -16351,8 +16351,8 @@ class PushMessageContentAudio extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentAudio';
 
-  Audio audio;
-  bool isPinned;
+   late Audio audio;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16361,8 +16361,8 @@ class PushMessageContentAudio extends PushMessageContent {
   };
 
   PushMessageContentAudio({
-    this.audio,
-    this.isPinned,
+  required this.audio,
+  required this.isPinned,
   });
 
   PushMessageContentAudio.fromJson(Map<String, dynamic> json) {
@@ -16376,8 +16376,8 @@ class PushMessageContentContact extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentContact';
 
-  String name;
-  bool isPinned;
+   late String name;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16386,8 +16386,8 @@ class PushMessageContentContact extends PushMessageContent {
   };
 
   PushMessageContentContact({
-    this.name,
-    this.isPinned,
+  required this.name,
+  required this.isPinned,
   });
 
   PushMessageContentContact.fromJson(Map<String, dynamic> json) {
@@ -16414,8 +16414,8 @@ class PushMessageContentDocument extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentDocument';
 
-  Document document;
-  bool isPinned;
+   late Document document;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16424,8 +16424,8 @@ class PushMessageContentDocument extends PushMessageContent {
   };
 
   PushMessageContentDocument({
-    this.document,
-    this.isPinned,
+  required this.document,
+  required this.isPinned,
   });
 
   PushMessageContentDocument.fromJson(Map<String, dynamic> json) {
@@ -16439,8 +16439,8 @@ class PushMessageContentGame extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentGame';
 
-  String title;
-  bool isPinned;
+   late String title;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16449,8 +16449,8 @@ class PushMessageContentGame extends PushMessageContent {
   };
 
   PushMessageContentGame({
-    this.title,
-    this.isPinned,
+  required this.title,
+  required this.isPinned,
   });
 
   PushMessageContentGame.fromJson(Map<String, dynamic> json) {
@@ -16464,9 +16464,9 @@ class PushMessageContentGameScore extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentGameScore';
 
-  String title;
-  int score;
-  bool isPinned;
+   late String title;
+   late int score;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16476,9 +16476,9 @@ class PushMessageContentGameScore extends PushMessageContent {
   };
 
   PushMessageContentGameScore({
-    this.title,
-    this.score,
-    this.isPinned,
+  required this.title,
+  required this.score,
+  required this.isPinned,
   });
 
   PushMessageContentGameScore.fromJson(Map<String, dynamic> json) {
@@ -16493,8 +16493,8 @@ class PushMessageContentInvoice extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentInvoice';
 
-  String price;
-  bool isPinned;
+   late String price;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16503,8 +16503,8 @@ class PushMessageContentInvoice extends PushMessageContent {
   };
 
   PushMessageContentInvoice({
-    this.price,
-    this.isPinned,
+  required this.price,
+  required this.isPinned,
   });
 
   PushMessageContentInvoice.fromJson(Map<String, dynamic> json) {
@@ -16518,8 +16518,8 @@ class PushMessageContentLocation extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentLocation';
 
-  bool isLive;
-  bool isPinned;
+   late bool isLive;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16528,8 +16528,8 @@ class PushMessageContentLocation extends PushMessageContent {
   };
 
   PushMessageContentLocation({
-    this.isLive,
-    this.isPinned,
+  required this.isLive,
+  required this.isPinned,
   });
 
   PushMessageContentLocation.fromJson(Map<String, dynamic> json) {
@@ -16543,10 +16543,10 @@ class PushMessageContentPhoto extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentPhoto';
 
-  Photo photo;
-  String caption;
-  bool isSecret;
-  bool isPinned;
+   late Photo photo;
+   late String caption;
+   late bool isSecret;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16557,10 +16557,10 @@ class PushMessageContentPhoto extends PushMessageContent {
   };
 
   PushMessageContentPhoto({
-    this.photo,
-    this.caption,
-    this.isSecret,
-    this.isPinned,
+  required this.photo,
+  required this.caption,
+  required this.isSecret,
+  required this.isPinned,
   });
 
   PushMessageContentPhoto.fromJson(Map<String, dynamic> json) {
@@ -16576,9 +16576,9 @@ class PushMessageContentPoll extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentPoll';
 
-  String question;
-  bool isRegular;
-  bool isPinned;
+   late String question;
+   late bool isRegular;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16588,9 +16588,9 @@ class PushMessageContentPoll extends PushMessageContent {
   };
 
   PushMessageContentPoll({
-    this.question,
-    this.isRegular,
-    this.isPinned,
+  required this.question,
+  required this.isRegular,
+  required this.isPinned,
   });
 
   PushMessageContentPoll.fromJson(Map<String, dynamic> json) {
@@ -16618,9 +16618,9 @@ class PushMessageContentSticker extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentSticker';
 
-  Sticker sticker;
-  String emoji;
-  bool isPinned;
+   late Sticker sticker;
+   late String emoji;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16630,9 +16630,9 @@ class PushMessageContentSticker extends PushMessageContent {
   };
 
   PushMessageContentSticker({
-    this.sticker,
-    this.emoji,
-    this.isPinned,
+  required this.sticker,
+  required this.emoji,
+  required this.isPinned,
   });
 
   PushMessageContentSticker.fromJson(Map<String, dynamic> json) {
@@ -16647,8 +16647,8 @@ class PushMessageContentText extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentText';
 
-  String text;
-  bool isPinned;
+   late String text;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16657,8 +16657,8 @@ class PushMessageContentText extends PushMessageContent {
   };
 
   PushMessageContentText({
-    this.text,
-    this.isPinned,
+  required this.text,
+  required this.isPinned,
   });
 
   PushMessageContentText.fromJson(Map<String, dynamic> json) {
@@ -16672,10 +16672,10 @@ class PushMessageContentVideo extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentVideo';
 
-  Video video;
-  String caption;
-  bool isSecret;
-  bool isPinned;
+   late Video video;
+   late String caption;
+   late bool isSecret;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16686,10 +16686,10 @@ class PushMessageContentVideo extends PushMessageContent {
   };
 
   PushMessageContentVideo({
-    this.video,
-    this.caption,
-    this.isSecret,
-    this.isPinned,
+  required this.video,
+  required this.caption,
+  required this.isSecret,
+  required this.isPinned,
   });
 
   PushMessageContentVideo.fromJson(Map<String, dynamic> json) {
@@ -16705,8 +16705,8 @@ class PushMessageContentVideoNote extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentVideoNote';
 
-  VideoNote videoNote;
-  bool isPinned;
+   late VideoNote videoNote;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16715,8 +16715,8 @@ class PushMessageContentVideoNote extends PushMessageContent {
   };
 
   PushMessageContentVideoNote({
-    this.videoNote,
-    this.isPinned,
+  required this.videoNote,
+  required this.isPinned,
   });
 
   PushMessageContentVideoNote.fromJson(Map<String, dynamic> json) {
@@ -16730,8 +16730,8 @@ class PushMessageContentVoiceNote extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentVoiceNote';
 
-  VoiceNote voiceNote;
-  bool isPinned;
+   late VoiceNote voiceNote;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16740,8 +16740,8 @@ class PushMessageContentVoiceNote extends PushMessageContent {
   };
 
   PushMessageContentVoiceNote({
-    this.voiceNote,
-    this.isPinned,
+  required this.voiceNote,
+  required this.isPinned,
   });
 
   PushMessageContentVoiceNote.fromJson(Map<String, dynamic> json) {
@@ -16768,9 +16768,9 @@ class PushMessageContentChatAddMembers extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentChatAddMembers';
 
-  String memberName;
-  bool isCurrentUser;
-  bool isReturned;
+   late String memberName;
+   late bool isCurrentUser;
+   late bool isReturned;
 
   @override
   Map<String, dynamic> get params => {
@@ -16780,9 +16780,9 @@ class PushMessageContentChatAddMembers extends PushMessageContent {
   };
 
   PushMessageContentChatAddMembers({
-    this.memberName,
-    this.isCurrentUser,
-    this.isReturned,
+  required this.memberName,
+  required this.isCurrentUser,
+  required this.isReturned,
   });
 
   PushMessageContentChatAddMembers.fromJson(Map<String, dynamic> json) {
@@ -16810,7 +16810,7 @@ class PushMessageContentChatChangeTitle extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentChatChangeTitle';
 
-  String title;
+   late String title;
 
   @override
   Map<String, dynamic> get params => {
@@ -16818,7 +16818,7 @@ class PushMessageContentChatChangeTitle extends PushMessageContent {
   };
 
   PushMessageContentChatChangeTitle({
-    this.title,
+  required this.title,
   });
 
   PushMessageContentChatChangeTitle.fromJson(Map<String, dynamic> json) {
@@ -16831,7 +16831,7 @@ class PushMessageContentChatSetTheme extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentChatSetTheme';
 
-  String themeName;
+   late String themeName;
 
   @override
   Map<String, dynamic> get params => {
@@ -16839,7 +16839,7 @@ class PushMessageContentChatSetTheme extends PushMessageContent {
   };
 
   PushMessageContentChatSetTheme({
-    this.themeName,
+  required this.themeName,
   });
 
   PushMessageContentChatSetTheme.fromJson(Map<String, dynamic> json) {
@@ -16852,9 +16852,9 @@ class PushMessageContentChatDeleteMember extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentChatDeleteMember';
 
-  String memberName;
-  bool isCurrentUser;
-  bool isLeft;
+   late String memberName;
+   late bool isCurrentUser;
+   late bool isLeft;
 
   @override
   Map<String, dynamic> get params => {
@@ -16864,9 +16864,9 @@ class PushMessageContentChatDeleteMember extends PushMessageContent {
   };
 
   PushMessageContentChatDeleteMember({
-    this.memberName,
-    this.isCurrentUser,
-    this.isLeft,
+  required this.memberName,
+  required this.isCurrentUser,
+  required this.isLeft,
   });
 
   PushMessageContentChatDeleteMember.fromJson(Map<String, dynamic> json) {
@@ -16894,7 +16894,7 @@ class PushMessageContentMessageForwards extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentMessageForwards';
 
-  int totalCount;
+   late int totalCount;
 
   @override
   Map<String, dynamic> get params => {
@@ -16902,7 +16902,7 @@ class PushMessageContentMessageForwards extends PushMessageContent {
   };
 
   PushMessageContentMessageForwards({
-    this.totalCount,
+  required this.totalCount,
   });
 
   PushMessageContentMessageForwards.fromJson(Map<String, dynamic> json) {
@@ -16915,11 +16915,11 @@ class PushMessageContentMediaAlbum extends PushMessageContent {
   @override
   String get tdType => 'pushMessageContentMediaAlbum';
 
-  int totalCount;
-  bool hasPhotos;
-  bool hasVideos;
-  bool hasAudios;
-  bool hasDocuments;
+   late int totalCount;
+   late bool hasPhotos;
+   late bool hasVideos;
+   late bool hasAudios;
+   late bool hasDocuments;
 
   @override
   Map<String, dynamic> get params => {
@@ -16931,11 +16931,11 @@ class PushMessageContentMediaAlbum extends PushMessageContent {
   };
 
   PushMessageContentMediaAlbum({
-    this.totalCount,
-    this.hasPhotos,
-    this.hasVideos,
-    this.hasAudios,
-    this.hasDocuments,
+  required this.totalCount,
+  required this.hasPhotos,
+  required this.hasVideos,
+  required this.hasAudios,
+  required this.hasDocuments,
   });
 
   PushMessageContentMediaAlbum.fromJson(Map<String, dynamic> json) {
@@ -16954,7 +16954,7 @@ class NotificationTypeNewMessage extends NotificationType {
   @override
   String get tdType => 'notificationTypeNewMessage';
 
-  Message message;
+   late Message message;
 
   @override
   Map<String, dynamic> get params => {
@@ -16962,7 +16962,7 @@ class NotificationTypeNewMessage extends NotificationType {
   };
 
   NotificationTypeNewMessage({
-    this.message,
+  required this.message,
   });
 
   NotificationTypeNewMessage.fromJson(Map<String, dynamic> json) {
@@ -16988,7 +16988,7 @@ class NotificationTypeNewCall extends NotificationType {
   @override
   String get tdType => 'notificationTypeNewCall';
 
-  int callId;
+   late int callId;
 
   @override
   Map<String, dynamic> get params => {
@@ -16996,7 +16996,7 @@ class NotificationTypeNewCall extends NotificationType {
   };
 
   NotificationTypeNewCall({
-    this.callId,
+  required this.callId,
   });
 
   NotificationTypeNewCall.fromJson(Map<String, dynamic> json) {
@@ -17009,11 +17009,11 @@ class NotificationTypeNewPushMessage extends NotificationType {
   @override
   String get tdType => 'notificationTypeNewPushMessage';
 
-  int messageId;
-  MessageSender sender;
-  String senderName;
-  bool isOutgoing;
-  PushMessageContent content;
+   late int messageId;
+   late MessageSender sender;
+   late String senderName;
+   late bool isOutgoing;
+   late PushMessageContent content;
 
   @override
   Map<String, dynamic> get params => {
@@ -17025,11 +17025,11 @@ class NotificationTypeNewPushMessage extends NotificationType {
   };
 
   NotificationTypeNewPushMessage({
-    this.messageId,
-    this.sender,
-    this.senderName,
-    this.isOutgoing,
-    this.content,
+  required this.messageId,
+  required this.sender,
+  required this.senderName,
+  required this.isOutgoing,
+  required this.content,
   });
 
   NotificationTypeNewPushMessage.fromJson(Map<String, dynamic> json) {
@@ -17100,10 +17100,10 @@ class Notification extends TdObject {
   @override
   String get tdType => 'notification';
 
-  int id;
-  int date;
-  bool isSilent;
-  NotificationType type;
+   late int id;
+   late int date;
+   late bool isSilent;
+   late NotificationType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -17114,10 +17114,10 @@ class Notification extends TdObject {
   };
 
   Notification({
-    this.id,
-    this.date,
-    this.isSilent,
-    this.type,
+  required this.id,
+  required this.date,
+  required this.isSilent,
+  required this.type,
   });
 
   Notification.fromJson(Map<String, dynamic> json) {
@@ -17133,11 +17133,11 @@ class NotificationGroup extends TdObject {
   @override
   String get tdType => 'notificationGroup';
 
-  int id;
-  NotificationGroupType type;
-  int chatId;
-  int totalCount;
-  List<Notification> notifications;
+   late int id;
+   late NotificationGroupType type;
+   late int chatId;
+   late int totalCount;
+   late List<Notification> notifications;
 
   @override
   Map<String, dynamic> get params => {
@@ -17149,11 +17149,11 @@ class NotificationGroup extends TdObject {
   };
 
   NotificationGroup({
-    this.id,
-    this.type,
-    this.chatId,
-    this.totalCount,
-    this.notifications,
+  required this.id,
+  required this.type,
+  required this.chatId,
+  required this.totalCount,
+  required this.notifications,
   });
 
   NotificationGroup.fromJson(Map<String, dynamic> json) {
@@ -17172,7 +17172,7 @@ class OptionValueBoolean extends OptionValue {
   @override
   String get tdType => 'optionValueBoolean';
 
-  bool value;
+   late bool value;
 
   @override
   Map<String, dynamic> get params => {
@@ -17180,7 +17180,7 @@ class OptionValueBoolean extends OptionValue {
   };
 
   OptionValueBoolean({
-    this.value,
+  required this.value,
   });
 
   OptionValueBoolean.fromJson(Map<String, dynamic> json) {
@@ -17206,7 +17206,7 @@ class OptionValueInteger extends OptionValue {
   @override
   String get tdType => 'optionValueInteger';
 
-  int value;
+   late int value;
 
   @override
   Map<String, dynamic> get params => {
@@ -17214,7 +17214,7 @@ class OptionValueInteger extends OptionValue {
   };
 
   OptionValueInteger({
-    this.value,
+  required this.value,
   });
 
   OptionValueInteger.fromJson(Map<String, dynamic> json) {
@@ -17227,7 +17227,7 @@ class OptionValueString extends OptionValue {
   @override
   String get tdType => 'optionValueString';
 
-  String value;
+   late String value;
 
   @override
   Map<String, dynamic> get params => {
@@ -17235,7 +17235,7 @@ class OptionValueString extends OptionValue {
   };
 
   OptionValueString({
-    this.value,
+  required this.value,
   });
 
   OptionValueString.fromJson(Map<String, dynamic> json) {
@@ -17248,8 +17248,8 @@ class JsonObjectMember extends TdObject {
   @override
   String get tdType => 'jsonObjectMember';
 
-  String key;
-  JsonValue value;
+   late String key;
+   late JsonValue value;
 
   @override
   Map<String, dynamic> get params => {
@@ -17258,8 +17258,8 @@ class JsonObjectMember extends TdObject {
   };
 
   JsonObjectMember({
-    this.key,
-    this.value,
+  required this.key,
+  required this.value,
   });
 
   JsonObjectMember.fromJson(Map<String, dynamic> json) {
@@ -17288,7 +17288,7 @@ class JsonValueBoolean extends JsonValue {
   @override
   String get tdType => 'jsonValueBoolean';
 
-  bool value;
+   late bool value;
 
   @override
   Map<String, dynamic> get params => {
@@ -17296,7 +17296,7 @@ class JsonValueBoolean extends JsonValue {
   };
 
   JsonValueBoolean({
-    this.value,
+  required this.value,
   });
 
   JsonValueBoolean.fromJson(Map<String, dynamic> json) {
@@ -17309,7 +17309,7 @@ class JsonValueNumber extends JsonValue {
   @override
   String get tdType => 'jsonValueNumber';
 
-  double value;
+   late double value;
 
   @override
   Map<String, dynamic> get params => {
@@ -17317,7 +17317,7 @@ class JsonValueNumber extends JsonValue {
   };
 
   JsonValueNumber({
-    this.value,
+  required this.value,
   });
 
   JsonValueNumber.fromJson(Map<String, dynamic> json) {
@@ -17330,7 +17330,7 @@ class JsonValueString extends JsonValue {
   @override
   String get tdType => 'jsonValueString';
 
-  String value;
+   late String value;
 
   @override
   Map<String, dynamic> get params => {
@@ -17338,7 +17338,7 @@ class JsonValueString extends JsonValue {
   };
 
   JsonValueString({
-    this.value,
+  required this.value,
   });
 
   JsonValueString.fromJson(Map<String, dynamic> json) {
@@ -17351,7 +17351,7 @@ class JsonValueArray extends JsonValue {
   @override
   String get tdType => 'jsonValueArray';
 
-  List<JsonValue> values;
+   late List<JsonValue> values;
 
   @override
   Map<String, dynamic> get params => {
@@ -17359,7 +17359,7 @@ class JsonValueArray extends JsonValue {
   };
 
   JsonValueArray({
-    this.values,
+  required this.values,
   });
 
   JsonValueArray.fromJson(Map<String, dynamic> json) {
@@ -17372,7 +17372,7 @@ class JsonValueObject extends JsonValue {
   @override
   String get tdType => 'jsonValueObject';
 
-  List<JsonObjectMember> members;
+   late List<JsonObjectMember> members;
 
   @override
   Map<String, dynamic> get params => {
@@ -17380,7 +17380,7 @@ class JsonValueObject extends JsonValue {
   };
 
   JsonValueObject({
-    this.members,
+  required this.members,
   });
 
   JsonValueObject.fromJson(Map<String, dynamic> json) {
@@ -17421,7 +17421,7 @@ class UserPrivacySettingRuleAllowUsers extends UserPrivacySettingRule {
   @override
   String get tdType => 'userPrivacySettingRuleAllowUsers';
 
-  List<int> userIds;
+   late List<int> userIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -17429,7 +17429,7 @@ class UserPrivacySettingRuleAllowUsers extends UserPrivacySettingRule {
   };
 
   UserPrivacySettingRuleAllowUsers({
-    this.userIds,
+  required this.userIds,
   });
 
   UserPrivacySettingRuleAllowUsers.fromJson(Map<String, dynamic> json) {
@@ -17442,7 +17442,7 @@ class UserPrivacySettingRuleAllowChatMembers extends UserPrivacySettingRule {
   @override
   String get tdType => 'userPrivacySettingRuleAllowChatMembers';
 
-  List<int> chatIds;
+   late List<int> chatIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -17450,7 +17450,7 @@ class UserPrivacySettingRuleAllowChatMembers extends UserPrivacySettingRule {
   };
 
   UserPrivacySettingRuleAllowChatMembers({
-    this.chatIds,
+  required this.chatIds,
   });
 
   UserPrivacySettingRuleAllowChatMembers.fromJson(Map<String, dynamic> json) {
@@ -17489,7 +17489,7 @@ class UserPrivacySettingRuleRestrictUsers extends UserPrivacySettingRule {
   @override
   String get tdType => 'userPrivacySettingRuleRestrictUsers';
 
-  List<int> userIds;
+   late List<int> userIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -17497,7 +17497,7 @@ class UserPrivacySettingRuleRestrictUsers extends UserPrivacySettingRule {
   };
 
   UserPrivacySettingRuleRestrictUsers({
-    this.userIds,
+  required this.userIds,
   });
 
   UserPrivacySettingRuleRestrictUsers.fromJson(Map<String, dynamic> json) {
@@ -17510,7 +17510,7 @@ class UserPrivacySettingRuleRestrictChatMembers extends UserPrivacySettingRule {
   @override
   String get tdType => 'userPrivacySettingRuleRestrictChatMembers';
 
-  List<int> chatIds;
+   late List<int> chatIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -17518,7 +17518,7 @@ class UserPrivacySettingRuleRestrictChatMembers extends UserPrivacySettingRule {
   };
 
   UserPrivacySettingRuleRestrictChatMembers({
-    this.chatIds,
+  required this.chatIds,
   });
 
   UserPrivacySettingRuleRestrictChatMembers.fromJson(Map<String, dynamic> json) {
@@ -17531,7 +17531,7 @@ class UserPrivacySettingRules extends TdObject {
   @override
   String get tdType => 'userPrivacySettingRules';
 
-  List<UserPrivacySettingRule> rules;
+   late List<UserPrivacySettingRule> rules;
 
   @override
   Map<String, dynamic> get params => {
@@ -17539,7 +17539,7 @@ class UserPrivacySettingRules extends TdObject {
   };
 
   UserPrivacySettingRules({
-    this.rules,
+  required this.rules,
   });
 
   UserPrivacySettingRules.fromJson(Map<String, dynamic> json) {
@@ -17658,7 +17658,7 @@ class AccountTtl extends TdObject {
   @override
   String get tdType => 'accountTtl';
 
-  int days;
+   late int days;
 
   @override
   Map<String, dynamic> get params => {
@@ -17666,7 +17666,7 @@ class AccountTtl extends TdObject {
   };
 
   AccountTtl({
-    this.days,
+  required this.days,
   });
 
   AccountTtl.fromJson(Map<String, dynamic> json) {
@@ -17679,21 +17679,21 @@ class Session extends TdObject {
   @override
   String get tdType => 'session';
 
-  int id;
-  bool isCurrent;
-  bool isPasswordPending;
-  int apiId;
-  String applicationName;
-  String applicationVersion;
-  bool isOfficialApplication;
-  String deviceModel;
-  String platform;
-  String systemVersion;
-  int logInDate;
-  int lastActiveDate;
-  String ip;
-  String country;
-  String region;
+   late int id;
+   late bool isCurrent;
+   late bool isPasswordPending;
+   late int apiId;
+   late String applicationName;
+   late String applicationVersion;
+   late bool isOfficialApplication;
+   late String deviceModel;
+   late String platform;
+   late String systemVersion;
+   late int logInDate;
+   late int lastActiveDate;
+   late String ip;
+   late String country;
+   late String region;
 
   @override
   Map<String, dynamic> get params => {
@@ -17715,21 +17715,21 @@ class Session extends TdObject {
   };
 
   Session({
-    this.id,
-    this.isCurrent,
-    this.isPasswordPending,
-    this.apiId,
-    this.applicationName,
-    this.applicationVersion,
-    this.isOfficialApplication,
-    this.deviceModel,
-    this.platform,
-    this.systemVersion,
-    this.logInDate,
-    this.lastActiveDate,
-    this.ip,
-    this.country,
-    this.region,
+  required this.id,
+  required this.isCurrent,
+  required this.isPasswordPending,
+  required this.apiId,
+  required this.applicationName,
+  required this.applicationVersion,
+  required this.isOfficialApplication,
+  required this.deviceModel,
+  required this.platform,
+  required this.systemVersion,
+  required this.logInDate,
+  required this.lastActiveDate,
+  required this.ip,
+  required this.country,
+  required this.region,
   });
 
   Session.fromJson(Map<String, dynamic> json) {
@@ -17756,7 +17756,7 @@ class Sessions extends TdObject {
   @override
   String get tdType => 'sessions';
 
-  List<Session> sessions;
+   late List<Session> sessions;
 
   @override
   Map<String, dynamic> get params => {
@@ -17764,7 +17764,7 @@ class Sessions extends TdObject {
   };
 
   Sessions({
-    this.sessions,
+  required this.sessions,
   });
 
   Sessions.fromJson(Map<String, dynamic> json) {
@@ -17777,15 +17777,15 @@ class ConnectedWebsite extends TdObject {
   @override
   String get tdType => 'connectedWebsite';
 
-  int id;
-  String domainName;
-  int botUserId;
-  String browser;
-  String platform;
-  int logInDate;
-  int lastActiveDate;
-  String ip;
-  String location;
+   late int id;
+   late String domainName;
+   late int botUserId;
+   late String browser;
+   late String platform;
+   late int logInDate;
+   late int lastActiveDate;
+   late String ip;
+   late String location;
 
   @override
   Map<String, dynamic> get params => {
@@ -17801,15 +17801,15 @@ class ConnectedWebsite extends TdObject {
   };
 
   ConnectedWebsite({
-    this.id,
-    this.domainName,
-    this.botUserId,
-    this.browser,
-    this.platform,
-    this.logInDate,
-    this.lastActiveDate,
-    this.ip,
-    this.location,
+  required this.id,
+  required this.domainName,
+  required this.botUserId,
+  required this.browser,
+  required this.platform,
+  required this.logInDate,
+  required this.lastActiveDate,
+  required this.ip,
+  required this.location,
   });
 
   ConnectedWebsite.fromJson(Map<String, dynamic> json) {
@@ -17830,7 +17830,7 @@ class ConnectedWebsites extends TdObject {
   @override
   String get tdType => 'connectedWebsites';
 
-  List<ConnectedWebsite> websites;
+   late List<ConnectedWebsite> websites;
 
   @override
   Map<String, dynamic> get params => {
@@ -17838,7 +17838,7 @@ class ConnectedWebsites extends TdObject {
   };
 
   ConnectedWebsites({
-    this.websites,
+  required this.websites,
   });
 
   ConnectedWebsites.fromJson(Map<String, dynamic> json) {
@@ -17972,7 +17972,7 @@ class InternalLinkTypeAuthenticationCode extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypeAuthenticationCode';
 
-  String code;
+   late String code;
 
   @override
   Map<String, dynamic> get params => {
@@ -17980,7 +17980,7 @@ class InternalLinkTypeAuthenticationCode extends InternalLinkType {
   };
 
   InternalLinkTypeAuthenticationCode({
-    this.code,
+  required this.code,
   });
 
   InternalLinkTypeAuthenticationCode.fromJson(Map<String, dynamic> json) {
@@ -17993,7 +17993,7 @@ class InternalLinkTypeBackground extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypeBackground';
 
-  String backgroundName;
+   late String backgroundName;
 
   @override
   Map<String, dynamic> get params => {
@@ -18001,7 +18001,7 @@ class InternalLinkTypeBackground extends InternalLinkType {
   };
 
   InternalLinkTypeBackground({
-    this.backgroundName,
+  required this.backgroundName,
   });
 
   InternalLinkTypeBackground.fromJson(Map<String, dynamic> json) {
@@ -18014,8 +18014,8 @@ class InternalLinkTypeBotStart extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypeBotStart';
 
-  String botUsername;
-  String startParameter;
+   late String botUsername;
+   late String startParameter;
 
   @override
   Map<String, dynamic> get params => {
@@ -18024,8 +18024,8 @@ class InternalLinkTypeBotStart extends InternalLinkType {
   };
 
   InternalLinkTypeBotStart({
-    this.botUsername,
-    this.startParameter,
+  required this.botUsername,
+  required this.startParameter,
   });
 
   InternalLinkTypeBotStart.fromJson(Map<String, dynamic> json) {
@@ -18039,8 +18039,8 @@ class InternalLinkTypeBotStartInGroup extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypeBotStartInGroup';
 
-  String botUsername;
-  String startParameter;
+   late String botUsername;
+   late String startParameter;
 
   @override
   Map<String, dynamic> get params => {
@@ -18049,8 +18049,8 @@ class InternalLinkTypeBotStartInGroup extends InternalLinkType {
   };
 
   InternalLinkTypeBotStartInGroup({
-    this.botUsername,
-    this.startParameter,
+  required this.botUsername,
+  required this.startParameter,
   });
 
   InternalLinkTypeBotStartInGroup.fromJson(Map<String, dynamic> json) {
@@ -18077,7 +18077,7 @@ class InternalLinkTypeChatInvite extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypeChatInvite';
 
-  String inviteLink;
+   late String inviteLink;
 
   @override
   Map<String, dynamic> get params => {
@@ -18085,7 +18085,7 @@ class InternalLinkTypeChatInvite extends InternalLinkType {
   };
 
   InternalLinkTypeChatInvite({
-    this.inviteLink,
+  required this.inviteLink,
   });
 
   InternalLinkTypeChatInvite.fromJson(Map<String, dynamic> json) {
@@ -18111,8 +18111,8 @@ class InternalLinkTypeGame extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypeGame';
 
-  String botUsername;
-  String gameShortName;
+   late String botUsername;
+   late String gameShortName;
 
   @override
   Map<String, dynamic> get params => {
@@ -18121,8 +18121,8 @@ class InternalLinkTypeGame extends InternalLinkType {
   };
 
   InternalLinkTypeGame({
-    this.botUsername,
-    this.gameShortName,
+  required this.botUsername,
+  required this.gameShortName,
   });
 
   InternalLinkTypeGame.fromJson(Map<String, dynamic> json) {
@@ -18136,7 +18136,7 @@ class InternalLinkTypeLanguagePack extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypeLanguagePack';
 
-  String languagePackId;
+   late String languagePackId;
 
   @override
   Map<String, dynamic> get params => {
@@ -18144,7 +18144,7 @@ class InternalLinkTypeLanguagePack extends InternalLinkType {
   };
 
   InternalLinkTypeLanguagePack({
-    this.languagePackId,
+  required this.languagePackId,
   });
 
   InternalLinkTypeLanguagePack.fromJson(Map<String, dynamic> json) {
@@ -18157,7 +18157,7 @@ class InternalLinkTypeMessage extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypeMessage';
 
-  String url;
+   late String url;
 
   @override
   Map<String, dynamic> get params => {
@@ -18165,7 +18165,7 @@ class InternalLinkTypeMessage extends InternalLinkType {
   };
 
   InternalLinkTypeMessage({
-    this.url,
+  required this.url,
   });
 
   InternalLinkTypeMessage.fromJson(Map<String, dynamic> json) {
@@ -18178,8 +18178,8 @@ class InternalLinkTypeMessageDraft extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypeMessageDraft';
 
-  FormattedText text;
-  bool containsLink;
+   late FormattedText text;
+   late bool containsLink;
 
   @override
   Map<String, dynamic> get params => {
@@ -18188,8 +18188,8 @@ class InternalLinkTypeMessageDraft extends InternalLinkType {
   };
 
   InternalLinkTypeMessageDraft({
-    this.text,
-    this.containsLink,
+  required this.text,
+  required this.containsLink,
   });
 
   InternalLinkTypeMessageDraft.fromJson(Map<String, dynamic> json) {
@@ -18203,11 +18203,11 @@ class InternalLinkTypePassportDataRequest extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypePassportDataRequest';
 
-  int botUserId;
-  String scope;
-  String publicKey;
-  String nonce;
-  String callbackUrl;
+   late int botUserId;
+   late String scope;
+   late String publicKey;
+   late String nonce;
+   late String callbackUrl;
 
   @override
   Map<String, dynamic> get params => {
@@ -18219,11 +18219,11 @@ class InternalLinkTypePassportDataRequest extends InternalLinkType {
   };
 
   InternalLinkTypePassportDataRequest({
-    this.botUserId,
-    this.scope,
-    this.publicKey,
-    this.nonce,
-    this.callbackUrl,
+  required this.botUserId,
+  required this.scope,
+  required this.publicKey,
+  required this.nonce,
+  required this.callbackUrl,
   });
 
   InternalLinkTypePassportDataRequest.fromJson(Map<String, dynamic> json) {
@@ -18240,8 +18240,8 @@ class InternalLinkTypePhoneNumberConfirmation extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypePhoneNumberConfirmation';
 
-  String hash;
-  String phoneNumber;
+   late String hash;
+   late String phoneNumber;
 
   @override
   Map<String, dynamic> get params => {
@@ -18250,8 +18250,8 @@ class InternalLinkTypePhoneNumberConfirmation extends InternalLinkType {
   };
 
   InternalLinkTypePhoneNumberConfirmation({
-    this.hash,
-    this.phoneNumber,
+  required this.hash,
+  required this.phoneNumber,
   });
 
   InternalLinkTypePhoneNumberConfirmation.fromJson(Map<String, dynamic> json) {
@@ -18265,9 +18265,9 @@ class InternalLinkTypeProxy extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypeProxy';
 
-  String server;
-  int port;
-  ProxyType type;
+   late String server;
+   late int port;
+   late ProxyType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -18277,9 +18277,9 @@ class InternalLinkTypeProxy extends InternalLinkType {
   };
 
   InternalLinkTypeProxy({
-    this.server,
-    this.port,
-    this.type,
+  required this.server,
+  required this.port,
+  required this.type,
   });
 
   InternalLinkTypeProxy.fromJson(Map<String, dynamic> json) {
@@ -18294,7 +18294,7 @@ class InternalLinkTypePublicChat extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypePublicChat';
 
-  String chatUsername;
+   late String chatUsername;
 
   @override
   Map<String, dynamic> get params => {
@@ -18302,7 +18302,7 @@ class InternalLinkTypePublicChat extends InternalLinkType {
   };
 
   InternalLinkTypePublicChat({
-    this.chatUsername,
+  required this.chatUsername,
   });
 
   InternalLinkTypePublicChat.fromJson(Map<String, dynamic> json) {
@@ -18341,7 +18341,7 @@ class InternalLinkTypeStickerSet extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypeStickerSet';
 
-  String stickerSetName;
+   late String stickerSetName;
 
   @override
   Map<String, dynamic> get params => {
@@ -18349,7 +18349,7 @@ class InternalLinkTypeStickerSet extends InternalLinkType {
   };
 
   InternalLinkTypeStickerSet({
-    this.stickerSetName,
+  required this.stickerSetName,
   });
 
   InternalLinkTypeStickerSet.fromJson(Map<String, dynamic> json) {
@@ -18362,7 +18362,7 @@ class InternalLinkTypeTheme extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypeTheme';
 
-  String themeName;
+   late String themeName;
 
   @override
   Map<String, dynamic> get params => {
@@ -18370,7 +18370,7 @@ class InternalLinkTypeTheme extends InternalLinkType {
   };
 
   InternalLinkTypeTheme({
-    this.themeName,
+  required this.themeName,
   });
 
   InternalLinkTypeTheme.fromJson(Map<String, dynamic> json) {
@@ -18396,7 +18396,7 @@ class InternalLinkTypeUnknownDeepLink extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypeUnknownDeepLink';
 
-  String link;
+   late String link;
 
   @override
   Map<String, dynamic> get params => {
@@ -18404,7 +18404,7 @@ class InternalLinkTypeUnknownDeepLink extends InternalLinkType {
   };
 
   InternalLinkTypeUnknownDeepLink({
-    this.link,
+  required this.link,
   });
 
   InternalLinkTypeUnknownDeepLink.fromJson(Map<String, dynamic> json) {
@@ -18417,9 +18417,9 @@ class InternalLinkTypeVoiceChat extends InternalLinkType {
   @override
   String get tdType => 'internalLinkTypeVoiceChat';
 
-  String chatUsername;
-  String inviteHash;
-  bool isLiveStream;
+   late String chatUsername;
+   late String inviteHash;
+   late bool isLiveStream;
 
   @override
   Map<String, dynamic> get params => {
@@ -18429,9 +18429,9 @@ class InternalLinkTypeVoiceChat extends InternalLinkType {
   };
 
   InternalLinkTypeVoiceChat({
-    this.chatUsername,
-    this.inviteHash,
-    this.isLiveStream,
+  required this.chatUsername,
+  required this.inviteHash,
+  required this.isLiveStream,
   });
 
   InternalLinkTypeVoiceChat.fromJson(Map<String, dynamic> json) {
@@ -18446,8 +18446,8 @@ class MessageLink extends TdObject {
   @override
   String get tdType => 'messageLink';
 
-  String link;
-  bool isPublic;
+   late String link;
+   late bool isPublic;
 
   @override
   Map<String, dynamic> get params => {
@@ -18456,8 +18456,8 @@ class MessageLink extends TdObject {
   };
 
   MessageLink({
-    this.link,
-    this.isPublic,
+  required this.link,
+  required this.isPublic,
   });
 
   MessageLink.fromJson(Map<String, dynamic> json) {
@@ -18471,12 +18471,12 @@ class MessageLinkInfo extends TdObject {
   @override
   String get tdType => 'messageLinkInfo';
 
-  bool isPublic;
-  int chatId;
-  Message message;
-  int mediaTimestamp;
-  bool forAlbum;
-  bool forComment;
+   late bool isPublic;
+   late int chatId;
+   late Message message;
+   late int mediaTimestamp;
+   late bool forAlbum;
+   late bool forComment;
 
   @override
   Map<String, dynamic> get params => {
@@ -18489,12 +18489,12 @@ class MessageLinkInfo extends TdObject {
   };
 
   MessageLinkInfo({
-    this.isPublic,
-    this.chatId,
-    this.message,
-    this.mediaTimestamp,
-    this.forAlbum,
-    this.forComment,
+  required this.isPublic,
+  required this.chatId,
+  required this.message,
+  required this.mediaTimestamp,
+  required this.forAlbum,
+  required this.forComment,
   });
 
   MessageLinkInfo.fromJson(Map<String, dynamic> json) {
@@ -18512,7 +18512,7 @@ class FilePart extends TdObject {
   @override
   String get tdType => 'filePart';
 
-  String data;
+   late String data;
 
   @override
   Map<String, dynamic> get params => {
@@ -18520,7 +18520,7 @@ class FilePart extends TdObject {
   };
 
   FilePart({
-    this.data,
+  required this.data,
   });
 
   FilePart.fromJson(Map<String, dynamic> json) {
@@ -18743,9 +18743,9 @@ class StorageStatisticsByFileType extends TdObject {
   @override
   String get tdType => 'storageStatisticsByFileType';
 
-  FileType fileType;
-  int size;
-  int count;
+   late FileType fileType;
+   late int size;
+   late int count;
 
   @override
   Map<String, dynamic> get params => {
@@ -18755,9 +18755,9 @@ class StorageStatisticsByFileType extends TdObject {
   };
 
   StorageStatisticsByFileType({
-    this.fileType,
-    this.size,
-    this.count,
+  required this.fileType,
+  required this.size,
+  required this.count,
   });
 
   StorageStatisticsByFileType.fromJson(Map<String, dynamic> json) {
@@ -18772,10 +18772,10 @@ class StorageStatisticsByChat extends TdObject {
   @override
   String get tdType => 'storageStatisticsByChat';
 
-  int chatId;
-  int size;
-  int count;
-  List<StorageStatisticsByFileType> byFileType;
+   late int chatId;
+   late int size;
+   late int count;
+   late List<StorageStatisticsByFileType> byFileType;
 
   @override
   Map<String, dynamic> get params => {
@@ -18786,10 +18786,10 @@ class StorageStatisticsByChat extends TdObject {
   };
 
   StorageStatisticsByChat({
-    this.chatId,
-    this.size,
-    this.count,
-    this.byFileType,
+  required this.chatId,
+  required this.size,
+  required this.count,
+  required this.byFileType,
   });
 
   StorageStatisticsByChat.fromJson(Map<String, dynamic> json) {
@@ -18805,9 +18805,9 @@ class StorageStatistics extends TdObject {
   @override
   String get tdType => 'storageStatistics';
 
-  int size;
-  int count;
-  List<StorageStatisticsByChat> byChat;
+   late int size;
+   late int count;
+   late List<StorageStatisticsByChat> byChat;
 
   @override
   Map<String, dynamic> get params => {
@@ -18817,9 +18817,9 @@ class StorageStatistics extends TdObject {
   };
 
   StorageStatistics({
-    this.size,
-    this.count,
-    this.byChat,
+  required this.size,
+  required this.count,
+  required this.byChat,
   });
 
   StorageStatistics.fromJson(Map<String, dynamic> json) {
@@ -18834,11 +18834,11 @@ class StorageStatisticsFast extends TdObject {
   @override
   String get tdType => 'storageStatisticsFast';
 
-  int filesSize;
-  int fileCount;
-  int databaseSize;
-  int languagePackDatabaseSize;
-  int logSize;
+   late int filesSize;
+   late int fileCount;
+   late int databaseSize;
+   late int languagePackDatabaseSize;
+   late int logSize;
 
   @override
   Map<String, dynamic> get params => {
@@ -18850,11 +18850,11 @@ class StorageStatisticsFast extends TdObject {
   };
 
   StorageStatisticsFast({
-    this.filesSize,
-    this.fileCount,
-    this.databaseSize,
-    this.languagePackDatabaseSize,
-    this.logSize,
+  required this.filesSize,
+  required this.fileCount,
+  required this.databaseSize,
+  required this.languagePackDatabaseSize,
+  required this.logSize,
   });
 
   StorageStatisticsFast.fromJson(Map<String, dynamic> json) {
@@ -18871,7 +18871,7 @@ class DatabaseStatistics extends TdObject {
   @override
   String get tdType => 'databaseStatistics';
 
-  String statistics;
+   late String statistics;
 
   @override
   Map<String, dynamic> get params => {
@@ -18879,7 +18879,7 @@ class DatabaseStatistics extends TdObject {
   };
 
   DatabaseStatistics({
-    this.statistics,
+  required this.statistics,
   });
 
   DatabaseStatistics.fromJson(Map<String, dynamic> json) {
@@ -18961,10 +18961,10 @@ class NetworkStatisticsEntryFile extends NetworkStatisticsEntry {
   @override
   String get tdType => 'networkStatisticsEntryFile';
 
-  FileType fileType;
-  NetworkType networkType;
-  int sentBytes;
-  int receivedBytes;
+   late FileType fileType;
+   late NetworkType networkType;
+   late int sentBytes;
+   late int receivedBytes;
 
   @override
   Map<String, dynamic> get params => {
@@ -18975,10 +18975,10 @@ class NetworkStatisticsEntryFile extends NetworkStatisticsEntry {
   };
 
   NetworkStatisticsEntryFile({
-    this.fileType,
-    this.networkType,
-    this.sentBytes,
-    this.receivedBytes,
+  required this.fileType,
+  required this.networkType,
+  required this.sentBytes,
+  required this.receivedBytes,
   });
 
   NetworkStatisticsEntryFile.fromJson(Map<String, dynamic> json) {
@@ -18994,10 +18994,10 @@ class NetworkStatisticsEntryCall extends NetworkStatisticsEntry {
   @override
   String get tdType => 'networkStatisticsEntryCall';
 
-  NetworkType networkType;
-  int sentBytes;
-  int receivedBytes;
-  double duration;
+   late NetworkType networkType;
+   late int sentBytes;
+   late int receivedBytes;
+   late double duration;
 
   @override
   Map<String, dynamic> get params => {
@@ -19008,10 +19008,10 @@ class NetworkStatisticsEntryCall extends NetworkStatisticsEntry {
   };
 
   NetworkStatisticsEntryCall({
-    this.networkType,
-    this.sentBytes,
-    this.receivedBytes,
-    this.duration,
+  required this.networkType,
+  required this.sentBytes,
+  required this.receivedBytes,
+  required this.duration,
   });
 
   NetworkStatisticsEntryCall.fromJson(Map<String, dynamic> json) {
@@ -19027,8 +19027,8 @@ class NetworkStatistics extends TdObject {
   @override
   String get tdType => 'networkStatistics';
 
-  int sinceDate;
-  List<NetworkStatisticsEntry> entries;
+   late int sinceDate;
+   late List<NetworkStatisticsEntry> entries;
 
   @override
   Map<String, dynamic> get params => {
@@ -19037,8 +19037,8 @@ class NetworkStatistics extends TdObject {
   };
 
   NetworkStatistics({
-    this.sinceDate,
-    this.entries,
+  required this.sinceDate,
+  required this.entries,
   });
 
   NetworkStatistics.fromJson(Map<String, dynamic> json) {
@@ -19052,14 +19052,14 @@ class AutoDownloadSettings extends TdObject {
   @override
   String get tdType => 'autoDownloadSettings';
 
-  bool isAutoDownloadEnabled;
-  int maxPhotoFileSize;
-  int maxVideoFileSize;
-  int maxOtherFileSize;
-  int videoUploadBitrate;
-  bool preloadLargeVideos;
-  bool preloadNextAudio;
-  bool useLessDataForCalls;
+   late bool isAutoDownloadEnabled;
+   late int maxPhotoFileSize;
+   late int maxVideoFileSize;
+   late int maxOtherFileSize;
+   late int videoUploadBitrate;
+   late bool preloadLargeVideos;
+   late bool preloadNextAudio;
+   late bool useLessDataForCalls;
 
   @override
   Map<String, dynamic> get params => {
@@ -19074,14 +19074,14 @@ class AutoDownloadSettings extends TdObject {
   };
 
   AutoDownloadSettings({
-    this.isAutoDownloadEnabled,
-    this.maxPhotoFileSize,
-    this.maxVideoFileSize,
-    this.maxOtherFileSize,
-    this.videoUploadBitrate,
-    this.preloadLargeVideos,
-    this.preloadNextAudio,
-    this.useLessDataForCalls,
+  required this.isAutoDownloadEnabled,
+  required this.maxPhotoFileSize,
+  required this.maxVideoFileSize,
+  required this.maxOtherFileSize,
+  required this.videoUploadBitrate,
+  required this.preloadLargeVideos,
+  required this.preloadNextAudio,
+  required this.useLessDataForCalls,
   });
 
   AutoDownloadSettings.fromJson(Map<String, dynamic> json) {
@@ -19101,9 +19101,9 @@ class AutoDownloadSettingsPresets extends TdObject {
   @override
   String get tdType => 'autoDownloadSettingsPresets';
 
-  AutoDownloadSettings low;
-  AutoDownloadSettings medium;
-  AutoDownloadSettings high;
+   late AutoDownloadSettings low;
+   late AutoDownloadSettings medium;
+   late AutoDownloadSettings high;
 
   @override
   Map<String, dynamic> get params => {
@@ -19113,9 +19113,9 @@ class AutoDownloadSettingsPresets extends TdObject {
   };
 
   AutoDownloadSettingsPresets({
-    this.low,
-    this.medium,
-    this.high,
+  required this.low,
+  required this.medium,
+  required this.high,
   });
 
   AutoDownloadSettingsPresets.fromJson(Map<String, dynamic> json) {
@@ -19292,7 +19292,7 @@ class TMeUrlTypeUser extends TMeUrlType {
   @override
   String get tdType => 'tMeUrlTypeUser';
 
-  int userId;
+   late int userId;
 
   @override
   Map<String, dynamic> get params => {
@@ -19300,7 +19300,7 @@ class TMeUrlTypeUser extends TMeUrlType {
   };
 
   TMeUrlTypeUser({
-    this.userId,
+  required this.userId,
   });
 
   TMeUrlTypeUser.fromJson(Map<String, dynamic> json) {
@@ -19313,7 +19313,7 @@ class TMeUrlTypeSupergroup extends TMeUrlType {
   @override
   String get tdType => 'tMeUrlTypeSupergroup';
 
-  int supergroupId;
+   late int supergroupId;
 
   @override
   Map<String, dynamic> get params => {
@@ -19321,7 +19321,7 @@ class TMeUrlTypeSupergroup extends TMeUrlType {
   };
 
   TMeUrlTypeSupergroup({
-    this.supergroupId,
+  required this.supergroupId,
   });
 
   TMeUrlTypeSupergroup.fromJson(Map<String, dynamic> json) {
@@ -19334,7 +19334,7 @@ class TMeUrlTypeChatInvite extends TMeUrlType {
   @override
   String get tdType => 'tMeUrlTypeChatInvite';
 
-  ChatInviteLinkInfo info;
+   late ChatInviteLinkInfo info;
 
   @override
   Map<String, dynamic> get params => {
@@ -19342,7 +19342,7 @@ class TMeUrlTypeChatInvite extends TMeUrlType {
   };
 
   TMeUrlTypeChatInvite({
-    this.info,
+  required this.info,
   });
 
   TMeUrlTypeChatInvite.fromJson(Map<String, dynamic> json) {
@@ -19355,7 +19355,7 @@ class TMeUrlTypeStickerSet extends TMeUrlType {
   @override
   String get tdType => 'tMeUrlTypeStickerSet';
 
-  int stickerSetId;
+   late int stickerSetId;
 
   @override
   Map<String, dynamic> get params => {
@@ -19363,7 +19363,7 @@ class TMeUrlTypeStickerSet extends TMeUrlType {
   };
 
   TMeUrlTypeStickerSet({
-    this.stickerSetId,
+  required this.stickerSetId,
   });
 
   TMeUrlTypeStickerSet.fromJson(Map<String, dynamic> json) {
@@ -19376,8 +19376,8 @@ class TMeUrl extends TdObject {
   @override
   String get tdType => 'tMeUrl';
 
-  String url;
-  TMeUrlType type;
+   late String url;
+   late TMeUrlType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -19386,8 +19386,8 @@ class TMeUrl extends TdObject {
   };
 
   TMeUrl({
-    this.url,
-    this.type,
+  required this.url,
+  required this.type,
   });
 
   TMeUrl.fromJson(Map<String, dynamic> json) {
@@ -19401,7 +19401,7 @@ class TMeUrls extends TdObject {
   @override
   String get tdType => 'tMeUrls';
 
-  List<TMeUrl> urls;
+   late List<TMeUrl> urls;
 
   @override
   Map<String, dynamic> get params => {
@@ -19409,7 +19409,7 @@ class TMeUrls extends TdObject {
   };
 
   TMeUrls({
-    this.urls,
+  required this.urls,
   });
 
   TMeUrls.fromJson(Map<String, dynamic> json) {
@@ -19476,7 +19476,7 @@ class SuggestedActionConvertToBroadcastGroup extends SuggestedAction {
   @override
   String get tdType => 'suggestedActionConvertToBroadcastGroup';
 
-  int supergroupId;
+   late int supergroupId;
 
   @override
   Map<String, dynamic> get params => {
@@ -19484,7 +19484,7 @@ class SuggestedActionConvertToBroadcastGroup extends SuggestedAction {
   };
 
   SuggestedActionConvertToBroadcastGroup({
-    this.supergroupId,
+  required this.supergroupId,
   });
 
   SuggestedActionConvertToBroadcastGroup.fromJson(Map<String, dynamic> json) {
@@ -19497,7 +19497,7 @@ class Count extends TdObject {
   @override
   String get tdType => 'count';
 
-  int count;
+   late int count;
 
   @override
   Map<String, dynamic> get params => {
@@ -19505,7 +19505,7 @@ class Count extends TdObject {
   };
 
   Count({
-    this.count,
+  required this.count,
   });
 
   Count.fromJson(Map<String, dynamic> json) {
@@ -19518,7 +19518,7 @@ class Text extends TdObject {
   @override
   String get tdType => 'text';
 
-  String text;
+   late String text;
 
   @override
   Map<String, dynamic> get params => {
@@ -19526,7 +19526,7 @@ class Text extends TdObject {
   };
 
   Text({
-    this.text,
+  required this.text,
   });
 
   Text.fromJson(Map<String, dynamic> json) {
@@ -19539,7 +19539,7 @@ class Seconds extends TdObject {
   @override
   String get tdType => 'seconds';
 
-  double seconds;
+   late double seconds;
 
   @override
   Map<String, dynamic> get params => {
@@ -19547,7 +19547,7 @@ class Seconds extends TdObject {
   };
 
   Seconds({
-    this.seconds,
+  required this.seconds,
   });
 
   Seconds.fromJson(Map<String, dynamic> json) {
@@ -19560,8 +19560,8 @@ class DeepLinkInfo extends TdObject {
   @override
   String get tdType => 'deepLinkInfo';
 
-  FormattedText text;
-  bool needUpdateApplication;
+   late FormattedText text;
+   late bool needUpdateApplication;
 
   @override
   Map<String, dynamic> get params => {
@@ -19570,8 +19570,8 @@ class DeepLinkInfo extends TdObject {
   };
 
   DeepLinkInfo({
-    this.text,
-    this.needUpdateApplication,
+  required this.text,
+  required this.needUpdateApplication,
   });
 
   DeepLinkInfo.fromJson(Map<String, dynamic> json) {
@@ -19587,7 +19587,7 @@ class TextParseModeMarkdown extends TextParseMode {
   @override
   String get tdType => 'textParseModeMarkdown';
 
-  int version;
+   late int version;
 
   @override
   Map<String, dynamic> get params => {
@@ -19595,7 +19595,7 @@ class TextParseModeMarkdown extends TextParseMode {
   };
 
   TextParseModeMarkdown({
-    this.version,
+  required this.version,
   });
 
   TextParseModeMarkdown.fromJson(Map<String, dynamic> json) {
@@ -19623,8 +19623,8 @@ class ProxyTypeSocks5 extends ProxyType {
   @override
   String get tdType => 'proxyTypeSocks5';
 
-  String username;
-  String password;
+   late String username;
+   late String password;
 
   @override
   Map<String, dynamic> get params => {
@@ -19633,8 +19633,8 @@ class ProxyTypeSocks5 extends ProxyType {
   };
 
   ProxyTypeSocks5({
-    this.username,
-    this.password,
+  required this.username,
+  required this.password,
   });
 
   ProxyTypeSocks5.fromJson(Map<String, dynamic> json) {
@@ -19648,9 +19648,9 @@ class ProxyTypeHttp extends ProxyType {
   @override
   String get tdType => 'proxyTypeHttp';
 
-  String username;
-  String password;
-  bool httpOnly;
+   late String username;
+   late String password;
+   late bool httpOnly;
 
   @override
   Map<String, dynamic> get params => {
@@ -19660,9 +19660,9 @@ class ProxyTypeHttp extends ProxyType {
   };
 
   ProxyTypeHttp({
-    this.username,
-    this.password,
-    this.httpOnly,
+  required this.username,
+  required this.password,
+  required this.httpOnly,
   });
 
   ProxyTypeHttp.fromJson(Map<String, dynamic> json) {
@@ -19677,7 +19677,7 @@ class ProxyTypeMtproto extends ProxyType {
   @override
   String get tdType => 'proxyTypeMtproto';
 
-  String secret;
+   late String secret;
 
   @override
   Map<String, dynamic> get params => {
@@ -19685,7 +19685,7 @@ class ProxyTypeMtproto extends ProxyType {
   };
 
   ProxyTypeMtproto({
-    this.secret,
+  required this.secret,
   });
 
   ProxyTypeMtproto.fromJson(Map<String, dynamic> json) {
@@ -19698,12 +19698,12 @@ class Proxy extends TdObject {
   @override
   String get tdType => 'proxy';
 
-  int id;
-  String server;
-  int port;
-  int lastUsedDate;
-  bool isEnabled;
-  ProxyType type;
+   late int id;
+   late String server;
+   late int port;
+   late int lastUsedDate;
+   late bool isEnabled;
+   late ProxyType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -19716,12 +19716,12 @@ class Proxy extends TdObject {
   };
 
   Proxy({
-    this.id,
-    this.server,
-    this.port,
-    this.lastUsedDate,
-    this.isEnabled,
-    this.type,
+  required this.id,
+  required this.server,
+  required this.port,
+  required this.lastUsedDate,
+  required this.isEnabled,
+  required this.type,
   });
 
   Proxy.fromJson(Map<String, dynamic> json) {
@@ -19739,7 +19739,7 @@ class Proxies extends TdObject {
   @override
   String get tdType => 'proxies';
 
-  List<Proxy> proxies;
+   late List<Proxy> proxies;
 
   @override
   Map<String, dynamic> get params => {
@@ -19747,7 +19747,7 @@ class Proxies extends TdObject {
   };
 
   Proxies({
-    this.proxies,
+  required this.proxies,
   });
 
   Proxies.fromJson(Map<String, dynamic> json) {
@@ -19762,9 +19762,9 @@ class InputStickerStatic extends InputSticker {
   @override
   String get tdType => 'inputStickerStatic';
 
-  InputFile sticker;
-  String emojis;
-  MaskPosition maskPosition;
+   late InputFile sticker;
+   late String emojis;
+   late MaskPosition maskPosition;
 
   @override
   Map<String, dynamic> get params => {
@@ -19774,9 +19774,9 @@ class InputStickerStatic extends InputSticker {
   };
 
   InputStickerStatic({
-    this.sticker,
-    this.emojis,
-    this.maskPosition,
+  required this.sticker,
+  required this.emojis,
+  required this.maskPosition,
   });
 
   InputStickerStatic.fromJson(Map<String, dynamic> json) {
@@ -19791,8 +19791,8 @@ class InputStickerAnimated extends InputSticker {
   @override
   String get tdType => 'inputStickerAnimated';
 
-  InputFile sticker;
-  String emojis;
+   late InputFile sticker;
+   late String emojis;
 
   @override
   Map<String, dynamic> get params => {
@@ -19801,8 +19801,8 @@ class InputStickerAnimated extends InputSticker {
   };
 
   InputStickerAnimated({
-    this.sticker,
-    this.emojis,
+  required this.sticker,
+  required this.emojis,
   });
 
   InputStickerAnimated.fromJson(Map<String, dynamic> json) {
@@ -19816,8 +19816,8 @@ class DateRange extends TdObject {
   @override
   String get tdType => 'dateRange';
 
-  int startDate;
-  int endDate;
+   late int startDate;
+   late int endDate;
 
   @override
   Map<String, dynamic> get params => {
@@ -19826,8 +19826,8 @@ class DateRange extends TdObject {
   };
 
   DateRange({
-    this.startDate,
-    this.endDate,
+  required this.startDate,
+  required this.endDate,
   });
 
   DateRange.fromJson(Map<String, dynamic> json) {
@@ -19841,9 +19841,9 @@ class StatisticalValue extends TdObject {
   @override
   String get tdType => 'statisticalValue';
 
-  double value;
-  double previousValue;
-  double growthRatePercentage;
+   late double value;
+   late double previousValue;
+   late double growthRatePercentage;
 
   @override
   Map<String, dynamic> get params => {
@@ -19853,9 +19853,9 @@ class StatisticalValue extends TdObject {
   };
 
   StatisticalValue({
-    this.value,
-    this.previousValue,
-    this.growthRatePercentage,
+  required this.value,
+  required this.previousValue,
+  required this.growthRatePercentage,
   });
 
   StatisticalValue.fromJson(Map<String, dynamic> json) {
@@ -19872,8 +19872,8 @@ class StatisticalGraphData extends StatisticalGraph {
   @override
   String get tdType => 'statisticalGraphData';
 
-  String jsonData;
-  String zoomToken;
+   late String jsonData;
+   late String zoomToken;
 
   @override
   Map<String, dynamic> get params => {
@@ -19882,8 +19882,8 @@ class StatisticalGraphData extends StatisticalGraph {
   };
 
   StatisticalGraphData({
-    this.jsonData,
-    this.zoomToken,
+  required this.jsonData,
+  required this.zoomToken,
   });
 
   StatisticalGraphData.fromJson(Map<String, dynamic> json) {
@@ -19897,7 +19897,7 @@ class StatisticalGraphAsync extends StatisticalGraph {
   @override
   String get tdType => 'statisticalGraphAsync';
 
-  String token;
+   late String token;
 
   @override
   Map<String, dynamic> get params => {
@@ -19905,7 +19905,7 @@ class StatisticalGraphAsync extends StatisticalGraph {
   };
 
   StatisticalGraphAsync({
-    this.token,
+  required this.token,
   });
 
   StatisticalGraphAsync.fromJson(Map<String, dynamic> json) {
@@ -19918,7 +19918,7 @@ class StatisticalGraphError extends StatisticalGraph {
   @override
   String get tdType => 'statisticalGraphError';
 
-  String errorMessage;
+   late String errorMessage;
 
   @override
   Map<String, dynamic> get params => {
@@ -19926,7 +19926,7 @@ class StatisticalGraphError extends StatisticalGraph {
   };
 
   StatisticalGraphError({
-    this.errorMessage,
+  required this.errorMessage,
   });
 
   StatisticalGraphError.fromJson(Map<String, dynamic> json) {
@@ -19939,9 +19939,9 @@ class ChatStatisticsMessageInteractionInfo extends TdObject {
   @override
   String get tdType => 'chatStatisticsMessageInteractionInfo';
 
-  int messageId;
-  int viewCount;
-  int forwardCount;
+   late int messageId;
+   late int viewCount;
+   late int forwardCount;
 
   @override
   Map<String, dynamic> get params => {
@@ -19951,9 +19951,9 @@ class ChatStatisticsMessageInteractionInfo extends TdObject {
   };
 
   ChatStatisticsMessageInteractionInfo({
-    this.messageId,
-    this.viewCount,
-    this.forwardCount,
+  required this.messageId,
+  required this.viewCount,
+  required this.forwardCount,
   });
 
   ChatStatisticsMessageInteractionInfo.fromJson(Map<String, dynamic> json) {
@@ -19968,9 +19968,9 @@ class ChatStatisticsMessageSenderInfo extends TdObject {
   @override
   String get tdType => 'chatStatisticsMessageSenderInfo';
 
-  int userId;
-  int sentMessageCount;
-  int averageCharacterCount;
+   late int userId;
+   late int sentMessageCount;
+   late int averageCharacterCount;
 
   @override
   Map<String, dynamic> get params => {
@@ -19980,9 +19980,9 @@ class ChatStatisticsMessageSenderInfo extends TdObject {
   };
 
   ChatStatisticsMessageSenderInfo({
-    this.userId,
-    this.sentMessageCount,
-    this.averageCharacterCount,
+  required this.userId,
+  required this.sentMessageCount,
+  required this.averageCharacterCount,
   });
 
   ChatStatisticsMessageSenderInfo.fromJson(Map<String, dynamic> json) {
@@ -19997,10 +19997,10 @@ class ChatStatisticsAdministratorActionsInfo extends TdObject {
   @override
   String get tdType => 'chatStatisticsAdministratorActionsInfo';
 
-  int userId;
-  int deletedMessageCount;
-  int bannedUserCount;
-  int restrictedUserCount;
+   late int userId;
+   late int deletedMessageCount;
+   late int bannedUserCount;
+   late int restrictedUserCount;
 
   @override
   Map<String, dynamic> get params => {
@@ -20011,10 +20011,10 @@ class ChatStatisticsAdministratorActionsInfo extends TdObject {
   };
 
   ChatStatisticsAdministratorActionsInfo({
-    this.userId,
-    this.deletedMessageCount,
-    this.bannedUserCount,
-    this.restrictedUserCount,
+  required this.userId,
+  required this.deletedMessageCount,
+  required this.bannedUserCount,
+  required this.restrictedUserCount,
   });
 
   ChatStatisticsAdministratorActionsInfo.fromJson(Map<String, dynamic> json) {
@@ -20030,8 +20030,8 @@ class ChatStatisticsInviterInfo extends TdObject {
   @override
   String get tdType => 'chatStatisticsInviterInfo';
 
-  int userId;
-  int addedMemberCount;
+   late int userId;
+   late int addedMemberCount;
 
   @override
   Map<String, dynamic> get params => {
@@ -20040,8 +20040,8 @@ class ChatStatisticsInviterInfo extends TdObject {
   };
 
   ChatStatisticsInviterInfo({
-    this.userId,
-    this.addedMemberCount,
+  required this.userId,
+  required this.addedMemberCount,
   });
 
   ChatStatisticsInviterInfo.fromJson(Map<String, dynamic> json) {
@@ -20057,22 +20057,22 @@ class ChatStatisticsSupergroup extends ChatStatistics {
   @override
   String get tdType => 'chatStatisticsSupergroup';
 
-  DateRange period;
-  StatisticalValue memberCount;
-  StatisticalValue messageCount;
-  StatisticalValue viewerCount;
-  StatisticalValue senderCount;
-  StatisticalGraph memberCountGraph;
-  StatisticalGraph joinGraph;
-  StatisticalGraph joinBySourceGraph;
-  StatisticalGraph languageGraph;
-  StatisticalGraph messageContentGraph;
-  StatisticalGraph actionGraph;
-  StatisticalGraph dayGraph;
-  StatisticalGraph weekGraph;
-  List<ChatStatisticsMessageSenderInfo> topSenders;
-  List<ChatStatisticsAdministratorActionsInfo> topAdministrators;
-  List<ChatStatisticsInviterInfo> topInviters;
+   late DateRange period;
+   late StatisticalValue memberCount;
+   late StatisticalValue messageCount;
+   late StatisticalValue viewerCount;
+   late StatisticalValue senderCount;
+   late StatisticalGraph memberCountGraph;
+   late StatisticalGraph joinGraph;
+   late StatisticalGraph joinBySourceGraph;
+   late StatisticalGraph languageGraph;
+   late StatisticalGraph messageContentGraph;
+   late StatisticalGraph actionGraph;
+   late StatisticalGraph dayGraph;
+   late StatisticalGraph weekGraph;
+   late List<ChatStatisticsMessageSenderInfo> topSenders;
+   late List<ChatStatisticsAdministratorActionsInfo> topAdministrators;
+   late List<ChatStatisticsInviterInfo> topInviters;
 
   @override
   Map<String, dynamic> get params => {
@@ -20095,22 +20095,22 @@ class ChatStatisticsSupergroup extends ChatStatistics {
   };
 
   ChatStatisticsSupergroup({
-    this.period,
-    this.memberCount,
-    this.messageCount,
-    this.viewerCount,
-    this.senderCount,
-    this.memberCountGraph,
-    this.joinGraph,
-    this.joinBySourceGraph,
-    this.languageGraph,
-    this.messageContentGraph,
-    this.actionGraph,
-    this.dayGraph,
-    this.weekGraph,
-    this.topSenders,
-    this.topAdministrators,
-    this.topInviters,
+  required this.period,
+  required this.memberCount,
+  required this.messageCount,
+  required this.viewerCount,
+  required this.senderCount,
+  required this.memberCountGraph,
+  required this.joinGraph,
+  required this.joinBySourceGraph,
+  required this.languageGraph,
+  required this.messageContentGraph,
+  required this.actionGraph,
+  required this.dayGraph,
+  required this.weekGraph,
+  required this.topSenders,
+  required this.topAdministrators,
+  required this.topInviters,
   });
 
   ChatStatisticsSupergroup.fromJson(Map<String, dynamic> json) {
@@ -20138,21 +20138,21 @@ class ChatStatisticsChannel extends ChatStatistics {
   @override
   String get tdType => 'chatStatisticsChannel';
 
-  DateRange period;
-  StatisticalValue memberCount;
-  StatisticalValue meanViewCount;
-  StatisticalValue meanShareCount;
-  double enabledNotificationsPercentage;
-  StatisticalGraph memberCountGraph;
-  StatisticalGraph joinGraph;
-  StatisticalGraph muteGraph;
-  StatisticalGraph viewCountByHourGraph;
-  StatisticalGraph viewCountBySourceGraph;
-  StatisticalGraph joinBySourceGraph;
-  StatisticalGraph languageGraph;
-  StatisticalGraph messageInteractionGraph;
-  StatisticalGraph instantViewInteractionGraph;
-  List<ChatStatisticsMessageInteractionInfo> recentMessageInteractions;
+   late DateRange period;
+   late StatisticalValue memberCount;
+   late StatisticalValue meanViewCount;
+   late StatisticalValue meanShareCount;
+   late double enabledNotificationsPercentage;
+   late StatisticalGraph memberCountGraph;
+   late StatisticalGraph joinGraph;
+   late StatisticalGraph muteGraph;
+   late StatisticalGraph viewCountByHourGraph;
+   late StatisticalGraph viewCountBySourceGraph;
+   late StatisticalGraph joinBySourceGraph;
+   late StatisticalGraph languageGraph;
+   late StatisticalGraph messageInteractionGraph;
+   late StatisticalGraph instantViewInteractionGraph;
+   late List<ChatStatisticsMessageInteractionInfo> recentMessageInteractions;
 
   @override
   Map<String, dynamic> get params => {
@@ -20174,21 +20174,21 @@ class ChatStatisticsChannel extends ChatStatistics {
   };
 
   ChatStatisticsChannel({
-    this.period,
-    this.memberCount,
-    this.meanViewCount,
-    this.meanShareCount,
-    this.enabledNotificationsPercentage,
-    this.memberCountGraph,
-    this.joinGraph,
-    this.muteGraph,
-    this.viewCountByHourGraph,
-    this.viewCountBySourceGraph,
-    this.joinBySourceGraph,
-    this.languageGraph,
-    this.messageInteractionGraph,
-    this.instantViewInteractionGraph,
-    this.recentMessageInteractions,
+  required this.period,
+  required this.memberCount,
+  required this.meanViewCount,
+  required this.meanShareCount,
+  required this.enabledNotificationsPercentage,
+  required this.memberCountGraph,
+  required this.joinGraph,
+  required this.muteGraph,
+  required this.viewCountByHourGraph,
+  required this.viewCountBySourceGraph,
+  required this.joinBySourceGraph,
+  required this.languageGraph,
+  required this.messageInteractionGraph,
+  required this.instantViewInteractionGraph,
+  required this.recentMessageInteractions,
   });
 
   ChatStatisticsChannel.fromJson(Map<String, dynamic> json) {
@@ -20215,7 +20215,7 @@ class MessageStatistics extends TdObject {
   @override
   String get tdType => 'messageStatistics';
 
-  StatisticalGraph messageInteractionGraph;
+   late StatisticalGraph messageInteractionGraph;
 
   @override
   Map<String, dynamic> get params => {
@@ -20223,7 +20223,7 @@ class MessageStatistics extends TdObject {
   };
 
   MessageStatistics({
-    this.messageInteractionGraph,
+  required this.messageInteractionGraph,
   });
 
   MessageStatistics.fromJson(Map<String, dynamic> json) {
@@ -20236,8 +20236,8 @@ class Point extends TdObject {
   @override
   String get tdType => 'point';
 
-  double x;
-  double y;
+   late double x;
+   late double y;
 
   @override
   Map<String, dynamic> get params => {
@@ -20246,8 +20246,8 @@ class Point extends TdObject {
   };
 
   Point({
-    this.x,
-    this.y,
+  required this.x,
+  required this.y,
   });
 
   Point.fromJson(Map<String, dynamic> json) {
@@ -20263,7 +20263,7 @@ class VectorPathCommandLine extends VectorPathCommand {
   @override
   String get tdType => 'vectorPathCommandLine';
 
-  Point endPoint;
+   late Point endPoint;
 
   @override
   Map<String, dynamic> get params => {
@@ -20271,7 +20271,7 @@ class VectorPathCommandLine extends VectorPathCommand {
   };
 
   VectorPathCommandLine({
-    this.endPoint,
+  required this.endPoint,
   });
 
   VectorPathCommandLine.fromJson(Map<String, dynamic> json) {
@@ -20284,9 +20284,9 @@ class VectorPathCommandCubicBezierCurve extends VectorPathCommand {
   @override
   String get tdType => 'vectorPathCommandCubicBezierCurve';
 
-  Point startControlPoint;
-  Point endControlPoint;
-  Point endPoint;
+   late Point startControlPoint;
+   late Point endControlPoint;
+   late Point endPoint;
 
   @override
   Map<String, dynamic> get params => {
@@ -20296,9 +20296,9 @@ class VectorPathCommandCubicBezierCurve extends VectorPathCommand {
   };
 
   VectorPathCommandCubicBezierCurve({
-    this.startControlPoint,
-    this.endControlPoint,
-    this.endPoint,
+  required this.startControlPoint,
+  required this.endControlPoint,
+  required this.endPoint,
   });
 
   VectorPathCommandCubicBezierCurve.fromJson(Map<String, dynamic> json) {
@@ -20367,7 +20367,7 @@ class BotCommandScopeChat extends BotCommandScope {
   @override
   String get tdType => 'botCommandScopeChat';
 
-  int chatId;
+   late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -20375,7 +20375,7 @@ class BotCommandScopeChat extends BotCommandScope {
   };
 
   BotCommandScopeChat({
-    this.chatId,
+  required this.chatId,
   });
 
   BotCommandScopeChat.fromJson(Map<String, dynamic> json) {
@@ -20388,7 +20388,7 @@ class BotCommandScopeChatAdministrators extends BotCommandScope {
   @override
   String get tdType => 'botCommandScopeChatAdministrators';
 
-  int chatId;
+   late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -20396,7 +20396,7 @@ class BotCommandScopeChatAdministrators extends BotCommandScope {
   };
 
   BotCommandScopeChatAdministrators({
-    this.chatId,
+  required this.chatId,
   });
 
   BotCommandScopeChatAdministrators.fromJson(Map<String, dynamic> json) {
@@ -20409,8 +20409,8 @@ class BotCommandScopeChatMember extends BotCommandScope {
   @override
   String get tdType => 'botCommandScopeChatMember';
 
-  int chatId;
-  int userId;
+   late int chatId;
+   late int userId;
 
   @override
   Map<String, dynamic> get params => {
@@ -20419,8 +20419,8 @@ class BotCommandScopeChatMember extends BotCommandScope {
   };
 
   BotCommandScopeChatMember({
-    this.chatId,
-    this.userId,
+  required this.chatId,
+  required this.userId,
   });
 
   BotCommandScopeChatMember.fromJson(Map<String, dynamic> json) {
@@ -20436,7 +20436,7 @@ class UpdateAuthorizationState extends Update {
   @override
   String get tdType => 'updateAuthorizationState';
 
-  AuthorizationState authorizationState;
+   late AuthorizationState authorizationState;
 
   @override
   Map<String, dynamic> get params => {
@@ -20444,7 +20444,7 @@ class UpdateAuthorizationState extends Update {
   };
 
   UpdateAuthorizationState({
-    this.authorizationState,
+  required this.authorizationState,
   });
 
   UpdateAuthorizationState.fromJson(Map<String, dynamic> json) {
@@ -20457,7 +20457,7 @@ class UpdateNewMessage extends Update {
   @override
   String get tdType => 'updateNewMessage';
 
-  Message message;
+   late Message message;
 
   @override
   Map<String, dynamic> get params => {
@@ -20465,7 +20465,7 @@ class UpdateNewMessage extends Update {
   };
 
   UpdateNewMessage({
-    this.message,
+  required this.message,
   });
 
   UpdateNewMessage.fromJson(Map<String, dynamic> json) {
@@ -20478,8 +20478,8 @@ class UpdateMessageSendAcknowledged extends Update {
   @override
   String get tdType => 'updateMessageSendAcknowledged';
 
-  int chatId;
-  int messageId;
+   late int chatId;
+   late int messageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -20488,8 +20488,8 @@ class UpdateMessageSendAcknowledged extends Update {
   };
 
   UpdateMessageSendAcknowledged({
-    this.chatId,
-    this.messageId,
+  required this.chatId,
+  required this.messageId,
   });
 
   UpdateMessageSendAcknowledged.fromJson(Map<String, dynamic> json) {
@@ -20503,8 +20503,8 @@ class UpdateMessageSendSucceeded extends Update {
   @override
   String get tdType => 'updateMessageSendSucceeded';
 
-  Message message;
-  int oldMessageId;
+   late Message message;
+   late int oldMessageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -20513,8 +20513,8 @@ class UpdateMessageSendSucceeded extends Update {
   };
 
   UpdateMessageSendSucceeded({
-    this.message,
-    this.oldMessageId,
+  required this.message,
+  required this.oldMessageId,
   });
 
   UpdateMessageSendSucceeded.fromJson(Map<String, dynamic> json) {
@@ -20528,10 +20528,10 @@ class UpdateMessageSendFailed extends Update {
   @override
   String get tdType => 'updateMessageSendFailed';
 
-  Message message;
-  int oldMessageId;
-  int errorCode;
-  String errorMessage;
+   late Message message;
+   late int oldMessageId;
+   late int errorCode;
+   late String errorMessage;
 
   @override
   Map<String, dynamic> get params => {
@@ -20542,10 +20542,10 @@ class UpdateMessageSendFailed extends Update {
   };
 
   UpdateMessageSendFailed({
-    this.message,
-    this.oldMessageId,
-    this.errorCode,
-    this.errorMessage,
+  required this.message,
+  required this.oldMessageId,
+  required this.errorCode,
+  required this.errorMessage,
   });
 
   UpdateMessageSendFailed.fromJson(Map<String, dynamic> json) {
@@ -20561,9 +20561,9 @@ class UpdateMessageContent extends Update {
   @override
   String get tdType => 'updateMessageContent';
 
-  int chatId;
-  int messageId;
-  MessageContent newContent;
+   late int chatId;
+   late int messageId;
+   late MessageContent newContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -20573,9 +20573,9 @@ class UpdateMessageContent extends Update {
   };
 
   UpdateMessageContent({
-    this.chatId,
-    this.messageId,
-    this.newContent,
+  required this.chatId,
+  required this.messageId,
+  required this.newContent,
   });
 
   UpdateMessageContent.fromJson(Map<String, dynamic> json) {
@@ -20590,10 +20590,10 @@ class UpdateMessageEdited extends Update {
   @override
   String get tdType => 'updateMessageEdited';
 
-  int chatId;
-  int messageId;
-  int editDate;
-  ReplyMarkup replyMarkup;
+   late int chatId;
+   late int messageId;
+   late int editDate;
+   late ReplyMarkup replyMarkup;
 
   @override
   Map<String, dynamic> get params => {
@@ -20604,10 +20604,10 @@ class UpdateMessageEdited extends Update {
   };
 
   UpdateMessageEdited({
-    this.chatId,
-    this.messageId,
-    this.editDate,
-    this.replyMarkup,
+  required this.chatId,
+  required this.messageId,
+  required this.editDate,
+  required this.replyMarkup,
   });
 
   UpdateMessageEdited.fromJson(Map<String, dynamic> json) {
@@ -20623,9 +20623,9 @@ class UpdateMessageIsPinned extends Update {
   @override
   String get tdType => 'updateMessageIsPinned';
 
-  int chatId;
-  int messageId;
-  bool isPinned;
+   late int chatId;
+   late int messageId;
+   late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -20635,9 +20635,9 @@ class UpdateMessageIsPinned extends Update {
   };
 
   UpdateMessageIsPinned({
-    this.chatId,
-    this.messageId,
-    this.isPinned,
+  required this.chatId,
+  required this.messageId,
+  required this.isPinned,
   });
 
   UpdateMessageIsPinned.fromJson(Map<String, dynamic> json) {
@@ -20652,9 +20652,9 @@ class UpdateMessageInteractionInfo extends Update {
   @override
   String get tdType => 'updateMessageInteractionInfo';
 
-  int chatId;
-  int messageId;
-  MessageInteractionInfo interactionInfo;
+   late int chatId;
+   late int messageId;
+   late MessageInteractionInfo interactionInfo;
 
   @override
   Map<String, dynamic> get params => {
@@ -20664,9 +20664,9 @@ class UpdateMessageInteractionInfo extends Update {
   };
 
   UpdateMessageInteractionInfo({
-    this.chatId,
-    this.messageId,
-    this.interactionInfo,
+  required this.chatId,
+  required this.messageId,
+  required this.interactionInfo,
   });
 
   UpdateMessageInteractionInfo.fromJson(Map<String, dynamic> json) {
@@ -20681,8 +20681,8 @@ class UpdateMessageContentOpened extends Update {
   @override
   String get tdType => 'updateMessageContentOpened';
 
-  int chatId;
-  int messageId;
+   late int chatId;
+   late int messageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -20691,8 +20691,8 @@ class UpdateMessageContentOpened extends Update {
   };
 
   UpdateMessageContentOpened({
-    this.chatId,
-    this.messageId,
+  required this.chatId,
+  required this.messageId,
   });
 
   UpdateMessageContentOpened.fromJson(Map<String, dynamic> json) {
@@ -20706,9 +20706,9 @@ class UpdateMessageMentionRead extends Update {
   @override
   String get tdType => 'updateMessageMentionRead';
 
-  int chatId;
-  int messageId;
-  int unreadMentionCount;
+   late int chatId;
+   late int messageId;
+   late int unreadMentionCount;
 
   @override
   Map<String, dynamic> get params => {
@@ -20718,9 +20718,9 @@ class UpdateMessageMentionRead extends Update {
   };
 
   UpdateMessageMentionRead({
-    this.chatId,
-    this.messageId,
-    this.unreadMentionCount,
+  required this.chatId,
+  required this.messageId,
+  required this.unreadMentionCount,
   });
 
   UpdateMessageMentionRead.fromJson(Map<String, dynamic> json) {
@@ -20735,8 +20735,8 @@ class UpdateMessageLiveLocationViewed extends Update {
   @override
   String get tdType => 'updateMessageLiveLocationViewed';
 
-  int chatId;
-  int messageId;
+   late int chatId;
+   late int messageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -20745,8 +20745,8 @@ class UpdateMessageLiveLocationViewed extends Update {
   };
 
   UpdateMessageLiveLocationViewed({
-    this.chatId,
-    this.messageId,
+  required this.chatId,
+  required this.messageId,
   });
 
   UpdateMessageLiveLocationViewed.fromJson(Map<String, dynamic> json) {
@@ -20760,7 +20760,7 @@ class UpdateNewChat extends Update {
   @override
   String get tdType => 'updateNewChat';
 
-  Chat chat;
+   late Chat chat;
 
   @override
   Map<String, dynamic> get params => {
@@ -20768,7 +20768,7 @@ class UpdateNewChat extends Update {
   };
 
   UpdateNewChat({
-    this.chat,
+  required this.chat,
   });
 
   UpdateNewChat.fromJson(Map<String, dynamic> json) {
@@ -20781,8 +20781,8 @@ class UpdateChatTitle extends Update {
   @override
   String get tdType => 'updateChatTitle';
 
-  int chatId;
-  String title;
+   late int chatId;
+   late String title;
 
   @override
   Map<String, dynamic> get params => {
@@ -20791,8 +20791,8 @@ class UpdateChatTitle extends Update {
   };
 
   UpdateChatTitle({
-    this.chatId,
-    this.title,
+  required this.chatId,
+  required this.title,
   });
 
   UpdateChatTitle.fromJson(Map<String, dynamic> json) {
@@ -20806,8 +20806,8 @@ class UpdateChatPhoto extends Update {
   @override
   String get tdType => 'updateChatPhoto';
 
-  int chatId;
-  ChatPhotoInfo photo;
+   late int chatId;
+   late ChatPhotoInfo photo;
 
   @override
   Map<String, dynamic> get params => {
@@ -20816,8 +20816,8 @@ class UpdateChatPhoto extends Update {
   };
 
   UpdateChatPhoto({
-    this.chatId,
-    this.photo,
+  required this.chatId,
+  required this.photo,
   });
 
   UpdateChatPhoto.fromJson(Map<String, dynamic> json) {
@@ -20831,8 +20831,8 @@ class UpdateChatPermissions extends Update {
   @override
   String get tdType => 'updateChatPermissions';
 
-  int chatId;
-  ChatPermissions permissions;
+   late int chatId;
+   late ChatPermissions permissions;
 
   @override
   Map<String, dynamic> get params => {
@@ -20841,8 +20841,8 @@ class UpdateChatPermissions extends Update {
   };
 
   UpdateChatPermissions({
-    this.chatId,
-    this.permissions,
+  required this.chatId,
+  required this.permissions,
   });
 
   UpdateChatPermissions.fromJson(Map<String, dynamic> json) {
@@ -20856,9 +20856,9 @@ class UpdateChatLastMessage extends Update {
   @override
   String get tdType => 'updateChatLastMessage';
 
-  int chatId;
-  Message lastMessage;
-  List<ChatPosition> positions;
+   late int chatId;
+   late Message lastMessage;
+   late List<ChatPosition> positions;
 
   @override
   Map<String, dynamic> get params => {
@@ -20868,9 +20868,9 @@ class UpdateChatLastMessage extends Update {
   };
 
   UpdateChatLastMessage({
-    this.chatId,
-    this.lastMessage,
-    this.positions,
+  required this.chatId,
+  required this.lastMessage,
+  required this.positions,
   });
 
   UpdateChatLastMessage.fromJson(Map<String, dynamic> json) {
@@ -20885,8 +20885,8 @@ class UpdateChatPosition extends Update {
   @override
   String get tdType => 'updateChatPosition';
 
-  int chatId;
-  ChatPosition position;
+   late int chatId;
+   late ChatPosition position;
 
   @override
   Map<String, dynamic> get params => {
@@ -20895,8 +20895,8 @@ class UpdateChatPosition extends Update {
   };
 
   UpdateChatPosition({
-    this.chatId,
-    this.position,
+  required this.chatId,
+  required this.position,
   });
 
   UpdateChatPosition.fromJson(Map<String, dynamic> json) {
@@ -20910,8 +20910,8 @@ class UpdateChatIsMarkedAsUnread extends Update {
   @override
   String get tdType => 'updateChatIsMarkedAsUnread';
 
-  int chatId;
-  bool isMarkedAsUnread;
+   late int chatId;
+   late bool isMarkedAsUnread;
 
   @override
   Map<String, dynamic> get params => {
@@ -20920,8 +20920,8 @@ class UpdateChatIsMarkedAsUnread extends Update {
   };
 
   UpdateChatIsMarkedAsUnread({
-    this.chatId,
-    this.isMarkedAsUnread,
+  required this.chatId,
+  required this.isMarkedAsUnread,
   });
 
   UpdateChatIsMarkedAsUnread.fromJson(Map<String, dynamic> json) {
@@ -20935,8 +20935,8 @@ class UpdateChatIsBlocked extends Update {
   @override
   String get tdType => 'updateChatIsBlocked';
 
-  int chatId;
-  bool isBlocked;
+   late int chatId;
+   late bool isBlocked;
 
   @override
   Map<String, dynamic> get params => {
@@ -20945,8 +20945,8 @@ class UpdateChatIsBlocked extends Update {
   };
 
   UpdateChatIsBlocked({
-    this.chatId,
-    this.isBlocked,
+  required this.chatId,
+  required this.isBlocked,
   });
 
   UpdateChatIsBlocked.fromJson(Map<String, dynamic> json) {
@@ -20960,8 +20960,8 @@ class UpdateChatHasScheduledMessages extends Update {
   @override
   String get tdType => 'updateChatHasScheduledMessages';
 
-  int chatId;
-  bool hasScheduledMessages;
+   late int chatId;
+   late bool hasScheduledMessages;
 
   @override
   Map<String, dynamic> get params => {
@@ -20970,8 +20970,8 @@ class UpdateChatHasScheduledMessages extends Update {
   };
 
   UpdateChatHasScheduledMessages({
-    this.chatId,
-    this.hasScheduledMessages,
+  required this.chatId,
+  required this.hasScheduledMessages,
   });
 
   UpdateChatHasScheduledMessages.fromJson(Map<String, dynamic> json) {
@@ -20985,8 +20985,8 @@ class UpdateChatVoiceChat extends Update {
   @override
   String get tdType => 'updateChatVoiceChat';
 
-  int chatId;
-  VoiceChat voiceChat;
+   late int chatId;
+   late VoiceChat voiceChat;
 
   @override
   Map<String, dynamic> get params => {
@@ -20995,8 +20995,8 @@ class UpdateChatVoiceChat extends Update {
   };
 
   UpdateChatVoiceChat({
-    this.chatId,
-    this.voiceChat,
+  required this.chatId,
+  required this.voiceChat,
   });
 
   UpdateChatVoiceChat.fromJson(Map<String, dynamic> json) {
@@ -21010,8 +21010,8 @@ class UpdateChatDefaultDisableNotification extends Update {
   @override
   String get tdType => 'updateChatDefaultDisableNotification';
 
-  int chatId;
-  bool defaultDisableNotification;
+   late int chatId;
+   late bool defaultDisableNotification;
 
   @override
   Map<String, dynamic> get params => {
@@ -21020,8 +21020,8 @@ class UpdateChatDefaultDisableNotification extends Update {
   };
 
   UpdateChatDefaultDisableNotification({
-    this.chatId,
-    this.defaultDisableNotification,
+  required this.chatId,
+  required this.defaultDisableNotification,
   });
 
   UpdateChatDefaultDisableNotification.fromJson(Map<String, dynamic> json) {
@@ -21035,9 +21035,9 @@ class UpdateChatReadInbox extends Update {
   @override
   String get tdType => 'updateChatReadInbox';
 
-  int chatId;
-  int lastReadInboxMessageId;
-  int unreadCount;
+   late int chatId;
+   late int lastReadInboxMessageId;
+   late int unreadCount;
 
   @override
   Map<String, dynamic> get params => {
@@ -21047,9 +21047,9 @@ class UpdateChatReadInbox extends Update {
   };
 
   UpdateChatReadInbox({
-    this.chatId,
-    this.lastReadInboxMessageId,
-    this.unreadCount,
+  required this.chatId,
+  required this.lastReadInboxMessageId,
+  required this.unreadCount,
   });
 
   UpdateChatReadInbox.fromJson(Map<String, dynamic> json) {
@@ -21064,8 +21064,8 @@ class UpdateChatReadOutbox extends Update {
   @override
   String get tdType => 'updateChatReadOutbox';
 
-  int chatId;
-  int lastReadOutboxMessageId;
+   late int chatId;
+   late int lastReadOutboxMessageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -21074,8 +21074,8 @@ class UpdateChatReadOutbox extends Update {
   };
 
   UpdateChatReadOutbox({
-    this.chatId,
-    this.lastReadOutboxMessageId,
+  required this.chatId,
+  required this.lastReadOutboxMessageId,
   });
 
   UpdateChatReadOutbox.fromJson(Map<String, dynamic> json) {
@@ -21089,8 +21089,8 @@ class UpdateChatUnreadMentionCount extends Update {
   @override
   String get tdType => 'updateChatUnreadMentionCount';
 
-  int chatId;
-  int unreadMentionCount;
+   late int chatId;
+   late int unreadMentionCount;
 
   @override
   Map<String, dynamic> get params => {
@@ -21099,8 +21099,8 @@ class UpdateChatUnreadMentionCount extends Update {
   };
 
   UpdateChatUnreadMentionCount({
-    this.chatId,
-    this.unreadMentionCount,
+  required this.chatId,
+  required this.unreadMentionCount,
   });
 
   UpdateChatUnreadMentionCount.fromJson(Map<String, dynamic> json) {
@@ -21114,8 +21114,8 @@ class UpdateChatNotificationSettings extends Update {
   @override
   String get tdType => 'updateChatNotificationSettings';
 
-  int chatId;
-  ChatNotificationSettings notificationSettings;
+   late int chatId;
+   late ChatNotificationSettings notificationSettings;
 
   @override
   Map<String, dynamic> get params => {
@@ -21124,8 +21124,8 @@ class UpdateChatNotificationSettings extends Update {
   };
 
   UpdateChatNotificationSettings({
-    this.chatId,
-    this.notificationSettings,
+  required this.chatId,
+  required this.notificationSettings,
   });
 
   UpdateChatNotificationSettings.fromJson(Map<String, dynamic> json) {
@@ -21139,8 +21139,8 @@ class UpdateScopeNotificationSettings extends Update {
   @override
   String get tdType => 'updateScopeNotificationSettings';
 
-  NotificationSettingsScope scope;
-  ScopeNotificationSettings notificationSettings;
+   late NotificationSettingsScope scope;
+   late ScopeNotificationSettings notificationSettings;
 
   @override
   Map<String, dynamic> get params => {
@@ -21149,8 +21149,8 @@ class UpdateScopeNotificationSettings extends Update {
   };
 
   UpdateScopeNotificationSettings({
-    this.scope,
-    this.notificationSettings,
+  required this.scope,
+  required this.notificationSettings,
   });
 
   UpdateScopeNotificationSettings.fromJson(Map<String, dynamic> json) {
@@ -21164,8 +21164,8 @@ class UpdateChatMessageTtlSetting extends Update {
   @override
   String get tdType => 'updateChatMessageTtlSetting';
 
-  int chatId;
-  int messageTtlSetting;
+   late int chatId;
+   late int messageTtlSetting;
 
   @override
   Map<String, dynamic> get params => {
@@ -21174,8 +21174,8 @@ class UpdateChatMessageTtlSetting extends Update {
   };
 
   UpdateChatMessageTtlSetting({
-    this.chatId,
-    this.messageTtlSetting,
+  required this.chatId,
+  required this.messageTtlSetting,
   });
 
   UpdateChatMessageTtlSetting.fromJson(Map<String, dynamic> json) {
@@ -21189,8 +21189,8 @@ class UpdateChatActionBar extends Update {
   @override
   String get tdType => 'updateChatActionBar';
 
-  int chatId;
-  ChatActionBar actionBar;
+   late int chatId;
+   late ChatActionBar actionBar;
 
   @override
   Map<String, dynamic> get params => {
@@ -21199,8 +21199,8 @@ class UpdateChatActionBar extends Update {
   };
 
   UpdateChatActionBar({
-    this.chatId,
-    this.actionBar,
+  required this.chatId,
+  required this.actionBar,
   });
 
   UpdateChatActionBar.fromJson(Map<String, dynamic> json) {
@@ -21214,8 +21214,8 @@ class UpdateChatTheme extends Update {
   @override
   String get tdType => 'updateChatTheme';
 
-  int chatId;
-  String themeName;
+   late int chatId;
+   late String themeName;
 
   @override
   Map<String, dynamic> get params => {
@@ -21224,8 +21224,8 @@ class UpdateChatTheme extends Update {
   };
 
   UpdateChatTheme({
-    this.chatId,
-    this.themeName,
+  required this.chatId,
+  required this.themeName,
   });
 
   UpdateChatTheme.fromJson(Map<String, dynamic> json) {
@@ -21239,8 +21239,8 @@ class UpdateChatReplyMarkup extends Update {
   @override
   String get tdType => 'updateChatReplyMarkup';
 
-  int chatId;
-  int replyMarkupMessageId;
+   late int chatId;
+   late int replyMarkupMessageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -21249,8 +21249,8 @@ class UpdateChatReplyMarkup extends Update {
   };
 
   UpdateChatReplyMarkup({
-    this.chatId,
-    this.replyMarkupMessageId,
+  required this.chatId,
+  required this.replyMarkupMessageId,
   });
 
   UpdateChatReplyMarkup.fromJson(Map<String, dynamic> json) {
@@ -21264,9 +21264,9 @@ class UpdateChatDraftMessage extends Update {
   @override
   String get tdType => 'updateChatDraftMessage';
 
-  int chatId;
-  DraftMessage draftMessage;
-  List<ChatPosition> positions;
+   late int chatId;
+   late DraftMessage draftMessage;
+   late List<ChatPosition> positions;
 
   @override
   Map<String, dynamic> get params => {
@@ -21276,9 +21276,9 @@ class UpdateChatDraftMessage extends Update {
   };
 
   UpdateChatDraftMessage({
-    this.chatId,
-    this.draftMessage,
-    this.positions,
+  required this.chatId,
+  required this.draftMessage,
+  required this.positions,
   });
 
   UpdateChatDraftMessage.fromJson(Map<String, dynamic> json) {
@@ -21293,7 +21293,7 @@ class UpdateChatFilters extends Update {
   @override
   String get tdType => 'updateChatFilters';
 
-  List<ChatFilterInfo> chatFilters;
+   late List<ChatFilterInfo> chatFilters;
 
   @override
   Map<String, dynamic> get params => {
@@ -21301,7 +21301,7 @@ class UpdateChatFilters extends Update {
   };
 
   UpdateChatFilters({
-    this.chatFilters,
+  required this.chatFilters,
   });
 
   UpdateChatFilters.fromJson(Map<String, dynamic> json) {
@@ -21314,8 +21314,8 @@ class UpdateChatOnlineMemberCount extends Update {
   @override
   String get tdType => 'updateChatOnlineMemberCount';
 
-  int chatId;
-  int onlineMemberCount;
+   late int chatId;
+   late int onlineMemberCount;
 
   @override
   Map<String, dynamic> get params => {
@@ -21324,8 +21324,8 @@ class UpdateChatOnlineMemberCount extends Update {
   };
 
   UpdateChatOnlineMemberCount({
-    this.chatId,
-    this.onlineMemberCount,
+  required this.chatId,
+  required this.onlineMemberCount,
   });
 
   UpdateChatOnlineMemberCount.fromJson(Map<String, dynamic> json) {
@@ -21339,8 +21339,8 @@ class UpdateNotification extends Update {
   @override
   String get tdType => 'updateNotification';
 
-  int notificationGroupId;
-  Notification notification;
+   late int notificationGroupId;
+   late Notification notification;
 
   @override
   Map<String, dynamic> get params => {
@@ -21349,8 +21349,8 @@ class UpdateNotification extends Update {
   };
 
   UpdateNotification({
-    this.notificationGroupId,
-    this.notification,
+  required this.notificationGroupId,
+  required this.notification,
   });
 
   UpdateNotification.fromJson(Map<String, dynamic> json) {
@@ -21364,14 +21364,14 @@ class UpdateNotificationGroup extends Update {
   @override
   String get tdType => 'updateNotificationGroup';
 
-  int notificationGroupId;
-  NotificationGroupType type;
-  int chatId;
-  int notificationSettingsChatId;
-  bool isSilent;
-  int totalCount;
-  List<Notification> addedNotifications;
-  List<int> removedNotificationIds;
+   late int notificationGroupId;
+   late NotificationGroupType type;
+   late int chatId;
+   late int notificationSettingsChatId;
+   late bool isSilent;
+   late int totalCount;
+   late List<Notification> addedNotifications;
+   late List<int> removedNotificationIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -21386,14 +21386,14 @@ class UpdateNotificationGroup extends Update {
   };
 
   UpdateNotificationGroup({
-    this.notificationGroupId,
-    this.type,
-    this.chatId,
-    this.notificationSettingsChatId,
-    this.isSilent,
-    this.totalCount,
-    this.addedNotifications,
-    this.removedNotificationIds,
+  required this.notificationGroupId,
+  required this.type,
+  required this.chatId,
+  required this.notificationSettingsChatId,
+  required this.isSilent,
+  required this.totalCount,
+  required this.addedNotifications,
+  required this.removedNotificationIds,
   });
 
   UpdateNotificationGroup.fromJson(Map<String, dynamic> json) {
@@ -21413,7 +21413,7 @@ class UpdateActiveNotifications extends Update {
   @override
   String get tdType => 'updateActiveNotifications';
 
-  List<NotificationGroup> groups;
+   late List<NotificationGroup> groups;
 
   @override
   Map<String, dynamic> get params => {
@@ -21421,7 +21421,7 @@ class UpdateActiveNotifications extends Update {
   };
 
   UpdateActiveNotifications({
-    this.groups,
+  required this.groups,
   });
 
   UpdateActiveNotifications.fromJson(Map<String, dynamic> json) {
@@ -21434,8 +21434,8 @@ class UpdateHavePendingNotifications extends Update {
   @override
   String get tdType => 'updateHavePendingNotifications';
 
-  bool haveDelayedNotifications;
-  bool haveUnreceivedNotifications;
+   late bool haveDelayedNotifications;
+   late bool haveUnreceivedNotifications;
 
   @override
   Map<String, dynamic> get params => {
@@ -21444,8 +21444,8 @@ class UpdateHavePendingNotifications extends Update {
   };
 
   UpdateHavePendingNotifications({
-    this.haveDelayedNotifications,
-    this.haveUnreceivedNotifications,
+  required this.haveDelayedNotifications,
+  required this.haveUnreceivedNotifications,
   });
 
   UpdateHavePendingNotifications.fromJson(Map<String, dynamic> json) {
@@ -21459,10 +21459,10 @@ class UpdateDeleteMessages extends Update {
   @override
   String get tdType => 'updateDeleteMessages';
 
-  int chatId;
-  List<int> messageIds;
-  bool isPermanent;
-  bool fromCache;
+   late int chatId;
+   late List<int> messageIds;
+   late bool isPermanent;
+   late bool fromCache;
 
   @override
   Map<String, dynamic> get params => {
@@ -21473,10 +21473,10 @@ class UpdateDeleteMessages extends Update {
   };
 
   UpdateDeleteMessages({
-    this.chatId,
-    this.messageIds,
-    this.isPermanent,
-    this.fromCache,
+  required this.chatId,
+  required this.messageIds,
+  required this.isPermanent,
+  required this.fromCache,
   });
 
   UpdateDeleteMessages.fromJson(Map<String, dynamic> json) {
@@ -21492,10 +21492,10 @@ class UpdateUserChatAction extends Update {
   @override
   String get tdType => 'updateUserChatAction';
 
-  int chatId;
-  int messageThreadId;
-  int userId;
-  ChatAction action;
+   late int chatId;
+   late int messageThreadId;
+   late int userId;
+   late ChatAction action;
 
   @override
   Map<String, dynamic> get params => {
@@ -21506,10 +21506,10 @@ class UpdateUserChatAction extends Update {
   };
 
   UpdateUserChatAction({
-    this.chatId,
-    this.messageThreadId,
-    this.userId,
-    this.action,
+  required this.chatId,
+  required this.messageThreadId,
+  required this.userId,
+  required this.action,
   });
 
   UpdateUserChatAction.fromJson(Map<String, dynamic> json) {
@@ -21525,8 +21525,8 @@ class UpdateUserStatus extends Update {
   @override
   String get tdType => 'updateUserStatus';
 
-  int userId;
-  UserStatus status;
+   late int userId;
+   late UserStatus status;
 
   @override
   Map<String, dynamic> get params => {
@@ -21535,8 +21535,8 @@ class UpdateUserStatus extends Update {
   };
 
   UpdateUserStatus({
-    this.userId,
-    this.status,
+  required this.userId,
+  required this.status,
   });
 
   UpdateUserStatus.fromJson(Map<String, dynamic> json) {
@@ -21550,7 +21550,7 @@ class UpdateUser extends Update {
   @override
   String get tdType => 'updateUser';
 
-  User user;
+   late User user;
 
   @override
   Map<String, dynamic> get params => {
@@ -21558,7 +21558,7 @@ class UpdateUser extends Update {
   };
 
   UpdateUser({
-    this.user,
+  required this.user,
   });
 
   UpdateUser.fromJson(Map<String, dynamic> json) {
@@ -21571,7 +21571,7 @@ class UpdateBasicGroup extends Update {
   @override
   String get tdType => 'updateBasicGroup';
 
-  BasicGroup basicGroup;
+   late BasicGroup basicGroup;
 
   @override
   Map<String, dynamic> get params => {
@@ -21579,7 +21579,7 @@ class UpdateBasicGroup extends Update {
   };
 
   UpdateBasicGroup({
-    this.basicGroup,
+  required this.basicGroup,
   });
 
   UpdateBasicGroup.fromJson(Map<String, dynamic> json) {
@@ -21592,7 +21592,7 @@ class UpdateSupergroup extends Update {
   @override
   String get tdType => 'updateSupergroup';
 
-  Supergroup supergroup;
+   late Supergroup supergroup;
 
   @override
   Map<String, dynamic> get params => {
@@ -21600,7 +21600,7 @@ class UpdateSupergroup extends Update {
   };
 
   UpdateSupergroup({
-    this.supergroup,
+  required this.supergroup,
   });
 
   UpdateSupergroup.fromJson(Map<String, dynamic> json) {
@@ -21613,7 +21613,7 @@ class UpdateSecretChat extends Update {
   @override
   String get tdType => 'updateSecretChat';
 
-  SecretChat secretChat;
+   late SecretChat secretChat;
 
   @override
   Map<String, dynamic> get params => {
@@ -21621,7 +21621,7 @@ class UpdateSecretChat extends Update {
   };
 
   UpdateSecretChat({
-    this.secretChat,
+  required this.secretChat,
   });
 
   UpdateSecretChat.fromJson(Map<String, dynamic> json) {
@@ -21634,8 +21634,8 @@ class UpdateUserFullInfo extends Update {
   @override
   String get tdType => 'updateUserFullInfo';
 
-  int userId;
-  UserFullInfo userFullInfo;
+   late int userId;
+   late UserFullInfo userFullInfo;
 
   @override
   Map<String, dynamic> get params => {
@@ -21644,8 +21644,8 @@ class UpdateUserFullInfo extends Update {
   };
 
   UpdateUserFullInfo({
-    this.userId,
-    this.userFullInfo,
+  required this.userId,
+  required this.userFullInfo,
   });
 
   UpdateUserFullInfo.fromJson(Map<String, dynamic> json) {
@@ -21659,8 +21659,8 @@ class UpdateBasicGroupFullInfo extends Update {
   @override
   String get tdType => 'updateBasicGroupFullInfo';
 
-  int basicGroupId;
-  BasicGroupFullInfo basicGroupFullInfo;
+   late int basicGroupId;
+   late BasicGroupFullInfo basicGroupFullInfo;
 
   @override
   Map<String, dynamic> get params => {
@@ -21669,8 +21669,8 @@ class UpdateBasicGroupFullInfo extends Update {
   };
 
   UpdateBasicGroupFullInfo({
-    this.basicGroupId,
-    this.basicGroupFullInfo,
+  required this.basicGroupId,
+  required this.basicGroupFullInfo,
   });
 
   UpdateBasicGroupFullInfo.fromJson(Map<String, dynamic> json) {
@@ -21684,8 +21684,8 @@ class UpdateSupergroupFullInfo extends Update {
   @override
   String get tdType => 'updateSupergroupFullInfo';
 
-  int supergroupId;
-  SupergroupFullInfo supergroupFullInfo;
+   late int supergroupId;
+   late SupergroupFullInfo supergroupFullInfo;
 
   @override
   Map<String, dynamic> get params => {
@@ -21694,8 +21694,8 @@ class UpdateSupergroupFullInfo extends Update {
   };
 
   UpdateSupergroupFullInfo({
-    this.supergroupId,
-    this.supergroupFullInfo,
+  required this.supergroupId,
+  required this.supergroupFullInfo,
   });
 
   UpdateSupergroupFullInfo.fromJson(Map<String, dynamic> json) {
@@ -21709,8 +21709,8 @@ class UpdateServiceNotification extends Update {
   @override
   String get tdType => 'updateServiceNotification';
 
-  String type;
-  MessageContent content;
+   late String type;
+   late MessageContent content;
 
   @override
   Map<String, dynamic> get params => {
@@ -21719,8 +21719,8 @@ class UpdateServiceNotification extends Update {
   };
 
   UpdateServiceNotification({
-    this.type,
-    this.content,
+  required this.type,
+  required this.content,
   });
 
   UpdateServiceNotification.fromJson(Map<String, dynamic> json) {
@@ -21734,7 +21734,7 @@ class UpdateFile extends Update {
   @override
   String get tdType => 'updateFile';
 
-  File file;
+   late File file;
 
   @override
   Map<String, dynamic> get params => {
@@ -21742,7 +21742,7 @@ class UpdateFile extends Update {
   };
 
   UpdateFile({
-    this.file,
+  required this.file,
   });
 
   UpdateFile.fromJson(Map<String, dynamic> json) {
@@ -21755,10 +21755,10 @@ class UpdateFileGenerationStart extends Update {
   @override
   String get tdType => 'updateFileGenerationStart';
 
-  int generationId;
-  String originalPath;
-  String destinationPath;
-  String conversion;
+   late int generationId;
+   late String originalPath;
+   late String destinationPath;
+   late String conversion;
 
   @override
   Map<String, dynamic> get params => {
@@ -21769,10 +21769,10 @@ class UpdateFileGenerationStart extends Update {
   };
 
   UpdateFileGenerationStart({
-    this.generationId,
-    this.originalPath,
-    this.destinationPath,
-    this.conversion,
+  required this.generationId,
+  required this.originalPath,
+  required this.destinationPath,
+  required this.conversion,
   });
 
   UpdateFileGenerationStart.fromJson(Map<String, dynamic> json) {
@@ -21788,7 +21788,7 @@ class UpdateFileGenerationStop extends Update {
   @override
   String get tdType => 'updateFileGenerationStop';
 
-  int generationId;
+   late int generationId;
 
   @override
   Map<String, dynamic> get params => {
@@ -21796,7 +21796,7 @@ class UpdateFileGenerationStop extends Update {
   };
 
   UpdateFileGenerationStop({
-    this.generationId,
+  required this.generationId,
   });
 
   UpdateFileGenerationStop.fromJson(Map<String, dynamic> json) {
@@ -21809,7 +21809,7 @@ class UpdateCall extends Update {
   @override
   String get tdType => 'updateCall';
 
-  Call call;
+   late Call call;
 
   @override
   Map<String, dynamic> get params => {
@@ -21817,7 +21817,7 @@ class UpdateCall extends Update {
   };
 
   UpdateCall({
-    this.call,
+  required this.call,
   });
 
   UpdateCall.fromJson(Map<String, dynamic> json) {
@@ -21830,7 +21830,7 @@ class UpdateGroupCall extends Update {
   @override
   String get tdType => 'updateGroupCall';
 
-  GroupCall groupCall;
+   late GroupCall groupCall;
 
   @override
   Map<String, dynamic> get params => {
@@ -21838,7 +21838,7 @@ class UpdateGroupCall extends Update {
   };
 
   UpdateGroupCall({
-    this.groupCall,
+  required this.groupCall,
   });
 
   UpdateGroupCall.fromJson(Map<String, dynamic> json) {
@@ -21851,8 +21851,8 @@ class UpdateGroupCallParticipant extends Update {
   @override
   String get tdType => 'updateGroupCallParticipant';
 
-  int groupCallId;
-  GroupCallParticipant participant;
+   late int groupCallId;
+   late GroupCallParticipant participant;
 
   @override
   Map<String, dynamic> get params => {
@@ -21861,8 +21861,8 @@ class UpdateGroupCallParticipant extends Update {
   };
 
   UpdateGroupCallParticipant({
-    this.groupCallId,
-    this.participant,
+  required this.groupCallId,
+  required this.participant,
   });
 
   UpdateGroupCallParticipant.fromJson(Map<String, dynamic> json) {
@@ -21876,8 +21876,8 @@ class UpdateNewCallSignalingData extends Update {
   @override
   String get tdType => 'updateNewCallSignalingData';
 
-  int callId;
-  String data;
+   late int callId;
+   late String data;
 
   @override
   Map<String, dynamic> get params => {
@@ -21886,8 +21886,8 @@ class UpdateNewCallSignalingData extends Update {
   };
 
   UpdateNewCallSignalingData({
-    this.callId,
-    this.data,
+  required this.callId,
+  required this.data,
   });
 
   UpdateNewCallSignalingData.fromJson(Map<String, dynamic> json) {
@@ -21901,8 +21901,8 @@ class UpdateUserPrivacySettingRules extends Update {
   @override
   String get tdType => 'updateUserPrivacySettingRules';
 
-  UserPrivacySetting setting;
-  UserPrivacySettingRules rules;
+   late UserPrivacySetting setting;
+   late UserPrivacySettingRules rules;
 
   @override
   Map<String, dynamic> get params => {
@@ -21911,8 +21911,8 @@ class UpdateUserPrivacySettingRules extends Update {
   };
 
   UpdateUserPrivacySettingRules({
-    this.setting,
-    this.rules,
+  required this.setting,
+  required this.rules,
   });
 
   UpdateUserPrivacySettingRules.fromJson(Map<String, dynamic> json) {
@@ -21926,9 +21926,9 @@ class UpdateUnreadMessageCount extends Update {
   @override
   String get tdType => 'updateUnreadMessageCount';
 
-  ChatList chatList;
-  int unreadCount;
-  int unreadUnmutedCount;
+   late ChatList chatList;
+   late int unreadCount;
+   late int unreadUnmutedCount;
 
   @override
   Map<String, dynamic> get params => {
@@ -21938,9 +21938,9 @@ class UpdateUnreadMessageCount extends Update {
   };
 
   UpdateUnreadMessageCount({
-    this.chatList,
-    this.unreadCount,
-    this.unreadUnmutedCount,
+  required this.chatList,
+  required this.unreadCount,
+  required this.unreadUnmutedCount,
   });
 
   UpdateUnreadMessageCount.fromJson(Map<String, dynamic> json) {
@@ -21955,12 +21955,12 @@ class UpdateUnreadChatCount extends Update {
   @override
   String get tdType => 'updateUnreadChatCount';
 
-  ChatList chatList;
-  int totalCount;
-  int unreadCount;
-  int unreadUnmutedCount;
-  int markedAsUnreadCount;
-  int markedAsUnreadUnmutedCount;
+   late ChatList chatList;
+   late int totalCount;
+   late int unreadCount;
+   late int unreadUnmutedCount;
+   late int markedAsUnreadCount;
+   late int markedAsUnreadUnmutedCount;
 
   @override
   Map<String, dynamic> get params => {
@@ -21973,12 +21973,12 @@ class UpdateUnreadChatCount extends Update {
   };
 
   UpdateUnreadChatCount({
-    this.chatList,
-    this.totalCount,
-    this.unreadCount,
-    this.unreadUnmutedCount,
-    this.markedAsUnreadCount,
-    this.markedAsUnreadUnmutedCount,
+  required this.chatList,
+  required this.totalCount,
+  required this.unreadCount,
+  required this.unreadUnmutedCount,
+  required this.markedAsUnreadCount,
+  required this.markedAsUnreadUnmutedCount,
   });
 
   UpdateUnreadChatCount.fromJson(Map<String, dynamic> json) {
@@ -21996,8 +21996,8 @@ class UpdateOption extends Update {
   @override
   String get tdType => 'updateOption';
 
-  String name;
-  OptionValue value;
+   late String name;
+   late OptionValue value;
 
   @override
   Map<String, dynamic> get params => {
@@ -22006,8 +22006,8 @@ class UpdateOption extends Update {
   };
 
   UpdateOption({
-    this.name,
-    this.value,
+  required this.name,
+  required this.value,
   });
 
   UpdateOption.fromJson(Map<String, dynamic> json) {
@@ -22021,7 +22021,7 @@ class UpdateStickerSet extends Update {
   @override
   String get tdType => 'updateStickerSet';
 
-  StickerSet stickerSet;
+   late StickerSet stickerSet;
 
   @override
   Map<String, dynamic> get params => {
@@ -22029,7 +22029,7 @@ class UpdateStickerSet extends Update {
   };
 
   UpdateStickerSet({
-    this.stickerSet,
+  required this.stickerSet,
   });
 
   UpdateStickerSet.fromJson(Map<String, dynamic> json) {
@@ -22042,8 +22042,8 @@ class UpdateInstalledStickerSets extends Update {
   @override
   String get tdType => 'updateInstalledStickerSets';
 
-  bool isMasks;
-  List<int> stickerSetIds;
+   late bool isMasks;
+   late List<int> stickerSetIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -22052,8 +22052,8 @@ class UpdateInstalledStickerSets extends Update {
   };
 
   UpdateInstalledStickerSets({
-    this.isMasks,
-    this.stickerSetIds,
+  required this.isMasks,
+  required this.stickerSetIds,
   });
 
   UpdateInstalledStickerSets.fromJson(Map<String, dynamic> json) {
@@ -22067,7 +22067,7 @@ class UpdateTrendingStickerSets extends Update {
   @override
   String get tdType => 'updateTrendingStickerSets';
 
-  StickerSets stickerSets;
+   late StickerSets stickerSets;
 
   @override
   Map<String, dynamic> get params => {
@@ -22075,7 +22075,7 @@ class UpdateTrendingStickerSets extends Update {
   };
 
   UpdateTrendingStickerSets({
-    this.stickerSets,
+  required this.stickerSets,
   });
 
   UpdateTrendingStickerSets.fromJson(Map<String, dynamic> json) {
@@ -22088,8 +22088,8 @@ class UpdateRecentStickers extends Update {
   @override
   String get tdType => 'updateRecentStickers';
 
-  bool isAttached;
-  List<int> stickerIds;
+   late bool isAttached;
+   late List<int> stickerIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -22098,8 +22098,8 @@ class UpdateRecentStickers extends Update {
   };
 
   UpdateRecentStickers({
-    this.isAttached,
-    this.stickerIds,
+  required this.isAttached,
+  required this.stickerIds,
   });
 
   UpdateRecentStickers.fromJson(Map<String, dynamic> json) {
@@ -22113,7 +22113,7 @@ class UpdateFavoriteStickers extends Update {
   @override
   String get tdType => 'updateFavoriteStickers';
 
-  List<int> stickerIds;
+   late List<int> stickerIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -22121,7 +22121,7 @@ class UpdateFavoriteStickers extends Update {
   };
 
   UpdateFavoriteStickers({
-    this.stickerIds,
+  required this.stickerIds,
   });
 
   UpdateFavoriteStickers.fromJson(Map<String, dynamic> json) {
@@ -22134,7 +22134,7 @@ class UpdateSavedAnimations extends Update {
   @override
   String get tdType => 'updateSavedAnimations';
 
-  List<int> animationIds;
+   late List<int> animationIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -22142,7 +22142,7 @@ class UpdateSavedAnimations extends Update {
   };
 
   UpdateSavedAnimations({
-    this.animationIds,
+  required this.animationIds,
   });
 
   UpdateSavedAnimations.fromJson(Map<String, dynamic> json) {
@@ -22155,8 +22155,8 @@ class UpdateSelectedBackground extends Update {
   @override
   String get tdType => 'updateSelectedBackground';
 
-  bool forDarkTheme;
-  Background background;
+   late bool forDarkTheme;
+   late Background background;
 
   @override
   Map<String, dynamic> get params => {
@@ -22165,8 +22165,8 @@ class UpdateSelectedBackground extends Update {
   };
 
   UpdateSelectedBackground({
-    this.forDarkTheme,
-    this.background,
+  required this.forDarkTheme,
+  required this.background,
   });
 
   UpdateSelectedBackground.fromJson(Map<String, dynamic> json) {
@@ -22180,7 +22180,7 @@ class UpdateChatThemes extends Update {
   @override
   String get tdType => 'updateChatThemes';
 
-  List<ChatTheme> chatThemes;
+   late List<ChatTheme> chatThemes;
 
   @override
   Map<String, dynamic> get params => {
@@ -22188,7 +22188,7 @@ class UpdateChatThemes extends Update {
   };
 
   UpdateChatThemes({
-    this.chatThemes,
+  required this.chatThemes,
   });
 
   UpdateChatThemes.fromJson(Map<String, dynamic> json) {
@@ -22201,9 +22201,9 @@ class UpdateLanguagePackStrings extends Update {
   @override
   String get tdType => 'updateLanguagePackStrings';
 
-  String localizationTarget;
-  String languagePackId;
-  List<LanguagePackString> strings;
+   late String localizationTarget;
+   late String languagePackId;
+   late List<LanguagePackString> strings;
 
   @override
   Map<String, dynamic> get params => {
@@ -22213,9 +22213,9 @@ class UpdateLanguagePackStrings extends Update {
   };
 
   UpdateLanguagePackStrings({
-    this.localizationTarget,
-    this.languagePackId,
-    this.strings,
+  required this.localizationTarget,
+  required this.languagePackId,
+  required this.strings,
   });
 
   UpdateLanguagePackStrings.fromJson(Map<String, dynamic> json) {
@@ -22230,7 +22230,7 @@ class UpdateConnectionState extends Update {
   @override
   String get tdType => 'updateConnectionState';
 
-  ConnectionState state;
+   late ConnectionState state;
 
   @override
   Map<String, dynamic> get params => {
@@ -22238,7 +22238,7 @@ class UpdateConnectionState extends Update {
   };
 
   UpdateConnectionState({
-    this.state,
+  required this.state,
   });
 
   UpdateConnectionState.fromJson(Map<String, dynamic> json) {
@@ -22251,8 +22251,8 @@ class UpdateTermsOfService extends Update {
   @override
   String get tdType => 'updateTermsOfService';
 
-  String termsOfServiceId;
-  TermsOfService termsOfService;
+   late String termsOfServiceId;
+   late TermsOfService termsOfService;
 
   @override
   Map<String, dynamic> get params => {
@@ -22261,8 +22261,8 @@ class UpdateTermsOfService extends Update {
   };
 
   UpdateTermsOfService({
-    this.termsOfServiceId,
-    this.termsOfService,
+  required this.termsOfServiceId,
+  required this.termsOfService,
   });
 
   UpdateTermsOfService.fromJson(Map<String, dynamic> json) {
@@ -22276,7 +22276,7 @@ class UpdateUsersNearby extends Update {
   @override
   String get tdType => 'updateUsersNearby';
 
-  List<ChatNearby> usersNearby;
+   late List<ChatNearby> usersNearby;
 
   @override
   Map<String, dynamic> get params => {
@@ -22284,7 +22284,7 @@ class UpdateUsersNearby extends Update {
   };
 
   UpdateUsersNearby({
-    this.usersNearby,
+  required this.usersNearby,
   });
 
   UpdateUsersNearby.fromJson(Map<String, dynamic> json) {
@@ -22297,7 +22297,7 @@ class UpdateDiceEmojis extends Update {
   @override
   String get tdType => 'updateDiceEmojis';
 
-  List<String> emojis;
+   late List<String> emojis;
 
   @override
   Map<String, dynamic> get params => {
@@ -22305,7 +22305,7 @@ class UpdateDiceEmojis extends Update {
   };
 
   UpdateDiceEmojis({
-    this.emojis,
+  required this.emojis,
   });
 
   UpdateDiceEmojis.fromJson(Map<String, dynamic> json) {
@@ -22318,9 +22318,9 @@ class UpdateAnimatedEmojiMessageClicked extends Update {
   @override
   String get tdType => 'updateAnimatedEmojiMessageClicked';
 
-  int chatId;
-  int messageId;
-  Sticker sticker;
+   late int chatId;
+   late int messageId;
+   late Sticker sticker;
 
   @override
   Map<String, dynamic> get params => {
@@ -22330,9 +22330,9 @@ class UpdateAnimatedEmojiMessageClicked extends Update {
   };
 
   UpdateAnimatedEmojiMessageClicked({
-    this.chatId,
-    this.messageId,
-    this.sticker,
+  required this.chatId,
+  required this.messageId,
+  required this.sticker,
   });
 
   UpdateAnimatedEmojiMessageClicked.fromJson(Map<String, dynamic> json) {
@@ -22347,8 +22347,8 @@ class UpdateAnimationSearchParameters extends Update {
   @override
   String get tdType => 'updateAnimationSearchParameters';
 
-  String provider;
-  List<String> emojis;
+   late String provider;
+   late List<String> emojis;
 
   @override
   Map<String, dynamic> get params => {
@@ -22357,8 +22357,8 @@ class UpdateAnimationSearchParameters extends Update {
   };
 
   UpdateAnimationSearchParameters({
-    this.provider,
-    this.emojis,
+  required this.provider,
+  required this.emojis,
   });
 
   UpdateAnimationSearchParameters.fromJson(Map<String, dynamic> json) {
@@ -22372,8 +22372,8 @@ class UpdateSuggestedActions extends Update {
   @override
   String get tdType => 'updateSuggestedActions';
 
-  List<SuggestedAction> addedActions;
-  List<SuggestedAction> removedActions;
+   late List<SuggestedAction> addedActions;
+   late List<SuggestedAction> removedActions;
 
   @override
   Map<String, dynamic> get params => {
@@ -22382,8 +22382,8 @@ class UpdateSuggestedActions extends Update {
   };
 
   UpdateSuggestedActions({
-    this.addedActions,
-    this.removedActions,
+  required this.addedActions,
+  required this.removedActions,
   });
 
   UpdateSuggestedActions.fromJson(Map<String, dynamic> json) {
@@ -22397,12 +22397,12 @@ class UpdateNewInlineQuery extends Update {
   @override
   String get tdType => 'updateNewInlineQuery';
 
-  int id;
-  int senderUserId;
-  Location userLocation;
-  ChatType chatType;
-  String query;
-  String offset;
+   late int id;
+   late int senderUserId;
+   late Location userLocation;
+   late ChatType chatType;
+   late String query;
+   late String offset;
 
   @override
   Map<String, dynamic> get params => {
@@ -22415,12 +22415,12 @@ class UpdateNewInlineQuery extends Update {
   };
 
   UpdateNewInlineQuery({
-    this.id,
-    this.senderUserId,
-    this.userLocation,
-    this.chatType,
-    this.query,
-    this.offset,
+  required this.id,
+  required this.senderUserId,
+  required this.userLocation,
+  required this.chatType,
+  required this.query,
+  required this.offset,
   });
 
   UpdateNewInlineQuery.fromJson(Map<String, dynamic> json) {
@@ -22438,11 +22438,11 @@ class UpdateNewChosenInlineResult extends Update {
   @override
   String get tdType => 'updateNewChosenInlineResult';
 
-  int senderUserId;
-  Location userLocation;
-  String query;
-  String resultId;
-  String inlineMessageId;
+   late int senderUserId;
+   late Location userLocation;
+   late String query;
+   late String resultId;
+   late String inlineMessageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -22454,11 +22454,11 @@ class UpdateNewChosenInlineResult extends Update {
   };
 
   UpdateNewChosenInlineResult({
-    this.senderUserId,
-    this.userLocation,
-    this.query,
-    this.resultId,
-    this.inlineMessageId,
+  required this.senderUserId,
+  required this.userLocation,
+  required this.query,
+  required this.resultId,
+  required this.inlineMessageId,
   });
 
   UpdateNewChosenInlineResult.fromJson(Map<String, dynamic> json) {
@@ -22475,12 +22475,12 @@ class UpdateNewCallbackQuery extends Update {
   @override
   String get tdType => 'updateNewCallbackQuery';
 
-  int id;
-  int senderUserId;
-  int chatId;
-  int messageId;
-  int chatInstance;
-  CallbackQueryPayload payload;
+   late int id;
+   late int senderUserId;
+   late int chatId;
+   late int messageId;
+   late int chatInstance;
+   late CallbackQueryPayload payload;
 
   @override
   Map<String, dynamic> get params => {
@@ -22493,12 +22493,12 @@ class UpdateNewCallbackQuery extends Update {
   };
 
   UpdateNewCallbackQuery({
-    this.id,
-    this.senderUserId,
-    this.chatId,
-    this.messageId,
-    this.chatInstance,
-    this.payload,
+  required this.id,
+  required this.senderUserId,
+  required this.chatId,
+  required this.messageId,
+  required this.chatInstance,
+  required this.payload,
   });
 
   UpdateNewCallbackQuery.fromJson(Map<String, dynamic> json) {
@@ -22516,11 +22516,11 @@ class UpdateNewInlineCallbackQuery extends Update {
   @override
   String get tdType => 'updateNewInlineCallbackQuery';
 
-  int id;
-  int senderUserId;
-  String inlineMessageId;
-  int chatInstance;
-  CallbackQueryPayload payload;
+   late int id;
+   late int senderUserId;
+   late String inlineMessageId;
+   late int chatInstance;
+   late CallbackQueryPayload payload;
 
   @override
   Map<String, dynamic> get params => {
@@ -22532,11 +22532,11 @@ class UpdateNewInlineCallbackQuery extends Update {
   };
 
   UpdateNewInlineCallbackQuery({
-    this.id,
-    this.senderUserId,
-    this.inlineMessageId,
-    this.chatInstance,
-    this.payload,
+  required this.id,
+  required this.senderUserId,
+  required this.inlineMessageId,
+  required this.chatInstance,
+  required this.payload,
   });
 
   UpdateNewInlineCallbackQuery.fromJson(Map<String, dynamic> json) {
@@ -22553,10 +22553,10 @@ class UpdateNewShippingQuery extends Update {
   @override
   String get tdType => 'updateNewShippingQuery';
 
-  int id;
-  int senderUserId;
-  String invoicePayload;
-  Address shippingAddress;
+   late int id;
+   late int senderUserId;
+   late String invoicePayload;
+   late Address shippingAddress;
 
   @override
   Map<String, dynamic> get params => {
@@ -22567,10 +22567,10 @@ class UpdateNewShippingQuery extends Update {
   };
 
   UpdateNewShippingQuery({
-    this.id,
-    this.senderUserId,
-    this.invoicePayload,
-    this.shippingAddress,
+  required this.id,
+  required this.senderUserId,
+  required this.invoicePayload,
+  required this.shippingAddress,
   });
 
   UpdateNewShippingQuery.fromJson(Map<String, dynamic> json) {
@@ -22586,13 +22586,13 @@ class UpdateNewPreCheckoutQuery extends Update {
   @override
   String get tdType => 'updateNewPreCheckoutQuery';
 
-  int id;
-  int senderUserId;
-  String currency;
-  int totalAmount;
-  String invoicePayload;
-  String shippingOptionId;
-  OrderInfo orderInfo;
+   late int id;
+   late int senderUserId;
+   late String currency;
+   late int totalAmount;
+   late String invoicePayload;
+   late String shippingOptionId;
+   late OrderInfo orderInfo;
 
   @override
   Map<String, dynamic> get params => {
@@ -22606,13 +22606,13 @@ class UpdateNewPreCheckoutQuery extends Update {
   };
 
   UpdateNewPreCheckoutQuery({
-    this.id,
-    this.senderUserId,
-    this.currency,
-    this.totalAmount,
-    this.invoicePayload,
-    this.shippingOptionId,
-    this.orderInfo,
+  required this.id,
+  required this.senderUserId,
+  required this.currency,
+  required this.totalAmount,
+  required this.invoicePayload,
+  required this.shippingOptionId,
+  required this.orderInfo,
   });
 
   UpdateNewPreCheckoutQuery.fromJson(Map<String, dynamic> json) {
@@ -22631,7 +22631,7 @@ class UpdateNewCustomEvent extends Update {
   @override
   String get tdType => 'updateNewCustomEvent';
 
-  String event;
+   late String event;
 
   @override
   Map<String, dynamic> get params => {
@@ -22639,7 +22639,7 @@ class UpdateNewCustomEvent extends Update {
   };
 
   UpdateNewCustomEvent({
-    this.event,
+  required this.event,
   });
 
   UpdateNewCustomEvent.fromJson(Map<String, dynamic> json) {
@@ -22652,9 +22652,9 @@ class UpdateNewCustomQuery extends Update {
   @override
   String get tdType => 'updateNewCustomQuery';
 
-  int id;
-  String data;
-  int timeout;
+   late int id;
+   late String data;
+   late int timeout;
 
   @override
   Map<String, dynamic> get params => {
@@ -22664,9 +22664,9 @@ class UpdateNewCustomQuery extends Update {
   };
 
   UpdateNewCustomQuery({
-    this.id,
-    this.data,
-    this.timeout,
+  required this.id,
+  required this.data,
+  required this.timeout,
   });
 
   UpdateNewCustomQuery.fromJson(Map<String, dynamic> json) {
@@ -22681,7 +22681,7 @@ class UpdatePoll extends Update {
   @override
   String get tdType => 'updatePoll';
 
-  Poll poll;
+   late Poll poll;
 
   @override
   Map<String, dynamic> get params => {
@@ -22689,7 +22689,7 @@ class UpdatePoll extends Update {
   };
 
   UpdatePoll({
-    this.poll,
+  required this.poll,
   });
 
   UpdatePoll.fromJson(Map<String, dynamic> json) {
@@ -22702,9 +22702,9 @@ class UpdatePollAnswer extends Update {
   @override
   String get tdType => 'updatePollAnswer';
 
-  int pollId;
-  int userId;
-  List<int> optionIds;
+   late int pollId;
+   late int userId;
+   late List<int> optionIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -22714,9 +22714,9 @@ class UpdatePollAnswer extends Update {
   };
 
   UpdatePollAnswer({
-    this.pollId,
-    this.userId,
-    this.optionIds,
+  required this.pollId,
+  required this.userId,
+  required this.optionIds,
   });
 
   UpdatePollAnswer.fromJson(Map<String, dynamic> json) {
@@ -22731,12 +22731,12 @@ class UpdateChatMember extends Update {
   @override
   String get tdType => 'updateChatMember';
 
-  int chatId;
-  int actorUserId;
-  int date;
-  ChatInviteLink inviteLink;
-  ChatMember oldChatMember;
-  ChatMember newChatMember;
+   late int chatId;
+   late int actorUserId;
+   late int date;
+   late ChatInviteLink inviteLink;
+   late ChatMember oldChatMember;
+   late ChatMember newChatMember;
 
   @override
   Map<String, dynamic> get params => {
@@ -22749,12 +22749,12 @@ class UpdateChatMember extends Update {
   };
 
   UpdateChatMember({
-    this.chatId,
-    this.actorUserId,
-    this.date,
-    this.inviteLink,
-    this.oldChatMember,
-    this.newChatMember,
+  required this.chatId,
+  required this.actorUserId,
+  required this.date,
+  required this.inviteLink,
+  required this.oldChatMember,
+  required this.newChatMember,
   });
 
   UpdateChatMember.fromJson(Map<String, dynamic> json) {
@@ -22772,7 +22772,7 @@ class Updates extends TdObject {
   @override
   String get tdType => 'updates';
 
-  List<Update> updates;
+   late List<Update> updates;
 
   @override
   Map<String, dynamic> get params => {
@@ -22780,7 +22780,7 @@ class Updates extends TdObject {
   };
 
   Updates({
-    this.updates,
+  required this.updates,
   });
 
   Updates.fromJson(Map<String, dynamic> json) {
@@ -22808,9 +22808,9 @@ class LogStreamFile extends LogStream {
   @override
   String get tdType => 'logStreamFile';
 
-  String path;
-  int maxFileSize;
-  bool redirectStderr;
+   late String path;
+   late int maxFileSize;
+   late bool redirectStderr;
 
   @override
   Map<String, dynamic> get params => {
@@ -22820,9 +22820,9 @@ class LogStreamFile extends LogStream {
   };
 
   LogStreamFile({
-    this.path,
-    this.maxFileSize,
-    this.redirectStderr,
+  required this.path,
+  required this.maxFileSize,
+  required this.redirectStderr,
   });
 
   LogStreamFile.fromJson(Map<String, dynamic> json) {
@@ -22850,7 +22850,7 @@ class LogVerbosityLevel extends TdObject {
   @override
   String get tdType => 'logVerbosityLevel';
 
-  int verbosityLevel;
+   late int verbosityLevel;
 
   @override
   Map<String, dynamic> get params => {
@@ -22858,7 +22858,7 @@ class LogVerbosityLevel extends TdObject {
   };
 
   LogVerbosityLevel({
-    this.verbosityLevel,
+  required this.verbosityLevel,
   });
 
   LogVerbosityLevel.fromJson(Map<String, dynamic> json) {
@@ -22871,7 +22871,7 @@ class LogTags extends TdObject {
   @override
   String get tdType => 'logTags';
 
-  List<String> tags;
+   late List<String> tags;
 
   @override
   Map<String, dynamic> get params => {
@@ -22879,7 +22879,7 @@ class LogTags extends TdObject {
   };
 
   LogTags({
-    this.tags,
+  required this.tags,
   });
 
   LogTags.fromJson(Map<String, dynamic> json) {
@@ -22892,7 +22892,7 @@ class TestInt extends TdObject {
   @override
   String get tdType => 'testInt';
 
-  int value;
+   late int value;
 
   @override
   Map<String, dynamic> get params => {
@@ -22900,7 +22900,7 @@ class TestInt extends TdObject {
   };
 
   TestInt({
-    this.value,
+  required this.value,
   });
 
   TestInt.fromJson(Map<String, dynamic> json) {
@@ -22913,7 +22913,7 @@ class TestString extends TdObject {
   @override
   String get tdType => 'testString';
 
-  String value;
+   late String value;
 
   @override
   Map<String, dynamic> get params => {
@@ -22921,7 +22921,7 @@ class TestString extends TdObject {
   };
 
   TestString({
-    this.value,
+  required this.value,
   });
 
   TestString.fromJson(Map<String, dynamic> json) {
@@ -22934,7 +22934,7 @@ class TestBytes extends TdObject {
   @override
   String get tdType => 'testBytes';
 
-  String value;
+   late String value;
 
   @override
   Map<String, dynamic> get params => {
@@ -22942,7 +22942,7 @@ class TestBytes extends TdObject {
   };
 
   TestBytes({
-    this.value,
+  required this.value,
   });
 
   TestBytes.fromJson(Map<String, dynamic> json) {
@@ -22955,7 +22955,7 @@ class TestVectorInt extends TdObject {
   @override
   String get tdType => 'testVectorInt';
 
-  List<int> value;
+   late List<int> value;
 
   @override
   Map<String, dynamic> get params => {
@@ -22963,7 +22963,7 @@ class TestVectorInt extends TdObject {
   };
 
   TestVectorInt({
-    this.value,
+  required this.value,
   });
 
   TestVectorInt.fromJson(Map<String, dynamic> json) {
@@ -22976,7 +22976,7 @@ class TestVectorIntObject extends TdObject {
   @override
   String get tdType => 'testVectorIntObject';
 
-  List<TestInt> value;
+   late List<TestInt> value;
 
   @override
   Map<String, dynamic> get params => {
@@ -22984,7 +22984,7 @@ class TestVectorIntObject extends TdObject {
   };
 
   TestVectorIntObject({
-    this.value,
+  required this.value,
   });
 
   TestVectorIntObject.fromJson(Map<String, dynamic> json) {
@@ -22997,7 +22997,7 @@ class TestVectorString extends TdObject {
   @override
   String get tdType => 'testVectorString';
 
-  List<String> value;
+   late List<String> value;
 
   @override
   Map<String, dynamic> get params => {
@@ -23005,7 +23005,7 @@ class TestVectorString extends TdObject {
   };
 
   TestVectorString({
-    this.value,
+  required this.value,
   });
 
   TestVectorString.fromJson(Map<String, dynamic> json) {
@@ -23018,7 +23018,7 @@ class TestVectorStringObject extends TdObject {
   @override
   String get tdType => 'testVectorStringObject';
 
-  List<TestString> value;
+   late List<TestString> value;
 
   @override
   Map<String, dynamic> get params => {
@@ -23026,7 +23026,7 @@ class TestVectorStringObject extends TdObject {
   };
 
   TestVectorStringObject({
-    this.value,
+  required this.value,
   });
 
   TestVectorStringObject.fromJson(Map<String, dynamic> json) {

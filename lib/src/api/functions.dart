@@ -26,7 +26,7 @@ class SetTdlibParameters extends TdFunction {
   @override
   String get tdType => 'setTdlibParameters';
 
-  TdlibParameters parameters;
+  late TdlibParameters parameters;
 
   @override
   Map<String, dynamic> get params => {
@@ -50,7 +50,7 @@ class CheckDatabaseEncryptionKey extends TdFunction {
   @override
   String get tdType => 'checkDatabaseEncryptionKey';
 
-  String encryptionKey;
+  late String encryptionKey;
 
   @override
   Map<String, dynamic> get params => {
@@ -74,8 +74,8 @@ class SetAuthenticationPhoneNumber extends TdFunction {
   @override
   String get tdType => 'setAuthenticationPhoneNumber';
 
-  String phoneNumber;
-  PhoneNumberAuthenticationSettings settings;
+  late String phoneNumber;
+  late PhoneNumberAuthenticationSettings settings;
 
   @override
   Map<String, dynamic> get params => {
@@ -118,7 +118,7 @@ class CheckAuthenticationCode extends TdFunction {
   @override
   String get tdType => 'checkAuthenticationCode';
 
-  String code;
+  late String code;
 
   @override
   Map<String, dynamic> get params => {
@@ -142,7 +142,7 @@ class RequestQrCodeAuthentication extends TdFunction {
   @override
   String get tdType => 'requestQrCodeAuthentication';
 
-  List<int> otherUserIds;
+  late List<int> otherUserIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -166,8 +166,8 @@ class RegisterUser extends TdFunction {
   @override
   String get tdType => 'registerUser';
 
-  String firstName;
-  String lastName;
+  late String firstName;
+  late String lastName;
 
   @override
   Map<String, dynamic> get params => {
@@ -194,7 +194,7 @@ class CheckAuthenticationPassword extends TdFunction {
   @override
   String get tdType => 'checkAuthenticationPassword';
 
-  String password;
+  late String password;
 
   @override
   Map<String, dynamic> get params => {
@@ -234,7 +234,7 @@ class CheckAuthenticationPasswordRecoveryCode extends TdFunction {
   @override
   String get tdType => 'checkAuthenticationPasswordRecoveryCode';
 
-  String recoveryCode;
+  late String recoveryCode;
 
   @override
   Map<String, dynamic> get params => {
@@ -258,9 +258,9 @@ class RecoverAuthenticationPassword extends TdFunction {
   @override
   String get tdType => 'recoverAuthenticationPassword';
 
-  String recoveryCode;
-  String newPassword;
-  String newHint;
+  late String recoveryCode;
+  late String newPassword;
+  late String newHint;
 
   @override
   Map<String, dynamic> get params => {
@@ -290,7 +290,7 @@ class CheckAuthenticationBotToken extends TdFunction {
   @override
   String get tdType => 'checkAuthenticationBotToken';
 
-  String token;
+  late String token;
 
   @override
   Map<String, dynamic> get params => {
@@ -362,7 +362,7 @@ class SetDatabaseEncryptionKey extends TdFunction {
   @override
   String get tdType => 'setDatabaseEncryptionKey';
 
-  String newEncryptionKey;
+  late String newEncryptionKey;
 
   @override
   Map<String, dynamic> get params => {
@@ -386,7 +386,7 @@ class CheckPasswordRecoveryCode extends TdFunction {
   @override
   String get tdType => 'checkPasswordRecoveryCode';
 
-  String recoveryCode;
+  late String recoveryCode;
 
   @override
   Map<String, dynamic> get params => {
@@ -426,8 +426,8 @@ class LoadChats extends TdFunction {
   @override
   String get tdType => 'loadChats';
 
-  ChatList chatList;
-  int limit;
+  late ChatList chatList;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -454,8 +454,8 @@ class RemoveTopChat extends TdFunction {
   @override
   String get tdType => 'removeTopChat';
 
-  TopChatCategory category;
-  int chatId;
+  late TopChatCategory category;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -482,7 +482,7 @@ class AddRecentlyFoundChat extends TdFunction {
   @override
   String get tdType => 'addRecentlyFoundChat';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -506,7 +506,7 @@ class RemoveRecentlyFoundChat extends TdFunction {
   @override
   String get tdType => 'removeRecentlyFoundChat';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -546,7 +546,7 @@ class CheckCreatedPublicChatsLimit extends TdFunction {
   @override
   String get tdType => 'checkCreatedPublicChatsLimit';
 
-  PublicChatType type;
+  late PublicChatType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -570,9 +570,9 @@ class DeleteChatHistory extends TdFunction {
   @override
   String get tdType => 'deleteChatHistory';
 
-  int chatId;
-  bool removeFromChatList;
-  bool revoke;
+  late int chatId;
+  late bool removeFromChatList;
+  late bool revoke;
 
   @override
   Map<String, dynamic> get params => {
@@ -602,7 +602,7 @@ class DeleteChat extends TdFunction {
   @override
   String get tdType => 'deleteChat';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -626,7 +626,7 @@ class DeleteAllCallMessages extends TdFunction {
   @override
   String get tdType => 'deleteAllCallMessages';
 
-  bool revoke;
+  late bool revoke;
 
   @override
   Map<String, dynamic> get params => {
@@ -650,8 +650,8 @@ class ViewSponsoredMessage extends TdFunction {
   @override
   String get tdType => 'viewSponsoredMessage';
 
-  int chatId;
-  int sponsoredMessageId;
+  late int chatId;
+  late int sponsoredMessageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -678,8 +678,8 @@ class RemoveNotification extends TdFunction {
   @override
   String get tdType => 'removeNotification';
 
-  int notificationGroupId;
-  int notificationId;
+  late int notificationGroupId;
+  late int notificationId;
 
   @override
   Map<String, dynamic> get params => {
@@ -706,8 +706,8 @@ class RemoveNotificationGroup extends TdFunction {
   @override
   String get tdType => 'removeNotificationGroup';
 
-  int notificationGroupId;
-  int maxNotificationId;
+  late int notificationGroupId;
+  late int maxNotificationId;
 
   @override
   Map<String, dynamic> get params => {
@@ -734,7 +734,7 @@ class SendChatScreenshotTakenNotification extends TdFunction {
   @override
   String get tdType => 'sendChatScreenshotTakenNotification';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -758,9 +758,9 @@ class DeleteMessages extends TdFunction {
   @override
   String get tdType => 'deleteMessages';
 
-  int chatId;
-  List<int> messageIds;
-  bool revoke;
+  late int chatId;
+  late List<int> messageIds;
+  late bool revoke;
 
   @override
   Map<String, dynamic> get params => {
@@ -790,8 +790,8 @@ class DeleteChatMessagesFromUser extends TdFunction {
   @override
   String get tdType => 'deleteChatMessagesFromUser';
 
-  int chatId;
-  int userId;
+  late int chatId;
+  late int userId;
 
   @override
   Map<String, dynamic> get params => {
@@ -818,9 +818,9 @@ class EditInlineMessageText extends TdFunction {
   @override
   String get tdType => 'editInlineMessageText';
 
-  String inlineMessageId;
-  ReplyMarkup replyMarkup;
-  InputMessageContent inputMessageContent;
+  late String inlineMessageId;
+  late ReplyMarkup replyMarkup;
+  late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -850,11 +850,11 @@ class EditInlineMessageLiveLocation extends TdFunction {
   @override
   String get tdType => 'editInlineMessageLiveLocation';
 
-  String inlineMessageId;
-  ReplyMarkup replyMarkup;
-  Location location;
-  int heading;
-  int proximityAlertRadius;
+  late String inlineMessageId;
+  late ReplyMarkup replyMarkup;
+  late Location location;
+  late int heading;
+  late int proximityAlertRadius;
 
   @override
   Map<String, dynamic> get params => {
@@ -890,9 +890,9 @@ class EditInlineMessageMedia extends TdFunction {
   @override
   String get tdType => 'editInlineMessageMedia';
 
-  String inlineMessageId;
-  ReplyMarkup replyMarkup;
-  InputMessageContent inputMessageContent;
+  late String inlineMessageId;
+  late ReplyMarkup replyMarkup;
+  late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -922,9 +922,9 @@ class EditInlineMessageCaption extends TdFunction {
   @override
   String get tdType => 'editInlineMessageCaption';
 
-  String inlineMessageId;
-  ReplyMarkup replyMarkup;
-  FormattedText caption;
+  late String inlineMessageId;
+  late ReplyMarkup replyMarkup;
+  late FormattedText caption;
 
   @override
   Map<String, dynamic> get params => {
@@ -954,8 +954,8 @@ class EditInlineMessageReplyMarkup extends TdFunction {
   @override
   String get tdType => 'editInlineMessageReplyMarkup';
 
-  String inlineMessageId;
-  ReplyMarkup replyMarkup;
+  late String inlineMessageId;
+  late ReplyMarkup replyMarkup;
 
   @override
   Map<String, dynamic> get params => {
@@ -982,9 +982,9 @@ class EditMessageSchedulingState extends TdFunction {
   @override
   String get tdType => 'editMessageSchedulingState';
 
-  int chatId;
-  int messageId;
-  MessageSchedulingState schedulingState;
+  late int chatId;
+  late int messageId;
+  late MessageSchedulingState schedulingState;
 
   @override
   Map<String, dynamic> get params => {
@@ -1014,9 +1014,9 @@ class SetPollAnswer extends TdFunction {
   @override
   String get tdType => 'setPollAnswer';
 
-  int chatId;
-  int messageId;
-  List<int> optionIds;
+  late int chatId;
+  late int messageId;
+  late List<int> optionIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -1046,9 +1046,9 @@ class StopPoll extends TdFunction {
   @override
   String get tdType => 'stopPoll';
 
-  int chatId;
-  int messageId;
-  ReplyMarkup replyMarkup;
+  late int chatId;
+  late int messageId;
+  late ReplyMarkup replyMarkup;
 
   @override
   Map<String, dynamic> get params => {
@@ -1078,7 +1078,7 @@ class HideSuggestedAction extends TdFunction {
   @override
   String get tdType => 'hideSuggestedAction';
 
-  SuggestedAction action;
+  late SuggestedAction action;
 
   @override
   Map<String, dynamic> get params => {
@@ -1102,13 +1102,13 @@ class AnswerInlineQuery extends TdFunction {
   @override
   String get tdType => 'answerInlineQuery';
 
-  int inlineQueryId;
-  bool isPersonal;
-  List<InputInlineQueryResult> results;
-  int cacheTime;
-  String nextOffset;
-  String switchPmText;
-  String switchPmParameter;
+  late int inlineQueryId;
+  late bool isPersonal;
+  late List<InputInlineQueryResult> results;
+  late int cacheTime;
+  late String nextOffset;
+  late String switchPmText;
+  late String switchPmParameter;
 
   @override
   Map<String, dynamic> get params => {
@@ -1150,11 +1150,11 @@ class AnswerCallbackQuery extends TdFunction {
   @override
   String get tdType => 'answerCallbackQuery';
 
-  int callbackQueryId;
-  String text;
-  bool showAlert;
-  String url;
-  int cacheTime;
+  late int callbackQueryId;
+  late String text;
+  late bool showAlert;
+  late String url;
+  late int cacheTime;
 
   @override
   Map<String, dynamic> get params => {
@@ -1190,9 +1190,9 @@ class AnswerShippingQuery extends TdFunction {
   @override
   String get tdType => 'answerShippingQuery';
 
-  int shippingQueryId;
-  List<ShippingOption> shippingOptions;
-  String errorMessage;
+  late int shippingQueryId;
+  late List<ShippingOption> shippingOptions;
+  late String errorMessage;
 
   @override
   Map<String, dynamic> get params => {
@@ -1222,8 +1222,8 @@ class AnswerPreCheckoutQuery extends TdFunction {
   @override
   String get tdType => 'answerPreCheckoutQuery';
 
-  int preCheckoutQueryId;
-  String errorMessage;
+  late int preCheckoutQueryId;
+  late String errorMessage;
 
   @override
   Map<String, dynamic> get params => {
@@ -1250,11 +1250,11 @@ class SetInlineGameScore extends TdFunction {
   @override
   String get tdType => 'setInlineGameScore';
 
-  String inlineMessageId;
-  bool editMessage;
-  int userId;
-  int score;
-  bool force;
+  late String inlineMessageId;
+  late bool editMessage;
+  late int userId;
+  late int score;
+  late bool force;
 
   @override
   Map<String, dynamic> get params => {
@@ -1290,8 +1290,8 @@ class DeleteChatReplyMarkup extends TdFunction {
   @override
   String get tdType => 'deleteChatReplyMarkup';
 
-  int chatId;
-  int messageId;
+  late int chatId;
+  late int messageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -1318,9 +1318,9 @@ class SendChatAction extends TdFunction {
   @override
   String get tdType => 'sendChatAction';
 
-  int chatId;
-  int messageThreadId;
-  ChatAction action;
+  late int chatId;
+  late int messageThreadId;
+  late ChatAction action;
 
   @override
   Map<String, dynamic> get params => {
@@ -1350,7 +1350,7 @@ class OpenChat extends TdFunction {
   @override
   String get tdType => 'openChat';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -1374,7 +1374,7 @@ class CloseChat extends TdFunction {
   @override
   String get tdType => 'closeChat';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -1398,10 +1398,10 @@ class ViewMessages extends TdFunction {
   @override
   String get tdType => 'viewMessages';
 
-  int chatId;
-  int messageThreadId;
-  List<int> messageIds;
-  bool forceRead;
+  late int chatId;
+  late int messageThreadId;
+  late List<int> messageIds;
+  late bool forceRead;
 
   @override
   Map<String, dynamic> get params => {
@@ -1434,8 +1434,8 @@ class OpenMessageContent extends TdFunction {
   @override
   String get tdType => 'openMessageContent';
 
-  int chatId;
-  int messageId;
+  late int chatId;
+  late int messageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -1462,7 +1462,7 @@ class ReadAllChatMentions extends TdFunction {
   @override
   String get tdType => 'readAllChatMentions';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -1486,8 +1486,8 @@ class AddChatToList extends TdFunction {
   @override
   String get tdType => 'addChatToList';
 
-  int chatId;
-  ChatList chatList;
+  late int chatId;
+  late ChatList chatList;
 
   @override
   Map<String, dynamic> get params => {
@@ -1514,7 +1514,7 @@ class DeleteChatFilter extends TdFunction {
   @override
   String get tdType => 'deleteChatFilter';
 
-  int chatFilterId;
+  late int chatFilterId;
 
   @override
   Map<String, dynamic> get params => {
@@ -1538,7 +1538,7 @@ class ReorderChatFilters extends TdFunction {
   @override
   String get tdType => 'reorderChatFilters';
 
-  List<int> chatFilterIds;
+  late List<int> chatFilterIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -1562,8 +1562,8 @@ class SetChatTitle extends TdFunction {
   @override
   String get tdType => 'setChatTitle';
 
-  int chatId;
-  String title;
+  late int chatId;
+  late String title;
 
   @override
   Map<String, dynamic> get params => {
@@ -1590,8 +1590,8 @@ class SetChatPhoto extends TdFunction {
   @override
   String get tdType => 'setChatPhoto';
 
-  int chatId;
-  InputChatPhoto photo;
+  late int chatId;
+  late InputChatPhoto photo;
 
   @override
   Map<String, dynamic> get params => {
@@ -1618,8 +1618,8 @@ class SetChatMessageTtlSetting extends TdFunction {
   @override
   String get tdType => 'setChatMessageTtlSetting';
 
-  int chatId;
-  int ttl;
+  late int chatId;
+  late int ttl;
 
   @override
   Map<String, dynamic> get params => {
@@ -1646,8 +1646,8 @@ class SetChatPermissions extends TdFunction {
   @override
   String get tdType => 'setChatPermissions';
 
-  int chatId;
-  ChatPermissions permissions;
+  late int chatId;
+  late ChatPermissions permissions;
 
   @override
   Map<String, dynamic> get params => {
@@ -1674,8 +1674,8 @@ class SetChatTheme extends TdFunction {
   @override
   String get tdType => 'setChatTheme';
 
-  int chatId;
-  String themeName;
+  late int chatId;
+  late String themeName;
 
   @override
   Map<String, dynamic> get params => {
@@ -1702,9 +1702,9 @@ class SetChatDraftMessage extends TdFunction {
   @override
   String get tdType => 'setChatDraftMessage';
 
-  int chatId;
-  int messageThreadId;
-  DraftMessage draftMessage;
+  late int chatId;
+  late int messageThreadId;
+  late DraftMessage draftMessage;
 
   @override
   Map<String, dynamic> get params => {
@@ -1734,8 +1734,8 @@ class SetChatNotificationSettings extends TdFunction {
   @override
   String get tdType => 'setChatNotificationSettings';
 
-  int chatId;
-  ChatNotificationSettings notificationSettings;
+  late int chatId;
+  late ChatNotificationSettings notificationSettings;
 
   @override
   Map<String, dynamic> get params => {
@@ -1762,8 +1762,8 @@ class ToggleChatIsMarkedAsUnread extends TdFunction {
   @override
   String get tdType => 'toggleChatIsMarkedAsUnread';
 
-  int chatId;
-  bool isMarkedAsUnread;
+  late int chatId;
+  late bool isMarkedAsUnread;
 
   @override
   Map<String, dynamic> get params => {
@@ -1790,8 +1790,8 @@ class ToggleChatDefaultDisableNotification extends TdFunction {
   @override
   String get tdType => 'toggleChatDefaultDisableNotification';
 
-  int chatId;
-  bool defaultDisableNotification;
+  late int chatId;
+  late bool defaultDisableNotification;
 
   @override
   Map<String, dynamic> get params => {
@@ -1818,8 +1818,8 @@ class SetChatClientData extends TdFunction {
   @override
   String get tdType => 'setChatClientData';
 
-  int chatId;
-  String clientData;
+  late int chatId;
+  late String clientData;
 
   @override
   Map<String, dynamic> get params => {
@@ -1846,8 +1846,8 @@ class SetChatDescription extends TdFunction {
   @override
   String get tdType => 'setChatDescription';
 
-  int chatId;
-  String description;
+  late int chatId;
+  late String description;
 
   @override
   Map<String, dynamic> get params => {
@@ -1874,8 +1874,8 @@ class SetChatDiscussionGroup extends TdFunction {
   @override
   String get tdType => 'setChatDiscussionGroup';
 
-  int chatId;
-  int discussionChatId;
+  late int chatId;
+  late int discussionChatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -1902,8 +1902,8 @@ class SetChatLocation extends TdFunction {
   @override
   String get tdType => 'setChatLocation';
 
-  int chatId;
-  ChatLocation location;
+  late int chatId;
+  late ChatLocation location;
 
   @override
   Map<String, dynamic> get params => {
@@ -1930,8 +1930,8 @@ class SetChatSlowModeDelay extends TdFunction {
   @override
   String get tdType => 'setChatSlowModeDelay';
 
-  int chatId;
-  int slowModeDelay;
+  late int chatId;
+  late int slowModeDelay;
 
   @override
   Map<String, dynamic> get params => {
@@ -1958,10 +1958,10 @@ class PinChatMessage extends TdFunction {
   @override
   String get tdType => 'pinChatMessage';
 
-  int chatId;
-  int messageId;
-  bool disableNotification;
-  bool onlyForSelf;
+  late int chatId;
+  late int messageId;
+  late bool disableNotification;
+  late bool onlyForSelf;
 
   @override
   Map<String, dynamic> get params => {
@@ -1994,8 +1994,8 @@ class UnpinChatMessage extends TdFunction {
   @override
   String get tdType => 'unpinChatMessage';
 
-  int chatId;
-  int messageId;
+  late int chatId;
+  late int messageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -2022,7 +2022,7 @@ class UnpinAllChatMessages extends TdFunction {
   @override
   String get tdType => 'unpinAllChatMessages';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -2046,7 +2046,7 @@ class JoinChat extends TdFunction {
   @override
   String get tdType => 'joinChat';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -2070,7 +2070,7 @@ class LeaveChat extends TdFunction {
   @override
   String get tdType => 'leaveChat';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -2094,9 +2094,9 @@ class AddChatMember extends TdFunction {
   @override
   String get tdType => 'addChatMember';
 
-  int chatId;
-  int userId;
-  int forwardLimit;
+  late int chatId;
+  late int userId;
+  late int forwardLimit;
 
   @override
   Map<String, dynamic> get params => {
@@ -2126,8 +2126,8 @@ class AddChatMembers extends TdFunction {
   @override
   String get tdType => 'addChatMembers';
 
-  int chatId;
-  List<int> userIds;
+  late int chatId;
+  late List<int> userIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -2154,9 +2154,9 @@ class SetChatMemberStatus extends TdFunction {
   @override
   String get tdType => 'setChatMemberStatus';
 
-  int chatId;
-  MessageSender memberId;
-  ChatMemberStatus status;
+  late int chatId;
+  late MessageSender memberId;
+  late ChatMemberStatus status;
 
   @override
   Map<String, dynamic> get params => {
@@ -2186,10 +2186,10 @@ class BanChatMember extends TdFunction {
   @override
   String get tdType => 'banChatMember';
 
-  int chatId;
-  MessageSender memberId;
-  int bannedUntilDate;
-  bool revokeMessages;
+  late int chatId;
+  late MessageSender memberId;
+  late int bannedUntilDate;
+  late bool revokeMessages;
 
   @override
   Map<String, dynamic> get params => {
@@ -2222,9 +2222,9 @@ class TransferChatOwnership extends TdFunction {
   @override
   String get tdType => 'transferChatOwnership';
 
-  int chatId;
-  int userId;
-  String password;
+  late int chatId;
+  late int userId;
+  late String password;
 
   @override
   Map<String, dynamic> get params => {
@@ -2254,7 +2254,7 @@ class ClearAllDraftMessages extends TdFunction {
   @override
   String get tdType => 'clearAllDraftMessages';
 
-  bool excludeSecretChats;
+  late bool excludeSecretChats;
 
   @override
   Map<String, dynamic> get params => {
@@ -2278,8 +2278,8 @@ class SetScopeNotificationSettings extends TdFunction {
   @override
   String get tdType => 'setScopeNotificationSettings';
 
-  NotificationSettingsScope scope;
-  ScopeNotificationSettings notificationSettings;
+  late NotificationSettingsScope scope;
+  late ScopeNotificationSettings notificationSettings;
 
   @override
   Map<String, dynamic> get params => {
@@ -2322,9 +2322,9 @@ class ToggleChatIsPinned extends TdFunction {
   @override
   String get tdType => 'toggleChatIsPinned';
 
-  ChatList chatList;
-  int chatId;
-  bool isPinned;
+  late ChatList chatList;
+  late int chatId;
+  late bool isPinned;
 
   @override
   Map<String, dynamic> get params => {
@@ -2354,8 +2354,8 @@ class SetPinnedChats extends TdFunction {
   @override
   String get tdType => 'setPinnedChats';
 
-  ChatList chatList;
-  List<int> chatIds;
+  late ChatList chatList;
+  late List<int> chatIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -2382,8 +2382,8 @@ class CancelDownloadFile extends TdFunction {
   @override
   String get tdType => 'cancelDownloadFile';
 
-  int fileId;
-  bool onlyIfPending;
+  late int fileId;
+  late bool onlyIfPending;
 
   @override
   Map<String, dynamic> get params => {
@@ -2410,7 +2410,7 @@ class CancelUploadFile extends TdFunction {
   @override
   String get tdType => 'cancelUploadFile';
 
-  int fileId;
+  late int fileId;
 
   @override
   Map<String, dynamic> get params => {
@@ -2434,9 +2434,9 @@ class WriteGeneratedFilePart extends TdFunction {
   @override
   String get tdType => 'writeGeneratedFilePart';
 
-  int generationId;
-  int offset;
-  String data;
+  late int generationId;
+  late int offset;
+  late String data;
 
   @override
   Map<String, dynamic> get params => {
@@ -2466,9 +2466,9 @@ class SetFileGenerationProgress extends TdFunction {
   @override
   String get tdType => 'setFileGenerationProgress';
 
-  int generationId;
-  int expectedSize;
-  int localPrefixSize;
+  late int generationId;
+  late int expectedSize;
+  late int localPrefixSize;
 
   @override
   Map<String, dynamic> get params => {
@@ -2498,8 +2498,8 @@ class FinishFileGeneration extends TdFunction {
   @override
   String get tdType => 'finishFileGeneration';
 
-  int generationId;
-  Error error;
+  late int generationId;
+  late Error error;
 
   @override
   Map<String, dynamic> get params => {
@@ -2526,7 +2526,7 @@ class DeleteFile extends TdFunction {
   @override
   String get tdType => 'deleteFile';
 
-  int fileId;
+  late int fileId;
 
   @override
   Map<String, dynamic> get params => {
@@ -2550,9 +2550,9 @@ class ImportMessages extends TdFunction {
   @override
   String get tdType => 'importMessages';
 
-  int chatId;
-  InputFile messageFile;
-  List<InputFile> attachedFiles;
+  late int chatId;
+  late InputFile messageFile;
+  late List<InputFile> attachedFiles;
 
   @override
   Map<String, dynamic> get params => {
@@ -2582,8 +2582,8 @@ class DeleteRevokedChatInviteLink extends TdFunction {
   @override
   String get tdType => 'deleteRevokedChatInviteLink';
 
-  int chatId;
-  String inviteLink;
+  late int chatId;
+  late String inviteLink;
 
   @override
   Map<String, dynamic> get params => {
@@ -2610,8 +2610,8 @@ class DeleteAllRevokedChatInviteLinks extends TdFunction {
   @override
   String get tdType => 'deleteAllRevokedChatInviteLinks';
 
-  int chatId;
-  int creatorUserId;
+  late int chatId;
+  late int creatorUserId;
 
   @override
   Map<String, dynamic> get params => {
@@ -2638,8 +2638,8 @@ class AcceptCall extends TdFunction {
   @override
   String get tdType => 'acceptCall';
 
-  int callId;
-  CallProtocol protocol;
+  late int callId;
+  late CallProtocol protocol;
 
   @override
   Map<String, dynamic> get params => {
@@ -2666,8 +2666,8 @@ class SendCallSignalingData extends TdFunction {
   @override
   String get tdType => 'sendCallSignalingData';
 
-  int callId;
-  String data;
+  late int callId;
+  late String data;
 
   @override
   Map<String, dynamic> get params => {
@@ -2694,11 +2694,11 @@ class DiscardCall extends TdFunction {
   @override
   String get tdType => 'discardCall';
 
-  int callId;
-  bool isDisconnected;
-  int duration;
-  bool isVideo;
-  int connectionId;
+  late int callId;
+  late bool isDisconnected;
+  late int duration;
+  late bool isVideo;
+  late int connectionId;
 
   @override
   Map<String, dynamic> get params => {
@@ -2734,10 +2734,10 @@ class SendCallRating extends TdFunction {
   @override
   String get tdType => 'sendCallRating';
 
-  int callId;
-  int rating;
-  String comment;
-  List<CallProblem> problems;
+  late int callId;
+  late int rating;
+  late String comment;
+  late List<CallProblem> problems;
 
   @override
   Map<String, dynamic> get params => {
@@ -2770,8 +2770,8 @@ class SendCallDebugInformation extends TdFunction {
   @override
   String get tdType => 'sendCallDebugInformation';
 
-  int callId;
-  String debugInformation;
+  late int callId;
+  late String debugInformation;
 
   @override
   Map<String, dynamic> get params => {
@@ -2798,8 +2798,8 @@ class SetVoiceChatDefaultParticipant extends TdFunction {
   @override
   String get tdType => 'setVoiceChatDefaultParticipant';
 
-  int chatId;
-  MessageSender defaultParticipantId;
+  late int chatId;
+  late MessageSender defaultParticipantId;
 
   @override
   Map<String, dynamic> get params => {
@@ -2826,7 +2826,7 @@ class StartScheduledGroupCall extends TdFunction {
   @override
   String get tdType => 'startScheduledGroupCall';
 
-  int groupCallId;
+  late int groupCallId;
 
   @override
   Map<String, dynamic> get params => {
@@ -2850,8 +2850,8 @@ class ToggleGroupCallEnabledStartNotification extends TdFunction {
   @override
   String get tdType => 'toggleGroupCallEnabledStartNotification';
 
-  int groupCallId;
-  bool enabledStartNotification;
+  late int groupCallId;
+  late bool enabledStartNotification;
 
   @override
   Map<String, dynamic> get params => {
@@ -2878,8 +2878,8 @@ class ToggleGroupCallScreenSharingIsPaused extends TdFunction {
   @override
   String get tdType => 'toggleGroupCallScreenSharingIsPaused';
 
-  int groupCallId;
-  bool isPaused;
+  late int groupCallId;
+  late bool isPaused;
 
   @override
   Map<String, dynamic> get params => {
@@ -2906,7 +2906,7 @@ class EndGroupCallScreenSharing extends TdFunction {
   @override
   String get tdType => 'endGroupCallScreenSharing';
 
-  int groupCallId;
+  late int groupCallId;
 
   @override
   Map<String, dynamic> get params => {
@@ -2930,8 +2930,8 @@ class SetGroupCallTitle extends TdFunction {
   @override
   String get tdType => 'setGroupCallTitle';
 
-  int groupCallId;
-  String title;
+  late int groupCallId;
+  late String title;
 
   @override
   Map<String, dynamic> get params => {
@@ -2958,8 +2958,8 @@ class ToggleGroupCallMuteNewParticipants extends TdFunction {
   @override
   String get tdType => 'toggleGroupCallMuteNewParticipants';
 
-  int groupCallId;
-  bool muteNewParticipants;
+  late int groupCallId;
+  late bool muteNewParticipants;
 
   @override
   Map<String, dynamic> get params => {
@@ -2986,7 +2986,7 @@ class RevokeGroupCallInviteLink extends TdFunction {
   @override
   String get tdType => 'revokeGroupCallInviteLink';
 
-  int groupCallId;
+  late int groupCallId;
 
   @override
   Map<String, dynamic> get params => {
@@ -3010,8 +3010,8 @@ class InviteGroupCallParticipants extends TdFunction {
   @override
   String get tdType => 'inviteGroupCallParticipants';
 
-  int groupCallId;
-  List<int> userIds;
+  late int groupCallId;
+  late List<int> userIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -3038,10 +3038,10 @@ class StartGroupCallRecording extends TdFunction {
   @override
   String get tdType => 'startGroupCallRecording';
 
-  int groupCallId;
-  String title;
-  bool recordVideo;
-  bool usePortraitOrientation;
+  late int groupCallId;
+  late String title;
+  late bool recordVideo;
+  late bool usePortraitOrientation;
 
   @override
   Map<String, dynamic> get params => {
@@ -3074,7 +3074,7 @@ class EndGroupCallRecording extends TdFunction {
   @override
   String get tdType => 'endGroupCallRecording';
 
-  int groupCallId;
+  late int groupCallId;
 
   @override
   Map<String, dynamic> get params => {
@@ -3098,8 +3098,8 @@ class ToggleGroupCallIsMyVideoPaused extends TdFunction {
   @override
   String get tdType => 'toggleGroupCallIsMyVideoPaused';
 
-  int groupCallId;
-  bool isMyVideoPaused;
+  late int groupCallId;
+  late bool isMyVideoPaused;
 
   @override
   Map<String, dynamic> get params => {
@@ -3126,8 +3126,8 @@ class ToggleGroupCallIsMyVideoEnabled extends TdFunction {
   @override
   String get tdType => 'toggleGroupCallIsMyVideoEnabled';
 
-  int groupCallId;
-  bool isMyVideoEnabled;
+  late int groupCallId;
+  late bool isMyVideoEnabled;
 
   @override
   Map<String, dynamic> get params => {
@@ -3154,9 +3154,9 @@ class SetGroupCallParticipantIsSpeaking extends TdFunction {
   @override
   String get tdType => 'setGroupCallParticipantIsSpeaking';
 
-  int groupCallId;
-  int audioSource;
-  bool isSpeaking;
+  late int groupCallId;
+  late int audioSource;
+  late bool isSpeaking;
 
   @override
   Map<String, dynamic> get params => {
@@ -3186,9 +3186,9 @@ class ToggleGroupCallParticipantIsMuted extends TdFunction {
   @override
   String get tdType => 'toggleGroupCallParticipantIsMuted';
 
-  int groupCallId;
-  MessageSender participantId;
-  bool isMuted;
+  late int groupCallId;
+  late MessageSender participantId;
+  late bool isMuted;
 
   @override
   Map<String, dynamic> get params => {
@@ -3218,9 +3218,9 @@ class SetGroupCallParticipantVolumeLevel extends TdFunction {
   @override
   String get tdType => 'setGroupCallParticipantVolumeLevel';
 
-  int groupCallId;
-  MessageSender participantId;
-  int volumeLevel;
+  late int groupCallId;
+  late MessageSender participantId;
+  late int volumeLevel;
 
   @override
   Map<String, dynamic> get params => {
@@ -3250,9 +3250,9 @@ class ToggleGroupCallParticipantIsHandRaised extends TdFunction {
   @override
   String get tdType => 'toggleGroupCallParticipantIsHandRaised';
 
-  int groupCallId;
-  MessageSender participantId;
-  bool isHandRaised;
+  late int groupCallId;
+  late MessageSender participantId;
+  late bool isHandRaised;
 
   @override
   Map<String, dynamic> get params => {
@@ -3282,8 +3282,8 @@ class LoadGroupCallParticipants extends TdFunction {
   @override
   String get tdType => 'loadGroupCallParticipants';
 
-  int groupCallId;
-  int limit;
+  late int groupCallId;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -3310,7 +3310,7 @@ class LeaveGroupCall extends TdFunction {
   @override
   String get tdType => 'leaveGroupCall';
 
-  int groupCallId;
+  late int groupCallId;
 
   @override
   Map<String, dynamic> get params => {
@@ -3334,7 +3334,7 @@ class DiscardGroupCall extends TdFunction {
   @override
   String get tdType => 'discardGroupCall';
 
-  int groupCallId;
+  late int groupCallId;
 
   @override
   Map<String, dynamic> get params => {
@@ -3358,8 +3358,8 @@ class ToggleMessageSenderIsBlocked extends TdFunction {
   @override
   String get tdType => 'toggleMessageSenderIsBlocked';
 
-  MessageSender sender;
-  bool isBlocked;
+  late MessageSender sender;
+  late bool isBlocked;
 
   @override
   Map<String, dynamic> get params => {
@@ -3386,10 +3386,10 @@ class BlockMessageSenderFromReplies extends TdFunction {
   @override
   String get tdType => 'blockMessageSenderFromReplies';
 
-  int messageId;
-  bool deleteMessage;
-  bool deleteAllMessages;
-  bool reportSpam;
+  late int messageId;
+  late bool deleteMessage;
+  late bool deleteAllMessages;
+  late bool reportSpam;
 
   @override
   Map<String, dynamic> get params => {
@@ -3422,8 +3422,8 @@ class AddContact extends TdFunction {
   @override
   String get tdType => 'addContact';
 
-  Contact contact;
-  bool sharePhoneNumber;
+  late Contact contact;
+  late bool sharePhoneNumber;
 
   @override
   Map<String, dynamic> get params => {
@@ -3450,7 +3450,7 @@ class RemoveContacts extends TdFunction {
   @override
   String get tdType => 'removeContacts';
 
-  List<int> userIds;
+  late List<int> userIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -3490,7 +3490,7 @@ class SharePhoneNumber extends TdFunction {
   @override
   String get tdType => 'sharePhoneNumber';
 
-  int userId;
+  late int userId;
 
   @override
   Map<String, dynamic> get params => {
@@ -3514,9 +3514,9 @@ class ChangeStickerSet extends TdFunction {
   @override
   String get tdType => 'changeStickerSet';
 
-  int setId;
-  bool isInstalled;
-  bool isArchived;
+  late int setId;
+  late bool isInstalled;
+  late bool isArchived;
 
   @override
   Map<String, dynamic> get params => {
@@ -3546,7 +3546,7 @@ class ViewTrendingStickerSets extends TdFunction {
   @override
   String get tdType => 'viewTrendingStickerSets';
 
-  List<int> stickerSetIds;
+  late List<int> stickerSetIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -3570,8 +3570,8 @@ class ReorderInstalledStickerSets extends TdFunction {
   @override
   String get tdType => 'reorderInstalledStickerSets';
 
-  bool isMasks;
-  List<int> stickerSetIds;
+  late bool isMasks;
+  late List<int> stickerSetIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -3598,8 +3598,8 @@ class RemoveRecentSticker extends TdFunction {
   @override
   String get tdType => 'removeRecentSticker';
 
-  bool isAttached;
-  InputFile sticker;
+  late bool isAttached;
+  late InputFile sticker;
 
   @override
   Map<String, dynamic> get params => {
@@ -3626,7 +3626,7 @@ class ClearRecentStickers extends TdFunction {
   @override
   String get tdType => 'clearRecentStickers';
 
-  bool isAttached;
+  late bool isAttached;
 
   @override
   Map<String, dynamic> get params => {
@@ -3650,7 +3650,7 @@ class AddFavoriteSticker extends TdFunction {
   @override
   String get tdType => 'addFavoriteSticker';
 
-  InputFile sticker;
+  late InputFile sticker;
 
   @override
   Map<String, dynamic> get params => {
@@ -3674,7 +3674,7 @@ class RemoveFavoriteSticker extends TdFunction {
   @override
   String get tdType => 'removeFavoriteSticker';
 
-  InputFile sticker;
+  late InputFile sticker;
 
   @override
   Map<String, dynamic> get params => {
@@ -3698,7 +3698,7 @@ class AddSavedAnimation extends TdFunction {
   @override
   String get tdType => 'addSavedAnimation';
 
-  InputFile animation;
+  late InputFile animation;
 
   @override
   Map<String, dynamic> get params => {
@@ -3722,7 +3722,7 @@ class RemoveSavedAnimation extends TdFunction {
   @override
   String get tdType => 'removeSavedAnimation';
 
-  InputFile animation;
+  late InputFile animation;
 
   @override
   Map<String, dynamic> get params => {
@@ -3746,7 +3746,7 @@ class RemoveRecentHashtag extends TdFunction {
   @override
   String get tdType => 'removeRecentHashtag';
 
-  String hashtag;
+  late String hashtag;
 
   @override
   Map<String, dynamic> get params => {
@@ -3770,7 +3770,7 @@ class SetProfilePhoto extends TdFunction {
   @override
   String get tdType => 'setProfilePhoto';
 
-  InputChatPhoto photo;
+  late InputChatPhoto photo;
 
   @override
   Map<String, dynamic> get params => {
@@ -3794,7 +3794,7 @@ class DeleteProfilePhoto extends TdFunction {
   @override
   String get tdType => 'deleteProfilePhoto';
 
-  int profilePhotoId;
+  late int profilePhotoId;
 
   @override
   Map<String, dynamic> get params => {
@@ -3818,8 +3818,8 @@ class SetName extends TdFunction {
   @override
   String get tdType => 'setName';
 
-  String firstName;
-  String lastName;
+  late String firstName;
+  late String lastName;
 
   @override
   Map<String, dynamic> get params => {
@@ -3846,7 +3846,7 @@ class SetBio extends TdFunction {
   @override
   String get tdType => 'setBio';
 
-  String bio;
+  late String bio;
 
   @override
   Map<String, dynamic> get params => {
@@ -3870,7 +3870,7 @@ class SetUsername extends TdFunction {
   @override
   String get tdType => 'setUsername';
 
-  String username;
+  late String username;
 
   @override
   Map<String, dynamic> get params => {
@@ -3894,7 +3894,7 @@ class SetLocation extends TdFunction {
   @override
   String get tdType => 'setLocation';
 
-  Location location;
+  late Location location;
 
   @override
   Map<String, dynamic> get params => {
@@ -3918,7 +3918,7 @@ class CheckChangePhoneNumberCode extends TdFunction {
   @override
   String get tdType => 'checkChangePhoneNumberCode';
 
-  String code;
+  late String code;
 
   @override
   Map<String, dynamic> get params => {
@@ -3942,9 +3942,9 @@ class SetCommands extends TdFunction {
   @override
   String get tdType => 'setCommands';
 
-  BotCommandScope scope;
-  String languageCode;
-  List<BotCommand> commands;
+  late BotCommandScope scope;
+  late String languageCode;
+  late List<BotCommand> commands;
 
   @override
   Map<String, dynamic> get params => {
@@ -3974,8 +3974,8 @@ class DeleteCommands extends TdFunction {
   @override
   String get tdType => 'deleteCommands';
 
-  BotCommandScope scope;
-  String languageCode;
+  late BotCommandScope scope;
+  late String languageCode;
 
   @override
   Map<String, dynamic> get params => {
@@ -4002,7 +4002,7 @@ class TerminateSession extends TdFunction {
   @override
   String get tdType => 'terminateSession';
 
-  int sessionId;
+  late int sessionId;
 
   @override
   Map<String, dynamic> get params => {
@@ -4042,7 +4042,7 @@ class DisconnectWebsite extends TdFunction {
   @override
   String get tdType => 'disconnectWebsite';
 
-  int websiteId;
+  late int websiteId;
 
   @override
   Map<String, dynamic> get params => {
@@ -4082,8 +4082,8 @@ class SetSupergroupUsername extends TdFunction {
   @override
   String get tdType => 'setSupergroupUsername';
 
-  int supergroupId;
-  String username;
+  late int supergroupId;
+  late String username;
 
   @override
   Map<String, dynamic> get params => {
@@ -4110,8 +4110,8 @@ class SetSupergroupStickerSet extends TdFunction {
   @override
   String get tdType => 'setSupergroupStickerSet';
 
-  int supergroupId;
-  int stickerSetId;
+  late int supergroupId;
+  late int stickerSetId;
 
   @override
   Map<String, dynamic> get params => {
@@ -4138,8 +4138,8 @@ class ToggleSupergroupSignMessages extends TdFunction {
   @override
   String get tdType => 'toggleSupergroupSignMessages';
 
-  int supergroupId;
-  bool signMessages;
+  late int supergroupId;
+  late bool signMessages;
 
   @override
   Map<String, dynamic> get params => {
@@ -4166,8 +4166,8 @@ class ToggleSupergroupIsAllHistoryAvailable extends TdFunction {
   @override
   String get tdType => 'toggleSupergroupIsAllHistoryAvailable';
 
-  int supergroupId;
-  bool isAllHistoryAvailable;
+  late int supergroupId;
+  late bool isAllHistoryAvailable;
 
   @override
   Map<String, dynamic> get params => {
@@ -4194,7 +4194,7 @@ class ToggleSupergroupIsBroadcastGroup extends TdFunction {
   @override
   String get tdType => 'toggleSupergroupIsBroadcastGroup';
 
-  int supergroupId;
+  late int supergroupId;
 
   @override
   Map<String, dynamic> get params => {
@@ -4218,9 +4218,9 @@ class ReportSupergroupSpam extends TdFunction {
   @override
   String get tdType => 'reportSupergroupSpam';
 
-  int supergroupId;
-  int userId;
-  List<int> messageIds;
+  late int supergroupId;
+  late int userId;
+  late List<int> messageIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -4250,7 +4250,7 @@ class CloseSecretChat extends TdFunction {
   @override
   String get tdType => 'closeSecretChat';
 
-  int secretChatId;
+  late int secretChatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -4306,7 +4306,7 @@ class RemoveBackground extends TdFunction {
   @override
   String get tdType => 'removeBackground';
 
-  int backgroundId;
+  late int backgroundId;
 
   @override
   Map<String, dynamic> get params => {
@@ -4346,7 +4346,7 @@ class SynchronizeLanguagePack extends TdFunction {
   @override
   String get tdType => 'synchronizeLanguagePack';
 
-  String languagePackId;
+  late String languagePackId;
 
   @override
   Map<String, dynamic> get params => {
@@ -4370,7 +4370,7 @@ class AddCustomServerLanguagePack extends TdFunction {
   @override
   String get tdType => 'addCustomServerLanguagePack';
 
-  String languagePackId;
+  late String languagePackId;
 
   @override
   Map<String, dynamic> get params => {
@@ -4394,8 +4394,8 @@ class SetCustomLanguagePack extends TdFunction {
   @override
   String get tdType => 'setCustomLanguagePack';
 
-  LanguagePackInfo info;
-  List<LanguagePackString> strings;
+  late LanguagePackInfo info;
+  late List<LanguagePackString> strings;
 
   @override
   Map<String, dynamic> get params => {
@@ -4422,7 +4422,7 @@ class EditCustomLanguagePackInfo extends TdFunction {
   @override
   String get tdType => 'editCustomLanguagePackInfo';
 
-  LanguagePackInfo info;
+  late LanguagePackInfo info;
 
   @override
   Map<String, dynamic> get params => {
@@ -4446,8 +4446,8 @@ class SetCustomLanguagePackString extends TdFunction {
   @override
   String get tdType => 'setCustomLanguagePackString';
 
-  String languagePackId;
-  LanguagePackString newString;
+  late String languagePackId;
+  late LanguagePackString newString;
 
   @override
   Map<String, dynamic> get params => {
@@ -4474,7 +4474,7 @@ class DeleteLanguagePack extends TdFunction {
   @override
   String get tdType => 'deleteLanguagePack';
 
-  String languagePackId;
+  late String languagePackId;
 
   @override
   Map<String, dynamic> get params => {
@@ -4498,7 +4498,7 @@ class ProcessPushNotification extends TdFunction {
   @override
   String get tdType => 'processPushNotification';
 
-  String payload;
+  late String payload;
 
   @override
   Map<String, dynamic> get params => {
@@ -4522,8 +4522,8 @@ class SetUserPrivacySettingRules extends TdFunction {
   @override
   String get tdType => 'setUserPrivacySettingRules';
 
-  UserPrivacySetting setting;
-  UserPrivacySettingRules rules;
+  late UserPrivacySetting setting;
+  late UserPrivacySettingRules rules;
 
   @override
   Map<String, dynamic> get params => {
@@ -4550,8 +4550,8 @@ class SetOption extends TdFunction {
   @override
   String get tdType => 'setOption';
 
-  String name;
-  OptionValue value;
+  late String name;
+  late OptionValue value;
 
   @override
   Map<String, dynamic> get params => {
@@ -4578,7 +4578,7 @@ class SetAccountTtl extends TdFunction {
   @override
   String get tdType => 'setAccountTtl';
 
-  AccountTtl ttl;
+  late AccountTtl ttl;
 
   @override
   Map<String, dynamic> get params => {
@@ -4602,7 +4602,7 @@ class DeleteAccount extends TdFunction {
   @override
   String get tdType => 'deleteAccount';
 
-  String reason;
+  late String reason;
 
   @override
   Map<String, dynamic> get params => {
@@ -4626,7 +4626,7 @@ class RemoveChatActionBar extends TdFunction {
   @override
   String get tdType => 'removeChatActionBar';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -4650,10 +4650,10 @@ class ReportChat extends TdFunction {
   @override
   String get tdType => 'reportChat';
 
-  int chatId;
-  List<int> messageIds;
-  ChatReportReason reason;
-  String text;
+  late int chatId;
+  late List<int> messageIds;
+  late ChatReportReason reason;
+  late String text;
 
   @override
   Map<String, dynamic> get params => {
@@ -4686,10 +4686,10 @@ class ReportChatPhoto extends TdFunction {
   @override
   String get tdType => 'reportChatPhoto';
 
-  int chatId;
-  int fileId;
-  ChatReportReason reason;
-  String text;
+  late int chatId;
+  late int fileId;
+  late ChatReportReason reason;
+  late String text;
 
   @override
   Map<String, dynamic> get params => {
@@ -4722,7 +4722,7 @@ class SetNetworkType extends TdFunction {
   @override
   String get tdType => 'setNetworkType';
 
-  NetworkType type;
+  late NetworkType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -4746,7 +4746,7 @@ class AddNetworkStatistics extends TdFunction {
   @override
   String get tdType => 'addNetworkStatistics';
 
-  NetworkStatisticsEntry entry;
+  late NetworkStatisticsEntry entry;
 
   @override
   Map<String, dynamic> get params => {
@@ -4786,8 +4786,8 @@ class SetAutoDownloadSettings extends TdFunction {
   @override
   String get tdType => 'setAutoDownloadSettings';
 
-  AutoDownloadSettings settings;
-  NetworkType type;
+  late AutoDownloadSettings settings;
+  late NetworkType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -4814,7 +4814,7 @@ class DeletePassportElement extends TdFunction {
   @override
   String get tdType => 'deletePassportElement';
 
-  PassportElementType type;
+  late PassportElementType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -4838,8 +4838,8 @@ class SetPassportElementErrors extends TdFunction {
   @override
   String get tdType => 'setPassportElementErrors';
 
-  int userId;
-  List<InputPassportElementError> errors;
+  late int userId;
+  late List<InputPassportElementError> errors;
 
   @override
   Map<String, dynamic> get params => {
@@ -4866,7 +4866,7 @@ class CheckPhoneNumberVerificationCode extends TdFunction {
   @override
   String get tdType => 'checkPhoneNumberVerificationCode';
 
-  String code;
+  late String code;
 
   @override
   Map<String, dynamic> get params => {
@@ -4890,7 +4890,7 @@ class CheckEmailAddressVerificationCode extends TdFunction {
   @override
   String get tdType => 'checkEmailAddressVerificationCode';
 
-  String code;
+  late String code;
 
   @override
   Map<String, dynamic> get params => {
@@ -4914,8 +4914,8 @@ class SendPassportAuthorizationForm extends TdFunction {
   @override
   String get tdType => 'sendPassportAuthorizationForm';
 
-  int autorizationFormId;
-  List<PassportElementType> types;
+  late int autorizationFormId;
+  late List<PassportElementType> types;
 
   @override
   Map<String, dynamic> get params => {
@@ -4942,7 +4942,7 @@ class CheckPhoneNumberConfirmationCode extends TdFunction {
   @override
   String get tdType => 'checkPhoneNumberConfirmationCode';
 
-  String code;
+  late String code;
 
   @override
   Map<String, dynamic> get params => {
@@ -4966,8 +4966,8 @@ class SetBotUpdatesStatus extends TdFunction {
   @override
   String get tdType => 'setBotUpdatesStatus';
 
-  int pendingUpdateCount;
-  String errorMessage;
+  late int pendingUpdateCount;
+  late String errorMessage;
 
   @override
   Map<String, dynamic> get params => {
@@ -4994,8 +4994,8 @@ class SetStickerPositionInSet extends TdFunction {
   @override
   String get tdType => 'setStickerPositionInSet';
 
-  InputFile sticker;
-  int position;
+  late InputFile sticker;
+  late int position;
 
   @override
   Map<String, dynamic> get params => {
@@ -5022,7 +5022,7 @@ class RemoveStickerFromSet extends TdFunction {
   @override
   String get tdType => 'removeStickerFromSet';
 
-  InputFile sticker;
+  late InputFile sticker;
 
   @override
   Map<String, dynamic> get params => {
@@ -5046,7 +5046,7 @@ class AcceptTermsOfService extends TdFunction {
   @override
   String get tdType => 'acceptTermsOfService';
 
-  String termsOfServiceId;
+  late String termsOfServiceId;
 
   @override
   Map<String, dynamic> get params => {
@@ -5070,8 +5070,8 @@ class AnswerCustomQuery extends TdFunction {
   @override
   String get tdType => 'answerCustomQuery';
 
-  int customQueryId;
-  String data;
+  late int customQueryId;
+  late String data;
 
   @override
   Map<String, dynamic> get params => {
@@ -5098,7 +5098,7 @@ class SetAlarm extends TdFunction {
   @override
   String get tdType => 'setAlarm';
 
-  double seconds;
+  late double seconds;
 
   @override
   Map<String, dynamic> get params => {
@@ -5122,9 +5122,9 @@ class SaveApplicationLogEvent extends TdFunction {
   @override
   String get tdType => 'saveApplicationLogEvent';
 
-  String type;
-  int chatId;
-  JsonValue data;
+  late String type;
+  late int chatId;
+  late JsonValue data;
 
   @override
   Map<String, dynamic> get params => {
@@ -5154,7 +5154,7 @@ class EnableProxy extends TdFunction {
   @override
   String get tdType => 'enableProxy';
 
-  int proxyId;
+  late int proxyId;
 
   @override
   Map<String, dynamic> get params => {
@@ -5194,7 +5194,7 @@ class RemoveProxy extends TdFunction {
   @override
   String get tdType => 'removeProxy';
 
-  int proxyId;
+  late int proxyId;
 
   @override
   Map<String, dynamic> get params => {
@@ -5218,7 +5218,7 @@ class SetLogStream extends TdFunction {
   @override
   String get tdType => 'setLogStream';
 
-  LogStream logStream;
+  late LogStream logStream;
 
   @override
   Map<String, dynamic> get params => {
@@ -5242,7 +5242,7 @@ class SetLogVerbosityLevel extends TdFunction {
   @override
   String get tdType => 'setLogVerbosityLevel';
 
-  int newVerbosityLevel;
+  late int newVerbosityLevel;
 
   @override
   Map<String, dynamic> get params => {
@@ -5266,8 +5266,8 @@ class SetLogTagVerbosityLevel extends TdFunction {
   @override
   String get tdType => 'setLogTagVerbosityLevel';
 
-  String tag;
-  int newVerbosityLevel;
+  late String tag;
+  late int newVerbosityLevel;
 
   @override
   Map<String, dynamic> get params => {
@@ -5294,8 +5294,8 @@ class AddLogMessage extends TdFunction {
   @override
   String get tdType => 'addLogMessage';
 
-  int verbosityLevel;
-  String text;
+  late int verbosityLevel;
+  late String text;
 
   @override
   Map<String, dynamic> get params => {
@@ -5354,11 +5354,11 @@ class TestProxy extends TdFunction {
   @override
   String get tdType => 'testProxy';
 
-  String server;
-  int port;
-  ProxyType type;
-  int dcId;
-  double timeout;
+  late String server;
+  late int port;
+  late ProxyType type;
+  late int dcId;
+  late double timeout;
 
   @override
   Map<String, dynamic> get params => {
@@ -5410,7 +5410,7 @@ class ConfirmQrCodeAuthentication extends TdFunction {
   @override
   String get tdType => 'confirmQrCodeAuthentication';
 
-  String link;
+  late String link;
 
   @override
   Map<String, dynamic> get params => {
@@ -5466,11 +5466,11 @@ class SetPassword extends TdFunction {
   @override
   String get tdType => 'setPassword';
 
-  String oldPassword;
-  String newPassword;
-  String newHint;
-  bool setRecoveryEmailAddress;
-  String newRecoveryEmailAddress;
+  late String oldPassword;
+  late String newPassword;
+  late String newHint;
+  late bool setRecoveryEmailAddress;
+  late String newRecoveryEmailAddress;
 
   @override
   Map<String, dynamic> get params => {
@@ -5506,8 +5506,8 @@ class SetRecoveryEmailAddress extends TdFunction {
   @override
   String get tdType => 'setRecoveryEmailAddress';
 
-  String password;
-  String newRecoveryEmailAddress;
+  late String password;
+  late String newRecoveryEmailAddress;
 
   @override
   Map<String, dynamic> get params => {
@@ -5534,7 +5534,7 @@ class CheckRecoveryEmailAddressCode extends TdFunction {
   @override
   String get tdType => 'checkRecoveryEmailAddressCode';
 
-  String code;
+  late String code;
 
   @override
   Map<String, dynamic> get params => {
@@ -5574,9 +5574,9 @@ class RecoverPassword extends TdFunction {
   @override
   String get tdType => 'recoverPassword';
 
-  String recoveryCode;
-  String newPassword;
-  String newHint;
+  late String recoveryCode;
+  late String newPassword;
+  late String newHint;
 
   @override
   Map<String, dynamic> get params => {
@@ -5606,7 +5606,7 @@ class GetRecoveryEmailAddress extends TdFunction {
   @override
   String get tdType => 'getRecoveryEmailAddress';
 
-  String password;
+  late String password;
 
   @override
   Map<String, dynamic> get params => {
@@ -5646,7 +5646,7 @@ class SendEmailAddressVerificationCode extends TdFunction {
   @override
   String get tdType => 'sendEmailAddressVerificationCode';
 
-  String emailAddress;
+  late String emailAddress;
 
   @override
   Map<String, dynamic> get params => {
@@ -5702,8 +5702,8 @@ class CreateTemporaryPassword extends TdFunction {
   @override
   String get tdType => 'createTemporaryPassword';
 
-  String password;
-  int validFor;
+  late String password;
+  late int validFor;
 
   @override
   Map<String, dynamic> get params => {
@@ -5762,7 +5762,7 @@ class GetUser extends TdFunction {
   @override
   String get tdType => 'getUser';
 
-  int userId;
+  late int userId;
 
   @override
   Map<String, dynamic> get params => {
@@ -5802,7 +5802,7 @@ class GetUserFullInfo extends TdFunction {
   @override
   String get tdType => 'getUserFullInfo';
 
-  int userId;
+  late int userId;
 
   @override
   Map<String, dynamic> get params => {
@@ -5826,7 +5826,7 @@ class GetBasicGroup extends TdFunction {
   @override
   String get tdType => 'getBasicGroup';
 
-  int basicGroupId;
+  late int basicGroupId;
 
   @override
   Map<String, dynamic> get params => {
@@ -5850,7 +5850,7 @@ class GetBasicGroupFullInfo extends TdFunction {
   @override
   String get tdType => 'getBasicGroupFullInfo';
 
-  int basicGroupId;
+  late int basicGroupId;
 
   @override
   Map<String, dynamic> get params => {
@@ -5874,7 +5874,7 @@ class GetSupergroup extends TdFunction {
   @override
   String get tdType => 'getSupergroup';
 
-  int supergroupId;
+  late int supergroupId;
 
   @override
   Map<String, dynamic> get params => {
@@ -5898,7 +5898,7 @@ class GetSupergroupFullInfo extends TdFunction {
   @override
   String get tdType => 'getSupergroupFullInfo';
 
-  int supergroupId;
+  late int supergroupId;
 
   @override
   Map<String, dynamic> get params => {
@@ -5922,7 +5922,7 @@ class GetSecretChat extends TdFunction {
   @override
   String get tdType => 'getSecretChat';
 
-  int secretChatId;
+  late int secretChatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -5946,7 +5946,7 @@ class GetChat extends TdFunction {
   @override
   String get tdType => 'getChat';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -5970,7 +5970,7 @@ class SearchPublicChat extends TdFunction {
   @override
   String get tdType => 'searchPublicChat';
 
-  String username;
+  late String username;
 
   @override
   Map<String, dynamic> get params => {
@@ -5994,8 +5994,8 @@ class CreatePrivateChat extends TdFunction {
   @override
   String get tdType => 'createPrivateChat';
 
-  int userId;
-  bool force;
+  late int userId;
+  late bool force;
 
   @override
   Map<String, dynamic> get params => {
@@ -6022,8 +6022,8 @@ class CreateBasicGroupChat extends TdFunction {
   @override
   String get tdType => 'createBasicGroupChat';
 
-  int basicGroupId;
-  bool force;
+  late int basicGroupId;
+  late bool force;
 
   @override
   Map<String, dynamic> get params => {
@@ -6050,8 +6050,8 @@ class CreateSupergroupChat extends TdFunction {
   @override
   String get tdType => 'createSupergroupChat';
 
-  int supergroupId;
-  bool force;
+  late int supergroupId;
+  late bool force;
 
   @override
   Map<String, dynamic> get params => {
@@ -6078,7 +6078,7 @@ class CreateSecretChat extends TdFunction {
   @override
   String get tdType => 'createSecretChat';
 
-  int secretChatId;
+  late int secretChatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -6102,8 +6102,8 @@ class CreateNewBasicGroupChat extends TdFunction {
   @override
   String get tdType => 'createNewBasicGroupChat';
 
-  List<int> userIds;
-  String title;
+  late List<int> userIds;
+  late String title;
 
   @override
   Map<String, dynamic> get params => {
@@ -6130,11 +6130,11 @@ class CreateNewSupergroupChat extends TdFunction {
   @override
   String get tdType => 'createNewSupergroupChat';
 
-  String title;
-  bool isChannel;
-  String description;
-  ChatLocation location;
-  bool forImport;
+  late String title;
+  late bool isChannel;
+  late String description;
+  late ChatLocation location;
+  late bool forImport;
 
   @override
   Map<String, dynamic> get params => {
@@ -6170,7 +6170,7 @@ class CreateNewSecretChat extends TdFunction {
   @override
   String get tdType => 'createNewSecretChat';
 
-  int userId;
+  late int userId;
 
   @override
   Map<String, dynamic> get params => {
@@ -6194,7 +6194,7 @@ class UpgradeBasicGroupChatToSupergroupChat extends TdFunction {
   @override
   String get tdType => 'upgradeBasicGroupChatToSupergroupChat';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -6218,7 +6218,7 @@ class JoinChatByInviteLink extends TdFunction {
   @override
   String get tdType => 'joinChatByInviteLink';
 
-  String inviteLink;
+  late String inviteLink;
 
   @override
   Map<String, dynamic> get params => {
@@ -6242,8 +6242,8 @@ class GetMessage extends TdFunction {
   @override
   String get tdType => 'getMessage';
 
-  int chatId;
-  int messageId;
+  late int chatId;
+  late int messageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -6270,8 +6270,8 @@ class GetMessageLocally extends TdFunction {
   @override
   String get tdType => 'getMessageLocally';
 
-  int chatId;
-  int messageId;
+  late int chatId;
+  late int messageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -6298,8 +6298,8 @@ class GetRepliedMessage extends TdFunction {
   @override
   String get tdType => 'getRepliedMessage';
 
-  int chatId;
-  int messageId;
+  late int chatId;
+  late int messageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -6326,7 +6326,7 @@ class GetChatPinnedMessage extends TdFunction {
   @override
   String get tdType => 'getChatPinnedMessage';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -6350,9 +6350,9 @@ class GetCallbackQueryMessage extends TdFunction {
   @override
   String get tdType => 'getCallbackQueryMessage';
 
-  int chatId;
-  int messageId;
-  int callbackQueryId;
+  late int chatId;
+  late int messageId;
+  late int callbackQueryId;
 
   @override
   Map<String, dynamic> get params => {
@@ -6382,8 +6382,8 @@ class GetChatMessageByDate extends TdFunction {
   @override
   String get tdType => 'getChatMessageByDate';
 
-  int chatId;
-  int date;
+  late int chatId;
+  late int date;
 
   @override
   Map<String, dynamic> get params => {
@@ -6410,12 +6410,12 @@ class SendMessage extends TdFunction {
   @override
   String get tdType => 'sendMessage';
 
-  int chatId;
-  int messageThreadId;
-  int replyToMessageId;
-  MessageSendOptions options;
-  ReplyMarkup replyMarkup;
-  InputMessageContent inputMessageContent;
+  late int chatId;
+  late int messageThreadId;
+  late int replyToMessageId;
+  late MessageSendOptions options;
+  late ReplyMarkup replyMarkup;
+  late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -6454,9 +6454,9 @@ class SendBotStartMessage extends TdFunction {
   @override
   String get tdType => 'sendBotStartMessage';
 
-  int botUserId;
-  int chatId;
-  String parameter;
+  late int botUserId;
+  late int chatId;
+  late String parameter;
 
   @override
   Map<String, dynamic> get params => {
@@ -6486,13 +6486,13 @@ class SendInlineQueryResultMessage extends TdFunction {
   @override
   String get tdType => 'sendInlineQueryResultMessage';
 
-  int chatId;
-  int messageThreadId;
-  int replyToMessageId;
-  MessageSendOptions options;
-  int queryId;
-  String resultId;
-  bool hideViaBot;
+  late int chatId;
+  late int messageThreadId;
+  late int replyToMessageId;
+  late MessageSendOptions options;
+  late int queryId;
+  late String resultId;
+  late bool hideViaBot;
 
   @override
   Map<String, dynamic> get params => {
@@ -6534,11 +6534,11 @@ class AddLocalMessage extends TdFunction {
   @override
   String get tdType => 'addLocalMessage';
 
-  int chatId;
-  MessageSender sender;
-  int replyToMessageId;
-  bool disableNotification;
-  InputMessageContent inputMessageContent;
+  late int chatId;
+  late MessageSender sender;
+  late int replyToMessageId;
+  late bool disableNotification;
+  late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -6574,10 +6574,10 @@ class EditMessageText extends TdFunction {
   @override
   String get tdType => 'editMessageText';
 
-  int chatId;
-  int messageId;
-  ReplyMarkup replyMarkup;
-  InputMessageContent inputMessageContent;
+  late int chatId;
+  late int messageId;
+  late ReplyMarkup replyMarkup;
+  late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -6610,12 +6610,12 @@ class EditMessageLiveLocation extends TdFunction {
   @override
   String get tdType => 'editMessageLiveLocation';
 
-  int chatId;
-  int messageId;
-  ReplyMarkup replyMarkup;
-  Location location;
-  int heading;
-  int proximityAlertRadius;
+  late int chatId;
+  late int messageId;
+  late ReplyMarkup replyMarkup;
+  late Location location;
+  late int heading;
+  late int proximityAlertRadius;
 
   @override
   Map<String, dynamic> get params => {
@@ -6654,10 +6654,10 @@ class EditMessageMedia extends TdFunction {
   @override
   String get tdType => 'editMessageMedia';
 
-  int chatId;
-  int messageId;
-  ReplyMarkup replyMarkup;
-  InputMessageContent inputMessageContent;
+  late int chatId;
+  late int messageId;
+  late ReplyMarkup replyMarkup;
+  late InputMessageContent inputMessageContent;
 
   @override
   Map<String, dynamic> get params => {
@@ -6690,10 +6690,10 @@ class EditMessageCaption extends TdFunction {
   @override
   String get tdType => 'editMessageCaption';
 
-  int chatId;
-  int messageId;
-  ReplyMarkup replyMarkup;
-  FormattedText caption;
+  late int chatId;
+  late int messageId;
+  late ReplyMarkup replyMarkup;
+  late FormattedText caption;
 
   @override
   Map<String, dynamic> get params => {
@@ -6726,9 +6726,9 @@ class EditMessageReplyMarkup extends TdFunction {
   @override
   String get tdType => 'editMessageReplyMarkup';
 
-  int chatId;
-  int messageId;
-  ReplyMarkup replyMarkup;
+  late int chatId;
+  late int messageId;
+  late ReplyMarkup replyMarkup;
 
   @override
   Map<String, dynamic> get params => {
@@ -6758,12 +6758,12 @@ class SetGameScore extends TdFunction {
   @override
   String get tdType => 'setGameScore';
 
-  int chatId;
-  int messageId;
-  bool editMessage;
-  int userId;
-  int score;
-  bool force;
+  late int chatId;
+  late int messageId;
+  late bool editMessage;
+  late int userId;
+  late int score;
+  late bool force;
 
   @override
   Map<String, dynamic> get params => {
@@ -6802,8 +6802,8 @@ class GetMessages extends TdFunction {
   @override
   String get tdType => 'getMessages';
 
-  int chatId;
-  List<int> messageIds;
+  late int chatId;
+  late List<int> messageIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -6830,11 +6830,11 @@ class GetChatHistory extends TdFunction {
   @override
   String get tdType => 'getChatHistory';
 
-  int chatId;
-  int fromMessageId;
-  int offset;
-  int limit;
-  bool onlyLocal;
+  late int chatId;
+  late int fromMessageId;
+  late int offset;
+  late int limit;
+  late bool onlyLocal;
 
   @override
   Map<String, dynamic> get params => {
@@ -6870,11 +6870,11 @@ class GetMessageThreadHistory extends TdFunction {
   @override
   String get tdType => 'getMessageThreadHistory';
 
-  int chatId;
-  int messageId;
-  int fromMessageId;
-  int offset;
-  int limit;
+  late int chatId;
+  late int messageId;
+  late int fromMessageId;
+  late int offset;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -6910,14 +6910,14 @@ class SearchChatMessages extends TdFunction {
   @override
   String get tdType => 'searchChatMessages';
 
-  int chatId;
-  String query;
-  MessageSender sender;
-  int fromMessageId;
-  int offset;
-  int limit;
-  SearchMessagesFilter filter;
-  int messageThreadId;
+  late int chatId;
+  late String query;
+  late MessageSender sender;
+  late int fromMessageId;
+  late int offset;
+  late int limit;
+  late SearchMessagesFilter filter;
+  late int messageThreadId;
 
   @override
   Map<String, dynamic> get params => {
@@ -6962,15 +6962,15 @@ class SearchMessages extends TdFunction {
   @override
   String get tdType => 'searchMessages';
 
-  ChatList chatList;
-  String query;
-  int offsetDate;
-  int offsetChatId;
-  int offsetMessageId;
-  int limit;
-  SearchMessagesFilter filter;
-  int minDate;
-  int maxDate;
+  late ChatList chatList;
+  late String query;
+  late int offsetDate;
+  late int offsetChatId;
+  late int offsetMessageId;
+  late int limit;
+  late SearchMessagesFilter filter;
+  late int minDate;
+  late int maxDate;
 
   @override
   Map<String, dynamic> get params => {
@@ -7018,9 +7018,9 @@ class SearchCallMessages extends TdFunction {
   @override
   String get tdType => 'searchCallMessages';
 
-  int fromMessageId;
-  int limit;
-  bool onlyMissed;
+  late int fromMessageId;
+  late int limit;
+  late bool onlyMissed;
 
   @override
   Map<String, dynamic> get params => {
@@ -7050,8 +7050,8 @@ class SearchChatRecentLocationMessages extends TdFunction {
   @override
   String get tdType => 'searchChatRecentLocationMessages';
 
-  int chatId;
-  int limit;
+  late int chatId;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -7094,7 +7094,7 @@ class GetChatScheduledMessages extends TdFunction {
   @override
   String get tdType => 'getChatScheduledMessages';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -7118,11 +7118,11 @@ class SendMessageAlbum extends TdFunction {
   @override
   String get tdType => 'sendMessageAlbum';
 
-  int chatId;
-  int messageThreadId;
-  int replyToMessageId;
-  MessageSendOptions options;
-  List<InputMessageContent> inputMessageContents;
+  late int chatId;
+  late int messageThreadId;
+  late int replyToMessageId;
+  late MessageSendOptions options;
+  late List<InputMessageContent> inputMessageContents;
 
   @override
   Map<String, dynamic> get params => {
@@ -7158,13 +7158,13 @@ class ForwardMessages extends TdFunction {
   @override
   String get tdType => 'forwardMessages';
 
-  int chatId;
-  int fromChatId;
-  List<int> messageIds;
-  MessageSendOptions options;
-  bool sendCopy;
-  bool removeCaption;
-  bool onlyPreview;
+  late int chatId;
+  late int fromChatId;
+  late List<int> messageIds;
+  late MessageSendOptions options;
+  late bool sendCopy;
+  late bool removeCaption;
+  late bool onlyPreview;
 
   @override
   Map<String, dynamic> get params => {
@@ -7206,8 +7206,8 @@ class ResendMessages extends TdFunction {
   @override
   String get tdType => 'resendMessages';
 
-  int chatId;
-  List<int> messageIds;
+  late int chatId;
+  late List<int> messageIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -7234,8 +7234,8 @@ class GetMessageThread extends TdFunction {
   @override
   String get tdType => 'getMessageThread';
 
-  int chatId;
-  int messageId;
+  late int chatId;
+  late int messageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -7262,8 +7262,8 @@ class GetMessageViewers extends TdFunction {
   @override
   String get tdType => 'getMessageViewers';
 
-  int chatId;
-  int messageId;
+  late int chatId;
+  late int messageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -7290,11 +7290,11 @@ class GetPollVoters extends TdFunction {
   @override
   String get tdType => 'getPollVoters';
 
-  int chatId;
-  int messageId;
-  int optionId;
-  int offset;
-  int limit;
+  late int chatId;
+  late int messageId;
+  late int optionId;
+  late int offset;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -7346,8 +7346,8 @@ class SearchContacts extends TdFunction {
   @override
   String get tdType => 'searchContacts';
 
-  String query;
-  int limit;
+  late String query;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -7390,7 +7390,7 @@ class GetFile extends TdFunction {
   @override
   String get tdType => 'getFile';
 
-  int fileId;
+  late int fileId;
 
   @override
   Map<String, dynamic> get params => {
@@ -7414,8 +7414,8 @@ class GetRemoteFile extends TdFunction {
   @override
   String get tdType => 'getRemoteFile';
 
-  String remoteFileId;
-  FileType fileType;
+  late String remoteFileId;
+  late FileType fileType;
 
   @override
   Map<String, dynamic> get params => {
@@ -7442,11 +7442,11 @@ class DownloadFile extends TdFunction {
   @override
   String get tdType => 'downloadFile';
 
-  int fileId;
-  int priority;
-  int offset;
-  int limit;
-  bool synchronous;
+  late int fileId;
+  late int priority;
+  late int offset;
+  late int limit;
+  late bool synchronous;
 
   @override
   Map<String, dynamic> get params => {
@@ -7482,9 +7482,9 @@ class UploadFile extends TdFunction {
   @override
   String get tdType => 'uploadFile';
 
-  InputFile file;
-  FileType fileType;
-  int priority;
+  late InputFile file;
+  late FileType fileType;
+  late int priority;
 
   @override
   Map<String, dynamic> get params => {
@@ -7514,8 +7514,8 @@ class UploadStickerFile extends TdFunction {
   @override
   String get tdType => 'uploadStickerFile';
 
-  int userId;
-  InputSticker sticker;
+  late int userId;
+  late InputSticker sticker;
 
   @override
   Map<String, dynamic> get params => {
@@ -7542,12 +7542,12 @@ class GetMapThumbnailFile extends TdFunction {
   @override
   String get tdType => 'getMapThumbnailFile';
 
-  Location location;
-  int zoom;
-  int width;
-  int height;
-  int scale;
-  int chatId;
+  late Location location;
+  late int zoom;
+  late int width;
+  late int height;
+  late int scale;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -7586,8 +7586,8 @@ class GetChats extends TdFunction {
   @override
   String get tdType => 'getChats';
 
-  ChatList chatList;
-  int limit;
+  late ChatList chatList;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -7614,7 +7614,7 @@ class SearchPublicChats extends TdFunction {
   @override
   String get tdType => 'searchPublicChats';
 
-  String query;
+  late String query;
 
   @override
   Map<String, dynamic> get params => {
@@ -7638,8 +7638,8 @@ class SearchChats extends TdFunction {
   @override
   String get tdType => 'searchChats';
 
-  String query;
-  int limit;
+  late String query;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -7666,8 +7666,8 @@ class SearchChatsOnServer extends TdFunction {
   @override
   String get tdType => 'searchChatsOnServer';
 
-  String query;
-  int limit;
+  late String query;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -7694,8 +7694,8 @@ class GetTopChats extends TdFunction {
   @override
   String get tdType => 'getTopChats';
 
-  TopChatCategory category;
-  int limit;
+  late TopChatCategory category;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -7722,7 +7722,7 @@ class GetRecentlyOpenedChats extends TdFunction {
   @override
   String get tdType => 'getRecentlyOpenedChats';
 
-  int limit;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -7746,7 +7746,7 @@ class GetCreatedPublicChats extends TdFunction {
   @override
   String get tdType => 'getCreatedPublicChats';
 
-  PublicChatType type;
+  late PublicChatType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -7802,9 +7802,9 @@ class GetGroupsInCommon extends TdFunction {
   @override
   String get tdType => 'getGroupsInCommon';
 
-  int userId;
-  int offsetChatId;
-  int limit;
+  late int userId;
+  late int offsetChatId;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -7834,8 +7834,8 @@ class GetChatNotificationSettingsExceptions extends TdFunction {
   @override
   String get tdType => 'getChatNotificationSettingsExceptions';
 
-  NotificationSettingsScope scope;
-  bool compareSound;
+  late NotificationSettingsScope scope;
+  late bool compareSound;
 
   @override
   Map<String, dynamic> get params => {
@@ -7862,7 +7862,7 @@ class SearchChatsNearby extends TdFunction {
   @override
   String get tdType => 'searchChatsNearby';
 
-  Location location;
+  late Location location;
 
   @override
   Map<String, dynamic> get params => {
@@ -7886,8 +7886,8 @@ class CheckChatUsername extends TdFunction {
   @override
   String get tdType => 'checkChatUsername';
 
-  int chatId;
-  String username;
+  late int chatId;
+  late String username;
 
   @override
   Map<String, dynamic> get params => {
@@ -7914,11 +7914,11 @@ class SearchSecretMessages extends TdFunction {
   @override
   String get tdType => 'searchSecretMessages';
 
-  int chatId;
-  String query;
-  String offset;
-  int limit;
-  SearchMessagesFilter filter;
+  late int chatId;
+  late String query;
+  late String offset;
+  late int limit;
+  late SearchMessagesFilter filter;
 
   @override
   Map<String, dynamic> get params => {
@@ -7954,10 +7954,10 @@ class GetMessagePublicForwards extends TdFunction {
   @override
   String get tdType => 'getMessagePublicForwards';
 
-  int chatId;
-  int messageId;
-  String offset;
-  int limit;
+  late int chatId;
+  late int messageId;
+  late String offset;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -7990,9 +7990,9 @@ class GetChatMessageCount extends TdFunction {
   @override
   String get tdType => 'getChatMessageCount';
 
-  int chatId;
-  SearchMessagesFilter filter;
-  bool returnLocal;
+  late int chatId;
+  late SearchMessagesFilter filter;
+  late bool returnLocal;
 
   @override
   Map<String, dynamic> get params => {
@@ -8022,8 +8022,8 @@ class GetFileDownloadedPrefixSize extends TdFunction {
   @override
   String get tdType => 'getFileDownloadedPrefixSize';
 
-  int fileId;
-  int offset;
+  late int fileId;
+  late int offset;
 
   @override
   Map<String, dynamic> get params => {
@@ -8066,7 +8066,7 @@ class GetChatSponsoredMessages extends TdFunction {
   @override
   String get tdType => 'getChatSponsoredMessages';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -8090,11 +8090,11 @@ class GetMessageLink extends TdFunction {
   @override
   String get tdType => 'getMessageLink';
 
-  int chatId;
-  int messageId;
-  int mediaTimestamp;
-  bool forAlbum;
-  bool forComment;
+  late int chatId;
+  late int messageId;
+  late int mediaTimestamp;
+  late bool forAlbum;
+  late bool forComment;
 
   @override
   Map<String, dynamic> get params => {
@@ -8130,9 +8130,9 @@ class GetMessageEmbeddingCode extends TdFunction {
   @override
   String get tdType => 'getMessageEmbeddingCode';
 
-  int chatId;
-  int messageId;
-  bool forAlbum;
+  late int chatId;
+  late int messageId;
+  late bool forAlbum;
 
   @override
   Map<String, dynamic> get params => {
@@ -8162,7 +8162,7 @@ class GetFileMimeType extends TdFunction {
   @override
   String get tdType => 'getFileMimeType';
 
-  String fileName;
+  late String fileName;
 
   @override
   Map<String, dynamic> get params => {
@@ -8186,7 +8186,7 @@ class GetFileExtension extends TdFunction {
   @override
   String get tdType => 'getFileExtension';
 
-  String mimeType;
+  late String mimeType;
 
   @override
   Map<String, dynamic> get params => {
@@ -8210,7 +8210,7 @@ class CleanFileName extends TdFunction {
   @override
   String get tdType => 'cleanFileName';
 
-  String fileName;
+  late String fileName;
 
   @override
   Map<String, dynamic> get params => {
@@ -8234,7 +8234,7 @@ class GetJsonString extends TdFunction {
   @override
   String get tdType => 'getJsonString';
 
-  JsonValue jsonValue;
+  late JsonValue jsonValue;
 
   @override
   Map<String, dynamic> get params => {
@@ -8258,7 +8258,7 @@ class GetChatFilterDefaultIconName extends TdFunction {
   @override
   String get tdType => 'getChatFilterDefaultIconName';
 
-  ChatFilter filter;
+  late ChatFilter filter;
 
   @override
   Map<String, dynamic> get params => {
@@ -8282,8 +8282,8 @@ class GetSuggestedFileName extends TdFunction {
   @override
   String get tdType => 'getSuggestedFileName';
 
-  int fileId;
-  String directory;
+  late int fileId;
+  late String directory;
 
   @override
   Map<String, dynamic> get params => {
@@ -8310,7 +8310,7 @@ class GetMessageImportConfirmationText extends TdFunction {
   @override
   String get tdType => 'getMessageImportConfirmationText';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -8334,13 +8334,13 @@ class JoinGroupCall extends TdFunction {
   @override
   String get tdType => 'joinGroupCall';
 
-  int groupCallId;
-  MessageSender participantId;
-  int audioSourceId;
-  String payload;
-  bool isMuted;
-  bool isMyVideoEnabled;
-  String inviteHash;
+  late int groupCallId;
+  late MessageSender participantId;
+  late int audioSourceId;
+  late String payload;
+  late bool isMuted;
+  late bool isMyVideoEnabled;
+  late String inviteHash;
 
   @override
   Map<String, dynamic> get params => {
@@ -8382,9 +8382,9 @@ class StartGroupCallScreenSharing extends TdFunction {
   @override
   String get tdType => 'startGroupCallScreenSharing';
 
-  int groupCallId;
-  int audioSourceId;
-  String payload;
+  late int groupCallId;
+  late int audioSourceId;
+  late String payload;
 
   @override
   Map<String, dynamic> get params => {
@@ -8414,7 +8414,7 @@ class GetPreferredCountryLanguage extends TdFunction {
   @override
   String get tdType => 'getPreferredCountryLanguage';
 
-  String countryCode;
+  late String countryCode;
 
   @override
   Map<String, dynamic> get params => {
@@ -8438,7 +8438,7 @@ class GetSuggestedStickerSetName extends TdFunction {
   @override
   String get tdType => 'getSuggestedStickerSetName';
 
-  String title;
+  late String title;
 
   @override
   Map<String, dynamic> get params => {
@@ -8478,7 +8478,7 @@ class GetMessageLinkInfo extends TdFunction {
   @override
   String get tdType => 'getMessageLinkInfo';
 
-  String url;
+  late String url;
 
   @override
   Map<String, dynamic> get params => {
@@ -8502,7 +8502,7 @@ class GetTextEntities extends TdFunction {
   @override
   String get tdType => 'getTextEntities';
 
-  String text;
+  late String text;
 
   @override
   Map<String, dynamic> get params => {
@@ -8526,8 +8526,8 @@ class ParseTextEntities extends TdFunction {
   @override
   String get tdType => 'parseTextEntities';
 
-  String text;
-  TextParseMode parseMode;
+  late String text;
+  late TextParseMode parseMode;
 
   @override
   Map<String, dynamic> get params => {
@@ -8554,7 +8554,7 @@ class ParseMarkdown extends TdFunction {
   @override
   String get tdType => 'parseMarkdown';
 
-  FormattedText text;
+  late FormattedText text;
 
   @override
   Map<String, dynamic> get params => {
@@ -8578,7 +8578,7 @@ class GetMarkdownText extends TdFunction {
   @override
   String get tdType => 'getMarkdownText';
 
-  FormattedText text;
+  late FormattedText text;
 
   @override
   Map<String, dynamic> get params => {
@@ -8602,10 +8602,10 @@ class GetLanguagePackString extends TdFunction {
   @override
   String get tdType => 'getLanguagePackString';
 
-  String languagePackDatabasePath;
-  String localizationTarget;
-  String languagePackId;
-  String key;
+  late String languagePackDatabasePath;
+  late String localizationTarget;
+  late String languagePackId;
+  late String key;
 
   @override
   Map<String, dynamic> get params => {
@@ -8638,7 +8638,7 @@ class GetJsonValue extends TdFunction {
   @override
   String get tdType => 'getJsonValue';
 
-  String json;
+  late String json;
 
   @override
   Map<String, dynamic> get params => {
@@ -8678,9 +8678,9 @@ class GetLoginUrlInfo extends TdFunction {
   @override
   String get tdType => 'getLoginUrlInfo';
 
-  int chatId;
-  int messageId;
-  int buttonId;
+  late int chatId;
+  late int messageId;
+  late int buttonId;
 
   @override
   Map<String, dynamic> get params => {
@@ -8710,7 +8710,7 @@ class GetExternalLinkInfo extends TdFunction {
   @override
   String get tdType => 'getExternalLinkInfo';
 
-  String link;
+  late String link;
 
   @override
   Map<String, dynamic> get params => {
@@ -8734,10 +8734,10 @@ class GetLoginUrl extends TdFunction {
   @override
   String get tdType => 'getLoginUrl';
 
-  int chatId;
-  int messageId;
-  int buttonId;
-  bool allowWriteAccess;
+  late int chatId;
+  late int messageId;
+  late int buttonId;
+  late bool allowWriteAccess;
 
   @override
   Map<String, dynamic> get params => {
@@ -8770,8 +8770,8 @@ class GetExternalLink extends TdFunction {
   @override
   String get tdType => 'getExternalLink';
 
-  String link;
-  bool allowWriteAccess;
+  late String link;
+  late bool allowWriteAccess;
 
   @override
   Map<String, dynamic> get params => {
@@ -8798,8 +8798,8 @@ class GetGroupCallInviteLink extends TdFunction {
   @override
   String get tdType => 'getGroupCallInviteLink';
 
-  int groupCallId;
-  bool canSelfUnmute;
+  late int groupCallId;
+  late bool canSelfUnmute;
 
   @override
   Map<String, dynamic> get params => {
@@ -8826,7 +8826,7 @@ class GetEmojiSuggestionsUrl extends TdFunction {
   @override
   String get tdType => 'getEmojiSuggestionsUrl';
 
-  String languageCode;
+  late String languageCode;
 
   @override
   Map<String, dynamic> get params => {
@@ -8850,8 +8850,8 @@ class GetBackgroundUrl extends TdFunction {
   @override
   String get tdType => 'getBackgroundUrl';
 
-  String name;
-  BackgroundType type;
+  late String name;
+  late BackgroundType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -8894,7 +8894,7 @@ class GetProxyLink extends TdFunction {
   @override
   String get tdType => 'getProxyLink';
 
-  int proxyId;
+  late int proxyId;
 
   @override
   Map<String, dynamic> get params => {
@@ -8918,11 +8918,11 @@ class GetInlineQueryResults extends TdFunction {
   @override
   String get tdType => 'getInlineQueryResults';
 
-  int botUserId;
-  int chatId;
-  Location userLocation;
-  String query;
-  String offset;
+  late int botUserId;
+  late int chatId;
+  late Location userLocation;
+  late String query;
+  late String offset;
 
   @override
   Map<String, dynamic> get params => {
@@ -8958,9 +8958,9 @@ class GetCallbackQueryAnswer extends TdFunction {
   @override
   String get tdType => 'getCallbackQueryAnswer';
 
-  int chatId;
-  int messageId;
-  CallbackQueryPayload payload;
+  late int chatId;
+  late int messageId;
+  late CallbackQueryPayload payload;
 
   @override
   Map<String, dynamic> get params => {
@@ -8990,9 +8990,9 @@ class GetGameHighScores extends TdFunction {
   @override
   String get tdType => 'getGameHighScores';
 
-  int chatId;
-  int messageId;
-  int userId;
+  late int chatId;
+  late int messageId;
+  late int userId;
 
   @override
   Map<String, dynamic> get params => {
@@ -9022,8 +9022,8 @@ class GetInlineGameHighScores extends TdFunction {
   @override
   String get tdType => 'getInlineGameHighScores';
 
-  String inlineMessageId;
-  int userId;
+  late String inlineMessageId;
+  late int userId;
 
   @override
   Map<String, dynamic> get params => {
@@ -9050,8 +9050,8 @@ class ClickAnimatedEmojiMessage extends TdFunction {
   @override
   String get tdType => 'clickAnimatedEmojiMessage';
 
-  int chatId;
-  int messageId;
+  late int chatId;
+  late int messageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -9078,7 +9078,7 @@ class GetInternalLinkType extends TdFunction {
   @override
   String get tdType => 'getInternalLinkType';
 
-  String link;
+  late String link;
 
   @override
   Map<String, dynamic> get params => {
@@ -9102,7 +9102,7 @@ class GetChatListsToAddChat extends TdFunction {
   @override
   String get tdType => 'getChatListsToAddChat';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -9126,7 +9126,7 @@ class GetChatFilter extends TdFunction {
   @override
   String get tdType => 'getChatFilter';
 
-  int chatFilterId;
+  late int chatFilterId;
 
   @override
   Map<String, dynamic> get params => {
@@ -9150,7 +9150,7 @@ class CreateChatFilter extends TdFunction {
   @override
   String get tdType => 'createChatFilter';
 
-  ChatFilter filter;
+  late ChatFilter filter;
 
   @override
   Map<String, dynamic> get params => {
@@ -9174,8 +9174,8 @@ class EditChatFilter extends TdFunction {
   @override
   String get tdType => 'editChatFilter';
 
-  int chatFilterId;
-  ChatFilter filter;
+  late int chatFilterId;
+  late ChatFilter filter;
 
   @override
   Map<String, dynamic> get params => {
@@ -9234,8 +9234,8 @@ class GetChatMember extends TdFunction {
   @override
   String get tdType => 'getChatMember';
 
-  int chatId;
-  MessageSender memberId;
+  late int chatId;
+  late MessageSender memberId;
 
   @override
   Map<String, dynamic> get params => {
@@ -9262,10 +9262,10 @@ class SearchChatMembers extends TdFunction {
   @override
   String get tdType => 'searchChatMembers';
 
-  int chatId;
-  String query;
-  int limit;
-  ChatMembersFilter filter;
+  late int chatId;
+  late String query;
+  late int limit;
+  late ChatMembersFilter filter;
 
   @override
   Map<String, dynamic> get params => {
@@ -9298,10 +9298,10 @@ class GetSupergroupMembers extends TdFunction {
   @override
   String get tdType => 'getSupergroupMembers';
 
-  int supergroupId;
-  SupergroupMembersFilter filter;
-  int offset;
-  int limit;
+  late int supergroupId;
+  late SupergroupMembersFilter filter;
+  late int offset;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -9334,7 +9334,7 @@ class GetChatAdministrators extends TdFunction {
   @override
   String get tdType => 'getChatAdministrators';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -9358,7 +9358,7 @@ class GetScopeNotificationSettings extends TdFunction {
   @override
   String get tdType => 'getScopeNotificationSettings';
 
-  NotificationSettingsScope scope;
+  late NotificationSettingsScope scope;
 
   @override
   Map<String, dynamic> get params => {
@@ -9382,9 +9382,9 @@ class ReadFilePart extends TdFunction {
   @override
   String get tdType => 'readFilePart';
 
-  int fileId;
-  int offset;
-  int count;
+  late int fileId;
+  late int offset;
+  late int count;
 
   @override
   Map<String, dynamic> get params => {
@@ -9414,11 +9414,11 @@ class GetGroupCallStreamSegment extends TdFunction {
   @override
   String get tdType => 'getGroupCallStreamSegment';
 
-  int groupCallId;
-  int timeOffset;
-  int scale;
-  int channelId;
-  GroupCallVideoQuality videoQuality;
+  late int groupCallId;
+  late int timeOffset;
+  late int scale;
+  late int channelId;
+  late GroupCallVideoQuality videoQuality;
 
   @override
   Map<String, dynamic> get params => {
@@ -9454,7 +9454,7 @@ class GetMessageFileType extends TdFunction {
   @override
   String get tdType => 'getMessageFileType';
 
-  String messageFileHead;
+  late String messageFileHead;
 
   @override
   Map<String, dynamic> get params => {
@@ -9478,7 +9478,7 @@ class ReplacePrimaryChatInviteLink extends TdFunction {
   @override
   String get tdType => 'replacePrimaryChatInviteLink';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -9502,9 +9502,9 @@ class CreateChatInviteLink extends TdFunction {
   @override
   String get tdType => 'createChatInviteLink';
 
-  int chatId;
-  int expireDate;
-  int memberLimit;
+  late int chatId;
+  late int expireDate;
+  late int memberLimit;
 
   @override
   Map<String, dynamic> get params => {
@@ -9534,10 +9534,10 @@ class EditChatInviteLink extends TdFunction {
   @override
   String get tdType => 'editChatInviteLink';
 
-  int chatId;
-  String inviteLink;
-  int expireDate;
-  int memberLimit;
+  late int chatId;
+  late String inviteLink;
+  late int expireDate;
+  late int memberLimit;
 
   @override
   Map<String, dynamic> get params => {
@@ -9570,8 +9570,8 @@ class GetChatInviteLink extends TdFunction {
   @override
   String get tdType => 'getChatInviteLink';
 
-  int chatId;
-  String inviteLink;
+  late int chatId;
+  late String inviteLink;
 
   @override
   Map<String, dynamic> get params => {
@@ -9598,7 +9598,7 @@ class GetChatInviteLinkCounts extends TdFunction {
   @override
   String get tdType => 'getChatInviteLinkCounts';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -9622,12 +9622,12 @@ class GetChatInviteLinks extends TdFunction {
   @override
   String get tdType => 'getChatInviteLinks';
 
-  int chatId;
-  int creatorUserId;
-  bool isRevoked;
-  int offsetDate;
-  String offsetInviteLink;
-  int limit;
+  late int chatId;
+  late int creatorUserId;
+  late bool isRevoked;
+  late int offsetDate;
+  late String offsetInviteLink;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -9666,8 +9666,8 @@ class RevokeChatInviteLink extends TdFunction {
   @override
   String get tdType => 'revokeChatInviteLink';
 
-  int chatId;
-  String inviteLink;
+  late int chatId;
+  late String inviteLink;
 
   @override
   Map<String, dynamic> get params => {
@@ -9694,10 +9694,10 @@ class GetChatInviteLinkMembers extends TdFunction {
   @override
   String get tdType => 'getChatInviteLinkMembers';
 
-  int chatId;
-  String inviteLink;
-  ChatInviteLinkMember offsetMember;
-  int limit;
+  late int chatId;
+  late String inviteLink;
+  late ChatInviteLinkMember offsetMember;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -9730,7 +9730,7 @@ class CheckChatInviteLink extends TdFunction {
   @override
   String get tdType => 'checkChatInviteLink';
 
-  String inviteLink;
+  late String inviteLink;
 
   @override
   Map<String, dynamic> get params => {
@@ -9754,9 +9754,9 @@ class CreateCall extends TdFunction {
   @override
   String get tdType => 'createCall';
 
-  int userId;
-  CallProtocol protocol;
-  bool isVideo;
+  late int userId;
+  late CallProtocol protocol;
+  late bool isVideo;
 
   @override
   Map<String, dynamic> get params => {
@@ -9786,7 +9786,7 @@ class GetVoiceChatAvailableParticipants extends TdFunction {
   @override
   String get tdType => 'getVoiceChatAvailableParticipants';
 
-  int chatId;
+  late int chatId;
 
   @override
   Map<String, dynamic> get params => {
@@ -9810,8 +9810,8 @@ class GetBlockedMessageSenders extends TdFunction {
   @override
   String get tdType => 'getBlockedMessageSenders';
 
-  int offset;
-  int limit;
+  late int offset;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -9838,9 +9838,9 @@ class CreateVoiceChat extends TdFunction {
   @override
   String get tdType => 'createVoiceChat';
 
-  int chatId;
-  String title;
-  int startDate;
+  late int chatId;
+  late String title;
+  late int startDate;
 
   @override
   Map<String, dynamic> get params => {
@@ -9870,7 +9870,7 @@ class GetGroupCall extends TdFunction {
   @override
   String get tdType => 'getGroupCall';
 
-  int groupCallId;
+  late int groupCallId;
 
   @override
   Map<String, dynamic> get params => {
@@ -9894,7 +9894,7 @@ class ImportContacts extends TdFunction {
   @override
   String get tdType => 'importContacts';
 
-  List<Contact> contacts;
+  late List<Contact> contacts;
 
   @override
   Map<String, dynamic> get params => {
@@ -9918,7 +9918,7 @@ class ChangeImportedContacts extends TdFunction {
   @override
   String get tdType => 'changeImportedContacts';
 
-  List<Contact> contacts;
+  late List<Contact> contacts;
 
   @override
   Map<String, dynamic> get params => {
@@ -9942,9 +9942,9 @@ class GetUserProfilePhotos extends TdFunction {
   @override
   String get tdType => 'getUserProfilePhotos';
 
-  int userId;
-  int offset;
-  int limit;
+  late int userId;
+  late int offset;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -9974,8 +9974,8 @@ class GetStickers extends TdFunction {
   @override
   String get tdType => 'getStickers';
 
-  String emoji;
-  int limit;
+  late String emoji;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -10002,8 +10002,8 @@ class SearchStickers extends TdFunction {
   @override
   String get tdType => 'searchStickers';
 
-  String emoji;
-  int limit;
+  late String emoji;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -10030,7 +10030,7 @@ class GetRecentStickers extends TdFunction {
   @override
   String get tdType => 'getRecentStickers';
 
-  bool isAttached;
+  late bool isAttached;
 
   @override
   Map<String, dynamic> get params => {
@@ -10054,8 +10054,8 @@ class AddRecentSticker extends TdFunction {
   @override
   String get tdType => 'addRecentSticker';
 
-  bool isAttached;
-  InputFile sticker;
+  late bool isAttached;
+  late InputFile sticker;
 
   @override
   Map<String, dynamic> get params => {
@@ -10098,7 +10098,7 @@ class GetInstalledStickerSets extends TdFunction {
   @override
   String get tdType => 'getInstalledStickerSets';
 
-  bool isMasks;
+  late bool isMasks;
 
   @override
   Map<String, dynamic> get params => {
@@ -10122,9 +10122,9 @@ class GetArchivedStickerSets extends TdFunction {
   @override
   String get tdType => 'getArchivedStickerSets';
 
-  bool isMasks;
-  int offsetStickerSetId;
-  int limit;
+  late bool isMasks;
+  late int offsetStickerSetId;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -10154,8 +10154,8 @@ class GetTrendingStickerSets extends TdFunction {
   @override
   String get tdType => 'getTrendingStickerSets';
 
-  int offset;
-  int limit;
+  late int offset;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -10182,7 +10182,7 @@ class GetAttachedStickerSets extends TdFunction {
   @override
   String get tdType => 'getAttachedStickerSets';
 
-  int fileId;
+  late int fileId;
 
   @override
   Map<String, dynamic> get params => {
@@ -10206,9 +10206,9 @@ class SearchInstalledStickerSets extends TdFunction {
   @override
   String get tdType => 'searchInstalledStickerSets';
 
-  bool isMasks;
-  String query;
-  int limit;
+  late bool isMasks;
+  late String query;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -10238,7 +10238,7 @@ class SearchStickerSets extends TdFunction {
   @override
   String get tdType => 'searchStickerSets';
 
-  String query;
+  late String query;
 
   @override
   Map<String, dynamic> get params => {
@@ -10262,7 +10262,7 @@ class GetStickerSet extends TdFunction {
   @override
   String get tdType => 'getStickerSet';
 
-  int setId;
+  late int setId;
 
   @override
   Map<String, dynamic> get params => {
@@ -10286,7 +10286,7 @@ class SearchStickerSet extends TdFunction {
   @override
   String get tdType => 'searchStickerSet';
 
-  String name;
+  late String name;
 
   @override
   Map<String, dynamic> get params => {
@@ -10310,12 +10310,12 @@ class CreateNewStickerSet extends TdFunction {
   @override
   String get tdType => 'createNewStickerSet';
 
-  int userId;
-  String title;
-  String name;
-  bool isMasks;
-  List<InputSticker> stickers;
-  String source;
+  late int userId;
+  late String title;
+  late String name;
+  late bool isMasks;
+  late List<InputSticker> stickers;
+  late String source;
 
   @override
   Map<String, dynamic> get params => {
@@ -10354,9 +10354,9 @@ class AddStickerToSet extends TdFunction {
   @override
   String get tdType => 'addStickerToSet';
 
-  int userId;
-  String name;
-  InputSticker sticker;
+  late int userId;
+  late String name;
+  late InputSticker sticker;
 
   @override
   Map<String, dynamic> get params => {
@@ -10386,9 +10386,9 @@ class SetStickerSetThumbnail extends TdFunction {
   @override
   String get tdType => 'setStickerSetThumbnail';
 
-  int userId;
-  String name;
-  InputFile thumbnail;
+  late int userId;
+  late String name;
+  late InputFile thumbnail;
 
   @override
   Map<String, dynamic> get params => {
@@ -10418,7 +10418,7 @@ class GetStickerEmojis extends TdFunction {
   @override
   String get tdType => 'getStickerEmojis';
 
-  InputFile sticker;
+  late InputFile sticker;
 
   @override
   Map<String, dynamic> get params => {
@@ -10442,9 +10442,9 @@ class SearchEmojis extends TdFunction {
   @override
   String get tdType => 'searchEmojis';
 
-  String text;
-  bool exactMatch;
-  List<String> inputLanguageCodes;
+  late String text;
+  late bool exactMatch;
+  late List<String> inputLanguageCodes;
 
   @override
   Map<String, dynamic> get params => {
@@ -10490,8 +10490,8 @@ class SearchHashtags extends TdFunction {
   @override
   String get tdType => 'searchHashtags';
 
-  String prefix;
-  int limit;
+  late String prefix;
+  late int limit;
 
   @override
   Map<String, dynamic> get params => {
@@ -10518,7 +10518,7 @@ class GetWebPagePreview extends TdFunction {
   @override
   String get tdType => 'getWebPagePreview';
 
-  FormattedText text;
+  late FormattedText text;
 
   @override
   Map<String, dynamic> get params => {
@@ -10542,8 +10542,8 @@ class GetWebPageInstantView extends TdFunction {
   @override
   String get tdType => 'getWebPageInstantView';
 
-  String url;
-  bool forceFull;
+  late String url;
+  late bool forceFull;
 
   @override
   Map<String, dynamic> get params => {
@@ -10570,8 +10570,8 @@ class ChangePhoneNumber extends TdFunction {
   @override
   String get tdType => 'changePhoneNumber';
 
-  String phoneNumber;
-  PhoneNumberAuthenticationSettings settings;
+  late String phoneNumber;
+  late PhoneNumberAuthenticationSettings settings;
 
   @override
   Map<String, dynamic> get params => {
@@ -10614,8 +10614,8 @@ class SendPhoneNumberVerificationCode extends TdFunction {
   @override
   String get tdType => 'sendPhoneNumberVerificationCode';
 
-  String phoneNumber;
-  PhoneNumberAuthenticationSettings settings;
+  late String phoneNumber;
+  late PhoneNumberAuthenticationSettings settings;
 
   @override
   Map<String, dynamic> get params => {
@@ -10658,9 +10658,9 @@ class SendPhoneNumberConfirmationCode extends TdFunction {
   @override
   String get tdType => 'sendPhoneNumberConfirmationCode';
 
-  String hash;
-  String phoneNumber;
-  PhoneNumberAuthenticationSettings settings;
+  late String hash;
+  late String phoneNumber;
+  late PhoneNumberAuthenticationSettings settings;
 
   @override
   Map<String, dynamic> get params => {
@@ -10706,8 +10706,8 @@ class GetCommands extends TdFunction {
   @override
   String get tdType => 'getCommands';
 
-  BotCommandScope scope;
-  String languageCode;
+  late BotCommandScope scope;
+  late String languageCode;
 
   @override
   Map<String, dynamic> get params => {
@@ -10766,12 +10766,12 @@ class GetChatEventLog extends TdFunction {
   @override
   String get tdType => 'getChatEventLog';
 
-  int chatId;
-  String query;
-  int fromEventId;
-  int limit;
-  ChatEventLogFilters filters;
-  List<int> userIds;
+  late int chatId;
+  late String query;
+  late int fromEventId;
+  late int limit;
+  late ChatEventLogFilters filters;
+  late List<int> userIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -10810,9 +10810,9 @@ class GetPaymentForm extends TdFunction {
   @override
   String get tdType => 'getPaymentForm';
 
-  int chatId;
-  int messageId;
-  PaymentFormTheme theme;
+  late int chatId;
+  late int messageId;
+  late PaymentFormTheme theme;
 
   @override
   Map<String, dynamic> get params => {
@@ -10842,10 +10842,10 @@ class ValidateOrderInfo extends TdFunction {
   @override
   String get tdType => 'validateOrderInfo';
 
-  int chatId;
-  int messageId;
-  OrderInfo orderInfo;
-  bool allowSave;
+  late int chatId;
+  late int messageId;
+  late OrderInfo orderInfo;
+  late bool allowSave;
 
   @override
   Map<String, dynamic> get params => {
@@ -10878,13 +10878,13 @@ class SendPaymentForm extends TdFunction {
   @override
   String get tdType => 'sendPaymentForm';
 
-  int chatId;
-  int messageId;
-  int paymentFormId;
-  String orderInfoId;
-  String shippingOptionId;
-  InputCredentials credentials;
-  int tipAmount;
+  late int chatId;
+  late int messageId;
+  late int paymentFormId;
+  late String orderInfoId;
+  late String shippingOptionId;
+  late InputCredentials credentials;
+  late int tipAmount;
 
   @override
   Map<String, dynamic> get params => {
@@ -10926,8 +10926,8 @@ class GetPaymentReceipt extends TdFunction {
   @override
   String get tdType => 'getPaymentReceipt';
 
-  int chatId;
-  int messageId;
+  late int chatId;
+  late int messageId;
 
   @override
   Map<String, dynamic> get params => {
@@ -10970,7 +10970,7 @@ class GetBackgrounds extends TdFunction {
   @override
   String get tdType => 'getBackgrounds';
 
-  bool forDarkTheme;
+  late bool forDarkTheme;
 
   @override
   Map<String, dynamic> get params => {
@@ -10994,7 +10994,7 @@ class SearchBackground extends TdFunction {
   @override
   String get tdType => 'searchBackground';
 
-  String name;
+  late String name;
 
   @override
   Map<String, dynamic> get params => {
@@ -11018,9 +11018,9 @@ class SetBackground extends TdFunction {
   @override
   String get tdType => 'setBackground';
 
-  InputBackground background;
-  BackgroundType type;
-  bool forDarkTheme;
+  late InputBackground background;
+  late BackgroundType type;
+  late bool forDarkTheme;
 
   @override
   Map<String, dynamic> get params => {
@@ -11050,7 +11050,7 @@ class GetLocalizationTargetInfo extends TdFunction {
   @override
   String get tdType => 'getLocalizationTargetInfo';
 
-  bool onlyLocal;
+  late bool onlyLocal;
 
   @override
   Map<String, dynamic> get params => {
@@ -11074,7 +11074,7 @@ class GetLanguagePackInfo extends TdFunction {
   @override
   String get tdType => 'getLanguagePackInfo';
 
-  String languagePackId;
+  late String languagePackId;
 
   @override
   Map<String, dynamic> get params => {
@@ -11098,8 +11098,8 @@ class GetLanguagePackStrings extends TdFunction {
   @override
   String get tdType => 'getLanguagePackStrings';
 
-  String languagePackId;
-  List<String> keys;
+  late String languagePackId;
+  late List<String> keys;
 
   @override
   Map<String, dynamic> get params => {
@@ -11126,8 +11126,8 @@ class RegisterDevice extends TdFunction {
   @override
   String get tdType => 'registerDevice';
 
-  DeviceToken deviceToken;
-  List<int> otherUserIds;
+  late DeviceToken deviceToken;
+  late List<int> otherUserIds;
 
   @override
   Map<String, dynamic> get params => {
@@ -11154,7 +11154,7 @@ class GetPushReceiverId extends TdFunction {
   @override
   String get tdType => 'getPushReceiverId';
 
-  String payload;
+  late String payload;
 
   @override
   Map<String, dynamic> get params => {
@@ -11178,7 +11178,7 @@ class GetRecentlyVisitedTMeUrls extends TdFunction {
   @override
   String get tdType => 'getRecentlyVisitedTMeUrls';
 
-  String referrer;
+  late String referrer;
 
   @override
   Map<String, dynamic> get params => {
@@ -11202,7 +11202,7 @@ class GetUserPrivacySettingRules extends TdFunction {
   @override
   String get tdType => 'getUserPrivacySettingRules';
 
-  UserPrivacySetting setting;
+  late UserPrivacySetting setting;
 
   @override
   Map<String, dynamic> get params => {
@@ -11226,7 +11226,7 @@ class GetOption extends TdFunction {
   @override
   String get tdType => 'getOption';
 
-  String name;
+  late String name;
 
   @override
   Map<String, dynamic> get params => {
@@ -11266,8 +11266,8 @@ class GetChatStatistics extends TdFunction {
   @override
   String get tdType => 'getChatStatistics';
 
-  int chatId;
-  bool isDark;
+  late int chatId;
+  late bool isDark;
 
   @override
   Map<String, dynamic> get params => {
@@ -11294,9 +11294,9 @@ class GetMessageStatistics extends TdFunction {
   @override
   String get tdType => 'getMessageStatistics';
 
-  int chatId;
-  int messageId;
-  bool isDark;
+  late int chatId;
+  late int messageId;
+  late bool isDark;
 
   @override
   Map<String, dynamic> get params => {
@@ -11326,9 +11326,9 @@ class GetStatisticalGraph extends TdFunction {
   @override
   String get tdType => 'getStatisticalGraph';
 
-  int chatId;
-  String token;
-  int x;
+  late int chatId;
+  late String token;
+  late int x;
 
   @override
   Map<String, dynamic> get params => {
@@ -11358,7 +11358,7 @@ class GetStorageStatistics extends TdFunction {
   @override
   String get tdType => 'getStorageStatistics';
 
-  int chatLimit;
+  late int chatLimit;
 
   @override
   Map<String, dynamic> get params => {
@@ -11382,15 +11382,15 @@ class OptimizeStorage extends TdFunction {
   @override
   String get tdType => 'optimizeStorage';
 
-  int size;
-  int ttl;
-  int count;
-  int immunityDelay;
-  List<FileType> fileTypes;
-  List<int> chatIds;
-  List<int> excludeChatIds;
-  bool returnDeletedFileStatistics;
-  int chatLimit;
+  late int size;
+  late int ttl;
+  late int count;
+  late int immunityDelay;
+  late List<FileType> fileTypes;
+  late List<int> chatIds;
+  late List<int> excludeChatIds;
+  late bool returnDeletedFileStatistics;
+  late int chatLimit;
 
   @override
   Map<String, dynamic> get params => {
@@ -11470,7 +11470,7 @@ class GetNetworkStatistics extends TdFunction {
   @override
   String get tdType => 'getNetworkStatistics';
 
-  bool onlyCurrent;
+  late bool onlyCurrent;
 
   @override
   Map<String, dynamic> get params => {
@@ -11510,7 +11510,7 @@ class GetBankCardInfo extends TdFunction {
   @override
   String get tdType => 'getBankCardInfo';
 
-  String bankCardNumber;
+  late String bankCardNumber;
 
   @override
   Map<String, dynamic> get params => {
@@ -11534,8 +11534,8 @@ class GetPassportElement extends TdFunction {
   @override
   String get tdType => 'getPassportElement';
 
-  PassportElementType type;
-  String password;
+  late PassportElementType type;
+  late String password;
 
   @override
   Map<String, dynamic> get params => {
@@ -11562,8 +11562,8 @@ class SetPassportElement extends TdFunction {
   @override
   String get tdType => 'setPassportElement';
 
-  InputPassportElement element;
-  String password;
+  late InputPassportElement element;
+  late String password;
 
   @override
   Map<String, dynamic> get params => {
@@ -11590,7 +11590,7 @@ class GetAllPassportElements extends TdFunction {
   @override
   String get tdType => 'getAllPassportElements';
 
-  String password;
+  late String password;
 
   @override
   Map<String, dynamic> get params => {
@@ -11614,10 +11614,10 @@ class GetPassportAuthorizationForm extends TdFunction {
   @override
   String get tdType => 'getPassportAuthorizationForm';
 
-  int botUserId;
-  String scope;
-  String publicKey;
-  String nonce;
+  late int botUserId;
+  late String scope;
+  late String publicKey;
+  late String nonce;
 
   @override
   Map<String, dynamic> get params => {
@@ -11650,8 +11650,8 @@ class GetPassportAuthorizationFormAvailableElements extends TdFunction {
   @override
   String get tdType => 'getPassportAuthorizationFormAvailableElements';
 
-  int autorizationFormId;
-  String password;
+  late int autorizationFormId;
+  late String password;
 
   @override
   Map<String, dynamic> get params => {
@@ -11678,7 +11678,7 @@ class CheckStickerSetName extends TdFunction {
   @override
   String get tdType => 'checkStickerSetName';
 
-  String name;
+  late String name;
 
   @override
   Map<String, dynamic> get params => {
@@ -11702,8 +11702,8 @@ class SendCustomRequest extends TdFunction {
   @override
   String get tdType => 'sendCustomRequest';
 
-  String method;
-  String parameters;
+  late String method;
+  late String parameters;
 
   @override
   Map<String, dynamic> get params => {
@@ -11746,7 +11746,7 @@ class GetPhoneNumberInfo extends TdFunction {
   @override
   String get tdType => 'getPhoneNumberInfo';
 
-  String phoneNumberPrefix;
+  late String phoneNumberPrefix;
 
   @override
   Map<String, dynamic> get params => {
@@ -11770,8 +11770,8 @@ class GetPhoneNumberInfoSync extends TdFunction {
   @override
   String get tdType => 'getPhoneNumberInfoSync';
 
-  String languageCode;
-  String phoneNumberPrefix;
+  late String languageCode;
+  late String phoneNumberPrefix;
 
   @override
   Map<String, dynamic> get params => {
@@ -11798,7 +11798,7 @@ class GetDeepLinkInfo extends TdFunction {
   @override
   String get tdType => 'getDeepLinkInfo';
 
-  String link;
+  late String link;
 
   @override
   Map<String, dynamic> get params => {
@@ -11822,10 +11822,10 @@ class AddProxy extends TdFunction {
   @override
   String get tdType => 'addProxy';
 
-  String server;
-  int port;
-  bool enable;
-  ProxyType type;
+  late String server;
+  late int port;
+  late bool enable;
+  late ProxyType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -11858,11 +11858,11 @@ class EditProxy extends TdFunction {
   @override
   String get tdType => 'editProxy';
 
-  int proxyId;
-  String server;
-  int port;
-  bool enable;
-  ProxyType type;
+  late int proxyId;
+  late String server;
+  late int port;
+  late bool enable;
+  late ProxyType type;
 
   @override
   Map<String, dynamic> get params => {
@@ -11914,7 +11914,7 @@ class PingProxy extends TdFunction {
   @override
   String get tdType => 'pingProxy';
 
-  int proxyId;
+  late int proxyId;
 
   @override
   Map<String, dynamic> get params => {
@@ -11970,7 +11970,7 @@ class GetLogTagVerbosityLevel extends TdFunction {
   @override
   String get tdType => 'getLogTagVerbosityLevel';
 
-  String tag;
+  late String tag;
 
   @override
   Map<String, dynamic> get params => {
@@ -12010,7 +12010,7 @@ class TestCallString extends TdFunction {
   @override
   String get tdType => 'testCallString';
 
-  String x;
+  late String x;
 
   @override
   Map<String, dynamic> get params => {
@@ -12034,7 +12034,7 @@ class TestCallBytes extends TdFunction {
   @override
   String get tdType => 'testCallBytes';
 
-  String x;
+  late String x;
 
   @override
   Map<String, dynamic> get params => {
@@ -12058,7 +12058,7 @@ class TestCallVectorInt extends TdFunction {
   @override
   String get tdType => 'testCallVectorInt';
 
-  List<int> x;
+  late List<int> x;
 
   @override
   Map<String, dynamic> get params => {
@@ -12082,7 +12082,7 @@ class TestCallVectorIntObject extends TdFunction {
   @override
   String get tdType => 'testCallVectorIntObject';
 
-  List<TestInt> x;
+  late List<TestInt> x;
 
   @override
   Map<String, dynamic> get params => {
@@ -12106,7 +12106,7 @@ class TestCallVectorString extends TdFunction {
   @override
   String get tdType => 'testCallVectorString';
 
-  List<String> x;
+  late List<String> x;
 
   @override
   Map<String, dynamic> get params => {
@@ -12130,7 +12130,7 @@ class TestCallVectorStringObject extends TdFunction {
   @override
   String get tdType => 'testCallVectorStringObject';
 
-  List<TestString> x;
+  late List<TestString> x;
 
   @override
   Map<String, dynamic> get params => {
@@ -12154,7 +12154,7 @@ class TestSquareInt extends TdFunction {
   @override
   String get tdType => 'testSquareInt';
 
-  int x;
+  late int x;
 
   @override
   Map<String, dynamic> get params => {
@@ -12194,7 +12194,7 @@ class TestReturnError extends TdFunction {
   @override
   String get tdType => 'testReturnError';
 
-  Error error;
+  late Error error;
 
   @override
   Map<String, dynamic> get params => {
