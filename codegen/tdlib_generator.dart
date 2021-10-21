@@ -78,7 +78,8 @@ class ApiClass {
         '',
         '  @override',
         '  Map<String, dynamic> get params => {',
-        ...members.map((param) => '    \'${param.paramName}\': ${param.fieldName},'),
+        ...members
+            .map((param) => '    \'${param.paramName}\': ${param.fieldName},'),
         '  };',
         '',
         '  $name({',
@@ -86,7 +87,8 @@ class ApiClass {
         '  });',
         '',
         '  $name.fromJson(Map<String, dynamic> json) {',
-        ...members.map((field) => '    ${field.fieldName} = tryConvertToTdObject(json[\'${field.paramName}\']);'),
+        ...members.map((field) =>
+            '    ${field.fieldName} = tryConvertToTdObject(json[\'${field.paramName}\']);'),
         '  }',
         '}',
         '',
@@ -168,7 +170,8 @@ class ApiFunction {
         '',
         '  @override',
         '  Map<String, dynamic> get params => {',
-        ...params.map((param) => '    \'${param.paramName}\': ${param.fieldName},'),
+        ...params
+            .map((param) => '    \'${param.paramName}\': ${param.fieldName},'),
         '  };',
         '',
         '  $name(',
@@ -176,7 +179,8 @@ class ApiFunction {
         '  );',
         '',
         '  $name.fromJson(Map<String, dynamic> json) {',
-        ...params.map((param) => '    ${param.fieldName} = tryConvertToTdObject(json[\'${param.paramName}\']);'),
+        ...params.map((param) =>
+            '    ${param.fieldName} = tryConvertToTdObject(json[\'${param.paramName}\']);'),
         '  }',
         '}',
         '',
@@ -196,22 +200,27 @@ class ApiParam {
 }
 
 main() async {
-  Map<String, dynamic> api = await File('./tl_api.json').openRead()
-    .transform(Utf8Decoder())
-    .transform(JsonDecoder())
-    .first;
+  Map<String, dynamic> api = await File('./tl_api.json')
+      .openRead()
+      .transform(Utf8Decoder())
+      .transform(JsonDecoder())
+      .first;
 
   var classes = <ApiClass>[];
   var functions = <ApiFunction>[];
 
   // TODO: Clean up whatever the hell this is, or at least document it
   (api['types'] as Map).forEach((k, v) {
-    if ((v as Map).length == 1 && (v as Map).containsKey(pascalToCamelCase(k))) {
+    if ((v as Map).length == 1 &&
+        (v as Map).containsKey(pascalToCamelCase(k))) {
       classes.add(ApiClass(
         name: k,
         superclass: 'TdObject',
         isAbstract: false,
-        members: (v[pascalToCamelCase(k)]['fields'] as Map).entries.map((e) => ApiParam(e.value, e.key)).toList(),
+        members: (v[pascalToCamelCase(k)]['fields'] as Map)
+            .entries
+            .map((e) => ApiParam(e.value, e.key))
+            .toList(),
         extra: '',
       ));
       return;
@@ -231,10 +240,11 @@ main() async {
         name: name,
         superclass: name == v['superclass'] ? 'TdObject' : v['superclass'],
         isAbstract: false,
-        members: (v['fields'] as Map).entries
-          .toList()
-          .map((e) => ApiParam(e.value, e.key))
-          .toList(),
+        members: (v['fields'] as Map)
+            .entries
+            .toList()
+            .map((e) => ApiParam(e.value, e.key))
+            .toList(),
         extra: '',
       ));
     });
@@ -246,30 +256,27 @@ main() async {
       functions.add(ApiFunction(
         name,
         v['superclass'],
-        (v['fields'] as Map).entries
-          .toList()
-          .map((e) => ApiParam(e.value, e.key))
-          .toList(),
+        (v['fields'] as Map)
+            .entries
+            .toList()
+            .map((e) => ApiParam(e.value, e.key))
+            .toList(),
       ));
     });
   });
 
-  File('../lib/src/api/objects.dart')
-    .openWrite()
-    .writeAll([
-      'import \'base_classes.dart\';',
-      'import \'utils.dart\';',
-      '',
-      ...classes.map((c) => c.toDart()),
-    ], '\n');
+  File('../lib/src/api/objects.dart').openWrite().writeAll([
+    'import \'base_classes.dart\';',
+    'import \'utils.dart\';',
+    '',
+    ...classes.map((c) => c.toDart()),
+  ], '\n');
 
-  File('../lib/src/api/functions.dart')
-    .openWrite()
-    .writeAll([
-      'import \'base_classes.dart\';',
-      'import \'objects.dart\';',
-      'import \'utils.dart\';',
-      '',
-      ...functions.map((f) => f.toDart()),
-    ], '\n');
+  File('../lib/src/api/functions.dart').openWrite().writeAll([
+    'import \'base_classes.dart\';',
+    'import \'objects.dart\';',
+    'import \'utils.dart\';',
+    '',
+    ...functions.map((f) => f.toDart()),
+  ], '\n');
 }

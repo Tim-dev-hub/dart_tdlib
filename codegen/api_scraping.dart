@@ -73,9 +73,9 @@ String tlTypeToDartType(String tlType) {
 
 main() async {
   final client = Client();
-  final apiUrl = "https://raw.githubusercontent.com/tdlib/td/master/td/generate/scheme/td_api.tl";
+  final apiUrl = Uri.https("raw.githubusercontent.com",
+      "/tdlib/td/master/td/generate/scheme/td_api.tl");
   final apiIndex = (await client.get(apiUrl)).body;
-
   final lines = apiIndex.split("\n");
   Map<String, dynamic> classes = {};
   Map<String, dynamic> functions = {};
@@ -113,9 +113,8 @@ main() async {
     "functions": functions,
   };
 
-  File("./tl_api.json")
-    .openWrite()
-    .write(json.encode(api));
+  File("./tl_api.json").openWrite().write(json.encode(api));
 
   client.close();
 }
+
