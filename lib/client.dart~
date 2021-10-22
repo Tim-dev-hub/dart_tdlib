@@ -147,12 +147,9 @@ class AsyncClient {
   //factory AsyncClient._() => null;
 
   /// Receives a request from TD and parses it as a [TdObject]
-    /// Receives a request from TD and parses it as a [TdObject]
   Future<TdObject?> receive([double timeout = 2.0]) async =>
-      Future<TdObject?>(() {
-        var receiveValue = tryConvertToTdObject(_client.receive(timeout));
-        return receiveValue == null ? null : receiveValue as TdObject;
-      });
+      tryConvertToTdObject(_client.receive(timeout)) as TdObject;
+
   /// Sends an asynchronous request to TD
   Future<void> send(TdFunction request) async =>
       _client.send(request.serialize());
