@@ -13,7 +13,7 @@ const reflector = Reflector();
 dynamic tryConvertToTdObject(dynamic obj) {
   if (obj is Map) {
     return obj.containsKey('@type') ?
-      (reflector.reflectType(classIndex[obj['@type']]) as ClassMirror)
+      (reflector.reflectType(classIndex[obj['@type']] ?? int) as ClassMirror)
         .newInstance('fromJson', [obj]) :
       obj;
   }

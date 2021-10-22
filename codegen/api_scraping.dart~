@@ -20,7 +20,9 @@ MapEntry<String, Map> parseTlLine(String line) {
   for (var field in fields) {
     if (field.isEmpty) continue;
     final fieldAndType = field.trim().split(":");
+
     var type = tlTypeToDartType(fieldAndType[1].trim());
+
     fieldInfo.addAll({fieldAndType[0].trim(): type});
   }
 
@@ -87,10 +89,10 @@ main() async {
       parseAsFunction = false;
       continue;
     }
+
     if (line.isEmpty || line.startsWith("//")) continue;
 
     var combinator = parseTlLine(line);
-    print("\"" + combinator.key + "\" : " + camelToPascalCase(combinator.key) + ",");
     if (parseAsFunction) {
       var returnType = combinator.value["superclass"];
       if (!functions.containsKey(returnType)) {
@@ -116,31 +118,3 @@ main() async {
   client.close();
 }
 
-final _uppers = List.generate(26, (i) => i + 0x41);
-
-String camelToPascalCase(String string) {
-  return string.replaceFirst(string[0], string[0].toUpperCase());
-}
-
-String camelToSnakeCase(String string) {
-  var buf = StringBuffer();
-  var runes = string.runes.toList();
-  for (var i = 0; i < runes.length; i++) {
-    var rune = runes[i];
-    var nextChar = String.fromCharCode(rune).toLowerCase();
-    if (i != 0 && _uppers.contains(rune)) {
-      buf.write("_");
-    }
-
-    buf.write(nextChar);
-  }
-
-  return buf.toString();
-}
-
-String snakeToCamelCase(String string) {
-  return string.replaceAllMapped(
-    RegExp(r"_(\w)"),
-    (m) => m.group(1).toUpperCase()
-  );
-}
