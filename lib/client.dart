@@ -1,12 +1,10 @@
 import 'dart:async';
-
-import 'package:meta/meta.dart';
+import 'dart:convert';
 import 'package:rxdart/rxdart.dart';
+import 'package:flutter/services.dart';
 
 import "src/td_json_client.dart" show JsonClient;
-import "src/api/base_classes.dart";
-import "src/api/objects.dart";
-import "src/api/utils.dart" show tryConvertToTdObject;
+import "src/tdapi/tdapi.dart";
 
 /// A controller that handles incoming requests asynchronously and exposes
 /// [Observable]s that stream data to their listeners.
@@ -27,7 +25,7 @@ class TelegramClient with AsyncClient {
   /// the new authorization state.
   Stream<AuthorizationState> get authorizationState => updates
       .where((u) => u is UpdateAuthorizationState)
-      .map((a) => (a as UpdateAuthorizationState).authorizationState);
+      .map((a) => (a as UpdateAuthorizationState).authorizationState!);
 
   late TdlibParameters tdlibParams;
 
@@ -147,25 +145,25 @@ class AsyncClient {
   //factory AsyncClient._() => null;
 
   /// Receives a request from TD and parses it as a [TdObject]
-    /// Receives a request from TD and parses it as a [TdObject]
+  /// Receives a request from TD and parses it as a [TdObject]
   Future<TdObject?> receive([double timeout = 2.0]) async =>
       Future<TdObject?>(() {
-        var receiveValue = tryConvertToTdObject(_client.receive(timeout));
-        return receiveValue == null ? null : receiveValue as TdObject;
+        var receiveValue = _client.receive(timeout);
+        if (receiveValue == null) return null;
+        return convertToObject(receiveValue);
       });
+
   /// Sends an asynchronous request to TD
-  Future<void> send(TdFunction request) async =>
-      _client.send(request.serialize());
+  Future<void> send(TdFunction request) async => _client.send(request.toJson());
 
   /// Executes a synchronous request
   Map<String, dynamic> executeSync(TdFunction request) =>
-      _client.execute(request.serialize());
+      _client.execute(request.toJson());
 
   /// Executes a synchronous request asynchronously o_O
   Future<Map<String, dynamic>> execute(TdFunction request) async =>
-      _client.execute(request.serialize());
+      _client.execute(request.toJson());
 
   /// Closes the client, destroying the encapsulated [JsonClient]
   Future<void> destroy() async => _client.destroy();
 }
-

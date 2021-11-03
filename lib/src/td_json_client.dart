@@ -108,16 +108,14 @@ class JsonClient {
   }
 
   /// Receive the API's response
-  Map<String, dynamic>? receive([double timeout = 2.0]) {
+  String? receive([double timeout = 2.0]) {
     _assertActive();
     final response = _jsonClientReceive(_client, timeout);
 
     //if timeout is riched _jsonClientReceive return NullPointer
     if (response == nullptr) return null;
 
-    final resString = response.toDartString();
-    print("receive json from TDlib " + resString);
-    return json.decode(resString);
+    return response.toDartString();
   }
 
   /// Execute a TDLib function synchronously
@@ -140,4 +138,3 @@ class JsonClient {
     active = false;
   }
 }
-
