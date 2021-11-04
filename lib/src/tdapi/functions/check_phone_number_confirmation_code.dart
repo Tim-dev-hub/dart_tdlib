@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class CheckPhoneNumberConfirmationCode extends TdFunction {
 
   /// Checks phone number confirmation code
-  CheckPhoneNumberConfirmationCode({code});
+  CheckPhoneNumberConfirmationCode({this.code});
 
   /// [code] The phone number confirmation code
   String? code;

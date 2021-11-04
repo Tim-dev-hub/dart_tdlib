@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class ChatAdministrator extends TdObject {
 
   /// Contains information about a chat administrator
-  ChatAdministrator({userId,
-    customTitle,
-    isOwner});
+  ChatAdministrator({this.userId,
+    this.customTitle,
+    this.isOwner});
 
   /// [userId] User identifier of the administrator 
   int? userId;

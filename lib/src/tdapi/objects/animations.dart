@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class Animations extends TdObject {
 
   /// Represents a list of animations
-  Animations({animations});
+  Animations({this.animations});
 
   /// [animations] List of animations
   List<Animation>? animations;

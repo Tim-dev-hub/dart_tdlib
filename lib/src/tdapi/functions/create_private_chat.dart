@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class CreatePrivateChat extends TdFunction {
 
   /// Returns an existing chat corresponding to a given user
-  CreatePrivateChat({userId,
-    force});
+  CreatePrivateChat({this.userId,
+    this.force});
 
   /// [userId] User identifier 
   int? userId;

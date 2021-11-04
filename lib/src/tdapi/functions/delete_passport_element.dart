@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class DeletePassportElement extends TdFunction {
 
   /// Deletes a Telegram Passport element
-  DeletePassportElement({type});
+  DeletePassportElement({this.type});
 
   /// [type] Element type
   PassportElementType? type;

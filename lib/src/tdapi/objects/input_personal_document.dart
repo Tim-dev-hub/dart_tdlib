@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class InputPersonalDocument extends TdObject {
 
   /// A personal document to be saved to Telegram Passport
-  InputPersonalDocument({files,
-    translation});
+  InputPersonalDocument({this.files,
+    this.translation});
 
   /// [files] List of files containing the pages of the document 
   List<InputFile>? files;

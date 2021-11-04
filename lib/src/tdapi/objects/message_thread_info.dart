@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class MessageThreadInfo extends TdObject {
 
   /// Contains information about a message thread
-  MessageThreadInfo({chatId,
-    messageThreadId,
-    replyInfo,
-    unreadMessageCount,
-    messages,
-    draftMessage});
+  MessageThreadInfo({this.chatId,
+    this.messageThreadId,
+    this.replyInfo,
+    this.unreadMessageCount,
+    this.messages,
+    this.draftMessage});
 
   /// [chatId] Identifier of the chat to which the message thread belongs
   int? chatId;

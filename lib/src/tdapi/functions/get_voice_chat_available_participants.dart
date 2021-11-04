@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetVoiceChatAvailableParticipants extends TdFunction {
 
   /// Returns list of participant identifiers, which can be used to join voice chats in a chat
-  GetVoiceChatAvailableParticipants({chatId});
+  GetVoiceChatAvailableParticipants({this.chatId});
 
   /// [chatId] Chat identifier
   int? chatId;

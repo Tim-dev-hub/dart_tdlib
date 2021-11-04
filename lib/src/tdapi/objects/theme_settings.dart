@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class ThemeSettings extends TdObject {
 
   /// Describes theme settings
-  ThemeSettings({accentColor,
-    background,
-    outgoingMessageFill,
-    animateOutgoingMessageFill,
-    outgoingMessageAccentColor});
+  ThemeSettings({this.accentColor,
+    this.background,
+    this.outgoingMessageFill,
+    this.animateOutgoingMessageFill,
+    this.outgoingMessageAccentColor});
 
   /// [accentColor] Theme accent color in ARGB format
   int? accentColor;

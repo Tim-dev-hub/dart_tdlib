@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class SetUsername extends TdFunction {
 
   /// Changes the username of the current user
-  SetUsername({username});
+  SetUsername({this.username});
 
   /// [username] The new value of the username. Use an empty string to remove the username
   String? username;

@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class LabeledPricePart extends TdObject {
 
   /// Portion of the price of a product (e.g., "delivery cost", "tax amount")
-  LabeledPricePart({label,
-    amount});
+  LabeledPricePart({this.label,
+    this.amount});
 
   /// [label] Label for this portion of the product price 
   String? label;

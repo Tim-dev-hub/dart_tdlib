@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class PingProxy extends TdFunction {
 
   /// Computes time needed to receive a response from a Telegram server through a proxy. Can be called before authorization
-  PingProxy({proxyId});
+  PingProxy({this.proxyId});
 
   /// [proxyId] Proxy identifier. Use 0 to ping a Telegram server without a proxy
   int? proxyId;

@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class BotCommands extends TdObject {
 
   /// Contains a list of bot commands
-  BotCommands({botUserId,
-    commands});
+  BotCommands({this.botUserId,
+    this.commands});
 
   /// [botUserId] Bot's user identifier 
   int? botUserId;

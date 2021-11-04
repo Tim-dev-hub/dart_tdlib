@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class CheckRecoveryEmailAddressCode extends TdFunction {
 
   /// Checks the 2-step verification recovery email address verification code
-  CheckRecoveryEmailAddressCode({code});
+  CheckRecoveryEmailAddressCode({this.code});
 
   /// [code] Verification code
   String? code;

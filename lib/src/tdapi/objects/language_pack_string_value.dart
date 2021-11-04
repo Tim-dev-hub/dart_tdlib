@@ -39,7 +39,7 @@ class LanguagePackStringValue extends TdObject {
 class LanguagePackStringValueOrdinary extends LanguagePackStringValue {
 
   /// An ordinary language pack string
-  LanguagePackStringValueOrdinary({value});
+  LanguagePackStringValueOrdinary({this.value});
 
   /// [value] String value
   String? value;
@@ -70,12 +70,12 @@ class LanguagePackStringValueOrdinary extends LanguagePackStringValue {
 class LanguagePackStringValuePluralized extends LanguagePackStringValue {
 
   /// A language pack string which has different forms based on the number of some object it mentions. See https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html for more info
-  LanguagePackStringValuePluralized({zeroValue,
-    oneValue,
-    twoValue,
-    fewValue,
-    manyValue,
-    otherValue});
+  LanguagePackStringValuePluralized({this.zeroValue,
+    this.oneValue,
+    this.twoValue,
+    this.fewValue,
+    this.manyValue,
+    this.otherValue});
 
   /// [zeroValue] Value for zero objects
   String? zeroValue;

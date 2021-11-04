@@ -88,11 +88,11 @@ class UserTypeDeleted extends UserType {
 class UserTypeBot extends UserType {
 
   /// A bot (see https://core.telegram.org/bots)
-  UserTypeBot({canJoinGroups,
-    canReadAllGroupMessages,
-    isInline,
-    inlineQueryPlaceholder,
-    needLocation});
+  UserTypeBot({this.canJoinGroups,
+    this.canReadAllGroupMessages,
+    this.isInline,
+    this.inlineQueryPlaceholder,
+    this.needLocation});
 
   /// [canJoinGroups] True, if the bot can be invited to basic group and supergroup chats
   bool? canJoinGroups;

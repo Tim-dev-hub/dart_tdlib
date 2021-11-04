@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class StorageStatisticsFast extends TdObject {
 
   /// Contains approximate storage usage statistics, excluding files of unknown file type
-  StorageStatisticsFast({filesSize,
-    fileCount,
-    databaseSize,
-    languagePackDatabaseSize,
-    logSize});
+  StorageStatisticsFast({this.filesSize,
+    this.fileCount,
+    this.databaseSize,
+    this.languagePackDatabaseSize,
+    this.logSize});
 
   /// [filesSize] Approximate total size of files, in bytes 
   int? filesSize;

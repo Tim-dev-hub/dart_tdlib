@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class AnswerPreCheckoutQuery extends TdFunction {
 
   /// Sets the result of a pre-checkout query; for bots only
-  AnswerPreCheckoutQuery({preCheckoutQueryId,
-    errorMessage});
+  AnswerPreCheckoutQuery({this.preCheckoutQueryId,
+    this.errorMessage});
 
   /// [preCheckoutQueryId] Identifier of the pre-checkout query 
   int? preCheckoutQueryId;

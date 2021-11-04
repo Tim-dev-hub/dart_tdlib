@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class VoiceChat extends TdObject {
 
   /// Describes a voice chat
-  VoiceChat({groupCallId,
-    hasParticipants,
-    defaultParticipantId});
+  VoiceChat({this.groupCallId,
+    this.hasParticipants,
+    this.defaultParticipantId});
 
   /// [groupCallId] Group call identifier of an active voice chat; 0 if none. Full information about the voice chat can be received through the method getGroupCall
   int? groupCallId;

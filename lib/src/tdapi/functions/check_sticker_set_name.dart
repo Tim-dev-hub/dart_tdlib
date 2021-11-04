@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class CheckStickerSetName extends TdFunction {
 
   /// Checks whether a name can be used for a new sticker set
-  CheckStickerSetName({name});
+  CheckStickerSetName({this.name});
 
   /// [name] Name to be checked
   String? name;

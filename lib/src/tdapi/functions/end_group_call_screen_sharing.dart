@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class EndGroupCallScreenSharing extends TdFunction {
 
   /// Ends screen sharing in a joined group call
-  EndGroupCallScreenSharing({groupCallId});
+  EndGroupCallScreenSharing({this.groupCallId});
 
   /// [groupCallId] Group call identifier
   int? groupCallId;

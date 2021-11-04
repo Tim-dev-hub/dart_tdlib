@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class ClosedVectorPath extends TdObject {
 
   /// Represents a closed vector path. The path begins at the end point of the last command
-  ClosedVectorPath({commands});
+  ClosedVectorPath({this.commands});
 
   /// [commands] List of vector path commands
   List<VectorPathCommand>? commands;

@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class Address extends TdObject {
 
   /// Describes an address
-  Address({countryCode,
-    state,
-    city,
-    streetLine1,
-    streetLine2,
-    postalCode});
+  Address({this.countryCode,
+    this.state,
+    this.city,
+    this.streetLine1,
+    this.streetLine2,
+    this.postalCode});
 
   /// [countryCode] A two-letter ISO 3166-1 alpha-2 country code 
   String? countryCode;

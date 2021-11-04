@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class DatabaseStatistics extends TdObject {
 
   /// Contains database statistics
-  DatabaseStatistics({statistics});
+  DatabaseStatistics({this.statistics});
 
   /// [statistics] Database statistics in an unspecified human-readable format
   String? statistics;

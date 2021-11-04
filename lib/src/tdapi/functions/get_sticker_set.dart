@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetStickerSet extends TdFunction {
 
   /// Returns information about a sticker set by its identifier
-  GetStickerSet({setId});
+  GetStickerSet({this.setId});
 
   /// [setId] Identifier of the sticker set
   int? setId;

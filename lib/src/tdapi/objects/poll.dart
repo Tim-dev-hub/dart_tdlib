@@ -3,16 +3,16 @@ part of '../tdapi.dart';
 class Poll extends TdObject {
 
   /// Describes a poll
-  Poll({id,
-    question,
-    options,
-    totalVoterCount,
-    recentVoterUserIds,
-    isAnonymous,
-    type,
-    openPeriod,
-    closeDate,
-    isClosed});
+  Poll({this.id,
+    this.question,
+    this.options,
+    this.totalVoterCount,
+    this.recentVoterUserIds,
+    this.isAnonymous,
+    this.type,
+    this.openPeriod,
+    this.closeDate,
+    this.isClosed});
 
   /// [id] Unique poll identifier 
   int? id;

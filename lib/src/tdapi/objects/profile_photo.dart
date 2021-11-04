@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class ProfilePhoto extends TdObject {
 
   /// Describes a user profile photo
-  ProfilePhoto({id,
-    small,
-    big,
-    minithumbnail,
-    hasAnimation});
+  ProfilePhoto({this.id,
+    this.small,
+    this.big,
+    this.minithumbnail,
+    this.hasAnimation});
 
   /// [id] Photo identifier; 0 for an empty photo. Can be used to find a photo in a list of user profile photos
   int? id;

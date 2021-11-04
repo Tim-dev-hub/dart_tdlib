@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class Seconds extends TdObject {
 
   /// Contains a value representing a number of seconds
-  Seconds({seconds});
+  Seconds({this.seconds});
 
   /// [seconds] Number of seconds
   double? seconds;

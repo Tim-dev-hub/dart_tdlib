@@ -36,7 +36,7 @@ class PollType extends TdObject {
 class PollTypeRegular extends PollType {
 
   /// A regular poll
-  PollTypeRegular({allowMultipleAnswers});
+  PollTypeRegular({this.allowMultipleAnswers});
 
   /// [allowMultipleAnswers] True, if multiple answer options can be chosen simultaneously
   bool? allowMultipleAnswers;
@@ -63,8 +63,8 @@ class PollTypeRegular extends PollType {
 class PollTypeQuiz extends PollType {
 
   /// A poll in quiz mode, which has exactly one correct answer option and can be answered only once
-  PollTypeQuiz({correctOptionId,
-    explanation});
+  PollTypeQuiz({this.correctOptionId,
+    this.explanation});
 
   /// [correctOptionId] 0-based identifier of the correct answer option; -1 for a yet unanswered poll
   int? correctOptionId;

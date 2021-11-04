@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetChatPinnedMessage extends TdFunction {
 
   /// Returns information about a newest pinned message in the chat
-  GetChatPinnedMessage({chatId});
+  GetChatPinnedMessage({this.chatId});
 
   /// [chatId] Identifier of the chat the message belongs to
   int? chatId;

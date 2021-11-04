@@ -59,8 +59,8 @@ class ChatSourceMtprotoProxy extends ChatSource {
 class ChatSourcePublicServiceAnnouncement extends ChatSource {
 
   /// The chat contains a public service announcement
-  ChatSourcePublicServiceAnnouncement({type,
-    text});
+  ChatSourcePublicServiceAnnouncement({this.type,
+    this.text});
 
   /// [type] The type of the announcement 
   String? type;

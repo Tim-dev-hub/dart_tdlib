@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class Hashtags extends TdObject {
 
   /// Contains a list of hashtags
-  Hashtags({hashtags});
+  Hashtags({this.hashtags});
 
   /// [hashtags] A list of hashtags
   List<String>? hashtags;

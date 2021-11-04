@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class PaymentsProviderStripe extends TdObject {
 
   /// Stripe payment provider
-  PaymentsProviderStripe({publishableKey,
-    needCountry,
-    needPostalCode,
-    needCardholderName});
+  PaymentsProviderStripe({this.publishableKey,
+    this.needCountry,
+    this.needPostalCode,
+    this.needCardholderName});
 
   /// [publishableKey] Stripe API publishable key 
   String? publishableKey;

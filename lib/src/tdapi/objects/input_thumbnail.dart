@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class InputThumbnail extends TdObject {
 
   /// A thumbnail to be sent along with a file; must be in JPEG or WEBP format for stickers, and less than 200 KB in size
-  InputThumbnail({thumbnail,
-    width,
-    height});
+  InputThumbnail({this.thumbnail,
+    this.width,
+    this.height});
 
   /// [thumbnail] Thumbnail file to send. Sending thumbnails by file_id is currently not supported
   InputFile? thumbnail;

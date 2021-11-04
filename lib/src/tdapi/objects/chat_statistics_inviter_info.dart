@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class ChatStatisticsInviterInfo extends TdObject {
 
   /// Contains statistics about number of new members invited by a user
-  ChatStatisticsInviterInfo({userId,
-    addedMemberCount});
+  ChatStatisticsInviterInfo({this.userId,
+    this.addedMemberCount});
 
   /// [userId] User identifier
   int? userId;

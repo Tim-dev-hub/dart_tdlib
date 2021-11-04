@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class TestVectorInt extends TdObject {
 
   /// A simple object containing a vector of numbers; for testing only
-  TestVectorInt({value});
+  TestVectorInt({this.value});
 
   /// [value] Vector of numbers
   List<int>? value;

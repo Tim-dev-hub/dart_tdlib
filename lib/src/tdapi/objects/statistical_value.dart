@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class StatisticalValue extends TdObject {
 
   /// A value with information about its recent changes
-  StatisticalValue({value,
-    previousValue,
-    growthRatePercentage});
+  StatisticalValue({this.value,
+    this.previousValue,
+    this.growthRatePercentage});
 
   /// [value] The current value 
   double? value;

@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class ClearAllDraftMessages extends TdFunction {
 
   /// Clears draft messages in all chats
-  ClearAllDraftMessages({excludeSecretChats});
+  ClearAllDraftMessages({this.excludeSecretChats});
 
   /// [excludeSecretChats] If true, local draft messages in secret chats will not be cleared
   bool? excludeSecretChats;

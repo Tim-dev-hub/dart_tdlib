@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class Sessions extends TdObject {
 
   /// Contains a list of sessions
-  Sessions({sessions});
+  Sessions({this.sessions});
 
   /// [sessions] List of sessions
   List<Session>? sessions;

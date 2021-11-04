@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class AnswerCustomQuery extends TdFunction {
 
   /// Answers a custom query; for bots only
-  AnswerCustomQuery({customQueryId,
-    data});
+  AnswerCustomQuery({this.customQueryId,
+    this.data});
 
   /// [customQueryId] Identifier of a custom query 
   int? customQueryId;

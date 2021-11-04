@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class AddChatMember extends TdFunction {
 
   /// Adds a new member to a chat. Members can't be added to private or secret chats
-  AddChatMember({chatId,
-    userId,
-    forwardLimit});
+  AddChatMember({this.chatId,
+    this.userId,
+    this.forwardLimit});
 
   /// [chatId] Chat identifier
   int? chatId;

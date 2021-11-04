@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class AddNetworkStatistics extends TdFunction {
 
   /// Adds the specified data to data usage statistics. Can be called before authorization
-  AddNetworkStatistics({entry});
+  AddNetworkStatistics({this.entry});
 
   /// [entry] The network statistics entry with the data to be added to statistics
   NetworkStatisticsEntry? entry;

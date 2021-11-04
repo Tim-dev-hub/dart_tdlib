@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetOption extends TdFunction {
 
   /// Returns the value of an option by its name. (Check the list of available options on https://core.telegram.org/tdlib/options.) Can be called before authorization
-  GetOption({name});
+  GetOption({this.name});
 
   /// [name] The name of the option
   String? name;

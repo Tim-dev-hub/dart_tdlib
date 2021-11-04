@@ -3,16 +3,16 @@ part of '../tdapi.dart';
 class Video extends TdObject {
 
   /// Describes a video file
-  Video({duration,
-    width,
-    height,
-    fileName,
-    mimeType,
-    hasStickers,
-    supportsStreaming,
-    minithumbnail,
-    thumbnail,
-    video});
+  Video({this.duration,
+    this.width,
+    this.height,
+    this.fileName,
+    this.mimeType,
+    this.hasStickers,
+    this.supportsStreaming,
+    this.minithumbnail,
+    this.thumbnail,
+    this.video});
 
   /// [duration] Duration of the video, in seconds; as defined by the sender 
   int? duration;

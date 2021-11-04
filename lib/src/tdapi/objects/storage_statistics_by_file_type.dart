@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class StorageStatisticsByFileType extends TdObject {
 
   /// Contains the storage usage statistics for a specific file type
-  StorageStatisticsByFileType({fileType,
-    size,
-    count});
+  StorageStatisticsByFileType({this.fileType,
+    this.size,
+    this.count});
 
   /// [fileType] File type 
   FileType? fileType;

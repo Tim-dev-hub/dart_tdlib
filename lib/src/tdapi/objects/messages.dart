@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class Messages extends TdObject {
 
   /// Contains a list of messages
-  Messages({totalCount,
-    messages});
+  Messages({this.totalCount,
+    this.messages});
 
   /// [totalCount] Approximate total count of messages found 
   int? totalCount;

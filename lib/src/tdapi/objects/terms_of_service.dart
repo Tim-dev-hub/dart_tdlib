@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class TermsOfService extends TdObject {
 
   /// Contains Telegram terms of service
-  TermsOfService({text,
-    minUserAge,
-    showPopup});
+  TermsOfService({this.text,
+    this.minUserAge,
+    this.showPopup});
 
   /// [text] Text of the terms of service 
   FormattedText? text;

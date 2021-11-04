@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GetPaymentReceipt extends TdFunction {
 
   /// Returns information about a successful payment
-  GetPaymentReceipt({chatId,
-    messageId});
+  GetPaymentReceipt({this.chatId,
+    this.messageId});
 
   /// [chatId] Chat identifier of the PaymentSuccessful message 
   int? chatId;

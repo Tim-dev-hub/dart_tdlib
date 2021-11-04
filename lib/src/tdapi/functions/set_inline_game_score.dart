@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class SetInlineGameScore extends TdFunction {
 
   /// Updates the game score of the specified user in a game; for bots only
-  SetInlineGameScore({inlineMessageId,
-    editMessage,
-    userId,
-    score,
-    force});
+  SetInlineGameScore({this.inlineMessageId,
+    this.editMessage,
+    this.userId,
+    this.score,
+    this.force});
 
   /// [inlineMessageId] Inline message identifier 
   String? inlineMessageId;

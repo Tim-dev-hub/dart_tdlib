@@ -3,13 +3,13 @@ part of '../tdapi.dart';
 class Game extends TdObject {
 
   /// Describes a game
-  Game({id,
-    shortName,
-    title,
-    text,
-    description,
-    photo,
-    animation});
+  Game({this.id,
+    this.shortName,
+    this.title,
+    this.text,
+    this.description,
+    this.photo,
+    this.animation});
 
   /// [id] Game game 
   int? id;

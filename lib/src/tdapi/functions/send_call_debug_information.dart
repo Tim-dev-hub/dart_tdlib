@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class SendCallDebugInformation extends TdFunction {
 
   /// Sends debug information for a call
-  SendCallDebugInformation({callId,
-    debugInformation});
+  SendCallDebugInformation({this.callId,
+    this.debugInformation});
 
   /// [callId] Call identifier 
   int? callId;

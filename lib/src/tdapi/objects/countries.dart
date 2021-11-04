@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class Countries extends TdObject {
 
   /// Contains information about countries
-  Countries({countries});
+  Countries({this.countries});
 
   /// [countries] The list of countries
   List<CountryInfo>? countries;

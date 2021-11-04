@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class CheckAuthenticationPasswordRecoveryCode extends TdFunction {
 
   /// Checks whether a password recovery code sent to an email address is valid. Works only when the current authorization state is authorizationStateWaitPassword
-  CheckAuthenticationPasswordRecoveryCode({recoveryCode});
+  CheckAuthenticationPasswordRecoveryCode({this.recoveryCode});
 
   /// [recoveryCode] Recovery code to check
   String? recoveryCode;

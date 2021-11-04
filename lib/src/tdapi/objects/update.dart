@@ -294,7 +294,7 @@ class Update extends TdObject {
 class UpdateAuthorizationState extends Update {
 
   /// The user authorization state has changed
-  UpdateAuthorizationState({authorizationState});
+  UpdateAuthorizationState({this.authorizationState});
 
   /// [authorizationState] New authorization state
   AuthorizationState? authorizationState;
@@ -325,7 +325,7 @@ class UpdateAuthorizationState extends Update {
 class UpdateNewMessage extends Update {
 
   /// A new message was received; can also be an outgoing message
-  UpdateNewMessage({message});
+  UpdateNewMessage({this.message});
 
   /// [message] The new message
   Message? message;
@@ -356,8 +356,8 @@ class UpdateNewMessage extends Update {
 class UpdateMessageSendAcknowledged extends Update {
 
   /// A request to send a message has reached the Telegram server. This doesn't mean that the message will be sent successfully or even that the send message request will be processed. This update will be sent only if the option "use_quick_ack" is set to true. This update may be sent multiple times for the same message
-  UpdateMessageSendAcknowledged({chatId,
-    messageId});
+  UpdateMessageSendAcknowledged({this.chatId,
+    this.messageId});
 
   /// [chatId] The chat identifier of the sent message
   int? chatId;
@@ -393,8 +393,8 @@ class UpdateMessageSendAcknowledged extends Update {
 class UpdateMessageSendSucceeded extends Update {
 
   /// A message has been successfully sent
-  UpdateMessageSendSucceeded({message,
-    oldMessageId});
+  UpdateMessageSendSucceeded({this.message,
+    this.oldMessageId});
 
   /// [message] Information about the sent message. Usually only the message identifier, date, and content are changed, but almost all other fields can also change 
   Message? message;
@@ -430,10 +430,10 @@ class UpdateMessageSendSucceeded extends Update {
 class UpdateMessageSendFailed extends Update {
 
   /// A message failed to send. Be aware that some messages being sent can be irrecoverably deleted, in which case updateDeleteMessages will be received instead of this update
-  UpdateMessageSendFailed({message,
-    oldMessageId,
-    errorCode,
-    errorMessage});
+  UpdateMessageSendFailed({this.message,
+    this.oldMessageId,
+    this.errorCode,
+    this.errorMessage});
 
   /// [message] Contains information about the message which failed to send
   Message? message;
@@ -479,9 +479,9 @@ class UpdateMessageSendFailed extends Update {
 class UpdateMessageContent extends Update {
 
   /// The message content has changed
-  UpdateMessageContent({chatId,
-    messageId,
-    newContent});
+  UpdateMessageContent({this.chatId,
+    this.messageId,
+    this.newContent});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -522,10 +522,10 @@ class UpdateMessageContent extends Update {
 class UpdateMessageEdited extends Update {
 
   /// A message was edited. Changes in the message content will come in a separate updateMessageContent
-  UpdateMessageEdited({chatId,
-    messageId,
-    editDate,
-    replyMarkup});
+  UpdateMessageEdited({this.chatId,
+    this.messageId,
+    this.editDate,
+    this.replyMarkup});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -571,9 +571,9 @@ class UpdateMessageEdited extends Update {
 class UpdateMessageIsPinned extends Update {
 
   /// The message pinned state was changed
-  UpdateMessageIsPinned({chatId,
-    messageId,
-    isPinned});
+  UpdateMessageIsPinned({this.chatId,
+    this.messageId,
+    this.isPinned});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -614,9 +614,9 @@ class UpdateMessageIsPinned extends Update {
 class UpdateMessageInteractionInfo extends Update {
 
   /// The information about interactions with a message has changed
-  UpdateMessageInteractionInfo({chatId,
-    messageId,
-    interactionInfo});
+  UpdateMessageInteractionInfo({this.chatId,
+    this.messageId,
+    this.interactionInfo});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -657,8 +657,8 @@ class UpdateMessageInteractionInfo extends Update {
 class UpdateMessageContentOpened extends Update {
 
   /// The message content was opened. Updates voice note messages to "listened", video note messages to "viewed" and starts the TTL timer for self-destructing messages
-  UpdateMessageContentOpened({chatId,
-    messageId});
+  UpdateMessageContentOpened({this.chatId,
+    this.messageId});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -694,9 +694,9 @@ class UpdateMessageContentOpened extends Update {
 class UpdateMessageMentionRead extends Update {
 
   /// A message with an unread mention was read
-  UpdateMessageMentionRead({chatId,
-    messageId,
-    unreadMentionCount});
+  UpdateMessageMentionRead({this.chatId,
+    this.messageId,
+    this.unreadMentionCount});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -737,8 +737,8 @@ class UpdateMessageMentionRead extends Update {
 class UpdateMessageLiveLocationViewed extends Update {
 
   /// A message with a live location was viewed. When the update is received, the application is supposed to update the live location
-  UpdateMessageLiveLocationViewed({chatId,
-    messageId});
+  UpdateMessageLiveLocationViewed({this.chatId,
+    this.messageId});
 
   /// [chatId] Identifier of the chat with the live location message
   int? chatId;
@@ -774,7 +774,7 @@ class UpdateMessageLiveLocationViewed extends Update {
 class UpdateNewChat extends Update {
 
   /// A new chat has been loaded/created. This update is guaranteed to come before the chat identifier is returned to the application. The chat field changes will be reported through separate updates
-  UpdateNewChat({chat});
+  UpdateNewChat({this.chat});
 
   /// [chat] The chat
   Chat? chat;
@@ -805,8 +805,8 @@ class UpdateNewChat extends Update {
 class UpdateChatTitle extends Update {
 
   /// The title of a chat was changed
-  UpdateChatTitle({chatId,
-    title});
+  UpdateChatTitle({this.chatId,
+    this.title});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -842,8 +842,8 @@ class UpdateChatTitle extends Update {
 class UpdateChatPhoto extends Update {
 
   /// A chat photo was changed
-  UpdateChatPhoto({chatId,
-    photo});
+  UpdateChatPhoto({this.chatId,
+    this.photo});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -879,8 +879,8 @@ class UpdateChatPhoto extends Update {
 class UpdateChatPermissions extends Update {
 
   /// Chat permissions was changed
-  UpdateChatPermissions({chatId,
-    permissions});
+  UpdateChatPermissions({this.chatId,
+    this.permissions});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -916,9 +916,9 @@ class UpdateChatPermissions extends Update {
 class UpdateChatLastMessage extends Update {
 
   /// The last message of a chat was changed. If last_message is null, then the last message in the chat became unknown. Some new unknown messages might be added to the chat in this case
-  UpdateChatLastMessage({chatId,
-    lastMessage,
-    positions});
+  UpdateChatLastMessage({this.chatId,
+    this.lastMessage,
+    this.positions});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -959,8 +959,8 @@ class UpdateChatLastMessage extends Update {
 class UpdateChatPosition extends Update {
 
   /// The position of a chat in a chat list has changed. Instead of this update updateChatLastMessage or updateChatDraftMessage might be sent
-  UpdateChatPosition({chatId,
-    position});
+  UpdateChatPosition({this.chatId,
+    this.position});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -996,8 +996,8 @@ class UpdateChatPosition extends Update {
 class UpdateChatIsMarkedAsUnread extends Update {
 
   /// A chat was marked as unread or was read
-  UpdateChatIsMarkedAsUnread({chatId,
-    isMarkedAsUnread});
+  UpdateChatIsMarkedAsUnread({this.chatId,
+    this.isMarkedAsUnread});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -1033,8 +1033,8 @@ class UpdateChatIsMarkedAsUnread extends Update {
 class UpdateChatIsBlocked extends Update {
 
   /// A chat was blocked or unblocked
-  UpdateChatIsBlocked({chatId,
-    isBlocked});
+  UpdateChatIsBlocked({this.chatId,
+    this.isBlocked});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -1070,8 +1070,8 @@ class UpdateChatIsBlocked extends Update {
 class UpdateChatHasScheduledMessages extends Update {
 
   /// A chat's has_scheduled_messages field has changed
-  UpdateChatHasScheduledMessages({chatId,
-    hasScheduledMessages});
+  UpdateChatHasScheduledMessages({this.chatId,
+    this.hasScheduledMessages});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -1107,8 +1107,8 @@ class UpdateChatHasScheduledMessages extends Update {
 class UpdateChatVoiceChat extends Update {
 
   /// A chat voice chat state has changed
-  UpdateChatVoiceChat({chatId,
-    voiceChat});
+  UpdateChatVoiceChat({this.chatId,
+    this.voiceChat});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -1144,8 +1144,8 @@ class UpdateChatVoiceChat extends Update {
 class UpdateChatDefaultDisableNotification extends Update {
 
   /// The value of the default disable_notification parameter, used when a message is sent to the chat, was changed
-  UpdateChatDefaultDisableNotification({chatId,
-    defaultDisableNotification});
+  UpdateChatDefaultDisableNotification({this.chatId,
+    this.defaultDisableNotification});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -1181,9 +1181,9 @@ class UpdateChatDefaultDisableNotification extends Update {
 class UpdateChatReadInbox extends Update {
 
   /// Incoming messages were read or number of unread messages has been changed
-  UpdateChatReadInbox({chatId,
-    lastReadInboxMessageId,
-    unreadCount});
+  UpdateChatReadInbox({this.chatId,
+    this.lastReadInboxMessageId,
+    this.unreadCount});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -1224,8 +1224,8 @@ class UpdateChatReadInbox extends Update {
 class UpdateChatReadOutbox extends Update {
 
   /// Outgoing messages were read
-  UpdateChatReadOutbox({chatId,
-    lastReadOutboxMessageId});
+  UpdateChatReadOutbox({this.chatId,
+    this.lastReadOutboxMessageId});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -1261,8 +1261,8 @@ class UpdateChatReadOutbox extends Update {
 class UpdateChatUnreadMentionCount extends Update {
 
   /// The chat unread_mention_count has changed
-  UpdateChatUnreadMentionCount({chatId,
-    unreadMentionCount});
+  UpdateChatUnreadMentionCount({this.chatId,
+    this.unreadMentionCount});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -1298,8 +1298,8 @@ class UpdateChatUnreadMentionCount extends Update {
 class UpdateChatNotificationSettings extends Update {
 
   /// Notification settings for a chat were changed
-  UpdateChatNotificationSettings({chatId,
-    notificationSettings});
+  UpdateChatNotificationSettings({this.chatId,
+    this.notificationSettings});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -1335,8 +1335,8 @@ class UpdateChatNotificationSettings extends Update {
 class UpdateScopeNotificationSettings extends Update {
 
   /// Notification settings for some type of chats were updated
-  UpdateScopeNotificationSettings({scope,
-    notificationSettings});
+  UpdateScopeNotificationSettings({this.scope,
+    this.notificationSettings});
 
   /// [scope] Types of chats for which notification settings were updated 
   NotificationSettingsScope? scope;
@@ -1372,8 +1372,8 @@ class UpdateScopeNotificationSettings extends Update {
 class UpdateChatMessageTtlSetting extends Update {
 
   /// The message Time To Live setting for a chat was changed
-  UpdateChatMessageTtlSetting({chatId,
-    messageTtlSetting});
+  UpdateChatMessageTtlSetting({this.chatId,
+    this.messageTtlSetting});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -1409,8 +1409,8 @@ class UpdateChatMessageTtlSetting extends Update {
 class UpdateChatActionBar extends Update {
 
   /// The chat action bar was changed
-  UpdateChatActionBar({chatId,
-    actionBar});
+  UpdateChatActionBar({this.chatId,
+    this.actionBar});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -1446,8 +1446,8 @@ class UpdateChatActionBar extends Update {
 class UpdateChatTheme extends Update {
 
   /// The chat theme was changed
-  UpdateChatTheme({chatId,
-    themeName});
+  UpdateChatTheme({this.chatId,
+    this.themeName});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -1483,8 +1483,8 @@ class UpdateChatTheme extends Update {
 class UpdateChatReplyMarkup extends Update {
 
   /// The default chat reply markup was changed. Can occur because new messages with reply markup were received or because an old reply markup was hidden by the user
-  UpdateChatReplyMarkup({chatId,
-    replyMarkupMessageId});
+  UpdateChatReplyMarkup({this.chatId,
+    this.replyMarkupMessageId});
 
   /// [chatId] Chat identifier
   int? chatId;
@@ -1520,9 +1520,9 @@ class UpdateChatReplyMarkup extends Update {
 class UpdateChatDraftMessage extends Update {
 
   /// A chat draft has changed. Be aware that the update may come in the currently opened chat but with old content of the draft. If the user has changed the content of the draft, this update mustn't be applied
-  UpdateChatDraftMessage({chatId,
-    draftMessage,
-    positions});
+  UpdateChatDraftMessage({this.chatId,
+    this.draftMessage,
+    this.positions});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -1563,7 +1563,7 @@ class UpdateChatDraftMessage extends Update {
 class UpdateChatFilters extends Update {
 
   /// The list of chat filters or a chat filter has changed
-  UpdateChatFilters({chatFilters});
+  UpdateChatFilters({this.chatFilters});
 
   /// [chatFilters] The new list of chat filters
   List<ChatFilterInfo>? chatFilters;
@@ -1594,8 +1594,8 @@ class UpdateChatFilters extends Update {
 class UpdateChatOnlineMemberCount extends Update {
 
   /// The number of online group members has changed. This update with non-zero count is sent only for currently opened chats. There is no guarantee that it will be sent just after the count has changed
-  UpdateChatOnlineMemberCount({chatId,
-    onlineMemberCount});
+  UpdateChatOnlineMemberCount({this.chatId,
+    this.onlineMemberCount});
 
   /// [chatId] Identifier of the chat 
   int? chatId;
@@ -1631,8 +1631,8 @@ class UpdateChatOnlineMemberCount extends Update {
 class UpdateNotification extends Update {
 
   /// A notification was changed
-  UpdateNotification({notificationGroupId,
-    notification});
+  UpdateNotification({this.notificationGroupId,
+    this.notification});
 
   /// [notificationGroupId] Unique notification group identifier 
   int? notificationGroupId;
@@ -1668,14 +1668,14 @@ class UpdateNotification extends Update {
 class UpdateNotificationGroup extends Update {
 
   /// A list of active notifications in a notification group has changed
-  UpdateNotificationGroup({notificationGroupId,
-    type,
-    chatId,
-    notificationSettingsChatId,
-    isSilent,
-    totalCount,
-    addedNotifications,
-    removedNotificationIds});
+  UpdateNotificationGroup({this.notificationGroupId,
+    this.type,
+    this.chatId,
+    this.notificationSettingsChatId,
+    this.isSilent,
+    this.totalCount,
+    this.addedNotifications,
+    this.removedNotificationIds});
 
   /// [notificationGroupId] Unique notification group identifier
   int? notificationGroupId;
@@ -1741,7 +1741,7 @@ class UpdateNotificationGroup extends Update {
 class UpdateActiveNotifications extends Update {
 
   /// Contains active notifications that was shown on previous application launches. This update is sent only if the message database is used. In that case it comes once before any updateNotification and updateNotificationGroup update
-  UpdateActiveNotifications({groups});
+  UpdateActiveNotifications({this.groups});
 
   /// [groups] Lists of active notification groups
   List<NotificationGroup>? groups;
@@ -1772,8 +1772,8 @@ class UpdateActiveNotifications extends Update {
 class UpdateHavePendingNotifications extends Update {
 
   /// Describes whether there are some pending notification updates. Can be used to prevent application from killing, while there are some pending notifications
-  UpdateHavePendingNotifications({haveDelayedNotifications,
-    haveUnreceivedNotifications});
+  UpdateHavePendingNotifications({this.haveDelayedNotifications,
+    this.haveUnreceivedNotifications});
 
   /// [haveDelayedNotifications] True, if there are some delayed notification updates, which will be sent soon
   bool? haveDelayedNotifications;
@@ -1809,10 +1809,10 @@ class UpdateHavePendingNotifications extends Update {
 class UpdateDeleteMessages extends Update {
 
   /// Some messages were deleted
-  UpdateDeleteMessages({chatId,
-    messageIds,
-    isPermanent,
-    fromCache});
+  UpdateDeleteMessages({this.chatId,
+    this.messageIds,
+    this.isPermanent,
+    this.fromCache});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -1858,10 +1858,10 @@ class UpdateDeleteMessages extends Update {
 class UpdateUserChatAction extends Update {
 
   /// User activity in the chat has changed
-  UpdateUserChatAction({chatId,
-    messageThreadId,
-    userId,
-    action});
+  UpdateUserChatAction({this.chatId,
+    this.messageThreadId,
+    this.userId,
+    this.action});
 
   /// [chatId] Chat identifier 
   int? chatId;
@@ -1907,8 +1907,8 @@ class UpdateUserChatAction extends Update {
 class UpdateUserStatus extends Update {
 
   /// The user went online or offline
-  UpdateUserStatus({userId,
-    status});
+  UpdateUserStatus({this.userId,
+    this.status});
 
   /// [userId] User identifier 
   int? userId;
@@ -1944,7 +1944,7 @@ class UpdateUserStatus extends Update {
 class UpdateUser extends Update {
 
   /// Some data of a user has changed. This update is guaranteed to come before the user identifier is returned to the application
-  UpdateUser({user});
+  UpdateUser({this.user});
 
   /// [user] New data about the user
   User? user;
@@ -1975,7 +1975,7 @@ class UpdateUser extends Update {
 class UpdateBasicGroup extends Update {
 
   /// Some data of a basic group has changed. This update is guaranteed to come before the basic group identifier is returned to the application
-  UpdateBasicGroup({basicGroup});
+  UpdateBasicGroup({this.basicGroup});
 
   /// [basicGroup] New data about the group
   BasicGroup? basicGroup;
@@ -2006,7 +2006,7 @@ class UpdateBasicGroup extends Update {
 class UpdateSupergroup extends Update {
 
   /// Some data of a supergroup or a channel has changed. This update is guaranteed to come before the supergroup identifier is returned to the application
-  UpdateSupergroup({supergroup});
+  UpdateSupergroup({this.supergroup});
 
   /// [supergroup] New data about the supergroup
   Supergroup? supergroup;
@@ -2037,7 +2037,7 @@ class UpdateSupergroup extends Update {
 class UpdateSecretChat extends Update {
 
   /// Some data of a secret chat has changed. This update is guaranteed to come before the secret chat identifier is returned to the application
-  UpdateSecretChat({secretChat});
+  UpdateSecretChat({this.secretChat});
 
   /// [secretChat] New data about the secret chat
   SecretChat? secretChat;
@@ -2068,8 +2068,8 @@ class UpdateSecretChat extends Update {
 class UpdateUserFullInfo extends Update {
 
   /// Some data from userFullInfo has been changed
-  UpdateUserFullInfo({userId,
-    userFullInfo});
+  UpdateUserFullInfo({this.userId,
+    this.userFullInfo});
 
   /// [userId] User identifier 
   int? userId;
@@ -2105,8 +2105,8 @@ class UpdateUserFullInfo extends Update {
 class UpdateBasicGroupFullInfo extends Update {
 
   /// Some data from basicGroupFullInfo has been changed
-  UpdateBasicGroupFullInfo({basicGroupId,
-    basicGroupFullInfo});
+  UpdateBasicGroupFullInfo({this.basicGroupId,
+    this.basicGroupFullInfo});
 
   /// [basicGroupId] Identifier of a basic group 
   int? basicGroupId;
@@ -2142,8 +2142,8 @@ class UpdateBasicGroupFullInfo extends Update {
 class UpdateSupergroupFullInfo extends Update {
 
   /// Some data from supergroupFullInfo has been changed
-  UpdateSupergroupFullInfo({supergroupId,
-    supergroupFullInfo});
+  UpdateSupergroupFullInfo({this.supergroupId,
+    this.supergroupFullInfo});
 
   /// [supergroupId] Identifier of the supergroup or channel 
   int? supergroupId;
@@ -2179,8 +2179,8 @@ class UpdateSupergroupFullInfo extends Update {
 class UpdateServiceNotification extends Update {
 
   /// Service notification from the server. Upon receiving this the application must show a popup with the content of the notification
-  UpdateServiceNotification({type,
-    content});
+  UpdateServiceNotification({this.type,
+    this.content});
 
   /// [type] Notification type. If type begins with "AUTH_KEY_DROP_", then two buttons "Cancel" and "Log out" must be shown under notification; if user presses the second, all local data must be destroyed using Destroy method
   String? type;
@@ -2216,7 +2216,7 @@ class UpdateServiceNotification extends Update {
 class UpdateFile extends Update {
 
   /// Information about a file was updated
-  UpdateFile({file});
+  UpdateFile({this.file});
 
   /// [file] New data about the file
   File? file;
@@ -2247,10 +2247,10 @@ class UpdateFile extends Update {
 class UpdateFileGenerationStart extends Update {
 
   /// The file generation process needs to be started by the application
-  UpdateFileGenerationStart({generationId,
-    originalPath,
-    destinationPath,
-    conversion});
+  UpdateFileGenerationStart({this.generationId,
+    this.originalPath,
+    this.destinationPath,
+    this.conversion});
 
   /// [generationId] Unique identifier for the generation process
   int? generationId;
@@ -2296,7 +2296,7 @@ class UpdateFileGenerationStart extends Update {
 class UpdateFileGenerationStop extends Update {
 
   /// File generation is no longer needed
-  UpdateFileGenerationStop({generationId});
+  UpdateFileGenerationStop({this.generationId});
 
   /// [generationId] Unique identifier for the generation process
   int? generationId;
@@ -2327,7 +2327,7 @@ class UpdateFileGenerationStop extends Update {
 class UpdateCall extends Update {
 
   /// New call was created or information about a call was updated
-  UpdateCall({call});
+  UpdateCall({this.call});
 
   /// [call] New data about a call
   Call? call;
@@ -2358,7 +2358,7 @@ class UpdateCall extends Update {
 class UpdateGroupCall extends Update {
 
   /// Information about a group call was updated
-  UpdateGroupCall({groupCall});
+  UpdateGroupCall({this.groupCall});
 
   /// [groupCall] New data about a group call
   GroupCall? groupCall;
@@ -2389,8 +2389,8 @@ class UpdateGroupCall extends Update {
 class UpdateGroupCallParticipant extends Update {
 
   /// Information about a group call participant was changed. The updates are sent only after the group call is received through getGroupCall and only if the call is joined or being joined
-  UpdateGroupCallParticipant({groupCallId,
-    participant});
+  UpdateGroupCallParticipant({this.groupCallId,
+    this.participant});
 
   /// [groupCallId] Identifier of group call
   int? groupCallId;
@@ -2426,8 +2426,8 @@ class UpdateGroupCallParticipant extends Update {
 class UpdateNewCallSignalingData extends Update {
 
   /// New call signaling data arrived
-  UpdateNewCallSignalingData({callId,
-    data});
+  UpdateNewCallSignalingData({this.callId,
+    this.data});
 
   /// [callId] The call identifier 
   int? callId;
@@ -2463,8 +2463,8 @@ class UpdateNewCallSignalingData extends Update {
 class UpdateUserPrivacySettingRules extends Update {
 
   /// Some privacy setting rules have been changed
-  UpdateUserPrivacySettingRules({setting,
-    rules});
+  UpdateUserPrivacySettingRules({this.setting,
+    this.rules});
 
   /// [setting] The privacy setting 
   UserPrivacySetting? setting;
@@ -2500,9 +2500,9 @@ class UpdateUserPrivacySettingRules extends Update {
 class UpdateUnreadMessageCount extends Update {
 
   /// Number of unread messages in a chat list has changed. This update is sent only if the message database is used
-  UpdateUnreadMessageCount({chatList,
-    unreadCount,
-    unreadUnmutedCount});
+  UpdateUnreadMessageCount({this.chatList,
+    this.unreadCount,
+    this.unreadUnmutedCount});
 
   /// [chatList] The chat list with changed number of unread messages
   ChatList? chatList;
@@ -2543,12 +2543,12 @@ class UpdateUnreadMessageCount extends Update {
 class UpdateUnreadChatCount extends Update {
 
   /// Number of unread chats, i.e. with unread messages or marked as unread, has changed. This update is sent only if the message database is used
-  UpdateUnreadChatCount({chatList,
-    totalCount,
-    unreadCount,
-    unreadUnmutedCount,
-    markedAsUnreadCount,
-    markedAsUnreadUnmutedCount});
+  UpdateUnreadChatCount({this.chatList,
+    this.totalCount,
+    this.unreadCount,
+    this.unreadUnmutedCount,
+    this.markedAsUnreadCount,
+    this.markedAsUnreadUnmutedCount});
 
   /// [chatList] The chat list with changed number of unread messages
   ChatList? chatList;
@@ -2604,8 +2604,8 @@ class UpdateUnreadChatCount extends Update {
 class UpdateOption extends Update {
 
   /// An option changed its value
-  UpdateOption({name,
-    value});
+  UpdateOption({this.name,
+    this.value});
 
   /// [name] The option name 
   String? name;
@@ -2641,7 +2641,7 @@ class UpdateOption extends Update {
 class UpdateStickerSet extends Update {
 
   /// A sticker set has changed
-  UpdateStickerSet({stickerSet});
+  UpdateStickerSet({this.stickerSet});
 
   /// [stickerSet] The sticker set
   StickerSet? stickerSet;
@@ -2672,8 +2672,8 @@ class UpdateStickerSet extends Update {
 class UpdateInstalledStickerSets extends Update {
 
   /// The list of installed sticker sets was updated
-  UpdateInstalledStickerSets({isMasks,
-    stickerSetIds});
+  UpdateInstalledStickerSets({this.isMasks,
+    this.stickerSetIds});
 
   /// [isMasks] True, if the list of installed mask sticker sets was updated 
   bool? isMasks;
@@ -2709,7 +2709,7 @@ class UpdateInstalledStickerSets extends Update {
 class UpdateTrendingStickerSets extends Update {
 
   /// The list of trending sticker sets was updated or some of them were viewed
-  UpdateTrendingStickerSets({stickerSets});
+  UpdateTrendingStickerSets({this.stickerSets});
 
   /// [stickerSets] The prefix of the list of trending sticker sets with the newest trending sticker sets
   StickerSets? stickerSets;
@@ -2740,8 +2740,8 @@ class UpdateTrendingStickerSets extends Update {
 class UpdateRecentStickers extends Update {
 
   /// The list of recently used stickers was updated
-  UpdateRecentStickers({isAttached,
-    stickerIds});
+  UpdateRecentStickers({this.isAttached,
+    this.stickerIds});
 
   /// [isAttached] True, if the list of stickers attached to photo or video files was updated, otherwise the list of sent stickers is updated 
   bool? isAttached;
@@ -2777,7 +2777,7 @@ class UpdateRecentStickers extends Update {
 class UpdateFavoriteStickers extends Update {
 
   /// The list of favorite stickers was updated
-  UpdateFavoriteStickers({stickerIds});
+  UpdateFavoriteStickers({this.stickerIds});
 
   /// [stickerIds] The new list of file identifiers of favorite stickers
   List<int>? stickerIds;
@@ -2808,7 +2808,7 @@ class UpdateFavoriteStickers extends Update {
 class UpdateSavedAnimations extends Update {
 
   /// The list of saved animations was updated
-  UpdateSavedAnimations({animationIds});
+  UpdateSavedAnimations({this.animationIds});
 
   /// [animationIds] The new list of file identifiers of saved animations
   List<int>? animationIds;
@@ -2839,8 +2839,8 @@ class UpdateSavedAnimations extends Update {
 class UpdateSelectedBackground extends Update {
 
   /// The selected background has changed
-  UpdateSelectedBackground({forDarkTheme,
-    background});
+  UpdateSelectedBackground({this.forDarkTheme,
+    this.background});
 
   /// [forDarkTheme] True, if background for dark theme has changed 
   bool? forDarkTheme;
@@ -2876,7 +2876,7 @@ class UpdateSelectedBackground extends Update {
 class UpdateChatThemes extends Update {
 
   /// The list of available chat themes has changed
-  UpdateChatThemes({chatThemes});
+  UpdateChatThemes({this.chatThemes});
 
   /// [chatThemes] The new list of chat themes
   List<ChatTheme>? chatThemes;
@@ -2907,9 +2907,9 @@ class UpdateChatThemes extends Update {
 class UpdateLanguagePackStrings extends Update {
 
   /// Some language pack strings have been updated
-  UpdateLanguagePackStrings({localizationTarget,
-    languagePackId,
-    strings});
+  UpdateLanguagePackStrings({this.localizationTarget,
+    this.languagePackId,
+    this.strings});
 
   /// [localizationTarget] Localization target to which the language pack belongs 
   String? localizationTarget;
@@ -2950,7 +2950,7 @@ class UpdateLanguagePackStrings extends Update {
 class UpdateConnectionState extends Update {
 
   /// The connection state has changed. This update must be used only to show a human-readable description of the connection state
-  UpdateConnectionState({state});
+  UpdateConnectionState({this.state});
 
   /// [state] The new connection state
   ConnectionState? state;
@@ -2981,8 +2981,8 @@ class UpdateConnectionState extends Update {
 class UpdateTermsOfService extends Update {
 
   /// New terms of service must be accepted by the user. If the terms of service are declined, then the deleteAccount method must be called with the reason "Decline ToS update"
-  UpdateTermsOfService({termsOfServiceId,
-    termsOfService});
+  UpdateTermsOfService({this.termsOfServiceId,
+    this.termsOfService});
 
   /// [termsOfServiceId] Identifier of the terms of service 
   String? termsOfServiceId;
@@ -3018,7 +3018,7 @@ class UpdateTermsOfService extends Update {
 class UpdateUsersNearby extends Update {
 
   /// The list of users nearby has changed. The update is guaranteed to be sent only 60 seconds after a successful searchChatsNearby request
-  UpdateUsersNearby({usersNearby});
+  UpdateUsersNearby({this.usersNearby});
 
   /// [usersNearby] The new list of users nearby
   List<ChatNearby>? usersNearby;
@@ -3049,7 +3049,7 @@ class UpdateUsersNearby extends Update {
 class UpdateDiceEmojis extends Update {
 
   /// The list of supported dice emojis has changed
-  UpdateDiceEmojis({emojis});
+  UpdateDiceEmojis({this.emojis});
 
   /// [emojis] The new list of supported dice emojis
   List<String>? emojis;
@@ -3080,9 +3080,9 @@ class UpdateDiceEmojis extends Update {
 class UpdateAnimatedEmojiMessageClicked extends Update {
 
   /// Some animated emoji message was clicked and a big animated sticker must be played if the message is visible on the screen. chatActionWatchingAnimations with the text of the message needs to be sent if the sticker is played
-  UpdateAnimatedEmojiMessageClicked({chatId,
-    messageId,
-    sticker});
+  UpdateAnimatedEmojiMessageClicked({this.chatId,
+    this.messageId,
+    this.sticker});
 
   /// [chatId] Chat identifier
   int? chatId;
@@ -3123,8 +3123,8 @@ class UpdateAnimatedEmojiMessageClicked extends Update {
 class UpdateAnimationSearchParameters extends Update {
 
   /// The parameters of animation search through GetOption("animation_search_bot_username") bot has changed
-  UpdateAnimationSearchParameters({provider,
-    emojis});
+  UpdateAnimationSearchParameters({this.provider,
+    this.emojis});
 
   /// [provider] Name of the animation search provider 
   String? provider;
@@ -3160,8 +3160,8 @@ class UpdateAnimationSearchParameters extends Update {
 class UpdateSuggestedActions extends Update {
 
   /// The list of suggested to the user actions has changed
-  UpdateSuggestedActions({addedActions,
-    removedActions});
+  UpdateSuggestedActions({this.addedActions,
+    this.removedActions});
 
   /// [addedActions] Added suggested actions 
   List<SuggestedAction>? addedActions;
@@ -3197,12 +3197,12 @@ class UpdateSuggestedActions extends Update {
 class UpdateNewInlineQuery extends Update {
 
   /// A new incoming inline query; for bots only
-  UpdateNewInlineQuery({id,
-    senderUserId,
-    userLocation,
-    chatType,
-    query,
-    offset});
+  UpdateNewInlineQuery({this.id,
+    this.senderUserId,
+    this.userLocation,
+    this.chatType,
+    this.query,
+    this.offset});
 
   /// [id] Unique query identifier 
   int? id;
@@ -3258,11 +3258,11 @@ class UpdateNewInlineQuery extends Update {
 class UpdateNewChosenInlineResult extends Update {
 
   /// The user has chosen a result of an inline query; for bots only
-  UpdateNewChosenInlineResult({senderUserId,
-    userLocation,
-    query,
-    resultId,
-    inlineMessageId});
+  UpdateNewChosenInlineResult({this.senderUserId,
+    this.userLocation,
+    this.query,
+    this.resultId,
+    this.inlineMessageId});
 
   /// [senderUserId] Identifier of the user who sent the query 
   int? senderUserId;
@@ -3313,12 +3313,12 @@ class UpdateNewChosenInlineResult extends Update {
 class UpdateNewCallbackQuery extends Update {
 
   /// A new incoming callback query; for bots only
-  UpdateNewCallbackQuery({id,
-    senderUserId,
-    chatId,
-    messageId,
-    chatInstance,
-    payload});
+  UpdateNewCallbackQuery({this.id,
+    this.senderUserId,
+    this.chatId,
+    this.messageId,
+    this.chatInstance,
+    this.payload});
 
   /// [id] Unique query identifier 
   int? id;
@@ -3374,11 +3374,11 @@ class UpdateNewCallbackQuery extends Update {
 class UpdateNewInlineCallbackQuery extends Update {
 
   /// A new incoming callback query from a message sent via a bot; for bots only
-  UpdateNewInlineCallbackQuery({id,
-    senderUserId,
-    inlineMessageId,
-    chatInstance,
-    payload});
+  UpdateNewInlineCallbackQuery({this.id,
+    this.senderUserId,
+    this.inlineMessageId,
+    this.chatInstance,
+    this.payload});
 
   /// [id] Unique query identifier 
   int? id;
@@ -3429,10 +3429,10 @@ class UpdateNewInlineCallbackQuery extends Update {
 class UpdateNewShippingQuery extends Update {
 
   /// A new incoming shipping query; for bots only. Only for invoices with flexible price
-  UpdateNewShippingQuery({id,
-    senderUserId,
-    invoicePayload,
-    shippingAddress});
+  UpdateNewShippingQuery({this.id,
+    this.senderUserId,
+    this.invoicePayload,
+    this.shippingAddress});
 
   /// [id] Unique query identifier 
   int? id;
@@ -3478,13 +3478,13 @@ class UpdateNewShippingQuery extends Update {
 class UpdateNewPreCheckoutQuery extends Update {
 
   /// A new incoming pre-checkout query; for bots only. Contains full information about a checkout
-  UpdateNewPreCheckoutQuery({id,
-    senderUserId,
-    currency,
-    totalAmount,
-    invoicePayload,
-    shippingOptionId,
-    orderInfo});
+  UpdateNewPreCheckoutQuery({this.id,
+    this.senderUserId,
+    this.currency,
+    this.totalAmount,
+    this.invoicePayload,
+    this.shippingOptionId,
+    this.orderInfo});
 
   /// [id] Unique query identifier 
   int? id;
@@ -3545,7 +3545,7 @@ class UpdateNewPreCheckoutQuery extends Update {
 class UpdateNewCustomEvent extends Update {
 
   /// A new incoming event; for bots only
-  UpdateNewCustomEvent({event});
+  UpdateNewCustomEvent({this.event});
 
   /// [event] A JSON-serialized event
   String? event;
@@ -3576,9 +3576,9 @@ class UpdateNewCustomEvent extends Update {
 class UpdateNewCustomQuery extends Update {
 
   /// A new incoming query; for bots only
-  UpdateNewCustomQuery({id,
-    data,
-    timeout});
+  UpdateNewCustomQuery({this.id,
+    this.data,
+    this.timeout});
 
   /// [id] The query identifier 
   int? id;
@@ -3619,7 +3619,7 @@ class UpdateNewCustomQuery extends Update {
 class UpdatePoll extends Update {
 
   /// A poll was updated; for bots only
-  UpdatePoll({poll});
+  UpdatePoll({this.poll});
 
   /// [poll] New data about the poll
   Poll? poll;
@@ -3650,9 +3650,9 @@ class UpdatePoll extends Update {
 class UpdatePollAnswer extends Update {
 
   /// A user changed the answer to a poll; for bots only
-  UpdatePollAnswer({pollId,
-    userId,
-    optionIds});
+  UpdatePollAnswer({this.pollId,
+    this.userId,
+    this.optionIds});
 
   /// [pollId] Unique poll identifier 
   int? pollId;
@@ -3693,12 +3693,12 @@ class UpdatePollAnswer extends Update {
 class UpdateChatMember extends Update {
 
   /// User rights changed in a chat; for bots only
-  UpdateChatMember({chatId,
-    actorUserId,
-    date,
-    inviteLink,
-    oldChatMember,
-    newChatMember});
+  UpdateChatMember({this.chatId,
+    this.actorUserId,
+    this.date,
+    this.inviteLink,
+    this.oldChatMember,
+    this.newChatMember});
 
   /// [chatId] Chat identifier 
   int? chatId;

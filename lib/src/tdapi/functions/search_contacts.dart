@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class SearchContacts extends TdFunction {
 
   /// Searches for the specified query in the first names, last names and usernames of the known user contacts
-  SearchContacts({query,
-    limit});
+  SearchContacts({this.query,
+    this.limit});
 
   /// [query] Query to search for; may be empty to return all contacts 
   String? query;

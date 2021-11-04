@@ -3,16 +3,16 @@ part of '../tdapi.dart';
 class PaymentForm extends TdObject {
 
   /// Contains information about an invoice payment form
-  PaymentForm({id,
-    invoice,
-    url,
-    sellerBotUserId,
-    paymentsProviderUserId,
-    paymentsProvider,
-    savedOrderInfo,
-    savedCredentials,
-    canSaveCredentials,
-    needPassword});
+  PaymentForm({this.id,
+    this.invoice,
+    this.url,
+    this.sellerBotUserId,
+    this.paymentsProviderUserId,
+    this.paymentsProvider,
+    this.savedOrderInfo,
+    this.savedCredentials,
+    this.canSaveCredentials,
+    this.needPassword});
 
   /// [id] The payment form identifier
   int? id;

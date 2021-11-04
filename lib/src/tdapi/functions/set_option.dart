@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class SetOption extends TdFunction {
 
   /// Sets the value of an option. (Check the list of available options on https://core.telegram.org/tdlib/options.) Only writable options can be set. Can be called before authorization
-  SetOption({name,
-    value});
+  SetOption({this.name,
+    this.value});
 
   /// [name] The name of the option
   String? name;

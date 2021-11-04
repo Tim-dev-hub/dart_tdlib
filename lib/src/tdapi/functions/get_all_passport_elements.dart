@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetAllPassportElements extends TdFunction {
 
   /// Returns all available Telegram Passport elements
-  GetAllPassportElements({password});
+  GetAllPassportElements({this.password});
 
   /// [password] Password of the current user
   String? password;

@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class TestCallVectorIntObject extends TdFunction {
 
   /// Returns the received vector of objects containing a number; for testing only. This is an offline method. Can be called before authorization
-  TestCallVectorIntObject({x});
+  TestCallVectorIntObject({this.x});
 
   /// [x] Vector of objects to return
   List<TestInt>? x;

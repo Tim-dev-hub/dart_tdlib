@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class ToggleGroupCallIsMyVideoPaused extends TdFunction {
 
   /// Toggles whether current user's video is paused
-  ToggleGroupCallIsMyVideoPaused({groupCallId,
-    isMyVideoPaused});
+  ToggleGroupCallIsMyVideoPaused({this.groupCallId,
+    this.isMyVideoPaused});
 
   /// [groupCallId] Group call identifier 
   int? groupCallId;

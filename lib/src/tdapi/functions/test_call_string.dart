@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class TestCallString extends TdFunction {
 
   /// Returns the received string; for testing only. This is an offline method. Can be called before authorization
-  TestCallString({x});
+  TestCallString({this.x});
 
   /// [x] String to return
   String? x;

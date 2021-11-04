@@ -36,7 +36,7 @@ class MessageSender extends TdObject {
 class MessageSenderUser extends MessageSender {
 
   /// The message was sent by a known user
-  MessageSenderUser({userId});
+  MessageSenderUser({this.userId});
 
   /// [userId] Identifier of the user that sent the message
   int? userId;
@@ -63,7 +63,7 @@ class MessageSenderUser extends MessageSender {
 class MessageSenderChat extends MessageSender {
 
   /// The message was sent on behalf of a chat
-  MessageSenderChat({chatId});
+  MessageSenderChat({this.chatId});
 
   /// [chatId] Identifier of the chat that sent the message
   int? chatId;

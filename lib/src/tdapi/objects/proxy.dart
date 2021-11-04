@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class Proxy extends TdObject {
 
   /// Contains information about a proxy server
-  Proxy({id,
-    server,
-    port,
-    lastUsedDate,
-    isEnabled,
-    type});
+  Proxy({this.id,
+    this.server,
+    this.port,
+    this.lastUsedDate,
+    this.isEnabled,
+    this.type});
 
   /// [id] Unique identifier of the proxy 
   int? id;

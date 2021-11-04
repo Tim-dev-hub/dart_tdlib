@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class MessageSenders extends TdObject {
 
   /// Represents a list of message senders
-  MessageSenders({totalCount,
-    senders});
+  MessageSenders({this.totalCount,
+    this.senders});
 
   /// [totalCount] Approximate total count of messages senders found 
   int? totalCount;

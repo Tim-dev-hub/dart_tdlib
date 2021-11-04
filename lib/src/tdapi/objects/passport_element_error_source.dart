@@ -80,7 +80,7 @@ class PassportElementErrorSourceUnspecified extends PassportElementErrorSource {
 class PassportElementErrorSourceDataField extends PassportElementErrorSource {
 
   /// One of the data fields contains an error. The error will be considered resolved when the value of the field changes
-  PassportElementErrorSourceDataField({fieldName});
+  PassportElementErrorSourceDataField({this.fieldName});
 
   /// [fieldName] Field name
   String? fieldName;
@@ -176,7 +176,7 @@ class PassportElementErrorSourceSelfie extends PassportElementErrorSource {
 class PassportElementErrorSourceTranslationFile extends PassportElementErrorSource {
 
   /// One of files with the translation of the document contains an error. The error will be considered resolved when the file changes
-  PassportElementErrorSourceTranslationFile({fileIndex});
+  PassportElementErrorSourceTranslationFile({this.fileIndex});
 
   /// [fileIndex] Index of a file with the error
   int? fileIndex;
@@ -226,7 +226,7 @@ class PassportElementErrorSourceTranslationFiles extends PassportElementErrorSou
 class PassportElementErrorSourceFile extends PassportElementErrorSource {
 
   /// The file contains an error. The error will be considered resolved when the file changes
-  PassportElementErrorSourceFile({fileIndex});
+  PassportElementErrorSourceFile({this.fileIndex});
 
   /// [fileIndex] Index of a file with the error
   int? fileIndex;

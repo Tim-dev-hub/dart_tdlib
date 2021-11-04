@@ -39,8 +39,8 @@ class ProxyType extends TdObject {
 class ProxyTypeSocks5 extends ProxyType {
 
   /// A SOCKS5 proxy server
-  ProxyTypeSocks5({username,
-    password});
+  ProxyTypeSocks5({this.username,
+    this.password});
 
   /// [username] Username for logging in; may be empty 
   String? username;
@@ -72,9 +72,9 @@ class ProxyTypeSocks5 extends ProxyType {
 class ProxyTypeHttp extends ProxyType {
 
   /// A HTTP transparent proxy server
-  ProxyTypeHttp({username,
-    password,
-    httpOnly});
+  ProxyTypeHttp({this.username,
+    this.password,
+    this.httpOnly});
 
   /// [username] Username for logging in; may be empty 
   String? username;
@@ -111,7 +111,7 @@ class ProxyTypeHttp extends ProxyType {
 class ProxyTypeMtproto extends ProxyType {
 
   /// An MTProto proxy server
-  ProxyTypeMtproto({secret});
+  ProxyTypeMtproto({this.secret});
 
   /// [secret] The proxy's secret in hexadecimal encoding
   String? secret;

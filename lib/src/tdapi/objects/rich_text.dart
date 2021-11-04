@@ -81,7 +81,7 @@ class RichText extends TdObject {
 class RichTextPlain extends RichText {
 
   /// A plain text
-  RichTextPlain({text});
+  RichTextPlain({this.text});
 
   /// [text] Text
   String? text;
@@ -108,7 +108,7 @@ class RichTextPlain extends RichText {
 class RichTextBold extends RichText {
 
   /// A bold rich text
-  RichTextBold({text});
+  RichTextBold({this.text});
 
   /// [text] Text
   RichText? text;
@@ -135,7 +135,7 @@ class RichTextBold extends RichText {
 class RichTextItalic extends RichText {
 
   /// An italicized rich text
-  RichTextItalic({text});
+  RichTextItalic({this.text});
 
   /// [text] Text
   RichText? text;
@@ -162,7 +162,7 @@ class RichTextItalic extends RichText {
 class RichTextUnderline extends RichText {
 
   /// An underlined rich text
-  RichTextUnderline({text});
+  RichTextUnderline({this.text});
 
   /// [text] Text
   RichText? text;
@@ -189,7 +189,7 @@ class RichTextUnderline extends RichText {
 class RichTextStrikethrough extends RichText {
 
   /// A strikethrough rich text
-  RichTextStrikethrough({text});
+  RichTextStrikethrough({this.text});
 
   /// [text] Text
   RichText? text;
@@ -216,7 +216,7 @@ class RichTextStrikethrough extends RichText {
 class RichTextFixed extends RichText {
 
   /// A fixed-width rich text
-  RichTextFixed({text});
+  RichTextFixed({this.text});
 
   /// [text] Text
   RichText? text;
@@ -243,9 +243,9 @@ class RichTextFixed extends RichText {
 class RichTextUrl extends RichText {
 
   /// A rich text URL link
-  RichTextUrl({text,
-    url,
-    isCached});
+  RichTextUrl({this.text,
+    this.url,
+    this.isCached});
 
   /// [text] Text 
   RichText? text;
@@ -282,8 +282,8 @@ class RichTextUrl extends RichText {
 class RichTextEmailAddress extends RichText {
 
   /// A rich text email link
-  RichTextEmailAddress({text,
-    emailAddress});
+  RichTextEmailAddress({this.text,
+    this.emailAddress});
 
   /// [text] Text 
   RichText? text;
@@ -315,7 +315,7 @@ class RichTextEmailAddress extends RichText {
 class RichTextSubscript extends RichText {
 
   /// A subscript rich text
-  RichTextSubscript({text});
+  RichTextSubscript({this.text});
 
   /// [text] Text
   RichText? text;
@@ -342,7 +342,7 @@ class RichTextSubscript extends RichText {
 class RichTextSuperscript extends RichText {
 
   /// A superscript rich text
-  RichTextSuperscript({text});
+  RichTextSuperscript({this.text});
 
   /// [text] Text
   RichText? text;
@@ -369,7 +369,7 @@ class RichTextSuperscript extends RichText {
 class RichTextMarked extends RichText {
 
   /// A marked rich text
-  RichTextMarked({text});
+  RichTextMarked({this.text});
 
   /// [text] Text
   RichText? text;
@@ -396,8 +396,8 @@ class RichTextMarked extends RichText {
 class RichTextPhoneNumber extends RichText {
 
   /// A rich text phone number
-  RichTextPhoneNumber({text,
-    phoneNumber});
+  RichTextPhoneNumber({this.text,
+    this.phoneNumber});
 
   /// [text] Text 
   RichText? text;
@@ -429,9 +429,9 @@ class RichTextPhoneNumber extends RichText {
 class RichTextIcon extends RichText {
 
   /// A small image inside the text
-  RichTextIcon({document,
-    width,
-    height});
+  RichTextIcon({this.document,
+    this.width,
+    this.height});
 
   /// [document] The image represented as a document. The image can be in GIF, JPEG or PNG format
   Document? document;
@@ -468,9 +468,9 @@ class RichTextIcon extends RichText {
 class RichTextReference extends RichText {
 
   /// A reference to a richTexts object on the same web page
-  RichTextReference({text,
-    anchorName,
-    url});
+  RichTextReference({this.text,
+    this.anchorName,
+    this.url});
 
   /// [text] The text 
   RichText? text;
@@ -507,7 +507,7 @@ class RichTextReference extends RichText {
 class RichTextAnchor extends RichText {
 
   /// An anchor
-  RichTextAnchor({name});
+  RichTextAnchor({this.name});
 
   /// [name] Anchor name
   String? name;
@@ -534,9 +534,9 @@ class RichTextAnchor extends RichText {
 class RichTextAnchorLink extends RichText {
 
   /// A link to an anchor on the same web page
-  RichTextAnchorLink({text,
-    anchorName,
-    url});
+  RichTextAnchorLink({this.text,
+    this.anchorName,
+    this.url});
 
   /// [text] The link text 
   RichText? text;
@@ -573,7 +573,7 @@ class RichTextAnchorLink extends RichText {
 class RichTexts extends RichText {
 
   /// A concatenation of rich texts
-  RichTexts({texts});
+  RichTexts({this.texts});
 
   /// [texts] Texts
   List<RichText>? texts;

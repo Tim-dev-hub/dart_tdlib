@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GetMessageLocally extends TdFunction {
 
   /// Returns information about a message, if it is available locally without sending network request. This is an offline request
-  GetMessageLocally({chatId,
-    messageId});
+  GetMessageLocally({this.chatId,
+    this.messageId});
 
   /// [chatId] Identifier of the chat the message belongs to 
   int? chatId;

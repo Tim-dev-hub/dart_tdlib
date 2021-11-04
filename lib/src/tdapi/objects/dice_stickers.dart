@@ -36,7 +36,7 @@ class DiceStickers extends TdObject {
 class DiceStickersRegular extends DiceStickers {
 
   /// A regular animated sticker
-  DiceStickersRegular({sticker});
+  DiceStickersRegular({this.sticker});
 
   /// [sticker] The animated sticker with the dice animation
   Sticker? sticker;
@@ -63,11 +63,11 @@ class DiceStickersRegular extends DiceStickers {
 class DiceStickersSlotMachine extends DiceStickers {
 
   /// Animated stickers to be combined into a slot machine
-  DiceStickersSlotMachine({background,
-    lever,
-    leftReel,
-    centerReel,
-    rightReel});
+  DiceStickersSlotMachine({this.background,
+    this.lever,
+    this.leftReel,
+    this.centerReel,
+    this.rightReel});
 
   /// [background] The animated sticker with the slot machine background. The background animation must start playing after all reel animations finish
   Sticker? background;

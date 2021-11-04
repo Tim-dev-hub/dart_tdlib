@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class CheckChangePhoneNumberCode extends TdFunction {
 
   /// Checks the authentication code sent to confirm a new phone number of the user
-  CheckChangePhoneNumberCode({code});
+  CheckChangePhoneNumberCode({this.code});
 
   /// [code] Verification code received by SMS, phone call or flash call
   String? code;

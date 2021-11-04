@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class SendPhoneNumberConfirmationCode extends TdFunction {
 
   /// Sends phone number confirmation code to handle links of the type internalLinkTypePhoneNumberConfirmation
-  SendPhoneNumberConfirmationCode({hash,
-    phoneNumber,
-    settings});
+  SendPhoneNumberConfirmationCode({this.hash,
+    this.phoneNumber,
+    this.settings});
 
   /// [hash] Hash value from the link 
   String? hash;

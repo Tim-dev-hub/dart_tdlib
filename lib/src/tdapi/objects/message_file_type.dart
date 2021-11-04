@@ -39,7 +39,7 @@ class MessageFileType extends TdObject {
 class MessageFileTypePrivate extends MessageFileType {
 
   /// The messages was exported from a private chat
-  MessageFileTypePrivate({name});
+  MessageFileTypePrivate({this.name});
 
   /// [name] Name of the other party; may be empty if unrecognized
   String? name;
@@ -70,7 +70,7 @@ class MessageFileTypePrivate extends MessageFileType {
 class MessageFileTypeGroup extends MessageFileType {
 
   /// The messages was exported from a group chat
-  MessageFileTypeGroup({title});
+  MessageFileTypeGroup({this.title});
 
   /// [title] Title of the group chat; may be empty if unrecognized
   String? title;

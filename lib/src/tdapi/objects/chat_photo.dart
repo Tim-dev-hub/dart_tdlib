@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class ChatPhoto extends TdObject {
 
   /// Describes a chat or user profile photo
-  ChatPhoto({id,
-    addedDate,
-    minithumbnail,
-    sizes,
-    animation});
+  ChatPhoto({this.id,
+    this.addedDate,
+    this.minithumbnail,
+    this.sizes,
+    this.animation});
 
   /// [id] Unique photo identifier
   int? id;

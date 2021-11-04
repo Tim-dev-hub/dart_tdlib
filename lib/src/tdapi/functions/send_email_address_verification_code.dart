@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class SendEmailAddressVerificationCode extends TdFunction {
 
   /// Sends a code to verify an email address to be added to a user's Telegram Passport
-  SendEmailAddressVerificationCode({emailAddress});
+  SendEmailAddressVerificationCode({this.emailAddress});
 
   /// [emailAddress] Email address
   String? emailAddress;

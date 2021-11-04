@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class RegisterUser extends TdFunction {
 
   /// Finishes user registration. Works only when the current authorization state is authorizationStateWaitRegistration
-  RegisterUser({firstName,
-    lastName});
+  RegisterUser({this.firstName,
+    this.lastName});
 
   /// [firstName] The first name of the user; 1-64 characters
   String? firstName;

@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class EditMessageCaption extends TdFunction {
 
   /// Edits the message content caption. Returns the edited message after the edit is completed on the server side
-  EditMessageCaption({chatId,
-    messageId,
-    replyMarkup,
-    caption});
+  EditMessageCaption({this.chatId,
+    this.messageId,
+    this.replyMarkup,
+    this.caption});
 
   /// [chatId] The chat the message belongs to
   int? chatId;

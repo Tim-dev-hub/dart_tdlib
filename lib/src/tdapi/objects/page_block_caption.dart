@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class PageBlockCaption extends TdObject {
 
   /// Contains a caption of an instant view web page block, consisting of a text and a trailing credit
-  PageBlockCaption({text,
-    credit});
+  PageBlockCaption({this.text,
+    this.credit});
 
   /// [text] Content of the caption 
   RichText? text;

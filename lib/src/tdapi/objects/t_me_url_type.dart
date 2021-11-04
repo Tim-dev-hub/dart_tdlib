@@ -42,7 +42,7 @@ class TMeUrlType extends TdObject {
 class TMeUrlTypeUser extends TMeUrlType {
 
   /// A URL linking to a user
-  TMeUrlTypeUser({userId});
+  TMeUrlTypeUser({this.userId});
 
   /// [userId] Identifier of the user
   int? userId;
@@ -69,7 +69,7 @@ class TMeUrlTypeUser extends TMeUrlType {
 class TMeUrlTypeSupergroup extends TMeUrlType {
 
   /// A URL linking to a public supergroup or channel
-  TMeUrlTypeSupergroup({supergroupId});
+  TMeUrlTypeSupergroup({this.supergroupId});
 
   /// [supergroupId] Identifier of the supergroup or channel
   int? supergroupId;
@@ -96,7 +96,7 @@ class TMeUrlTypeSupergroup extends TMeUrlType {
 class TMeUrlTypeChatInvite extends TMeUrlType {
 
   /// A chat invite link
-  TMeUrlTypeChatInvite({info});
+  TMeUrlTypeChatInvite({this.info});
 
   /// [info] Chat invite link info
   ChatInviteLinkInfo? info;
@@ -123,7 +123,7 @@ class TMeUrlTypeChatInvite extends TMeUrlType {
 class TMeUrlTypeStickerSet extends TMeUrlType {
 
   /// A URL linking to a sticker set
-  TMeUrlTypeStickerSet({stickerSetId});
+  TMeUrlTypeStickerSet({this.stickerSetId});
 
   /// [stickerSetId] Identifier of the sticker set
   int? stickerSetId;

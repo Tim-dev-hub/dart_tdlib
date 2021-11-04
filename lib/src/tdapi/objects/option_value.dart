@@ -42,7 +42,7 @@ class OptionValue extends TdObject {
 class OptionValueBoolean extends OptionValue {
 
   /// Represents a boolean option
-  OptionValueBoolean({value});
+  OptionValueBoolean({this.value});
 
   /// [value] The value of the option
   bool? value;
@@ -99,7 +99,7 @@ class OptionValueEmpty extends OptionValue {
 class OptionValueInteger extends OptionValue {
 
   /// Represents an integer option
-  OptionValueInteger({value});
+  OptionValueInteger({this.value});
 
   /// [value] The value of the option
   int? value;
@@ -130,7 +130,7 @@ class OptionValueInteger extends OptionValue {
 class OptionValueString extends OptionValue {
 
   /// Represents a string option
-  OptionValueString({value});
+  OptionValueString({this.value});
 
   /// [value] The value of the option
   String? value;

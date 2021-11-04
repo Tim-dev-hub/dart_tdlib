@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class SetName extends TdFunction {
 
   /// Changes the first and last name of the current user
-  SetName({firstName,
-    lastName});
+  SetName({this.firstName,
+    this.lastName});
 
   /// [firstName] The new value of the first name for the current user; 1-64 characters 
   String? firstName;

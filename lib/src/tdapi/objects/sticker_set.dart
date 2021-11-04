@@ -3,19 +3,19 @@ part of '../tdapi.dart';
 class StickerSet extends TdObject {
 
   /// Represents a sticker set
-  StickerSet({id,
-    title,
-    name,
-    thumbnail,
-    thumbnailOutline,
-    isInstalled,
-    isArchived,
-    isOfficial,
-    isAnimated,
-    isMasks,
-    isViewed,
-    stickers,
-    emojis});
+  StickerSet({this.id,
+    this.title,
+    this.name,
+    this.thumbnail,
+    this.thumbnailOutline,
+    this.isInstalled,
+    this.isArchived,
+    this.isOfficial,
+    this.isAnimated,
+    this.isMasks,
+    this.isViewed,
+    this.stickers,
+    this.emojis});
 
   /// [id] Identifier of the sticker set
   int? id;

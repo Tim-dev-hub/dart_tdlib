@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class ChatLists extends TdObject {
 
   /// Contains a list of chat lists
-  ChatLists({chatLists});
+  ChatLists({this.chatLists});
 
   /// [chatLists] List of chat lists
   List<ChatList>? chatLists;

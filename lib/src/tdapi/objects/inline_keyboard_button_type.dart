@@ -51,7 +51,7 @@ class InlineKeyboardButtonType extends TdObject {
 class InlineKeyboardButtonTypeUrl extends InlineKeyboardButtonType {
 
   /// A button that opens a specified URL
-  InlineKeyboardButtonTypeUrl({url});
+  InlineKeyboardButtonTypeUrl({this.url});
 
   /// [url] HTTP or tg:// URL to open
   String? url;
@@ -78,9 +78,9 @@ class InlineKeyboardButtonTypeUrl extends InlineKeyboardButtonType {
 class InlineKeyboardButtonTypeLoginUrl extends InlineKeyboardButtonType {
 
   /// A button that opens a specified URL and automatically authorize the current user if allowed to do so
-  InlineKeyboardButtonTypeLoginUrl({url,
-    id,
-    forwardText});
+  InlineKeyboardButtonTypeLoginUrl({this.url,
+    this.id,
+    this.forwardText});
 
   /// [url] An HTTP URL to open 
   String? url;
@@ -117,7 +117,7 @@ class InlineKeyboardButtonTypeLoginUrl extends InlineKeyboardButtonType {
 class InlineKeyboardButtonTypeCallback extends InlineKeyboardButtonType {
 
   /// A button that sends a callback query to a bot
-  InlineKeyboardButtonTypeCallback({data});
+  InlineKeyboardButtonTypeCallback({this.data});
 
   /// [data] Data to be sent to the bot via a callback query
   String? data;
@@ -144,7 +144,7 @@ class InlineKeyboardButtonTypeCallback extends InlineKeyboardButtonType {
 class InlineKeyboardButtonTypeCallbackWithPassword extends InlineKeyboardButtonType {
 
   /// A button that asks for password of the current user and then sends a callback query to a bot
-  InlineKeyboardButtonTypeCallbackWithPassword({data});
+  InlineKeyboardButtonTypeCallbackWithPassword({this.data});
 
   /// [data] Data to be sent to the bot via a callback query
   String? data;
@@ -194,8 +194,8 @@ class InlineKeyboardButtonTypeCallbackGame extends InlineKeyboardButtonType {
 class InlineKeyboardButtonTypeSwitchInline extends InlineKeyboardButtonType {
 
   /// A button that forces an inline query to the bot to be inserted in the input field
-  InlineKeyboardButtonTypeSwitchInline({query,
-    inCurrentChat});
+  InlineKeyboardButtonTypeSwitchInline({this.query,
+    this.inCurrentChat});
 
   /// [query] Inline query to be sent to the bot 
   String? query;

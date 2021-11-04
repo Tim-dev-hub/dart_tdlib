@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class Background extends TdObject {
 
   /// Describes a chat background
-  Background({id,
-    isDefault,
-    isDark,
-    name,
-    document,
-    type});
+  Background({this.id,
+    this.isDefault,
+    this.isDark,
+    this.name,
+    this.document,
+    this.type});
 
   /// [id] Unique background identifier
   int? id;

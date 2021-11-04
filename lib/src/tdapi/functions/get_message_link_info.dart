@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetMessageLinkInfo extends TdFunction {
 
   /// Returns information about a public or private message link. Can be called for any internal link of the type internalLinkTypeMessage
-  GetMessageLinkInfo({url});
+  GetMessageLinkInfo({this.url});
 
   /// [url] The message link
   String? url;

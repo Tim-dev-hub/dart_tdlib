@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class ChatTheme extends TdObject {
 
   /// Describes a chat theme
-  ChatTheme({name,
-    lightSettings,
-    darkSettings});
+  ChatTheme({this.name,
+    this.lightSettings,
+    this.darkSettings});
 
   /// [name] Theme name
   String? name;

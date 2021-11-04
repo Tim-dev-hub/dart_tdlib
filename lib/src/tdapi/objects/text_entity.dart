@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class TextEntity extends TdObject {
 
   /// Represents a part of the text that needs to be formatted in some unusual way
-  TextEntity({offset,
-    length,
-    type});
+  TextEntity({this.offset,
+    this.length,
+    this.type});
 
   /// [offset] Offset of the entity, in UTF-16 code units 
   int? offset;

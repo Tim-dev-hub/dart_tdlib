@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class EditInlineMessageReplyMarkup extends TdFunction {
 
   /// Edits the reply markup of an inline message sent via a bot; for bots only
-  EditInlineMessageReplyMarkup({inlineMessageId,
-    replyMarkup});
+  EditInlineMessageReplyMarkup({this.inlineMessageId,
+    this.replyMarkup});
 
   /// [inlineMessageId] Inline message identifier
   String? inlineMessageId;

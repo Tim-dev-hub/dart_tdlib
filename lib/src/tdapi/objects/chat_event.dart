@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class ChatEvent extends TdObject {
 
   /// Represents a chat event
-  ChatEvent({id,
-    date,
-    userId,
-    action});
+  ChatEvent({this.id,
+    this.date,
+    this.userId,
+    this.action});
 
   /// [id] Chat event identifier 
   int? id;

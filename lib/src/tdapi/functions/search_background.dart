@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class SearchBackground extends TdFunction {
 
   /// Searches for a background by its name
-  SearchBackground({name});
+  SearchBackground({this.name});
 
   /// [name] The name of the background
   String? name;

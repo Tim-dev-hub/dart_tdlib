@@ -3,27 +3,27 @@ part of '../tdapi.dart';
 class WebPage extends TdObject {
 
   /// Describes a web page preview
-  WebPage({url,
-    displayUrl,
-    type,
-    siteName,
-    title,
-    description,
-    photo,
-    embedUrl,
-    embedType,
-    embedWidth,
-    embedHeight,
-    duration,
-    author,
-    animation,
-    audio,
-    document,
-    sticker,
-    video,
-    videoNote,
-    voiceNote,
-    instantViewVersion});
+  WebPage({this.url,
+    this.displayUrl,
+    this.type,
+    this.siteName,
+    this.title,
+    this.description,
+    this.photo,
+    this.embedUrl,
+    this.embedType,
+    this.embedWidth,
+    this.embedHeight,
+    this.duration,
+    this.author,
+    this.animation,
+    this.audio,
+    this.document,
+    this.sticker,
+    this.video,
+    this.videoNote,
+    this.voiceNote,
+    this.instantViewVersion});
 
   /// [url] Original URL of the link
   String? url;

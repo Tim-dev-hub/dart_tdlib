@@ -36,7 +36,7 @@ class InputBackground extends TdObject {
 class InputBackgroundLocal extends InputBackground {
 
   /// A background from a local file
-  InputBackgroundLocal({background});
+  InputBackgroundLocal({this.background});
 
   /// [background] Background file to use. Only inputFileLocal and inputFileGenerated are supported. The file must be in JPEG format for wallpapers and in PNG format for patterns
   InputFile? background;
@@ -63,7 +63,7 @@ class InputBackgroundLocal extends InputBackground {
 class InputBackgroundRemote extends InputBackground {
 
   /// A background from the server
-  InputBackgroundRemote({backgroundId});
+  InputBackgroundRemote({this.backgroundId});
 
   /// [backgroundId] The background identifier
   int? backgroundId;

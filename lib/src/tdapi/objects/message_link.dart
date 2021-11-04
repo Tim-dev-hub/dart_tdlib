@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class MessageLink extends TdObject {
 
   /// Contains an HTTPS link to a message in a supergroup or channel
-  MessageLink({link,
-    isPublic});
+  MessageLink({this.link,
+    this.isPublic});
 
   /// [link] Message link 
   String? link;

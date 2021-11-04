@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class BlockMessageSenderFromReplies extends TdFunction {
 
   /// Blocks an original sender of a message in the Replies chat
-  BlockMessageSenderFromReplies({messageId,
-    deleteMessage,
-    deleteAllMessages,
-    reportSpam});
+  BlockMessageSenderFromReplies({this.messageId,
+    this.deleteMessage,
+    this.deleteAllMessages,
+    this.reportSpam});
 
   /// [messageId] The identifier of an incoming message in the Replies chat
   int? messageId;

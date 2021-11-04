@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetSupergroupFullInfo extends TdFunction {
 
   /// Returns full information about a supergroup or a channel by its identifier, cached for up to 1 minute
-  GetSupergroupFullInfo({supergroupId});
+  GetSupergroupFullInfo({this.supergroupId});
 
   /// [supergroupId] Supergroup or channel identifier
   int? supergroupId;

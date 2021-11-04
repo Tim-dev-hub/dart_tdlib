@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class GetChatMessageCount extends TdFunction {
 
   /// Returns approximate number of messages of the specified type in the chat
-  GetChatMessageCount({chatId,
-    filter,
-    returnLocal});
+  GetChatMessageCount({this.chatId,
+    this.filter,
+    this.returnLocal});
 
   /// [chatId] Identifier of the chat in which to count messages 
   int? chatId;

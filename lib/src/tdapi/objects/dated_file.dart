@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class DatedFile extends TdObject {
 
   /// File with the date it was uploaded
-  DatedFile({file,
-    date});
+  DatedFile({this.file,
+    this.date});
 
   /// [file] The file 
   File? file;

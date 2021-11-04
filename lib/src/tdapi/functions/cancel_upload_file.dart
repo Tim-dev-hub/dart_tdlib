@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class CancelUploadFile extends TdFunction {
 
   /// Stops the uploading of a file. Supported only for files uploaded by using uploadFile. For other files the behavior is undefined
-  CancelUploadFile({fileId});
+  CancelUploadFile({this.fileId});
 
   /// [fileId] Identifier of the file to stop uploading
   int? fileId;

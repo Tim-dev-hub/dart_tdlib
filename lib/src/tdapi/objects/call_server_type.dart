@@ -36,7 +36,7 @@ class CallServerType extends TdObject {
 class CallServerTypeTelegramReflector extends CallServerType {
 
   /// A Telegram call reflector
-  CallServerTypeTelegramReflector({peerTag});
+  CallServerTypeTelegramReflector({this.peerTag});
 
   /// [peerTag] A peer tag to be used with the reflector
   String? peerTag;
@@ -63,10 +63,10 @@ class CallServerTypeTelegramReflector extends CallServerType {
 class CallServerTypeWebrtc extends CallServerType {
 
   /// A WebRTC server
-  CallServerTypeWebrtc({username,
-    password,
-    supportsTurn,
-    supportsStun});
+  CallServerTypeWebrtc({this.username,
+    this.password,
+    this.supportsTurn,
+    this.supportsStun});
 
   /// [username] Username to be used for authentication 
   String? username;

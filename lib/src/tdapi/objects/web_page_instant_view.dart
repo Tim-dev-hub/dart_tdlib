@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class WebPageInstantView extends TdObject {
 
   /// Describes an instant view page for a web page
-  WebPageInstantView({pageBlocks,
-    viewCount,
-    version,
-    isRtl,
-    isFull,
-    feedbackLink});
+  WebPageInstantView({this.pageBlocks,
+    this.viewCount,
+    this.version,
+    this.isRtl,
+    this.isFull,
+    this.feedbackLink});
 
   /// [pageBlocks] Content of the web page
   List<PageBlock>? pageBlocks;

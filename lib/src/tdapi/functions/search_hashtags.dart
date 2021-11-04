@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class SearchHashtags extends TdFunction {
 
   /// Searches for recently used hashtags by their prefix
-  SearchHashtags({prefix,
-    limit});
+  SearchHashtags({this.prefix,
+    this.limit});
 
   /// [prefix] Hashtag prefix to search for 
   String? prefix;

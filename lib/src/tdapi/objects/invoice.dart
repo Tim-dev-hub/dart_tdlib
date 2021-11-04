@@ -3,18 +3,18 @@ part of '../tdapi.dart';
 class Invoice extends TdObject {
 
   /// Product invoice
-  Invoice({currency,
-    priceParts,
-    maxTipAmount,
-    suggestedTipAmounts,
-    isTest,
-    needName,
-    needPhoneNumber,
-    needEmailAddress,
-    needShippingAddress,
-    sendPhoneNumberToProvider,
-    sendEmailAddressToProvider,
-    isFlexible});
+  Invoice({this.currency,
+    this.priceParts,
+    this.maxTipAmount,
+    this.suggestedTipAmounts,
+    this.isTest,
+    this.needName,
+    this.needPhoneNumber,
+    this.needEmailAddress,
+    this.needShippingAddress,
+    this.sendPhoneNumberToProvider,
+    this.sendEmailAddressToProvider,
+    this.isFlexible});
 
   /// [currency] ISO 4217 currency code
   String? currency;

@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class TestSquareInt extends TdFunction {
 
   /// Returns the squared received number; for testing only. This is an offline method. Can be called before authorization
-  TestSquareInt({x});
+  TestSquareInt({this.x});
 
   /// [x] Number to square
   int? x;

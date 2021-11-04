@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class Notification extends TdObject {
 
   /// Contains information about a notification
-  Notification({id,
-    date,
-    isSilent,
-    type});
+  Notification({this.id,
+    this.date,
+    this.isSilent,
+    this.type});
 
   /// [id] Unique persistent identifier of this notification 
   int? id;

@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GetSuggestedFileName extends TdFunction {
 
   /// Returns suggested name for saving a file in a given directory
-  GetSuggestedFileName({fileId,
-    directory});
+  GetSuggestedFileName({this.fileId,
+    this.directory});
 
   /// [fileId] Identifier of the file 
   int? fileId;

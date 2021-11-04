@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class StartScheduledGroupCall extends TdFunction {
 
   /// Starts a scheduled group call
-  StartScheduledGroupCall({groupCallId});
+  StartScheduledGroupCall({this.groupCallId});
 
   /// [groupCallId] Group call identifier
   int? groupCallId;

@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class MessageCopyOptions extends TdObject {
 
   /// Options to be used when a message content is copied without reference to the original sender. Service messages and messageInvoice can't be copied
-  MessageCopyOptions({sendCopy,
-    replaceCaption,
-    newCaption});
+  MessageCopyOptions({this.sendCopy,
+    this.replaceCaption,
+    this.newCaption});
 
   /// [sendCopy] True, if content of the message needs to be copied without reference to the original sender. Always true if the message is forwarded to a secret chat or is local
   bool? sendCopy;

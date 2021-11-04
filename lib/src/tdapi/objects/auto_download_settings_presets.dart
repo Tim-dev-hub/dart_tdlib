@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class AutoDownloadSettingsPresets extends TdObject {
 
   /// Contains auto-download settings presets for the current user
-  AutoDownloadSettingsPresets({low,
-    medium,
-    high});
+  AutoDownloadSettingsPresets({this.low,
+    this.medium,
+    this.high});
 
   /// [low] Preset with lowest settings; supposed to be used by default when roaming
   AutoDownloadSettings? low;

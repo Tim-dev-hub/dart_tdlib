@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class DiscardGroupCall extends TdFunction {
 
   /// Discards a group call. Requires groupCall.can_be_managed
-  DiscardGroupCall({groupCallId});
+  DiscardGroupCall({this.groupCallId});
 
   /// [groupCallId] Group call identifier
   int? groupCallId;

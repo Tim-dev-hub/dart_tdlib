@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class PhotoSize extends TdObject {
 
   /// Describes an image in JPEG format
-  PhotoSize({type,
-    photo,
-    width,
-    height,
-    progressiveSizes});
+  PhotoSize({this.type,
+    this.photo,
+    this.width,
+    this.height,
+    this.progressiveSizes});
 
   /// [type] Image type (see https://core.telegram.org/constructor/photoSize)
   String? type;

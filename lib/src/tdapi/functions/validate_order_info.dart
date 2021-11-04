@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class ValidateOrderInfo extends TdFunction {
 
   /// Validates the order information provided by a user and returns the available shipping options for a flexible invoice
-  ValidateOrderInfo({chatId,
-    messageId,
-    orderInfo,
-    allowSave});
+  ValidateOrderInfo({this.chatId,
+    this.messageId,
+    this.orderInfo,
+    this.allowSave});
 
   /// [chatId] Chat identifier of the Invoice message
   int? chatId;

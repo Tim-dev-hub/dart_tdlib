@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class PageBlockRelatedArticle extends TdObject {
 
   /// Contains information about a related article
-  PageBlockRelatedArticle({url,
-    title,
-    description,
-    photo,
-    author,
-    publishDate});
+  PageBlockRelatedArticle({this.url,
+    this.title,
+    this.description,
+    this.photo,
+    this.author,
+    this.publishDate});
 
   /// [url] Related article URL 
   String? url;

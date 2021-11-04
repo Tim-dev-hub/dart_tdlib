@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class InviteGroupCallParticipants extends TdFunction {
 
   /// Invites users to an active group call. Sends a service message of type messageInviteToGroupCall for voice chats
-  InviteGroupCallParticipants({groupCallId,
-    userIds});
+  InviteGroupCallParticipants({this.groupCallId,
+    this.userIds});
 
   /// [groupCallId] Group call identifier
   int? groupCallId;

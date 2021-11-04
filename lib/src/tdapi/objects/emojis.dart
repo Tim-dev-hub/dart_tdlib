@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class Emojis extends TdObject {
 
   /// Represents a list of emoji
-  Emojis({emojis});
+  Emojis({this.emojis});
 
   /// [emojis] List of emojis
   List<String>? emojis;

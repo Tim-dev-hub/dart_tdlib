@@ -42,7 +42,7 @@ class NotificationType extends TdObject {
 class NotificationTypeNewMessage extends NotificationType {
 
   /// New message was received
-  NotificationTypeNewMessage({message});
+  NotificationTypeNewMessage({this.message});
 
   /// [message] The message
   Message? message;
@@ -92,7 +92,7 @@ class NotificationTypeNewSecretChat extends NotificationType {
 class NotificationTypeNewCall extends NotificationType {
 
   /// New call was received
-  NotificationTypeNewCall({callId});
+  NotificationTypeNewCall({this.callId});
 
   /// [callId] Call identifier
   int? callId;
@@ -119,11 +119,11 @@ class NotificationTypeNewCall extends NotificationType {
 class NotificationTypeNewPushMessage extends NotificationType {
 
   /// New message was received through a push notification
-  NotificationTypeNewPushMessage({messageId,
-    sender,
-    senderName,
-    isOutgoing,
-    content});
+  NotificationTypeNewPushMessage({this.messageId,
+    this.sender,
+    this.senderName,
+    this.isOutgoing,
+    this.content});
 
   /// [messageId] The message identifier. The message will not be available in the chat history, but the notificationTypeNewPushMessage can be used in viewMessages, or as reply_to_message_id
   int? messageId;

@@ -3,16 +3,16 @@ part of '../tdapi.dart';
 class ChatNotificationSettings extends TdObject {
 
   /// Contains information about notification settings for a chat
-  ChatNotificationSettings({useDefaultMuteFor,
-    muteFor,
-    useDefaultSound,
-    sound,
-    useDefaultShowPreview,
-    showPreview,
-    useDefaultDisablePinnedMessageNotifications,
-    disablePinnedMessageNotifications,
-    useDefaultDisableMentionNotifications,
-    disableMentionNotifications});
+  ChatNotificationSettings({this.useDefaultMuteFor,
+    this.muteFor,
+    this.useDefaultSound,
+    this.sound,
+    this.useDefaultShowPreview,
+    this.showPreview,
+    this.useDefaultDisablePinnedMessageNotifications,
+    this.disablePinnedMessageNotifications,
+    this.useDefaultDisableMentionNotifications,
+    this.disableMentionNotifications});
 
   /// [useDefaultMuteFor] If true, mute_for is ignored and the value for the relevant type of chat is used instead
   bool? useDefaultMuteFor;

@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class GetPaymentForm extends TdFunction {
 
   /// Returns an invoice payment form. This method must be called when the user presses inlineKeyboardButtonBuy
-  GetPaymentForm({chatId,
-    messageId,
-    theme});
+  GetPaymentForm({this.chatId,
+    this.messageId,
+    this.theme});
 
   /// [chatId] Chat identifier of the Invoice message
   int? chatId;

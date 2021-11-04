@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class LanguagePackString extends TdObject {
 
   /// Represents one language pack string
-  LanguagePackString({key,
-    value});
+  LanguagePackString({this.key,
+    this.value});
 
   /// [key] String key 
   String? key;

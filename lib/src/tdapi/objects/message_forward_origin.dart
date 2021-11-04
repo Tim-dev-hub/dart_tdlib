@@ -45,7 +45,7 @@ class MessageForwardOrigin extends TdObject {
 class MessageForwardOriginUser extends MessageForwardOrigin {
 
   /// The message was originally sent by a known user
-  MessageForwardOriginUser({senderUserId});
+  MessageForwardOriginUser({this.senderUserId});
 
   /// [senderUserId] Identifier of the user that originally sent the message
   int? senderUserId;
@@ -72,8 +72,8 @@ class MessageForwardOriginUser extends MessageForwardOrigin {
 class MessageForwardOriginChat extends MessageForwardOrigin {
 
   /// The message was originally sent by an anonymous chat administrator on behalf of the chat
-  MessageForwardOriginChat({senderChatId,
-    authorSignature});
+  MessageForwardOriginChat({this.senderChatId,
+    this.authorSignature});
 
   /// [senderChatId] Identifier of the chat that originally sent the message
   int? senderChatId;
@@ -105,7 +105,7 @@ class MessageForwardOriginChat extends MessageForwardOrigin {
 class MessageForwardOriginHiddenUser extends MessageForwardOrigin {
 
   /// The message was originally sent by a user, which is hidden by their privacy settings
-  MessageForwardOriginHiddenUser({senderName});
+  MessageForwardOriginHiddenUser({this.senderName});
 
   /// [senderName] Name of the sender
   String? senderName;
@@ -132,9 +132,9 @@ class MessageForwardOriginHiddenUser extends MessageForwardOrigin {
 class MessageForwardOriginChannel extends MessageForwardOrigin {
 
   /// The message was originally a post in a channel
-  MessageForwardOriginChannel({chatId,
-    messageId,
-    authorSignature});
+  MessageForwardOriginChannel({this.chatId,
+    this.messageId,
+    this.authorSignature});
 
   /// [chatId] Identifier of the chat from which the message was originally forwarded
   int? chatId;
@@ -171,7 +171,7 @@ class MessageForwardOriginChannel extends MessageForwardOrigin {
 class MessageForwardOriginMessageImport extends MessageForwardOrigin {
 
   /// The message was imported from an exported message history
-  MessageForwardOriginMessageImport({senderName});
+  MessageForwardOriginMessageImport({this.senderName});
 
   /// [senderName] Name of the sender
   String? senderName;

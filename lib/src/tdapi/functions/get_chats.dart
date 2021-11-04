@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GetChats extends TdFunction {
 
   /// Returns an ordered list of chats from the beginning of a chat list. For informational purposes only. Use loadChats and updates processing instead to maintain chat lists in a consistent state
-  GetChats({chatList,
-    limit});
+  GetChats({this.chatList,
+    this.limit});
 
   /// [chatList] The chat list in which to return chats; pass null to get chats from the main chat list
   ChatList? chatList;

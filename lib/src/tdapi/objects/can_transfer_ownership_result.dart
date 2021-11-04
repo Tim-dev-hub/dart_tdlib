@@ -94,7 +94,7 @@ class CanTransferOwnershipResultPasswordNeeded extends CanTransferOwnershipResul
 class CanTransferOwnershipResultPasswordTooFresh extends CanTransferOwnershipResult {
 
   /// The 2-step verification was enabled recently, user needs to wait
-  CanTransferOwnershipResultPasswordTooFresh({retryAfter});
+  CanTransferOwnershipResultPasswordTooFresh({this.retryAfter});
 
   /// [retryAfter] Time left before the session can be used to transfer ownership of a chat, in seconds
   int? retryAfter;
@@ -125,7 +125,7 @@ class CanTransferOwnershipResultPasswordTooFresh extends CanTransferOwnershipRes
 class CanTransferOwnershipResultSessionTooFresh extends CanTransferOwnershipResult {
 
   /// The session was created recently, user needs to wait
-  CanTransferOwnershipResultSessionTooFresh({retryAfter});
+  CanTransferOwnershipResultSessionTooFresh({this.retryAfter});
 
   /// [retryAfter] Time left before the session can be used to transfer ownership of a chat, in seconds
   int? retryAfter;

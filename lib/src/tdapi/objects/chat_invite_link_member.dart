@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class ChatInviteLinkMember extends TdObject {
 
   /// Describes a chat member joined a chat by an invite link
-  ChatInviteLinkMember({userId,
-    joinedChatDate});
+  ChatInviteLinkMember({this.userId,
+    this.joinedChatDate});
 
   /// [userId] User identifier 
   int? userId;

@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class RevokeGroupCallInviteLink extends TdFunction {
 
   /// Revokes invite link for a group call. Requires groupCall.can_be_managed group call flag
-  RevokeGroupCallInviteLink({groupCallId});
+  RevokeGroupCallInviteLink({this.groupCallId});
 
   /// [groupCallId] Group call identifier
   int? groupCallId;

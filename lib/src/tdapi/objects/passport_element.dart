@@ -69,7 +69,7 @@ class PassportElement extends TdObject {
 class PassportElementPersonalDetails extends PassportElement {
 
   /// A Telegram Passport element containing the user's personal details
-  PassportElementPersonalDetails({personalDetails});
+  PassportElementPersonalDetails({this.personalDetails});
 
   /// [personalDetails] Personal details of the user
   PersonalDetails? personalDetails;
@@ -100,7 +100,7 @@ class PassportElementPersonalDetails extends PassportElement {
 class PassportElementPassport extends PassportElement {
 
   /// A Telegram Passport element containing the user's passport
-  PassportElementPassport({passport});
+  PassportElementPassport({this.passport});
 
   /// [passport] Passport
   IdentityDocument? passport;
@@ -131,7 +131,7 @@ class PassportElementPassport extends PassportElement {
 class PassportElementDriverLicense extends PassportElement {
 
   /// A Telegram Passport element containing the user's driver license
-  PassportElementDriverLicense({driverLicense});
+  PassportElementDriverLicense({this.driverLicense});
 
   /// [driverLicense] Driver license
   IdentityDocument? driverLicense;
@@ -162,7 +162,7 @@ class PassportElementDriverLicense extends PassportElement {
 class PassportElementIdentityCard extends PassportElement {
 
   /// A Telegram Passport element containing the user's identity card
-  PassportElementIdentityCard({identityCard});
+  PassportElementIdentityCard({this.identityCard});
 
   /// [identityCard] Identity card
   IdentityDocument? identityCard;
@@ -193,7 +193,7 @@ class PassportElementIdentityCard extends PassportElement {
 class PassportElementInternalPassport extends PassportElement {
 
   /// A Telegram Passport element containing the user's internal passport
-  PassportElementInternalPassport({internalPassport});
+  PassportElementInternalPassport({this.internalPassport});
 
   /// [internalPassport] Internal passport
   IdentityDocument? internalPassport;
@@ -224,7 +224,7 @@ class PassportElementInternalPassport extends PassportElement {
 class PassportElementAddress extends PassportElement {
 
   /// A Telegram Passport element containing the user's address
-  PassportElementAddress({address});
+  PassportElementAddress({this.address});
 
   /// [address] Address
   Address? address;
@@ -255,7 +255,7 @@ class PassportElementAddress extends PassportElement {
 class PassportElementUtilityBill extends PassportElement {
 
   /// A Telegram Passport element containing the user's utility bill
-  PassportElementUtilityBill({utilityBill});
+  PassportElementUtilityBill({this.utilityBill});
 
   /// [utilityBill] Utility bill
   PersonalDocument? utilityBill;
@@ -286,7 +286,7 @@ class PassportElementUtilityBill extends PassportElement {
 class PassportElementBankStatement extends PassportElement {
 
   /// A Telegram Passport element containing the user's bank statement
-  PassportElementBankStatement({bankStatement});
+  PassportElementBankStatement({this.bankStatement});
 
   /// [bankStatement] Bank statement
   PersonalDocument? bankStatement;
@@ -317,7 +317,7 @@ class PassportElementBankStatement extends PassportElement {
 class PassportElementRentalAgreement extends PassportElement {
 
   /// A Telegram Passport element containing the user's rental agreement
-  PassportElementRentalAgreement({rentalAgreement});
+  PassportElementRentalAgreement({this.rentalAgreement});
 
   /// [rentalAgreement] Rental agreement
   PersonalDocument? rentalAgreement;
@@ -348,7 +348,7 @@ class PassportElementRentalAgreement extends PassportElement {
 class PassportElementPassportRegistration extends PassportElement {
 
   /// A Telegram Passport element containing the user's passport registration pages
-  PassportElementPassportRegistration({passportRegistration});
+  PassportElementPassportRegistration({this.passportRegistration});
 
   /// [passportRegistration] Passport registration pages
   PersonalDocument? passportRegistration;
@@ -379,7 +379,7 @@ class PassportElementPassportRegistration extends PassportElement {
 class PassportElementTemporaryRegistration extends PassportElement {
 
   /// A Telegram Passport element containing the user's temporary registration
-  PassportElementTemporaryRegistration({temporaryRegistration});
+  PassportElementTemporaryRegistration({this.temporaryRegistration});
 
   /// [temporaryRegistration] Temporary registration
   PersonalDocument? temporaryRegistration;
@@ -410,7 +410,7 @@ class PassportElementTemporaryRegistration extends PassportElement {
 class PassportElementPhoneNumber extends PassportElement {
 
   /// A Telegram Passport element containing the user's phone number
-  PassportElementPhoneNumber({phoneNumber});
+  PassportElementPhoneNumber({this.phoneNumber});
 
   /// [phoneNumber] Phone number
   String? phoneNumber;
@@ -441,7 +441,7 @@ class PassportElementPhoneNumber extends PassportElement {
 class PassportElementEmailAddress extends PassportElement {
 
   /// A Telegram Passport element containing the user's email address
-  PassportElementEmailAddress({emailAddress});
+  PassportElementEmailAddress({this.emailAddress});
 
   /// [emailAddress] Email address
   String? emailAddress;

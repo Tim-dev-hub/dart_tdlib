@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class AnswerCallbackQuery extends TdFunction {
 
   /// Sets the result of a callback query; for bots only
-  AnswerCallbackQuery({callbackQueryId,
-    text,
-    showAlert,
-    url,
-    cacheTime});
+  AnswerCallbackQuery({this.callbackQueryId,
+    this.text,
+    this.showAlert,
+    this.url,
+    this.cacheTime});
 
   /// [callbackQueryId] Identifier of the callback query 
   int? callbackQueryId;

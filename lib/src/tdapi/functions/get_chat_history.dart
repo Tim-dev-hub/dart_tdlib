@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class GetChatHistory extends TdFunction {
 
   /// Returns messages in a chat. The messages are returned in a reverse chronological order (i.e., in order of decreasing message_id).. For optimal performance, the number of returned messages is chosen by TDLib. This is an offline request if only_local is true
-  GetChatHistory({chatId,
-    fromMessageId,
-    offset,
-    limit,
-    onlyLocal});
+  GetChatHistory({this.chatId,
+    this.fromMessageId,
+    this.offset,
+    this.limit,
+    this.onlyLocal});
 
   /// [chatId] Chat identifier
   int? chatId;

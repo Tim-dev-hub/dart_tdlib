@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class SearchCallMessages extends TdFunction {
 
   /// Searches for call messages. Returns the results in reverse chronological order (i. e., in order of decreasing message_id). For optimal performance, the number of returned messages is chosen by TDLib
-  SearchCallMessages({fromMessageId,
-    limit,
-    onlyMissed});
+  SearchCallMessages({this.fromMessageId,
+    this.limit,
+    this.onlyMissed});
 
   /// [fromMessageId] Identifier of the message from which to search; use 0 to get results from the last message
   int? fromMessageId;

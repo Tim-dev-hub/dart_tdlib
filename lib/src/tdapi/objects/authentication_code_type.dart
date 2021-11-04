@@ -1,16 +1,19 @@
 part of '../tdapi.dart';
 
 class AuthenticationCodeType extends TdObject {
+
   /// Provides information about the method by which an authentication code is delivered to the user
   AuthenticationCodeType();
+
+  
 
   /// a AuthenticationCodeType return type can be :
   /// * AuthenticationCodeTypeTelegramMessage
   /// * AuthenticationCodeTypeSms
   /// * AuthenticationCodeTypeCall
   /// * AuthenticationCodeTypeFlashCall
-  factory AuthenticationCodeType.fromJson(Map<String, dynamic> json) {
-    switch (json["@type"]) {
+  factory AuthenticationCodeType.fromJson(Map<String, dynamic> json)  {
+    switch(json["@type"]) {
       case AuthenticationCodeTypeTelegramMessage.CONSTRUCTOR:
         return AuthenticationCodeTypeTelegramMessage.fromJson(json);
       case AuthenticationCodeTypeSms.CONSTRUCTOR:
@@ -20,29 +23,32 @@ class AuthenticationCodeType extends TdObject {
       case AuthenticationCodeTypeFlashCall.CONSTRUCTOR:
         return AuthenticationCodeTypeFlashCall.fromJson(json);
     }
-    throw new Exception("undefined type");
+    throw new Exception('undefined type');
   }
 
   @override
   Map<String, dynamic> toJson() {
-    return {};
+    return {
+      
+    };
   }
 
   static const CONSTRUCTOR = 'authenticationCodeType';
-
+  
   @override
   String getConstructor() => CONSTRUCTOR;
 }
 
 class AuthenticationCodeTypeTelegramMessage extends AuthenticationCodeType {
+
   /// An authentication code is delivered via a private Telegram message, which can be viewed from another active session
-  AuthenticationCodeTypeTelegramMessage({length});
+  AuthenticationCodeTypeTelegramMessage({this.length});
 
   /// [length] Length of the code
   int? length;
 
   /// Parse from a json
-  AuthenticationCodeTypeTelegramMessage.fromJson(Map<String, dynamic> json) {
+  AuthenticationCodeTypeTelegramMessage.fromJson(Map<String, dynamic> json)  {
     length = json['length'];
   }
 
@@ -55,20 +61,21 @@ class AuthenticationCodeTypeTelegramMessage extends AuthenticationCodeType {
   }
 
   static const CONSTRUCTOR = 'authenticationCodeTypeTelegramMessage';
-
+  
   @override
   String getConstructor() => CONSTRUCTOR;
 }
 
 class AuthenticationCodeTypeSms extends AuthenticationCodeType {
+
   /// An authentication code is delivered via an SMS message to the specified phone number
-  AuthenticationCodeTypeSms({length});
+  AuthenticationCodeTypeSms({this.length});
 
   /// [length] Length of the code
   int? length;
 
   /// Parse from a json
-  AuthenticationCodeTypeSms.fromJson(Map<String, dynamic> json) {
+  AuthenticationCodeTypeSms.fromJson(Map<String, dynamic> json)  {
     length = json['length'];
   }
 
@@ -81,20 +88,21 @@ class AuthenticationCodeTypeSms extends AuthenticationCodeType {
   }
 
   static const CONSTRUCTOR = 'authenticationCodeTypeSms';
-
+  
   @override
   String getConstructor() => CONSTRUCTOR;
 }
 
 class AuthenticationCodeTypeCall extends AuthenticationCodeType {
+
   /// An authentication code is delivered via a phone call to the specified phone number
-  AuthenticationCodeTypeCall({length});
+  AuthenticationCodeTypeCall({this.length});
 
   /// [length] Length of the code
   int? length;
 
   /// Parse from a json
-  AuthenticationCodeTypeCall.fromJson(Map<String, dynamic> json) {
+  AuthenticationCodeTypeCall.fromJson(Map<String, dynamic> json)  {
     length = json['length'];
   }
 
@@ -107,20 +115,21 @@ class AuthenticationCodeTypeCall extends AuthenticationCodeType {
   }
 
   static const CONSTRUCTOR = 'authenticationCodeTypeCall';
-
+  
   @override
   String getConstructor() => CONSTRUCTOR;
 }
 
 class AuthenticationCodeTypeFlashCall extends AuthenticationCodeType {
+
   /// An authentication code is delivered by an immediately canceled call to the specified phone number. The number from which the call was made is the code
-  AuthenticationCodeTypeFlashCall({pattern});
+  AuthenticationCodeTypeFlashCall({this.pattern});
 
   /// [pattern] Pattern of the phone number from which the call will be made
   String? pattern;
 
   /// Parse from a json
-  AuthenticationCodeTypeFlashCall.fromJson(Map<String, dynamic> json) {
+  AuthenticationCodeTypeFlashCall.fromJson(Map<String, dynamic> json)  {
     pattern = json['pattern'];
   }
 
@@ -133,7 +142,7 @@ class AuthenticationCodeTypeFlashCall extends AuthenticationCodeType {
   }
 
   static const CONSTRUCTOR = 'authenticationCodeTypeFlashCall';
-
+  
   @override
   String getConstructor() => CONSTRUCTOR;
 }

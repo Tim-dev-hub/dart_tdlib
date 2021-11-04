@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class DeleteRevokedChatInviteLink extends TdFunction {
 
   /// Deletes revoked chat invite links. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
-  DeleteRevokedChatInviteLink({chatId,
-    inviteLink});
+  DeleteRevokedChatInviteLink({this.chatId,
+    this.inviteLink});
 
   /// [chatId] Chat identifier 
   int? chatId;

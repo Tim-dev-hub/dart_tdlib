@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class BanChatMember extends TdFunction {
 
   /// Bans a member in a chat. Members can't be banned in private or secret chats. In supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first
-  BanChatMember({chatId,
-    memberId,
-    bannedUntilDate,
-    revokeMessages});
+  BanChatMember({this.chatId,
+    this.memberId,
+    this.bannedUntilDate,
+    this.revokeMessages});
 
   /// [chatId] Chat identifier
   int? chatId;

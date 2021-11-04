@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class Users extends TdObject {
 
   /// Represents a list of users
-  Users({totalCount,
-    userIds});
+  Users({this.totalCount,
+    this.userIds});
 
   /// [totalCount] Approximate total count of users found 
   int? totalCount;

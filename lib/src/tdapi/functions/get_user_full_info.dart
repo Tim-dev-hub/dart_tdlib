@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetUserFullInfo extends TdFunction {
 
   /// Returns full information about a user by their identifier
-  GetUserFullInfo({userId});
+  GetUserFullInfo({this.userId});
 
   /// [userId] User identifier
   int? userId;

@@ -3,19 +3,19 @@ part of '../tdapi.dart';
 class LanguagePackInfo extends TdObject {
 
   /// Contains information about a language pack
-  LanguagePackInfo({id,
-    baseLanguagePackId,
-    name,
-    nativeName,
-    pluralCode,
-    isOfficial,
-    isRtl,
-    isBeta,
-    isInstalled,
-    totalStringCount,
-    translatedStringCount,
-    localStringCount,
-    translationUrl});
+  LanguagePackInfo({this.id,
+    this.baseLanguagePackId,
+    this.name,
+    this.nativeName,
+    this.pluralCode,
+    this.isOfficial,
+    this.isRtl,
+    this.isBeta,
+    this.isInstalled,
+    this.totalStringCount,
+    this.translatedStringCount,
+    this.localStringCount,
+    this.translationUrl});
 
   /// [id] Unique language pack identifier
   String? id;

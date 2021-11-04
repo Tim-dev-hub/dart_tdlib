@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class ToggleGroupCallParticipantIsHandRaised extends TdFunction {
 
   /// Toggles whether a group call participant hand is rased
-  ToggleGroupCallParticipantIsHandRaised({groupCallId,
-    participantId,
-    isHandRaised});
+  ToggleGroupCallParticipantIsHandRaised({this.groupCallId,
+    this.participantId,
+    this.isHandRaised});
 
   /// [groupCallId] Group call identifier
   int? groupCallId;

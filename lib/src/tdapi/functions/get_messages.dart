@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GetMessages extends TdFunction {
 
   /// Returns information about messages. If a message is not found, returns null on the corresponding position of the result
-  GetMessages({chatId,
-    messageIds});
+  GetMessages({this.chatId,
+    this.messageIds});
 
   /// [chatId] Identifier of the chat the messages belong to 
   int? chatId;

@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class StartGroupCallScreenSharing extends TdFunction {
 
   /// Starts screen sharing in a joined group call. Returns join response payload for tgcalls
-  StartGroupCallScreenSharing({groupCallId,
-    audioSourceId,
-    payload});
+  StartGroupCallScreenSharing({this.groupCallId,
+    this.audioSourceId,
+    this.payload});
 
   /// [groupCallId] Group call identifier
   int? groupCallId;

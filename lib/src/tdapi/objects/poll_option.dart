@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class PollOption extends TdObject {
 
   /// Describes one answer option of a poll
-  PollOption({text,
-    voterCount,
-    votePercentage,
-    isChosen,
-    isBeingChosen});
+  PollOption({this.text,
+    this.voterCount,
+    this.votePercentage,
+    this.isChosen,
+    this.isBeingChosen});
 
   /// [text] Option text; 1-100 characters 
   String? text;

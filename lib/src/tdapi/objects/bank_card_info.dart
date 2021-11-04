@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class BankCardInfo extends TdObject {
 
   /// Information about a bank card
-  BankCardInfo({title,
-    actions});
+  BankCardInfo({this.title,
+    this.actions});
 
   /// [title] Title of the bank card description 
   String? title;

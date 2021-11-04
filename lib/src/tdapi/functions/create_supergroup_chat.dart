@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class CreateSupergroupChat extends TdFunction {
 
   /// Returns an existing chat corresponding to a known supergroup or channel
-  CreateSupergroupChat({supergroupId,
-    force});
+  CreateSupergroupChat({this.supergroupId,
+    this.force});
 
   /// [supergroupId] Supergroup or channel identifier 
   int? supergroupId;

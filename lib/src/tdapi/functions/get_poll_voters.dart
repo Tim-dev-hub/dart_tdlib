@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class GetPollVoters extends TdFunction {
 
   /// Returns users voted for the specified option in a non-anonymous polls. For optimal performance, the number of returned users is chosen by TDLib
-  GetPollVoters({chatId,
-    messageId,
-    optionId,
-    offset,
-    limit});
+  GetPollVoters({this.chatId,
+    this.messageId,
+    this.optionId,
+    this.offset,
+    this.limit});
 
   /// [chatId] Identifier of the chat to which the poll belongs
   int? chatId;

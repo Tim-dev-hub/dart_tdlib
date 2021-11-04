@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class KeyboardButton extends TdObject {
 
   /// Represents a single button in a bot keyboard
-  KeyboardButton({text,
-    type});
+  KeyboardButton({this.text,
+    this.type});
 
   /// [text] Text of the button 
   String? text;

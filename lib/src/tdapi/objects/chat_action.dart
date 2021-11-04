@@ -121,7 +121,7 @@ class ChatActionRecordingVideo extends ChatAction {
 class ChatActionUploadingVideo extends ChatAction {
 
   /// The user is uploading a video
-  ChatActionUploadingVideo({progress});
+  ChatActionUploadingVideo({this.progress});
 
   /// [progress] Upload progress, as a percentage
   int? progress;
@@ -171,7 +171,7 @@ class ChatActionRecordingVoiceNote extends ChatAction {
 class ChatActionUploadingVoiceNote extends ChatAction {
 
   /// The user is uploading a voice note
-  ChatActionUploadingVoiceNote({progress});
+  ChatActionUploadingVoiceNote({this.progress});
 
   /// [progress] Upload progress, as a percentage
   int? progress;
@@ -198,7 +198,7 @@ class ChatActionUploadingVoiceNote extends ChatAction {
 class ChatActionUploadingPhoto extends ChatAction {
 
   /// The user is uploading a photo
-  ChatActionUploadingPhoto({progress});
+  ChatActionUploadingPhoto({this.progress});
 
   /// [progress] Upload progress, as a percentage
   int? progress;
@@ -225,7 +225,7 @@ class ChatActionUploadingPhoto extends ChatAction {
 class ChatActionUploadingDocument extends ChatAction {
 
   /// The user is uploading a document
-  ChatActionUploadingDocument({progress});
+  ChatActionUploadingDocument({this.progress});
 
   /// [progress] Upload progress, as a percentage
   int? progress;
@@ -367,7 +367,7 @@ class ChatActionRecordingVideoNote extends ChatAction {
 class ChatActionUploadingVideoNote extends ChatAction {
 
   /// The user is uploading a video note
-  ChatActionUploadingVideoNote({progress});
+  ChatActionUploadingVideoNote({this.progress});
 
   /// [progress] Upload progress, as a percentage
   int? progress;
@@ -394,7 +394,7 @@ class ChatActionUploadingVideoNote extends ChatAction {
 class ChatActionWatchingAnimations extends ChatAction {
 
   /// The user is watching animations sent by the other party by clicking on an animated emoji
-  ChatActionWatchingAnimations({emoji});
+  ChatActionWatchingAnimations({this.emoji});
 
   /// [emoji] The animated emoji
   String? emoji;

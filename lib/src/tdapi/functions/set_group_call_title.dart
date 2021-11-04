@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class SetGroupCallTitle extends TdFunction {
 
   /// Sets group call title. Requires groupCall.can_be_managed group call flag
-  SetGroupCallTitle({groupCallId,
-    title});
+  SetGroupCallTitle({this.groupCallId,
+    this.title});
 
   /// [groupCallId] Group call identifier 
   int? groupCallId;

@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class Point extends TdObject {
 
   /// A point on a Cartesian plane
-  Point({x,
-    y});
+  Point({this.x,
+    this.y});
 
   /// [x] The point's first coordinate 
   double? x;

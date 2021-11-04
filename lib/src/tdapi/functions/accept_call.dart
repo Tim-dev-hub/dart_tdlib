@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class AcceptCall extends TdFunction {
 
   /// Accepts an incoming call
-  AcceptCall({callId,
-    protocol});
+  AcceptCall({this.callId,
+    this.protocol});
 
   /// [callId] Call identifier 
   int? callId;

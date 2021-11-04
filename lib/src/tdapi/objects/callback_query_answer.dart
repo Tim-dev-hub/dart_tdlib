@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class CallbackQueryAnswer extends TdObject {
 
   /// Contains a bot's answer to a callback query
-  CallbackQueryAnswer({text,
-    showAlert,
-    url});
+  CallbackQueryAnswer({this.text,
+    this.showAlert,
+    this.url});
 
   /// [text] Text of the answer 
   String? text;

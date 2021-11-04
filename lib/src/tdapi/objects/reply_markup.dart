@@ -20,7 +20,7 @@ class ReplyMarkup extends TdObject {
       case ReplyMarkupInlineKeyboard.CONSTRUCTOR:
         return ReplyMarkupInlineKeyboard.fromJson(json);
     }
-    throw new Exception('undefined type');
+    throw Exception('undefined type');
   }
 
   @override
@@ -36,7 +36,7 @@ class ReplyMarkup extends TdObject {
 
 class ReplyMarkupRemoveKeyboard extends ReplyMarkup {
   /// Instructs application to remove the keyboard once this message has been received. This kind of keyboard can't be received in an incoming message; instead, UpdateChatReplyMarkup with message_id == 0 will be sent
-  ReplyMarkupRemoveKeyboard({isPersonal});
+  ReplyMarkupRemoveKeyboard({this.isPersonal});
 
   /// [isPersonal] True, if the keyboard is removed only for the mentioned users or the target user of a reply
   bool? isPersonal;
@@ -62,7 +62,7 @@ class ReplyMarkupRemoveKeyboard extends ReplyMarkup {
 
 class ReplyMarkupForceReply extends ReplyMarkup {
   /// Instructs application to force a reply to this message
-  ReplyMarkupForceReply({isPersonal, inputFieldPlaceholder});
+  ReplyMarkupForceReply({this.isPersonal, this.inputFieldPlaceholder});
 
   /// [isPersonal] True, if a forced reply must automatically be shown to the current user. For outgoing messages, specify true to show the forced reply only for the mentioned users and for the target user of a reply
   bool? isPersonal;
@@ -94,7 +94,11 @@ class ReplyMarkupForceReply extends ReplyMarkup {
 class ReplyMarkupShowKeyboard extends ReplyMarkup {
   /// Contains a custom keyboard layout to quickly reply to bots
   ReplyMarkupShowKeyboard(
-      {rows, resizeKeyboard, oneTime, isPersonal, inputFieldPlaceholder});
+      {this.rows,
+      this.resizeKeyboard,
+      this.oneTime,
+      this.isPersonal,
+      this.inputFieldPlaceholder});
 
   /// [rows] A list of rows of bot keyboard buttons
   List<List<KeyboardButton>>? rows;
@@ -145,7 +149,7 @@ class ReplyMarkupShowKeyboard extends ReplyMarkup {
 
 class ReplyMarkupInlineKeyboard extends ReplyMarkup {
   /// Contains an inline keyboard layout
-  ReplyMarkupInlineKeyboard({rows});
+  ReplyMarkupInlineKeyboard({this.rows});
 
   /// [rows] A list of rows of inline keyboard buttons
   List<List<InlineKeyboardButton>>? rows;

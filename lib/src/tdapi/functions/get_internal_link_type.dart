@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetInternalLinkType extends TdFunction {
 
   /// Returns information about the type of an internal link. Returns a 404 error if the link is not internal. Can be called before authorization
-  GetInternalLinkType({link});
+  GetInternalLinkType({this.link});
 
   /// [link] The link
   String? link;

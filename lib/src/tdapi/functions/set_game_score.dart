@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class SetGameScore extends TdFunction {
 
   /// Updates the game score of the specified user in the game; for bots only
-  SetGameScore({chatId,
-    messageId,
-    editMessage,
-    userId,
-    score,
-    force});
+  SetGameScore({this.chatId,
+    this.messageId,
+    this.editMessage,
+    this.userId,
+    this.score,
+    this.force});
 
   /// [chatId] The chat to which the message with the game belongs 
   int? chatId;

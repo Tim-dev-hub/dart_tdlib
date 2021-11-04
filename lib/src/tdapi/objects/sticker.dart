@@ -3,16 +3,16 @@ part of '../tdapi.dart';
 class Sticker extends TdObject {
 
   /// Describes a sticker
-  Sticker({setId,
-    width,
-    height,
-    emoji,
-    isAnimated,
-    isMask,
-    maskPosition,
-    outline,
-    thumbnail,
-    sticker});
+  Sticker({this.setId,
+    this.width,
+    this.height,
+    this.emoji,
+    this.isAnimated,
+    this.isMask,
+    this.maskPosition,
+    this.outline,
+    this.thumbnail,
+    this.sticker});
 
   /// [setId] The identifier of the sticker set to which the sticker belongs; 0 if none 
   int? setId;

@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class MessageReplyInfo extends TdObject {
 
   /// Contains information about replies to a message
-  MessageReplyInfo({replyCount,
-    recentRepliers,
-    lastReadInboxMessageId,
-    lastReadOutboxMessageId,
-    lastMessageId});
+  MessageReplyInfo({this.replyCount,
+    this.recentRepliers,
+    this.lastReadInboxMessageId,
+    this.lastReadOutboxMessageId,
+    this.lastMessageId});
 
   /// [replyCount] Number of times the message was directly or indirectly replied
   int? replyCount;

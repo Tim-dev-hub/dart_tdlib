@@ -3,14 +3,14 @@ part of '../tdapi.dart';
 class ChatInviteLinkInfo extends TdObject {
 
   /// Contains information about a chat invite link
-  ChatInviteLinkInfo({chatId,
-    accessibleFor,
-    type,
-    title,
-    photo,
-    memberCount,
-    memberUserIds,
-    isPublic});
+  ChatInviteLinkInfo({this.chatId,
+    this.accessibleFor,
+    this.type,
+    this.title,
+    this.photo,
+    this.memberCount,
+    this.memberUserIds,
+    this.isPublic});
 
   /// [chatId] Chat identifier of the invite link; 0 if the user has no access to the chat before joining
   int? chatId;

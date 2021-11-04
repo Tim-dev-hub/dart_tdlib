@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class CallServer extends TdObject {
 
   /// Describes a server for relaying call data
-  CallServer({id,
-    ipAddress,
-    ipv6Address,
-    port,
-    type});
+  CallServer({this.id,
+    this.ipAddress,
+    this.ipv6Address,
+    this.port,
+    this.type});
 
   /// [id] Server identifier 
   int? id;

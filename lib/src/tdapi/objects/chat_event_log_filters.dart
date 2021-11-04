@@ -3,18 +3,18 @@ part of '../tdapi.dart';
 class ChatEventLogFilters extends TdObject {
 
   /// Represents a set of filters used to obtain a chat event log
-  ChatEventLogFilters({messageEdits,
-    messageDeletions,
-    messagePins,
-    memberJoins,
-    memberLeaves,
-    memberInvites,
-    memberPromotions,
-    memberRestrictions,
-    infoChanges,
-    settingChanges,
-    inviteLinkChanges,
-    voiceChatChanges});
+  ChatEventLogFilters({this.messageEdits,
+    this.messageDeletions,
+    this.messagePins,
+    this.memberJoins,
+    this.memberLeaves,
+    this.memberInvites,
+    this.memberPromotions,
+    this.memberRestrictions,
+    this.infoChanges,
+    this.settingChanges,
+    this.inviteLinkChanges,
+    this.voiceChatChanges});
 
   /// [messageEdits] True, if message edits need to be returned
   bool? messageEdits;

@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class SendChatScreenshotTakenNotification extends TdFunction {
 
   /// Sends a notification about a screenshot taken in a chat. Supported only in private and secret chats
-  SendChatScreenshotTakenNotification({chatId});
+  SendChatScreenshotTakenNotification({this.chatId});
 
   /// [chatId] Chat identifier
   int? chatId;

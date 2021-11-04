@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class AddChatToList extends TdFunction {
 
   /// Adds a chat to a chat list. A chat can't be simultaneously in Main and Archive chat lists, so it is automatically removed from another one if needed
-  AddChatToList({chatId,
-    chatList});
+  AddChatToList({this.chatId,
+    this.chatList});
 
   /// [chatId] Chat identifier
   int? chatId;

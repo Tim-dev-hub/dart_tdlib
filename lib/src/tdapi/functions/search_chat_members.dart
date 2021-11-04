@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class SearchChatMembers extends TdFunction {
 
   /// Searches for a specified query in the first name, last name and username of the members of a specified chat. Requires administrator rights in channels
-  SearchChatMembers({chatId,
-    query,
-    limit,
-    filter});
+  SearchChatMembers({this.chatId,
+    this.query,
+    this.limit,
+    this.filter});
 
   /// [chatId] Chat identifier
   int? chatId;

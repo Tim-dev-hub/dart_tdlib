@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class ImportedContacts extends TdObject {
 
   /// Represents the result of an ImportContacts request
-  ImportedContacts({userIds,
-    importerCount});
+  ImportedContacts({this.userIds,
+    this.importerCount});
 
   /// [userIds] User identifiers of the imported contacts in the same order as they were specified in the request; 0 if the contact is not yet a registered user
   List<int>? userIds;

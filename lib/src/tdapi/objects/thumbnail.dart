@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class Thumbnail extends TdObject {
 
   /// Represents a thumbnail
-  Thumbnail({format,
-    width,
-    height,
-    file});
+  Thumbnail({this.format,
+    this.width,
+    this.height,
+    this.file});
 
   /// [format] Thumbnail format 
   ThumbnailFormat? format;

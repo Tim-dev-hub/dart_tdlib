@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetInstalledStickerSets extends TdFunction {
 
   /// Returns a list of installed sticker sets
-  GetInstalledStickerSets({isMasks});
+  GetInstalledStickerSets({this.isMasks});
 
   /// [isMasks] Pass true to return mask sticker sets; pass false to return ordinary sticker sets
   bool? isMasks;

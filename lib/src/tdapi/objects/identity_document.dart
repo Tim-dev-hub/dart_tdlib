@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class IdentityDocument extends TdObject {
 
   /// An identity document
-  IdentityDocument({number,
-    expiryDate,
-    frontSide,
-    reverseSide,
-    selfie,
-    translation});
+  IdentityDocument({this.number,
+    this.expiryDate,
+    this.frontSide,
+    this.reverseSide,
+    this.selfie,
+    this.translation});
 
   /// [number] Document number; 1-24 characters 
   String? number;

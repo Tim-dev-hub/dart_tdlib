@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class GetUserProfilePhotos extends TdFunction {
 
   /// Returns the profile photos of a user. The result of this query may be outdated: some photos might have been deleted already
-  GetUserProfilePhotos({userId,
-    offset,
-    limit});
+  GetUserProfilePhotos({this.userId,
+    this.offset,
+    this.limit});
 
   /// [userId] User identifier 
   int? userId;

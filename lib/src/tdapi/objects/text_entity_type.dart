@@ -406,7 +406,7 @@ class TextEntityTypePre extends TextEntityType {
 class TextEntityTypePreCode extends TextEntityType {
 
   /// Text that must be formatted as if inside pre, and code HTML tags
-  TextEntityTypePreCode({language});
+  TextEntityTypePreCode({this.language});
 
   /// [language] Programming language of the code; as defined by the sender
   String? language;
@@ -433,7 +433,7 @@ class TextEntityTypePreCode extends TextEntityType {
 class TextEntityTypeTextUrl extends TextEntityType {
 
   /// A text description shown instead of a raw URL
-  TextEntityTypeTextUrl({url});
+  TextEntityTypeTextUrl({this.url});
 
   /// [url] HTTP or tg:// URL to be opened when the link is clicked
   String? url;
@@ -460,7 +460,7 @@ class TextEntityTypeTextUrl extends TextEntityType {
 class TextEntityTypeMentionName extends TextEntityType {
 
   /// A text shows instead of a raw mention of the user (e.g., when the user has no username)
-  TextEntityTypeMentionName({userId});
+  TextEntityTypeMentionName({this.userId});
 
   /// [userId] Identifier of the mentioned user
   int? userId;
@@ -487,7 +487,7 @@ class TextEntityTypeMentionName extends TextEntityType {
 class TextEntityTypeMediaTimestamp extends TextEntityType {
 
   /// A media timestamp
-  TextEntityTypeMediaTimestamp({mediaTimestamp});
+  TextEntityTypeMediaTimestamp({this.mediaTimestamp});
 
   /// [mediaTimestamp] Timestamp from which a video/audio/video note/voice note playing must start, in seconds. The media can be in the content or the web page preview of the current message, or in the same places in the replied message
   int? mediaTimestamp;

@@ -3,15 +3,15 @@ part of '../tdapi.dart';
 class ChatInviteLink extends TdObject {
 
   /// Contains a chat invite link
-  ChatInviteLink({inviteLink,
-    creatorUserId,
-    date,
-    editDate,
-    expireDate,
-    memberLimit,
-    memberCount,
-    isPrimary,
-    isRevoked});
+  ChatInviteLink({this.inviteLink,
+    this.creatorUserId,
+    this.date,
+    this.editDate,
+    this.expireDate,
+    this.memberLimit,
+    this.memberCount,
+    this.isPrimary,
+    this.isRevoked});
 
   /// [inviteLink] Chat invite link 
   String? inviteLink;

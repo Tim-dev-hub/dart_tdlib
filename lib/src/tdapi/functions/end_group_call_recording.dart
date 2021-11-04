@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class EndGroupCallRecording extends TdFunction {
 
   /// Ends recording of an active group call. Requires groupCall.can_be_managed group call flag
-  EndGroupCallRecording({groupCallId});
+  EndGroupCallRecording({this.groupCallId});
 
   /// [groupCallId] Group call identifier
   int? groupCallId;

@@ -42,7 +42,7 @@ class ChatType extends TdObject {
 class ChatTypePrivate extends ChatType {
 
   /// An ordinary chat with a user
-  ChatTypePrivate({userId});
+  ChatTypePrivate({this.userId});
 
   /// [userId] User identifier
   int? userId;
@@ -69,7 +69,7 @@ class ChatTypePrivate extends ChatType {
 class ChatTypeBasicGroup extends ChatType {
 
   /// A basic group (a chat with 0-200 other users)
-  ChatTypeBasicGroup({basicGroupId});
+  ChatTypeBasicGroup({this.basicGroupId});
 
   /// [basicGroupId] Basic group identifier
   int? basicGroupId;
@@ -96,8 +96,8 @@ class ChatTypeBasicGroup extends ChatType {
 class ChatTypeSupergroup extends ChatType {
 
   /// A supergroup or channel (with unlimited members)
-  ChatTypeSupergroup({supergroupId,
-    isChannel});
+  ChatTypeSupergroup({this.supergroupId,
+    this.isChannel});
 
   /// [supergroupId] Supergroup or channel identifier 
   int? supergroupId;
@@ -129,8 +129,8 @@ class ChatTypeSupergroup extends ChatType {
 class ChatTypeSecret extends ChatType {
 
   /// A secret chat with a user
-  ChatTypeSecret({secretChatId,
-    userId});
+  ChatTypeSecret({this.secretChatId,
+    this.userId});
 
   /// [secretChatId] Secret chat identifier 
   int? secretChatId;

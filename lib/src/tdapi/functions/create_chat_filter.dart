@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class CreateChatFilter extends TdFunction {
 
   /// Creates new chat filter. Returns information about the created chat filter
-  CreateChatFilter({filter});
+  CreateChatFilter({this.filter});
 
   /// [filter] Chat filter
   ChatFilter? filter;

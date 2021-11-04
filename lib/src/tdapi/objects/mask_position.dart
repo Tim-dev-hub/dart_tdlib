@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class MaskPosition extends TdObject {
 
   /// Position on a photo where a mask is placed
-  MaskPosition({point,
-    xShift,
-    yShift,
-    scale});
+  MaskPosition({this.point,
+    this.xShift,
+    this.yShift,
+    this.scale});
 
   /// [point] Part of the face, relative to which the mask is placed
   MaskPoint? point;

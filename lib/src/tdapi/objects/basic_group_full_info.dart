@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class BasicGroupFullInfo extends TdObject {
 
   /// Contains full information about a basic group
-  BasicGroupFullInfo({photo,
-    description,
-    creatorUserId,
-    members,
-    inviteLink,
-    botCommands});
+  BasicGroupFullInfo({this.photo,
+    this.description,
+    this.creatorUserId,
+    this.members,
+    this.inviteLink,
+    this.botCommands});
 
   /// [photo] Chat photo; may be null
   ChatPhoto? photo;

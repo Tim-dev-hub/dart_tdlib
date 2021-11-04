@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class DeleteCommands extends TdFunction {
 
   /// Deletes commands supported by the bot for the given user scope and language; for bots only
-  DeleteCommands({scope,
-    languageCode});
+  DeleteCommands({this.scope,
+    this.languageCode});
 
   /// [scope] The scope to which the commands are relevant; pass null to delete commands in the default bot command scope
   BotCommandScope? scope;

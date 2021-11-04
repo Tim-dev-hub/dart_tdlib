@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class SetScopeNotificationSettings extends TdFunction {
 
   /// Changes notification settings for chats of a given type
-  SetScopeNotificationSettings({scope,
-    notificationSettings});
+  SetScopeNotificationSettings({this.scope,
+    this.notificationSettings});
 
   /// [scope] Types of chats for which to change the notification settings 
   NotificationSettingsScope? scope;

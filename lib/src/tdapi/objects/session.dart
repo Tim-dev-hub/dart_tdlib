@@ -3,21 +3,21 @@ part of '../tdapi.dart';
 class Session extends TdObject {
 
   /// Contains information about one session in a Telegram application used by the current user. Sessions must be shown to the user in the returned order
-  Session({id,
-    isCurrent,
-    isPasswordPending,
-    apiId,
-    applicationName,
-    applicationVersion,
-    isOfficialApplication,
-    deviceModel,
-    platform,
-    systemVersion,
-    logInDate,
-    lastActiveDate,
-    ip,
-    country,
-    region});
+  Session({this.id,
+    this.isCurrent,
+    this.isPasswordPending,
+    this.apiId,
+    this.applicationName,
+    this.applicationVersion,
+    this.isOfficialApplication,
+    this.deviceModel,
+    this.platform,
+    this.systemVersion,
+    this.logInDate,
+    this.lastActiveDate,
+    this.ip,
+    this.country,
+    this.region});
 
   /// [id] Session identifier
   int? id;

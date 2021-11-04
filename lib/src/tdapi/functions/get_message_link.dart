@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class GetMessageLink extends TdFunction {
 
   /// Returns an HTTPS link to a message in a chat. Available only for already sent messages in supergroups and channels, or if message.can_get_media_timestamp_links and a media timestamp link is generated. This is an offline request
-  GetMessageLink({chatId,
-    messageId,
-    mediaTimestamp,
-    forAlbum,
-    forComment});
+  GetMessageLink({this.chatId,
+    this.messageId,
+    this.mediaTimestamp,
+    this.forAlbum,
+    this.forComment});
 
   /// [chatId] Identifier of the chat to which the message belongs
   int? chatId;

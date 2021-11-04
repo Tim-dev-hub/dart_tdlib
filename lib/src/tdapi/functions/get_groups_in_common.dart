@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class GetGroupsInCommon extends TdFunction {
 
   /// Returns a list of common group chats with a given user. Chats are sorted by their type and creation date
-  GetGroupsInCommon({userId,
-    offsetChatId,
-    limit});
+  GetGroupsInCommon({this.userId,
+    this.offsetChatId,
+    this.limit});
 
   /// [userId] User identifier 
   int? userId;

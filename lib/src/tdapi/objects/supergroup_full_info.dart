@@ -3,27 +3,27 @@ part of '../tdapi.dart';
 class SupergroupFullInfo extends TdObject {
 
   /// Contains full information about a supergroup or channel
-  SupergroupFullInfo({photo,
-    description,
-    memberCount,
-    administratorCount,
-    restrictedCount,
-    bannedCount,
-    linkedChatId,
-    slowModeDelay,
-    slowModeDelayExpiresIn,
-    canGetMembers,
-    canSetUsername,
-    canSetStickerSet,
-    canSetLocation,
-    canGetStatistics,
-    isAllHistoryAvailable,
-    stickerSetId,
-    location,
-    inviteLink,
-    botCommands,
-    upgradedFromBasicGroupId,
-    upgradedFromMaxMessageId});
+  SupergroupFullInfo({this.photo,
+    this.description,
+    this.memberCount,
+    this.administratorCount,
+    this.restrictedCount,
+    this.bannedCount,
+    this.linkedChatId,
+    this.slowModeDelay,
+    this.slowModeDelayExpiresIn,
+    this.canGetMembers,
+    this.canSetUsername,
+    this.canSetStickerSet,
+    this.canSetLocation,
+    this.canGetStatistics,
+    this.isAllHistoryAvailable,
+    this.stickerSetId,
+    this.location,
+    this.inviteLink,
+    this.botCommands,
+    this.upgradedFromBasicGroupId,
+    this.upgradedFromMaxMessageId});
 
   /// [photo] Chat photo; may be null
   ChatPhoto? photo;

@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class SendMessageAlbum extends TdFunction {
 
   /// Sends 2-10 messages grouped together into an album. Currently only audio, document, photo and video messages can be grouped into an album. Documents and audio files can be only grouped in an album with messages of the same type. Returns sent messages
-  SendMessageAlbum({chatId,
-    messageThreadId,
-    replyToMessageId,
-    options,
-    inputMessageContents});
+  SendMessageAlbum({this.chatId,
+    this.messageThreadId,
+    this.replyToMessageId,
+    this.options,
+    this.inputMessageContents});
 
   /// [chatId] Target chat
   int? chatId;

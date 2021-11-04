@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class OrderInfo extends TdObject {
 
   /// Order information
-  OrderInfo({name,
-    phoneNumber,
-    emailAddress,
-    shippingAddress});
+  OrderInfo({this.name,
+    this.phoneNumber,
+    this.emailAddress,
+    this.shippingAddress});
 
   /// [name] Name of the user 
   String? name;

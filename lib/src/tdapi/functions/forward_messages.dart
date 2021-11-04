@@ -3,13 +3,13 @@ part of '../tdapi.dart';
 class ForwardMessages extends TdFunction {
 
   /// Forwards previously sent messages. Returns the forwarded messages in the same order as the message identifiers passed in message_ids. If a message can't be forwarded, null will be returned instead of the message
-  ForwardMessages({chatId,
-    fromChatId,
-    messageIds,
-    options,
-    sendCopy,
-    removeCaption,
-    onlyPreview});
+  ForwardMessages({this.chatId,
+    this.fromChatId,
+    this.messageIds,
+    this.options,
+    this.sendCopy,
+    this.removeCaption,
+    this.onlyPreview});
 
   /// [chatId] Identifier of the chat to which to forward messages
   int? chatId;

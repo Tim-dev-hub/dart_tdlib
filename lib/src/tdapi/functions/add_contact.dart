@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class AddContact extends TdFunction {
 
   /// Adds a user to the contact list or edits an existing contact by their user identifier
-  AddContact({contact,
-    sharePhoneNumber});
+  AddContact({this.contact,
+    this.sharePhoneNumber});
 
   /// [contact] The contact to add or edit; phone number can be empty and needs to be specified only if known, vCard is ignored
   Contact? contact;

@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class TestInt extends TdObject {
 
   /// A simple object containing a number; for testing only
-  TestInt({value});
+  TestInt({this.value});
 
   /// [value] Number
   int? value;

@@ -3,19 +3,19 @@ part of '../tdapi.dart';
 class ChatFilter extends TdObject {
 
   /// Represents a filter of user chats
-  ChatFilter({title,
-    iconName,
-    pinnedChatIds,
-    includedChatIds,
-    excludedChatIds,
-    excludeMuted,
-    excludeRead,
-    excludeArchived,
-    includeContacts,
-    includeNonContacts,
-    includeBots,
-    includeGroups,
-    includeChannels});
+  ChatFilter({this.title,
+    this.iconName,
+    this.pinnedChatIds,
+    this.includedChatIds,
+    this.excludedChatIds,
+    this.excludeMuted,
+    this.excludeRead,
+    this.excludeArchived,
+    this.includeContacts,
+    this.includeNonContacts,
+    this.includeBots,
+    this.includeGroups,
+    this.includeChannels});
 
   /// [title] The title of the filter; 1-12 characters without line feeds
   String? title;

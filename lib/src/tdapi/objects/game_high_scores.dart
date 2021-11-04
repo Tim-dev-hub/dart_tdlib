@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GameHighScores extends TdObject {
 
   /// Contains a list of game high scores
-  GameHighScores({scores});
+  GameHighScores({this.scores});
 
   /// [scores] A list of game high scores
   List<GameHighScore>? scores;

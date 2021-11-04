@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class ChatPosition extends TdObject {
 
   /// Describes a position of a chat in a chat list
-  ChatPosition({list,
-    order,
-    isPinned,
-    source});
+  ChatPosition({this.list,
+    this.order,
+    this.isPinned,
+    this.source});
 
   /// [list] The chat list
   ChatList? list;

@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class MessageSendOptions extends TdObject {
 
   /// Options to be used when a message is sent
-  MessageSendOptions({disableNotification,
-    fromBackground,
-    schedulingState});
+  MessageSendOptions({this.disableNotification,
+    this.fromBackground,
+    this.schedulingState});
 
   /// [disableNotification] Pass true to disable notification for the message
   bool? disableNotification;

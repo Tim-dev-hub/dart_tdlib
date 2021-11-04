@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class Stickers extends TdObject {
 
   /// Represents a list of stickers
-  Stickers({stickers});
+  Stickers({this.stickers});
 
   /// [stickers] List of stickers
   List<Sticker>? stickers;

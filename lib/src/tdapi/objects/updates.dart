@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class Updates extends TdObject {
 
   /// Contains a list of updates
-  Updates({updates});
+  Updates({this.updates});
 
   /// [updates] List of updates
   List<Update>? updates;

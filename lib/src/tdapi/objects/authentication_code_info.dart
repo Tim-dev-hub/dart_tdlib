@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class AuthenticationCodeInfo extends TdObject {
 
   /// Information about the authentication code that was sent
-  AuthenticationCodeInfo({phoneNumber,
-    type,
-    nextType,
-    timeout});
+  AuthenticationCodeInfo({this.phoneNumber,
+    this.type,
+    this.nextType,
+    this.timeout});
 
   /// [phoneNumber] A phone number that is being authenticated 
   String? phoneNumber;

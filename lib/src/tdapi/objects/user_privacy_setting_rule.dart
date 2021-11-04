@@ -100,7 +100,7 @@ class UserPrivacySettingRuleAllowContacts extends UserPrivacySettingRule {
 class UserPrivacySettingRuleAllowUsers extends UserPrivacySettingRule {
 
   /// A rule to allow certain specified users to do something
-  UserPrivacySettingRuleAllowUsers({userIds});
+  UserPrivacySettingRuleAllowUsers({this.userIds});
 
   /// [userIds] The user identifiers, total number of users in all rules must not exceed 1000
   List<int>? userIds;
@@ -127,7 +127,7 @@ class UserPrivacySettingRuleAllowUsers extends UserPrivacySettingRule {
 class UserPrivacySettingRuleAllowChatMembers extends UserPrivacySettingRule {
 
   /// A rule to allow all members of certain specified basic groups and supergroups to doing something
-  UserPrivacySettingRuleAllowChatMembers({chatIds});
+  UserPrivacySettingRuleAllowChatMembers({this.chatIds});
 
   /// [chatIds] The chat identifiers, total number of chats in all rules must not exceed 20
   List<int>? chatIds;
@@ -200,7 +200,7 @@ class UserPrivacySettingRuleRestrictContacts extends UserPrivacySettingRule {
 class UserPrivacySettingRuleRestrictUsers extends UserPrivacySettingRule {
 
   /// A rule to restrict all specified users from doing something
-  UserPrivacySettingRuleRestrictUsers({userIds});
+  UserPrivacySettingRuleRestrictUsers({this.userIds});
 
   /// [userIds] The user identifiers, total number of users in all rules must not exceed 1000
   List<int>? userIds;
@@ -227,7 +227,7 @@ class UserPrivacySettingRuleRestrictUsers extends UserPrivacySettingRule {
 class UserPrivacySettingRuleRestrictChatMembers extends UserPrivacySettingRule {
 
   /// A rule to restrict all members of specified basic groups and supergroups from doing something
-  UserPrivacySettingRuleRestrictChatMembers({chatIds});
+  UserPrivacySettingRuleRestrictChatMembers({this.chatIds});
 
   /// [chatIds] The chat identifiers, total number of chats in all rules must not exceed 20
   List<int>? chatIds;

@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class ChatStatisticsMessageInteractionInfo extends TdObject {
 
   /// Contains statistics about interactions with a message
-  ChatStatisticsMessageInteractionInfo({messageId,
-    viewCount,
-    forwardCount});
+  ChatStatisticsMessageInteractionInfo({this.messageId,
+    this.viewCount,
+    this.forwardCount});
 
   /// [messageId] Message identifier
   int? messageId;

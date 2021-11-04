@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class ImportContacts extends TdFunction {
 
   /// Adds new contacts or edits existing contacts by their phone numbers; contacts' user identifiers are ignored
-  ImportContacts({contacts});
+  ImportContacts({this.contacts});
 
   /// [contacts] The list of contacts to import or edit; contacts' vCard are ignored and are not imported
   List<Contact>? contacts;

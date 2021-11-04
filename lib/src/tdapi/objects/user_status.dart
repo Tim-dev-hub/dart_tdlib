@@ -71,7 +71,7 @@ class UserStatusEmpty extends UserStatus {
 class UserStatusOnline extends UserStatus {
 
   /// The user is online
-  UserStatusOnline({expires});
+  UserStatusOnline({this.expires});
 
   /// [expires] Point in time (Unix timestamp) when the user's online status will expire
   int? expires;
@@ -98,7 +98,7 @@ class UserStatusOnline extends UserStatus {
 class UserStatusOffline extends UserStatus {
 
   /// The user is offline
-  UserStatusOffline({wasOnline});
+  UserStatusOffline({this.wasOnline});
 
   /// [wasOnline] Point in time (Unix timestamp) when the user was last online
   int? wasOnline;

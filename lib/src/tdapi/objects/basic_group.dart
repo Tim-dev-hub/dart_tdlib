@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class BasicGroup extends TdObject {
 
   /// Represents a basic group of 0-200 users (must be upgraded to a supergroup to accommodate more than 200 users)
-  BasicGroup({id,
-    memberCount,
-    status,
-    isActive,
-    upgradedToSupergroupId});
+  BasicGroup({this.id,
+    this.memberCount,
+    this.status,
+    this.isActive,
+    this.upgradedToSupergroupId});
 
   /// [id] Group identifier
   int? id;

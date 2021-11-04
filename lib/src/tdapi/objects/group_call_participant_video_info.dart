@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class GroupCallParticipantVideoInfo extends TdObject {
 
   /// Contains information about a group call participant's video channel
-  GroupCallParticipantVideoInfo({sourceGroups,
-    endpointId,
-    isPaused});
+  GroupCallParticipantVideoInfo({this.sourceGroups,
+    this.endpointId,
+    this.isPaused});
 
   /// [sourceGroups] List of synchronization source groups of the video 
   List<GroupCallVideoSourceGroup>? sourceGroups;

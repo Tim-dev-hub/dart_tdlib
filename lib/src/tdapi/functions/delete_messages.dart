@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class DeleteMessages extends TdFunction {
 
   /// Deletes messages
-  DeleteMessages({chatId,
-    messageIds,
-    revoke});
+  DeleteMessages({this.chatId,
+    this.messageIds,
+    this.revoke});
 
   /// [chatId] Chat identifier 
   int? chatId;

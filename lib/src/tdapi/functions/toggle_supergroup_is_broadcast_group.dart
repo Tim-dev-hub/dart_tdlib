@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class ToggleSupergroupIsBroadcastGroup extends TdFunction {
 
   /// Upgrades supergroup to a broadcast group; requires owner privileges in the supergroup
-  ToggleSupergroupIsBroadcastGroup({supergroupId});
+  ToggleSupergroupIsBroadcastGroup({this.supergroupId});
 
   /// [supergroupId] Identifier of the supergroup
   int? supergroupId;

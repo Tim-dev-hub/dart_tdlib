@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class DateRange extends TdObject {
 
   /// Represents a date range
-  DateRange({startDate,
-    endDate});
+  DateRange({this.startDate,
+    this.endDate});
 
   /// [startDate] Point in time (Unix timestamp) at which the date range begins 
   int? startDate;

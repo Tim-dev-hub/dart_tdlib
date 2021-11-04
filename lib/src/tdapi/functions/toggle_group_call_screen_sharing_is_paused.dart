@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class ToggleGroupCallScreenSharingIsPaused extends TdFunction {
 
   /// Pauses or unpauses screen sharing in a joined group call
-  ToggleGroupCallScreenSharingIsPaused({groupCallId,
-    isPaused});
+  ToggleGroupCallScreenSharingIsPaused({this.groupCallId,
+    this.isPaused});
 
   /// [groupCallId] Group call identifier 
   int? groupCallId;

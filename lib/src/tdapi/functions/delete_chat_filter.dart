@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class DeleteChatFilter extends TdFunction {
 
   /// Deletes existing chat filter
-  DeleteChatFilter({chatFilterId});
+  DeleteChatFilter({this.chatFilterId});
 
   /// [chatFilterId] Chat filter identifier
   int? chatFilterId;

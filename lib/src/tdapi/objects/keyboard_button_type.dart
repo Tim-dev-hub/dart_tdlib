@@ -111,8 +111,8 @@ class KeyboardButtonTypeRequestLocation extends KeyboardButtonType {
 class KeyboardButtonTypeRequestPoll extends KeyboardButtonType {
 
   /// A button that allows the user to create and send a poll when pressed; available only in private chats
-  KeyboardButtonTypeRequestPoll({forceRegular,
-    forceQuiz});
+  KeyboardButtonTypeRequestPoll({this.forceRegular,
+    this.forceQuiz});
 
   /// [forceRegular] If true, only regular polls must be allowed to create 
   bool? forceRegular;

@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class Photo extends TdObject {
 
   /// Describes a photo
-  Photo({hasStickers,
-    minithumbnail,
-    sizes});
+  Photo({this.hasStickers,
+    this.minithumbnail,
+    this.sizes});
 
   /// [hasStickers] True, if stickers were added to the photo. The list of corresponding sticker sets can be received using getAttachedStickerSets
   bool? hasStickers;

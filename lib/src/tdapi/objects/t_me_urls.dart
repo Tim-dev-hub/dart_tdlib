@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class TMeUrls extends TdObject {
 
   /// Contains a list of t.me URLs
-  TMeUrls({urls});
+  TMeUrls({this.urls});
 
   /// [urls] List of URLs
   List<TMeUrl>? urls;

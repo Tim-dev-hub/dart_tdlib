@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class CallProtocol extends TdObject {
 
   /// Specifies the supported call protocols
-  CallProtocol({udpP2p,
-    udpReflector,
-    minLayer,
-    maxLayer,
-    libraryVersions});
+  CallProtocol({this.udpP2p,
+    this.udpReflector,
+    this.minLayer,
+    this.maxLayer,
+    this.libraryVersions});
 
   /// [udpP2p] True, if UDP peer-to-peer connections are supported
   bool? udpP2p;

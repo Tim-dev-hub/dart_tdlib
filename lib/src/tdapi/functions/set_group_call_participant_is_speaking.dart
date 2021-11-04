@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class SetGroupCallParticipantIsSpeaking extends TdFunction {
 
   /// Informs TDLib that speaking state of a participant of an active group has changed
-  SetGroupCallParticipantIsSpeaking({groupCallId,
-    audioSource,
-    isSpeaking});
+  SetGroupCallParticipantIsSpeaking({this.groupCallId,
+    this.audioSource,
+    this.isSpeaking});
 
   /// [groupCallId] Group call identifier
   int? groupCallId;

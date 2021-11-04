@@ -3,13 +3,13 @@ part of '../tdapi.dart';
 class JoinGroupCall extends TdFunction {
 
   /// Joins an active group call. Returns join response payload for tgcalls
-  JoinGroupCall({groupCallId,
-    participantId,
-    audioSourceId,
-    payload,
-    isMuted,
-    isMyVideoEnabled,
-    inviteHash});
+  JoinGroupCall({this.groupCallId,
+    this.participantId,
+    this.audioSourceId,
+    this.payload,
+    this.isMuted,
+    this.isMyVideoEnabled,
+    this.inviteHash});
 
   /// [groupCallId] Group call identifier
   int? groupCallId;

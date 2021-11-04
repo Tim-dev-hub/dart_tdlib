@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class PageBlockListItem extends TdObject {
 
   /// Describes an item of a list page block
-  PageBlockListItem({label,
-    pageBlocks});
+  PageBlockListItem({this.label,
+    this.pageBlocks});
 
   /// [label] Item label 
   String? label;

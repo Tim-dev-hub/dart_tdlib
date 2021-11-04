@@ -3,13 +3,13 @@ part of '../tdapi.dart';
 class SendInlineQueryResultMessage extends TdFunction {
 
   /// Sends the result of an inline query as a message. Returns the sent message. Always clears a chat draft message
-  SendInlineQueryResultMessage({chatId,
-    messageThreadId,
-    replyToMessageId,
-    options,
-    queryId,
-    resultId,
-    hideViaBot});
+  SendInlineQueryResultMessage({this.chatId,
+    this.messageThreadId,
+    this.replyToMessageId,
+    this.options,
+    this.queryId,
+    this.resultId,
+    this.hideViaBot});
 
   /// [chatId] Target chat
   int? chatId;

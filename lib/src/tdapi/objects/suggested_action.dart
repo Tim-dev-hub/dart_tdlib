@@ -137,7 +137,7 @@ class SuggestedActionSeeTicksHint extends SuggestedAction {
 class SuggestedActionConvertToBroadcastGroup extends SuggestedAction {
 
   /// Suggests the user to convert specified supergroup to a broadcast group
-  SuggestedActionConvertToBroadcastGroup({supergroupId});
+  SuggestedActionConvertToBroadcastGroup({this.supergroupId});
 
   /// [supergroupId] Supergroup identifier
   int? supergroupId;

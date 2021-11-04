@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class Location extends TdObject {
 
   /// Describes a location on planet Earth
-  Location({latitude,
-    longitude,
-    horizontalAccuracy});
+  Location({this.latitude,
+    this.longitude,
+    this.horizontalAccuracy});
 
   /// [latitude] Latitude of the location in degrees; as defined by the sender 
   double? latitude;

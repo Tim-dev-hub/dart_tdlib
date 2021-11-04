@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class TextEntities extends TdObject {
 
   /// Contains a list of text entities
-  TextEntities({entities});
+  TextEntities({this.entities});
 
   /// [entities] List of text entities
   List<TextEntity>? entities;

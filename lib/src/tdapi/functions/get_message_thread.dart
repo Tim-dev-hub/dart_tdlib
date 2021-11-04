@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GetMessageThread extends TdFunction {
 
   /// Returns information about a message thread. Can be used only if message.can_get_message_thread == true
-  GetMessageThread({chatId,
-    messageId});
+  GetMessageThread({this.chatId,
+    this.messageId});
 
   /// [chatId] Chat identifier 
   int? chatId;

@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class Count extends TdObject {
 
   /// Contains a counter
-  Count({count});
+  Count({this.count});
 
   /// [count] Count
   int? count;

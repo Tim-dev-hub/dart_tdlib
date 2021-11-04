@@ -3,13 +3,13 @@ part of '../tdapi.dart';
 class AnswerInlineQuery extends TdFunction {
 
   /// Sets the result of an inline query; for bots only
-  AnswerInlineQuery({inlineQueryId,
-    isPersonal,
-    results,
-    cacheTime,
-    nextOffset,
-    switchPmText,
-    switchPmParameter});
+  AnswerInlineQuery({this.inlineQueryId,
+    this.isPersonal,
+    this.results,
+    this.cacheTime,
+    this.nextOffset,
+    this.switchPmText,
+    this.switchPmParameter});
 
   /// [inlineQueryId] Identifier of the inline query
   int? inlineQueryId;

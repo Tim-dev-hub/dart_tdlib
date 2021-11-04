@@ -3,14 +3,14 @@ part of '../tdapi.dart';
 class SearchChatMessages extends TdFunction {
 
   /// Searches for messages with given words in the chat. Returns the results in reverse chronological order, i.e. in order of decreasing message_id. Cannot be used in secret chats with a non-empty query. (searchSecretMessages must be used instead), or without an enabled message database. For optimal performance, the number of returned messages is chosen by TDLib and can be smaller than the specified limit
-  SearchChatMessages({chatId,
-    query,
-    sender,
-    fromMessageId,
-    offset,
-    limit,
-    filter,
-    messageThreadId});
+  SearchChatMessages({this.chatId,
+    this.query,
+    this.sender,
+    this.fromMessageId,
+    this.offset,
+    this.limit,
+    this.filter,
+    this.messageThreadId});
 
   /// [chatId] Identifier of the chat in which to search messages
   int? chatId;

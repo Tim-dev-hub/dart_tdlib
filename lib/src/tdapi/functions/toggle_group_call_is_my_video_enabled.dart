@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class ToggleGroupCallIsMyVideoEnabled extends TdFunction {
 
   /// Toggles whether current user's video is enabled
-  ToggleGroupCallIsMyVideoEnabled({groupCallId,
-    isMyVideoEnabled});
+  ToggleGroupCallIsMyVideoEnabled({this.groupCallId,
+    this.isMyVideoEnabled});
 
   /// [groupCallId] Group call identifier 
   int? groupCallId;

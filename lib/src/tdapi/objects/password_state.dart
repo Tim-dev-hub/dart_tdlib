@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class PasswordState extends TdObject {
 
   /// Represents the current state of 2-step verification
-  PasswordState({hasPassword,
-    passwordHint,
-    hasRecoveryEmailAddress,
-    hasPassportData,
-    recoveryEmailAddressCodeInfo,
-    pendingResetDate});
+  PasswordState({this.hasPassword,
+    this.passwordHint,
+    this.hasRecoveryEmailAddress,
+    this.hasPassportData,
+    this.recoveryEmailAddressCodeInfo,
+    this.pendingResetDate});
 
   /// [hasPassword] True, if a 2-step verification password is set 
   bool? hasPassword;

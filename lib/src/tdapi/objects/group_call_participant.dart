@@ -3,24 +3,24 @@ part of '../tdapi.dart';
 class GroupCallParticipant extends TdObject {
 
   /// Represents a group call participant
-  GroupCallParticipant({participantId,
-    audioSourceId,
-    screenSharingAudioSourceId,
-    videoInfo,
-    screenSharingVideoInfo,
-    bio,
-    isCurrentUser,
-    isSpeaking,
-    isHandRaised,
-    canBeMutedForAllUsers,
-    canBeUnmutedForAllUsers,
-    canBeMutedForCurrentUser,
-    canBeUnmutedForCurrentUser,
-    isMutedForAllUsers,
-    isMutedForCurrentUser,
-    canUnmuteSelf,
-    volumeLevel,
-    order});
+  GroupCallParticipant({this.participantId,
+    this.audioSourceId,
+    this.screenSharingAudioSourceId,
+    this.videoInfo,
+    this.screenSharingVideoInfo,
+    this.bio,
+    this.isCurrentUser,
+    this.isSpeaking,
+    this.isHandRaised,
+    this.canBeMutedForAllUsers,
+    this.canBeUnmutedForAllUsers,
+    this.canBeMutedForCurrentUser,
+    this.canBeUnmutedForCurrentUser,
+    this.isMutedForAllUsers,
+    this.isMutedForCurrentUser,
+    this.canUnmuteSelf,
+    this.volumeLevel,
+    this.order});
 
   /// [participantId] Identifier of the group call participant
   MessageSender? participantId;

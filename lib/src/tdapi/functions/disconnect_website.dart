@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class DisconnectWebsite extends TdFunction {
 
   /// Disconnects website from the current user's Telegram account
-  DisconnectWebsite({websiteId});
+  DisconnectWebsite({this.websiteId});
 
   /// [websiteId] Website identifier
   int? websiteId;

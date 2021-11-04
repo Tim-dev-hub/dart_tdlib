@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class ChatAdministrators extends TdObject {
 
   /// Represents a list of chat administrators
-  ChatAdministrators({administrators});
+  ChatAdministrators({this.administrators});
 
   /// [administrators] A list of chat administrators
   List<ChatAdministrator>? administrators;

@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class CountryInfo extends TdObject {
 
   /// Contains information about a country
-  CountryInfo({countryCode,
-    name,
-    englishName,
-    isHidden,
-    callingCodes});
+  CountryInfo({this.countryCode,
+    this.name,
+    this.englishName,
+    this.isHidden,
+    this.callingCodes});
 
   /// [countryCode] A two-letter ISO 3166-1 alpha-2 country code
   String? countryCode;

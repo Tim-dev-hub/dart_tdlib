@@ -111,7 +111,7 @@ class PushMessageContent extends TdObject {
 class PushMessageContentHidden extends PushMessageContent {
 
   /// A general message with hidden content
-  PushMessageContentHidden({isPinned});
+  PushMessageContentHidden({this.isPinned});
 
   /// [isPinned] True, if the message is a pinned message with the specified content
   bool? isPinned;
@@ -138,9 +138,9 @@ class PushMessageContentHidden extends PushMessageContent {
 class PushMessageContentAnimation extends PushMessageContent {
 
   /// An animation message (GIF-style).
-  PushMessageContentAnimation({animation,
-    caption,
-    isPinned});
+  PushMessageContentAnimation({this.animation,
+    this.caption,
+    this.isPinned});
 
   /// [animation] Message content; may be null 
   Animation? animation;
@@ -177,8 +177,8 @@ class PushMessageContentAnimation extends PushMessageContent {
 class PushMessageContentAudio extends PushMessageContent {
 
   /// An audio message
-  PushMessageContentAudio({audio,
-    isPinned});
+  PushMessageContentAudio({this.audio,
+    this.isPinned});
 
   /// [audio] Message content; may be null 
   Audio? audio;
@@ -210,8 +210,8 @@ class PushMessageContentAudio extends PushMessageContent {
 class PushMessageContentContact extends PushMessageContent {
 
   /// A message with a user contact
-  PushMessageContentContact({name,
-    isPinned});
+  PushMessageContentContact({this.name,
+    this.isPinned});
 
   /// [name] Contact's name 
   String? name;
@@ -266,8 +266,8 @@ class PushMessageContentContactRegistered extends PushMessageContent {
 class PushMessageContentDocument extends PushMessageContent {
 
   /// A document message (a general file)
-  PushMessageContentDocument({document,
-    isPinned});
+  PushMessageContentDocument({this.document,
+    this.isPinned});
 
   /// [document] Message content; may be null 
   Document? document;
@@ -299,8 +299,8 @@ class PushMessageContentDocument extends PushMessageContent {
 class PushMessageContentGame extends PushMessageContent {
 
   /// A message with a game
-  PushMessageContentGame({title,
-    isPinned});
+  PushMessageContentGame({this.title,
+    this.isPinned});
 
   /// [title] Game title, empty for pinned game message 
   String? title;
@@ -332,9 +332,9 @@ class PushMessageContentGame extends PushMessageContent {
 class PushMessageContentGameScore extends PushMessageContent {
 
   /// A new high score was achieved in a game
-  PushMessageContentGameScore({title,
-    score,
-    isPinned});
+  PushMessageContentGameScore({this.title,
+    this.score,
+    this.isPinned});
 
   /// [title] Game title, empty for pinned message 
   String? title;
@@ -371,8 +371,8 @@ class PushMessageContentGameScore extends PushMessageContent {
 class PushMessageContentInvoice extends PushMessageContent {
 
   /// A message with an invoice from a bot
-  PushMessageContentInvoice({price,
-    isPinned});
+  PushMessageContentInvoice({this.price,
+    this.isPinned});
 
   /// [price] Product price 
   String? price;
@@ -404,8 +404,8 @@ class PushMessageContentInvoice extends PushMessageContent {
 class PushMessageContentLocation extends PushMessageContent {
 
   /// A message with a location
-  PushMessageContentLocation({isLive,
-    isPinned});
+  PushMessageContentLocation({this.isLive,
+    this.isPinned});
 
   /// [isLive] True, if the location is live 
   bool? isLive;
@@ -437,10 +437,10 @@ class PushMessageContentLocation extends PushMessageContent {
 class PushMessageContentPhoto extends PushMessageContent {
 
   /// A photo message
-  PushMessageContentPhoto({photo,
-    caption,
-    isSecret,
-    isPinned});
+  PushMessageContentPhoto({this.photo,
+    this.caption,
+    this.isSecret,
+    this.isPinned});
 
   /// [photo] Message content; may be null 
   Photo? photo;
@@ -482,9 +482,9 @@ class PushMessageContentPhoto extends PushMessageContent {
 class PushMessageContentPoll extends PushMessageContent {
 
   /// A message with a poll
-  PushMessageContentPoll({question,
-    isRegular,
-    isPinned});
+  PushMessageContentPoll({this.question,
+    this.isRegular,
+    this.isPinned});
 
   /// [question] Poll question 
   String? question;
@@ -544,9 +544,9 @@ class PushMessageContentScreenshotTaken extends PushMessageContent {
 class PushMessageContentSticker extends PushMessageContent {
 
   /// A message with a sticker
-  PushMessageContentSticker({sticker,
-    emoji,
-    isPinned});
+  PushMessageContentSticker({this.sticker,
+    this.emoji,
+    this.isPinned});
 
   /// [sticker] Message content; may be null 
   Sticker? sticker;
@@ -583,8 +583,8 @@ class PushMessageContentSticker extends PushMessageContent {
 class PushMessageContentText extends PushMessageContent {
 
   /// A text message
-  PushMessageContentText({text,
-    isPinned});
+  PushMessageContentText({this.text,
+    this.isPinned});
 
   /// [text] Message text 
   String? text;
@@ -616,10 +616,10 @@ class PushMessageContentText extends PushMessageContent {
 class PushMessageContentVideo extends PushMessageContent {
 
   /// A video message
-  PushMessageContentVideo({video,
-    caption,
-    isSecret,
-    isPinned});
+  PushMessageContentVideo({this.video,
+    this.caption,
+    this.isSecret,
+    this.isPinned});
 
   /// [video] Message content; may be null 
   Video? video;
@@ -661,8 +661,8 @@ class PushMessageContentVideo extends PushMessageContent {
 class PushMessageContentVideoNote extends PushMessageContent {
 
   /// A video note message
-  PushMessageContentVideoNote({videoNote,
-    isPinned});
+  PushMessageContentVideoNote({this.videoNote,
+    this.isPinned});
 
   /// [videoNote] Message content; may be null 
   VideoNote? videoNote;
@@ -694,8 +694,8 @@ class PushMessageContentVideoNote extends PushMessageContent {
 class PushMessageContentVoiceNote extends PushMessageContent {
 
   /// A voice note message
-  PushMessageContentVoiceNote({voiceNote,
-    isPinned});
+  PushMessageContentVoiceNote({this.voiceNote,
+    this.isPinned});
 
   /// [voiceNote] Message content; may be null 
   VoiceNote? voiceNote;
@@ -750,9 +750,9 @@ class PushMessageContentBasicGroupChatCreate extends PushMessageContent {
 class PushMessageContentChatAddMembers extends PushMessageContent {
 
   /// New chat members were invited to a group
-  PushMessageContentChatAddMembers({memberName,
-    isCurrentUser,
-    isReturned});
+  PushMessageContentChatAddMembers({this.memberName,
+    this.isCurrentUser,
+    this.isReturned});
 
   /// [memberName] Name of the added member 
   String? memberName;
@@ -812,7 +812,7 @@ class PushMessageContentChatChangePhoto extends PushMessageContent {
 class PushMessageContentChatChangeTitle extends PushMessageContent {
 
   /// A chat title was edited
-  PushMessageContentChatChangeTitle({title});
+  PushMessageContentChatChangeTitle({this.title});
 
   /// [title] New chat title
   String? title;
@@ -839,7 +839,7 @@ class PushMessageContentChatChangeTitle extends PushMessageContent {
 class PushMessageContentChatSetTheme extends PushMessageContent {
 
   /// A chat theme was edited
-  PushMessageContentChatSetTheme({themeName});
+  PushMessageContentChatSetTheme({this.themeName});
 
   /// [themeName] If non-empty, name of a new theme, set for the chat. Otherwise chat theme was reset to the default one
   String? themeName;
@@ -866,9 +866,9 @@ class PushMessageContentChatSetTheme extends PushMessageContent {
 class PushMessageContentChatDeleteMember extends PushMessageContent {
 
   /// A chat member was deleted
-  PushMessageContentChatDeleteMember({memberName,
-    isCurrentUser,
-    isLeft});
+  PushMessageContentChatDeleteMember({this.memberName,
+    this.isCurrentUser,
+    this.isLeft});
 
   /// [memberName] Name of the deleted member 
   String? memberName;
@@ -928,7 +928,7 @@ class PushMessageContentChatJoinByLink extends PushMessageContent {
 class PushMessageContentMessageForwards extends PushMessageContent {
 
   /// A forwarded messages
-  PushMessageContentMessageForwards({totalCount});
+  PushMessageContentMessageForwards({this.totalCount});
 
   /// [totalCount] Number of forwarded messages
   int? totalCount;
@@ -955,11 +955,11 @@ class PushMessageContentMessageForwards extends PushMessageContent {
 class PushMessageContentMediaAlbum extends PushMessageContent {
 
   /// A media album
-  PushMessageContentMediaAlbum({totalCount,
-    hasPhotos,
-    hasVideos,
-    hasAudios,
-    hasDocuments});
+  PushMessageContentMediaAlbum({this.totalCount,
+    this.hasPhotos,
+    this.hasVideos,
+    this.hasAudios,
+    this.hasDocuments});
 
   /// [totalCount] Number of messages in the album 
   int? totalCount;

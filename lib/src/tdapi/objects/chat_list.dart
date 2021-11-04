@@ -85,7 +85,7 @@ class ChatListArchive extends ChatList {
 class ChatListFilter extends ChatList {
 
   /// A list of chats belonging to a chat filter
-  ChatListFilter({chatFilterId});
+  ChatListFilter({this.chatFilterId});
 
   /// [chatFilterId] Chat filter identifier
   int? chatFilterId;

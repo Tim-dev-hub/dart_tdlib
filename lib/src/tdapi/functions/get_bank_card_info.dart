@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetBankCardInfo extends TdFunction {
 
   /// Returns information about a bank card
-  GetBankCardInfo({bankCardNumber});
+  GetBankCardInfo({this.bankCardNumber});
 
   /// [bankCardNumber] The bank card number
   String? bankCardNumber;

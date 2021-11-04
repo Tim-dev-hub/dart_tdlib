@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class Document extends TdObject {
 
   /// Describes a document of any type
-  Document({fileName,
-    mimeType,
-    minithumbnail,
-    thumbnail,
-    document});
+  Document({this.fileName,
+    this.mimeType,
+    this.minithumbnail,
+    this.thumbnail,
+    this.document});
 
   /// [fileName] Original name of the file; as defined by the sender 
   String? fileName;

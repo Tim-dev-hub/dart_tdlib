@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class SetAlarm extends TdFunction {
 
   /// Succeeds after a specified amount of time has passed. Can be called before initialization
-  SetAlarm({seconds});
+  SetAlarm({this.seconds});
 
   /// [seconds] Number of seconds before the function returns
   double? seconds;

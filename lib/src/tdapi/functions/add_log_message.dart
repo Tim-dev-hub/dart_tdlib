@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class AddLogMessage extends TdFunction {
 
   /// Adds a message to TDLib internal log. Can be called synchronously
-  AddLogMessage({verbosityLevel,
-    text});
+  AddLogMessage({this.verbosityLevel,
+    this.text});
 
   /// [verbosityLevel] The minimum verbosity level needed for the message to be logged; 0-1023
   int? verbosityLevel;

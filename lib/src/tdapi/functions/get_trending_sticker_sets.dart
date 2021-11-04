@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GetTrendingStickerSets extends TdFunction {
 
   /// Returns a list of trending sticker sets. For optimal performance, the number of returned sticker sets is chosen by TDLib
-  GetTrendingStickerSets({offset,
-    limit});
+  GetTrendingStickerSets({this.offset,
+    this.limit});
 
   /// [offset] The offset from which to return the sticker sets; must be non-negative
   int? offset;

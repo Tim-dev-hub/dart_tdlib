@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class PersonalDocument extends TdObject {
 
   /// A personal document, containing some information about a user
-  PersonalDocument({files,
-    translation});
+  PersonalDocument({this.files,
+    this.translation});
 
   /// [files] List of files containing the pages of the document 
   List<DatedFile>? files;

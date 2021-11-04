@@ -3,13 +3,13 @@ part of '../tdapi.dart';
 class SendPaymentForm extends TdFunction {
 
   /// Sends a filled-out payment form to the bot for final verification
-  SendPaymentForm({chatId,
-    messageId,
-    paymentFormId,
-    orderInfoId,
-    shippingOptionId,
-    credentials,
-    tipAmount});
+  SendPaymentForm({this.chatId,
+    this.messageId,
+    this.paymentFormId,
+    this.orderInfoId,
+    this.shippingOptionId,
+    this.credentials,
+    this.tipAmount});
 
   /// [chatId] Chat identifier of the Invoice message 
   int? chatId;

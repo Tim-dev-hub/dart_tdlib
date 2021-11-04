@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class SendCallRating extends TdFunction {
 
   /// Sends a call rating
-  SendCallRating({callId,
-    rating,
-    comment,
-    problems});
+  SendCallRating({this.callId,
+    this.rating,
+    this.comment,
+    this.problems});
 
   /// [callId] Call identifier 
   int? callId;

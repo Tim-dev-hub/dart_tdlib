@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class RemoveContacts extends TdFunction {
 
   /// Removes users from the contact list
-  RemoveContacts({userIds});
+  RemoveContacts({this.userIds});
 
   /// [userIds] Identifiers of users to be deleted
   List<int>? userIds;

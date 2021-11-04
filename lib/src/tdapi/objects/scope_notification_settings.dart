@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class ScopeNotificationSettings extends TdObject {
 
   /// Contains information about notification settings for several chats
-  ScopeNotificationSettings({muteFor,
-    sound,
-    showPreview,
-    disablePinnedMessageNotifications,
-    disableMentionNotifications});
+  ScopeNotificationSettings({this.muteFor,
+    this.sound,
+    this.showPreview,
+    this.disablePinnedMessageNotifications,
+    this.disableMentionNotifications});
 
   /// [muteFor] Time left before notifications will be unmuted, in seconds
   int? muteFor;

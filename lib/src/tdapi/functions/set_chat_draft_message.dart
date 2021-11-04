@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class SetChatDraftMessage extends TdFunction {
 
   /// Changes the draft message in a chat
-  SetChatDraftMessage({chatId,
-    messageThreadId,
-    draftMessage});
+  SetChatDraftMessage({this.chatId,
+    this.messageThreadId,
+    this.draftMessage});
 
   /// [chatId] Chat identifier 
   int? chatId;

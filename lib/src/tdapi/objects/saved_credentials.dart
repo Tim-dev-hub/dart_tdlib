@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class SavedCredentials extends TdObject {
 
   /// Contains information about saved card credentials
-  SavedCredentials({id,
-    title});
+  SavedCredentials({this.id,
+    this.title});
 
   /// [id] Unique identifier of the saved credentials 
   String? id;

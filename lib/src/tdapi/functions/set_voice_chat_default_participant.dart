@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class SetVoiceChatDefaultParticipant extends TdFunction {
 
   /// Changes default participant identifier, which can be used to join voice chats in a chat
-  SetVoiceChatDefaultParticipant({chatId,
-    defaultParticipantId});
+  SetVoiceChatDefaultParticipant({this.chatId,
+    this.defaultParticipantId});
 
   /// [chatId] Chat identifier 
   int? chatId;

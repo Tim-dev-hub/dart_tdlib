@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class ImportMessages extends TdFunction {
 
   /// Imports messages exported from another app
-  ImportMessages({chatId,
-    messageFile,
-    attachedFiles});
+  ImportMessages({this.chatId,
+    this.messageFile,
+    this.attachedFiles});
 
   /// [chatId] Identifier of a chat to which the messages will be imported. It must be an identifier of a private chat with a mutual contact or an identifier of a supergroup chat with can_change_info administrator right
   int? chatId;

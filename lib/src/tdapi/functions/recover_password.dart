@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class RecoverPassword extends TdFunction {
 
   /// Recovers the 2-step verification password using a recovery code sent to an email address that was previously set up
-  RecoverPassword({recoveryCode,
-    newPassword,
-    newHint});
+  RecoverPassword({this.recoveryCode,
+    this.newPassword,
+    this.newHint});
 
   /// [recoveryCode] Recovery code to check
   String? recoveryCode;

@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GroupCallVideoSourceGroup extends TdObject {
 
   /// Describes a group of video synchronization source identifiers
-  GroupCallVideoSourceGroup({semantics,
-    sourceIds});
+  GroupCallVideoSourceGroup({this.semantics,
+    this.sourceIds});
 
   /// [semantics] The semantics of sources, one of "SIM" or "FgroupCallVideoSourceGroup" 
   String? semantics;

@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class GetPassportAuthorizationForm extends TdFunction {
 
   /// Returns a Telegram Passport authorization form for sharing data with a service
-  GetPassportAuthorizationForm({botUserId,
-    scope,
-    publicKey,
-    nonce});
+  GetPassportAuthorizationForm({this.botUserId,
+    this.scope,
+    this.publicKey,
+    this.nonce});
 
   /// [botUserId] User identifier of the service's bot 
   int? botUserId;

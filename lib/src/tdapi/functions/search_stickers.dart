@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class SearchStickers extends TdFunction {
 
   /// Searches for stickers from public sticker sets that correspond to a given emoji
-  SearchStickers({emoji,
-    limit});
+  SearchStickers({this.emoji,
+    this.limit});
 
   /// [emoji] String representation of emoji; must be non-empty 
   String? emoji;

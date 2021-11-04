@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class AnimatedChatPhoto extends TdObject {
 
   /// Animated variant of a chat photo in MPEG4 format
-  AnimatedChatPhoto({length,
-    file,
-    mainFrameTimestamp});
+  AnimatedChatPhoto({this.length,
+    this.file,
+    this.mainFrameTimestamp});
 
   /// [length] Animation width and height
   int? length;

@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class PhoneNumberAuthenticationSettings extends TdObject {
 
   /// Contains settings for the authentication of the user's phone number
-  PhoneNumberAuthenticationSettings({allowFlashCall,
-    isCurrentPhoneNumber,
-    allowSmsRetrieverApi});
+  PhoneNumberAuthenticationSettings({this.allowFlashCall,
+    this.isCurrentPhoneNumber,
+    this.allowSmsRetrieverApi});
 
   /// [allowFlashCall] Pass true if the authentication code may be sent via flash call to the specified phone number
   bool? allowFlashCall;

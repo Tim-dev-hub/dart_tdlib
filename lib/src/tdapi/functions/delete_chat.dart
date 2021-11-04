@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class DeleteChat extends TdFunction {
 
   /// Deletes a chat along with all messages in the corresponding chat for all chat members; requires owner privileges. For group chats this will release the username and remove all members. Chats with more than 1000 members can't be deleted using this method
-  DeleteChat({chatId});
+  DeleteChat({this.chatId});
 
   /// [chatId] Chat identifier
   int? chatId;

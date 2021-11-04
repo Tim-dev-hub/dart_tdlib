@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class ReadAllChatMentions extends TdFunction {
 
   /// Marks all mentions in a chat as read
-  ReadAllChatMentions({chatId});
+  ReadAllChatMentions({this.chatId});
 
   /// [chatId] Chat identifier
   int? chatId;

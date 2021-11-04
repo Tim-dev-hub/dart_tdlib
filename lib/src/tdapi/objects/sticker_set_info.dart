@@ -3,19 +3,19 @@ part of '../tdapi.dart';
 class StickerSetInfo extends TdObject {
 
   /// Represents short information about a sticker set
-  StickerSetInfo({id,
-    title,
-    name,
-    thumbnail,
-    thumbnailOutline,
-    isInstalled,
-    isArchived,
-    isOfficial,
-    isAnimated,
-    isMasks,
-    isViewed,
-    size,
-    covers});
+  StickerSetInfo({this.id,
+    this.title,
+    this.name,
+    this.thumbnail,
+    this.thumbnailOutline,
+    this.isInstalled,
+    this.isArchived,
+    this.isOfficial,
+    this.isAnimated,
+    this.isMasks,
+    this.isViewed,
+    this.size,
+    this.covers});
 
   /// [id] Identifier of the sticker set
   int? id;

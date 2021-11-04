@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class ChatsNearby extends TdObject {
 
   /// Represents a list of chats located nearby
-  ChatsNearby({usersNearby,
-    supergroupsNearby});
+  ChatsNearby({this.usersNearby,
+    this.supergroupsNearby});
 
   /// [usersNearby] List of users nearby 
   List<ChatNearby>? usersNearby;

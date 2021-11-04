@@ -81,9 +81,9 @@ class InputMessageContent extends TdObject {
 class InputMessageText extends InputMessageContent {
 
   /// A text message
-  InputMessageText({text,
-    disableWebPagePreview,
-    clearDraft});
+  InputMessageText({this.text,
+    this.disableWebPagePreview,
+    this.clearDraft});
 
   /// [text] Formatted text to be sent; 1-GetOption("message_text_length_max") characters. Only Bold, Italic, Underline, Strikethrough, Code, Pre, PreCode, TextUrl and MentionName entities are allowed to be specified manually
   FormattedText? text;
@@ -120,13 +120,13 @@ class InputMessageText extends InputMessageContent {
 class InputMessageAnimation extends InputMessageContent {
 
   /// An animation message (GIF-style).
-  InputMessageAnimation({animation,
-    thumbnail,
-    addedStickerFileIds,
-    duration,
-    width,
-    height,
-    caption});
+  InputMessageAnimation({this.animation,
+    this.thumbnail,
+    this.addedStickerFileIds,
+    this.duration,
+    this.width,
+    this.height,
+    this.caption});
 
   /// [animation] Animation file to be sent 
   InputFile? animation;
@@ -183,12 +183,12 @@ class InputMessageAnimation extends InputMessageContent {
 class InputMessageAudio extends InputMessageContent {
 
   /// An audio message
-  InputMessageAudio({audio,
-    albumCoverThumbnail,
-    duration,
-    title,
-    performer,
-    caption});
+  InputMessageAudio({this.audio,
+    this.albumCoverThumbnail,
+    this.duration,
+    this.title,
+    this.performer,
+    this.caption});
 
   /// [audio] Audio file to be sent 
   InputFile? audio;
@@ -240,10 +240,10 @@ class InputMessageAudio extends InputMessageContent {
 class InputMessageDocument extends InputMessageContent {
 
   /// A document message (general file)
-  InputMessageDocument({document,
-    thumbnail,
-    disableContentTypeDetection,
-    caption});
+  InputMessageDocument({this.document,
+    this.thumbnail,
+    this.disableContentTypeDetection,
+    this.caption});
 
   /// [document] Document to be sent 
   InputFile? document;
@@ -285,13 +285,13 @@ class InputMessageDocument extends InputMessageContent {
 class InputMessagePhoto extends InputMessageContent {
 
   /// A photo message
-  InputMessagePhoto({photo,
-    thumbnail,
-    addedStickerFileIds,
-    width,
-    height,
-    caption,
-    ttl});
+  InputMessagePhoto({this.photo,
+    this.thumbnail,
+    this.addedStickerFileIds,
+    this.width,
+    this.height,
+    this.caption,
+    this.ttl});
 
   /// [photo] Photo to send 
   InputFile? photo;
@@ -348,11 +348,11 @@ class InputMessagePhoto extends InputMessageContent {
 class InputMessageSticker extends InputMessageContent {
 
   /// A sticker message
-  InputMessageSticker({sticker,
-    thumbnail,
-    width,
-    height,
-    emoji});
+  InputMessageSticker({this.sticker,
+    this.thumbnail,
+    this.width,
+    this.height,
+    this.emoji});
 
   /// [sticker] Sticker to be sent 
   InputFile? sticker;
@@ -399,15 +399,15 @@ class InputMessageSticker extends InputMessageContent {
 class InputMessageVideo extends InputMessageContent {
 
   /// A video message
-  InputMessageVideo({video,
-    thumbnail,
-    addedStickerFileIds,
-    duration,
-    width,
-    height,
-    supportsStreaming,
-    caption,
-    ttl});
+  InputMessageVideo({this.video,
+    this.thumbnail,
+    this.addedStickerFileIds,
+    this.duration,
+    this.width,
+    this.height,
+    this.supportsStreaming,
+    this.caption,
+    this.ttl});
 
   /// [video] Video to be sent 
   InputFile? video;
@@ -474,10 +474,10 @@ class InputMessageVideo extends InputMessageContent {
 class InputMessageVideoNote extends InputMessageContent {
 
   /// A video note message
-  InputMessageVideoNote({videoNote,
-    thumbnail,
-    duration,
-    length});
+  InputMessageVideoNote({this.videoNote,
+    this.thumbnail,
+    this.duration,
+    this.length});
 
   /// [videoNote] Video note to be sent 
   InputFile? videoNote;
@@ -519,10 +519,10 @@ class InputMessageVideoNote extends InputMessageContent {
 class InputMessageVoiceNote extends InputMessageContent {
 
   /// A voice note message
-  InputMessageVoiceNote({voiceNote,
-    duration,
-    waveform,
-    caption});
+  InputMessageVoiceNote({this.voiceNote,
+    this.duration,
+    this.waveform,
+    this.caption});
 
   /// [voiceNote] Voice note to be sent 
   InputFile? voiceNote;
@@ -564,10 +564,10 @@ class InputMessageVoiceNote extends InputMessageContent {
 class InputMessageLocation extends InputMessageContent {
 
   /// A message with a location
-  InputMessageLocation({location,
-    livePeriod,
-    heading,
-    proximityAlertRadius});
+  InputMessageLocation({this.location,
+    this.livePeriod,
+    this.heading,
+    this.proximityAlertRadius});
 
   /// [location] Location to be sent 
   Location? location;
@@ -609,7 +609,7 @@ class InputMessageLocation extends InputMessageContent {
 class InputMessageVenue extends InputMessageContent {
 
   /// A message with information about a venue
-  InputMessageVenue({venue});
+  InputMessageVenue({this.venue});
 
   /// [venue] Venue to send
   Venue? venue;
@@ -636,7 +636,7 @@ class InputMessageVenue extends InputMessageContent {
 class InputMessageContact extends InputMessageContent {
 
   /// A message containing a user contact
-  InputMessageContact({contact});
+  InputMessageContact({this.contact});
 
   /// [contact] Contact to send
   Contact? contact;
@@ -663,8 +663,8 @@ class InputMessageContact extends InputMessageContent {
 class InputMessageDice extends InputMessageContent {
 
   /// A dice message
-  InputMessageDice({emoji,
-    clearDraft});
+  InputMessageDice({this.emoji,
+    this.clearDraft});
 
   /// [emoji] Emoji on which the dice throw animation is based 
   String? emoji;
@@ -696,8 +696,8 @@ class InputMessageDice extends InputMessageContent {
 class InputMessageGame extends InputMessageContent {
 
   /// A message with a game; not supported for channels or secret chats
-  InputMessageGame({botUserId,
-    gameShortName});
+  InputMessageGame({this.botUserId,
+    this.gameShortName});
 
   /// [botUserId] User identifier of the bot that owns the game 
   int? botUserId;
@@ -729,17 +729,17 @@ class InputMessageGame extends InputMessageContent {
 class InputMessageInvoice extends InputMessageContent {
 
   /// A message with an invoice; can be used only by bots
-  InputMessageInvoice({invoice,
-    title,
-    description,
-    photoUrl,
-    photoSize,
-    photoWidth,
-    photoHeight,
-    payload,
-    providerToken,
-    providerData,
-    startParameter});
+  InputMessageInvoice({this.invoice,
+    this.title,
+    this.description,
+    this.photoUrl,
+    this.photoSize,
+    this.photoWidth,
+    this.photoHeight,
+    this.payload,
+    this.providerToken,
+    this.providerData,
+    this.startParameter});
 
   /// [invoice] Invoice 
   Invoice? invoice;
@@ -816,13 +816,13 @@ class InputMessageInvoice extends InputMessageContent {
 class InputMessagePoll extends InputMessageContent {
 
   /// A message with a poll. Polls can't be sent to secret chats. Polls can be sent only to a private chat with a bot
-  InputMessagePoll({question,
-    options,
-    isAnonymous,
-    type,
-    openPeriod,
-    closeDate,
-    isClosed});
+  InputMessagePoll({this.question,
+    this.options,
+    this.isAnonymous,
+    this.type,
+    this.openPeriod,
+    this.closeDate,
+    this.isClosed});
 
   /// [question] Poll question; 1-255 characters (up to 300 characters for bots) 
   String? question;
@@ -879,10 +879,10 @@ class InputMessagePoll extends InputMessageContent {
 class InputMessageForwarded extends InputMessageContent {
 
   /// A forwarded message
-  InputMessageForwarded({fromChatId,
-    messageId,
-    inGameShare,
-    copyOptions});
+  InputMessageForwarded({this.fromChatId,
+    this.messageId,
+    this.inGameShare,
+    this.copyOptions});
 
   /// [fromChatId] Identifier for the chat this forwarded message came from 
   int? fromChatId;

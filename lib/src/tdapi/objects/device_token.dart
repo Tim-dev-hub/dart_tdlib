@@ -63,8 +63,8 @@ class DeviceToken extends TdObject {
 class DeviceTokenFirebaseCloudMessaging extends DeviceToken {
 
   /// A token for Firebase Cloud Messaging
-  DeviceTokenFirebaseCloudMessaging({token,
-    encrypt});
+  DeviceTokenFirebaseCloudMessaging({this.token,
+    this.encrypt});
 
   /// [token] Device registration token; may be empty to de-register a device 
   String? token;
@@ -96,8 +96,8 @@ class DeviceTokenFirebaseCloudMessaging extends DeviceToken {
 class DeviceTokenApplePush extends DeviceToken {
 
   /// A token for Apple Push Notification service
-  DeviceTokenApplePush({deviceToken,
-    isAppSandbox});
+  DeviceTokenApplePush({this.deviceToken,
+    this.isAppSandbox});
 
   /// [deviceToken] Device token; may be empty to de-register a device 
   String? deviceToken;
@@ -129,9 +129,9 @@ class DeviceTokenApplePush extends DeviceToken {
 class DeviceTokenApplePushVoIP extends DeviceToken {
 
   /// A token for Apple Push Notification service VoIP notifications
-  DeviceTokenApplePushVoIP({deviceToken,
-    isAppSandbox,
-    encrypt});
+  DeviceTokenApplePushVoIP({this.deviceToken,
+    this.isAppSandbox,
+    this.encrypt});
 
   /// [deviceToken] Device token; may be empty to de-register a device 
   String? deviceToken;
@@ -168,7 +168,7 @@ class DeviceTokenApplePushVoIP extends DeviceToken {
 class DeviceTokenWindowsPush extends DeviceToken {
 
   /// A token for Windows Push Notification Services
-  DeviceTokenWindowsPush({accessToken});
+  DeviceTokenWindowsPush({this.accessToken});
 
   /// [accessToken] The access token that will be used to send notifications; may be empty to de-register a device
   String? accessToken;
@@ -195,7 +195,7 @@ class DeviceTokenWindowsPush extends DeviceToken {
 class DeviceTokenMicrosoftPush extends DeviceToken {
 
   /// A token for Microsoft Push Notification Service
-  DeviceTokenMicrosoftPush({channelUri});
+  DeviceTokenMicrosoftPush({this.channelUri});
 
   /// [channelUri] Push notification channel URI; may be empty to de-register a device
   String? channelUri;
@@ -222,7 +222,7 @@ class DeviceTokenMicrosoftPush extends DeviceToken {
 class DeviceTokenMicrosoftPushVoIP extends DeviceToken {
 
   /// A token for Microsoft Push Notification Service VoIP channel
-  DeviceTokenMicrosoftPushVoIP({channelUri});
+  DeviceTokenMicrosoftPushVoIP({this.channelUri});
 
   /// [channelUri] Push notification channel URI; may be empty to de-register a device
   String? channelUri;
@@ -249,9 +249,9 @@ class DeviceTokenMicrosoftPushVoIP extends DeviceToken {
 class DeviceTokenWebPush extends DeviceToken {
 
   /// A token for web Push API
-  DeviceTokenWebPush({endpoint,
-    p256dhBase64url,
-    authBase64url});
+  DeviceTokenWebPush({this.endpoint,
+    this.p256dhBase64url,
+    this.authBase64url});
 
   /// [endpoint] Absolute URL exposed by the push service where the application server can send push messages; may be empty to de-register a device
   String? endpoint;
@@ -288,7 +288,7 @@ class DeviceTokenWebPush extends DeviceToken {
 class DeviceTokenSimplePush extends DeviceToken {
 
   /// A token for Simple Push API for Firefox OS
-  DeviceTokenSimplePush({endpoint});
+  DeviceTokenSimplePush({this.endpoint});
 
   /// [endpoint] Absolute URL exposed by the push service where the application server can send push messages; may be empty to de-register a device
   String? endpoint;
@@ -315,7 +315,7 @@ class DeviceTokenSimplePush extends DeviceToken {
 class DeviceTokenUbuntuPush extends DeviceToken {
 
   /// A token for Ubuntu Push Client service
-  DeviceTokenUbuntuPush({token});
+  DeviceTokenUbuntuPush({this.token});
 
   /// [token] Token; may be empty to de-register a device
   String? token;
@@ -342,7 +342,7 @@ class DeviceTokenUbuntuPush extends DeviceToken {
 class DeviceTokenBlackBerryPush extends DeviceToken {
 
   /// A token for BlackBerry Push Service
-  DeviceTokenBlackBerryPush({token});
+  DeviceTokenBlackBerryPush({this.token});
 
   /// [token] Token; may be empty to de-register a device
   String? token;
@@ -369,7 +369,7 @@ class DeviceTokenBlackBerryPush extends DeviceToken {
 class DeviceTokenTizenPush extends DeviceToken {
 
   /// A token for Tizen Push Service
-  DeviceTokenTizenPush({regId});
+  DeviceTokenTizenPush({this.regId});
 
   /// [regId] Push service registration identifier; may be empty to de-register a device
   String? regId;

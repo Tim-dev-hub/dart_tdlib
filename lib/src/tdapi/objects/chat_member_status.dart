@@ -48,9 +48,9 @@ class ChatMemberStatus extends TdObject {
 class ChatMemberStatusCreator extends ChatMemberStatus {
 
   /// The user is the owner of the chat and has all the administrator privileges
-  ChatMemberStatusCreator({customTitle,
-    isAnonymous,
-    isMember});
+  ChatMemberStatusCreator({this.customTitle,
+    this.isAnonymous,
+    this.isMember});
 
   /// [customTitle] A custom title of the owner; 0-16 characters without emojis; applicable to supergroups only
   String? customTitle;
@@ -87,19 +87,19 @@ class ChatMemberStatusCreator extends ChatMemberStatus {
 class ChatMemberStatusAdministrator extends ChatMemberStatus {
 
   /// The user is a member of the chat and has some additional privileges. In basic groups, administrators can edit and delete messages sent by others, add new members, ban unprivileged members, and manage voice chats. In supergroups and channels, there are more detailed options for administrator privileges
-  ChatMemberStatusAdministrator({customTitle,
-    canBeEdited,
-    canManageChat,
-    canChangeInfo,
-    canPostMessages,
-    canEditMessages,
-    canDeleteMessages,
-    canInviteUsers,
-    canRestrictMembers,
-    canPinMessages,
-    canPromoteMembers,
-    canManageVoiceChats,
-    isAnonymous});
+  ChatMemberStatusAdministrator({this.customTitle,
+    this.canBeEdited,
+    this.canManageChat,
+    this.canChangeInfo,
+    this.canPostMessages,
+    this.canEditMessages,
+    this.canDeleteMessages,
+    this.canInviteUsers,
+    this.canRestrictMembers,
+    this.canPinMessages,
+    this.canPromoteMembers,
+    this.canManageVoiceChats,
+    this.isAnonymous});
 
   /// [customTitle] A custom title of the administrator; 0-16 characters without emojis; applicable to supergroups only
   String? customTitle;
@@ -209,9 +209,9 @@ class ChatMemberStatusMember extends ChatMemberStatus {
 class ChatMemberStatusRestricted extends ChatMemberStatus {
 
   /// The user is under certain restrictions in the chat. Not supported in basic groups and channels
-  ChatMemberStatusRestricted({isMember,
-    restrictedUntilDate,
-    permissions});
+  ChatMemberStatusRestricted({this.isMember,
+    this.restrictedUntilDate,
+    this.permissions});
 
   /// [isMember] True, if the user is a member of the chat
   bool? isMember;
@@ -271,7 +271,7 @@ class ChatMemberStatusLeft extends ChatMemberStatus {
 class ChatMemberStatusBanned extends ChatMemberStatus {
 
   /// The user or the chat was banned (and hence is not a member of the chat). Implies the user can't return to the chat, view messages, or be used as a participant identifier to join a voice chat of the chat
-  ChatMemberStatusBanned({bannedUntilDate});
+  ChatMemberStatusBanned({this.bannedUntilDate});
 
   /// [bannedUntilDate] Point in time (Unix timestamp) when the user will be unbanned; 0 if never. If the user is banned for more than 366 days or for less than 30 seconds from the current time, the user is considered to be banned forever. Always 0 in basic groups
   int? bannedUntilDate;

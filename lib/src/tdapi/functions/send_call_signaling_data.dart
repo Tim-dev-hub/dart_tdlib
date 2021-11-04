@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class SendCallSignalingData extends TdFunction {
 
   /// Sends call signaling data
-  SendCallSignalingData({callId,
-    data});
+  SendCallSignalingData({this.callId,
+    this.data});
 
   /// [callId] Call identifier 
   int? callId;

@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GroupCallRecentSpeaker extends TdObject {
 
   /// Describes a recently speaking participant in a group call
-  GroupCallRecentSpeaker({participantId,
-    isSpeaking});
+  GroupCallRecentSpeaker({this.participantId,
+    this.isSpeaking});
 
   /// [participantId] Group call participant identifier 
   MessageSender? participantId;

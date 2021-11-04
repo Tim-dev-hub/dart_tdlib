@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class CustomRequestResult extends TdObject {
 
   /// Contains the result of a custom request
-  CustomRequestResult({result});
+  CustomRequestResult({this.result});
 
   /// [result] A JSON-serialized result
   String? result;

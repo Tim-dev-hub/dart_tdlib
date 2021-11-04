@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GetCommands extends TdFunction {
 
   /// Returns the list of commands supported by the bot for the given user scope and language; for bots only
-  GetCommands({scope,
-    languageCode});
+  GetCommands({this.scope,
+    this.languageCode});
 
   /// [scope] The scope to which the commands are relevant; pass null to get commands in the default bot command scope
   BotCommandScope? scope;

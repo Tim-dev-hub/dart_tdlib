@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetChatAdministrators extends TdFunction {
 
   /// Returns a list of administrators of the chat with their custom titles
-  GetChatAdministrators({chatId});
+  GetChatAdministrators({this.chatId});
 
   /// [chatId] Chat identifier
   int? chatId;

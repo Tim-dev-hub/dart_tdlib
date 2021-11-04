@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class FormattedText extends TdObject {
 
   /// A text with some entities
-  FormattedText({text,
-    entities});
+  FormattedText({this.text,
+    this.entities});
 
   /// [text] The text 
   String? text;

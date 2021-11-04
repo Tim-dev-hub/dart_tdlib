@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class ShippingOption extends TdObject {
 
   /// One shipping option
-  ShippingOption({id,
-    title,
-    priceParts});
+  ShippingOption({this.id,
+    this.title,
+    this.priceParts});
 
   /// [id] Shipping option identifier 
   String? id;

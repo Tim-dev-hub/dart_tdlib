@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class LocalizationTargetInfo extends TdObject {
 
   /// Contains information about the current localization target
-  LocalizationTargetInfo({languagePacks});
+  LocalizationTargetInfo({this.languagePacks});
 
   /// [languagePacks] List of available language packs for this application
   List<LanguagePackInfo>? languagePacks;

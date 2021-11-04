@@ -39,8 +39,8 @@ class BackgroundType extends TdObject {
 class BackgroundTypeWallpaper extends BackgroundType {
 
   /// A wallpaper in JPEG format
-  BackgroundTypeWallpaper({isBlurred,
-    isMoving});
+  BackgroundTypeWallpaper({this.isBlurred,
+    this.isMoving});
 
   /// [isBlurred] True, if the wallpaper must be downscaled to fit in 450x450 square and then box-blurred with radius 12
   bool? isBlurred;
@@ -72,10 +72,10 @@ class BackgroundTypeWallpaper extends BackgroundType {
 class BackgroundTypePattern extends BackgroundType {
 
   /// A PNG or TGV (gzipped subset of SVG with MIME type "application/x-tgwallpattern") pattern to be combined with the background fill chosen by the user
-  BackgroundTypePattern({fill,
-    intensity,
-    isInverted,
-    isMoving});
+  BackgroundTypePattern({this.fill,
+    this.intensity,
+    this.isInverted,
+    this.isMoving});
 
   /// [fill] Description of the background fill
   BackgroundFill? fill;
@@ -117,7 +117,7 @@ class BackgroundTypePattern extends BackgroundType {
 class BackgroundTypeFill extends BackgroundType {
 
   /// A filled background
-  BackgroundTypeFill({fill});
+  BackgroundTypeFill({this.fill});
 
   /// [fill] Description of the background fill
   BackgroundFill? fill;

@@ -36,7 +36,7 @@ class VectorPathCommand extends TdObject {
 class VectorPathCommandLine extends VectorPathCommand {
 
   /// A straight line to a given point
-  VectorPathCommandLine({endPoint});
+  VectorPathCommandLine({this.endPoint});
 
   /// [endPoint] The end point of the straight line
   Point? endPoint;

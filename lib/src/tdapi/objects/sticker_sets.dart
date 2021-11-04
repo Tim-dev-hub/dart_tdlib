@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class StickerSets extends TdObject {
 
   /// Represents a list of sticker sets
-  StickerSets({totalCount,
-    sets});
+  StickerSets({this.totalCount,
+    this.sets});
 
   /// [totalCount] Approximate total number of sticker sets found 
   int? totalCount;

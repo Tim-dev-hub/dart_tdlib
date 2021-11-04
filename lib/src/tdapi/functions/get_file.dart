@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetFile extends TdFunction {
 
   /// Returns information about a file; this is an offline request
-  GetFile({fileId});
+  GetFile({this.fileId});
 
   /// [fileId] Identifier of the file to get
   int? fileId;

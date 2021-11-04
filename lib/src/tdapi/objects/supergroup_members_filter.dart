@@ -77,7 +77,7 @@ class SupergroupMembersFilterRecent extends SupergroupMembersFilter {
 class SupergroupMembersFilterContacts extends SupergroupMembersFilter {
 
   /// Returns contacts of the user, which are members of the supergroup or channel
-  SupergroupMembersFilterContacts({query});
+  SupergroupMembersFilterContacts({this.query});
 
   /// [query] Query to search for
   String? query;
@@ -127,7 +127,7 @@ class SupergroupMembersFilterAdministrators extends SupergroupMembersFilter {
 class SupergroupMembersFilterSearch extends SupergroupMembersFilter {
 
   /// Used to search for supergroup or channel members via a (string) query
-  SupergroupMembersFilterSearch({query});
+  SupergroupMembersFilterSearch({this.query});
 
   /// [query] Query to search for
   String? query;
@@ -154,7 +154,7 @@ class SupergroupMembersFilterSearch extends SupergroupMembersFilter {
 class SupergroupMembersFilterRestricted extends SupergroupMembersFilter {
 
   /// Returns restricted supergroup members; can be used only by administrators
-  SupergroupMembersFilterRestricted({query});
+  SupergroupMembersFilterRestricted({this.query});
 
   /// [query] Query to search for
   String? query;
@@ -181,7 +181,7 @@ class SupergroupMembersFilterRestricted extends SupergroupMembersFilter {
 class SupergroupMembersFilterBanned extends SupergroupMembersFilter {
 
   /// Returns users banned from the supergroup or channel; can be used only by administrators
-  SupergroupMembersFilterBanned({query});
+  SupergroupMembersFilterBanned({this.query});
 
   /// [query] Query to search for
   String? query;
@@ -208,8 +208,8 @@ class SupergroupMembersFilterBanned extends SupergroupMembersFilter {
 class SupergroupMembersFilterMention extends SupergroupMembersFilter {
 
   /// Returns users which can be mentioned in the supergroup
-  SupergroupMembersFilterMention({query,
-    messageThreadId});
+  SupergroupMembersFilterMention({this.query,
+    this.messageThreadId});
 
   /// [query] Query to search for 
   String? query;

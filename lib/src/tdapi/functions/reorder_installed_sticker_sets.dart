@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class ReorderInstalledStickerSets extends TdFunction {
 
   /// Changes the order of installed sticker sets
-  ReorderInstalledStickerSets({isMasks,
-    stickerSetIds});
+  ReorderInstalledStickerSets({this.isMasks,
+    this.stickerSetIds});
 
   /// [isMasks] Pass true to change the order of mask sticker sets; pass false to change the order of ordinary sticker sets 
   bool? isMasks;

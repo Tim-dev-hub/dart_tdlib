@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class SearchStickerSet extends TdFunction {
 
   /// Searches for a sticker set by its name
-  SearchStickerSet({name});
+  SearchStickerSet({this.name});
 
   /// [name] Name of the sticker set
   String? name;

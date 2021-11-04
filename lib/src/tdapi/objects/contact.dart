@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class Contact extends TdObject {
 
   /// Describes a user contact
-  Contact({phoneNumber,
-    firstName,
-    lastName,
-    vcard,
-    userId});
+  Contact({this.phoneNumber,
+    this.firstName,
+    this.lastName,
+    this.vcard,
+    this.userId});
 
   /// [phoneNumber] Phone number of the user 
   String? phoneNumber;

@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class StartGroupCallRecording extends TdFunction {
 
   /// Starts recording of an active group call. Requires groupCall.can_be_managed group call flag
-  StartGroupCallRecording({groupCallId,
-    title,
-    recordVideo,
-    usePortraitOrientation});
+  StartGroupCallRecording({this.groupCallId,
+    this.title,
+    this.recordVideo,
+    this.usePortraitOrientation});
 
   /// [groupCallId] Group call identifier 
   int? groupCallId;

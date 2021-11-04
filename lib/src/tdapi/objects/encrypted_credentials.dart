@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class EncryptedCredentials extends TdObject {
 
   /// Contains encrypted Telegram Passport data credentials
-  EncryptedCredentials({data,
-    hash,
-    secret});
+  EncryptedCredentials({this.data,
+    this.hash,
+    this.secret});
 
   /// [data] The encrypted credentials 
   String? data;

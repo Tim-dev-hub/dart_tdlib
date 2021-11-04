@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class RecommendedChatFilters extends TdObject {
 
   /// Contains a list of recommended chat filters
-  RecommendedChatFilters({chatFilters});
+  RecommendedChatFilters({this.chatFilters});
 
   /// [chatFilters] List of recommended chat filters
   List<RecommendedChatFilter>? chatFilters;

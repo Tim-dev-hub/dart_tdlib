@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class RemoveRecentHashtag extends TdFunction {
 
   /// Removes a hashtag from the list of recently used hashtags
-  RemoveRecentHashtag({hashtag});
+  RemoveRecentHashtag({this.hashtag});
 
   /// [hashtag] Hashtag to delete
   String? hashtag;

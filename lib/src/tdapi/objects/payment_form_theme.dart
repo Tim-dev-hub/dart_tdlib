@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class PaymentFormTheme extends TdObject {
 
   /// Theme colors for a payment form
-  PaymentFormTheme({backgroundColor,
-    textColor,
-    hintColor,
-    linkColor,
-    buttonColor,
-    buttonTextColor});
+  PaymentFormTheme({this.backgroundColor,
+    this.textColor,
+    this.hintColor,
+    this.linkColor,
+    this.buttonColor,
+    this.buttonTextColor});
 
   /// [backgroundColor] A color of the payment form background in the RGB24 format 
   int? backgroundColor;

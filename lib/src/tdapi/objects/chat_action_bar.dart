@@ -48,7 +48,7 @@ class ChatActionBar extends TdObject {
 class ChatActionBarReportSpam extends ChatActionBar {
 
   /// The chat can be reported as spam using the method reportChat with the reason chatReportReasonSpam
-  ChatActionBarReportSpam({canUnarchive});
+  ChatActionBarReportSpam({this.canUnarchive});
 
   /// [canUnarchive] If true, the chat was automatically archived and can be moved back to the main chat list using addChatToList simultaneously with setting chat notification settings to default using setChatNotificationSettings
   bool? canUnarchive;
@@ -121,8 +121,8 @@ class ChatActionBarInviteMembers extends ChatActionBar {
 class ChatActionBarReportAddBlock extends ChatActionBar {
 
   /// The chat is a private or secret chat, which can be reported using the method reportChat, or the other user can be blocked using the method toggleMessageSenderIsBlocked, or the other user can be added to the contact list using the method addContact
-  ChatActionBarReportAddBlock({canUnarchive,
-    distance});
+  ChatActionBarReportAddBlock({this.canUnarchive,
+    this.distance});
 
   /// [canUnarchive] If true, the chat was automatically archived and can be moved back to the main chat list using addChatToList simultaneously with setting chat notification settings to default using setChatNotificationSettings
   bool? canUnarchive;

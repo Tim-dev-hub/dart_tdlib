@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class SendChatAction extends TdFunction {
 
   /// Sends a notification about user activity in a chat
-  SendChatAction({chatId,
-    messageThreadId,
-    action});
+  SendChatAction({this.chatId,
+    this.messageThreadId,
+    this.action});
 
   /// [chatId] Chat identifier 
   int? chatId;

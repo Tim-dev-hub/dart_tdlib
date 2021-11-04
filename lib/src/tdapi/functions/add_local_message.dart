@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class AddLocalMessage extends TdFunction {
 
   /// Adds a local message to a chat. The message is persistent across application restarts only if the message database is used. Returns the added message
-  AddLocalMessage({chatId,
-    sender,
-    replyToMessageId,
-    disableNotification,
-    inputMessageContent});
+  AddLocalMessage({this.chatId,
+    this.sender,
+    this.replyToMessageId,
+    this.disableNotification,
+    this.inputMessageContent});
 
   /// [chatId] Target chat
   int? chatId;

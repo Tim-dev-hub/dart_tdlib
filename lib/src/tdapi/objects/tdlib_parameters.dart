@@ -3,21 +3,21 @@ part of '../tdapi.dart';
 class TdlibParameters extends TdObject {
 
   /// Contains parameters for TDLib initialization
-  TdlibParameters({useTestDc,
-    databaseDirectory,
-    filesDirectory,
-    useFileDatabase,
-    useChatInfoDatabase,
-    useMessageDatabase,
-    useSecretChats,
-    apiId,
-    apiHash,
-    systemLanguageCode,
-    deviceModel,
-    systemVersion,
-    applicationVersion,
-    enableStorageOptimizer,
-    ignoreFileNames});
+  TdlibParameters({this.useTestDc,
+    this.databaseDirectory,
+    this.filesDirectory,
+    this.useFileDatabase,
+    this.useChatInfoDatabase,
+    this.useMessageDatabase,
+    this.useSecretChats,
+    this.apiId,
+    this.apiHash,
+    this.systemLanguageCode,
+    this.deviceModel,
+    this.systemVersion,
+    this.applicationVersion,
+    this.enableStorageOptimizer,
+    this.ignoreFileNames});
 
   /// [useTestDc] If set to true, the Telegram test environment will be used instead of the production environment
   bool? useTestDc;

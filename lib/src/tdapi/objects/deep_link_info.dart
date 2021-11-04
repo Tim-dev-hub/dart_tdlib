@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class DeepLinkInfo extends TdObject {
 
   /// Contains information about a tg: deep link
-  DeepLinkInfo({text,
-    needUpdateApplication});
+  DeepLinkInfo({this.text,
+    this.needUpdateApplication});
 
   /// [text] Text to be shown to the user 
   FormattedText? text;

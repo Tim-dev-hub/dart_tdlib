@@ -89,7 +89,7 @@ class AuthorizationStateWaitTdlibParameters extends AuthorizationState {
 class AuthorizationStateWaitEncryptionKey extends AuthorizationState {
 
   /// TDLib needs an encryption key to decrypt the local database
-  AuthorizationStateWaitEncryptionKey({isEncrypted});
+  AuthorizationStateWaitEncryptionKey({this.isEncrypted});
 
   /// [isEncrypted] True, if the database is currently encrypted
   bool? isEncrypted;
@@ -146,7 +146,7 @@ class AuthorizationStateWaitPhoneNumber extends AuthorizationState {
 class AuthorizationStateWaitCode extends AuthorizationState {
 
   /// TDLib needs the user's authentication code to authorize
-  AuthorizationStateWaitCode({codeInfo});
+  AuthorizationStateWaitCode({this.codeInfo});
 
   /// [codeInfo] Information about the authorization code that was sent
   AuthenticationCodeInfo? codeInfo;
@@ -177,7 +177,7 @@ class AuthorizationStateWaitCode extends AuthorizationState {
 class AuthorizationStateWaitOtherDeviceConfirmation extends AuthorizationState {
 
   /// The user needs to confirm authorization on another logged in device by scanning a QR code with the provided link
-  AuthorizationStateWaitOtherDeviceConfirmation({link});
+  AuthorizationStateWaitOtherDeviceConfirmation({this.link});
 
   /// [link] A tg:// URL for the QR code. The link will be updated frequently
   String? link;
@@ -208,7 +208,7 @@ class AuthorizationStateWaitOtherDeviceConfirmation extends AuthorizationState {
 class AuthorizationStateWaitRegistration extends AuthorizationState {
 
   /// The user is unregistered and need to accept terms of service and enter their first name and last name to finish registration
-  AuthorizationStateWaitRegistration({termsOfService});
+  AuthorizationStateWaitRegistration({this.termsOfService});
 
   /// [termsOfService] Telegram terms of service
   TermsOfService? termsOfService;
@@ -239,9 +239,9 @@ class AuthorizationStateWaitRegistration extends AuthorizationState {
 class AuthorizationStateWaitPassword extends AuthorizationState {
 
   /// The user has been authorized, but needs to enter a password to start using the application
-  AuthorizationStateWaitPassword({passwordHint,
-    hasRecoveryEmailAddress,
-    recoveryEmailAddressPattern});
+  AuthorizationStateWaitPassword({this.passwordHint,
+    this.hasRecoveryEmailAddress,
+    this.recoveryEmailAddressPattern});
 
   /// [passwordHint] Hint for the password; may be empty 
   String? passwordHint;

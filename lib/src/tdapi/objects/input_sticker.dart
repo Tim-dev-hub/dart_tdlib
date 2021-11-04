@@ -36,9 +36,9 @@ class InputSticker extends TdObject {
 class InputStickerStatic extends InputSticker {
 
   /// A static sticker in PNG format, which will be converted to WEBP server-side
-  InputStickerStatic({sticker,
-    emojis,
-    maskPosition});
+  InputStickerStatic({this.sticker,
+    this.emojis,
+    this.maskPosition});
 
   /// [sticker] PNG image with the sticker; must be up to 512 KB in size and fit in a 512x512 square
   InputFile? sticker;
@@ -75,8 +75,8 @@ class InputStickerStatic extends InputSticker {
 class InputStickerAnimated extends InputSticker {
 
   /// An animated sticker in TGS format
-  InputStickerAnimated({sticker,
-    emojis});
+  InputStickerAnimated({this.sticker,
+    this.emojis});
 
   /// [sticker] File with the animated sticker. Only local or uploaded within a week files are supported. See https://core.telegram.org/animated_stickers#technical-requirements for technical requirements
   InputFile? sticker;

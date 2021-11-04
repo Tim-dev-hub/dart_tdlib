@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class SetCommands extends TdFunction {
 
   /// Sets the list of commands supported by the bot for the given user scope and language; for bots only
-  SetCommands({scope,
-    languageCode,
-    commands});
+  SetCommands({this.scope,
+    this.languageCode,
+    this.commands});
 
   /// [scope] The scope to which the commands are relevant; pass null to change commands in the default bot command scope
   BotCommandScope? scope;

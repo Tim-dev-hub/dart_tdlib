@@ -3,16 +3,16 @@ part of '../tdapi.dart';
 class PersonalDetails extends TdObject {
 
   /// Contains the user's personal details
-  PersonalDetails({firstName,
-    middleName,
-    lastName,
-    nativeFirstName,
-    nativeMiddleName,
-    nativeLastName,
-    birthdate,
-    gender,
-    countryCode,
-    residenceCountryCode});
+  PersonalDetails({this.firstName,
+    this.middleName,
+    this.lastName,
+    this.nativeFirstName,
+    this.nativeMiddleName,
+    this.nativeLastName,
+    this.birthdate,
+    this.gender,
+    this.countryCode,
+    this.residenceCountryCode});
 
   /// [firstName] First name of the user written in English; 1-255 characters
   String? firstName;

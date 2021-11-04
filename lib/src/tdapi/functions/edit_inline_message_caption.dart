@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class EditInlineMessageCaption extends TdFunction {
 
   /// Edits the caption of an inline message sent via a bot; for bots only
-  EditInlineMessageCaption({inlineMessageId,
-    replyMarkup,
-    caption});
+  EditInlineMessageCaption({this.inlineMessageId,
+    this.replyMarkup,
+    this.caption});
 
   /// [inlineMessageId] Inline message identifier
   String? inlineMessageId;

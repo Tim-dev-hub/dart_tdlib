@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class SponsoredMessage extends TdObject {
 
   /// Describes a sponsored message
-  SponsoredMessage({id,
-    sponsorChatId,
-    link,
-    content});
+  SponsoredMessage({this.id,
+    this.sponsorChatId,
+    this.link,
+    this.content});
 
   /// [id] Unique sponsored message identifier 
   int? id;

@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class SendMessage extends TdFunction {
 
   /// Sends a message. Returns the sent message
-  SendMessage({chatId,
-    messageThreadId,
-    replyToMessageId,
-    options,
-    replyMarkup,
-    inputMessageContent});
+  SendMessage({this.chatId,
+    this.messageThreadId,
+    this.replyToMessageId,
+    this.options,
+    this.replyMarkup,
+    this.inputMessageContent});
 
   /// [chatId] Target chat
   int? chatId;

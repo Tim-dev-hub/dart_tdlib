@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class Text extends TdObject {
 
   /// Contains some text
-  Text({text});
+  Text({this.text});
 
   /// [text] Text
   String? text;

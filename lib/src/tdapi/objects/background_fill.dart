@@ -39,7 +39,7 @@ class BackgroundFill extends TdObject {
 class BackgroundFillSolid extends BackgroundFill {
 
   /// Describes a solid fill of a background
-  BackgroundFillSolid({color});
+  BackgroundFillSolid({this.color});
 
   /// [color] A color of the background in the RGB24 format
   int? color;
@@ -66,9 +66,9 @@ class BackgroundFillSolid extends BackgroundFill {
 class BackgroundFillGradient extends BackgroundFill {
 
   /// Describes a gradient fill of a background
-  BackgroundFillGradient({topColor,
-    bottomColor,
-    rotationAngle});
+  BackgroundFillGradient({this.topColor,
+    this.bottomColor,
+    this.rotationAngle});
 
   /// [topColor] A top color of the background in the RGB24 format 
   int? topColor;
@@ -105,7 +105,7 @@ class BackgroundFillGradient extends BackgroundFill {
 class BackgroundFillFreeformGradient extends BackgroundFill {
 
   /// Describes a freeform gradient fill of a background
-  BackgroundFillFreeformGradient({colors});
+  BackgroundFillFreeformGradient({this.colors});
 
   /// [colors] A list of 3 or 4 colors of the freeform gradients in the RGB24 format
   List<int>? colors;

@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class DeleteProfilePhoto extends TdFunction {
 
   /// Deletes a profile photo
-  DeleteProfilePhoto({profilePhotoId});
+  DeleteProfilePhoto({this.profilePhotoId});
 
   /// [profilePhotoId] Identifier of the profile photo to delete
   int? profilePhotoId;

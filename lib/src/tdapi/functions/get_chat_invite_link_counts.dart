@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetChatInviteLinkCounts extends TdFunction {
 
   /// Returns list of chat administrators with number of their invite links. Requires owner privileges in the chat
-  GetChatInviteLinkCounts({chatId});
+  GetChatInviteLinkCounts({this.chatId});
 
   /// [chatId] Chat identifier
   int? chatId;

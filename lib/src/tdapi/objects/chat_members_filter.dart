@@ -120,7 +120,7 @@ class ChatMembersFilterMembers extends ChatMembersFilter {
 class ChatMembersFilterMention extends ChatMembersFilter {
 
   /// Returns users which can be mentioned in the chat
-  ChatMembersFilterMention({messageThreadId});
+  ChatMembersFilterMention({this.messageThreadId});
 
   /// [messageThreadId] If non-zero, the identifier of the current message thread
   int? messageThreadId;

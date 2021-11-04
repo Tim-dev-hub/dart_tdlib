@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class PassportRequiredElement extends TdObject {
 
   /// Contains a description of the required Telegram Passport element that was requested by a service
-  PassportRequiredElement({suitableElements});
+  PassportRequiredElement({this.suitableElements});
 
   /// [suitableElements] List of Telegram Passport elements any of which is enough to provide
   List<PassportSuitableElement>? suitableElements;

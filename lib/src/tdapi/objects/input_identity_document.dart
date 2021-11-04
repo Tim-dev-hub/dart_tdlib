@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class InputIdentityDocument extends TdObject {
 
   /// An identity document to be saved to Telegram Passport
-  InputIdentityDocument({number,
-    expiryDate,
-    frontSide,
-    reverseSide,
-    selfie,
-    translation});
+  InputIdentityDocument({this.number,
+    this.expiryDate,
+    this.frontSide,
+    this.reverseSide,
+    this.selfie,
+    this.translation});
 
   /// [number] Document number; 1-24 characters 
   String? number;

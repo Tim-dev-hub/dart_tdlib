@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class TestString extends TdObject {
 
   /// A simple object containing a string; for testing only
-  TestString({value});
+  TestString({this.value});
 
   /// [value] String
   String? value;

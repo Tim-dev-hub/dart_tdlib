@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class File extends TdObject {
 
   /// Represents a file
-  File({id,
-    size,
-    expectedSize,
-    local,
-    remote});
+  File({this.id,
+    this.size,
+    this.expectedSize,
+    this.local,
+    this.remote});
 
   /// [id] Unique file identifier
   int? id;

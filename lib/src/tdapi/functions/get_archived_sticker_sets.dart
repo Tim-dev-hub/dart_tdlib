@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class GetArchivedStickerSets extends TdFunction {
 
   /// Returns a list of archived sticker sets
-  GetArchivedStickerSets({isMasks,
-    offsetStickerSetId,
-    limit});
+  GetArchivedStickerSets({this.isMasks,
+    this.offsetStickerSetId,
+    this.limit});
 
   /// [isMasks] Pass true to return mask stickers sets; pass false to return ordinary sticker sets 
   bool? isMasks;

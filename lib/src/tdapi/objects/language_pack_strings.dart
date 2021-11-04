@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class LanguagePackStrings extends TdObject {
 
   /// Contains a list of language pack strings
-  LanguagePackStrings({strings});
+  LanguagePackStrings({this.strings});
 
   /// [strings] A list of language pack strings
   List<LanguagePackString>? strings;

@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class AnswerShippingQuery extends TdFunction {
 
   /// Sets the result of a shipping query; for bots only
-  AnswerShippingQuery({shippingQueryId,
-    shippingOptions,
-    errorMessage});
+  AnswerShippingQuery({this.shippingQueryId,
+    this.shippingOptions,
+    this.errorMessage});
 
   /// [shippingQueryId] Identifier of the shipping query 
   int? shippingQueryId;

@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class CreateCall extends TdFunction {
 
   /// Creates a new call
-  CreateCall({userId,
-    protocol,
-    isVideo});
+  CreateCall({this.userId,
+    this.protocol,
+    this.isVideo});
 
   /// [userId] Identifier of the user to be called 
   int? userId;

@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class Venue extends TdObject {
 
   /// Describes a venue
-  Venue({location,
-    title,
-    address,
-    provider,
-    id,
-    type});
+  Venue({this.location,
+    this.title,
+    this.address,
+    this.provider,
+    this.id,
+    this.type});
 
   /// [location] Venue location; as defined by the sender 
   Location? location;

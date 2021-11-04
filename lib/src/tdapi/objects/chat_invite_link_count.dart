@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class ChatInviteLinkCount extends TdObject {
 
   /// Describes a chat administrator with a number of active and revoked chat invite links
-  ChatInviteLinkCount({userId,
-    inviteLinkCount,
-    revokedInviteLinkCount});
+  ChatInviteLinkCount({this.userId,
+    this.inviteLinkCount,
+    this.revokedInviteLinkCount});
 
   /// [userId] Administrator's user identifier
   int? userId;

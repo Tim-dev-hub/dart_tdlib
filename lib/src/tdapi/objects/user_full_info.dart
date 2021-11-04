@@ -3,17 +3,17 @@ part of '../tdapi.dart';
 class UserFullInfo extends TdObject {
 
   /// Contains full information about a user
-  UserFullInfo({photo,
-    isBlocked,
-    canBeCalled,
-    supportsVideoCalls,
-    hasPrivateCalls,
-    needPhoneNumberPrivacyException,
-    bio,
-    shareText,
-    description,
-    groupInCommonCount,
-    commands});
+  UserFullInfo({this.photo,
+    this.isBlocked,
+    this.canBeCalled,
+    this.supportsVideoCalls,
+    this.hasPrivateCalls,
+    this.needPhoneNumberPrivacyException,
+    this.bio,
+    this.shareText,
+    this.description,
+    this.groupInCommonCount,
+    this.commands});
 
   /// [photo] User profile photo; may be null
   ChatPhoto? photo;

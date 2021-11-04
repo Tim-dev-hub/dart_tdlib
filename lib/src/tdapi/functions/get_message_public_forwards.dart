@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class GetMessagePublicForwards extends TdFunction {
 
   /// Returns forwarded copies of a channel message to different public channels. For optimal performance, the number of returned messages is chosen by TDLib
-  GetMessagePublicForwards({chatId,
-    messageId,
-    offset,
-    limit});
+  GetMessagePublicForwards({this.chatId,
+    this.messageId,
+    this.offset,
+    this.limit});
 
   /// [chatId] Chat identifier of the message
   int? chatId;

@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetRecentlyVisitedTMeUrls extends TdFunction {
 
   /// Returns t.me URLs recently visited by a newly registered user
-  GetRecentlyVisitedTMeUrls({referrer});
+  GetRecentlyVisitedTMeUrls({this.referrer});
 
   /// [referrer] Google Play referrer to identify the user
   String? referrer;

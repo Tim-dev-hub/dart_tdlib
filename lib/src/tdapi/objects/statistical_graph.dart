@@ -39,8 +39,8 @@ class StatisticalGraph extends TdObject {
 class StatisticalGraphData extends StatisticalGraph {
 
   /// A graph data
-  StatisticalGraphData({jsonData,
-    zoomToken});
+  StatisticalGraphData({this.jsonData,
+    this.zoomToken});
 
   /// [jsonData] Graph data in JSON format 
   String? jsonData;
@@ -76,7 +76,7 @@ class StatisticalGraphData extends StatisticalGraph {
 class StatisticalGraphAsync extends StatisticalGraph {
 
   /// The graph data to be asynchronously loaded through getStatisticalGraph
-  StatisticalGraphAsync({token});
+  StatisticalGraphAsync({this.token});
 
   /// [token] The token to use for data loading
   String? token;
@@ -107,7 +107,7 @@ class StatisticalGraphAsync extends StatisticalGraph {
 class StatisticalGraphError extends StatisticalGraph {
 
   /// An error message to be shown to the user instead of the graph
-  StatisticalGraphError({errorMessage});
+  StatisticalGraphError({this.errorMessage});
 
   /// [errorMessage] The error message
   String? errorMessage;

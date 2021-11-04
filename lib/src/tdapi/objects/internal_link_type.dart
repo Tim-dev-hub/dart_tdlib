@@ -125,7 +125,7 @@ class InternalLinkTypeActiveSessions extends InternalLinkType {
 class InternalLinkTypeAuthenticationCode extends InternalLinkType {
 
   /// The link contains an authentication code. Call checkAuthenticationCode with the code if the current authorization state is authorizationStateWaitCode
-  InternalLinkTypeAuthenticationCode({code});
+  InternalLinkTypeAuthenticationCode({this.code});
 
   /// [code] The authentication code
   String? code;
@@ -156,7 +156,7 @@ class InternalLinkTypeAuthenticationCode extends InternalLinkType {
 class InternalLinkTypeBackground extends InternalLinkType {
 
   /// The link is a link to a background. Call searchBackground with the given background name to process the link
-  InternalLinkTypeBackground({backgroundName});
+  InternalLinkTypeBackground({this.backgroundName});
 
   /// [backgroundName] Name of the background
   String? backgroundName;
@@ -187,8 +187,8 @@ class InternalLinkTypeBackground extends InternalLinkType {
 class InternalLinkTypeBotStart extends InternalLinkType {
 
   /// The link is a link to a chat with a Telegram bot. Call searchPublicChat with the given bot username, check that the user is a bot, show START button in the chat with the bot,. and then call sendBotStartMessage with the given start parameter after the button is pressed
-  InternalLinkTypeBotStart({botUsername,
-    startParameter});
+  InternalLinkTypeBotStart({this.botUsername,
+    this.startParameter});
 
   /// [botUsername] Username of the bot
   String? botUsername;
@@ -224,8 +224,8 @@ class InternalLinkTypeBotStart extends InternalLinkType {
 class InternalLinkTypeBotStartInGroup extends InternalLinkType {
 
   /// The link is a link to a Telegram bot, which is supposed to be added to a group chat. Call searchPublicChat with the given bot username, check that the user is a bot and can be added to groups,. ask the current user to select a group to add the bot to, and then call sendBotStartMessage with the given start parameter and the chosen group chat. Bots can be added to a public group only by administrators of the group
-  InternalLinkTypeBotStartInGroup({botUsername,
-    startParameter});
+  InternalLinkTypeBotStartInGroup({this.botUsername,
+    this.startParameter});
 
   /// [botUsername] Username of the bot
   String? botUsername;
@@ -287,7 +287,7 @@ class InternalLinkTypeChangePhoneNumber extends InternalLinkType {
 class InternalLinkTypeChatInvite extends InternalLinkType {
 
   /// The link is a chat invite link. Call checkChatInviteLink with the given invite link to process the link
-  InternalLinkTypeChatInvite({inviteLink});
+  InternalLinkTypeChatInvite({this.inviteLink});
 
   /// [inviteLink] Internal representation of the invite link
   String? inviteLink;
@@ -344,8 +344,8 @@ class InternalLinkTypeFilterSettings extends InternalLinkType {
 class InternalLinkTypeGame extends InternalLinkType {
 
   /// The link is a link to a game. Call searchPublicChat with the given bot username, check that the user is a bot, ask the current user to select a chat to send the game, and then call sendMessage with inputMessageGame
-  InternalLinkTypeGame({botUsername,
-    gameShortName});
+  InternalLinkTypeGame({this.botUsername,
+    this.gameShortName});
 
   /// [botUsername] Username of the bot that owns the game
   String? botUsername;
@@ -381,7 +381,7 @@ class InternalLinkTypeGame extends InternalLinkType {
 class InternalLinkTypeLanguagePack extends InternalLinkType {
 
   /// The link is a link to a language pack. Call getLanguagePackInfo with the given language pack identifier to process the link
-  InternalLinkTypeLanguagePack({languagePackId});
+  InternalLinkTypeLanguagePack({this.languagePackId});
 
   /// [languagePackId] Language pack identifier
   String? languagePackId;
@@ -412,7 +412,7 @@ class InternalLinkTypeLanguagePack extends InternalLinkType {
 class InternalLinkTypeMessage extends InternalLinkType {
 
   /// The link is a link to a Telegram message. Call getMessageLinkInfo with the given URL to process the link
-  InternalLinkTypeMessage({url});
+  InternalLinkTypeMessage({this.url});
 
   /// [url] URL to be passed to getMessageLinkInfo
   String? url;
@@ -443,8 +443,8 @@ class InternalLinkTypeMessage extends InternalLinkType {
 class InternalLinkTypeMessageDraft extends InternalLinkType {
 
   /// The link contains a message draft text. A share screen needs to be shown to the user, then the chosen chat must be opened and the text is added to the input field
-  InternalLinkTypeMessageDraft({text,
-    containsLink});
+  InternalLinkTypeMessageDraft({this.text,
+    this.containsLink});
 
   /// [text] Message draft text
   FormattedText? text;
@@ -480,11 +480,11 @@ class InternalLinkTypeMessageDraft extends InternalLinkType {
 class InternalLinkTypePassportDataRequest extends InternalLinkType {
 
   /// The link contains a request of Telegram passport data. Call getPassportAuthorizationForm with the given parameters to process the link if the link was received from outside of the app, otherwise ignore it
-  InternalLinkTypePassportDataRequest({botUserId,
-    scope,
-    publicKey,
-    nonce,
-    callbackUrl});
+  InternalLinkTypePassportDataRequest({this.botUserId,
+    this.scope,
+    this.publicKey,
+    this.nonce,
+    this.callbackUrl});
 
   /// [botUserId] User identifier of the service's bot
   int? botUserId;
@@ -535,8 +535,8 @@ class InternalLinkTypePassportDataRequest extends InternalLinkType {
 class InternalLinkTypePhoneNumberConfirmation extends InternalLinkType {
 
   /// The link can be used to confirm ownership of a phone number to prevent account deletion. Call sendPhoneNumberConfirmationCode with the given hash and phone number to process the link
-  InternalLinkTypePhoneNumberConfirmation({hash,
-    phoneNumber});
+  InternalLinkTypePhoneNumberConfirmation({this.hash,
+    this.phoneNumber});
 
   /// [hash] Hash value from the link
   String? hash;
@@ -572,9 +572,9 @@ class InternalLinkTypePhoneNumberConfirmation extends InternalLinkType {
 class InternalLinkTypeProxy extends InternalLinkType {
 
   /// The link is a link to a proxy. Call addProxy with the given parameters to process the link and add the proxy
-  InternalLinkTypeProxy({server,
-    port,
-    type});
+  InternalLinkTypeProxy({this.server,
+    this.port,
+    this.type});
 
   /// [server] Proxy server IP address
   String? server;
@@ -615,7 +615,7 @@ class InternalLinkTypeProxy extends InternalLinkType {
 class InternalLinkTypePublicChat extends InternalLinkType {
 
   /// The link is a link to a chat by its username. Call searchPublicChat with the given chat username to process the link
-  InternalLinkTypePublicChat({chatUsername});
+  InternalLinkTypePublicChat({this.chatUsername});
 
   /// [chatUsername] Username of the chat
   String? chatUsername;
@@ -698,7 +698,7 @@ class InternalLinkTypeSettings extends InternalLinkType {
 class InternalLinkTypeStickerSet extends InternalLinkType {
 
   /// The link is a link to a sticker set. Call searchStickerSet with the given sticker set name to process the link and show the sticker set
-  InternalLinkTypeStickerSet({stickerSetName});
+  InternalLinkTypeStickerSet({this.stickerSetName});
 
   /// [stickerSetName] Name of the sticker set
   String? stickerSetName;
@@ -729,7 +729,7 @@ class InternalLinkTypeStickerSet extends InternalLinkType {
 class InternalLinkTypeTheme extends InternalLinkType {
 
   /// The link is a link to a theme. TDLib has no theme support yet
-  InternalLinkTypeTheme({themeName});
+  InternalLinkTypeTheme({this.themeName});
 
   /// [themeName] Name of the theme
   String? themeName;
@@ -786,7 +786,7 @@ class InternalLinkTypeThemeSettings extends InternalLinkType {
 class InternalLinkTypeUnknownDeepLink extends InternalLinkType {
 
   /// The link is an unknown tg: link. Call getDeepLinkInfo to process the link
-  InternalLinkTypeUnknownDeepLink({link});
+  InternalLinkTypeUnknownDeepLink({this.link});
 
   /// [link] Link to be passed to getDeepLinkInfo
   String? link;
@@ -817,9 +817,9 @@ class InternalLinkTypeUnknownDeepLink extends InternalLinkType {
 class InternalLinkTypeVoiceChat extends InternalLinkType {
 
   /// The link is a link to a voice chat. Call searchPublicChat with the given chat username, and then joinGoupCall with the given invite hash to process the link
-  InternalLinkTypeVoiceChat({chatUsername,
-    inviteHash,
-    isLiveStream});
+  InternalLinkTypeVoiceChat({this.chatUsername,
+    this.inviteHash,
+    this.isLiveStream});
 
   /// [chatUsername] Username of the chat with the voice chat
   String? chatUsername;

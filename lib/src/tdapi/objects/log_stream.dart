@@ -65,9 +65,9 @@ class LogStreamDefault extends LogStream {
 class LogStreamFile extends LogStream {
 
   /// The log is written to a file
-  LogStreamFile({path,
-    maxFileSize,
-    redirectStderr});
+  LogStreamFile({this.path,
+    this.maxFileSize,
+    this.redirectStderr});
 
   /// [path] Path to the file to where the internal TDLib log will be written
   String? path;

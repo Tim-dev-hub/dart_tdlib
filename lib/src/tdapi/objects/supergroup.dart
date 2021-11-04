@@ -3,21 +3,21 @@ part of '../tdapi.dart';
 class Supergroup extends TdObject {
 
   /// Represents a supergroup or channel with zero or more members (subscribers in the case of channels). From the point of view of the system, a channel is a special kind of a supergroup: only administrators can post and see the list of members, and posts from all administrators use the name and photo of the channel instead of individual names and profile photos. Unlike supergroups, channels can have an unlimited number of subscribers
-  Supergroup({id,
-    username,
-    date,
-    status,
-    memberCount,
-    hasLinkedChat,
-    hasLocation,
-    signMessages,
-    isSlowModeEnabled,
-    isChannel,
-    isBroadcastGroup,
-    isVerified,
-    restrictionReason,
-    isScam,
-    isFake});
+  Supergroup({this.id,
+    this.username,
+    this.date,
+    this.status,
+    this.memberCount,
+    this.hasLinkedChat,
+    this.hasLocation,
+    this.signMessages,
+    this.isSlowModeEnabled,
+    this.isChannel,
+    this.isBroadcastGroup,
+    this.isVerified,
+    this.restrictionReason,
+    this.isScam,
+    this.isFake});
 
   /// [id] Supergroup or channel identifier
   int? id;

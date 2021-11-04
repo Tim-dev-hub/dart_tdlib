@@ -3,14 +3,14 @@ part of '../tdapi.dart';
 class LocalFile extends TdObject {
 
   /// Represents a local file
-  LocalFile({path,
-    canBeDownloaded,
-    canBeDeleted,
-    isDownloadingActive,
-    isDownloadingCompleted,
-    downloadOffset,
-    downloadedPrefixSize,
-    downloadedSize});
+  LocalFile({this.path,
+    this.canBeDownloaded,
+    this.canBeDeleted,
+    this.isDownloadingActive,
+    this.isDownloadingCompleted,
+    this.downloadOffset,
+    this.downloadedPrefixSize,
+    this.downloadedSize});
 
   /// [path] Local path to the locally available file part; may be empty
   String? path;

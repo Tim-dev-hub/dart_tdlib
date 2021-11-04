@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class BotCommand extends TdObject {
 
   /// Represents a command supported by a bot
-  BotCommand({command,
-    description});
+  BotCommand({this.command,
+    this.description});
 
   /// [command] Text of the bot command 
   String? command;

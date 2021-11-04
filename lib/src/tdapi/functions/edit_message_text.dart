@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class EditMessageText extends TdFunction {
 
   /// Edits the text of a message (or a text of a game message). Returns the edited message after the edit is completed on the server side
-  EditMessageText({chatId,
-    messageId,
-    replyMarkup,
-    inputMessageContent});
+  EditMessageText({this.chatId,
+    this.messageId,
+    this.replyMarkup,
+    this.inputMessageContent});
 
   /// [chatId] The chat the message belongs to
   int? chatId;

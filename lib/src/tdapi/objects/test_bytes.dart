@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class TestBytes extends TdObject {
 
   /// A simple object containing a sequence of bytes; for testing only
-  TestBytes({value});
+  TestBytes({this.value});
 
   /// [value] Bytes
   String? value;

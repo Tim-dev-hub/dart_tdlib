@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GetPhoneNumberInfoSync extends TdFunction {
 
   /// Returns information about a phone number by its prefix synchronously. getCountries must be called at least once after changing localization to the specified language if properly localized country information is expected. Can be called synchronously
-  GetPhoneNumberInfoSync({languageCode,
-    phoneNumberPrefix});
+  GetPhoneNumberInfoSync({this.languageCode,
+    this.phoneNumberPrefix});
 
   /// [languageCode] A two-letter ISO 639-1 country code for country information localization
   String? languageCode;

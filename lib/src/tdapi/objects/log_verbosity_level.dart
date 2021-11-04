@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class LogVerbosityLevel extends TdObject {
 
   /// Contains a TDLib internal log verbosity level
-  LogVerbosityLevel({verbosityLevel});
+  LogVerbosityLevel({this.verbosityLevel});
 
   /// [verbosityLevel] Log verbosity level
   int? verbosityLevel;

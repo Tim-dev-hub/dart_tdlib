@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetBasicGroupFullInfo extends TdFunction {
 
   /// Returns full information about a basic group by its identifier
-  GetBasicGroupFullInfo({basicGroupId});
+  GetBasicGroupFullInfo({this.basicGroupId});
 
   /// [basicGroupId] Basic group identifier
   int? basicGroupId;

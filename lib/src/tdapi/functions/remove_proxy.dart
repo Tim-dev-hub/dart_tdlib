@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class RemoveProxy extends TdFunction {
 
   /// Removes a proxy server. Can be called before authorization
-  RemoveProxy({proxyId});
+  RemoveProxy({this.proxyId});
 
   /// [proxyId] Proxy identifier
   int? proxyId;

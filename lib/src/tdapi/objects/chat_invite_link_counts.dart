@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class ChatInviteLinkCounts extends TdObject {
 
   /// Contains a list of chat invite link counts
-  ChatInviteLinkCounts({inviteLinkCounts});
+  ChatInviteLinkCounts({this.inviteLinkCounts});
 
   /// [inviteLinkCounts] List of invite linkcounts
   List<ChatInviteLinkCount>? inviteLinkCounts;

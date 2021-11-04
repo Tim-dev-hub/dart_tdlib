@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class UploadStickerFile extends TdFunction {
 
   /// Uploads a PNG image with a sticker; returns the uploaded file
-  UploadStickerFile({userId,
-    sticker});
+  UploadStickerFile({this.userId,
+    this.sticker});
 
   /// [userId] Sticker file owner; ignored for regular users 
   int? userId;

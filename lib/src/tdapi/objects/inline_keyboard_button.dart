@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class InlineKeyboardButton extends TdObject {
 
   /// Represents a single button in an inline keyboard
-  InlineKeyboardButton({text,
-    type});
+  InlineKeyboardButton({this.text,
+    this.type});
 
   /// [text] Text of the button 
   String? text;

@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class NotificationGroup extends TdObject {
 
   /// Describes a group of notifications
-  NotificationGroup({id,
-    type,
-    chatId,
-    totalCount,
-    notifications});
+  NotificationGroup({this.id,
+    this.type,
+    this.chatId,
+    this.totalCount,
+    this.notifications});
 
   /// [id] Unique persistent auto-incremented from 1 identifier of the notification group 
   int? id;

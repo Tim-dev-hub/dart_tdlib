@@ -126,8 +126,8 @@ class ChatEventAction extends TdObject {
 class ChatEventMessageEdited extends ChatEventAction {
 
   /// A message was edited
-  ChatEventMessageEdited({oldMessage,
-    newMessage});
+  ChatEventMessageEdited({this.oldMessage,
+    this.newMessage});
 
   /// [oldMessage] The original message before the edit 
   Message? oldMessage;
@@ -159,7 +159,7 @@ class ChatEventMessageEdited extends ChatEventAction {
 class ChatEventMessageDeleted extends ChatEventAction {
 
   /// A message was deleted
-  ChatEventMessageDeleted({message});
+  ChatEventMessageDeleted({this.message});
 
   /// [message] Deleted message
   Message? message;
@@ -186,7 +186,7 @@ class ChatEventMessageDeleted extends ChatEventAction {
 class ChatEventPollStopped extends ChatEventAction {
 
   /// A poll in a message was stopped
-  ChatEventPollStopped({message});
+  ChatEventPollStopped({this.message});
 
   /// [message] The message with the poll
   Message? message;
@@ -213,7 +213,7 @@ class ChatEventPollStopped extends ChatEventAction {
 class ChatEventMessagePinned extends ChatEventAction {
 
   /// A message was pinned
-  ChatEventMessagePinned({message});
+  ChatEventMessagePinned({this.message});
 
   /// [message] Pinned message
   Message? message;
@@ -240,7 +240,7 @@ class ChatEventMessagePinned extends ChatEventAction {
 class ChatEventMessageUnpinned extends ChatEventAction {
 
   /// A message was unpinned
-  ChatEventMessageUnpinned({message});
+  ChatEventMessageUnpinned({this.message});
 
   /// [message] Unpinned message
   Message? message;
@@ -290,7 +290,7 @@ class ChatEventMemberJoined extends ChatEventAction {
 class ChatEventMemberJoinedByInviteLink extends ChatEventAction {
 
   /// A new member joined the chat by an invite link
-  ChatEventMemberJoinedByInviteLink({inviteLink});
+  ChatEventMemberJoinedByInviteLink({this.inviteLink});
 
   /// [inviteLink] Invite link used to join the chat
   ChatInviteLink? inviteLink;
@@ -340,8 +340,8 @@ class ChatEventMemberLeft extends ChatEventAction {
 class ChatEventMemberInvited extends ChatEventAction {
 
   /// A new chat member was invited
-  ChatEventMemberInvited({userId,
-    status});
+  ChatEventMemberInvited({this.userId,
+    this.status});
 
   /// [userId] New member user identifier 
   int? userId;
@@ -373,9 +373,9 @@ class ChatEventMemberInvited extends ChatEventAction {
 class ChatEventMemberPromoted extends ChatEventAction {
 
   /// A chat member has gained/lost administrator status, or the list of their administrator privileges has changed
-  ChatEventMemberPromoted({userId,
-    oldStatus,
-    newStatus});
+  ChatEventMemberPromoted({this.userId,
+    this.oldStatus,
+    this.newStatus});
 
   /// [userId] Affected chat member user identifier 
   int? userId;
@@ -412,9 +412,9 @@ class ChatEventMemberPromoted extends ChatEventAction {
 class ChatEventMemberRestricted extends ChatEventAction {
 
   /// A chat member was restricted/unrestricted or banned/unbanned, or the list of their restrictions has changed
-  ChatEventMemberRestricted({memberId,
-    oldStatus,
-    newStatus});
+  ChatEventMemberRestricted({this.memberId,
+    this.oldStatus,
+    this.newStatus});
 
   /// [memberId] Affected chat member identifier 
   MessageSender? memberId;
@@ -451,8 +451,8 @@ class ChatEventMemberRestricted extends ChatEventAction {
 class ChatEventTitleChanged extends ChatEventAction {
 
   /// The chat title was changed
-  ChatEventTitleChanged({oldTitle,
-    newTitle});
+  ChatEventTitleChanged({this.oldTitle,
+    this.newTitle});
 
   /// [oldTitle] Previous chat title 
   String? oldTitle;
@@ -484,8 +484,8 @@ class ChatEventTitleChanged extends ChatEventAction {
 class ChatEventPermissionsChanged extends ChatEventAction {
 
   /// The chat permissions was changed
-  ChatEventPermissionsChanged({oldPermissions,
-    newPermissions});
+  ChatEventPermissionsChanged({this.oldPermissions,
+    this.newPermissions});
 
   /// [oldPermissions] Previous chat permissions 
   ChatPermissions? oldPermissions;
@@ -517,8 +517,8 @@ class ChatEventPermissionsChanged extends ChatEventAction {
 class ChatEventDescriptionChanged extends ChatEventAction {
 
   /// The chat description was changed
-  ChatEventDescriptionChanged({oldDescription,
-    newDescription});
+  ChatEventDescriptionChanged({this.oldDescription,
+    this.newDescription});
 
   /// [oldDescription] Previous chat description 
   String? oldDescription;
@@ -550,8 +550,8 @@ class ChatEventDescriptionChanged extends ChatEventAction {
 class ChatEventUsernameChanged extends ChatEventAction {
 
   /// The chat username was changed
-  ChatEventUsernameChanged({oldUsername,
-    newUsername});
+  ChatEventUsernameChanged({this.oldUsername,
+    this.newUsername});
 
   /// [oldUsername] Previous chat username 
   String? oldUsername;
@@ -583,8 +583,8 @@ class ChatEventUsernameChanged extends ChatEventAction {
 class ChatEventPhotoChanged extends ChatEventAction {
 
   /// The chat photo was changed
-  ChatEventPhotoChanged({oldPhoto,
-    newPhoto});
+  ChatEventPhotoChanged({this.oldPhoto,
+    this.newPhoto});
 
   /// [oldPhoto] Previous chat photo value; may be null 
   ChatPhoto? oldPhoto;
@@ -616,7 +616,7 @@ class ChatEventPhotoChanged extends ChatEventAction {
 class ChatEventInvitesToggled extends ChatEventAction {
 
   /// The can_invite_users permission of a supergroup chat was toggled
-  ChatEventInvitesToggled({canInviteUsers});
+  ChatEventInvitesToggled({this.canInviteUsers});
 
   /// [canInviteUsers] New value of can_invite_users permission
   bool? canInviteUsers;
@@ -643,8 +643,8 @@ class ChatEventInvitesToggled extends ChatEventAction {
 class ChatEventLinkedChatChanged extends ChatEventAction {
 
   /// The linked chat of a supergroup was changed
-  ChatEventLinkedChatChanged({oldLinkedChatId,
-    newLinkedChatId});
+  ChatEventLinkedChatChanged({this.oldLinkedChatId,
+    this.newLinkedChatId});
 
   /// [oldLinkedChatId] Previous supergroup linked chat identifier 
   int? oldLinkedChatId;
@@ -676,8 +676,8 @@ class ChatEventLinkedChatChanged extends ChatEventAction {
 class ChatEventSlowModeDelayChanged extends ChatEventAction {
 
   /// The slow_mode_delay setting of a supergroup was changed
-  ChatEventSlowModeDelayChanged({oldSlowModeDelay,
-    newSlowModeDelay});
+  ChatEventSlowModeDelayChanged({this.oldSlowModeDelay,
+    this.newSlowModeDelay});
 
   /// [oldSlowModeDelay] Previous value of slow_mode_delay, in seconds 
   int? oldSlowModeDelay;
@@ -709,8 +709,8 @@ class ChatEventSlowModeDelayChanged extends ChatEventAction {
 class ChatEventMessageTtlSettingChanged extends ChatEventAction {
 
   /// The message TTL setting was changed
-  ChatEventMessageTtlSettingChanged({oldMessageTtlSetting,
-    newMessageTtlSetting});
+  ChatEventMessageTtlSettingChanged({this.oldMessageTtlSetting,
+    this.newMessageTtlSetting});
 
   /// [oldMessageTtlSetting] Previous value of message_ttl_setting 
   int? oldMessageTtlSetting;
@@ -742,7 +742,7 @@ class ChatEventMessageTtlSettingChanged extends ChatEventAction {
 class ChatEventSignMessagesToggled extends ChatEventAction {
 
   /// The sign_messages setting of a channel was toggled
-  ChatEventSignMessagesToggled({signMessages});
+  ChatEventSignMessagesToggled({this.signMessages});
 
   /// [signMessages] New value of sign_messages
   bool? signMessages;
@@ -769,8 +769,8 @@ class ChatEventSignMessagesToggled extends ChatEventAction {
 class ChatEventStickerSetChanged extends ChatEventAction {
 
   /// The supergroup sticker set was changed
-  ChatEventStickerSetChanged({oldStickerSetId,
-    newStickerSetId});
+  ChatEventStickerSetChanged({this.oldStickerSetId,
+    this.newStickerSetId});
 
   /// [oldStickerSetId] Previous identifier of the chat sticker set; 0 if none 
   int? oldStickerSetId;
@@ -802,8 +802,8 @@ class ChatEventStickerSetChanged extends ChatEventAction {
 class ChatEventLocationChanged extends ChatEventAction {
 
   /// The supergroup location was changed
-  ChatEventLocationChanged({oldLocation,
-    newLocation});
+  ChatEventLocationChanged({this.oldLocation,
+    this.newLocation});
 
   /// [oldLocation] Previous location; may be null 
   ChatLocation? oldLocation;
@@ -835,7 +835,7 @@ class ChatEventLocationChanged extends ChatEventAction {
 class ChatEventIsAllHistoryAvailableToggled extends ChatEventAction {
 
   /// The is_all_history_available setting of a supergroup was toggled
-  ChatEventIsAllHistoryAvailableToggled({isAllHistoryAvailable});
+  ChatEventIsAllHistoryAvailableToggled({this.isAllHistoryAvailable});
 
   /// [isAllHistoryAvailable] New value of is_all_history_available
   bool? isAllHistoryAvailable;
@@ -862,8 +862,8 @@ class ChatEventIsAllHistoryAvailableToggled extends ChatEventAction {
 class ChatEventInviteLinkEdited extends ChatEventAction {
 
   /// A chat invite link was edited
-  ChatEventInviteLinkEdited({oldInviteLink,
-    newInviteLink});
+  ChatEventInviteLinkEdited({this.oldInviteLink,
+    this.newInviteLink});
 
   /// [oldInviteLink] Previous information about the invite link 
   ChatInviteLink? oldInviteLink;
@@ -895,7 +895,7 @@ class ChatEventInviteLinkEdited extends ChatEventAction {
 class ChatEventInviteLinkRevoked extends ChatEventAction {
 
   /// A chat invite link was revoked
-  ChatEventInviteLinkRevoked({inviteLink});
+  ChatEventInviteLinkRevoked({this.inviteLink});
 
   /// [inviteLink] The invite link
   ChatInviteLink? inviteLink;
@@ -922,7 +922,7 @@ class ChatEventInviteLinkRevoked extends ChatEventAction {
 class ChatEventInviteLinkDeleted extends ChatEventAction {
 
   /// A revoked chat invite link was deleted
-  ChatEventInviteLinkDeleted({inviteLink});
+  ChatEventInviteLinkDeleted({this.inviteLink});
 
   /// [inviteLink] The invite link
   ChatInviteLink? inviteLink;
@@ -949,7 +949,7 @@ class ChatEventInviteLinkDeleted extends ChatEventAction {
 class ChatEventVoiceChatCreated extends ChatEventAction {
 
   /// A voice chat was created
-  ChatEventVoiceChatCreated({groupCallId});
+  ChatEventVoiceChatCreated({this.groupCallId});
 
   /// [groupCallId] Identifier of the voice chat. The voice chat can be received through the method getGroupCall
   int? groupCallId;
@@ -976,7 +976,7 @@ class ChatEventVoiceChatCreated extends ChatEventAction {
 class ChatEventVoiceChatDiscarded extends ChatEventAction {
 
   /// A voice chat was discarded
-  ChatEventVoiceChatDiscarded({groupCallId});
+  ChatEventVoiceChatDiscarded({this.groupCallId});
 
   /// [groupCallId] Identifier of the voice chat. The voice chat can be received through the method getGroupCall
   int? groupCallId;
@@ -1003,8 +1003,8 @@ class ChatEventVoiceChatDiscarded extends ChatEventAction {
 class ChatEventVoiceChatParticipantIsMutedToggled extends ChatEventAction {
 
   /// A voice chat participant was muted or unmuted
-  ChatEventVoiceChatParticipantIsMutedToggled({participantId,
-    isMuted});
+  ChatEventVoiceChatParticipantIsMutedToggled({this.participantId,
+    this.isMuted});
 
   /// [participantId] Identifier of the affected group call participant 
   MessageSender? participantId;
@@ -1036,8 +1036,8 @@ class ChatEventVoiceChatParticipantIsMutedToggled extends ChatEventAction {
 class ChatEventVoiceChatParticipantVolumeLevelChanged extends ChatEventAction {
 
   /// A voice chat participant volume level was changed
-  ChatEventVoiceChatParticipantVolumeLevelChanged({participantId,
-    volumeLevel});
+  ChatEventVoiceChatParticipantVolumeLevelChanged({this.participantId,
+    this.volumeLevel});
 
   /// [participantId] Identifier of the affected group call participant 
   MessageSender? participantId;
@@ -1069,7 +1069,7 @@ class ChatEventVoiceChatParticipantVolumeLevelChanged extends ChatEventAction {
 class ChatEventVoiceChatMuteNewParticipantsToggled extends ChatEventAction {
 
   /// The mute_new_participants setting of a voice chat was toggled
-  ChatEventVoiceChatMuteNewParticipantsToggled({muteNewParticipants});
+  ChatEventVoiceChatMuteNewParticipantsToggled({this.muteNewParticipants});
 
   /// [muteNewParticipants] New value of the mute_new_participants setting
   bool? muteNewParticipants;

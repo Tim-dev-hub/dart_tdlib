@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class DeleteAllCallMessages extends TdFunction {
 
   /// Deletes all call messages
-  DeleteAllCallMessages({revoke});
+  DeleteAllCallMessages({this.revoke});
 
   /// [revoke] Pass true to delete the messages for all users
   bool? revoke;

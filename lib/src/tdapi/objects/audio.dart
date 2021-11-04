@@ -3,14 +3,14 @@ part of '../tdapi.dart';
 class Audio extends TdObject {
 
   /// Describes an audio file. Audio is usually in MP3 or M4A format
-  Audio({duration,
-    title,
-    performer,
-    fileName,
-    mimeType,
-    albumCoverMinithumbnail,
-    albumCoverThumbnail,
-    audio});
+  Audio({this.duration,
+    this.title,
+    this.performer,
+    this.fileName,
+    this.mimeType,
+    this.albumCoverMinithumbnail,
+    this.albumCoverThumbnail,
+    this.audio});
 
   /// [duration] Duration of the audio, in seconds; as defined by the sender 
   int? duration;

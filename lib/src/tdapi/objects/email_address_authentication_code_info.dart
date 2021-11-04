@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class EmailAddressAuthenticationCodeInfo extends TdObject {
 
   /// Information about the email address authentication code that was sent
-  EmailAddressAuthenticationCodeInfo({emailAddressPattern,
-    length});
+  EmailAddressAuthenticationCodeInfo({this.emailAddressPattern,
+    this.length});
 
   /// [emailAddressPattern] Pattern of the email address to which an authentication code was sent 
   String? emailAddressPattern;

@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class Call extends TdObject {
 
   /// Describes a call
-  Call({id,
-    userId,
-    isOutgoing,
-    isVideo,
-    state});
+  Call({this.id,
+    this.userId,
+    this.isOutgoing,
+    this.isVideo,
+    this.state});
 
   /// [id] Call identifier, not persistent 
   int? id;

@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class DraftMessage extends TdObject {
 
   /// Contains information about a message draft
-  DraftMessage({replyToMessageId,
-    date,
-    inputMessageText});
+  DraftMessage({this.replyToMessageId,
+    this.date,
+    this.inputMessageText});
 
   /// [replyToMessageId] Identifier of the message to reply to; 0 if none
   int? replyToMessageId;

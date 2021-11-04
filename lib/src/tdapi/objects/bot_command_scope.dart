@@ -143,7 +143,7 @@ class BotCommandScopeAllChatAdministrators extends BotCommandScope {
 class BotCommandScopeChat extends BotCommandScope {
 
   /// A scope covering all members of a chat
-  BotCommandScopeChat({chatId});
+  BotCommandScopeChat({this.chatId});
 
   /// [chatId] Chat identifier
   int? chatId;
@@ -170,7 +170,7 @@ class BotCommandScopeChat extends BotCommandScope {
 class BotCommandScopeChatAdministrators extends BotCommandScope {
 
   /// A scope covering all administrators of a chat
-  BotCommandScopeChatAdministrators({chatId});
+  BotCommandScopeChatAdministrators({this.chatId});
 
   /// [chatId] Chat identifier
   int? chatId;
@@ -197,8 +197,8 @@ class BotCommandScopeChatAdministrators extends BotCommandScope {
 class BotCommandScopeChatMember extends BotCommandScope {
 
   /// A scope covering a member of a chat
-  BotCommandScopeChatMember({chatId,
-    userId});
+  BotCommandScopeChatMember({this.chatId,
+    this.userId});
 
   /// [chatId] Chat identifier 
   int? chatId;

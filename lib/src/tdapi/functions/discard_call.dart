@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class DiscardCall extends TdFunction {
 
   /// Discards a call
-  DiscardCall({callId,
-    isDisconnected,
-    duration,
-    isVideo,
-    connectionId});
+  DiscardCall({this.callId,
+    this.isDisconnected,
+    this.duration,
+    this.isVideo,
+    this.connectionId});
 
   /// [callId] Call identifier 
   int? callId;

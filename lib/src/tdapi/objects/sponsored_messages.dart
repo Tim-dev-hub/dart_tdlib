@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class SponsoredMessages extends TdObject {
 
   /// Contains a list of sponsored messages
-  SponsoredMessages({messages});
+  SponsoredMessages({this.messages});
 
   /// [messages] List of sponsored messages
   List<SponsoredMessage>? messages;

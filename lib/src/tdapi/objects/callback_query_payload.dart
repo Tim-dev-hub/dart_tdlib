@@ -39,7 +39,7 @@ class CallbackQueryPayload extends TdObject {
 class CallbackQueryPayloadData extends CallbackQueryPayload {
 
   /// The payload for a general callback button
-  CallbackQueryPayloadData({data});
+  CallbackQueryPayloadData({this.data});
 
   /// [data] Data that was attached to the callback button
   String? data;
@@ -66,8 +66,8 @@ class CallbackQueryPayloadData extends CallbackQueryPayload {
 class CallbackQueryPayloadDataWithPassword extends CallbackQueryPayload {
 
   /// The payload for a callback button requiring password
-  CallbackQueryPayloadDataWithPassword({password,
-    data});
+  CallbackQueryPayloadDataWithPassword({this.password,
+    this.data});
 
   /// [password] The password for the current user 
   String? password;
@@ -99,7 +99,7 @@ class CallbackQueryPayloadDataWithPassword extends CallbackQueryPayload {
 class CallbackQueryPayloadGame extends CallbackQueryPayload {
 
   /// The payload for a game callback button
-  CallbackQueryPayloadGame({gameShortName});
+  CallbackQueryPayloadGame({this.gameShortName});
 
   /// [gameShortName] A short name of the game that was attached to the callback button
   String? gameShortName;

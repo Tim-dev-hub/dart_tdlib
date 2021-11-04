@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class Proxies extends TdObject {
 
   /// Represents a list of proxy servers
-  Proxies({proxies});
+  Proxies({this.proxies});
 
   /// [proxies] List of proxy servers
   List<Proxy>? proxies;

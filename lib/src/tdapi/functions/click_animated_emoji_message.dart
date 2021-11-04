@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class ClickAnimatedEmojiMessage extends TdFunction {
 
   /// Informs TDLib that a message with an animated emoji was clicked by the user. Returns a big animated sticker to be played or a 404 error if usual animation needs to be played
-  ClickAnimatedEmojiMessage({chatId,
-    messageId});
+  ClickAnimatedEmojiMessage({this.chatId,
+    this.messageId});
 
   /// [chatId] Chat identifier of the message 
   int? chatId;

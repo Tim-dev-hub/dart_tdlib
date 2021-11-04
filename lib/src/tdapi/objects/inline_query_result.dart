@@ -66,12 +66,12 @@ class InlineQueryResult extends TdObject {
 class InlineQueryResultArticle extends InlineQueryResult {
 
   /// Represents a link to an article or web page
-  InlineQueryResultArticle({id,
-    url,
-    hideUrl,
-    title,
-    description,
-    thumbnail});
+  InlineQueryResultArticle({this.id,
+    this.url,
+    this.hideUrl,
+    this.title,
+    this.description,
+    this.thumbnail});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -123,9 +123,9 @@ class InlineQueryResultArticle extends InlineQueryResult {
 class InlineQueryResultContact extends InlineQueryResult {
 
   /// Represents a user contact
-  InlineQueryResultContact({id,
-    contact,
-    thumbnail});
+  InlineQueryResultContact({this.id,
+    this.contact,
+    this.thumbnail});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -162,10 +162,10 @@ class InlineQueryResultContact extends InlineQueryResult {
 class InlineQueryResultLocation extends InlineQueryResult {
 
   /// Represents a point on the map
-  InlineQueryResultLocation({id,
-    location,
-    title,
-    thumbnail});
+  InlineQueryResultLocation({this.id,
+    this.location,
+    this.title,
+    this.thumbnail});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -207,9 +207,9 @@ class InlineQueryResultLocation extends InlineQueryResult {
 class InlineQueryResultVenue extends InlineQueryResult {
 
   /// Represents information about a venue
-  InlineQueryResultVenue({id,
-    venue,
-    thumbnail});
+  InlineQueryResultVenue({this.id,
+    this.venue,
+    this.thumbnail});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -246,8 +246,8 @@ class InlineQueryResultVenue extends InlineQueryResult {
 class InlineQueryResultGame extends InlineQueryResult {
 
   /// Represents information about a game
-  InlineQueryResultGame({id,
-    game});
+  InlineQueryResultGame({this.id,
+    this.game});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -279,9 +279,9 @@ class InlineQueryResultGame extends InlineQueryResult {
 class InlineQueryResultAnimation extends InlineQueryResult {
 
   /// Represents an animation file
-  InlineQueryResultAnimation({id,
-    animation,
-    title});
+  InlineQueryResultAnimation({this.id,
+    this.animation,
+    this.title});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -318,8 +318,8 @@ class InlineQueryResultAnimation extends InlineQueryResult {
 class InlineQueryResultAudio extends InlineQueryResult {
 
   /// Represents an audio file
-  InlineQueryResultAudio({id,
-    audio});
+  InlineQueryResultAudio({this.id,
+    this.audio});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -351,10 +351,10 @@ class InlineQueryResultAudio extends InlineQueryResult {
 class InlineQueryResultDocument extends InlineQueryResult {
 
   /// Represents a document
-  InlineQueryResultDocument({id,
-    document,
-    title,
-    description});
+  InlineQueryResultDocument({this.id,
+    this.document,
+    this.title,
+    this.description});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -396,10 +396,10 @@ class InlineQueryResultDocument extends InlineQueryResult {
 class InlineQueryResultPhoto extends InlineQueryResult {
 
   /// Represents a photo
-  InlineQueryResultPhoto({id,
-    photo,
-    title,
-    description});
+  InlineQueryResultPhoto({this.id,
+    this.photo,
+    this.title,
+    this.description});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -441,8 +441,8 @@ class InlineQueryResultPhoto extends InlineQueryResult {
 class InlineQueryResultSticker extends InlineQueryResult {
 
   /// Represents a sticker
-  InlineQueryResultSticker({id,
-    sticker});
+  InlineQueryResultSticker({this.id,
+    this.sticker});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -474,10 +474,10 @@ class InlineQueryResultSticker extends InlineQueryResult {
 class InlineQueryResultVideo extends InlineQueryResult {
 
   /// Represents a video
-  InlineQueryResultVideo({id,
-    video,
-    title,
-    description});
+  InlineQueryResultVideo({this.id,
+    this.video,
+    this.title,
+    this.description});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -519,9 +519,9 @@ class InlineQueryResultVideo extends InlineQueryResult {
 class InlineQueryResultVoiceNote extends InlineQueryResult {
 
   /// Represents a voice note
-  InlineQueryResultVoiceNote({id,
-    voiceNote,
-    title});
+  InlineQueryResultVoiceNote({this.id,
+    this.voiceNote,
+    this.title});
 
   /// [id] Unique identifier of the query result 
   String? id;

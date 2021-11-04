@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class ViewSponsoredMessage extends TdFunction {
 
   /// Informs TDLib that a sponsored message was viewed by the user
-  ViewSponsoredMessage({chatId,
-    sponsoredMessageId});
+  ViewSponsoredMessage({this.chatId,
+    this.sponsoredMessageId});
 
   /// [chatId] Identifier of the chat with the sponsored message 
   int? chatId;

@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class ChatPhotoInfo extends TdObject {
 
   /// Contains basic information about the photo of a chat
-  ChatPhotoInfo({small,
-    big,
-    minithumbnail,
-    hasAnimation});
+  ChatPhotoInfo({this.small,
+    this.big,
+    this.minithumbnail,
+    this.hasAnimation});
 
   /// [small] A small (160x160) chat photo variant in JPEG format. The file can be downloaded only before the photo is changed
   File? small;

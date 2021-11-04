@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class SaveApplicationLogEvent extends TdFunction {
 
   /// Saves application log event on the server. Can be called before authorization
-  SaveApplicationLogEvent({type,
-    chatId,
-    data});
+  SaveApplicationLogEvent({this.type,
+    this.chatId,
+    this.data});
 
   /// [type] Event type 
   String? type;

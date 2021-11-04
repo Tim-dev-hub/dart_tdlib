@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GetPassportAuthorizationFormAvailableElements extends TdFunction {
 
   /// Returns already available Telegram Passport elements suitable for completing a Telegram Passport authorization form. Result can be received only once for each authorization form
-  GetPassportAuthorizationFormAvailableElements({autorizationFormId,
-    password});
+  GetPassportAuthorizationFormAvailableElements({this.autorizationFormId,
+    this.password});
 
   /// [autorizationFormId] Authorization form identifier 
   int? autorizationFormId;

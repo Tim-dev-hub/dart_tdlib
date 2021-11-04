@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetNetworkStatistics extends TdFunction {
 
   /// Returns network data usage statistics. Can be called before authorization
-  GetNetworkStatistics({onlyCurrent});
+  GetNetworkStatistics({this.onlyCurrent});
 
   /// [onlyCurrent] If true, returns only data for the current library launch
   bool? onlyCurrent;

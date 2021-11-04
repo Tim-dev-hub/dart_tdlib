@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class SetBackground extends TdFunction {
 
   /// Changes the background selected by the user; adds background to the list of installed backgrounds
-  SetBackground({background,
-    type,
-    forDarkTheme});
+  SetBackground({this.background,
+    this.type,
+    this.forDarkTheme});
 
   /// [background] The input background to use; pass null to create a new filled backgrounds or to remove the current background
   InputBackground? background;

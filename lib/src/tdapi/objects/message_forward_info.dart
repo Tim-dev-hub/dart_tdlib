@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class MessageForwardInfo extends TdObject {
 
   /// Contains information about a forwarded message
-  MessageForwardInfo({origin,
-    date,
-    publicServiceAnnouncementType,
-    fromChatId,
-    fromMessageId});
+  MessageForwardInfo({this.origin,
+    this.date,
+    this.publicServiceAnnouncementType,
+    this.fromChatId,
+    this.fromMessageId});
 
   /// [origin] Origin of a forwarded message
   MessageForwardOrigin? origin;

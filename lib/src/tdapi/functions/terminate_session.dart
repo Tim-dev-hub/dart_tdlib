@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class TerminateSession extends TdFunction {
 
   /// Terminates a session of the current user
-  TerminateSession({sessionId});
+  TerminateSession({this.sessionId});
 
   /// [sessionId] Session identifier
   int? sessionId;

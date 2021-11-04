@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetRecentlyOpenedChats extends TdFunction {
 
   /// Returns recently opened chats, this is an offline request. Returns chats in the order of last opening
-  GetRecentlyOpenedChats({limit});
+  GetRecentlyOpenedChats({this.limit});
 
   /// [limit] The maximum number of chats to be returned
   int? limit;

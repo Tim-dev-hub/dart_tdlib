@@ -3,15 +3,15 @@ part of '../tdapi.dart';
 class ConnectedWebsite extends TdObject {
 
   /// Contains information about one website the current user is logged in with Telegram
-  ConnectedWebsite({id,
-    domainName,
-    botUserId,
-    browser,
-    platform,
-    logInDate,
-    lastActiveDate,
-    ip,
-    location});
+  ConnectedWebsite({this.id,
+    this.domainName,
+    this.botUserId,
+    this.browser,
+    this.platform,
+    this.logInDate,
+    this.lastActiveDate,
+    this.ip,
+    this.location});
 
   /// [id] Website identifier
   int? id;

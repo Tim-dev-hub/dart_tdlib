@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class MessageLinkInfo extends TdObject {
 
   /// Contains information about a link to a message in a chat
-  MessageLinkInfo({isPublic,
-    chatId,
-    message,
-    mediaTimestamp,
-    forAlbum,
-    forComment});
+  MessageLinkInfo({this.isPublic,
+    this.chatId,
+    this.message,
+    this.mediaTimestamp,
+    this.forAlbum,
+    this.forComment});
 
   /// [isPublic] True, if the link is a public link for a message in a chat
   bool? isPublic;

@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class ChatMember extends TdObject {
 
   /// Information about a user or a chat as a member of another chat
-  ChatMember({memberId,
-    inviterUserId,
-    joinedChatDate,
-    status});
+  ChatMember({this.memberId,
+    this.inviterUserId,
+    this.joinedChatDate,
+    this.status});
 
   /// [memberId] Identifier of the chat member. Currently, other chats can be only Left or Banned. Only supergroups and channels can have other chats as Left or Banned members and these chats must be supergroups or channels
   MessageSender? memberId;

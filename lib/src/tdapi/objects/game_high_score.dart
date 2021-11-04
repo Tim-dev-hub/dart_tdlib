@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class GameHighScore extends TdObject {
 
   /// Contains one row of the game high score table
-  GameHighScore({position,
-    userId,
-    score});
+  GameHighScore({this.position,
+    this.userId,
+    this.score});
 
   /// [position] Position in the high score table 
   int? position;

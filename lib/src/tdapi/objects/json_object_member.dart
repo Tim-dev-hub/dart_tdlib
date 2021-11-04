@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class JsonObjectMember extends TdObject {
 
   /// Represents one member of a JSON object
-  JsonObjectMember({key,
-    value});
+  JsonObjectMember({this.key,
+    this.value});
 
   /// [key] Member's key 
   String? key;

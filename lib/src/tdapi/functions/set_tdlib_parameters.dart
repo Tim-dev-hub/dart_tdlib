@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class SetTdlibParameters extends TdFunction {
 
   /// Sets the parameters for TDLib initialization. Works only when the current authorization state is authorizationStateWaitTdlibParameters
-  SetTdlibParameters({parameters});
+  SetTdlibParameters({this.parameters});
 
   /// [parameters] Parameters for TDLib initialization
   TdlibParameters? parameters;

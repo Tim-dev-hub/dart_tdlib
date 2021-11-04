@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetChatSponsoredMessages extends TdFunction {
 
   /// Returns sponsored messages to be shown in a chat; for channel chats only
-  GetChatSponsoredMessages({chatId});
+  GetChatSponsoredMessages({this.chatId});
 
   /// [chatId] Identifier of the chat
   int? chatId;

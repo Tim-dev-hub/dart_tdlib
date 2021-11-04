@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class EditInlineMessageLiveLocation extends TdFunction {
 
   /// Edits the content of a live location in an inline message sent via a bot; for bots only
-  EditInlineMessageLiveLocation({inlineMessageId,
-    replyMarkup,
-    location,
-    heading,
-    proximityAlertRadius});
+  EditInlineMessageLiveLocation({this.inlineMessageId,
+    this.replyMarkup,
+    this.location,
+    this.heading,
+    this.proximityAlertRadius});
 
   /// [inlineMessageId] Inline message identifier
   String? inlineMessageId;

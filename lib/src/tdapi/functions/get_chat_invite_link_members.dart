@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class GetChatInviteLinkMembers extends TdFunction {
 
   /// Returns chat members joined a chat by an invite link. Requires administrator privileges and can_invite_users right in the chat for own links and owner privileges for other links
-  GetChatInviteLinkMembers({chatId,
-    inviteLink,
-    offsetMember,
-    limit});
+  GetChatInviteLinkMembers({this.chatId,
+    this.inviteLink,
+    this.offsetMember,
+    this.limit});
 
   /// [chatId] Chat identifier 
   int? chatId;

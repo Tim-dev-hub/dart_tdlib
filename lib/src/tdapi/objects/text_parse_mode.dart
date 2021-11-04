@@ -36,7 +36,7 @@ class TextParseMode extends TdObject {
 class TextParseModeMarkdown extends TextParseMode {
 
   /// The text uses Markdown-style formatting
-  TextParseModeMarkdown({version});
+  TextParseModeMarkdown({this.version});
 
   /// [version] Version of the parser: 0 or 1 - Telegram Bot API "Markdown" parse mode, 2 - Telegram Bot API "MarkdownV2" parse mode
   int? version;

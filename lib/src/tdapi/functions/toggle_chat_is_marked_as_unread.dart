@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class ToggleChatIsMarkedAsUnread extends TdFunction {
 
   /// Changes the marked as unread state of a chat
-  ToggleChatIsMarkedAsUnread({chatId,
-    isMarkedAsUnread});
+  ToggleChatIsMarkedAsUnread({this.chatId,
+    this.isMarkedAsUnread});
 
   /// [chatId] Chat identifier 
   int? chatId;

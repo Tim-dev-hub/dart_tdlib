@@ -57,7 +57,7 @@ class InputPassportElementErrorSource extends TdObject {
 class InputPassportElementErrorSourceUnspecified extends InputPassportElementErrorSource {
 
   /// The element contains an error in an unspecified place. The error will be considered resolved when new data is added
-  InputPassportElementErrorSourceUnspecified({elementHash});
+  InputPassportElementErrorSourceUnspecified({this.elementHash});
 
   /// [elementHash] Current hash of the entire element
   String? elementHash;
@@ -84,8 +84,8 @@ class InputPassportElementErrorSourceUnspecified extends InputPassportElementErr
 class InputPassportElementErrorSourceDataField extends InputPassportElementErrorSource {
 
   /// A data field contains an error. The error is considered resolved when the field's value changes
-  InputPassportElementErrorSourceDataField({fieldName,
-    dataHash});
+  InputPassportElementErrorSourceDataField({this.fieldName,
+    this.dataHash});
 
   /// [fieldName] Field name 
   String? fieldName;
@@ -117,7 +117,7 @@ class InputPassportElementErrorSourceDataField extends InputPassportElementError
 class InputPassportElementErrorSourceFrontSide extends InputPassportElementErrorSource {
 
   /// The front side of the document contains an error. The error is considered resolved when the file with the front side of the document changes
-  InputPassportElementErrorSourceFrontSide({fileHash});
+  InputPassportElementErrorSourceFrontSide({this.fileHash});
 
   /// [fileHash] Current hash of the file containing the front side
   String? fileHash;
@@ -144,7 +144,7 @@ class InputPassportElementErrorSourceFrontSide extends InputPassportElementError
 class InputPassportElementErrorSourceReverseSide extends InputPassportElementErrorSource {
 
   /// The reverse side of the document contains an error. The error is considered resolved when the file with the reverse side of the document changes
-  InputPassportElementErrorSourceReverseSide({fileHash});
+  InputPassportElementErrorSourceReverseSide({this.fileHash});
 
   /// [fileHash] Current hash of the file containing the reverse side
   String? fileHash;
@@ -171,7 +171,7 @@ class InputPassportElementErrorSourceReverseSide extends InputPassportElementErr
 class InputPassportElementErrorSourceSelfie extends InputPassportElementErrorSource {
 
   /// The selfie contains an error. The error is considered resolved when the file with the selfie changes
-  InputPassportElementErrorSourceSelfie({fileHash});
+  InputPassportElementErrorSourceSelfie({this.fileHash});
 
   /// [fileHash] Current hash of the file containing the selfie
   String? fileHash;
@@ -198,7 +198,7 @@ class InputPassportElementErrorSourceSelfie extends InputPassportElementErrorSou
 class InputPassportElementErrorSourceTranslationFile extends InputPassportElementErrorSource {
 
   /// One of the files containing the translation of the document contains an error. The error is considered resolved when the file with the translation changes
-  InputPassportElementErrorSourceTranslationFile({fileHash});
+  InputPassportElementErrorSourceTranslationFile({this.fileHash});
 
   /// [fileHash] Current hash of the file containing the translation
   String? fileHash;
@@ -225,7 +225,7 @@ class InputPassportElementErrorSourceTranslationFile extends InputPassportElemen
 class InputPassportElementErrorSourceTranslationFiles extends InputPassportElementErrorSource {
 
   /// The translation of the document contains an error. The error is considered resolved when the list of files changes
-  InputPassportElementErrorSourceTranslationFiles({fileHashes});
+  InputPassportElementErrorSourceTranslationFiles({this.fileHashes});
 
   /// [fileHashes] Current hashes of all files with the translation
   List<String>? fileHashes;
@@ -252,7 +252,7 @@ class InputPassportElementErrorSourceTranslationFiles extends InputPassportEleme
 class InputPassportElementErrorSourceFile extends InputPassportElementErrorSource {
 
   /// The file contains an error. The error is considered resolved when the file changes
-  InputPassportElementErrorSourceFile({fileHash});
+  InputPassportElementErrorSourceFile({this.fileHash});
 
   /// [fileHash] Current hash of the file which has the error
   String? fileHash;
@@ -279,7 +279,7 @@ class InputPassportElementErrorSourceFile extends InputPassportElementErrorSourc
 class InputPassportElementErrorSourceFiles extends InputPassportElementErrorSource {
 
   /// The list of attached files contains an error. The error is considered resolved when the file list changes
-  InputPassportElementErrorSourceFiles({fileHashes});
+  InputPassportElementErrorSourceFiles({this.fileHashes});
 
   /// [fileHashes] Current hashes of all attached files
   List<String>? fileHashes;

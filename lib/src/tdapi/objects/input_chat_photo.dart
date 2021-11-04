@@ -39,7 +39,7 @@ class InputChatPhoto extends TdObject {
 class InputChatPhotoPrevious extends InputChatPhoto {
 
   /// A previously used profile photo of the current user
-  InputChatPhotoPrevious({chatPhotoId});
+  InputChatPhotoPrevious({this.chatPhotoId});
 
   /// [chatPhotoId] Identifier of the current user's profile photo to reuse
   int? chatPhotoId;
@@ -66,7 +66,7 @@ class InputChatPhotoPrevious extends InputChatPhoto {
 class InputChatPhotoStatic extends InputChatPhoto {
 
   /// A static photo in JPEG format
-  InputChatPhotoStatic({photo});
+  InputChatPhotoStatic({this.photo});
 
   /// [photo] Photo to be set as profile photo. Only inputFileLocal and inputFileGenerated are allowed
   InputFile? photo;
@@ -93,8 +93,8 @@ class InputChatPhotoStatic extends InputChatPhoto {
 class InputChatPhotoAnimation extends InputChatPhoto {
 
   /// An animation in MPEG4 format; must be square, at most 10 seconds long, have width between 160 and 800 and be at most 2MB in size
-  InputChatPhotoAnimation({animation,
-    mainFrameTimestamp});
+  InputChatPhotoAnimation({this.animation,
+    this.mainFrameTimestamp});
 
   /// [animation] Animation to be set as profile photo. Only inputFileLocal and inputFileGenerated are allowed
   InputFile? animation;

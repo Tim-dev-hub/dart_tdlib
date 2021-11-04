@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class FoundMessages extends TdObject {
 
   /// Contains a list of messages found by a search
-  FoundMessages({totalCount,
-    messages,
-    nextOffset});
+  FoundMessages({this.totalCount,
+    this.messages,
+    this.nextOffset});
 
   /// [totalCount] Approximate total count of messages found; -1 if unknown 
   int? totalCount;

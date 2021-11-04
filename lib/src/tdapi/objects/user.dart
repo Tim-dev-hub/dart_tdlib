@@ -3,23 +3,23 @@ part of '../tdapi.dart';
 class User extends TdObject {
 
   /// Represents a user
-  User({id,
-    firstName,
-    lastName,
-    username,
-    phoneNumber,
-    status,
-    profilePhoto,
-    isContact,
-    isMutualContact,
-    isVerified,
-    isSupport,
-    restrictionReason,
-    isScam,
-    isFake,
-    haveAccess,
-    type,
-    languageCode});
+  User({this.id,
+    this.firstName,
+    this.lastName,
+    this.username,
+    this.phoneNumber,
+    this.status,
+    this.profilePhoto,
+    this.isContact,
+    this.isMutualContact,
+    this.isVerified,
+    this.isSupport,
+    this.restrictionReason,
+    this.isScam,
+    this.isFake,
+    this.haveAccess,
+    this.type,
+    this.languageCode});
 
   /// [id] User identifier
   int? id;

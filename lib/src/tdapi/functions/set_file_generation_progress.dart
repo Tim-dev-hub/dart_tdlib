@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class SetFileGenerationProgress extends TdFunction {
 
   /// Informs TDLib on a file generation progress
-  SetFileGenerationProgress({generationId,
-    expectedSize,
-    localPrefixSize});
+  SetFileGenerationProgress({this.generationId,
+    this.expectedSize,
+    this.localPrefixSize});
 
   /// [generationId] The identifier of the generation process
   int? generationId;

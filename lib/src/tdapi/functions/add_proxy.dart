@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class AddProxy extends TdFunction {
 
   /// Adds a proxy server for network requests. Can be called before authorization
-  AddProxy({server,
-    port,
-    enable,
-    type});
+  AddProxy({this.server,
+    this.port,
+    this.enable,
+    this.type});
 
   /// [server] Proxy server IP address 
   String? server;

@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class GetSupergroupMembers extends TdFunction {
 
   /// Returns information about members or banned users in a supergroup or channel. Can be used only if supergroupFullInfo.can_get_members == true; additionally, administrator privileges may be required for some filters
-  GetSupergroupMembers({supergroupId,
-    filter,
-    offset,
-    limit});
+  GetSupergroupMembers({this.supergroupId,
+    this.filter,
+    this.offset,
+    this.limit});
 
   /// [supergroupId] Identifier of the supergroup or channel
   int? supergroupId;

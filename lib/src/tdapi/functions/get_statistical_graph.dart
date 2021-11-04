@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class GetStatisticalGraph extends TdFunction {
 
   /// Loads an asynchronous or a zoomed in statistical graph
-  GetStatisticalGraph({chatId,
-    token,
-    x});
+  GetStatisticalGraph({this.chatId,
+    this.token,
+    this.x});
 
   /// [chatId] Chat identifier 
   int? chatId;

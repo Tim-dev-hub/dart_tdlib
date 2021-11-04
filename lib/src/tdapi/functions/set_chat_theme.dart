@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class SetChatTheme extends TdFunction {
 
   /// Changes the chat theme. Supported only in private and secret chats
-  SetChatTheme({chatId,
-    themeName});
+  SetChatTheme({this.chatId,
+    this.themeName});
 
   /// [chatId] Chat identifier 
   int? chatId;

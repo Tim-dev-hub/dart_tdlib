@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class PassportSuitableElement extends TdObject {
 
   /// Contains information about a Telegram Passport element that was requested by a service
-  PassportSuitableElement({type,
-    isSelfieRequired,
-    isTranslationRequired,
-    isNativeNameRequired});
+  PassportSuitableElement({this.type,
+    this.isSelfieRequired,
+    this.isTranslationRequired,
+    this.isNativeNameRequired});
 
   /// [type] Type of the element 
   PassportElementType? type;

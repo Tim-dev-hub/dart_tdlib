@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class GetChatInviteLinks extends TdFunction {
 
   /// Returns invite links for a chat created by specified administrator. Requires administrator privileges and can_invite_users right in the chat to get own links and owner privileges to get other links
-  GetChatInviteLinks({chatId,
-    creatorUserId,
-    isRevoked,
-    offsetDate,
-    offsetInviteLink,
-    limit});
+  GetChatInviteLinks({this.chatId,
+    this.creatorUserId,
+    this.isRevoked,
+    this.offsetDate,
+    this.offsetInviteLink,
+    this.limit});
 
   /// [chatId] Chat identifier
   int? chatId;

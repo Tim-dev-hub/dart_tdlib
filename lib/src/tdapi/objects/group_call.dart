@@ -3,25 +3,25 @@ part of '../tdapi.dart';
 class GroupCall extends TdObject {
 
   /// Describes a group call
-  GroupCall({id,
-    title,
-    scheduledStartDate,
-    enabledStartNotification,
-    isActive,
-    isJoined,
-    needRejoin,
-    canBeManaged,
-    participantCount,
-    loadedAllParticipants,
-    recentSpeakers,
-    isMyVideoEnabled,
-    isMyVideoPaused,
-    canEnableVideo,
-    muteNewParticipants,
-    canToggleMuteNewParticipants,
-    recordDuration,
-    isVideoRecorded,
-    duration});
+  GroupCall({this.id,
+    this.title,
+    this.scheduledStartDate,
+    this.enabledStartNotification,
+    this.isActive,
+    this.isJoined,
+    this.needRejoin,
+    this.canBeManaged,
+    this.participantCount,
+    this.loadedAllParticipants,
+    this.recentSpeakers,
+    this.isMyVideoEnabled,
+    this.isMyVideoPaused,
+    this.canEnableVideo,
+    this.muteNewParticipants,
+    this.canToggleMuteNewParticipants,
+    this.recordDuration,
+    this.isVideoRecorded,
+    this.duration});
 
   /// [id] Group call identifier
   int? id;

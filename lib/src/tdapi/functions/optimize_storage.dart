@@ -3,15 +3,15 @@ part of '../tdapi.dart';
 class OptimizeStorage extends TdFunction {
 
   /// Optimizes storage usage, i.e. deletes some files and returns new storage usage statistics. Secret thumbnails can't be deleted
-  OptimizeStorage({size,
-    ttl,
-    count,
-    immunityDelay,
-    fileTypes,
-    chatIds,
-    excludeChatIds,
-    returnDeletedFileStatistics,
-    chatLimit});
+  OptimizeStorage({this.size,
+    this.ttl,
+    this.count,
+    this.immunityDelay,
+    this.fileTypes,
+    this.chatIds,
+    this.excludeChatIds,
+    this.returnDeletedFileStatistics,
+    this.chatLimit});
 
   /// [size] Limit on the total size of files after deletion, in bytes. Pass -1 to use the default limit
   int? size;

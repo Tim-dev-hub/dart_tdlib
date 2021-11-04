@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class SecretChat extends TdObject {
 
   /// Represents a secret chat
-  SecretChat({id,
-    userId,
-    state,
-    isOutbound,
-    keyHash,
-    layer});
+  SecretChat({this.id,
+    this.userId,
+    this.state,
+    this.isOutbound,
+    this.keyHash,
+    this.layer});
 
   /// [id] Secret chat identifier
   int? id;

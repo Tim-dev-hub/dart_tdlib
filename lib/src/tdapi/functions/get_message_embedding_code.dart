@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class GetMessageEmbeddingCode extends TdFunction {
 
   /// Returns an HTML code for embedding the message. Available only for messages in supergroups and channels with a username
-  GetMessageEmbeddingCode({chatId,
-    messageId,
-    forAlbum});
+  GetMessageEmbeddingCode({this.chatId,
+    this.messageId,
+    this.forAlbum});
 
   /// [chatId] Identifier of the chat to which the message belongs
   int? chatId;

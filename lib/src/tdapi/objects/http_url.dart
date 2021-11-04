@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class HttpUrl extends TdObject {
 
   /// Contains an HTTP URL
-  HttpUrl({url});
+  HttpUrl({this.url});
 
   /// [url] The URL
   String? url;

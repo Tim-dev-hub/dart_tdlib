@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class ReportChat extends TdFunction {
 
   /// Reports a chat to the Telegram moderators. A chat can be reported only from the chat action bar, or if this is a private chat with a bot, a private chat with a user sharing their location, a supergroup, or a channel, since other chats can't be checked by moderators
-  ReportChat({chatId,
-    messageIds,
-    reason,
-    text});
+  ReportChat({this.chatId,
+    this.messageIds,
+    this.reason,
+    this.text});
 
   /// [chatId] Chat identifier
   int? chatId;

@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class Minithumbnail extends TdObject {
 
   /// Thumbnail image of a very poor quality and low resolution
-  Minithumbnail({width,
-    height,
-    data});
+  Minithumbnail({this.width,
+    this.height,
+    this.data});
 
   /// [width] Thumbnail width, usually doesn't exceed 40 
   int? width;

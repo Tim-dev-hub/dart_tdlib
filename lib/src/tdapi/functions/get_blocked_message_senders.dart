@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GetBlockedMessageSenders extends TdFunction {
 
   /// Returns users and chats that were blocked by the current user
-  GetBlockedMessageSenders({offset,
-    limit});
+  GetBlockedMessageSenders({this.offset,
+    this.limit});
 
   /// [offset] Number of users and chats to skip in the result; must be non-negative 
   int? offset;

@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GetExternalLink extends TdFunction {
 
   /// Returns an HTTP URL which can be used to automatically authorize the current user on a website after clicking an HTTP link. Use the method getExternalLinkInfo to find whether a prior user confirmation is needed
-  GetExternalLink({link,
-    allowWriteAccess});
+  GetExternalLink({this.link,
+    this.allowWriteAccess});
 
   /// [link] The HTTP link
   String? link;

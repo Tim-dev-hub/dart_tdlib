@@ -3,15 +3,15 @@ part of '../tdapi.dart';
 class EncryptedPassportElement extends TdObject {
 
   /// Contains information about an encrypted Telegram Passport element; for bots only
-  EncryptedPassportElement({type,
-    data,
-    frontSide,
-    reverseSide,
-    selfie,
-    translation,
-    files,
-    value,
-    hash});
+  EncryptedPassportElement({this.type,
+    this.data,
+    this.frontSide,
+    this.reverseSide,
+    this.selfie,
+    this.translation,
+    this.files,
+    this.value,
+    this.hash});
 
   /// [type] Type of Telegram Passport element 
   PassportElementType? type;

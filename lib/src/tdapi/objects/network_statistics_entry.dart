@@ -36,10 +36,10 @@ class NetworkStatisticsEntry extends TdObject {
 class NetworkStatisticsEntryFile extends NetworkStatisticsEntry {
 
   /// Contains information about the total amount of data that was used to send and receive files
-  NetworkStatisticsEntryFile({fileType,
-    networkType,
-    sentBytes,
-    receivedBytes});
+  NetworkStatisticsEntryFile({this.fileType,
+    this.networkType,
+    this.sentBytes,
+    this.receivedBytes});
 
   /// [fileType] Type of the file the data is part of; pass null if the data isn't related to files
   FileType? fileType;
@@ -81,10 +81,10 @@ class NetworkStatisticsEntryFile extends NetworkStatisticsEntry {
 class NetworkStatisticsEntryCall extends NetworkStatisticsEntry {
 
   /// Contains information about the total amount of data that was used for calls
-  NetworkStatisticsEntryCall({networkType,
-    sentBytes,
-    receivedBytes,
-    duration});
+  NetworkStatisticsEntryCall({this.networkType,
+    this.sentBytes,
+    this.receivedBytes,
+    this.duration});
 
   /// [networkType] Type of the network the data was sent through. Call setNetworkType to maintain the actual network type
   NetworkType? networkType;

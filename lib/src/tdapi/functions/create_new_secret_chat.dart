@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class CreateNewSecretChat extends TdFunction {
 
   /// Creates a new secret chat. Returns the newly created chat
-  CreateNewSecretChat({userId});
+  CreateNewSecretChat({this.userId});
 
   /// [userId] Identifier of the target user
   int? userId;

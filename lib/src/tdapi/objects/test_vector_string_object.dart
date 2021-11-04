@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class TestVectorStringObject extends TdObject {
 
   /// A simple object containing a vector of objects that hold a string; for testing only
-  TestVectorStringObject({value});
+  TestVectorStringObject({this.value});
 
   /// [value] Vector of objects
   List<TestString>? value;

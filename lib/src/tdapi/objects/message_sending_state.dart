@@ -59,10 +59,10 @@ class MessageSendingStatePending extends MessageSendingState {
 class MessageSendingStateFailed extends MessageSendingState {
 
   /// The message failed to be sent
-  MessageSendingStateFailed({errorCode,
-    errorMessage,
-    canRetry,
-    retryAfter});
+  MessageSendingStateFailed({this.errorCode,
+    this.errorMessage,
+    this.canRetry,
+    this.retryAfter});
 
   /// [errorCode] An error code; 0 if unknown 
   int? errorCode;

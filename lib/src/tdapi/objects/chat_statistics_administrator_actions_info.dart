@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class ChatStatisticsAdministratorActionsInfo extends TdObject {
 
   /// Contains statistics about administrator actions done by a user
-  ChatStatisticsAdministratorActionsInfo({userId,
-    deletedMessageCount,
-    bannedUserCount,
-    restrictedUserCount});
+  ChatStatisticsAdministratorActionsInfo({this.userId,
+    this.deletedMessageCount,
+    this.bannedUserCount,
+    this.restrictedUserCount});
 
   /// [userId] Administrator user identifier
   int? userId;

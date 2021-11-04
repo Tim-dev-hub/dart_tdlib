@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class CallId extends TdObject {
 
   /// Contains the call identifier
-  CallId({id});
+  CallId({this.id});
 
   /// [id] Call identifier
   int? id;

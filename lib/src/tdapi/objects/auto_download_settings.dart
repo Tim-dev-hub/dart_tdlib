@@ -3,14 +3,14 @@ part of '../tdapi.dart';
 class AutoDownloadSettings extends TdObject {
 
   /// Contains auto-download settings
-  AutoDownloadSettings({isAutoDownloadEnabled,
-    maxPhotoFileSize,
-    maxVideoFileSize,
-    maxOtherFileSize,
-    videoUploadBitrate,
-    preloadLargeVideos,
-    preloadNextAudio,
-    useLessDataForCalls});
+  AutoDownloadSettings({this.isAutoDownloadEnabled,
+    this.maxPhotoFileSize,
+    this.maxVideoFileSize,
+    this.maxOtherFileSize,
+    this.videoUploadBitrate,
+    this.preloadLargeVideos,
+    this.preloadNextAudio,
+    this.useLessDataForCalls});
 
   /// [isAutoDownloadEnabled] True, if the auto-download is enabled
   bool? isAutoDownloadEnabled;

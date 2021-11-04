@@ -3,17 +3,17 @@ part of '../tdapi.dart';
 class PaymentReceipt extends TdObject {
 
   /// Contains information about a successful payment
-  PaymentReceipt({title,
-    description,
-    photo,
-    date,
-    sellerBotUserId,
-    paymentsProviderUserId,
-    invoice,
-    orderInfo,
-    shippingOption,
-    credentialsTitle,
-    tipAmount});
+  PaymentReceipt({this.title,
+    this.description,
+    this.photo,
+    this.date,
+    this.sellerBotUserId,
+    this.paymentsProviderUserId,
+    this.invoice,
+    this.orderInfo,
+    this.shippingOption,
+    this.credentialsTitle,
+    this.tipAmount});
 
   /// [title] Product title
   String? title;

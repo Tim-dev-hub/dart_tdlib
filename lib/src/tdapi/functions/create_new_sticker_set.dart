@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class CreateNewStickerSet extends TdFunction {
 
   /// Creates a new sticker set. Returns the newly created sticker set
-  CreateNewStickerSet({userId,
-    title,
-    name,
-    isMasks,
-    stickers,
-    source});
+  CreateNewStickerSet({this.userId,
+    this.title,
+    this.name,
+    this.isMasks,
+    this.stickers,
+    this.source});
 
   /// [userId] Sticker set owner; ignored for regular users
   int? userId;

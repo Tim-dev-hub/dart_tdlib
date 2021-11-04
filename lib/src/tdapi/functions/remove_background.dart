@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class RemoveBackground extends TdFunction {
 
   /// Removes background from the list of installed backgrounds
-  RemoveBackground({backgroundId});
+  RemoveBackground({this.backgroundId});
 
   /// [backgroundId] The background identifier
   int? backgroundId;

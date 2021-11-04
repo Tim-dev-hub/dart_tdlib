@@ -36,7 +36,7 @@ class MessageSchedulingState extends TdObject {
 class MessageSchedulingStateSendAtDate extends MessageSchedulingState {
 
   /// The message will be sent at the specified date
-  MessageSchedulingStateSendAtDate({sendDate});
+  MessageSchedulingStateSendAtDate({this.sendDate});
 
   /// [sendDate] Date the message will be sent. The date must be within 367 days in the future
   int? sendDate;

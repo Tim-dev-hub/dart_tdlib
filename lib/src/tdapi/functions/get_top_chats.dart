@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GetTopChats extends TdFunction {
 
   /// Returns a list of frequently used chats. Supported only if the chat info database is enabled
-  GetTopChats({category,
-    limit});
+  GetTopChats({this.category,
+    this.limit});
 
   /// [category] Category of chats to be returned 
   TopChatCategory? category;

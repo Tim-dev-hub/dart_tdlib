@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class RecoveryEmailAddress extends TdObject {
 
   /// Contains information about the current recovery email address
-  RecoveryEmailAddress({recoveryEmailAddress});
+  RecoveryEmailAddress({this.recoveryEmailAddress});
 
   /// [recoveryEmailAddress] Recovery email address
   String? recoveryEmailAddress;

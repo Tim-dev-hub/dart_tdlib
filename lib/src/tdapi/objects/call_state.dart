@@ -48,8 +48,8 @@ class CallState extends TdObject {
 class CallStatePending extends CallState {
 
   /// The call is pending, waiting to be accepted by a user
-  CallStatePending({isCreated,
-    isReceived});
+  CallStatePending({this.isCreated,
+    this.isReceived});
 
   /// [isCreated] True, if the call has already been created by the server 
   bool? isCreated;
@@ -104,12 +104,12 @@ class CallStateExchangingKeys extends CallState {
 class CallStateReady extends CallState {
 
   /// The call is ready to use
-  CallStateReady({protocol,
-    servers,
-    config,
-    encryptionKey,
-    emojis,
-    allowP2p});
+  CallStateReady({this.protocol,
+    this.servers,
+    this.config,
+    this.encryptionKey,
+    this.emojis,
+    this.allowP2p});
 
   /// [protocol] Call protocols supported by the peer 
   CallProtocol? protocol;
@@ -184,9 +184,9 @@ class CallStateHangingUp extends CallState {
 class CallStateDiscarded extends CallState {
 
   /// The call has ended successfully
-  CallStateDiscarded({reason,
-    needRating,
-    needDebugInformation});
+  CallStateDiscarded({this.reason,
+    this.needRating,
+    this.needDebugInformation});
 
   /// [reason] The reason, why the call has ended 
   CallDiscardReason? reason;
@@ -223,7 +223,7 @@ class CallStateDiscarded extends CallState {
 class CallStateError extends CallState {
 
   /// The call has ended with an error
-  CallStateError({error});
+  CallStateError({this.error});
 
   /// [error] Error. An error with the code 4005000 will be returned if an outgoing call is missed because of an expired timeout
   TdError? error;

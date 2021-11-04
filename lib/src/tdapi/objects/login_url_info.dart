@@ -36,8 +36,8 @@ class LoginUrlInfo extends TdObject {
 class LoginUrlInfoOpen extends LoginUrlInfo {
 
   /// An HTTP url needs to be open
-  LoginUrlInfoOpen({url,
-    skipConfirm});
+  LoginUrlInfoOpen({this.url,
+    this.skipConfirm});
 
   /// [url] The URL to open 
   String? url;
@@ -73,10 +73,10 @@ class LoginUrlInfoOpen extends LoginUrlInfo {
 class LoginUrlInfoRequestConfirmation extends LoginUrlInfo {
 
   /// An authorization confirmation dialog needs to be shown to the user
-  LoginUrlInfoRequestConfirmation({url,
-    domain,
-    botUserId,
-    requestWriteAccess});
+  LoginUrlInfoRequestConfirmation({this.url,
+    this.domain,
+    this.botUserId,
+    this.requestWriteAccess});
 
   /// [url] An HTTP URL to be opened 
   String? url;

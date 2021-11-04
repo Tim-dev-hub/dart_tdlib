@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GetInlineGameHighScores extends TdFunction {
 
   /// Returns game high scores and some part of the high score table in the range of the specified user; for bots only
-  GetInlineGameHighScores({inlineMessageId,
-    userId});
+  GetInlineGameHighScores({this.inlineMessageId,
+    this.userId});
 
   /// [inlineMessageId] Inline message identifier 
   String? inlineMessageId;

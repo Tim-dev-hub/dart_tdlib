@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class DeleteFile extends TdFunction {
 
   /// Deletes a file from the TDLib file cache
-  DeleteFile({fileId});
+  DeleteFile({this.fileId});
 
   /// [fileId] Identifier of the file to delete
   int? fileId;

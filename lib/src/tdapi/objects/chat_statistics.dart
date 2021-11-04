@@ -36,22 +36,22 @@ class ChatStatistics extends TdObject {
 class ChatStatisticsSupergroup extends ChatStatistics {
 
   /// A detailed statistics about a supergroup chat
-  ChatStatisticsSupergroup({period,
-    memberCount,
-    messageCount,
-    viewerCount,
-    senderCount,
-    memberCountGraph,
-    joinGraph,
-    joinBySourceGraph,
-    languageGraph,
-    messageContentGraph,
-    actionGraph,
-    dayGraph,
-    weekGraph,
-    topSenders,
-    topAdministrators,
-    topInviters});
+  ChatStatisticsSupergroup({this.period,
+    this.memberCount,
+    this.messageCount,
+    this.viewerCount,
+    this.senderCount,
+    this.memberCountGraph,
+    this.joinGraph,
+    this.joinBySourceGraph,
+    this.languageGraph,
+    this.messageContentGraph,
+    this.actionGraph,
+    this.dayGraph,
+    this.weekGraph,
+    this.topSenders,
+    this.topAdministrators,
+    this.topInviters});
 
   /// [period] A period to which the statistics applies
   DateRange? period;
@@ -157,21 +157,21 @@ class ChatStatisticsSupergroup extends ChatStatistics {
 class ChatStatisticsChannel extends ChatStatistics {
 
   /// A detailed statistics about a channel chat
-  ChatStatisticsChannel({period,
-    memberCount,
-    meanViewCount,
-    meanShareCount,
-    enabledNotificationsPercentage,
-    memberCountGraph,
-    joinGraph,
-    muteGraph,
-    viewCountByHourGraph,
-    viewCountBySourceGraph,
-    joinBySourceGraph,
-    languageGraph,
-    messageInteractionGraph,
-    instantViewInteractionGraph,
-    recentMessageInteractions});
+  ChatStatisticsChannel({this.period,
+    this.memberCount,
+    this.meanViewCount,
+    this.meanShareCount,
+    this.enabledNotificationsPercentage,
+    this.memberCountGraph,
+    this.joinGraph,
+    this.muteGraph,
+    this.viewCountByHourGraph,
+    this.viewCountBySourceGraph,
+    this.joinBySourceGraph,
+    this.languageGraph,
+    this.messageInteractionGraph,
+    this.instantViewInteractionGraph,
+    this.recentMessageInteractions});
 
   /// [period] A period to which the statistics applies
   DateRange? period;

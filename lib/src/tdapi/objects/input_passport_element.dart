@@ -69,7 +69,7 @@ class InputPassportElement extends TdObject {
 class InputPassportElementPersonalDetails extends InputPassportElement {
 
   /// A Telegram Passport element to be saved containing the user's personal details
-  InputPassportElementPersonalDetails({personalDetails});
+  InputPassportElementPersonalDetails({this.personalDetails});
 
   /// [personalDetails] Personal details of the user
   PersonalDetails? personalDetails;
@@ -96,7 +96,7 @@ class InputPassportElementPersonalDetails extends InputPassportElement {
 class InputPassportElementPassport extends InputPassportElement {
 
   /// A Telegram Passport element to be saved containing the user's passport
-  InputPassportElementPassport({passport});
+  InputPassportElementPassport({this.passport});
 
   /// [passport] The passport to be saved
   InputIdentityDocument? passport;
@@ -123,7 +123,7 @@ class InputPassportElementPassport extends InputPassportElement {
 class InputPassportElementDriverLicense extends InputPassportElement {
 
   /// A Telegram Passport element to be saved containing the user's driver license
-  InputPassportElementDriverLicense({driverLicense});
+  InputPassportElementDriverLicense({this.driverLicense});
 
   /// [driverLicense] The driver license to be saved
   InputIdentityDocument? driverLicense;
@@ -150,7 +150,7 @@ class InputPassportElementDriverLicense extends InputPassportElement {
 class InputPassportElementIdentityCard extends InputPassportElement {
 
   /// A Telegram Passport element to be saved containing the user's identity card
-  InputPassportElementIdentityCard({identityCard});
+  InputPassportElementIdentityCard({this.identityCard});
 
   /// [identityCard] The identity card to be saved
   InputIdentityDocument? identityCard;
@@ -177,7 +177,7 @@ class InputPassportElementIdentityCard extends InputPassportElement {
 class InputPassportElementInternalPassport extends InputPassportElement {
 
   /// A Telegram Passport element to be saved containing the user's internal passport
-  InputPassportElementInternalPassport({internalPassport});
+  InputPassportElementInternalPassport({this.internalPassport});
 
   /// [internalPassport] The internal passport to be saved
   InputIdentityDocument? internalPassport;
@@ -204,7 +204,7 @@ class InputPassportElementInternalPassport extends InputPassportElement {
 class InputPassportElementAddress extends InputPassportElement {
 
   /// A Telegram Passport element to be saved containing the user's address
-  InputPassportElementAddress({address});
+  InputPassportElementAddress({this.address});
 
   /// [address] The address to be saved
   Address? address;
@@ -231,7 +231,7 @@ class InputPassportElementAddress extends InputPassportElement {
 class InputPassportElementUtilityBill extends InputPassportElement {
 
   /// A Telegram Passport element to be saved containing the user's utility bill
-  InputPassportElementUtilityBill({utilityBill});
+  InputPassportElementUtilityBill({this.utilityBill});
 
   /// [utilityBill] The utility bill to be saved
   InputPersonalDocument? utilityBill;
@@ -258,7 +258,7 @@ class InputPassportElementUtilityBill extends InputPassportElement {
 class InputPassportElementBankStatement extends InputPassportElement {
 
   /// A Telegram Passport element to be saved containing the user's bank statement
-  InputPassportElementBankStatement({bankStatement});
+  InputPassportElementBankStatement({this.bankStatement});
 
   /// [bankStatement] The bank statement to be saved
   InputPersonalDocument? bankStatement;
@@ -285,7 +285,7 @@ class InputPassportElementBankStatement extends InputPassportElement {
 class InputPassportElementRentalAgreement extends InputPassportElement {
 
   /// A Telegram Passport element to be saved containing the user's rental agreement
-  InputPassportElementRentalAgreement({rentalAgreement});
+  InputPassportElementRentalAgreement({this.rentalAgreement});
 
   /// [rentalAgreement] The rental agreement to be saved
   InputPersonalDocument? rentalAgreement;
@@ -312,7 +312,7 @@ class InputPassportElementRentalAgreement extends InputPassportElement {
 class InputPassportElementPassportRegistration extends InputPassportElement {
 
   /// A Telegram Passport element to be saved containing the user's passport registration
-  InputPassportElementPassportRegistration({passportRegistration});
+  InputPassportElementPassportRegistration({this.passportRegistration});
 
   /// [passportRegistration] The passport registration page to be saved
   InputPersonalDocument? passportRegistration;
@@ -339,7 +339,7 @@ class InputPassportElementPassportRegistration extends InputPassportElement {
 class InputPassportElementTemporaryRegistration extends InputPassportElement {
 
   /// A Telegram Passport element to be saved containing the user's temporary registration
-  InputPassportElementTemporaryRegistration({temporaryRegistration});
+  InputPassportElementTemporaryRegistration({this.temporaryRegistration});
 
   /// [temporaryRegistration] The temporary registration document to be saved
   InputPersonalDocument? temporaryRegistration;
@@ -366,7 +366,7 @@ class InputPassportElementTemporaryRegistration extends InputPassportElement {
 class InputPassportElementPhoneNumber extends InputPassportElement {
 
   /// A Telegram Passport element to be saved containing the user's phone number
-  InputPassportElementPhoneNumber({phoneNumber});
+  InputPassportElementPhoneNumber({this.phoneNumber});
 
   /// [phoneNumber] The phone number to be saved
   String? phoneNumber;
@@ -393,7 +393,7 @@ class InputPassportElementPhoneNumber extends InputPassportElement {
 class InputPassportElementEmailAddress extends InputPassportElement {
 
   /// A Telegram Passport element to be saved containing the user's email address
-  InputPassportElementEmailAddress({emailAddress});
+  InputPassportElementEmailAddress({this.emailAddress});
 
   /// [emailAddress] The email address to be saved
   String? emailAddress;

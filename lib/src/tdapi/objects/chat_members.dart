@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class ChatMembers extends TdObject {
 
   /// Contains a list of chat members
-  ChatMembers({totalCount,
-    members});
+  ChatMembers({this.totalCount,
+    this.members});
 
   /// [totalCount] Approximate total count of chat members found 
   int? totalCount;

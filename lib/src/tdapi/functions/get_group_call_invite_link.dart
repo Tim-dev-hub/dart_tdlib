@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class GetGroupCallInviteLink extends TdFunction {
 
   /// Returns invite link to a voice chat in a public chat
-  GetGroupCallInviteLink({groupCallId,
-    canSelfUnmute});
+  GetGroupCallInviteLink({this.groupCallId,
+    this.canSelfUnmute});
 
   /// [groupCallId] Group call identifier
   int? groupCallId;

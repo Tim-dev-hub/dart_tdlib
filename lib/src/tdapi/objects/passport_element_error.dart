@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class PassportElementError extends TdObject {
 
   /// Contains the description of an error in a Telegram Passport element
-  PassportElementError({type,
-    message,
-    source});
+  PassportElementError({this.type,
+    this.message,
+    this.source});
 
   /// [type] Type of the Telegram Passport element which has the error 
   PassportElementType? type;

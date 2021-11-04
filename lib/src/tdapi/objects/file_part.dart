@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class FilePart extends TdObject {
 
   /// Contains a part of a file
-  FilePart({data});
+  FilePart({this.data});
 
   /// [data] File bytes
   String? data;

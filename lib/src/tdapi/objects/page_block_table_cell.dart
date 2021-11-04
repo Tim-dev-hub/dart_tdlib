@@ -3,12 +3,12 @@ part of '../tdapi.dart';
 class PageBlockTableCell extends TdObject {
 
   /// Represents a cell of a table
-  PageBlockTableCell({text,
-    isHeader,
-    colspan,
-    rowspan,
-    align,
-    valign});
+  PageBlockTableCell({this.text,
+    this.isHeader,
+    this.colspan,
+    this.rowspan,
+    this.align,
+    this.valign});
 
   /// [text] Cell text; may be null. If the text is null, then the cell must be invisible 
   RichText? text;

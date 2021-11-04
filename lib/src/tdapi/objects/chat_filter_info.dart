@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class ChatFilterInfo extends TdObject {
 
   /// Contains basic information about a chat filter
-  ChatFilterInfo({id,
-    title,
-    iconName});
+  ChatFilterInfo({this.id,
+    this.title,
+    this.iconName});
 
   /// [id] Unique chat filter identifier
   int? id;

@@ -3,10 +3,10 @@ part of '../tdapi.dart';
 class StorageStatisticsByChat extends TdObject {
 
   /// Contains the storage usage statistics for a specific chat
-  StorageStatisticsByChat({chatId,
-    size,
-    count,
-    byFileType});
+  StorageStatisticsByChat({this.chatId,
+    this.size,
+    this.count,
+    this.byFileType});
 
   /// [chatId] Chat identifier; 0 if none 
   int? chatId;

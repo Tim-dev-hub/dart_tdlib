@@ -137,4 +137,22 @@ class JsonClient {
     _jsonClientDestroy(_client);
     active = false;
   }
+
+  Stream<String> incomingString([double timeout = 2.0]) async* {
+    while (true) {
+      bool haveUpdates = true;
+      while (haveUpdates) {
+        var str = await receiveString(timeout);
+        if (str == null) {
+          haveUpdates = false;
+        } else {
+          yield str;
+        }
+      }
+      await Future.delayed(const Duration(milliseconds: 100));
+    }
+  }
+
+  Future<String?> receiveString([double timeout = 2.0]) async =>
+      receive(timeout);
 }

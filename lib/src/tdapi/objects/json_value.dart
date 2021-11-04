@@ -74,7 +74,7 @@ class JsonValueNull extends JsonValue {
 class JsonValueBoolean extends JsonValue {
 
   /// Represents a boolean JSON value
-  JsonValueBoolean({value});
+  JsonValueBoolean({this.value});
 
   /// [value] The value
   bool? value;
@@ -105,7 +105,7 @@ class JsonValueBoolean extends JsonValue {
 class JsonValueNumber extends JsonValue {
 
   /// Represents a numeric JSON value
-  JsonValueNumber({value});
+  JsonValueNumber({this.value});
 
   /// [value] The value
   double? value;
@@ -136,7 +136,7 @@ class JsonValueNumber extends JsonValue {
 class JsonValueString extends JsonValue {
 
   /// Represents a string JSON value
-  JsonValueString({value});
+  JsonValueString({this.value});
 
   /// [value] The value
   String? value;
@@ -167,7 +167,7 @@ class JsonValueString extends JsonValue {
 class JsonValueArray extends JsonValue {
 
   /// Represents a JSON array
-  JsonValueArray({values});
+  JsonValueArray({this.values});
 
   /// [values] The list of array elements
   List<JsonValue>? values;
@@ -198,7 +198,7 @@ class JsonValueArray extends JsonValue {
 class JsonValueObject extends JsonValue {
 
   /// Represents a JSON object
-  JsonValueObject({members});
+  JsonValueObject({this.members});
 
   /// [members] The list of object members
   List<JsonObjectMember>? members;

@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GroupCallId extends TdObject {
 
   /// Contains the group call identifier
-  GroupCallId({id});
+  GroupCallId({this.id});
 
   /// [id] Group call identifier
   int? id;

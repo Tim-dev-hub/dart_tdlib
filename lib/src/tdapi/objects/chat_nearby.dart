@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class ChatNearby extends TdObject {
 
   /// Describes a chat located nearby
-  ChatNearby({chatId,
-    distance});
+  ChatNearby({this.chatId,
+    this.distance});
 
   /// [chatId] Chat identifier 
   int? chatId;

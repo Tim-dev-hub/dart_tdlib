@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class GetSecretChat extends TdFunction {
 
   /// Returns information about a secret chat by its identifier. This is an offline request
-  GetSecretChat({secretChatId});
+  GetSecretChat({this.secretChatId});
 
   /// [secretChatId] Secret chat identifier
   int? secretChatId;

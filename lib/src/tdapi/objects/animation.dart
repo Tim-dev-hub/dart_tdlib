@@ -3,15 +3,15 @@ part of '../tdapi.dart';
 class Animation extends TdObject {
 
   /// Describes an animation file. The animation must be encoded in GIF or MPEG4 format
-  Animation({duration,
-    width,
-    height,
-    fileName,
-    mimeType,
-    hasStickers,
-    minithumbnail,
-    thumbnail,
-    animation});
+  Animation({this.duration,
+    this.width,
+    this.height,
+    this.fileName,
+    this.mimeType,
+    this.hasStickers,
+    this.minithumbnail,
+    this.thumbnail,
+    this.animation});
 
   /// [duration] Duration of the animation, in seconds; as defined by the sender 
   int? duration;

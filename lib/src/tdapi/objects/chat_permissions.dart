@@ -3,14 +3,14 @@ part of '../tdapi.dart';
 class ChatPermissions extends TdObject {
 
   /// Describes actions that a user is allowed to take in a chat
-  ChatPermissions({canSendMessages,
-    canSendMediaMessages,
-    canSendPolls,
-    canSendOtherMessages,
-    canAddWebPagePreviews,
-    canChangeInfo,
-    canInviteUsers,
-    canPinMessages});
+  ChatPermissions({this.canSendMessages,
+    this.canSendMediaMessages,
+    this.canSendPolls,
+    this.canSendOtherMessages,
+    this.canAddWebPagePreviews,
+    this.canChangeInfo,
+    this.canInviteUsers,
+    this.canPinMessages});
 
   /// [canSendMessages] True, if the user can send text messages, contacts, locations, and venues
   bool? canSendMessages;

@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class SetPassword extends TdFunction {
 
   /// Changes the password for the current user. If a new recovery email address is specified, then the change will not be applied until the new recovery email address is confirmed
-  SetPassword({oldPassword,
-    newPassword,
-    newHint,
-    setRecoveryEmailAddress,
-    newRecoveryEmailAddress});
+  SetPassword({this.oldPassword,
+    this.newPassword,
+    this.newHint,
+    this.setRecoveryEmailAddress,
+    this.newRecoveryEmailAddress});
 
   /// [oldPassword] Previous password of the user
   String? oldPassword;

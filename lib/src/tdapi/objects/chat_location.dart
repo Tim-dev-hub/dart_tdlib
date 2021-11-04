@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class ChatLocation extends TdObject {
 
   /// Represents a location to which a chat is connected
-  ChatLocation({location,
-    address});
+  ChatLocation({this.location,
+    this.address});
 
   /// [location] The location 
   Location? location;

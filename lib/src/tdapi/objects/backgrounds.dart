@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class Backgrounds extends TdObject {
 
   /// Contains a list of backgrounds
-  Backgrounds({backgrounds});
+  Backgrounds({this.backgrounds});
 
   /// [backgrounds] A list of backgrounds
   List<Background>? backgrounds;

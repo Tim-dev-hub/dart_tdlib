@@ -3,9 +3,9 @@ part of '../tdapi.dart';
 class ChangeStickerSet extends TdFunction {
 
   /// Installs/uninstalls or activates/archives a sticker set
-  ChangeStickerSet({setId,
-    isInstalled,
-    isArchived});
+  ChangeStickerSet({this.setId,
+    this.isInstalled,
+    this.isArchived});
 
   /// [setId] Identifier of the sticker set 
   int? setId;

@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class InlineQueryResults extends TdObject {
 
   /// Represents the results of the inline query. Use sendInlineQueryResultMessage to send the result of the query
-  InlineQueryResults({inlineQueryId,
-    nextOffset,
-    results,
-    switchPmText,
-    switchPmParameter});
+  InlineQueryResults({this.inlineQueryId,
+    this.nextOffset,
+    this.results,
+    this.switchPmText,
+    this.switchPmParameter});
 
   /// [inlineQueryId] Unique identifier of the inline query 
   int? inlineQueryId;

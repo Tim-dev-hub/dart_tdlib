@@ -66,17 +66,17 @@ class InputInlineQueryResult extends TdObject {
 class InputInlineQueryResultAnimation extends InputInlineQueryResult {
 
   /// Represents a link to an animated GIF or an animated (i.e., without sound) H.264/MPEG-4 AVC video
-  InputInlineQueryResultAnimation({id,
-    title,
-    thumbnailUrl,
-    thumbnailMimeType,
-    videoUrl,
-    videoMimeType,
-    videoDuration,
-    videoWidth,
-    videoHeight,
-    replyMarkup,
-    inputMessageContent});
+  InputInlineQueryResultAnimation({this.id,
+    this.title,
+    this.thumbnailUrl,
+    this.thumbnailMimeType,
+    this.videoUrl,
+    this.videoMimeType,
+    this.videoDuration,
+    this.videoWidth,
+    this.videoHeight,
+    this.replyMarkup,
+    this.inputMessageContent});
 
   /// [id] Unique identifier of the query result
   String? id;
@@ -153,16 +153,16 @@ class InputInlineQueryResultAnimation extends InputInlineQueryResult {
 class InputInlineQueryResultArticle extends InputInlineQueryResult {
 
   /// Represents a link to an article or web page
-  InputInlineQueryResultArticle({id,
-    url,
-    hideUrl,
-    title,
-    description,
-    thumbnailUrl,
-    thumbnailWidth,
-    thumbnailHeight,
-    replyMarkup,
-    inputMessageContent});
+  InputInlineQueryResultArticle({this.id,
+    this.url,
+    this.hideUrl,
+    this.title,
+    this.description,
+    this.thumbnailUrl,
+    this.thumbnailWidth,
+    this.thumbnailHeight,
+    this.replyMarkup,
+    this.inputMessageContent});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -234,13 +234,13 @@ class InputInlineQueryResultArticle extends InputInlineQueryResult {
 class InputInlineQueryResultAudio extends InputInlineQueryResult {
 
   /// Represents a link to an MP3 audio file
-  InputInlineQueryResultAudio({id,
-    title,
-    performer,
-    audioUrl,
-    audioDuration,
-    replyMarkup,
-    inputMessageContent});
+  InputInlineQueryResultAudio({this.id,
+    this.title,
+    this.performer,
+    this.audioUrl,
+    this.audioDuration,
+    this.replyMarkup,
+    this.inputMessageContent});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -297,13 +297,13 @@ class InputInlineQueryResultAudio extends InputInlineQueryResult {
 class InputInlineQueryResultContact extends InputInlineQueryResult {
 
   /// Represents a user contact
-  InputInlineQueryResultContact({id,
-    contact,
-    thumbnailUrl,
-    thumbnailWidth,
-    thumbnailHeight,
-    replyMarkup,
-    inputMessageContent});
+  InputInlineQueryResultContact({this.id,
+    this.contact,
+    this.thumbnailUrl,
+    this.thumbnailWidth,
+    this.thumbnailHeight,
+    this.replyMarkup,
+    this.inputMessageContent});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -360,16 +360,16 @@ class InputInlineQueryResultContact extends InputInlineQueryResult {
 class InputInlineQueryResultDocument extends InputInlineQueryResult {
 
   /// Represents a link to a file
-  InputInlineQueryResultDocument({id,
-    title,
-    description,
-    documentUrl,
-    mimeType,
-    thumbnailUrl,
-    thumbnailWidth,
-    thumbnailHeight,
-    replyMarkup,
-    inputMessageContent});
+  InputInlineQueryResultDocument({this.id,
+    this.title,
+    this.description,
+    this.documentUrl,
+    this.mimeType,
+    this.thumbnailUrl,
+    this.thumbnailWidth,
+    this.thumbnailHeight,
+    this.replyMarkup,
+    this.inputMessageContent});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -441,9 +441,9 @@ class InputInlineQueryResultDocument extends InputInlineQueryResult {
 class InputInlineQueryResultGame extends InputInlineQueryResult {
 
   /// Represents a game
-  InputInlineQueryResultGame({id,
-    gameShortName,
-    replyMarkup});
+  InputInlineQueryResultGame({this.id,
+    this.gameShortName,
+    this.replyMarkup});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -480,15 +480,15 @@ class InputInlineQueryResultGame extends InputInlineQueryResult {
 class InputInlineQueryResultLocation extends InputInlineQueryResult {
 
   /// Represents a point on the map
-  InputInlineQueryResultLocation({id,
-    location,
-    livePeriod,
-    title,
-    thumbnailUrl,
-    thumbnailWidth,
-    thumbnailHeight,
-    replyMarkup,
-    inputMessageContent});
+  InputInlineQueryResultLocation({this.id,
+    this.location,
+    this.livePeriod,
+    this.title,
+    this.thumbnailUrl,
+    this.thumbnailWidth,
+    this.thumbnailHeight,
+    this.replyMarkup,
+    this.inputMessageContent});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -555,15 +555,15 @@ class InputInlineQueryResultLocation extends InputInlineQueryResult {
 class InputInlineQueryResultPhoto extends InputInlineQueryResult {
 
   /// Represents link to a JPEG image
-  InputInlineQueryResultPhoto({id,
-    title,
-    description,
-    thumbnailUrl,
-    photoUrl,
-    photoWidth,
-    photoHeight,
-    replyMarkup,
-    inputMessageContent});
+  InputInlineQueryResultPhoto({this.id,
+    this.title,
+    this.description,
+    this.thumbnailUrl,
+    this.photoUrl,
+    this.photoWidth,
+    this.photoHeight,
+    this.replyMarkup,
+    this.inputMessageContent});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -630,13 +630,13 @@ class InputInlineQueryResultPhoto extends InputInlineQueryResult {
 class InputInlineQueryResultSticker extends InputInlineQueryResult {
 
   /// Represents a link to a WEBP or TGS sticker
-  InputInlineQueryResultSticker({id,
-    thumbnailUrl,
-    stickerUrl,
-    stickerWidth,
-    stickerHeight,
-    replyMarkup,
-    inputMessageContent});
+  InputInlineQueryResultSticker({this.id,
+    this.thumbnailUrl,
+    this.stickerUrl,
+    this.stickerWidth,
+    this.stickerHeight,
+    this.replyMarkup,
+    this.inputMessageContent});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -693,13 +693,13 @@ class InputInlineQueryResultSticker extends InputInlineQueryResult {
 class InputInlineQueryResultVenue extends InputInlineQueryResult {
 
   /// Represents information about a venue
-  InputInlineQueryResultVenue({id,
-    venue,
-    thumbnailUrl,
-    thumbnailWidth,
-    thumbnailHeight,
-    replyMarkup,
-    inputMessageContent});
+  InputInlineQueryResultVenue({this.id,
+    this.venue,
+    this.thumbnailUrl,
+    this.thumbnailWidth,
+    this.thumbnailHeight,
+    this.replyMarkup,
+    this.inputMessageContent});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -756,17 +756,17 @@ class InputInlineQueryResultVenue extends InputInlineQueryResult {
 class InputInlineQueryResultVideo extends InputInlineQueryResult {
 
   /// Represents a link to a page containing an embedded video player or a video file
-  InputInlineQueryResultVideo({id,
-    title,
-    description,
-    thumbnailUrl,
-    videoUrl,
-    mimeType,
-    videoWidth,
-    videoHeight,
-    videoDuration,
-    replyMarkup,
-    inputMessageContent});
+  InputInlineQueryResultVideo({this.id,
+    this.title,
+    this.description,
+    this.thumbnailUrl,
+    this.videoUrl,
+    this.mimeType,
+    this.videoWidth,
+    this.videoHeight,
+    this.videoDuration,
+    this.replyMarkup,
+    this.inputMessageContent});
 
   /// [id] Unique identifier of the query result 
   String? id;
@@ -843,12 +843,12 @@ class InputInlineQueryResultVideo extends InputInlineQueryResult {
 class InputInlineQueryResultVoiceNote extends InputInlineQueryResult {
 
   /// Represents a link to an opus-encoded audio file within an OGG container, single channel audio
-  InputInlineQueryResultVoiceNote({id,
-    title,
-    voiceNoteUrl,
-    voiceNoteDuration,
-    replyMarkup,
-    inputMessageContent});
+  InputInlineQueryResultVoiceNote({this.id,
+    this.title,
+    this.voiceNoteUrl,
+    this.voiceNoteDuration,
+    this.replyMarkup,
+    this.inputMessageContent});
 
   /// [id] Unique identifier of the query result 
   String? id;

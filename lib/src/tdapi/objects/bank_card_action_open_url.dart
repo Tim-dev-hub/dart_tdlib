@@ -3,8 +3,8 @@ part of '../tdapi.dart';
 class BankCardActionOpenUrl extends TdObject {
 
   /// Describes an action associated with a bank card number
-  BankCardActionOpenUrl({text,
-    url});
+  BankCardActionOpenUrl({this.text,
+    this.url});
 
   /// [text] Action text 
   String? text;

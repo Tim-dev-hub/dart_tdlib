@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class HideSuggestedAction extends TdFunction {
 
   /// Hides a suggested action
-  HideSuggestedAction({action});
+  HideSuggestedAction({this.action});
 
   /// [action] Suggested action to hide
   SuggestedAction? action;

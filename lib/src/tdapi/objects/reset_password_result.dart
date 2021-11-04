@@ -65,7 +65,7 @@ class ResetPasswordResultOk extends ResetPasswordResult {
 class ResetPasswordResultPending extends ResetPasswordResult {
 
   /// The password reset request is pending
-  ResetPasswordResultPending({pendingResetDate});
+  ResetPasswordResultPending({this.pendingResetDate});
 
   /// [pendingResetDate] Point in time (Unix timestamp) after which the password can be reset immediately using resetPassword
   int? pendingResetDate;
@@ -96,7 +96,7 @@ class ResetPasswordResultPending extends ResetPasswordResult {
 class ResetPasswordResultDeclined extends ResetPasswordResult {
 
   /// The password reset request was declined
-  ResetPasswordResultDeclined({retryDate});
+  ResetPasswordResultDeclined({this.retryDate});
 
   /// [retryDate] Point in time (Unix timestamp) when the password reset can be retried
   int? retryDate;

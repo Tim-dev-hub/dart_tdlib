@@ -3,7 +3,7 @@ part of '../tdapi.dart';
 class JoinChatByInviteLink extends TdFunction {
 
   /// Uses an invite link to add the current user to the chat if possible
-  JoinChatByInviteLink({inviteLink});
+  JoinChatByInviteLink({this.inviteLink});
 
   /// [inviteLink] Invite link to use
   String? inviteLink;

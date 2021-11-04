@@ -3,11 +3,11 @@ part of '../tdapi.dart';
 class GetGroupCallStreamSegment extends TdFunction {
 
   /// Returns a file with a segment of a group call stream in a modified OGG format for audio or MPEG-4 format for video
-  GetGroupCallStreamSegment({groupCallId,
-    timeOffset,
-    scale,
-    channelId,
-    videoQuality});
+  GetGroupCallStreamSegment({this.groupCallId,
+    this.timeOffset,
+    this.scale,
+    this.channelId,
+    this.videoQuality});
 
   /// [groupCallId] Group call identifier
   int? groupCallId;
