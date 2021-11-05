@@ -207,10 +207,13 @@ class DartTdDocumentationGenerator {
       } else {
         toJsonFields.add('\"@type\": CONSTRUCTOR,');
         obj.variables.forEach((variable) {
-          variables.add(
+        print(variable.read);
+           variables.add(
               '/// [${variable.argName}] ${variable.description}\n  ${variable.type}? ${variable.argName};');
-          arguments.add('${variable.argName}');
-          fromJsonFields.add('${variable.argName} = ${variable.read};');
+          arguments.add('this.${variable.argName}');
+           fromJsonFields.add(variable.type + "?" + " pre_" + variable.argName + ";");
+        fromJsonFields.add("try{\n      pre_" + variable.argName + "=" + variable.read + ";\n   }catch(_){}");
+          fromJsonFields.add('${variable.argName} = pre_${variable.argName};');
           toJsonFields.add('\n      "${variable.name}": ${variable.write},');
         });
         if (obj.isFunction) {
@@ -245,11 +248,6 @@ class DartTdDocumentationGenerator {
           .replaceAll('PARENT', parent)
           .replaceAll('VARIABLES', variables.join('\n\n  '))
           .replaceAll('DESCRIPTION', obj.description
-//                  + (hasFactory
-//                      ? ''
-//                      : (obj.variables.isNotEmpty
-//                          ? '. \n  /// ${obj.variables.map((o) => '[${o.argName}] ${o.description}').join('. \n  /// ')}'
-//                          : ''))
               )
           .replaceAll('ARGUMENTS',
               arguments.isEmpty ? '' : '{${arguments.join(',\n    ')}}')

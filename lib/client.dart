@@ -445,7 +445,7 @@ void _start(SendPort isolateToMainStream) {
   //But these are not all problems, while td_json_client_receive is running I cannot listen for messages from SendPort.
   //Therefore, I wait for updates from tdlib 100ms and wait for messages from SendPort, also 100ms.
   //
-  //Who will solve this problem - cool dude.
+  //Who will solve this problem - cool dude :P.
   client.incomingString(0.1).listen((update) {
     isolateToMainStream.send(update);
   });
