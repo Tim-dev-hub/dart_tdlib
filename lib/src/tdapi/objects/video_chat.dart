@@ -1,23 +1,23 @@
 part of '../tdapi.dart';
 
-class VoiceChat extends TdObject {
+class VideoChat extends TdObject {
 
-  /// Describes a voice chat
-  VoiceChat({this.groupCallId,
+  /// Describes a video chat
+  VideoChat({this.groupCallId,
     this.hasParticipants,
     this.defaultParticipantId});
 
-  /// [groupCallId] Group call identifier of an active voice chat; 0 if none. Full information about the voice chat can be received through the method getGroupCall
+  /// [groupCallId] Group call identifier of an active video chat; 0 if none. Full information about the video chat can be received through the method getGroupCall
   int? groupCallId;
 
-  /// [hasParticipants] True, if the voice chat has participants
+  /// [hasParticipants] True, if the video chat has participants
   bool? hasParticipants;
 
-  /// [defaultParticipantId] Default group call participant identifier to join the voice chat; may be null
+  /// [defaultParticipantId] Default group call participant identifier to join the video chat; may be null
   MessageSender? defaultParticipantId;
 
   /// Parse from a json
-  VoiceChat.fromJson(Map<String, dynamic> json)  {
+  VideoChat.fromJson(Map<String, dynamic> json)  {
     int? pre_groupCallId;
     try{
       pre_groupCallId=json['group_call_id'];
@@ -45,7 +45,7 @@ class VoiceChat extends TdObject {
     };
   }
 
-  static const CONSTRUCTOR = 'voiceChat';
+  static const CONSTRUCTOR = 'videoChat';
   
   @override
   String getConstructor() => CONSTRUCTOR;

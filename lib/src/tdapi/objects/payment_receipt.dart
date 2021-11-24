@@ -33,7 +33,7 @@ class PaymentReceipt extends TdObject {
   /// [paymentsProviderUserId] User identifier of the payment provider bot
   int? paymentsProviderUserId;
 
-  /// [invoice] Contains information about the invoice
+  /// [invoice] Information about the invoice
   Invoice? invoice;
 
   /// [orderInfo] Order information; may be null

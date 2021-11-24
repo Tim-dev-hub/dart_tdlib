@@ -1,22 +1,22 @@
 part of '../tdapi.dart';
 
-class SetVoiceChatDefaultParticipant extends TdFunction {
+class SetVideoChatDefaultParticipant extends TdFunction {
 
-  /// Changes default participant identifier, which can be used to join voice chats in a chat
-  SetVoiceChatDefaultParticipant({this.chatId,
+  /// Changes default participant identifier, which can be used to join video chats in a chat
+  SetVideoChatDefaultParticipant({this.chatId,
     this.defaultParticipantId});
 
   /// [chatId] Chat identifier 
   int? chatId;
 
-  /// [defaultParticipantId] Default group call participant identifier to join the voice chats
+  /// [defaultParticipantId] Default group call participant identifier to join the video chats
   MessageSender? defaultParticipantId;
 
   /// callback sign
   dynamic extra;
 
   /// Parse from a json
-  SetVoiceChatDefaultParticipant.fromJson(Map<String, dynamic> json) ;
+  SetVideoChatDefaultParticipant.fromJson(Map<String, dynamic> json) ;
 
   @override
   Map<String, dynamic> toJson() {
@@ -28,7 +28,7 @@ class SetVoiceChatDefaultParticipant extends TdFunction {
     };
   }
 
-  static const CONSTRUCTOR = 'setVoiceChatDefaultParticipant';
+  static const CONSTRUCTOR = 'setVideoChatDefaultParticipant';
   
   @override
   String getConstructor() => CONSTRUCTOR;
