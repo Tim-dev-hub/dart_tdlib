@@ -10,6 +10,7 @@ import 'package:myapp/tdlib/src/tdapi/tdapi.dart';
 import 'package:myapp/tdlib/td_api.dart';
 
 void main() async {
+  var client = TelegramClient();
   await client.init();
   await client.send(SetLogVerbosityLevel(newVerbosityLevel: 0));
 
@@ -30,4 +31,4 @@ void main() async {
 
 # Building
 1. Copy actual sheme [from repo](https://raw.githubusercontent.com/tdlib/td/master/td/generate/scheme/td_api.tl) to data/td_api.tl
-2. invoke ```generate.dart```
+2. ```dart generate.dart```
