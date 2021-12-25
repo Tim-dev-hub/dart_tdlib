@@ -1,9 +1,9 @@
 part of '../tdapi.dart';
 
-class DiscardGroupCall extends TdFunction {
+class EndGroupCall extends TdFunction {
 
-  /// Discards a group call. Requires groupCall.can_be_managed
-  DiscardGroupCall({this.groupCallId});
+  /// Ends a group call. Requires groupCall.can_be_managed
+  EndGroupCall({this.groupCallId});
 
   /// [groupCallId] Group call identifier
   int? groupCallId;
@@ -12,7 +12,7 @@ class DiscardGroupCall extends TdFunction {
   dynamic extra;
 
   /// Parse from a json
-  DiscardGroupCall.fromJson(Map<String, dynamic> json) ;
+  EndGroupCall.fromJson(Map<String, dynamic> json) ;
 
   @override
   Map<String, dynamic> toJson() {
@@ -23,7 +23,7 @@ class DiscardGroupCall extends TdFunction {
     };
   }
 
-  static const CONSTRUCTOR = 'discardGroupCall';
+  static const CONSTRUCTOR = 'endGroupCall';
   
   @override
   String getConstructor() => CONSTRUCTOR;

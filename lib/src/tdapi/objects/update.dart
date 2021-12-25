@@ -26,30 +26,32 @@ class Update extends TdObject {
   /// * UpdateChatPermissions
   /// * UpdateChatLastMessage
   /// * UpdateChatPosition
-  /// * UpdateChatIsMarkedAsUnread
-  /// * UpdateChatIsBlocked
-  /// * UpdateChatHasScheduledMessages
-  /// * UpdateChatVideoChat
-  /// * UpdateChatDefaultDisableNotification
   /// * UpdateChatReadInbox
   /// * UpdateChatReadOutbox
-  /// * UpdateChatUnreadMentionCount
-  /// * UpdateChatNotificationSettings
-  /// * UpdateScopeNotificationSettings
-  /// * UpdateChatMessageTtlSetting
   /// * UpdateChatActionBar
-  /// * UpdateChatTheme
+  /// * UpdateChatDraftMessage
+  /// * UpdateChatMessageSender
+  /// * UpdateChatMessageTtl
+  /// * UpdateChatNotificationSettings
   /// * UpdateChatPendingJoinRequests
   /// * UpdateChatReplyMarkup
-  /// * UpdateChatDraftMessage
+  /// * UpdateChatTheme
+  /// * UpdateChatUnreadMentionCount
+  /// * UpdateChatVideoChat
+  /// * UpdateChatDefaultDisableNotification
+  /// * UpdateChatHasProtectedContent
+  /// * UpdateChatHasScheduledMessages
+  /// * UpdateChatIsBlocked
+  /// * UpdateChatIsMarkedAsUnread
   /// * UpdateChatFilters
   /// * UpdateChatOnlineMemberCount
+  /// * UpdateScopeNotificationSettings
   /// * UpdateNotification
   /// * UpdateNotificationGroup
   /// * UpdateActiveNotifications
   /// * UpdateHavePendingNotifications
   /// * UpdateDeleteMessages
-  /// * UpdateUserChatAction
+  /// * UpdateChatAction
   /// * UpdateUserStatus
   /// * UpdateUser
   /// * UpdateBasicGroup
@@ -136,42 +138,46 @@ class Update extends TdObject {
         return UpdateChatLastMessage.fromJson(json);
       case UpdateChatPosition.CONSTRUCTOR:
         return UpdateChatPosition.fromJson(json);
-      case UpdateChatIsMarkedAsUnread.CONSTRUCTOR:
-        return UpdateChatIsMarkedAsUnread.fromJson(json);
-      case UpdateChatIsBlocked.CONSTRUCTOR:
-        return UpdateChatIsBlocked.fromJson(json);
-      case UpdateChatHasScheduledMessages.CONSTRUCTOR:
-        return UpdateChatHasScheduledMessages.fromJson(json);
-      case UpdateChatVideoChat.CONSTRUCTOR:
-        return UpdateChatVideoChat.fromJson(json);
-      case UpdateChatDefaultDisableNotification.CONSTRUCTOR:
-        return UpdateChatDefaultDisableNotification.fromJson(json);
       case UpdateChatReadInbox.CONSTRUCTOR:
         return UpdateChatReadInbox.fromJson(json);
       case UpdateChatReadOutbox.CONSTRUCTOR:
         return UpdateChatReadOutbox.fromJson(json);
-      case UpdateChatUnreadMentionCount.CONSTRUCTOR:
-        return UpdateChatUnreadMentionCount.fromJson(json);
-      case UpdateChatNotificationSettings.CONSTRUCTOR:
-        return UpdateChatNotificationSettings.fromJson(json);
-      case UpdateScopeNotificationSettings.CONSTRUCTOR:
-        return UpdateScopeNotificationSettings.fromJson(json);
-      case UpdateChatMessageTtlSetting.CONSTRUCTOR:
-        return UpdateChatMessageTtlSetting.fromJson(json);
       case UpdateChatActionBar.CONSTRUCTOR:
         return UpdateChatActionBar.fromJson(json);
-      case UpdateChatTheme.CONSTRUCTOR:
-        return UpdateChatTheme.fromJson(json);
+      case UpdateChatDraftMessage.CONSTRUCTOR:
+        return UpdateChatDraftMessage.fromJson(json);
+      case UpdateChatMessageSender.CONSTRUCTOR:
+        return UpdateChatMessageSender.fromJson(json);
+      case UpdateChatMessageTtl.CONSTRUCTOR:
+        return UpdateChatMessageTtl.fromJson(json);
+      case UpdateChatNotificationSettings.CONSTRUCTOR:
+        return UpdateChatNotificationSettings.fromJson(json);
       case UpdateChatPendingJoinRequests.CONSTRUCTOR:
         return UpdateChatPendingJoinRequests.fromJson(json);
       case UpdateChatReplyMarkup.CONSTRUCTOR:
         return UpdateChatReplyMarkup.fromJson(json);
-      case UpdateChatDraftMessage.CONSTRUCTOR:
-        return UpdateChatDraftMessage.fromJson(json);
+      case UpdateChatTheme.CONSTRUCTOR:
+        return UpdateChatTheme.fromJson(json);
+      case UpdateChatUnreadMentionCount.CONSTRUCTOR:
+        return UpdateChatUnreadMentionCount.fromJson(json);
+      case UpdateChatVideoChat.CONSTRUCTOR:
+        return UpdateChatVideoChat.fromJson(json);
+      case UpdateChatDefaultDisableNotification.CONSTRUCTOR:
+        return UpdateChatDefaultDisableNotification.fromJson(json);
+      case UpdateChatHasProtectedContent.CONSTRUCTOR:
+        return UpdateChatHasProtectedContent.fromJson(json);
+      case UpdateChatHasScheduledMessages.CONSTRUCTOR:
+        return UpdateChatHasScheduledMessages.fromJson(json);
+      case UpdateChatIsBlocked.CONSTRUCTOR:
+        return UpdateChatIsBlocked.fromJson(json);
+      case UpdateChatIsMarkedAsUnread.CONSTRUCTOR:
+        return UpdateChatIsMarkedAsUnread.fromJson(json);
       case UpdateChatFilters.CONSTRUCTOR:
         return UpdateChatFilters.fromJson(json);
       case UpdateChatOnlineMemberCount.CONSTRUCTOR:
         return UpdateChatOnlineMemberCount.fromJson(json);
+      case UpdateScopeNotificationSettings.CONSTRUCTOR:
+        return UpdateScopeNotificationSettings.fromJson(json);
       case UpdateNotification.CONSTRUCTOR:
         return UpdateNotification.fromJson(json);
       case UpdateNotificationGroup.CONSTRUCTOR:
@@ -182,8 +188,8 @@ class Update extends TdObject {
         return UpdateHavePendingNotifications.fromJson(json);
       case UpdateDeleteMessages.CONSTRUCTOR:
         return UpdateDeleteMessages.fromJson(json);
-      case UpdateUserChatAction.CONSTRUCTOR:
-        return UpdateUserChatAction.fromJson(json);
+      case UpdateChatAction.CONSTRUCTOR:
+        return UpdateChatAction.fromJson(json);
       case UpdateUserStatus.CONSTRUCTOR:
         return UpdateUserStatus.fromJson(json);
       case UpdateUser.CONSTRUCTOR:
@@ -999,194 +1005,9 @@ class UpdateChatPosition extends Update {
   String getConstructor() => CONSTRUCTOR;
 }
 
-class UpdateChatIsMarkedAsUnread extends Update {
-
-  /// A chat was marked as unread or was read
-  UpdateChatIsMarkedAsUnread({this.chatId,
-    this.isMarkedAsUnread});
-
-  /// [chatId] Chat identifier 
-  int? chatId;
-
-  /// [isMarkedAsUnread] New value of is_marked_as_unread
-  bool? isMarkedAsUnread;
-
-  /// callback sign
-  dynamic extra;
-
-  /// Parse from a json
-  UpdateChatIsMarkedAsUnread.fromJson(Map<String, dynamic> json)  {
-    chatId = json['chat_id'] == null ? null : json['chat_id'];
-    isMarkedAsUnread = json['is_marked_as_unread'] == null ? null : json['is_marked_as_unread'];
-    extra = json['@extra'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": chatId,
-      "is_marked_as_unread": isMarkedAsUnread,
-    };
-  }
-
-  static const CONSTRUCTOR = 'updateChatIsMarkedAsUnread';
-  
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class UpdateChatIsBlocked extends Update {
-
-  /// A chat was blocked or unblocked
-  UpdateChatIsBlocked({this.chatId,
-    this.isBlocked});
-
-  /// [chatId] Chat identifier 
-  int? chatId;
-
-  /// [isBlocked] New value of is_blocked
-  bool? isBlocked;
-
-  /// callback sign
-  dynamic extra;
-
-  /// Parse from a json
-  UpdateChatIsBlocked.fromJson(Map<String, dynamic> json)  {
-    chatId = json['chat_id'] == null ? null : json['chat_id'];
-    isBlocked = json['is_blocked'] == null ? null : json['is_blocked'];
-    extra = json['@extra'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": chatId,
-      "is_blocked": isBlocked,
-    };
-  }
-
-  static const CONSTRUCTOR = 'updateChatIsBlocked';
-  
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class UpdateChatHasScheduledMessages extends Update {
-
-  /// A chat's has_scheduled_messages field has changed
-  UpdateChatHasScheduledMessages({this.chatId,
-    this.hasScheduledMessages});
-
-  /// [chatId] Chat identifier 
-  int? chatId;
-
-  /// [hasScheduledMessages] New value of has_scheduled_messages
-  bool? hasScheduledMessages;
-
-  /// callback sign
-  dynamic extra;
-
-  /// Parse from a json
-  UpdateChatHasScheduledMessages.fromJson(Map<String, dynamic> json)  {
-    chatId = json['chat_id'] == null ? null : json['chat_id'];
-    hasScheduledMessages = json['has_scheduled_messages'] == null ? null : json['has_scheduled_messages'];
-    extra = json['@extra'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": chatId,
-      "has_scheduled_messages": hasScheduledMessages,
-    };
-  }
-
-  static const CONSTRUCTOR = 'updateChatHasScheduledMessages';
-  
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class UpdateChatVideoChat extends Update {
-
-  /// A chat video chat state has changed
-  UpdateChatVideoChat({this.chatId,
-    this.videoChat});
-
-  /// [chatId] Chat identifier 
-  int? chatId;
-
-  /// [videoChat] New value of video_chat
-  VideoChat? videoChat;
-
-  /// callback sign
-  dynamic extra;
-
-  /// Parse from a json
-  UpdateChatVideoChat.fromJson(Map<String, dynamic> json)  {
-    chatId = json['chat_id'] == null ? null : json['chat_id'];
-    videoChat = json['video_chat'] == null ? null : VideoChat.fromJson(json['video_chat'] ?? <String, dynamic>{});
-    extra = json['@extra'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": chatId,
-      "video_chat": videoChat == null ? null : videoChat?.toJson(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'updateChatVideoChat';
-  
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class UpdateChatDefaultDisableNotification extends Update {
-
-  /// The value of the default disable_notification parameter, used when a message is sent to the chat, was changed
-  UpdateChatDefaultDisableNotification({this.chatId,
-    this.defaultDisableNotification});
-
-  /// [chatId] Chat identifier 
-  int? chatId;
-
-  /// [defaultDisableNotification] The new default_disable_notification value
-  bool? defaultDisableNotification;
-
-  /// callback sign
-  dynamic extra;
-
-  /// Parse from a json
-  UpdateChatDefaultDisableNotification.fromJson(Map<String, dynamic> json)  {
-    chatId = json['chat_id'] == null ? null : json['chat_id'];
-    defaultDisableNotification = json['default_disable_notification'] == null ? null : json['default_disable_notification'];
-    extra = json['@extra'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": chatId,
-      "default_disable_notification": defaultDisableNotification,
-    };
-  }
-
-  static const CONSTRUCTOR = 'updateChatDefaultDisableNotification';
-  
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
 class UpdateChatReadInbox extends Update {
 
-  /// Incoming messages were read or number of unread messages has been changed
+  /// Incoming messages were read or the number of unread messages has been changed
   UpdateChatReadInbox({this.chatId,
     this.lastReadInboxMessageId,
     this.unreadCount});
@@ -1264,154 +1085,6 @@ class UpdateChatReadOutbox extends Update {
   String getConstructor() => CONSTRUCTOR;
 }
 
-class UpdateChatUnreadMentionCount extends Update {
-
-  /// The chat unread_mention_count has changed
-  UpdateChatUnreadMentionCount({this.chatId,
-    this.unreadMentionCount});
-
-  /// [chatId] Chat identifier 
-  int? chatId;
-
-  /// [unreadMentionCount] The number of unread mention messages left in the chat
-  int? unreadMentionCount;
-
-  /// callback sign
-  dynamic extra;
-
-  /// Parse from a json
-  UpdateChatUnreadMentionCount.fromJson(Map<String, dynamic> json)  {
-    chatId = json['chat_id'] == null ? null : json['chat_id'];
-    unreadMentionCount = json['unread_mention_count'] == null ? null : json['unread_mention_count'];
-    extra = json['@extra'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": chatId,
-      "unread_mention_count": unreadMentionCount,
-    };
-  }
-
-  static const CONSTRUCTOR = 'updateChatUnreadMentionCount';
-  
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class UpdateChatNotificationSettings extends Update {
-
-  /// Notification settings for a chat were changed
-  UpdateChatNotificationSettings({this.chatId,
-    this.notificationSettings});
-
-  /// [chatId] Chat identifier 
-  int? chatId;
-
-  /// [notificationSettings] The new notification settings
-  ChatNotificationSettings? notificationSettings;
-
-  /// callback sign
-  dynamic extra;
-
-  /// Parse from a json
-  UpdateChatNotificationSettings.fromJson(Map<String, dynamic> json)  {
-    chatId = json['chat_id'] == null ? null : json['chat_id'];
-    notificationSettings = json['notification_settings'] == null ? null : ChatNotificationSettings.fromJson(json['notification_settings'] ?? <String, dynamic>{});
-    extra = json['@extra'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": chatId,
-      "notification_settings": notificationSettings == null ? null : notificationSettings?.toJson(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'updateChatNotificationSettings';
-  
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class UpdateScopeNotificationSettings extends Update {
-
-  /// Notification settings for some type of chats were updated
-  UpdateScopeNotificationSettings({this.scope,
-    this.notificationSettings});
-
-  /// [scope] Types of chats for which notification settings were updated 
-  NotificationSettingsScope? scope;
-
-  /// [notificationSettings] The new notification settings
-  ScopeNotificationSettings? notificationSettings;
-
-  /// callback sign
-  dynamic extra;
-
-  /// Parse from a json
-  UpdateScopeNotificationSettings.fromJson(Map<String, dynamic> json)  {
-    scope = json['scope'] == null ? null : NotificationSettingsScope.fromJson(json['scope'] ?? <String, dynamic>{});
-    notificationSettings = json['notification_settings'] == null ? null : ScopeNotificationSettings.fromJson(json['notification_settings'] ?? <String, dynamic>{});
-    extra = json['@extra'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "scope": scope == null ? null : scope?.toJson(),
-      "notification_settings": notificationSettings == null ? null : notificationSettings?.toJson(),
-    };
-  }
-
-  static const CONSTRUCTOR = 'updateScopeNotificationSettings';
-  
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
-class UpdateChatMessageTtlSetting extends Update {
-
-  /// The message Time To Live setting for a chat was changed
-  UpdateChatMessageTtlSetting({this.chatId,
-    this.messageTtlSetting});
-
-  /// [chatId] Chat identifier 
-  int? chatId;
-
-  /// [messageTtlSetting] New value of message_ttl_setting
-  int? messageTtlSetting;
-
-  /// callback sign
-  dynamic extra;
-
-  /// Parse from a json
-  UpdateChatMessageTtlSetting.fromJson(Map<String, dynamic> json)  {
-    chatId = json['chat_id'] == null ? null : json['chat_id'];
-    messageTtlSetting = json['message_ttl_setting'] == null ? null : json['message_ttl_setting'];
-    extra = json['@extra'];
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {
-      "@type": CONSTRUCTOR,
-      "chat_id": chatId,
-      "message_ttl_setting": messageTtlSetting,
-    };
-  }
-
-  static const CONSTRUCTOR = 'updateChatMessageTtlSetting';
-  
-  @override
-  String getConstructor() => CONSTRUCTOR;
-}
-
 class UpdateChatActionBar extends Update {
 
   /// The chat action bar was changed
@@ -1449,25 +1122,30 @@ class UpdateChatActionBar extends Update {
   String getConstructor() => CONSTRUCTOR;
 }
 
-class UpdateChatTheme extends Update {
+class UpdateChatDraftMessage extends Update {
 
-  /// The chat theme was changed
-  UpdateChatTheme({this.chatId,
-    this.themeName});
+  /// A chat draft has changed. Be aware that the update may come in the currently opened chat but with old content of the draft. If the user has changed the content of the draft, this update mustn't be applied
+  UpdateChatDraftMessage({this.chatId,
+    this.draftMessage,
+    this.positions});
 
   /// [chatId] Chat identifier 
   int? chatId;
 
-  /// [themeName] The new name of the chat theme; may be empty if theme was reset to default
-  String? themeName;
+  /// [draftMessage] The new draft message; may be null 
+  DraftMessage? draftMessage;
+
+  /// [positions] The new chat positions in the chat lists
+  List<ChatPosition>? positions;
 
   /// callback sign
   dynamic extra;
 
   /// Parse from a json
-  UpdateChatTheme.fromJson(Map<String, dynamic> json)  {
+  UpdateChatDraftMessage.fromJson(Map<String, dynamic> json)  {
     chatId = json['chat_id'] == null ? null : json['chat_id'];
-    themeName = json['theme_name'] == null ? null : json['theme_name'];
+    draftMessage = json['draft_message'] == null ? null : DraftMessage.fromJson(json['draft_message'] ?? <String, dynamic>{});
+    positions = json['positions'] == null ? null : List<ChatPosition>.from((json['positions'] ?? [])!.map((item) => ChatPosition.fromJson(item ?? <String, dynamic>{})).toList());
     extra = json['@extra'];
   }
 
@@ -1476,11 +1154,123 @@ class UpdateChatTheme extends Update {
     return {
       "@type": CONSTRUCTOR,
       "chat_id": chatId,
-      "theme_name": themeName,
+      "draft_message": draftMessage == null ? null : draftMessage?.toJson(),
+      "positions": positions?.map((i) => i.toJson()).toList(),
     };
   }
 
-  static const CONSTRUCTOR = 'updateChatTheme';
+  static const CONSTRUCTOR = 'updateChatDraftMessage';
+  
+  @override
+  String getConstructor() => CONSTRUCTOR;
+}
+
+class UpdateChatMessageSender extends Update {
+
+  /// The message sender that is selected to send messages in a chat has changed
+  UpdateChatMessageSender({this.chatId,
+    this.messageSenderId});
+
+  /// [chatId] Chat identifier 
+  int? chatId;
+
+  /// [messageSenderId] New value of message_sender_id; may be null if the user can't change message sender
+  MessageSender? messageSenderId;
+
+  /// callback sign
+  dynamic extra;
+
+  /// Parse from a json
+  UpdateChatMessageSender.fromJson(Map<String, dynamic> json)  {
+    chatId = json['chat_id'] == null ? null : json['chat_id'];
+    messageSenderId = json['message_sender_id'] == null ? null : MessageSender.fromJson(json['message_sender_id'] ?? <String, dynamic>{});
+    extra = json['@extra'];
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      "@type": CONSTRUCTOR,
+      "chat_id": chatId,
+      "message_sender_id": messageSenderId == null ? null : messageSenderId?.toJson(),
+    };
+  }
+
+  static const CONSTRUCTOR = 'updateChatMessageSender';
+  
+  @override
+  String getConstructor() => CONSTRUCTOR;
+}
+
+class UpdateChatMessageTtl extends Update {
+
+  /// The message Time To Live setting for a chat was changed
+  UpdateChatMessageTtl({this.chatId,
+    this.messageTtl});
+
+  /// [chatId] Chat identifier 
+  int? chatId;
+
+  /// [messageTtl] New value of message_ttl
+  int? messageTtl;
+
+  /// callback sign
+  dynamic extra;
+
+  /// Parse from a json
+  UpdateChatMessageTtl.fromJson(Map<String, dynamic> json)  {
+    chatId = json['chat_id'] == null ? null : json['chat_id'];
+    messageTtl = json['message_ttl'] == null ? null : json['message_ttl'];
+    extra = json['@extra'];
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      "@type": CONSTRUCTOR,
+      "chat_id": chatId,
+      "message_ttl": messageTtl,
+    };
+  }
+
+  static const CONSTRUCTOR = 'updateChatMessageTtl';
+  
+  @override
+  String getConstructor() => CONSTRUCTOR;
+}
+
+class UpdateChatNotificationSettings extends Update {
+
+  /// Notification settings for a chat were changed
+  UpdateChatNotificationSettings({this.chatId,
+    this.notificationSettings});
+
+  /// [chatId] Chat identifier 
+  int? chatId;
+
+  /// [notificationSettings] The new notification settings
+  ChatNotificationSettings? notificationSettings;
+
+  /// callback sign
+  dynamic extra;
+
+  /// Parse from a json
+  UpdateChatNotificationSettings.fromJson(Map<String, dynamic> json)  {
+    chatId = json['chat_id'] == null ? null : json['chat_id'];
+    notificationSettings = json['notification_settings'] == null ? null : ChatNotificationSettings.fromJson(json['notification_settings'] ?? <String, dynamic>{});
+    extra = json['@extra'];
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      "@type": CONSTRUCTOR,
+      "chat_id": chatId,
+      "notification_settings": notificationSettings == null ? null : notificationSettings?.toJson(),
+    };
+  }
+
+  static const CONSTRUCTOR = 'updateChatNotificationSettings';
   
   @override
   String getConstructor() => CONSTRUCTOR;
@@ -1560,30 +1350,25 @@ class UpdateChatReplyMarkup extends Update {
   String getConstructor() => CONSTRUCTOR;
 }
 
-class UpdateChatDraftMessage extends Update {
+class UpdateChatTheme extends Update {
 
-  /// A chat draft has changed. Be aware that the update may come in the currently opened chat but with old content of the draft. If the user has changed the content of the draft, this update mustn't be applied
-  UpdateChatDraftMessage({this.chatId,
-    this.draftMessage,
-    this.positions});
+  /// The chat theme was changed
+  UpdateChatTheme({this.chatId,
+    this.themeName});
 
   /// [chatId] Chat identifier 
   int? chatId;
 
-  /// [draftMessage] The new draft message; may be null 
-  DraftMessage? draftMessage;
-
-  /// [positions] The new chat positions in the chat lists
-  List<ChatPosition>? positions;
+  /// [themeName] The new name of the chat theme; may be empty if theme was reset to default
+  String? themeName;
 
   /// callback sign
   dynamic extra;
 
   /// Parse from a json
-  UpdateChatDraftMessage.fromJson(Map<String, dynamic> json)  {
+  UpdateChatTheme.fromJson(Map<String, dynamic> json)  {
     chatId = json['chat_id'] == null ? null : json['chat_id'];
-    draftMessage = json['draft_message'] == null ? null : DraftMessage.fromJson(json['draft_message'] ?? <String, dynamic>{});
-    positions = json['positions'] == null ? null : List<ChatPosition>.from((json['positions'] ?? [])!.map((item) => ChatPosition.fromJson(item ?? <String, dynamic>{})).toList());
+    themeName = json['theme_name'] == null ? null : json['theme_name'];
     extra = json['@extra'];
   }
 
@@ -1592,12 +1377,270 @@ class UpdateChatDraftMessage extends Update {
     return {
       "@type": CONSTRUCTOR,
       "chat_id": chatId,
-      "draft_message": draftMessage == null ? null : draftMessage?.toJson(),
-      "positions": positions?.map((i) => i.toJson()).toList(),
+      "theme_name": themeName,
     };
   }
 
-  static const CONSTRUCTOR = 'updateChatDraftMessage';
+  static const CONSTRUCTOR = 'updateChatTheme';
+  
+  @override
+  String getConstructor() => CONSTRUCTOR;
+}
+
+class UpdateChatUnreadMentionCount extends Update {
+
+  /// The chat unread_mention_count has changed
+  UpdateChatUnreadMentionCount({this.chatId,
+    this.unreadMentionCount});
+
+  /// [chatId] Chat identifier 
+  int? chatId;
+
+  /// [unreadMentionCount] The number of unread mention messages left in the chat
+  int? unreadMentionCount;
+
+  /// callback sign
+  dynamic extra;
+
+  /// Parse from a json
+  UpdateChatUnreadMentionCount.fromJson(Map<String, dynamic> json)  {
+    chatId = json['chat_id'] == null ? null : json['chat_id'];
+    unreadMentionCount = json['unread_mention_count'] == null ? null : json['unread_mention_count'];
+    extra = json['@extra'];
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      "@type": CONSTRUCTOR,
+      "chat_id": chatId,
+      "unread_mention_count": unreadMentionCount,
+    };
+  }
+
+  static const CONSTRUCTOR = 'updateChatUnreadMentionCount';
+  
+  @override
+  String getConstructor() => CONSTRUCTOR;
+}
+
+class UpdateChatVideoChat extends Update {
+
+  /// A chat video chat state has changed
+  UpdateChatVideoChat({this.chatId,
+    this.videoChat});
+
+  /// [chatId] Chat identifier 
+  int? chatId;
+
+  /// [videoChat] New value of video_chat
+  VideoChat? videoChat;
+
+  /// callback sign
+  dynamic extra;
+
+  /// Parse from a json
+  UpdateChatVideoChat.fromJson(Map<String, dynamic> json)  {
+    chatId = json['chat_id'] == null ? null : json['chat_id'];
+    videoChat = json['video_chat'] == null ? null : VideoChat.fromJson(json['video_chat'] ?? <String, dynamic>{});
+    extra = json['@extra'];
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      "@type": CONSTRUCTOR,
+      "chat_id": chatId,
+      "video_chat": videoChat == null ? null : videoChat?.toJson(),
+    };
+  }
+
+  static const CONSTRUCTOR = 'updateChatVideoChat';
+  
+  @override
+  String getConstructor() => CONSTRUCTOR;
+}
+
+class UpdateChatDefaultDisableNotification extends Update {
+
+  /// The value of the default disable_notification parameter, used when a message is sent to the chat, was changed
+  UpdateChatDefaultDisableNotification({this.chatId,
+    this.defaultDisableNotification});
+
+  /// [chatId] Chat identifier 
+  int? chatId;
+
+  /// [defaultDisableNotification] The new default_disable_notification value
+  bool? defaultDisableNotification;
+
+  /// callback sign
+  dynamic extra;
+
+  /// Parse from a json
+  UpdateChatDefaultDisableNotification.fromJson(Map<String, dynamic> json)  {
+    chatId = json['chat_id'] == null ? null : json['chat_id'];
+    defaultDisableNotification = json['default_disable_notification'] == null ? null : json['default_disable_notification'];
+    extra = json['@extra'];
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      "@type": CONSTRUCTOR,
+      "chat_id": chatId,
+      "default_disable_notification": defaultDisableNotification,
+    };
+  }
+
+  static const CONSTRUCTOR = 'updateChatDefaultDisableNotification';
+  
+  @override
+  String getConstructor() => CONSTRUCTOR;
+}
+
+class UpdateChatHasProtectedContent extends Update {
+
+  /// A chat content was allowed or restricted for saving
+  UpdateChatHasProtectedContent({this.chatId,
+    this.hasProtectedContent});
+
+  /// [chatId] Chat identifier 
+  int? chatId;
+
+  /// [hasProtectedContent] New value of has_protected_content
+  bool? hasProtectedContent;
+
+  /// callback sign
+  dynamic extra;
+
+  /// Parse from a json
+  UpdateChatHasProtectedContent.fromJson(Map<String, dynamic> json)  {
+    chatId = json['chat_id'] == null ? null : json['chat_id'];
+    hasProtectedContent = json['has_protected_content'] == null ? null : json['has_protected_content'];
+    extra = json['@extra'];
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      "@type": CONSTRUCTOR,
+      "chat_id": chatId,
+      "has_protected_content": hasProtectedContent,
+    };
+  }
+
+  static const CONSTRUCTOR = 'updateChatHasProtectedContent';
+  
+  @override
+  String getConstructor() => CONSTRUCTOR;
+}
+
+class UpdateChatHasScheduledMessages extends Update {
+
+  /// A chat's has_scheduled_messages field has changed
+  UpdateChatHasScheduledMessages({this.chatId,
+    this.hasScheduledMessages});
+
+  /// [chatId] Chat identifier 
+  int? chatId;
+
+  /// [hasScheduledMessages] New value of has_scheduled_messages
+  bool? hasScheduledMessages;
+
+  /// callback sign
+  dynamic extra;
+
+  /// Parse from a json
+  UpdateChatHasScheduledMessages.fromJson(Map<String, dynamic> json)  {
+    chatId = json['chat_id'] == null ? null : json['chat_id'];
+    hasScheduledMessages = json['has_scheduled_messages'] == null ? null : json['has_scheduled_messages'];
+    extra = json['@extra'];
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      "@type": CONSTRUCTOR,
+      "chat_id": chatId,
+      "has_scheduled_messages": hasScheduledMessages,
+    };
+  }
+
+  static const CONSTRUCTOR = 'updateChatHasScheduledMessages';
+  
+  @override
+  String getConstructor() => CONSTRUCTOR;
+}
+
+class UpdateChatIsBlocked extends Update {
+
+  /// A chat was blocked or unblocked
+  UpdateChatIsBlocked({this.chatId,
+    this.isBlocked});
+
+  /// [chatId] Chat identifier 
+  int? chatId;
+
+  /// [isBlocked] New value of is_blocked
+  bool? isBlocked;
+
+  /// callback sign
+  dynamic extra;
+
+  /// Parse from a json
+  UpdateChatIsBlocked.fromJson(Map<String, dynamic> json)  {
+    chatId = json['chat_id'] == null ? null : json['chat_id'];
+    isBlocked = json['is_blocked'] == null ? null : json['is_blocked'];
+    extra = json['@extra'];
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      "@type": CONSTRUCTOR,
+      "chat_id": chatId,
+      "is_blocked": isBlocked,
+    };
+  }
+
+  static const CONSTRUCTOR = 'updateChatIsBlocked';
+  
+  @override
+  String getConstructor() => CONSTRUCTOR;
+}
+
+class UpdateChatIsMarkedAsUnread extends Update {
+
+  /// A chat was marked as unread or was read
+  UpdateChatIsMarkedAsUnread({this.chatId,
+    this.isMarkedAsUnread});
+
+  /// [chatId] Chat identifier 
+  int? chatId;
+
+  /// [isMarkedAsUnread] New value of is_marked_as_unread
+  bool? isMarkedAsUnread;
+
+  /// callback sign
+  dynamic extra;
+
+  /// Parse from a json
+  UpdateChatIsMarkedAsUnread.fromJson(Map<String, dynamic> json)  {
+    chatId = json['chat_id'] == null ? null : json['chat_id'];
+    isMarkedAsUnread = json['is_marked_as_unread'] == null ? null : json['is_marked_as_unread'];
+    extra = json['@extra'];
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      "@type": CONSTRUCTOR,
+      "chat_id": chatId,
+      "is_marked_as_unread": isMarkedAsUnread,
+    };
+  }
+
+  static const CONSTRUCTOR = 'updateChatIsMarkedAsUnread';
   
   @override
   String getConstructor() => CONSTRUCTOR;
@@ -1666,6 +1709,43 @@ class UpdateChatOnlineMemberCount extends Update {
   }
 
   static const CONSTRUCTOR = 'updateChatOnlineMemberCount';
+  
+  @override
+  String getConstructor() => CONSTRUCTOR;
+}
+
+class UpdateScopeNotificationSettings extends Update {
+
+  /// Notification settings for some type of chats were updated
+  UpdateScopeNotificationSettings({this.scope,
+    this.notificationSettings});
+
+  /// [scope] Types of chats for which notification settings were updated 
+  NotificationSettingsScope? scope;
+
+  /// [notificationSettings] The new notification settings
+  ScopeNotificationSettings? notificationSettings;
+
+  /// callback sign
+  dynamic extra;
+
+  /// Parse from a json
+  UpdateScopeNotificationSettings.fromJson(Map<String, dynamic> json)  {
+    scope = json['scope'] == null ? null : NotificationSettingsScope.fromJson(json['scope'] ?? <String, dynamic>{});
+    notificationSettings = json['notification_settings'] == null ? null : ScopeNotificationSettings.fromJson(json['notification_settings'] ?? <String, dynamic>{});
+    extra = json['@extra'];
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      "@type": CONSTRUCTOR,
+      "scope": scope == null ? null : scope?.toJson(),
+      "notification_settings": notificationSettings == null ? null : notificationSettings?.toJson(),
+    };
+  }
+
+  static const CONSTRUCTOR = 'updateScopeNotificationSettings';
   
   @override
   String getConstructor() => CONSTRUCTOR;
@@ -1898,12 +1978,12 @@ class UpdateDeleteMessages extends Update {
   String getConstructor() => CONSTRUCTOR;
 }
 
-class UpdateUserChatAction extends Update {
+class UpdateChatAction extends Update {
 
-  /// User activity in the chat has changed
-  UpdateUserChatAction({this.chatId,
+  /// A message sender activity in the chat has changed
+  UpdateChatAction({this.chatId,
     this.messageThreadId,
-    this.userId,
+    this.senderId,
     this.action});
 
   /// [chatId] Chat identifier 
@@ -1912,20 +1992,20 @@ class UpdateUserChatAction extends Update {
   /// [messageThreadId] If not 0, a message thread identifier in which the action was performed 
   int? messageThreadId;
 
-  /// [userId] Identifier of a user performing an action 
-  int? userId;
+  /// [senderId] Identifier of a message sender performing the action 
+  MessageSender? senderId;
 
-  /// [action] The action description
+  /// [action] The action
   ChatAction? action;
 
   /// callback sign
   dynamic extra;
 
   /// Parse from a json
-  UpdateUserChatAction.fromJson(Map<String, dynamic> json)  {
+  UpdateChatAction.fromJson(Map<String, dynamic> json)  {
     chatId = json['chat_id'] == null ? null : json['chat_id'];
     messageThreadId = json['message_thread_id'] == null ? null : json['message_thread_id'];
-    userId = json['user_id'] == null ? null : json['user_id'];
+    senderId = json['sender_id'] == null ? null : MessageSender.fromJson(json['sender_id'] ?? <String, dynamic>{});
     action = json['action'] == null ? null : ChatAction.fromJson(json['action'] ?? <String, dynamic>{});
     extra = json['@extra'];
   }
@@ -1936,12 +2016,12 @@ class UpdateUserChatAction extends Update {
       "@type": CONSTRUCTOR,
       "chat_id": chatId,
       "message_thread_id": messageThreadId,
-      "user_id": userId,
+      "sender_id": senderId == null ? null : senderId?.toJson(),
       "action": action == null ? null : action?.toJson(),
     };
   }
 
-  static const CONSTRUCTOR = 'updateUserChatAction';
+  static const CONSTRUCTOR = 'updateChatAction';
   
   @override
   String getConstructor() => CONSTRUCTOR;
@@ -2110,7 +2190,7 @@ class UpdateSecretChat extends Update {
 
 class UpdateUserFullInfo extends Update {
 
-  /// Some data from userFullInfo has been changed
+  /// Some data in userFullInfo has been changed
   UpdateUserFullInfo({this.userId,
     this.userFullInfo});
 
@@ -2147,7 +2227,7 @@ class UpdateUserFullInfo extends Update {
 
 class UpdateBasicGroupFullInfo extends Update {
 
-  /// Some data from basicGroupFullInfo has been changed
+  /// Some data in basicGroupFullInfo has been changed
   UpdateBasicGroupFullInfo({this.basicGroupId,
     this.basicGroupFullInfo});
 
@@ -2184,7 +2264,7 @@ class UpdateBasicGroupFullInfo extends Update {
 
 class UpdateSupergroupFullInfo extends Update {
 
-  /// Some data from supergroupFullInfo has been changed
+  /// Some data in supergroupFullInfo has been changed
   UpdateSupergroupFullInfo({this.supergroupId,
     this.supergroupFullInfo});
 
@@ -2221,7 +2301,7 @@ class UpdateSupergroupFullInfo extends Update {
 
 class UpdateServiceNotification extends Update {
 
-  /// Service notification from the server. Upon receiving this the application must show a popup with the content of the notification
+  /// A service notification from the server was received. Upon receiving this the application must show a popup with the content of the notification
   UpdateServiceNotification({this.type,
     this.content});
 

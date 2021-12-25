@@ -28,7 +28,6 @@ part 'objects/thumbnail_format.dart';
 part 'objects/thumbnail.dart';
 part 'objects/mask_point.dart';
 part 'objects/mask_position.dart';
-part 'objects/color_replacement.dart';
 part 'objects/closed_vector_path.dart';
 part 'objects/poll_option.dart';
 part 'objects/poll_type.dart';
@@ -98,7 +97,6 @@ part 'objects/message_positions.dart';
 part 'objects/message_calendar_day.dart';
 part 'objects/message_calendar.dart';
 part 'objects/sponsored_message.dart';
-part 'objects/sponsored_messages.dart';
 part 'objects/notification_settings_scope.dart';
 part 'objects/chat_notification_settings.dart';
 part 'objects/scope_notification_settings.dart';
@@ -400,13 +398,15 @@ part 'functions/get_chat_message_calendar.dart';
 part 'functions/get_chat_message_count.dart';
 part 'functions/get_chat_scheduled_messages.dart';
 part 'functions/get_message_public_forwards.dart';
-part 'functions/get_chat_sponsored_messages.dart';
+part 'functions/get_chat_sponsored_message.dart';
 part 'functions/view_sponsored_message.dart';
 part 'functions/remove_notification.dart';
 part 'functions/remove_notification_group.dart';
 part 'functions/get_message_link.dart';
 part 'functions/get_message_embedding_code.dart';
 part 'functions/get_message_link_info.dart';
+part 'functions/get_chat_available_message_senders.dart';
+part 'functions/set_chat_message_sender.dart';
 part 'functions/send_message.dart';
 part 'functions/send_message_album.dart';
 part 'functions/send_bot_start_message.dart';
@@ -416,7 +416,7 @@ part 'functions/resend_messages.dart';
 part 'functions/send_chat_screenshot_taken_notification.dart';
 part 'functions/add_local_message.dart';
 part 'functions/delete_messages.dart';
-part 'functions/delete_chat_messages_from_user.dart';
+part 'functions/delete_chat_messages_by_sender.dart';
 part 'functions/delete_chat_messages_by_date.dart';
 part 'functions/edit_message_text.dart';
 part 'functions/edit_message_live_location.dart';
@@ -485,11 +485,12 @@ part 'functions/get_recommended_chat_filters.dart';
 part 'functions/get_chat_filter_default_icon_name.dart';
 part 'functions/set_chat_title.dart';
 part 'functions/set_chat_photo.dart';
-part 'functions/set_chat_message_ttl_setting.dart';
+part 'functions/set_chat_message_ttl.dart';
 part 'functions/set_chat_permissions.dart';
 part 'functions/set_chat_theme.dart';
 part 'functions/set_chat_draft_message.dart';
 part 'functions/set_chat_notification_settings.dart';
+part 'functions/toggle_chat_has_protected_content.dart';
 part 'functions/toggle_chat_is_marked_as_unread.dart';
 part 'functions/toggle_chat_default_disable_notification.dart';
 part 'functions/set_chat_client_data.dart';
@@ -545,8 +546,8 @@ part 'functions/delete_all_revoked_chat_invite_links.dart';
 part 'functions/check_chat_invite_link.dart';
 part 'functions/join_chat_by_invite_link.dart';
 part 'functions/get_chat_join_requests.dart';
-part 'functions/approve_chat_join_request.dart';
-part 'functions/decline_chat_join_request.dart';
+part 'functions/process_chat_join_request.dart';
+part 'functions/process_chat_join_requests.dart';
 part 'functions/create_call.dart';
 part 'functions/accept_call.dart';
 part 'functions/send_call_signaling_data.dart';
@@ -565,9 +566,9 @@ part 'functions/toggle_group_call_screen_sharing_is_paused.dart';
 part 'functions/end_group_call_screen_sharing.dart';
 part 'functions/set_group_call_title.dart';
 part 'functions/toggle_group_call_mute_new_participants.dart';
-part 'functions/revoke_group_call_invite_link.dart';
 part 'functions/invite_group_call_participants.dart';
 part 'functions/get_group_call_invite_link.dart';
+part 'functions/revoke_group_call_invite_link.dart';
 part 'functions/start_group_call_recording.dart';
 part 'functions/end_group_call_recording.dart';
 part 'functions/toggle_group_call_is_my_video_paused.dart';
@@ -578,7 +579,7 @@ part 'functions/set_group_call_participant_volume_level.dart';
 part 'functions/toggle_group_call_participant_is_hand_raised.dart';
 part 'functions/load_group_call_participants.dart';
 part 'functions/leave_group_call.dart';
-part 'functions/discard_group_call.dart';
+part 'functions/end_group_call.dart';
 part 'functions/get_group_call_stream_segment.dart';
 part 'functions/toggle_message_sender_is_blocked.dart';
 part 'functions/block_message_sender_from_replies.dart';
@@ -640,6 +641,9 @@ part 'functions/get_commands.dart';
 part 'functions/get_active_sessions.dart';
 part 'functions/terminate_session.dart';
 part 'functions/terminate_all_other_sessions.dart';
+part 'functions/toggle_session_can_accept_calls.dart';
+part 'functions/toggle_session_can_accept_secret_chats.dart';
+part 'functions/set_inactive_session_ttl.dart';
 part 'functions/get_connected_websites.dart';
 part 'functions/disconnect_website.dart';
 part 'functions/disconnect_all_websites.dart';
@@ -783,6 +787,7 @@ final Map<String, TdObject Function(Map<String, dynamic>)> allObjects = {
     'authenticationCodeTypeSms': (d) => AuthenticationCodeTypeSms.fromJson(d),
     'authenticationCodeTypeCall': (d) => AuthenticationCodeTypeCall.fromJson(d),
     'authenticationCodeTypeFlashCall': (d) => AuthenticationCodeTypeFlashCall.fromJson(d),
+    'authenticationCodeTypeMissedCall': (d) => AuthenticationCodeTypeMissedCall.fromJson(d),
     'authenticationCodeInfo': (d) => AuthenticationCodeInfo.fromJson(d),
     'emailAddressAuthenticationCodeInfo': (d) => EmailAddressAuthenticationCodeInfo.fromJson(d),
     'textEntity': (d) => TextEntity.fromJson(d),
@@ -828,7 +833,6 @@ final Map<String, TdObject Function(Map<String, dynamic>)> allObjects = {
     'maskPointMouth': (d) => MaskPointMouth.fromJson(d),
     'maskPointChin': (d) => MaskPointChin.fromJson(d),
     'maskPosition': (d) => MaskPosition.fromJson(d),
-    'colorReplacement': (d) => ColorReplacement.fromJson(d),
     'closedVectorPath': (d) => ClosedVectorPath.fromJson(d),
     'pollOption': (d) => PollOption.fromJson(d),
     'pollType': (d) => PollType.fromJson(d),
@@ -940,7 +944,6 @@ final Map<String, TdObject Function(Map<String, dynamic>)> allObjects = {
     'messageCalendarDay': (d) => MessageCalendarDay.fromJson(d),
     'messageCalendar': (d) => MessageCalendar.fromJson(d),
     'sponsoredMessage': (d) => SponsoredMessage.fromJson(d),
-    'sponsoredMessages': (d) => SponsoredMessages.fromJson(d),
     'notificationSettingsScope': (d) => NotificationSettingsScope.fromJson(d),
     'notificationSettingsScopePrivateChats': (d) => NotificationSettingsScopePrivateChats.fromJson(d),
     'notificationSettingsScopeGroupChats': (d) => NotificationSettingsScopeGroupChats.fromJson(d),
@@ -981,6 +984,7 @@ final Map<String, TdObject Function(Map<String, dynamic>)> allObjects = {
     'chatActionBarReportAddBlock': (d) => ChatActionBarReportAddBlock.fromJson(d),
     'chatActionBarAddContact': (d) => ChatActionBarAddContact.fromJson(d),
     'chatActionBarSharePhoneNumber': (d) => ChatActionBarSharePhoneNumber.fromJson(d),
+    'chatActionBarJoinRequest': (d) => ChatActionBarJoinRequest.fromJson(d),
     'keyboardButtonType': (d) => KeyboardButtonType.fromJson(d),
     'keyboardButtonTypeText': (d) => KeyboardButtonTypeText.fromJson(d),
     'keyboardButtonTypeRequestPhoneNumber': (d) => KeyboardButtonTypeRequestPhoneNumber.fromJson(d),
@@ -995,6 +999,7 @@ final Map<String, TdObject Function(Map<String, dynamic>)> allObjects = {
     'inlineKeyboardButtonTypeCallbackGame': (d) => InlineKeyboardButtonTypeCallbackGame.fromJson(d),
     'inlineKeyboardButtonTypeSwitchInline': (d) => InlineKeyboardButtonTypeSwitchInline.fromJson(d),
     'inlineKeyboardButtonTypeBuy': (d) => InlineKeyboardButtonTypeBuy.fromJson(d),
+    'inlineKeyboardButtonTypeUser': (d) => InlineKeyboardButtonTypeUser.fromJson(d),
     'inlineKeyboardButton': (d) => InlineKeyboardButton.fromJson(d),
     'replyMarkup': (d) => ReplyMarkup.fromJson(d),
     'replyMarkupRemoveKeyboard': (d) => ReplyMarkupRemoveKeyboard.fromJson(d),
@@ -1271,8 +1276,6 @@ final Map<String, TdObject Function(Map<String, dynamic>)> allObjects = {
     'searchMessagesFilterPhotoAndVideo': (d) => SearchMessagesFilterPhotoAndVideo.fromJson(d),
     'searchMessagesFilterUrl': (d) => SearchMessagesFilterUrl.fromJson(d),
     'searchMessagesFilterChatPhoto': (d) => SearchMessagesFilterChatPhoto.fromJson(d),
-    'searchMessagesFilterCall': (d) => SearchMessagesFilterCall.fromJson(d),
-    'searchMessagesFilterMissedCall': (d) => SearchMessagesFilterMissedCall.fromJson(d),
     'searchMessagesFilterVideoNote': (d) => SearchMessagesFilterVideoNote.fromJson(d),
     'searchMessagesFilterVoiceAndVideoNote': (d) => SearchMessagesFilterVoiceAndVideoNote.fromJson(d),
     'searchMessagesFilterMention': (d) => SearchMessagesFilterMention.fromJson(d),
@@ -1410,8 +1413,9 @@ final Map<String, TdObject Function(Map<String, dynamic>)> allObjects = {
     'chatEventInvitesToggled': (d) => ChatEventInvitesToggled.fromJson(d),
     'chatEventLinkedChatChanged': (d) => ChatEventLinkedChatChanged.fromJson(d),
     'chatEventSlowModeDelayChanged': (d) => ChatEventSlowModeDelayChanged.fromJson(d),
-    'chatEventMessageTtlSettingChanged': (d) => ChatEventMessageTtlSettingChanged.fromJson(d),
+    'chatEventMessageTtlChanged': (d) => ChatEventMessageTtlChanged.fromJson(d),
     'chatEventSignMessagesToggled': (d) => ChatEventSignMessagesToggled.fromJson(d),
+    'chatEventHasProtectedContentToggled': (d) => ChatEventHasProtectedContentToggled.fromJson(d),
     'chatEventStickerSetChanged': (d) => ChatEventStickerSetChanged.fromJson(d),
     'chatEventLocationChanged': (d) => ChatEventLocationChanged.fromJson(d),
     'chatEventIsAllHistoryAvailableToggled': (d) => ChatEventIsAllHistoryAvailableToggled.fromJson(d),
@@ -1419,7 +1423,7 @@ final Map<String, TdObject Function(Map<String, dynamic>)> allObjects = {
     'chatEventInviteLinkRevoked': (d) => ChatEventInviteLinkRevoked.fromJson(d),
     'chatEventInviteLinkDeleted': (d) => ChatEventInviteLinkDeleted.fromJson(d),
     'chatEventVideoChatCreated': (d) => ChatEventVideoChatCreated.fromJson(d),
-    'chatEventVideoChatDiscarded': (d) => ChatEventVideoChatDiscarded.fromJson(d),
+    'chatEventVideoChatEnded': (d) => ChatEventVideoChatEnded.fromJson(d),
     'chatEventVideoChatParticipantIsMutedToggled': (d) => ChatEventVideoChatParticipantIsMutedToggled.fromJson(d),
     'chatEventVideoChatParticipantVolumeLevelChanged': (d) => ChatEventVideoChatParticipantVolumeLevelChanged.fromJson(d),
     'chatEventVideoChatMuteNewParticipantsToggled': (d) => ChatEventVideoChatMuteNewParticipantsToggled.fromJson(d),
@@ -1660,8 +1664,9 @@ final Map<String, TdObject Function(Map<String, dynamic>)> allObjects = {
     'suggestedActionEnableArchiveAndMuteNewChats': (d) => SuggestedActionEnableArchiveAndMuteNewChats.fromJson(d),
     'suggestedActionCheckPassword': (d) => SuggestedActionCheckPassword.fromJson(d),
     'suggestedActionCheckPhoneNumber': (d) => SuggestedActionCheckPhoneNumber.fromJson(d),
-    'suggestedActionSeeTicksHint': (d) => SuggestedActionSeeTicksHint.fromJson(d),
+    'suggestedActionViewChecksHint': (d) => SuggestedActionViewChecksHint.fromJson(d),
     'suggestedActionConvertToBroadcastGroup': (d) => SuggestedActionConvertToBroadcastGroup.fromJson(d),
+    'suggestedActionSetPassword': (d) => SuggestedActionSetPassword.fromJson(d),
     'count': (d) => Count.fromJson(d),
     'text': (d) => Text.fromJson(d),
     'seconds': (d) => Seconds.fromJson(d),
@@ -1723,30 +1728,32 @@ final Map<String, TdObject Function(Map<String, dynamic>)> allObjects = {
     'updateChatPermissions': (d) => UpdateChatPermissions.fromJson(d),
     'updateChatLastMessage': (d) => UpdateChatLastMessage.fromJson(d),
     'updateChatPosition': (d) => UpdateChatPosition.fromJson(d),
-    'updateChatIsMarkedAsUnread': (d) => UpdateChatIsMarkedAsUnread.fromJson(d),
-    'updateChatIsBlocked': (d) => UpdateChatIsBlocked.fromJson(d),
-    'updateChatHasScheduledMessages': (d) => UpdateChatHasScheduledMessages.fromJson(d),
-    'updateChatVideoChat': (d) => UpdateChatVideoChat.fromJson(d),
-    'updateChatDefaultDisableNotification': (d) => UpdateChatDefaultDisableNotification.fromJson(d),
     'updateChatReadInbox': (d) => UpdateChatReadInbox.fromJson(d),
     'updateChatReadOutbox': (d) => UpdateChatReadOutbox.fromJson(d),
-    'updateChatUnreadMentionCount': (d) => UpdateChatUnreadMentionCount.fromJson(d),
-    'updateChatNotificationSettings': (d) => UpdateChatNotificationSettings.fromJson(d),
-    'updateScopeNotificationSettings': (d) => UpdateScopeNotificationSettings.fromJson(d),
-    'updateChatMessageTtlSetting': (d) => UpdateChatMessageTtlSetting.fromJson(d),
     'updateChatActionBar': (d) => UpdateChatActionBar.fromJson(d),
-    'updateChatTheme': (d) => UpdateChatTheme.fromJson(d),
+    'updateChatDraftMessage': (d) => UpdateChatDraftMessage.fromJson(d),
+    'updateChatMessageSender': (d) => UpdateChatMessageSender.fromJson(d),
+    'updateChatMessageTtl': (d) => UpdateChatMessageTtl.fromJson(d),
+    'updateChatNotificationSettings': (d) => UpdateChatNotificationSettings.fromJson(d),
     'updateChatPendingJoinRequests': (d) => UpdateChatPendingJoinRequests.fromJson(d),
     'updateChatReplyMarkup': (d) => UpdateChatReplyMarkup.fromJson(d),
-    'updateChatDraftMessage': (d) => UpdateChatDraftMessage.fromJson(d),
+    'updateChatTheme': (d) => UpdateChatTheme.fromJson(d),
+    'updateChatUnreadMentionCount': (d) => UpdateChatUnreadMentionCount.fromJson(d),
+    'updateChatVideoChat': (d) => UpdateChatVideoChat.fromJson(d),
+    'updateChatDefaultDisableNotification': (d) => UpdateChatDefaultDisableNotification.fromJson(d),
+    'updateChatHasProtectedContent': (d) => UpdateChatHasProtectedContent.fromJson(d),
+    'updateChatHasScheduledMessages': (d) => UpdateChatHasScheduledMessages.fromJson(d),
+    'updateChatIsBlocked': (d) => UpdateChatIsBlocked.fromJson(d),
+    'updateChatIsMarkedAsUnread': (d) => UpdateChatIsMarkedAsUnread.fromJson(d),
     'updateChatFilters': (d) => UpdateChatFilters.fromJson(d),
     'updateChatOnlineMemberCount': (d) => UpdateChatOnlineMemberCount.fromJson(d),
+    'updateScopeNotificationSettings': (d) => UpdateScopeNotificationSettings.fromJson(d),
     'updateNotification': (d) => UpdateNotification.fromJson(d),
     'updateNotificationGroup': (d) => UpdateNotificationGroup.fromJson(d),
     'updateActiveNotifications': (d) => UpdateActiveNotifications.fromJson(d),
     'updateHavePendingNotifications': (d) => UpdateHavePendingNotifications.fromJson(d),
     'updateDeleteMessages': (d) => UpdateDeleteMessages.fromJson(d),
-    'updateUserChatAction': (d) => UpdateUserChatAction.fromJson(d),
+    'updateChatAction': (d) => UpdateChatAction.fromJson(d),
     'updateUserStatus': (d) => UpdateUserStatus.fromJson(d),
     'updateUser': (d) => UpdateUser.fromJson(d),
     'updateBasicGroup': (d) => UpdateBasicGroup.fromJson(d),
