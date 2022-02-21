@@ -19,6 +19,7 @@ class Update extends TdObject {
   /// * UpdateMessageInteractionInfo
   /// * UpdateMessageContentOpened
   /// * UpdateMessageMentionRead
+  /// * UpdateMessageUnreadReactions
   /// * UpdateMessageLiveLocationViewed
   /// * UpdateNewChat
   /// * UpdateChatTitle
@@ -29,6 +30,7 @@ class Update extends TdObject {
   /// * UpdateChatReadInbox
   /// * UpdateChatReadOutbox
   /// * UpdateChatActionBar
+  /// * UpdateChatAvailableReactions
   /// * UpdateChatDraftMessage
   /// * UpdateChatMessageSender
   /// * UpdateChatMessageTtl
@@ -37,6 +39,7 @@ class Update extends TdObject {
   /// * UpdateChatReplyMarkup
   /// * UpdateChatTheme
   /// * UpdateChatUnreadMentionCount
+  /// * UpdateChatUnreadReactionCount
   /// * UpdateChatVideoChat
   /// * UpdateChatDefaultDisableNotification
   /// * UpdateChatHasProtectedContent
@@ -84,6 +87,7 @@ class Update extends TdObject {
   /// * UpdateConnectionState
   /// * UpdateTermsOfService
   /// * UpdateUsersNearby
+  /// * UpdateReactions
   /// * UpdateDiceEmojis
   /// * UpdateAnimatedEmojiMessageClicked
   /// * UpdateAnimationSearchParameters
@@ -124,6 +128,8 @@ class Update extends TdObject {
         return UpdateMessageContentOpened.fromJson(json);
       case UpdateMessageMentionRead.CONSTRUCTOR:
         return UpdateMessageMentionRead.fromJson(json);
+      case UpdateMessageUnreadReactions.CONSTRUCTOR:
+        return UpdateMessageUnreadReactions.fromJson(json);
       case UpdateMessageLiveLocationViewed.CONSTRUCTOR:
         return UpdateMessageLiveLocationViewed.fromJson(json);
       case UpdateNewChat.CONSTRUCTOR:
@@ -144,6 +150,8 @@ class Update extends TdObject {
         return UpdateChatReadOutbox.fromJson(json);
       case UpdateChatActionBar.CONSTRUCTOR:
         return UpdateChatActionBar.fromJson(json);
+      case UpdateChatAvailableReactions.CONSTRUCTOR:
+        return UpdateChatAvailableReactions.fromJson(json);
       case UpdateChatDraftMessage.CONSTRUCTOR:
         return UpdateChatDraftMessage.fromJson(json);
       case UpdateChatMessageSender.CONSTRUCTOR:
@@ -160,6 +168,8 @@ class Update extends TdObject {
         return UpdateChatTheme.fromJson(json);
       case UpdateChatUnreadMentionCount.CONSTRUCTOR:
         return UpdateChatUnreadMentionCount.fromJson(json);
+      case UpdateChatUnreadReactionCount.CONSTRUCTOR:
+        return UpdateChatUnreadReactionCount.fromJson(json);
       case UpdateChatVideoChat.CONSTRUCTOR:
         return UpdateChatVideoChat.fromJson(json);
       case UpdateChatDefaultDisableNotification.CONSTRUCTOR:
@@ -254,6 +264,8 @@ class Update extends TdObject {
         return UpdateTermsOfService.fromJson(json);
       case UpdateUsersNearby.CONSTRUCTOR:
         return UpdateUsersNearby.fromJson(json);
+      case UpdateReactions.CONSTRUCTOR:
+        return UpdateReactions.fromJson(json);
       case UpdateDiceEmojis.CONSTRUCTOR:
         return UpdateDiceEmojis.fromJson(json);
       case UpdateAnimatedEmojiMessageClicked.CONSTRUCTOR:
@@ -746,6 +758,55 @@ class UpdateMessageMentionRead extends Update {
   String getConstructor() => CONSTRUCTOR;
 }
 
+class UpdateMessageUnreadReactions extends Update {
+
+  /// The list of unread reactions added to a message was changed
+  UpdateMessageUnreadReactions({this.chatId,
+    this.messageId,
+    this.unreadReactions,
+    this.unreadReactionCount});
+
+  /// [chatId] Chat identifier 
+  int? chatId;
+
+  /// [messageId] Message identifier 
+  int? messageId;
+
+  /// [unreadReactions] The new list of unread reactions 
+  List<UnreadReaction>? unreadReactions;
+
+  /// [unreadReactionCount] The new number of messages with unread reactions left in the chat
+  int? unreadReactionCount;
+
+  /// callback sign
+  dynamic extra;
+
+  /// Parse from a json
+  UpdateMessageUnreadReactions.fromJson(Map<String, dynamic> json)  {
+    chatId = json['chat_id'] == null ? null : json['chat_id'];
+    messageId = json['message_id'] == null ? null : json['message_id'];
+    unreadReactions = json['unread_reactions'] == null ? null : List<UnreadReaction>.from((json['unread_reactions'] ?? [])!.map((item) => UnreadReaction.fromJson(item ?? <String, dynamic>{})).toList());
+    unreadReactionCount = json['unread_reaction_count'] == null ? null : json['unread_reaction_count'];
+    extra = json['@extra'];
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      "@type": CONSTRUCTOR,
+      "chat_id": chatId,
+      "message_id": messageId,
+      "unread_reactions": unreadReactions?.map((i) => i.toJson()).toList(),
+      "unread_reaction_count": unreadReactionCount,
+    };
+  }
+
+  static const CONSTRUCTOR = 'updateMessageUnreadReactions';
+  
+  @override
+  String getConstructor() => CONSTRUCTOR;
+}
+
 class UpdateMessageLiveLocationViewed extends Update {
 
   /// A message with a live location was viewed. When the update is received, the application is supposed to update the live location
@@ -1122,6 +1183,43 @@ class UpdateChatActionBar extends Update {
   String getConstructor() => CONSTRUCTOR;
 }
 
+class UpdateChatAvailableReactions extends Update {
+
+  /// The chat available reactions were changed
+  UpdateChatAvailableReactions({this.chatId,
+    this.availableReactions});
+
+  /// [chatId] Chat identifier 
+  int? chatId;
+
+  /// [availableReactions] The new list of reactions, available in the chat
+  List<String>? availableReactions;
+
+  /// callback sign
+  dynamic extra;
+
+  /// Parse from a json
+  UpdateChatAvailableReactions.fromJson(Map<String, dynamic> json)  {
+    chatId = json['chat_id'] == null ? null : json['chat_id'];
+    availableReactions = json['available_reactions'] == null ? null : List<String>.from((json['available_reactions'] ?? [])!.map((item) => item).toList());
+    extra = json['@extra'];
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      "@type": CONSTRUCTOR,
+      "chat_id": chatId,
+      "available_reactions": availableReactions?.map((i) => i).toList(),
+    };
+  }
+
+  static const CONSTRUCTOR = 'updateChatAvailableReactions';
+  
+  @override
+  String getConstructor() => CONSTRUCTOR;
+}
+
 class UpdateChatDraftMessage extends Update {
 
   /// A chat draft has changed. Be aware that the update may come in the currently opened chat but with old content of the draft. If the user has changed the content of the draft, this update mustn't be applied
@@ -1419,6 +1517,43 @@ class UpdateChatUnreadMentionCount extends Update {
   }
 
   static const CONSTRUCTOR = 'updateChatUnreadMentionCount';
+  
+  @override
+  String getConstructor() => CONSTRUCTOR;
+}
+
+class UpdateChatUnreadReactionCount extends Update {
+
+  /// The chat unread_reaction_count has changed
+  UpdateChatUnreadReactionCount({this.chatId,
+    this.unreadReactionCount});
+
+  /// [chatId] Chat identifier 
+  int? chatId;
+
+  /// [unreadReactionCount] The number of messages with unread reactions left in the chat
+  int? unreadReactionCount;
+
+  /// callback sign
+  dynamic extra;
+
+  /// Parse from a json
+  UpdateChatUnreadReactionCount.fromJson(Map<String, dynamic> json)  {
+    chatId = json['chat_id'] == null ? null : json['chat_id'];
+    unreadReactionCount = json['unread_reaction_count'] == null ? null : json['unread_reaction_count'];
+    extra = json['@extra'];
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      "@type": CONSTRUCTOR,
+      "chat_id": chatId,
+      "unread_reaction_count": unreadReactionCount,
+    };
+  }
+
+  static const CONSTRUCTOR = 'updateChatUnreadReactionCount';
   
   @override
   String getConstructor() => CONSTRUCTOR;
@@ -3164,6 +3299,37 @@ class UpdateUsersNearby extends Update {
   }
 
   static const CONSTRUCTOR = 'updateUsersNearby';
+  
+  @override
+  String getConstructor() => CONSTRUCTOR;
+}
+
+class UpdateReactions extends Update {
+
+  /// The list of supported reactions has changed
+  UpdateReactions({this.reactions});
+
+  /// [reactions] The new list of supported reactions
+  List<Reaction>? reactions;
+
+  /// callback sign
+  dynamic extra;
+
+  /// Parse from a json
+  UpdateReactions.fromJson(Map<String, dynamic> json)  {
+    reactions = json['reactions'] == null ? null : List<Reaction>.from((json['reactions'] ?? [])!.map((item) => Reaction.fromJson(item ?? <String, dynamic>{})).toList());
+    extra = json['@extra'];
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      "@type": CONSTRUCTOR,
+      "reactions": reactions?.map((i) => i.toJson()).toList(),
+    };
+  }
+
+  static const CONSTRUCTOR = 'updateReactions';
   
   @override
   String getConstructor() => CONSTRUCTOR;
